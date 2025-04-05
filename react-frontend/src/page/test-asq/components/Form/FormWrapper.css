@@ -1,0 +1,96 @@
+   .form-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 16px 24px;
+    padding: 24px 0 24px 24px;
+    box-sizing: border-box;
+  
+    /* ✅ Set font chung cho toàn form */
+    font-size: 20px !important;
+    font-family: 'Inter', sans-serif; /* hoặc font bạn dùng */
+    color: #333;
+  }
+  
+  /* Label nằm ở cột 1 */
+  .form-wrapper label {
+    grid-column: 1 / 2;
+    align-self: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  /* Input nằm ở cột 2 */
+  .form-field {
+    display: contents; /* giúp label + input cùng row */
+  }
+  
+  /* Các thẻ input/select */
+  .form-wrapper input ,
+  .form-wrapper select,
+  .form-wrapper textarea {
+    grid-column: 2 / 3;
+    width: 100%;
+    padding: 8px 12px;
+    font-size: inherit !important;
+    font-family: inherit !important;
+height: 70px;
+    border: 1px solid #3266F5;
+    border-radius: 6px;
+    box-sizing: border-box;
+  }
+  
+  /* Nhóm radio và checkbox cũng nằm trong cột 2 */
+  .radio-group,
+  .checkbox-group {
+    font-size: 20px !important;
+
+    grid-column: 2 / 3;
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    align-items: center;
+
+  }
+  
+  .radio-group label,
+  .checkbox-group label {
+    font-size: 20px !important;
+
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+  }
+  
+  /* Nút submit tách dòng, căn giữa toàn form */
+  .form-button-wrapper {
+    grid-column: 1 / 3;
+  display: flex;
+  justify-content: center; /* ✅ Căn giữa nội dung theo chiều ngang */
+  align-items: center;      /* ✅ (Tùy chọn) căn giữa theo chiều dọc */
+  margin-top: 24px;
+
+  height: 70px;
+  }
+  .custom-button {
+    width: 500px;
+    height: 100%;
+    /* Các style khác như padding, background-color, border-radius, v.v. */
+  }
+  .text-lable{
+    font-size: 20px !important;
+  }
+  .form-wrapper input[type="radio"],
+.form-wrapper input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+.form-wrapper input:focus,
+.form-wrapper select:focus,
+.form-wrapper textarea:focus {
+  outline: none;                 /* Bỏ viền đen */
+  border: 1px solid #3266F5;     /* Giữ border xanh hoặc tuỳ chỉnh */
+  box-shadow: none;              /* Loại bỏ hiệu ứng đổ bóng nếu có */
+}

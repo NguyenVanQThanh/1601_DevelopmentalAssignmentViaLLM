@@ -1,0 +1,105 @@
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+.container-page {
+  /* padding: 10px 20px;         */
+  /* top/bottom = 10px, left/right = 20px */
+  box-sizing: border-box;   /* đảm bảo padding không làm tràn width */
+  width: 100%;              /* chiếm toàn bộ chiều ngang màn hình */
+  min-height: 100vh;        /* tùy chọn: đủ chiều cao nếu muốn full trang */
+  box-sizing: border-box; /* đảm bảo padding không làm bể layout */
+
+  display: flex;
+  flex-direction: column; /* xếp các phần header, main, footer theo chiều dọc */
+  justify-content: space-between; /* để đẩy footer xuống cuối nếu cần */
+  /* align-items: center;  */
+  /* căng giữa các phần tử con theo chiều ngang */
+
+}
+
+
+.container-footer {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 20px;
+  box-sizing: border-box;
+  border-top: 1px solid #ddd;
+  color: #666;
+  text-align: center;
+}
+.container-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+
+}
+.container-content{
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.instruction-box {
+  background-color: #eef3ff;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.text-blue {
+  color: #2673f2;
+}
+
+.text-bold {
+  font-weight: 600;
+}
+
+.view-mode-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.view-mode-select {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #2673f2;
+  font-size: 14px;
+}

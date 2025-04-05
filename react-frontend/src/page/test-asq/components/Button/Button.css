@@ -1,0 +1,21 @@
+.custom-button {
+    padding: 10px 20px;
+    background-color: #2673f2;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .custom-button.clicked {
+    background-color: #eef3ff;
+    color: #2673f2;
+    border: 1.5px solid #2673f2;
+  }
+  .custom-button:focus {
+    outline: none;              /* ✅ Đảm bảo không hiển thị outline đen */
+    box-shadow: 0 0 0 2px #a4c8ff; /* ✅ Viền xanh nhẹ khi focus */
+  }
+  
