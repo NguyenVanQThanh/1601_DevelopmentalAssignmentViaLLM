@@ -1,2 +1,8 @@
 Model/MentalBART/MentalBART.ipynb
 Model/MentalT5/MentalT5.ipynb
+Product/data
+Product/dts_finetuning
+Product/models
+Product/vectorstores
+Product/venv
+.env
