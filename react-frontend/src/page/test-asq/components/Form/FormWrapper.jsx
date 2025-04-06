@@ -2,7 +2,7 @@ import React from 'react';
 import './FormWrapper.css';
 import Button from '../Button/Button';
 
-function FormWrapper({ fields = [], onSubmit }) {
+function FormWrapper({ fields = [], onSubmit, renderButtons}) {
   const [formData, setFormData] = React.useState({});
 
   const handleChange = (name, value) => {
@@ -12,6 +12,7 @@ function FormWrapper({ fields = [], onSubmit }) {
   const handleSubmit = (e) => {
     e.preventDefault();
   
+    // ✅ Kiểm tra các trường bắt buộc
     const missingFields = fields.filter((field) => {
       const value = formData[field.name];
       if (field.type === 'checkbox-group') {
@@ -25,6 +26,28 @@ function FormWrapper({ fields = [], onSubmit }) {
       return;
     }
   
+    // ✅ Duyệt fields đang hiển thị để kiểm tra validate động
+    for (const field of fields) {
+      const value = formData[field.name];
+  
+      if (field.name === 'phone') {
+        const phoneIsValid = /^[0-9]+$/.test(value);
+        if (!phoneIsValid) {
+          alert('Số điện thoại chỉ được chứa chữ số (0-9).');
+          return;
+        }
+      }
+  
+      if (field.name === 'birthYear') {
+        const yearIsValid = /^\d{4}$/.test(value) && parseInt(value, 10) > 1950;
+        if (!yearIsValid) {
+          alert('Năm sinh không hợp lệ.');
+          return;
+        }
+      }
+    }
+  
+    // ✅ Nếu không lỗi, gọi hàm submit
     onSubmit(formData);
   };
 
@@ -121,9 +144,13 @@ function FormWrapper({ fields = [], onSubmit }) {
       ))}
 
       {/* ✅ Button tách riêng, căng giữa toàn form */}
+      {renderButtons ? (
+        renderButtons({ onSubmit: handleSubmit })
+      ) : (
       <div className="form-button-wrapper">
         <Button type="submit">TIẾP TỤC</Button>
       </div>
+      )}
     </form>
   );
 }

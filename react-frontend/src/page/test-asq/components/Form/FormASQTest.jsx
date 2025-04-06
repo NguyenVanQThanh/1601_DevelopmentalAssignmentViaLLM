@@ -103,7 +103,11 @@ function FormASQTest({ onBack, onSubmit }) {
     if (currentSectionIndex < testSections.length - 1) {
       setCurrentSectionIndex(prev => prev + 1);
     } else {
-      onSubmit(answers); // Gửi kết quả nếu đã hết phần
+      onSubmit({
+        answers,
+        viewMode,
+        completedSection: testSections[currentSectionIndex]?.id
+      });
     }
   };
 
@@ -137,8 +141,38 @@ function FormASQTest({ onBack, onSubmit }) {
       return;
     }
   
-    onSubmit(answers);
+    // ✅ Tính điểm theo từng lĩnh vực
+    const getScore = (value) => {
+      if (value === "CÓ") return 10;
+      if (value === "THỈNH THOẢNG") return 5;
+      return 0;
+    };
+  
+    const lstScores = testSections.slice(0, 5).map(section => {
+      const total = section.questions.reduce((sum, q) => {
+        const val = answers[q.name];
+        return sum + getScore(val);
+      }, 0);
+      return {
+        field: section.title.replace(/^.*?\.\s*/, ""), // ví dụ: "A. GIAO TIẾP" => "GIAO TIẾP"
+        score: total
+      };
+    });
+  
+    // ✅ Tính tuổi tạm thời (giả định), ví dụ dùng age = 20 (sau này BE tính)
+    const age = 20;
+  
+    // ✅ Gửi về DTO
+    onSubmit({
+      answers,
+      viewMode,
+      completedSection: viewMode === "step" ? testSections[currentSectionIndex]?.id : 'ALL',
+      age,
+      lstScores,
+      comment: "Dữ liệu nhận xét sẽ render từ BE"
+    });
   };
+  
 
 
   return (

@@ -7,6 +7,8 @@ import Footer from "./components/Footer/Footer";
 import TitleBox from "./components/Title_box/TitleBox";
 import FormWrapper from './page/test-asq/components/Form/FormWrapper';
 import FormASQTest from './page/test-asq/components/Form/FormASQTest';
+import FormParentInfo from './page/test-asq/components/Form/FormParentInfo';
+import ResultPage from './page/test-asq/ResultPage';
 
 
 function App() {
@@ -58,10 +60,14 @@ function App() {
     { type: 'radio', name: 'pre-test', label: 'Trẻ đã được sàng lọc trước đó với ASQ-3/M-CHAT-R:', options: ['Không', 'Có'] }
   ];
 
-  // const handleSubmit = (formData) => {
-  //   console.log('Dữ liệu form:', formData);
-  // };
   const [step, setStep] = useState(1);
+
+  const [childInfo, setChildInfo] = useState(null);
+
+  const [testResult, setTestResult] = useState(null); // dữ liệu trả về từ ASQTestForm 
+
+  const [parentInfo, setParentInfo] = useState(null);
+
   return (
     <div className="container-page">
       <Header />
@@ -76,7 +82,8 @@ function App() {
                 fields={showExtraFields ? [...formFields, ...extraFields] : formFields}
                 onSubmit={(data) => {
                   console.log('Bước 1:', data);
-                  setStep(2); // chuyển sang bước 2
+                  setChildInfo(data);      
+                  setStep(2); 
                 }}
               />
             </>
@@ -84,23 +91,46 @@ function App() {
   
           {/* 👉 BƯỚC 2: Làm bài test */}
           {step === 2 && (
-            <>
-              <TitleBox
-                title="LÀM BÀI SÀNG LỌC ĐÁNH GIÁ PHÁT TRIỂN THEO ĐỘ TUỔI ASQ-3"
-                subtitle="(Bộ câu hỏi 20 tháng tuổi)"
-                onBack={() => setStep(1)}
-              />
+  <>
+    <TitleBox
+      title="LÀM BÀI SÀNG LỌC ĐÁNH GIÁ PHÁT TRIỂN THEO ĐỘ TUỔI ASQ-3"
+      subtitle="(Bộ câu hỏi 20 tháng tuổi)"
+      onBack={() => setStep(1)}
+    />
+    <FormASQTest
+      onBack={() => setStep(1)}
+      onSubmit={(dto) => {
+        console.log('Hoàn tất bài test:', dto);
+        setTestResult(dto);
+        setStep(3); // ➕ chuyển bước
+      }}
+    />
+  </>
+)}
 
-
-              <FormASQTest
-                onBack={() => setStep(1)}
-                onSubmit={(answers) => {
-                  console.log('Hoàn tất bài test:', answers);
-                  // setStep(3); // nếu muốn thêm bước 3
-                }}
-              />
-            </>
-          )}
+{step === 3 && (
+  <>
+    <TitleBox title="THÔNG TIN PHỤ HUYNH" onBack={() => setStep(2)} />
+    <FormParentInfo
+      onBack={() => setStep(2)}
+      onSubmit={(parentInfo) => {
+        console.log('Thông tin phụ huynh:', parentInfo);
+        console.log('Kết quả bài test:', testResult);
+    setParentInfo(parentInfo); // lưu lại
+    setStep(4); // ➕ chuyển sang kết quả
+      }}
+    />
+  </>
+)}
+{step === 4 && testResult && childInfo && parentInfo && (
+  <>
+    <TitleBox
+      title="Kết quả bài sàng lọc đánh giá phát triển theo độ tuổi ASQ-3"
+      subtitle="(Bộ câu hỏi 20 tháng tuổi)"
+    />
+    <ResultPage childInfo={childInfo} parentInfo={parentInfo} testResult={testResult} />
+  </>
+)}
         </section>
       </main>
   
