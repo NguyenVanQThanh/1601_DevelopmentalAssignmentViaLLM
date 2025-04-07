@@ -1,105 +1,230 @@
-from transformers import AutoTokenizer, AutoModelForSeq2SeqLM, pipeline
-from langchain_community.llms import CTransformers
-from langchain.chains import ConversationalRetrievalChain
-from langchain.prompts import PromptTemplate
-from langchain_community.embeddings import GPT4AllEmbeddings
+import os
 from langchain_community.vectorstores import FAISS
-from langchain.memory import ConversationBufferMemory
+from langchain.chains.combine_documents import create_stuff_documents_chain
+from langchain_core.prompts import PromptTemplate
+from langchain_community.chat_message_histories import FileChatMessageHistory
+from langchain_core.messages import HumanMessage, AIMessage
+from flask import Flask, render_template, request
+import traceback
+from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
+from sentence_transformers import SentenceTransformer
+from langchain_core.embeddings import Embeddings
+from langchain_core.language_models import BaseLLM
+from langchain_core.outputs import Generation, LLMResult
+from typing import List, Optional
+import torch
 
-# Tải mô hình và tokenizer bartpho-syllable từ thư mục cục bộ
-bartpho_tokenizer = AutoTokenizer.from_pretrained("./models/bartpho-syllable", local_files_only=True)
-bartpho_model = AutoModelForSeq2SeqLM.from_pretrained("./models/bartpho-syllable", local_files_only=True)
+# --- Configuration ---
+BARTPHO_MODEL_PATH = "./models/bartpho-syllable"
+LLM_MODEL_NAME = "vilm/vinallama-2.7b-chat"
+LLM_LOCAL_PATH = "./models/vinallama-2.7b-chat"
+BGE_M3_MODEL_PATH = "./models/bge-m3"
+VECTOR_DB_PATH = "vectorstores/db_faiss"
+HISTORY_FILE_PATH = "conversation_history.json"
+USE_PREPROCESSING = False
+MAX_HISTORY_TURNS = 2
+MAX_LENGTH = 2048  # Giữ max_length cho pipeline
 
-# Tạo pipeline để tóm tắt hoặc chuẩn hóa câu hỏi
-summarizer = pipeline(
-    "text2text-generation",
-    model=bartpho_model,
-    tokenizer=bartpho_tokenizer,
-    device=-1
-)
+# --- Custom SentenceTransformer Embeddings ---
+class SentenceTransformerEmbeddings(Embeddings):
+    def __init__(self, model_path: str):
+        self.model = SentenceTransformer(model_path)
+        self.tokenizer = AutoTokenizer.from_pretrained(model_path)
 
-# Hàm chuẩn hóa câu hỏi bằng bartpho-syllable
-def preprocess_input(text):
-    print(f"Đầu vào gốc: {text}")
-    processed_text = summarizer(
-        text,
-        max_length=50,
-        min_length=10,
-        do_sample=False,
-        num_beams=5
-    )[0]['generated_text']
-    print(f"Đầu vào sau khi chuẩn hóa: {processed_text}")
-    return processed_text
+    def embed_documents(self, texts: List[str]) -> List[List[float]]:
+        return self.model.encode(texts, convert_to_tensor=False, show_progress_bar=True).tolist()
 
-# Cấu hình RAG
-model_file = "models/vinallama-7b-chat_q5_0.gguf"
-vector_db_path = "vectorstores/db_faiss"
+    def embed_query(self, text: str) -> List[float]:
+        return self.model.encode([text], convert_to_tensor=False, show_progress_bar=False).tolist()[0]
 
-# Load LLM
-def load_llm(model_file):
-    llm = CTransformers(
-        model=model_file,
-        model_type="llama",
-        max_new_tokens=768,
-        temperature=0.01,
-        n_ctx=2048
+# --- Custom LLM Wrapper for Transformers Pipeline ---
+class TransformersPipelineLLM(BaseLLM):
+    def __init__(self, pipeline_obj):
+        super().__init__()
+        self._pipeline = pipeline_obj
+
+    def _generate(self, prompts: List[str], stop: Optional[List[str]] = None, **kwargs) -> LLMResult:
+        responses = []
+        for prompt in prompts:
+            output = self._pipeline(prompt, max_new_tokens=256, num_return_sequences=1)[0] 
+            responses.append(Generation(text=output["generated_text"]))
+        return LLMResult(generations=[responses])
+
+    @property
+    def _llm_type(self) -> str:
+        return "transformers_pipeline"
+
+# --- Model Loading ---
+# Bartpho for preprocessing (optional)
+bartpho_tokenizer = None
+bartpho_model = None
+summarizer = None
+if USE_PREPROCESSING and os.path.exists(BARTPHO_MODEL_PATH):
+    try:
+        bartpho_tokenizer = AutoTokenizer.from_pretrained(BARTPHO_MODEL_PATH, local_files_only=True)
+        bartpho_model = AutoModelForCausalLM.from_pretrained(BARTPHO_MODEL_PATH, local_files_only=True)
+        summarizer = pipeline("text2text-generation", model=bartpho_model, tokenizer=bartpho_tokenizer, device=-1)
+    except Exception as e:
+        USE_PREPROCESSING = False
+
+# Load VinaLLaMA Sequence Model (CPU only)
+def load_llm(model_name=LLM_MODEL_NAME, local_path=LLM_LOCAL_PATH):
+    print(f"Checking and loading LLM...")
+    if os.path.exists(local_path):
+        print(f"Found model at {local_path}. Loading from local...")
+        tokenizer = AutoTokenizer.from_pretrained(local_path, local_files_only=True)
+        model = AutoModelForCausalLM.from_pretrained(
+            local_path,
+            torch_dtype=torch.float32,
+            low_cpu_mem_usage=True
+        )
+    else:
+        print(f"Model not found at {local_path}. Downloading from Hugging Face ({model_name})...")
+        tokenizer = AutoTokenizer.from_pretrained(model_name)
+        model = AutoModelForCausalLM.from_pretrained(
+            model_name,
+            torch_dtype=torch.float32,
+            low_cpu_mem_usage=True
+        )
+        print(f"Saving model to {local_path}...")
+        tokenizer.save_pretrained(local_path)
+        model.save_pretrained(local_path)
+
+    llm_pipeline = pipeline(
+        "text-generation",
+        model=model,
+        tokenizer=tokenizer,
+        max_length=MAX_LENGTH,
+        truncation=True,
+        return_full_text=False,
+        device=-1  # Force CPU usage
     )
-    return llm
+    print("LLM loaded successfully.")
+    return TransformersPipelineLLM(llm_pipeline)
 
-# Đọc VectorDB
-def read_vectors_db():
-    embedding_model = GPT4AllEmbeddings(model_file="models/all-MiniLM-L6-v2-f16.gguf")
+# Load Embedding Model and Vector DB
+def read_vectors_db(vector_db_path, bge_m3_model_path):
+    print("Loading Embedding model and Vector DB...")
+    if not os.path.exists(vector_db_path):
+        raise FileNotFoundError(f"Vector DB not found at {vector_db_path}")
+    if not os.path.exists(bge_m3_model_path):
+        print(f"Directory {bge_m3_model_path} not found. Downloading BGE-M3 model...")
+        embedding_model = SentenceTransformer('BAAI/bge-m3')
+        embedding_model.save(bge_m3_model_path)
+    else:
+        embedding_model = SentenceTransformer(bge_m3_model_path)
+
+    embedding_model = SentenceTransformerEmbeddings(bge_m3_model_path)
     db = FAISS.load_local(vector_db_path, embedding_model, allow_dangerous_deserialization=True)
+    print("Embedding and Vector DB loaded.")
     return db
 
-# Khởi tạo RAG và bộ nhớ hội thoại
-db = read_vectors_db()
-llm = load_llm(model_file)
+# --- Preprocessing Function ---
+def preprocess_input(text):
+    if not USE_PREPROCESSING or summarizer is None:
+        return text
+    try:
+        return summarizer(text, max_length=128, min_length=5, do_sample=False, num_beams=5)[0]['generated_text']
+    except Exception:
+        return text
 
-# Tạo bộ nhớ hội thoại
-memory = ConversationBufferMemory(
-    memory_key="chat_history",
-    return_messages=True
-)
+# --- RAG Setup ---
+try:
+    db = read_vectors_db(VECTOR_DB_PATH, BGE_M3_MODEL_PATH)
+    llm = load_llm(LLM_MODEL_NAME, LLM_LOCAL_PATH)
+    retriever = db.as_retriever(search_type="similarity", search_kwargs={'k': 2})  # Giảm xuống 2 chunk
+except FileNotFoundError as e:
+    print(f"Initialization error: {e}")
+    exit()
+except Exception as e:
+    print(f"Unexpected initialization error: {e}")
+    traceback.print_exc()
+    exit()
 
-# Tạo prompt template (sửa để yêu cầu nghiêm ngặt hơn)
+message_history = FileChatMessageHistory(file_path=HISTORY_FILE_PATH)
+
+# --- Prompt Template (Cải thiện để tập trung vào câu hỏi) ---
 template = """<|im_start|>system
-Chỉ dựa trên thông tin trong tài liệu sau và lịch sử hội thoại, trả lời câu hỏi một cách ngắn gọn và chính xác bằng tiếng Việt. Không được sử dụng kiến thức bên ngoài tài liệu. Nếu câu hỏi yêu cầu liệt kê, hãy cung cấp danh sách các mục cụ thể. Nếu không có thông tin liên quan trong tài liệu, trả lời "Không biết". Chỉ trả lời câu hỏi hiện tại, không sinh thêm câu hỏi hoặc nội dung khác.
-**Lịch sử hội thoại:**
-{chat_history}
-**Thông tin từ tài liệu:**
-{context}
-<|im_end|>
-<|im_start|>user
-{question}
-<|im_end|>
+Bạn là trợ lý AI, trả lời câu hỏi ({question}) ngắn gọn, chính xác, chỉ dùng thông tin liên quan trực tiếp đến câu hỏi từ tài liệu (context).  
+- Ưu tiên thông tin từ tài liệu phù hợp nhất với câu hỏi, bỏ qua nội dung không liên quan.  
+- Nếu không có thông tin phù hợp, trả lời: "Không tìm thấy thông tin phù hợp."  
+- Trả lời bằng tiếng Việt, dưới 50 từ.  
+
+**Lịch sử hội thoại:**  
+{chat_history}  
+
+**Tài liệu:**  
+{context}  
+<|im_end|>  
+<|im_start|>user  
+{question}  
+<|im_end|>  
 <|im_start|>assistant
 """
-prompt = PromptTemplate(
-    template=template,
-    input_variables=["chat_history", "context", "question"]
-)
+QA_PROMPT = PromptTemplate(template=template, input_variables=["chat_history", "context", "question"])
 
-# Tạo ConversationalRetrievalChain
-qa_chain = ConversationalRetrievalChain.from_llm(
-    llm=llm,
-    retriever=db.as_retriever(search_kwargs={"k": 3}, max_tokens_limit=1200),
-    memory=memory,
-    combine_docs_chain_kwargs={"prompt": prompt},
-    return_source_documents=False
-)
+# --- Create Stuff Documents Chain ---
+try:
+    question_answer_chain = create_stuff_documents_chain(llm, QA_PROMPT)
+except Exception as e:
+    print(f"Error creating chain: {e}")
+    traceback.print_exc()
+    exit()
 
-# Chatbot response using RAG (chỉ tiếng Việt)
+# --- Format Chat History ---
+def format_limited_chat_history(history_messages, max_turns=MAX_HISTORY_TURNS):
+    if not history_messages:
+        return "Không có lịch sử hội thoại."
+    num_messages_to_keep = max_turns * 2
+    recent_messages = history_messages[-num_messages_to_keep:]
+    formatted_history = []
+    for msg in recent_messages:
+        if isinstance(msg, HumanMessage):
+            formatted_history.append(f"<|im_start|>user\n{msg.content}<|im_end|>")
+        elif isinstance(msg, AIMessage):
+            formatted_history.append(f"<|im_start|>assistant\n{msg.content}")
+    return "\n".join(formatted_history)
+
+# --- Chatbot Response Function ---
 def chatbot_response(msg):
     processed_msg = preprocess_input(msg)
-    response = qa_chain.invoke({"question": processed_msg})
-    chatbot_response_text = response['answer']
-    chatbot_response_text = chatbot_response_text.split('<|im_end|>')[0].strip()
-    print(f"Đầu ra: {chatbot_response_text}")
-    return chatbot_response_text
+    try:
+        relevant_docs = retriever.invoke(processed_msg)
+        
+        # In nội dung chunk đầu tiên ra màn hình
+        if relevant_docs:
+            first_chunk_content = relevant_docs[0].page_content
+            first_chunk_source = relevant_docs[0].metadata.get('source', 'N/A')
+            print("\n--- Nội dung chunk đầu tiên ---")
+            print(f"(Nguồn: {first_chunk_source})\n{first_chunk_content}")
+            print("-----------------------------\n")
+        else:
+            print("Không tìm thấy chunk nào.")
 
-# Flask app
-from flask import Flask, render_template, request
+        try:
+            current_history_messages = FileChatMessageHistory(file_path=HISTORY_FILE_PATH).messages
+        except Exception:
+            current_history_messages = []
+        formatted_limited_history = format_limited_chat_history(current_history_messages)
+
+        final_input_dict = {
+            "question": processed_msg,
+            "context": relevant_docs,
+            "chat_history": formatted_limited_history
+        }
+        response = question_answer_chain.invoke(final_input_dict)
+        chatbot_response_text = response.split('<|im_end|>')[0].strip()
+
+        message_history.add_user_message(processed_msg)
+        message_history.add_ai_message(chatbot_response_text)
+
+        return chatbot_response_text
+    except Exception as e:
+        print(f"RAG processing error: {e}")
+        traceback.print_exc()
+        return "Đã xảy ra lỗi trong quá trình xử lý yêu cầu của bạn."
+
+# --- Flask App ---
 app = Flask(__name__)
 app.static_folder = 'static'
 
@@ -110,9 +235,15 @@ def home():
 @app.route("/get")
 def get_bot_response():
     user_text = request.args.get('msg')
-    print(f"Nhận câu hỏi từ người dùng: {user_text}")
-    chatbot_response_text = chatbot_response(user_text)
-    return chatbot_response_text
+    if not user_text:
+        return "Vui lòng nhập câu hỏi."
+    return chatbot_response(user_text)
 
+# --- Main Execution ---
 if __name__ == "__main__":
+    if os.path.exists(HISTORY_FILE_PATH):
+        try:
+            os.remove(HISTORY_FILE_PATH)
+        except OSError as e:
+            print(f"Error deleting history file: {e}")
     app.run(debug=True)
