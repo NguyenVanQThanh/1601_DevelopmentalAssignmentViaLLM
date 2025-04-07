@@ -1,112 +1,269 @@
-import React, { useState } from 'react';
-import Button from '../Button/Button';
-import './FormASQTest.css';
+import Button from "../Button/Button";
+import "./FormASQTest.css";
+import React, { useState, useEffect } from "react";
+import TitleBox from "../../../../components/Title_box/TitleBox";
 
-function FormASQTest({ onBack, onSubmit }) {
-  const [answers, setAnswers] = useState({});
-  const [viewMode, setViewMode] = useState("all"); // 'all' | 'step'
+function FormASQTest({ onBack, onSubmit, defaultValues = {} }) {
+  const defaultAnswers = defaultValues.answers || {};
+
+  const [answers, setAnswers] = useState(defaultAnswers);
+  const [viewMode, setViewMode] = useState(defaultValues.viewMode || "all");
   const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
+  const [completedSection, setCompletedSection] = useState(
+    defaultValues.completedSection || []
+  );
+  const [age, setAge] = useState(defaultValues.age || null);
+  useEffect(() => {
+    setAnswers(defaultValues.answers || {});
+    setCompletedSection(defaultValues.completedSection || []);
+    setAge(defaultValues.age || null);
+    setViewMode(defaultValues.viewMode || "all");
+  }, [defaultValues]);
 
   const testSections = [
     {
-      id: 'A',
-      title: 'A. GIAO TIẾP',
-      description: 'Hãy chắc chắn thử những hoạt động này cho trẻ',
+      id: "A",
+      title: "A. GIAO TIẾP",
+      description: "Hãy chắc chắn thử những hoạt động này cho trẻ",
       questions: [
-        { name: 'a_q1', label: 'Trẻ có biết gọi ba mẹ không?', options: ['CÓ', 'THỈNH THOẢNG', 'CHƯA'] },
-        { name: 'a_q2', label: 'Trẻ có phản ứng với âm thanh không?', options: ['CÓ', 'THỈNH THOẢNG', 'CHƯA'] },
-        { name: 'a_q3', label: 'Trẻ có phản ứng với âm thanh không?', options: ['CÓ', 'THỈNH THOẢNG', 'CHƯA'] },
-        { name: 'a_q4', label: 'Trẻ có phản ứng với âm thanh không?', options: ['CÓ', 'THỈNH THOẢNG', 'CHƯA'] },
-        { name: 'a_q5', label: 'Trẻ có phản ứng với âm thanh không?', options: ['CÓ', 'THỈNH THOẢNG', 'CHƯA'] },
-        { name: 'a_q6', label: 'Trẻ có phản ứng với âm thanh không?', options: ['CÓ', 'THỈNH THOẢNG', 'CHƯA'] },
+        {
+          name: "a_q1",
+          label: "Trẻ có biết gọi ba mẹ không?",
+          options: ["CÓ", "THỈNH THOẢNG", "CHƯA"],
+        },
+        {
+          name: "a_q2",
+          label: "Trẻ có phản ứng với âm thanh không?",
+          options: ["CÓ", "THỈNH THOẢNG", "CHƯA"],
+        },
+        {
+          name: "a_q3",
+          label: "Trẻ có phản ứng với âm thanh không?",
+          options: ["CÓ", "THỈNH THOẢNG", "CHƯA"],
+        },
+        {
+          name: "a_q4",
+          label: "Trẻ có phản ứng với âm thanh không?",
+          options: ["CÓ", "THỈNH THOẢNG", "CHƯA"],
+        },
+        {
+          name: "a_q5",
+          label: "Trẻ có phản ứng với âm thanh không?",
+          options: ["CÓ", "THỈNH THOẢNG", "CHƯA"],
+        },
+        {
+          name: "a_q6",
+          label: "Trẻ có phản ứng với âm thanh không?",
+          options: ["CÓ", "THỈNH THOẢNG", "CHƯA"],
+        },
       ],
     },
     {
-      id: 'B',
-      title: 'B. VẬN ĐỘNG THÔ',
-      description: 'Hãy thử cho trẻ thực hiện các hoạt động sau',
+      id: "B",
+      title: "B. VẬN ĐỘNG THÔ",
+      description: "Hãy thử cho trẻ thực hiện các hoạt động sau",
       questions: [
-        { name: 'b_q1', label: 'Trẻ có biết gọi ba mẹ không?', options: ['CÓ', 'THỈNH THOẢNG', 'CHƯA'] },
-        { name: 'b_q2', label: 'Trẻ có phản ứng với âm thanh không?', options: ['CÓ', 'THỈNH THOẢNG', 'CHƯA'] },
-        { name: 'b_q3', label: 'Trẻ có phản ứng với âm thanh không?', options: ['CÓ', 'THỈNH THOẢNG', 'CHƯA'] },
-        { name: 'b_q4', label: 'Trẻ có phản ứng với âm thanh không?', options: ['CÓ', 'THỈNH THOẢNG', 'CHƯA'] },
-        { name: 'b_q5', label: 'Trẻ có phản ứng với âm thanh không?', options: ['CÓ', 'THỈNH THOẢNG', 'CHƯA'] },
-        { name: 'b_q6', label: 'Trẻ có phản ứng với âm thanh không?', options: ['CÓ', 'THỈNH THOẢNG', 'CHƯA'] },
+        {
+          name: "b_q1",
+          label: "Trẻ có biết gọi ba mẹ không?",
+          options: ["CÓ", "THỈNH THOẢNG", "CHƯA"],
+        },
+        {
+          name: "b_q2",
+          label: "Trẻ có phản ứng với âm thanh không?",
+          options: ["CÓ", "THỈNH THOẢNG", "CHƯA"],
+        },
+        {
+          name: "b_q3",
+          label: "Trẻ có phản ứng với âm thanh không?",
+          options: ["CÓ", "THỈNH THOẢNG", "CHƯA"],
+        },
+        {
+          name: "b_q4",
+          label: "Trẻ có phản ứng với âm thanh không?",
+          options: ["CÓ", "THỈNH THOẢNG", "CHƯA"],
+        },
+        {
+          name: "b_q5",
+          label: "Trẻ có phản ứng với âm thanh không?",
+          options: ["CÓ", "THỈNH THOẢNG", "CHƯA"],
+        },
+        {
+          name: "b_q6",
+          label: "Trẻ có phản ứng với âm thanh không?",
+          options: ["CÓ", "THỈNH THOẢNG", "CHƯA"],
+        },
       ],
     },
     {
-        id: 'C',
-        title: 'C. VẬN ĐỘNG TINH',
-        description: 'Hãy chắc chắn thử những hoạt động này cho trẻ',
-        questions: [
-            { name: 'c_q1', label: 'Trẻ có biết gọi ba mẹ không?', options: ['CÓ', 'THỈNH THOẢNG', 'CHƯA'] },
-            { name: 'c_q2', label: 'Trẻ có phản ứng với âm thanh không?', options: ['CÓ', 'THỈNH THOẢNG', 'CHƯA'] },
-            { name: 'c_q3', label: 'Trẻ có phản ứng với âm thanh không?', options: ['CÓ', 'THỈNH THOẢNG', 'CHƯA'] },
-            { name: 'c_q4', label: 'Trẻ có phản ứng với âm thanh không?', options: ['CÓ', 'THỈNH THOẢNG', 'CHƯA'] },
-            { name: 'c_q5', label: 'Trẻ có phản ứng với âm thanh không?', options: ['CÓ', 'THỈNH THOẢNG', 'CHƯA'] },
-            { name: 'c_q6', label: 'Trẻ có phản ứng với âm thanh không?', options: ['CÓ', 'THỈNH THOẢNG', 'CHƯA'] },
-        ],
-      },
-      {
-        id: 'D',
-        title: 'D. GIẢI QUYẾT VẤN ĐỀ',
-        description: 'Hãy chắc chắn thử những hoạt động này cho trẻ',
-        questions: [
-            { name: 'd_q1', label: 'Trẻ có biết gọi ba mẹ không?', options: ['CÓ', 'THỈNH THOẢNG', 'CHƯA'] },
-            { name: 'd_q2', label: 'Trẻ có phản ứng với âm thanh không?', options: ['CÓ', 'THỈNH THOẢNG', 'CHƯA'] },
-            { name: 'd_q3', label: 'Trẻ có phản ứng với âm thanh không?', options: ['CÓ', 'THỈNH THOẢNG', 'CHƯA'] },
-            { name: 'd_q4', label: 'Trẻ có phản ứng với âm thanh không?', options: ['CÓ', 'THỈNH THOẢNG', 'CHƯA'] },
-            { name: 'd_q5', label: 'Trẻ có phản ứng với âm thanh không?', options: ['CÓ', 'THỈNH THOẢNG', 'CHƯA'] },
-            { name: 'd_q6', label: 'Trẻ có phản ứng với âm thanh không?', options: ['CÓ', 'THỈNH THOẢNG', 'CHƯA'] },
-        ],
-      },
-      {
-        id: 'E',
-        title: 'E. CÁ NHÂN XÃ HỘI',
-        description: 'Hãy chắc chắn thử những hoạt động này cho trẻ',
-        questions: [
-            { name: 'e_q1', label: 'Trẻ có biết gọi ba mẹ không?', options: ['CÓ', 'THỈNH THOẢNG', 'CHƯA'] },
-            { name: 'e_q2', label: 'Trẻ có phản ứng với âm thanh không?', options: ['CÓ', 'THỈNH THOẢNG', 'CHƯA'] },
-            { name: 'e_q3', label: 'Trẻ có phản ứng với âm thanh không?', options: ['CÓ', 'THỈNH THOẢNG', 'CHƯA'] },
-            { name: 'e_q4', label: 'Trẻ có phản ứng với âm thanh không?', options: ['CÓ', 'THỈNH THOẢNG', 'CHƯA'] },
-            { name: 'e_q5', label: 'Trẻ có phản ứng với âm thanh không?', options: ['CÓ', 'THỈNH THOẢNG', 'CHƯA'] },
-            { name: 'e_q6', label: 'Trẻ có phản ứng với âm thanh không?', options: ['CÓ', 'THỈNH THOẢNG', 'CHƯA'] },
-        ],
-      },
-      {
-        id: 'F',
-        title: 'F. CÂU HỎI CHUNG',
-        description: 'Hãy chắc chắn thử những hoạt động này cho trẻ',
-        questions: [
-            { name: 'f_q1', label: 'Trẻ có biết gọi ba mẹ không?', options: ['CÓ', 'THỈNH THOẢNG', 'CHƯA'] },
-            { name: 'f_q2', label: 'Trẻ có phản ứng với âm thanh không?', options: ['CÓ', 'THỈNH THOẢNG', 'CHƯA'] },
-            { name: 'f_q3', label: 'Trẻ có phản ứng với âm thanh không?', options: ['CÓ', 'THỈNH THOẢNG', 'CHƯA'] },
-            { name: 'f_q4', label: 'Trẻ có phản ứng với âm thanh không?', options: ['CÓ', 'THỈNH THOẢNG', 'CHƯA'] },
-            { name: 'f_q5', label: 'Trẻ có phản ứng với âm thanh không?', options: ['CÓ', 'THỈNH THOẢNG', 'CHƯA'] },
-            { name: 'f_q6', label: 'Trẻ có phản ứng với âm thanh không?', options: ['CÓ', 'THỈNH THOẢNG', 'CHƯA'] },
-        ],
-      }
+      id: "C",
+      title: "C. VẬN ĐỘNG TINH",
+      description: "Hãy chắc chắn thử những hoạt động này cho trẻ",
+      questions: [
+        {
+          name: "c_q1",
+          label: "Trẻ có biết gọi ba mẹ không?",
+          options: ["CÓ", "THỈNH THOẢNG", "CHƯA"],
+        },
+        {
+          name: "c_q2",
+          label: "Trẻ có phản ứng với âm thanh không?",
+          options: ["CÓ", "THỈNH THOẢNG", "CHƯA"],
+        },
+        {
+          name: "c_q3",
+          label: "Trẻ có phản ứng với âm thanh không?",
+          options: ["CÓ", "THỈNH THOẢNG", "CHƯA"],
+        },
+        {
+          name: "c_q4",
+          label: "Trẻ có phản ứng với âm thanh không?",
+          options: ["CÓ", "THỈNH THOẢNG", "CHƯA"],
+        },
+        {
+          name: "c_q5",
+          label: "Trẻ có phản ứng với âm thanh không?",
+          options: ["CÓ", "THỈNH THOẢNG", "CHƯA"],
+        },
+        {
+          name: "c_q6",
+          label: "Trẻ có phản ứng với âm thanh không?",
+          options: ["CÓ", "THỈNH THOẢNG", "CHƯA"],
+        },
+      ],
+    },
+    {
+      id: "D",
+      title: "D. GIẢI QUYẾT VẤN ĐỀ",
+      description: "Hãy chắc chắn thử những hoạt động này cho trẻ",
+      questions: [
+        {
+          name: "d_q1",
+          label: "Trẻ có biết gọi ba mẹ không?",
+          options: ["CÓ", "THỈNH THOẢNG", "CHƯA"],
+        },
+        {
+          name: "d_q2",
+          label: "Trẻ có phản ứng với âm thanh không?",
+          options: ["CÓ", "THỈNH THOẢNG", "CHƯA"],
+        },
+        {
+          name: "d_q3",
+          label: "Trẻ có phản ứng với âm thanh không?",
+          options: ["CÓ", "THỈNH THOẢNG", "CHƯA"],
+        },
+        {
+          name: "d_q4",
+          label: "Trẻ có phản ứng với âm thanh không?",
+          options: ["CÓ", "THỈNH THOẢNG", "CHƯA"],
+        },
+        {
+          name: "d_q5",
+          label: "Trẻ có phản ứng với âm thanh không?",
+          options: ["CÓ", "THỈNH THOẢNG", "CHƯA"],
+        },
+        {
+          name: "d_q6",
+          label: "Trẻ có phản ứng với âm thanh không?",
+          options: ["CÓ", "THỈNH THOẢNG", "CHƯA"],
+        },
+      ],
+    },
+    {
+      id: "E",
+      title: "E. CÁ NHÂN XÃ HỘI",
+      description: "Hãy chắc chắn thử những hoạt động này cho trẻ",
+      questions: [
+        {
+          name: "e_q1",
+          label: "Trẻ có biết gọi ba mẹ không?",
+          options: ["CÓ", "THỈNH THOẢNG", "CHƯA"],
+        },
+        {
+          name: "e_q2",
+          label: "Trẻ có phản ứng với âm thanh không?",
+          options: ["CÓ", "THỈNH THOẢNG", "CHƯA"],
+        },
+        {
+          name: "e_q3",
+          label: "Trẻ có phản ứng với âm thanh không?",
+          options: ["CÓ", "THỈNH THOẢNG", "CHƯA"],
+        },
+        {
+          name: "e_q4",
+          label: "Trẻ có phản ứng với âm thanh không?",
+          options: ["CÓ", "THỈNH THOẢNG", "CHƯA"],
+        },
+        {
+          name: "e_q5",
+          label: "Trẻ có phản ứng với âm thanh không?",
+          options: ["CÓ", "THỈNH THOẢNG", "CHƯA"],
+        },
+        {
+          name: "e_q6",
+          label: "Trẻ có phản ứng với âm thanh không?",
+          options: ["CÓ", "THỈNH THOẢNG", "CHƯA"],
+        },
+      ],
+    },
+    {
+      id: "F",
+      title: "F. CÂU HỎI CHUNG",
+      description: "Hãy chắc chắn thử những hoạt động này cho trẻ",
+      questions: [
+        {
+          name: "f_q1",
+          label: "Trẻ có biết gọi ba mẹ không?",
+          options: ["CÓ", "THỈNH THOẢNG", "CHƯA"],
+        },
+        {
+          name: "f_q2",
+          label: "Trẻ có phản ứng với âm thanh không?",
+          options: ["CÓ", "THỈNH THOẢNG", "CHƯA"],
+        },
+        {
+          name: "f_q3",
+          label: "Trẻ có phản ứng với âm thanh không?",
+          options: ["CÓ", "THỈNH THOẢNG", "CHƯA"],
+        },
+        {
+          name: "f_q4",
+          label: "Trẻ có phản ứng với âm thanh không?",
+          options: ["CÓ", "THỈNH THOẢNG", "CHƯA"],
+        },
+        {
+          name: "f_q5",
+          label: "Trẻ có phản ứng với âm thanh không?",
+          options: ["CÓ", "THỈNH THOẢNG", "CHƯA"],
+        },
+        {
+          name: "f_q6",
+          label: "Trẻ có phản ứng với âm thanh không?",
+          options: ["CÓ", "THỈNH THOẢNG", "CHƯA"],
+        },
+      ],
+    },
   ];
 
   const handleChange = (name, value) => {
-    setAnswers(prev => ({ ...prev, [name]: value }));
+    setAnswers((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleNextStep = () => {
     const current = testSections[currentSectionIndex];
-    const isValid = current.questions.every(q => answers[q.name]);
+    const isValid = current.questions.every((q) => answers[q.name]);
     if (!isValid) {
       alert("Vui lòng trả lời tất cả câu hỏi trong phần này.");
       return;
     }
 
     if (currentSectionIndex < testSections.length - 1) {
-      setCurrentSectionIndex(prev => prev + 1);
+      setCurrentSectionIndex((prev) => prev + 1);
     } else {
       onSubmit({
         answers,
         viewMode,
-        completedSection: testSections[currentSectionIndex]?.id
+        completedSection: testSections[currentSectionIndex]?.id,
       });
     }
   };
@@ -117,72 +274,103 @@ function FormASQTest({ onBack, onSubmit }) {
         <strong>Câu {idx + 1}:</strong> {q.label}
       </div>
       <div className="radio-group">
-        {q.options.map(opt => (
-          <label key={opt} className="radio-option">
-            <input
-              type="radio"
-              name={q.name}
-              value={opt}
-              checked={answers[q.name] === opt}
-              onChange={() => handleChange(q.name, opt)}
-            />
-            {opt}
-          </label>
-        ))}
+        {q.options.map((optRaw) => {
+          const opt = optRaw.trim(); // xử lý an toàn
+          return (
+            <label key={opt} className="radio-option">
+              <input
+                type="radio"
+                name={q.name}
+                value={opt}
+                checked={answers[q.name] === opt}
+                onChange={() => handleChange(q.name, opt)}
+              />
+              {opt}
+            </label>
+          );
+        })}
       </div>
     </div>
   );
+
   const handleCompleteSubmit = () => {
-    const allQuestions = testSections.flatMap(section => section.questions);
-    const isValid = allQuestions.every(q => answers[q.name]);
-  
+    const allQuestions = testSections.flatMap((section) => section.questions);
+    const isValid = allQuestions.every((q) => answers[q.name]);
+
     if (!isValid) {
       alert("Vui lòng trả lời tất cả các câu hỏi trước khi hoàn tất.");
       return;
     }
-  
+
     // ✅ Tính điểm theo từng lĩnh vực
     const getScore = (value) => {
       if (value === "CÓ") return 10;
       if (value === "THỈNH THOẢNG") return 5;
       return 0;
     };
-  
-    const lstScores = testSections.slice(0, 5).map(section => {
+
+    const lstScores = testSections.slice(0, 5).map((section) => {
       const total = section.questions.reduce((sum, q) => {
         const val = answers[q.name];
         return sum + getScore(val);
       }, 0);
       return {
         field: section.title.replace(/^.*?\.\s*/, ""), // ví dụ: "A. GIAO TIẾP" => "GIAO TIẾP"
-        score: total
+        score: total,
       };
     });
-  
+
     // ✅ Tính tuổi tạm thời (giả định), ví dụ dùng age = 20 (sau này BE tính)
     const age = 20;
-  
+
     // ✅ Gửi về DTO
     onSubmit({
       answers,
       viewMode,
-      completedSection: viewMode === "step" ? testSections[currentSectionIndex]?.id : 'ALL',
+      completedSection:
+        viewMode === "step" ? testSections[currentSectionIndex]?.id : "ALL",
       age,
       lstScores,
-      comment: "Dữ liệu nhận xét sẽ render từ BE"
+      comment: "Dữ liệu nhận xét sẽ render từ BE",
     });
   };
-  
 
+  const handleBack = () => {
+    if (viewMode === "step" && currentSectionIndex > 0) {
+      setCurrentSectionIndex((prev) => prev - 1); // Quay về phần trước đó
+    } else {
+      onBack({
+        answers,
+        viewMode,
+        age,
+        completedSection,
+        comment: "Dữ liệu nhận xét sẽ render từ BE", // tùy bạn giữ hoặc bỏ
+      });
+    }
+  };
 
   return (
     <form className="form-questions" onSubmit={(e) => e.preventDefault()}>
+      <TitleBox
+        title="LÀM BÀI SÀNG LỌC ĐÁNH GIÁ PHÁT TRIỂN THEO ĐỘ TUỔI ASQ-3"
+        subtitle="(Bộ câu hỏi 20 tháng tuổi)"
+        onBack={handleBack} 
+      />
       <div className="instruction-box">
-        <p><strong>Hướng dẫn làm bài:</strong></p>
+        <p>
+          <strong>Hướng dẫn làm bài:</strong>
+        </p>
         <ul>
-          <li><span className="text-blue">CÓ</span>: Trẻ thực hiện thường xuyên</li>
-          <li><span className="text-blue">THỈNH THOẢNG</span>: Trẻ đôi khi làm được</li>
-          <li><span className="text-blue">CHƯA</span>: Trẻ chưa thực hiện được</li>
+          <li>
+            <span className="text-blue">CÓ</span>: Trẻ thực hiện thường xuyên
+          </li>
+          <li>
+            <span className="text-blue">THỈNH THOẢNG</span>: Trẻ đôi khi làm
+            được
+          </li>
+          <li>
+            <span className="text-blue">CHƯA</span>: Trẻ chưa thực hiện được
+          </li>
         </ul>
         <p>Hãy để trẻ thử từng hoạt động trước khi đánh dấu.</p>
       </div>
@@ -204,38 +392,45 @@ function FormASQTest({ onBack, onSubmit }) {
 
       {/* ✅ Hiển thị nội dung câu hỏi */}
       {viewMode === "all" && (
-  <>
-    {testSections.map((section, idx) => {
-      return (
-        <div className="question-section" key={section.id}>
-          <h3>{section.title}</h3>
-          <p>{section.description}</p>
-          {section.questions.map((q, qIdx) => renderQuestion(q, qIdx))}
-        </div>
-      );
-    })}
-  </>
-)}
-
-
-
+        <>
+          {testSections.map((section, idx) => {
+            return (
+              <div className="question-section" key={section.id}>
+                <h3>{section.title}</h3>
+                <p>{section.description}</p>
+                {section.questions.map((q, qIdx) => renderQuestion(q, qIdx))}
+              </div>
+            );
+          })}
+        </>
+      )}
 
       {viewMode === "step" && (
         <div className="question-section">
           <h3>{testSections[currentSectionIndex].title}</h3>
           <p>{testSections[currentSectionIndex].description}</p>
-          {testSections[currentSectionIndex].questions.map((q, qIdx) => renderQuestion(q, qIdx))}
+          {testSections[currentSectionIndex].questions.map((q, qIdx) =>
+            renderQuestion(q, qIdx)
+          )}
         </div>
       )}
 
       {/* ✅ Nút điều hướng */}
       <div className="container-button">
-        <Button type="button" onClick={onBack}>QUAY LẠI</Button>
+        <Button type="button" onClick={handleBack}>
+          {viewMode === "step" && currentSectionIndex > 0
+            ? "QUAY VỀ PHẦN TRƯỚC"
+            : "QUAY LẠI"}
+        </Button>
         {viewMode === "all" ? (
-          <Button type="button" onClick={handleCompleteSubmit}>HOÀN TẤT</Button>
+          <Button type="button" onClick={handleCompleteSubmit}>
+            HOÀN TẤT
+          </Button>
         ) : (
           <Button type="button" onClick={handleNextStep}>
-            {currentSectionIndex < testSections.length - 1 ? "TIẾP TỤC" : "HOÀN TẤT"}
+            {currentSectionIndex < testSections.length - 1
+              ? "TIẾP TỤC"
+              : "HOÀN TẤT"}
           </Button>
         )}
       </div>

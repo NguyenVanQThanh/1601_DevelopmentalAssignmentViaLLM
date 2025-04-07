@@ -7,6 +7,7 @@ function Button({ children, onClick, type = 'button' }) {
   const handleClick = (e) => {
     if (onClick) onClick(e);
     setClicked(true);
+    setTimeout(() => setClicked(false), 300); // reset lại sau 0.3s
   };
 
   return (

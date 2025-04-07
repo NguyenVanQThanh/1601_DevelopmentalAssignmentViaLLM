@@ -28,13 +28,12 @@
   align-items: center;
   text-align: center;
   padding: 0 10px;
-  justify-content: center; /* Căn giữa toàn bộ khối nội dung bên trong */
-
+  justify-content: center;
 }
+
 .column-inner {
 
-  text-align: left;          /* ✅ Căn chữ trái */
- 
+  text-align: left;
 }
 
 .footer-column h3 {
