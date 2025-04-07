@@ -78,3 +78,15 @@
     text-align: left;
   }
 }
+.nav a {
+  padding: 10px 16px;
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav a.active {
+  border-bottom: 2px solid #004aad;
+  color: #004aad;
+  font-weight: 700;
+}
