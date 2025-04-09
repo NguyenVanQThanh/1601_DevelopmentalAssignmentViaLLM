@@ -1,0 +1,5 @@
+.env
+Product/models
+Product/data
+Product/dts_finetuning
+Product/venv

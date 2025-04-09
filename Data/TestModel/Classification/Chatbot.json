@@ -1,0 +1,1124 @@
+{
+  "intents": [
+
+{
+      "tag": "Chào hỏi",
+      "patterns": [
+"Chào, cho mình hỏi?",
+
+"Xin chào, mình cần tư vấn một vài thông tin.",
+
+"Hi, mình có vấn đề cần hỏi? ",
+
+"Chào bạn, tôi có thắc mắc muốn hỏi.",
+
+"Hello, tôi muốn hỏi về trường hợp của con.",
+
+"Này, tôi vừa nhận kết quả và muốn hỏi thêm.",
+
+"Xin chào ạ, em cần hỏi về kết quả bài test",
+
+"Tôi cần được hỗ trợ về ASQ-3.",
+
+"Ê, cho tao xin tư vấn với.",
+
+"Mình vừa làm bài test xong, giờ cần hỏi thêm", 
+
+"Tôi cần tư vấn"
+
+],
+      "responses": [
+        "Chào bạn, phòng khám Tâm lý Nhi đồng ở đây để hỗ trợ bạn cùng đồng hành với bé. Bạn đang quan tâm tới điều gì về bài test ASQ-3 hay vấn đề bạn quan tâm là gì ? Hãy cho mình biết nhé! "
+  ]
+    },
+{
+  "tag": "Kết thúc cuộc trò chuyện",
+  "patterns": [
+    "Cảm ơn bạn nhiều nhé.",
+    "Thế là đủ rồi, cảm ơn bạn.",
+    "Vậy thôi, mình hỏi vậy thôi.",
+    "Tôi hiểu rồi, cảm ơn.",
+    "Mình hỏi vậy là rõ rồi.",
+    "Ok, cảm ơn bạn đã hỗ trợ.",
+    "Cảm ơn, mình sẽ theo dõi thêm.",
+    "Tạm biệt!",
+    "Oke",
+    "Cảm ơn", 
+    "Bye"
+  ],
+  "responses": [
+    "Cảm ơn bạn đã tin tưởng và chia sẻ! Nếu cần thêm hỗ trợ bất kỳ lúc nào, bạn có thể quay lại đây nhé. Chúc bạn và bé luôn khỏe mạnh và phát triển tốt 💛"
+  ]
+},
+{
+  "tag": "Yêu cầu phụ huynh làm test khi lo lắng con chậm nói, chậm phát triển, ít giao tiếp",
+  "patterns": [
+  "Trẻ chưa sử dụng tốt ngôn ngữ",
+  "Trẻ chưa biết nói",
+  "Trẻ ít tương tác với mọi người",
+  "Trẻ không nói, nghịch phá, kém tập trung", 
+  "Trẻ có thể nghe và làm mọi thứ nhưng không chịu nói", 
+  "Trẻ có thể nói baba, mama nhưng không nói được nhiều từ ở 20 tháng",
+  "Trẻ phát triển bình thường nhưng không nói và hay chỉ tay vào vật",
+  "Trẻ nói được từ đơn", 
+  "Cách test phát triển cho con, trẻ", 
+  "Con chưa biết nói ở ... tháng", 
+  "Trẻ bị chậm nói",
+  "Trẻ hiểu ý tốt, sai được nhưng không nói, ít tương tác bằng ngôn ngữ, ít tương tác xã hội, không giao tiếp nhiều với bạn",
+  "Con tôi gần 2 tuổi rồi mà vẫn chưa nói được",
+  "Bé nhà tôi chỉ nói được vài từ, có phải bị chậm nói không?",
+  "Tại sao bé không nói chuyện dù nghe hiểu rất tốt?",
+  "Bé không gọi ba mẹ dù đã hơn 18 tháng tuổi",
+  "Con chỉ nói được một từ rồi im, có bình thường không?",
+  "Trẻ 2 tuổi chưa biết nói có sao không?",
+  "Làm sao biết con chậm phát triển ngôn ngữ?",
+  "Bé của tôi có vấn đề về giao tiếp không?",
+  "Con tôi không nói chuyện khi chơi với người khác",
+  "Trẻ có dấu hiệu tự kỷ nếu không nói chuyện là đúng hay sai ?",
+  "Khi nào nên lo lắng nếu bé chưa biết nói?",
+  "Con chỉ ú ớ chứ không nói rõ ràng",
+  "Trẻ chỉ nói vài từ đơn giản mà không nối câu"
+  ],
+  "responses": [
+    "Có phải con bạn đang cảm thấy con chậm phát triển hơn các bạn và lo ngại về điều đó. Hãy làm bài test ASQ-3 trên website của chúng  tôi sau đó quay lại trò chuyện cùng tôi nhé!"
+  ]
+},
+    {
+      "tag": "Phân nhóm mục đích trò chuyện - Giải thích kết quả ASQ-3",
+      "patterns": [
+"Tôi có vài câu hỏi về kết quả test của con.",
+
+"Bé nhà em vừa làm bài test, em chưa hiểu kết quả cho lắm.",
+
+"Em mới nhận kết quả ASQ-3 và thấy một số phần thấp.",
+
+"Phiếu kết quả ASQ-3 của con em có vài điểm sát ngưỡng, nên lo không?",
+
+"Mình thấy con phát triển tốt mà điểm test lại thấp.",
+
+"Phiếu test gửi về có 5 lĩnh vực, em không hiểu từng phần nói gì.",
+
+"Em muốn hiểu rõ từng kỹ năng trong bảng đánh giá này.",
+
+"Tôi nhận được con ở vùng đậm và xám của kỹ năng giao tiếp và cá nhân xã hội nhưng đâu là những điểm con tôi thực sự cần được học cải thiện do trẻ đang ở vùng ngưỡng.",
+
+"Tôi nhận được kết quả trẻ phát triển ở vùng giữa bình thường và xám thì trẻ có thực sự bị chậm không hay vẫn có thể phát triển bình thường và không cần học can thiệp"
+],
+      "responses": [
+        "Có phải bạn đang muốn hiểu rõ hơn về ý nghĩa bảng kết quả ASQ-3 của bé — như từng phần đánh giá nói lên điều gì, điểm số phản ánh ra sao hoặc bé đang nằm trong vùng phát triển nào đúng không?"
+  ]
+    },
+{
+  "tag": "Phân nhóm mục đích trò chuyện - Giải thích kết quả ASQ-3 - Xác nhận đúng mục đích",
+  "patterns": [
+    "Đúng rồi",
+    "Chính xác",
+    "Bạn hiểu đúng rồi",
+    "Đúng ý mình đấy",
+    "Ừ đúng rồi"
+  ],
+  "responses": [
+    "Cảm ơn bạn đã xác nhận nhé. Bạn có thể gửi điểm cụ thể từng lĩnh vực bạn quan tâm để mình hỗ trợ giải thích kỹ và đưa ra giải pháp cho bạn nhé!"
+  ]
+},
+{
+  "tag": "Phân nhóm mục đích trò chuyện - Giải thích kết quả ASQ-3 - Phủ định mục đích",
+  "patterns": [
+    "Không đúng rồi",
+    "Ý mình không phải vậy",
+    "Sai rồi",
+    "No", "Không phải", 
+    "Bạn hiểu sai ý mình",
+    "Không phải về kết quả đâu"
+  ],
+  "responses": [
+    "Cảm ơn bạn đã làm rõ. Mình xin lỗi nếu hiểu chưa đúng. Bạn có thể chia sẻ thêm một chút để mình hỗ trợ đúng nội dung bạn đang quan tâm nhé?"
+]
+},
+{
+      "tag": "Phân nhóm mục đích trò chuyện - Giải thích kết quả M-Chat",
+      "patterns": [
+"Tôi có vài câu hỏi về kết quả test M-Chat của con.",
+
+"Tại sao cần làm thêm bài test M-Chat để đánh giá trẻ?",
+
+"Phiếu kết quả ASQ-3 của con là vùng xám - cần theo dõi, nên làm thêm M-Chat không?",
+
+"Mình thấy con phát triển tốt mà điểm test lại thấp. Có cần làm thêm M-Chat không? ",
+
+"Mình thấy con phát triển ở vùng xám - vùng theo dõi thì có cần làm thêm M-Chat không? ",
+
+"M-Chat là gì? Khi nào cần làm M-Chat",
+
+"Em muốn hiểu rõ hơn về M-Chat.",
+
+"Trẻ chậm phát triển có thể dẫn đến tự kỷ và cần đánh giá thêm với M-Chat đúng hay sai?"
+
+],
+      "responses": [
+        "Có phải bạn đang muốn hiểu rõ hơn về ý nghĩa bài test M-Chat của đúng không? Bạn đang do dự có nên đánh giá thêm với M-Chat hay không ?"
+  ]
+    },
+{
+  "tag": "Phân nhóm mục đích trò chuyện - Giải thích kết quả M-Chat - Xác nhận đúng mục đích",
+  "patterns": [
+    "Đúng rồi",
+    "Chính xác",
+    "Bạn hiểu đúng đấy",
+    "Ukm", "Ừa", "Ùa","Đr","YEP", "Chính xác",
+    "Ừ đúng rồi",
+    "Chuẩn rồi ạ"
+  ],
+  "responses": [
+    "Cảm ơn bạn đã làm rõ. Bạn đang không rõ về phần nào của bài test M-Chat-R vậy nhỉ?"
+  ]
+},
+{
+  "tag": "Phân nhóm mục đích trò chuyện - Giải thích kết quả M-Chat - Phủ định mục đích",
+  "patterns": [
+    "Không đúng rồi",
+    "Ý tôi không phải vậy",
+    "Bạn hiểu sai ý rồi",
+    "Không phải muốn hỏi về M-Chat đâu",
+    "Sai rồi nha",
+"No", "Khôngg", "Sai rồi"
+  ],
+  "responses": [
+    "Thật tệ nếu mình hiểu chưa đúng ý bạn. Bạn có thể chia sẻ lại điều bạn muốn hỏi cụ thể hơn được không ạ?"
+]
+},
+{
+      "tag": "Phân nhóm mục đích trò chuyện - Băn khoăn về chậm phát triển và tự kỷ ",
+      "patterns": [
+    "Con được đánh giá ở mức chậm phát triển thì có thể dẫn đến tự kỷ đúng hay sai? ",
+    "Điểm giao tiếp thấp có phải dấu hiệu của tự kỷ không?",
+    "Nếu bé không phản ứng khi gọi tên, có thể bị tự kỷ không?",
+    "Bé nhà em chậm nói và ít tương tác, có liên quan đến rối loạn phổ tự kỷ không?",
+    "Chỉ có phần cá nhân – xã hội bị thấp, em rất sợ bé tự kỷ.",
+    "ASQ-3 có phát hiện được trẻ tự kỷ không?",
+    "Nếu kết quả ASQ-3 nằm trong vùng cần theo dõi thì có khả năng tự kỷ không?",
+    "Tự kỷ có phải là do chậm phát triển từ nhỏ không?",
+    "Làm sao phân biệt giữa chậm nói và dấu hiệu tự kỷ?",
+    "Con em không chơi với bạn và không giao tiếp nhiều, có cần đi khám sàng lọc tự kỷ không?",
+    "Điểm phần xã hội thấp có phải là dấu hiệu sớm của tự kỷ không?",
+    "Con không làm theo hướng dẫn, ít tương tác mắt, có phải nên đi test tự kỷ không?",
+    "Mỗi lần gọi tên bé không quay lại, có phải dấu hiệu bất thường không?",
+    "Nếu bé ít nói, thích chơi một mình thì có nguy cơ gì không?",
+    "Con có một số hành vi lặp đi lặp lại, điều đó có phải liên quan đến tự kỷ không?"
+],
+      "responses": [
+        "Có phải bạn đang muốn hiểu rõ hơn về chậm phát triển ở trẻ và chứng rối loạn phổ tự kỷ đúng không? "
+  ]
+    },
+{
+      "tag": "Phân nhóm mục đích trò chuyện - Băn khoăn về chậm phát triển và tự kỷ - Xác nhận đúng mục đích ",
+      "patterns": [
+    "Đúng rồi", 
+    "Yes",
+    "Yepp"
+],
+      "responses": [
+        "1. Mình hiểu nỗi lo của bạn khi thấy các dấu hiệu như chậm nói, ít tương tác hay điểm thấp phần giao tiếp – xã hội. Tuy nhiên, chậm phát triển và tự kỷ là hai khái niệm khác nhau. Không phải cứ chậm một vài kỹ năng là bé bị tự kỷ. 2. ASQ-3 là công cụ giúp sàng lọc sự phát triển chung, nhưng nếu có nghi ngờ tự kỷ, bạn nên cho bé thực hiện thêm bài test chuyên biệt như M-CHAT-R. Việc đánh giá chính xác cần có sự hỗ trợ từ chuyên gia tâm lý hoặc bác sĩ nhi phát triển."
+  ]
+    },
+{
+      "tag": "Phân nhóm mục đích trò chuyện - Băn khoăn về chậm phát triển và tự kỷ - Phủ định mục đích",
+      "patterns": [
+    "No", 
+    "Khôngg",
+    "Sai rồi",
+    "Ý tôi không phải vậy",
+    "Bạn hiểu sai ý tôi rồi"
+],
+      "responses": [
+        "Rất xin lỗi nếu mình hiểu chưa đúng ý bạn. Bạn có thể nói rõ hơn bạn đang muốn hỏi về điều gì để mình tư vấn chính xác nhất nhé!"
+  ]
+    },
+{
+      "tag": "Phân nhóm mục đích trò chuyện - Không chắc đã làm test đúng cách",
+      "patterns": [
+"Em làm test ASQ-3 cho bé 24 tháng, không chắc đã làm đúng cách.",
+
+"Em làm bài test ở nhà, không biết có chính xác không?",
+
+"Chào bạn, mình mới hoàn thành test ASQ-3. Kết quả làm mình lo lắng.",
+
+"Test này có cần làm nhiều lần không nếu nghi ngờ kết quả?",
+
+"Bé nhà em không hợp tác khi làm test, liệu có cần làm lại không?" 
+],
+      "responses": [
+        "Có phải bạn đang lo lắng kết quả ASQ-3 có thể chưa phản ánh chính xác vì bé không hợp tác, môi trường không phù hợp, hoặc cách làm test chưa đúng hướng dẫn đúng không?"
+  ]
+    },
+{
+  "tag": "Phân nhóm mục đích trò chuyện - Không chắc đã làm test đúng cách - Xác nhận đúng mục đích",
+  "patterns": [
+    "Đúng rồi",
+    "Bạn hiểu đúng ý mình",
+    "Ừ đúng rồi đó",
+    "Chuẩn rồi ạ",
+"Ukm", "Ừa", "Ùa","Đr","YEP", "Chính xác",
+    "Chính xác"
+  ],
+  "responses": [
+    "Cảm ơn bạn đã xác nhận. Vậy vùng điểm cho kết quả không như mong đợi và làm bạn lo lắng về tính chính xác của bài test là gì, bạn hãy cho mình biết cụ thể điểm số vùng đó và kỳ vọng của bạn là gì?"
+]
+},
+{
+  "tag": "Phân nhóm mục đích trò chuyện - Không chắc đã làm test đúng cách - Phủ định mục đích",
+  "patterns": [
+    "Không đúng rồi",
+    "Sai rồi nha",
+    "Bạn hiểu nhầm rồi",
+    "Ý mình không phải vậy",
+"No", "Khôngg", "Sai rồi",
+    "Không phải do cách làm test đâu"
+  ],
+  "responses": [
+    "Cảm ơn bạn đã phản hồi. Rất xin lỗi nếu mình hiểu chưa đúng. Bạn có thể nói rõ hơn bạn đang muốn hỏi về điều gì để mình hỗ trợ chính xác hơn nhé?"
+      ]
+},
+{
+      "tag": "Phân nhóm mục đích trò chuyện - Thắc mắc về các khái niệm, màu sắc, chỉ số trong bảng kết quả",
+      "patterns": [
+"Mình muốn hỏi về cách đọc bảng kết quả ASQ-3.",
+
+"Kết quả test có phần màu xám, không hiểu ý nghĩa.",
+
+"Phiếu kết quả có ngưỡng điểm, không biết bé nhà em đang ở đâu?",
+
+"Mình thấy trong kết quả có mục 'cần theo dõi', là gì vậy ạ?",
+
+"Kết quả test có nói cần đánh giá thêm bằng M-CHAT, là gì vậy ạ?" 
+],
+      "responses": [
+"Có phải bạn đang muốn tìm hiểu rõ hơn về cách đọc bảng kết quả ASQ-3 — như các màu sắc (xanh, xám), ngưỡng điểm, hoặc các thuật ngữ như 'Cần theo dõi', 'M-CHAT-R' nghĩa là gì và áp dụng ra sao đúng không?"
+  ]
+    },
+{
+  "tag": "Phân nhóm mục đích trò chuyện - Thắc mắc về các khái niệm, màu sắc, chỉ số trong bảng kết quả - Xác nhận đúng mục đích",
+  "patterns": [
+    "Đúng rồi",
+    "Bạn hiểu đúng ý mình",
+    "Ừ đúng rồi đó",
+    "Chuẩn rồi ạ",
+    "Ukm",
+    "Ừa",
+    "Ùa",
+    "Đr",
+    "YEP",
+    "Chính xác"
+  ],
+  "responses": [
+    "Cảm ơn bạn đã xác nhận nhé! Vậy bạn có thể cho mình biết chi tiết về phần nội dung bạn chưa hiểu rõ, mình sẽ giúp bạn giải thích từng phần cụ thể nhé."
+  ]
+}, 
+{
+  "tag": "Phân nhóm mục đích trò chuyện - Thắc mắc về các khái niệm, màu sắc, chỉ số trong bảng kết quả - Phủ định mục đích",
+  "patterns": [
+    "Không đúng rồi",
+    "Sai rồi nha",
+    "Bạn hiểu nhầm rồi",
+    "Ý mình không phải vậy",
+    "No",
+    "Khôngg",
+    "Sai rồi",
+    "Không phải hỏi về bảng kết quả"
+  ],
+  "responses": [
+    "Cảm ơn bạn đã phản hồi. Có thể mình hiểu chưa đúng hướng câu hỏi. Bạn có thể chia sẻ cụ thể hơn là bạn đang muốn hỏi về điều gì? Mình sẽ hỗ trợ chính xác hơn."
+]
+},
+{
+      "tag": "Phân nhóm mục đích trò chuyện - Tư vấn bước tiếp theo sau khi có kết quả",
+      "patterns": [
+"Nếu kết quả không tốt thì tiếp theo em nên làm gì?",
+
+"Bé làm bài test hôm qua, giờ em muốn biết có cần đi khám không.",
+
+"Em cần được tư vấn cách hỗ trợ bé sau khi làm test.",
+
+"Em có nên cho bé làm lại test không nếu kết quả không rõ ràng?" 
+],
+      "responses": [
+"Có phải bạn đang cần được hướng dẫn cụ thể về việc nên làm gì sau khi có kết quả test ASQ-3 — ví dụ như có cần đi khám, đánh giá lại hay hỗ trợ bé tại nhà không?"
+  ]
+    },
+{
+  "tag": "Phân nhóm mục đích trò chuyện - Thắc mắc về các khái niệm, màu sắc, chỉ số trong bảng kết quả - Xác nhận đúng mục đích",
+  "patterns": [
+    "Đúng rồi",
+    "Bạn hiểu đúng ý mình",
+    "Ừ đúng rồi đó",
+    "Chuẩn rồi ạ",
+    "Ukm",
+    "Ừa",
+    "Ùa",
+    "Đr",
+    "YEP",
+    "Chính xác"
+  ],
+  "responses": [
+    "1. Nếu kết quả của bé đều nằm trong vùng phát triển bình thường (vùng xanh), thì bố mẹ có thể tiếp tục theo dõi bé tại nhà như hiện tại và duy trì các hoạt động hỗ trợ tương tác, vận động và giao tiếp thường ngày.2. Nếu có một hoặc vài lĩnh vực nằm trong vùng 'cần theo dõi' (vùng xám), bố mẹ nên theo dõi kỹ hơn kỹ năng đó trong thời gian tới, có thể làm lại test sau 1–2 tháng hoặc kết hợp thực hành bài tập bổ trợ tại nhà. Nếu vẫn còn lo lắng, bố mẹ có thể đưa bé đến cơ sở đánh giá phát triển để kiểm tra kỹ hơn.3. Khi điểm số ở 1 hoặc nhiều lĩnh vực rơi dưới ngưỡng, bố mẹ nên cho bé đi khám hoặc đánh giá phát triển chuyên sâu. Việc can thiệp sớm nếu cần thiết sẽ giúp bé cải thiện hiệu quả hơn. Mình có thể gợi ý các trung tâm uy tín nếu bạn cần!"
+  ]
+}, 
+{
+  "tag": "Phân nhóm mục đích trò chuyện - Thắc mắc về các khái niệm, màu sắc, chỉ số trong bảng kết quả - Phủ định mục đích",
+  "patterns": [
+    "Không đúng rồi",
+    "Sai rồi nha",
+    "Bạn hiểu nhầm rồi",
+    "Ý mình không phải vậy",
+    "No",
+    "Khôngg",
+    "Sai rồi",
+    "Không phải hỏi về bảng kết quả"
+  ],
+  "responses": [
+    "Cảm ơn bạn đã phản hồi. Có thể mình hiểu chưa đúng hướng câu hỏi. Bạn có thể chia sẻ cụ thể hơn là bạn đang muốn hỏi về điều gì? Mình sẽ hỗ trợ chính xác hơn."
+]
+},
+{
+      "tag": "Phân nhóm mục đích trò chuyện - Tìm hiểu về bài test ASQ-3 và các kỹ năng được đánh giá",
+      "patterns": [
+"Chào, muốn hỏi về bài test ASQ-3 của bé.",
+
+"Mình cần tư vấn một số điều liên quan đến kết quả phát triển của con.",
+
+"Cho em hỏi test này đánh giá những gì vậy ạ?",
+
+"Em không rõ bài test có phù hợp với tuổi của bé hay không.",
+
+"Bé sinh non, không biết có cần chỉnh tuổi khi test không?",
+
+"Cần tư vấn thêm về kỹ năng cá nhân – xã hội của bé",
+
+"Mình muốn biết ASQ-3 đánh giá trí tuệ của bé bằng cách nào?", 
+"Bài test chậm nói",
+"Muốn kiểm tra mức độ chậm nói của trẻ"
+],
+      "responses": [
+"Có phải bạn đang muốn tìm hiểu tổng quan về bài test ASQ-3 — như bài test này đánh giá những lĩnh vực nào, cách áp dụng theo độ tuổi ra sao, hoặc từng kỹ năng cụ thể như cá nhân – xã hội, giao tiếp, trí tuệ được đo lường thế nào đúng không?"  ]
+    },
+{
+  "tag": "Phân nhóm mục đích trò chuyện - Tìm hiểu về bài test ASQ-3 và các kỹ năng được đánh giá - Xác nhận đúng mục đích",
+  "patterns": [
+    "Đúng rồi",
+    "Chính xác",
+    "Bạn hiểu đúng đấy",
+    "Ừ đúng rồi đó",
+    "Ukm",
+    "Dạ đúng ạ",
+    "Đr",
+    "Chuẩn rồi"
+  ],
+  "responses": [
+    "Mình hiểu! Vậy mình sẽ giới thiệu nhanh cho bạn: ASQ-3 là bộ công cụ đánh giá sự phát triển sớm của trẻ từ 1 đến 66 tháng tuổi, với 5 lĩnh vực chính gồm: Giao tiếp, Vận động thô, Vận động tinh, Giải quyết vấn đề và Cá nhân – xã hội. Mỗi bài test phù hợp với từng mốc tháng tuổi cụ thể. Nếu bạn muốn hiểu sâu về kỹ năng nào trong đó hoặc cần tư vấn phù hợp theo độ tuổi, mình có thể hỗ trợ ngay."
+  ]
+}, 
+{
+  "tag": "Phân nhóm mục đích trò chuyện - Tìm hiểu về bài test ASQ-3 và các kỹ năng được đánh giá - Phủ định mục đích",
+  "patterns": [
+    "Không đúng rồi",
+    "Không phải vậy",
+    "Sai rồi nha",
+    "Bạn hiểu nhầm rồi",
+    "Ý mình không phải thế",
+    "No",
+    "Khôngg"
+  ],
+  "responses": [
+    "Cảm ơn bạn đã phản hồi. Mình xin lỗi nếu hiểu chưa đúng ý. Bạn có thể nói rõ hơn bạn đang muốn hỏi về kết quả test, lo lắng phát triển, hay điều gì cụ thể không?"
+]
+}, 
+{
+      "tag": "Lo lắng về sự phát triển sau khi làm bài test - Chỉ số thấp ở những phần cụ thể, Phụ huynh lo bé chậm phát triển",
+      "patterns": [
+"Bé nhà em làm test nhưng không đạt 1 mục vận động thô, có sao không ạ?",
+
+"Con em chỉ bị điểm thấp phần vận động tinh, liệu có phải bé bị chậm phát triển không?",
+
+"Chỉ có phần giao tiếp là thấp, còn lại bình thường, vậy có cần lo không?",
+
+"Chào, con em bị điểm thấp ở giao tiếp xã hội do tính nhút nhát, có phải chậm phát triển không?",
+
+"Bé đạt điểm thấp phần vận động thô, liệu có vấn đề gì về thể chất không?",
+
+"Con em không làm được mục xếp chồng khối, như vậy có sao không?",
+
+"Bé chỉ làm được khoảng 50% các kỹ năng trong test, như vậy có trễ không?",
+
+"Bé chưa biết chơi giả vờ và điểm phần xã hội cũng thấp, em lo lắng không biết có sao không?",
+
+"Bé không thích chơi với người lạ, điểm xã hội thấp – có liên quan gì tới tự kỷ không ạ?"
+],
+      "responses": [
+    "Anh/chị đừng quá lo lắng. Trẻ phát triển với mức độ khác nhau. Khi đã xác định được phần kém của trẻ nhưng không đáng lo ngại thì phụ huynh nên sử dụng các biện pháp can thiệp tại nhà cùng trẻ để cải thiện khả năng và có thể đưa bé đến phòng khám để được bác sĩ chuyên môn đánh giá và chuẩn đoán chính xác nhất. Phụ huynh hãy cho tôi biết thêm thông tin nào cần giải đáp nhé!"
+]
+}, 
+{
+      "tag": "Lo lắng về sự phát triển sau khi làm bài test - Phụ huynh cần thêm thông tin để hiểu sâu hơn",
+      "patterns": [
+"Kết quả ASQ-3 của con nằm trong vùng theo dõi, có nghiêm trọng không ạ?",
+
+"Bé vẫn chơi và ăn ngủ tốt, nhưng điểm lại thấp, vậy có thể bị chậm phát triển không?",
+
+"Test cho kết quả trẻ bình thường nhưng con không chịu nói, lười giao tiếp, em lo quá.",
+
+"Em thấy trong kết quả có phần đánh giá rất thấp nhưng không rõ con có vấn đề gì không?",
+
+"Bé nhà em làm test mà phần giao tiếp chỉ được 25 điểm, có đáng lo không ạ?",
+
+"Con em được điểm thấp trong lần test này so với lần trước, như vậy có phải đang đi lùi không?",
+
+"Kết quả của bé nằm trong vùng cảnh báo màu xám, cần làm gì tiếp theo?"
+],
+      "responses": [
+    "Mình có thể hỗ trợ phân tích kỹ hơn nếu anh/chị gửi thêm điểm số từng lĩnh vực nhé! Để chắc chắn hơn hãy đưa trẻ đến phòng khám trực tiếp với bác sĩ chuyên môn."
+]
+}, 
+{
+      "tag": "Lo lắng về sự phát triển sau khi làm bài test - Phụ huynh chưa hiểu vùng 'Đậm & Xám' ",
+      "patterns": [
+"Chỉ có một phần bị đánh giá dưới ngưỡng mà em vẫn thấy lo quá, không biết có cần đi khám không?",
+
+"Tôi sợ bé có dấu hiệu tự kỷ vì điểm phần xã hội thấp.",
+
+"Kết quả ASQ-3 của con nằm trong vùng Xám - vùng Theo dõi, có nghiêm trọng không ?",
+
+"Phiếu test có vùng xám mà em chưa rõ ý nghĩa, vậy là bé có nguy cơ cao hả chị?"
+],
+      "responses": [
+    "Bạn cần biết vùng 'Đậm' là kết quả trẻ 'Chậm rõ rệt' và vùng 'Xám' là vùng 'Nguy cơ - Cần theo dõi' đây là khuyến nghị nên được hỗ trợ theo dõi thêm, chưa phải là chẩn đoán. Bạn cần điều trị kết hợp tại nhà và có thể đưa trẻ đến phòng khám tâm lý để được bác sĩ chuẩn đoán chuyên môn bạn nhé!"
+]
+}, 
+{
+      "tag": "Lo lắng về sự phát triển sau khi làm bài test - Phụ huynh muốn được chỉ dẫn cụ thể",
+      "patterns": [
+"Con em rất ít nói, test điểm phần giao tiếp cũng thấp, có cần đi khám không?",
+
+"Bé 18 tháng mà chưa biết chỉ hoặc làm theo lời, có nên lo lắng không?",
+
+"Em thấy kết quả phần cá nhân - xã hội rất thấp, liệu có phải bé bị rối loạn phát triển không?",
+
+"Con em không phản ứng khi gọi tên, test phần giao tiếp cũng thấp, em rất lo.",
+
+"Bé chậm biết nói và phần test đó cũng không đạt, em có nên đưa bé đi can thiệp sớm không?",
+
+"Em thấy các bạn khác đều phát triển tốt hơn, trong khi kết quả của con thì thấp, em rất lo.",
+
+"Bé không tập trung khi test nên điểm thấp, nhưng không biết có liên quan đến phát triển trí tuệ không?",
+
+"Em thấy bé có biểu hiện không tập trung khi làm test, có phải vấn đề về phát triển trí tuệ không?",
+
+"Bé làm test nhưng em cảm thấy kết quả không phản ánh đúng vì bé còn chưa quen môi trường."
+],
+      "responses": [
+    "Nếu anh/chị vẫn còn lo lắng, hãy cho mình biết bạn đang băn khoăn ở đâu và mình khuyên nên đưa bé đi đánh giá phát triển chuyên sâu để yên tâm hơn."
+]
+},     
+{
+      "tag": "Không chắc đã làm test đúng cách - Bé không tập trung / mệt / đang không ở trạng thái tốt",
+      "patterns": [
+        "Em test lúc bé đang xem tivi nên không tập trung lắm, như vậy có ảnh hưởng không?",
+        "Có nên để người khác hỏi thay nếu bé không hợp tác với em không?",
+        "Làm test vào buổi tối bé hơi mệt, liệu kết quả có sai lệch không?",
+        "Bé quen làm việc riêng, không phản ứng với câu hỏi trực tiếp, vậy có cách test khác không?",
+        "Bé nhà em không hợp tác lúc làm test, kết quả có đáng tin không?",
+        "Con em vừa ốm dậy nên làm test không tập trung, liệu có ảnh hưởng đến kết quả không?",
+        "Lúc làm test bé mệt và cáu gắt nên không chịu làm, có nên làm lại không?",
+        "Con em lúc đầu làm tốt nhưng sau mệt không chịu làm tiếp, kết quả có bị lệch không?",
+        "Em làm test khi bé đang buồn ngủ, không biết kết quả còn chính xác không?",
+        "Lúc làm test, bé đang không quen môi trường mới nên không hợp tác."
+      ],
+      "responses": [
+        "Việc bé không tập trung, mệt hay không hợp tác có thể ảnh hưởng đến kết quả. Nếu anh/chị thấy test không phản ánh đúng khả năng thực tế của bé, mình khuyên nên làm lại vào lúc bé tỉnh táo, thoải mái hơn nhé! Và có thể đưa bé đến phòng khám để được chuẩn đoán chính xác với bác sĩ chuyên khoa bạn nhé."
+      ]
+    },
+    {
+      "tag": "Không chắc đã làm test đúng cách - Không chắc cách hỏi hoặc hiểu câu hỏi trong test",
+      "patterns": [
+        "Một vài câu em thấy trừu tượng quá, không biết phải hỏi bé thế nào cho đúng?",
+        "Em có nên giải thích câu hỏi cho bé hiểu kỹ hơn không?",
+        "Em không rõ cách hỏi bé cho đúng với từng câu, có thể đã làm sai cách.",
+        "Có câu em thấy khó hiểu, em trả lời đại, như vậy có ảnh hưởng không?",
+        "Bé chưa từng làm bài test kiểu này, nên phản ứng chậm, liệu có bị đánh giá thấp không?"
+      ],
+      "responses": [
+        "Anh/chị có thể sử dụng cách hỏi phù hợp với ngôn ngữ và hoàn cảnh của gia đình, miễn sao bé hiểu đúng yêu cầu. Nếu có câu nào khó hiểu, mình có thể hỗ trợ giải thích thêm để test chính xác hơn ạ!"
+      ]
+    },
+    {
+      "tag": "Không chắc đã làm test đúng cách - Trạng thái môi trường và hoàn cảnh khi test không lý tưởng",
+      "patterns": [
+        "Em hỏi bé bằng tiếng địa phương, không biết có làm lệch kết quả không?",
+        "Em test cùng lúc với 2 bé sinh đôi, sợ bị lẫn lộn hành vi giữa hai bé.",
+        "Em làm test khi bé đang buồn ngủ"
+      ],
+      "responses": [
+        "Để test phản ánh đúng khả năng của bé, nên chọn thời điểm và không gian bé cảm thấy quen thuộc, thoải mái. Nếu test lần đầu không thuận lợi, anh/chị có thể làm lại sau vài ngày để có kết quả đáng tin cậy hơn."
+      ]
+    },
+    {
+      "tag": "Không chắc đã làm test đúng cách - Không chắc nên đánh giá thế nào cho đúng ",
+      "patterns": [
+        "Có mục em không biết đánh giá sao nên để trống, như vậy kết quả có còn hợp lệ không?",
+        "Một số câu em đoán chứ không chắc bé có làm được thật không, vậy có sai lệch không?",
+        "Một số mục em không hiểu rõ tình huống, không chắc bé có làm được hay không.",
+        "Có phần em phải chọn theo cảm nhận chứ không thấy bé làm thật."
+      ],
+      "responses": [
+        "Trong bài test, anh/chị nên dựa vào hành vi bé thực hiện được trong vòng vài ngày gần đây, kể cả ngoài lúc test. Nếu không chắc, có thể chọn 'đôi khi' hoặc ghi chú lại để tham khảo thêm ý kiến chuyên gia."
+      ]
+    },
+    {
+      "tag": "Không chắc đã làm test đúng cách - Thiếu điều kiện/đồ chơi/hoàn thành vội vàng",
+      "patterns": [
+        "Em thấy test hơi dài nên làm nhanh cho xong, không biết có sai sót gì không?",
+        "Em đọc lướt qua câu hỏi chứ không giải thích chi tiết, liệu có ảnh hưởng nhiều không?",
+        "Test yêu cầu dùng đồ chơi mà nhà em không có đủ, em bỏ qua vài mục, vậy có sao không?"
+      ],
+      "responses": [
+        "Nếu thiếu đồ chơi đúng như trong hướng dẫn, anh/chị có thể thay bằng vật tương tự về chức năng. Việc làm test cần đảm bảo bé có cơ hội thể hiện kỹ năng, nên tránh vội vàng hoặc bỏ sót các phần quan trọng nhé!"
+      ]
+    }, 
+{
+            "tag": "Hướng dẫn bước tiếp theo - Có nên gặp chuyên gia không?",
+            "patterns": [
+                "Con em có cần gặp bác sĩ nhi hay bác sĩ tâm lý sau khi làm test không?",
+                "Test xong rồi thì em có cần gặp bác sĩ hay chuyên gia gì nữa không?",
+                "Có cần đưa bé đi gặp nhà tâm lý không nếu điểm xã hội thấp?",
+                "Nếu kết quả không tốt thì em có cần cho bé can thiệp sớm không?",
+                "Có nên đưa bé đến trung tâm can thiệp nếu điểm chỉ nằm trong vùng cần theo dõi?",
+                "Làm sao để biết chính xác bé có thực sự cần can thiệp hay không?"
+            ],
+            "responses": [
+                "Nếu kết quả test nằm trong vùng 'Cần theo dõi' hoặc có điểm thấp rõ rệt ở một vài lĩnh vực, mình khuyến khích nên gặp bác sĩ nhi, chuyên gia phát triển hoặc nhà tâm lý để đánh giá thêm. Việc này giúp xác định rõ hơn liệu bé có thực sự cần hỗ trợ hay không. Việc tham khảo chuyên gia không có nghĩa là bé bị vấn đề nghiêm trọng, mà là để mình hiểu rõ hơn và hỗ trợ bé đúng thời điểm."
+            ]
+        },
+        {
+            "tag": "Hướng dẫn bước tiếp theo - Nơi đăng ký / trung tâm hỗ trợ",
+            "patterns": [
+                "Nếu em muốn cho bé can thiệp sớm thì cần đăng ký ở đâu?",
+                "Bé ở vùng chậm phát triển, em có thể đăng ký can thiệp ở đâu ạ?",
+                "Có trung tâm nào hỗ trợ đánh giá phát triển cho bé sau test không?"
+            ],
+            "responses": [
+                "Anh/chị có thể đưa bé đến các trung tâm can thiệp phát triển, bệnh viện nhi, hoặc đơn vị tư vấn tâm lý - phát triển trẻ em. Tùy khu vực, mình có thể hỗ trợ tìm địa chỉ phù hợp.", "Việc đăng ký can thiệp sớm không cần chờ chẩn đoán chính thức. Nếu có nghi ngờ từ kết quả ASQ-3, nên chủ động sớm để hỗ trợ bé kịp thời."
+            ]
+        },
+        {
+            "tag": "Hướng dẫn bước tiếp theo - Lưu và sử dụng kết quả test",
+            "patterns": [
+                "Em nên lưu kết quả này để theo dõi hay cần chuyển cho cơ sở y tế nào?", 
+		"Kết quả này có cần nộp lại cho trường mẫu giáo của bé không?",
+"Em có nên in kết quả test ra để theo dõi hàng tháng không?",
+"Có nơi nào nhận lưu trữ và theo dõi phát triển của bé từ kết quả này không?",
+
+"Em nên lưu kết quả test như thế nào để dễ đối chiếu sau này?",
+
+"Nếu em chuyển nơi ở thì có cần gửi lại kết quả test cho trung tâm mới không?",
+
+"Có thể dùng kết quả này khi làm hồ sơ đi khám phát triển cho bé không?",
+
+"Bác sĩ sẽ dùng kết quả test này như thế nào trong lần khám tiếp theo?"
+            ],
+            "responses": [
+                "Anh/chị nên lưu giữ kết quả ASQ-3 để làm cơ sở theo dõi định kỳ sự phát triển của bé. Khi đưa bé đi khám hoặc tư vấn, nên mang theo kết quả này để bác sĩ có thông tin ban đầu chính xác hơn."
+            ]
+        },
+
+{
+      "tag": "Hướng dẫn bước tiếp theo - Làm lại test / đánh giá lại / theo dõi thêm - Nên làm lại test hay không? Bao lâu sau thì làm lại?",
+      "patterns": [
+        "Bé được đánh giá cần theo dõi, em có nên làm lại test sau vài tuần không?",
+
+"Nếu làm lại test thì bao lâu sau nên làm lại ạ?",
+
+"Nếu muốn làm lại test, em có thể làm ở đâu và với ai?",
+"Bé được đánh giá cần theo dõi, em có nên làm lại test sau vài tuần không?",
+"Nếu muốn làm lại test, em có thể làm ở đâu và với ai?",
+"Lần trước làm test bé đang mệt, em có nên làm lại để kiểm tra lại không?",
+"Sau bao lâu thì nên test lại để xem bé có tiến bộ không?"
+      ],
+      "responses": [
+        "Nếu bé được đánh giá nằm trong vùng cần theo dõi hoặc làm test khi chưa thực sự hợp tác (như lúc mệt, mất tập trung...), thì anh/chị nên làm lại test sau khoảng 4–6 tuần. Thời gian này đủ để bé phát triển thêm kỹ năng và giúp test phản ánh chính xác hơn. Việc làm lại có thể thực hiện tại nhà với hướng dẫn rõ ràng, hoặc tại trung tâm phát triển/trạm y tế có chuyên viên hỗ trợ để đảm bảo khách quan hơn."
+      ]
+    },
+{
+      "tag": "Hướng dẫn bước tiếp theo - Làm lại test / đánh giá lại / theo dõi thêm - Theo dõi tại nhà, cách làm đúng?",
+      "patterns": [
+        "Sau test này em nên theo dõi bé ở nhà như thế nào cho đúng?",
+"Kết quả test không rõ ràng, em nên theo dõi bé như thế nào ạ?",
+"Em nên quan sát những kỹ năng nào để đánh giá sự tiến bộ của bé ở nhà?"      ],
+      "responses": [
+        "Sau khi làm test, anh/chị có thể tiếp tục theo dõi sự phát triển của bé tại nhà bằng cách quan sát các kỹ năng trong 5 lĩnh vực của ASQ-3: giao tiếp, vận động tinh, vận động thô, giải quyết vấn đề và cá nhân – xã hội. Mỗi ngày, nên tạo cơ hội để bé được chơi, khám phá và tương tác qua các hoạt động phù hợp với độ tuổi. Nếu thấy kỹ năng nào còn yếu, có thể lặp lại bài test sau vài tuần để đánh giá tiến bộ, hoặc xin tư vấn chuyên gia nếu có nhiều lo lắng."
+      ]
+    },
+{
+      "tag": "Hướng dẫn bước tiếp theo - Tập luyện / hỗ trợ tại nhà sau test - Hoạt động luyện tập phù hợp tại nhà theo kết quả",
+      "patterns": [
+        "Có hoạt động nào được khuyến nghị để tập luyện thêm cho bé không?",
+
+"Bé không đạt một số mục, em có thể tập thêm ở nhà không? Tập như thế nào?",
+
+"Sau khi làm test ASQ-3 thì cần làm gì để theo sát sự phát triển của bé?",
+
+"Bé bị đánh giá chậm kỹ năng vận động, em nên cho bé học lớp gì?",
+"Có cách nào giúp bé phát triển vận động tinh tại nhà không?",
+
+"Bé chưa biết nói nhiều, em nên tương tác với bé thế nào mỗi ngày?",
+
+"Có trò chơi nào giúp phát triển tư duy cho bé dưới 2 tuổi không?"
+      ],
+      "responses": [
+        "Tùy theo lĩnh vực bé chưa đạt (ví dụ: vận động tinh, giao tiếp, giải quyết vấn đề...), anh/chị có thể chọn các hoạt động phù hợp để luyện tập tại nhà như: cầm nắm đồ vật nhỏ, xếp hình, chơi trò hỏi-đáp, tập bắt chước hành động, hoặc đọc sách cùng bé. Với trẻ dưới 2 tuổi, các trò chơi đơn giản như lắp ghép, thả khối, nói chuyện và tương tác bằng ánh mắt cũng rất quan trọng. Nếu anh/chị chia sẻ rõ độ tuổi và kỹ năng bé còn yếu, mình có thể gợi ý hoạt động cụ thể hơn nhé!"
+      ]
+    },
+{
+      "tag": "Hướng dẫn bước tiếp theo - Tập luyện / hỗ trợ tại nhà sau test - Hướng dẫn bố mẹ cách hỗ trợ bé chủ động hơn",
+      "patterns": [
+ "Em muốn chủ động hỗ trợ phát triển cho bé mỗi ngày thì nên bắt đầu từ đâu?",
+
+"Có tài liệu hay hướng dẫn nào theo từng lĩnh vực phát triển không ạ?",
+
+"Nếu bé chậm ở một kỹ năng, có nên tập trung chỉ riêng kỹ năng đó không?",
+
+"Cần dành bao nhiêu thời gian mỗi ngày để tập luyện cùng bé?"       
+      ],
+      "responses": [
+        "Anh/chị hoàn toàn có thể hỗ trợ bé phát triển mỗi ngày bằng cách tạo môi trường chơi – học phù hợp độ tuổi. Nên bắt đầu bằng việc quan sát lĩnh vực bé còn yếu (như giao tiếp, vận động...), sau đó lồng ghép các hoạt động tương ứng vào sinh hoạt hàng ngày. Mỗi ngày chỉ cần 15–30 phút tương tác chất lượng là đã mang lại hiệu quả lớn. Mình có thể gửi hướng dẫn cụ thể theo từng lĩnh vực nếu anh/chị cần nhé!"
+      ]
+    },
+{
+      "tag": "Hướng dẫn bước tiếp theo - Thông tin thủ tục / nơi đăng ký / lưu kết quả",
+      "patterns": [
+        "Em nên chuẩn bị gì khi mang bé đi kiểm tra lại phát triển?",
+
+"Kết quả ASQ-3 có cần đem theo khi đến bệnh viện khám không?",
+
+"Có cần in kết quả test ra không hay dùng file điện tử cũng được?",
+
+"Muốn đưa bé đến trung tâm đánh giá thì cần hồ sơ gì kèm theo?"
+      ],
+      "responses": [
+        "Khi đưa bé đi khám hoặc đánh giá lại phát triển, anh/chị nên mang theo kết quả bài test ASQ-3 (bản in hoặc bản điện tử đều được), sổ theo dõi sức khỏe hoặc các đánh giá trước đó nếu có. Việc lưu giữ kết quả test sẽ giúp bác sĩ hoặc chuyên gia có cái nhìn rõ hơn về quá trình phát triển của bé. Ngoài ra, nên ghi chú các hành vi hoặc kỹ năng mà anh/chị quan sát được ở nhà để hỗ trợ quá trình tư vấn."
+      ]
+    },
+{
+      "tag": "Hướng dẫn bước tiếp theo - Tư vấn hướng đi cụ thể sau khi lo lắng - Cần bắt đầu từ đâu",
+      "patterns": [
+        "Nếu em lo lắng quá thì nên bắt đầu từ đâu để kiểm tra kỹ hơn?",
+
+"Bác sĩ có thể tư vấn giúp em nên làm gì tiếp với kết quả này không?",
+
+"Sau test này thì bé có cần thêm test nào khác nữa không?",
+"Làm sao để xác định bé có thực sự gặp vấn đề phát triển không?"
+      ],
+      "responses": [
+        "Nếu anh/chị cảm thấy lo lắng sau khi làm test ASQ-3, bước đầu tiên là xem lại điểm số từng lĩnh vực để xác định kỹ năng nào bé còn yếu. Tiếp theo, có thể đưa bé đến gặp bác sĩ nhi hoặc chuyên gia phát triển để được đánh giá sâu hơn. Ngoài ra, nếu cần kiểm tra bổ sung, chuyên gia có thể chỉ định thêm các bài đánh giá phù hợp độ tuổi. Mình luôn sẵn sàng đồng hành cùng anh/chị để theo dõi và hỗ trợ bé đúng lúc."
+      ]
+    }, 
+{
+      "tag": "Hướng dẫn bước tiếp theo - Tư vấn hướng đi cụ thể sau khi lo lắng - Kết quả thấp một phần có cần khám không?",
+      "patterns": [
+        "Bé bị điểm thấp một vài mục, có cần đưa đi khám không?",
+
+"Bé làm test nhưng điểm thấp, có chương trình hỗ trợ nào không ạ?",
+"Nếu bé chỉ kém 1 kỹ năng thì có cần theo dõi kỹ hơn không?"
+      ],
+      "responses": [
+        "Nếu bé chỉ bị điểm thấp ở một vài mục hoặc một kỹ năng, anh/chị có thể theo dõi thêm trong 4–6 tuần và kết hợp luyện tập tại nhà để quan sát tiến bộ. Tuy nhiên, nếu anh/chị vẫn cảm thấy lo lắng hoặc bé có biểu hiện khác thường, nên chủ động gặp bác sĩ hoặc chuyên gia phát triển để được đánh giá thêm. Một số trung tâm và bệnh viện có chương trình hỗ trợ sàng lọc hoặc can thiệp sớm, mình có thể gợi ý nếu anh/chị cần nhé!"
+      ]
+    },
+
+{
+      "tag": "Hướng dẫn bước tiếp theo - Tư vấn hướng đi cụ thể sau khi lo lắng - Kết quả bình thường nhưng phụ huynh vẫn lo",
+      "patterns": [
+        "Nếu bé đang trong vùng an toàn nhưng vẫn lo, em có cần làm thêm gì không?",
+	"Kết quả test tốt nhưng bé vẫn có hành vi lạ, vậy có nên kiểm tra thêm không?"
+      ],
+      "responses": [
+        "Ngay cả khi kết quả test nằm trong vùng an toàn, nếu anh/chị vẫn quan sát thấy hành vi chưa phù hợp với độ tuổi (ví dụ: chậm nói, khó tương tác, ít phản ứng...), thì việc theo dõi kỹ hơn hoặc xin ý kiến chuyên gia vẫn rất cần thiết. ASQ-3 là công cụ sàng lọc ban đầu, không thể thay thế đánh giá chuyên sâu. Chủ động kiểm tra thêm là cách an toàn để đảm bảo bé phát triển đúng hướng."
+      ]
+    },
+{
+      "tag": "Tìm hiểu về các lĩnh vực phát triển - Tổng quan ASQ-3 & các lĩnh vực",
+      "patterns": [
+        "ASQ-3 đánh giá những lĩnh vực phát triển nào của bé?",
+
+"Mỗi lĩnh vực trong ASQ-3 phản ánh điều gì về sự phát triển của bé?",
+
+"Làm sao để hiểu ý nghĩa của từng phần trong bài test ASQ-3?",
+
+"ASQ-3 gồm bao nhiêu phần, và mỗi phần đánh giá kỹ năng gì?",
+
+"Các lĩnh vực trong ASQ-3 có liên hệ gì với sự phát triển toàn diện không?"
+      ],
+      "responses": [
+        "ASQ-3 đánh giá sự phát triển của trẻ qua 5 lĩnh vực chính: (1) Giao tiếp, (2) Vận động thô, (3) Vận động tinh, (4) Giải quyết vấn đề, và (5) Cá nhân – xã hội. Mỗi lĩnh vực phản ánh một khía cạnh quan trọng trong quá trình phát triển toàn diện của bé. Hiểu rõ từng phần sẽ giúp anh/chị theo dõi sát hơn sự phát triển của con và phát hiện sớm những dấu hiệu cần hỗ trợ. Bạn cần biết thêm thông tin chi tiết về phần nào của ASQ-3? "
+      ]
+    },
+{
+      "tag": "Tìm hiểu về các lĩnh vực phát triển - Giao tiếp",
+      "patterns": [
+        "Giao tiếp trong ASQ-3 bao gồm những kỹ năng gì?",
+        "Bé 2 tuổi cần đạt những mốc gì trong phần giao tiếp?",
+        "Giao tiếp phi ngôn ngữ có được tính trong phần giao tiếp không?",
+        "Điểm giao tiếp thấp có đồng nghĩa với chậm nói không?",
+        "Bé đạt hết các phần trừ giao tiếp thì có cần can thiệp không?"
+      ],
+      "responses": [
+        "Phần giao tiếp trong ASQ-3 đánh giá khả năng hiểu và biểu đạt ngôn ngữ của bé – bao gồm cả lời nói, cử chỉ, ánh mắt và phản ứng với người khác. Giao tiếp phi ngôn ngữ như chỉ tay, gật đầu, nhìn theo... cũng được tính. Nếu bé có điểm giao tiếp thấp, điều đó chưa chắc là chậm nói, nhưng là dấu hiệu cần theo dõi thêm. Nếu các phần khác đều đạt nhưng riêng phần giao tiếp thấp, anh/chị vẫn nên cân nhắc đánh giá chuyên sâu để hỗ trợ bé đúng thời điểm."
+      ]
+    },
+{
+      "tag": "Tìm hiểu về các lĩnh vực phát triển - Vận động tinh",
+      "patterns": [
+        "Làm sao để biết bé phát triển vận động tinh tốt hay không?",
+        "Nếu điểm vận động tinh thấp thì nên làm gì để cải thiện?",
+"Bé nên làm được gì để được đánh giá là phát triển vận động tinh bình thường?",
+
+"Có bài tập nào giúp bé cải thiện kỹ năng cầm nắm, điều khiển tay không?",
+"Làm sao biết kỹ năng vận động thô của bé có đúng chuẩn theo độ tuổi không?"
+
+      ],
+      "responses": [
+        "Vận động tinh là kỹ năng điều khiển các cử động nhỏ như cầm, nắm, vẽ, xếp, cài nút áo... Nếu bé thực hiện linh hoạt các hoạt động này theo độ tuổi thì được xem là phát triển tốt. Nếu điểm phần này thấp, anh/chị có thể giúp bé luyện tập thông qua hoạt động như xếp hình, xâu chuỗi hạt, vẽ nguệch ngoạc, chơi với đất nặn... Vận động tinh khác vận động thô ở chỗ nó tập trung vào sự phối hợp tay – mắt và độ chính xác, thay vì sức mạnh hoặc di chuyển toàn thân."
+      ]
+    },
+{
+      "tag": "Tìm hiểu về các lĩnh vực phát triển - Vận động thô",
+      "patterns": [
+        "Thế nào là kỹ năng vận động thô trong bài test?",
+  "Có thể tập kỹ năng vận động thô tại nhà bằng cách nào?",
+  "Bé 18 tháng mà chưa biết chạy có phải chậm vận động không?",
+  "Làm sao biết kỹ năng vận động thô của bé có đúng chuẩn theo độ tuổi không?",
+  "Nếu bé đi chưa vững ở 20 tháng thì có cần lo lắng không?"
+      ],
+      "responses": [
+        "Vận động thô là các kỹ năng liên quan đến cử động toàn thân như bò, đi, chạy, nhảy, leo trèo... Trong ASQ-3, phần này đánh giá khả năng kiểm soát cơ thể lớn của bé theo độ tuổi. Nếu bé 18 tháng chưa biết chạy, đó có thể là dấu hiệu chậm vận động cần theo dõi thêm. Anh/chị có thể tập cho bé bằng các hoạt động như chơi bóng, chạy đuổi, leo cầu thang, hoặc đơn giản là để bé chơi tự do ngoài sân – miễn là an toàn và phù hợp độ tuổi."
+      ]
+    },
+  {
+      "tag": "Tìm hiểu về các lĩnh vực phát triển - Giải quyết vấn đề",
+      "patterns": [
+        "Giải quyết vấn đề trong ASQ-3 là đánh giá điều gì?",
+  "Thế nào là dấu hiệu bé gặp khó khăn trong giải quyết vấn đề?",
+  "Tại sao phần giải quyết vấn đề lại quan trọng trong đánh giá phát triển?",
+  "Cách nhận biết kỹ năng giải quyết vấn đề phù hợp với tuổi?",
+  "Có ví dụ cụ thể nào về kỹ năng giải quyết vấn đề của bé trong bài test không?",
+  "Nếu bé không biết cách thử lại khi làm sai, có phải là yếu phần giải quyết vấn đề không?"
+      ],
+      "responses": [
+        "Phần giải quyết vấn đề trong ASQ-3 đánh giá khả năng tư duy, suy luận logic và khả năng thử – sai của bé trong các tình huống đơn giản. Kỹ năng này thể hiện qua việc bé có biết tìm cách lấy đồ vật, sắp xếp, chọn đúng hình khớp, hoặc lặp lại hành động nếu chưa thành công. Nếu bé không cố gắng thử lại khi làm sai, hoặc khó thực hiện các thao tác mới theo hướng dẫn, thì có thể là dấu hiệu cần theo dõi thêm. Đây là một lĩnh vực rất quan trọng vì nó liên quan đến nhận thức và học hỏi sau này của bé."
+      ]
+    },
+{
+      "tag": "Tìm hiểu về các lĩnh vực phát triển - Cá nhân & xã hội ",
+      "patterns": [
+        "Phần cá nhân – xã hội của bé trong ASQ-3 được đánh giá như thế nào?",
+        "Bé cần biết làm gì trong phần cá nhân – xã hội để được đánh giá là đạt?",
+        "Vì sao bé có thể đạt ở các kỹ năng khác nhưng thấp ở cá nhân – xã hội?",
+        "Có thể dùng bài test này để theo dõi kỹ năng xã hội không?",
+        "Có cần theo dõi thêm kỹ năng xã hội nếu bé ít chơi với bạn không?",
+        "Làm sao biết bé gặp khó khăn ở phần cá nhân – xã hội?"
+      ],
+      "responses": [
+        "Phần cá nhân – xã hội trong ASQ-3 đánh giá khả năng tự chăm sóc bản thân, tương tác xã hội, chia sẻ, bắt chước hành vi người lớn và chơi cùng người khác. Đây là lĩnh vực thể hiện sự thích nghi của bé với môi trường xung quanh và khả năng hình thành quan hệ xã hội. Nếu bé thường xuyên chơi một mình, ngại giao tiếp, hoặc chưa biết làm theo các hành động đơn giản như vẫy tay, hôn gió, thì nên được theo dõi thêm. Mặc dù bé có thể phát triển tốt ở các kỹ năng khác, nhưng nếu phần xã hội thấp thì vẫn cần quan tâm vì điều này ảnh hưởng đến khả năng hòa nhập của bé trong tương lai."
+      ]
+    },
+ {
+      "tag": "Tìm hiểu về các lĩnh vực phát triển - So sánh, ảnh hưởng lẫn nhau, mối liên hệ",
+      "patterns": [
+        "Có cần đánh giá riêng từng kỹ năng không hay chỉ dựa vào tổng điểm?",
+        "Phát triển vận động tốt có đảm bảo phát triển trí tuệ không?",
+        "Lĩnh vực nào thường chậm phát triển nhất ở trẻ nhỏ?",
+        "Có công cụ nào hỗ trợ phụ huynh theo dõi từng lĩnh vực tại nhà không?",
+        "Điểm số mỗi phần phản ánh gì về sự phát triển của bé?", 
+	"Mỗi lĩnh vực có ảnh hưởng lẫn nhau không?",
+  	"Có thể chỉ theo dõi một lĩnh vực nếu thấy bé yếu phần đó được không?",
+  	"Bé có thể chậm ở 1 kỹ năng nhưng phát triển tốt các phần khác thì có sao không?"
+      ],
+      "responses": [
+        "Mỗi lĩnh vực trong ASQ-3 phản ánh một phần khác nhau trong sự phát triển toàn diện của bé. Vì vậy, không nên chỉ nhìn vào tổng điểm mà cần quan sát từng kỹ năng cụ thể. Một bé có thể phát triển tốt ở vận động nhưng vẫn gặp khó khăn trong giao tiếp hoặc xã hội. Các lĩnh vực này có thể liên quan đến nhau, nhưng cũng có bé chỉ chậm ở một phần. Việc theo dõi riêng từng kỹ năng giúp phát hiện sớm và hỗ trợ kịp thời. Anh/chị có thể sử dụng bảng theo dõi tiến độ phát triển hoặc hỏi thêm để mình gợi ý công cụ phù hợp nhé!"
+      ]
+    },
+{
+      "tag": "Tìm hiểu về các lĩnh vực phát triển - Tài liệu, chuẩn đánh giá, công cụ hỗ trợ",
+      "patterns": [
+        "Có bảng chuẩn nào cho từng lĩnh vực phát triển không?",
+  "Từng kỹ năng cụ thể trong ASQ-3 có tài liệu hướng dẫn không?",
+  "Em có thể xem mẫu các kỹ năng theo từng độ tuổi ở đâu?",
+  "Có app hoặc công cụ nào giúp theo dõi sự phát triển của bé tại nhà không?",
+  "Làm sao để biết kỹ năng của bé có phù hợp với tuổi không nếu không test thường xuyên?"
+      ],
+      "responses": [
+        "ASQ-3 có hệ thống bảng chuẩn phát triển cho từng lĩnh vực theo từng mốc tuổi cụ thể. Ngoài ra, nhiều tổ chức giáo dục và phát triển trẻ em cũng có tài liệu hướng dẫn từng kỹ năng và hoạt động đi kèm để phụ huynh dễ theo dõi. Nếu anh/chị cần, mình có thể hỗ trợ gửi bản mẫu kỹ năng theo độ tuổi hoặc giới thiệu các công cụ theo dõi online để sử dụng tại nhà."
+      ]
+    },
+{
+      "tag": "So sánh kết quả giữa các mục - So sánh giữa các lĩnh vực phát triển",
+      "patterns": [
+        "Bé đạt điểm cao phần vận động nhưng thấp phần giao tiếp, thì có ảnh hưởng gì không?",
+        "Nếu bé mạnh về vận động nhưng yếu về xã hội thì có cần lo không?",
+        "Có cần lo khi bé giỏi vận động thô nhưng chậm nói?",
+        "Chỉ có phần cá nhân – xã hội là thấp, còn lại bình thường, có đáng lo không?",
+        "Vì sao bé có thể chậm nói nhưng vẫn giao tiếp tốt bằng hành động?",
+        "Bé đạt điểm giao tiếp tốt nhưng vận động lại kém, có cần đánh giá thêm không?",
+        "Bé có điểm xã hội thấp nhưng rất lanh lợi ở nhà, vậy kết quả có chính xác không?",
+        "Nếu chỉ có điểm giao tiếp là thấp, có thể do bé nhút nhát không?",
+        "Bé làm tốt phần cá nhân – xã hội nhưng yếu phần giải quyết vấn đề, có cần lo không?",
+        "Có nên so sánh điểm các phần với nhau không hay chỉ cần đạt từng phần?",
+        "Tại sao phần vận động thô cao nhưng phần vận động tinh lại thấp?",
+        "Có phải bé trai thường mạnh vận động, bé gái mạnh giao tiếp không?",
+        "Bé không làm tốt phần xã hội trong test nhưng vẫn hay cười nói ở nhà, vậy sao điểm lại thấp?",
+        "Nếu bé mạnh giao tiếp nhưng kém giải quyết vấn đề thì có cần luyện gì thêm không?"
+      ],
+      "responses": [
+"Mỗi trẻ phát triển với tốc độ khác nhau ở từng lĩnh vực như: giao tiếp, vận động, giải quyết vấn đề hay kỹ năng xã hội. Việc bé mạnh ở một kỹ năng và yếu hơn ở kỹ năng khác là điều khá phổ biến, không hẳn là dấu hiệu bất thường. Tuy nhiên, nếu sự chênh lệch giữa các lĩnh vực rõ rệt và kéo dài, phụ huynh nên theo dõi thêm hoặc cân nhắc đánh giá chuyên sâu. Một số yếu tố như tính cách (ví dụ: nhút nhát, ít thể hiện ở môi trường lạ) có thể làm điểm test thấp hơn so với khả năng thật của bé. Nếu chỉ có một lĩnh vực bị thấp điểm, anh/chị có thể hỗ trợ thêm tại nhà và quan sát tiến bộ trong vài tuần. Mình sẵn sàng phân tích cụ thể nếu anh/chị chia sẻ thêm điểm từng phần hoặc tình huống bé khi làm bài test."
+      ]
+    },
+{
+      "tag": "So sánh kết quả giữa các mục - Chỉ một lĩnh vực thấp, còn lại bình thường",
+      "patterns": [
+        "Có cần can thiệp nếu chỉ 1 mục dưới ngưỡng?",
+  "Bé đạt điểm tốt ở 4 phần nhưng 1 phần thấp thì có sao không?",
+  "Chỉ có phần cá nhân – xã hội là thấp, còn lại bình thường, có đáng lo không?",
+  "Nếu chỉ có điểm giao tiếp là thấp, có thể do bé nhút nhát không?",
+  "Bé làm tốt phần cá nhân – xã hội nhưng yếu phần giải quyết vấn đề, có cần lo không?",
+  "Bé chỉ yếu phần vận động tinh, còn lại đều ổn thì có cần theo dõi gì không?",
+  "Nếu chỉ một kỹ năng dưới điểm cảnh báo thì nên làm gì?",
+  "Một phần nằm trong vùng theo dõi, còn lại bình thường thì có cần khám không?",
+  "Bé phát triển đều nhưng điểm phần giao tiếp hơi thấp, có cần can thiệp không?",
+  "Chỉ phần vận động thô không đạt yêu cầu, vậy có nên luyện thêm không?",
+  "Nếu một kỹ năng thấp do bé chưa quen bài test thì có sao không?"
+      ],
+      "responses": [
+        "Nếu chỉ có một lĩnh vực phát triển của bé dưới ngưỡng, anh/chị chưa cần quá lo lắng ngay. Tuy nhiên, đây là tín hiệu đáng lưu ý. Anh/chị nên theo dõi thêm kỹ năng đó trong vài tuần, có thể tập luyện thêm tại nhà và quan sát sự tiến bộ. Trong nhiều trường hợp, một kỹ năng yếu có thể là do bé chưa quen môi trường test, chưa hiểu yêu cầu, hoặc do nhút nhát – nhất là ở các kỹ năng giao tiếp hoặc xã hội. Nếu kỹ năng đó tiếp tục thấp trong lần đánh giá sau, hoặc có dấu hiệu bất thường rõ rệt trong sinh hoạt hàng ngày, anh/chị nên cân nhắc đưa bé đến chuyên gia để đánh giá sâu hơn."
+      ]
+    },
+{
+      "tag": "So sánh kết quả giữa các mục - Phát triển không đều giữa các kỹ năng",
+      "patterns": [
+        "Bé đạt điểm tốt ở 3 phần nhưng 2 phần thấp thì có sao không?",
+        "Điểm các phần không đồng đều thì có ảnh hưởng gì không?",
+        "Bé nói chưa sõi nhưng lại làm rất tốt các phần còn lại, vậy có bình thường không?",
+        "Nếu bé không đạt phần giải quyết vấn đề nhưng các phần khác đều ổn thì sao?",
+        "Từng kỹ năng có thể phát triển không đều không?",
+        "Bé có thể phát triển nhanh phần này, chậm phần kia mà vẫn bình thường không?",
+        "Sự khác biệt giữa các kỹ năng nói lên điều gì về sự phát triển của bé?",
+        "Có bé nào phát triển không đều nhưng vẫn bình thường không?",
+        "Điểm số các phần có liên quan đến nhau không?",
+        "Có cần test riêng từng kỹ năng khi điểm các phần quá chênh lệch?",
+        "Kết quả không đều các mục có thể hiện dấu hiệu phát triển không ổn định không?"
+      ],
+      "responses": [
+        "Mỗi bé có tốc độ phát triển riêng ở từng lĩnh vực, nên sự không đồng đều giữa các kỹ năng là điều thường gặp. Một số bé phát triển vượt trội về vận động nhưng chậm hơn ở giao tiếp hoặc ngược lại – điều này không hẳn là bất thường. Tuy nhiên, nếu sự chênh lệch giữa các lĩnh vực quá rõ hoặc kéo dài qua nhiều mốc tuổi, anh/chị nên theo dõi thêm hoặc xin đánh giá chuyên sâu. Điểm số của các kỹ năng trong ASQ-3 phản ánh các khía cạnh khác nhau – không bắt buộc phải đồng đều, nhưng nên được quan sát theo thời gian. Nếu có phần nào đặc biệt thấp hơn so với phần còn lại, mình có thể hỗ trợ phân tích kỹ hơn hoặc gợi ý luyện tập phù hợp tại nhà."
+      ]
+    },
+{
+      "tag": "So sánh kết quả giữa các mục - Kết quả không ổn định hoặc không phản ánh đúng năng lực thật",
+      "patterns": [
+        "Bé làm test chậm ở phần đầu nhưng sau đó lại tốt, điều đó có ảnh hưởng không?",
+  "Bé từng đạt điểm tốt ở phần này nhưng lần này lại thấp, có sao không?",
+  "Có thể bé mất tập trung ở 1 phần làm ảnh hưởng kết quả không?",
+  "Kết quả test thay đổi giữa các lần làm có đáng lo không?",
+  "Bé phản ứng chậm lúc test nhưng bình thường ở nhà, có nên lo không?",
+  "Test ghi bé cần theo dõi nhưng ở nhà bé rất nhanh nhẹn, vậy kết quả có đáng tin không?"
+      ],
+      "responses": [
+        "Kết quả test ASQ-3 có thể bị ảnh hưởng nếu bé đang mệt, không tập trung hoặc chưa quen môi trường. Việc điểm số thay đổi giữa các lần test cũng khá bình thường. Nếu kết quả không giống với hành vi bé thể hiện ở nhà, anh/chị có thể theo dõi thêm và làm lại test sau vài tuần. Quan trọng nhất là quan sát kỹ hành vi hàng ngày để có cái nhìn đầy đủ và chính xác hơn về sự phát triển của bé và đưa bé đến phòng khám để được chuẩn đoán chính xác nhất nếu có thể."
+      ]
+    },
+{
+      "tag": "Không hiểu bảng kết quả - Không hiểu bảng tổng kết & các phần của kết quả - Cách đọc bảng kết quả ASQ-3",
+      "patterns": [
+  "Bảng này có thứ tự nào để đọc không hay xem phần nào trước cũng được?",
+  "Em nên nhìn vào ngưỡng hay điểm trước để biết bé có ổn không?",
+  "Có nên đọc từng dòng theo kỹ năng hay chỉ cần xem tổng thể là đủ?",
+  "Không rõ phần màu sắc với điểm số thì phần nào quan trọng hơn?",
+  "Bảng kết quả có giải thích đâu là phần chính cần chú ý không?"
+      ],
+      "responses": [
+        "Bạn nên bắt đầu đọc bảng kết quả từ phần điểm số của từng kỹ năng, rồi so sánh với mốc ngưỡng được ghi bên cạnh để biết bé đang ở mức bình thường, cần theo dõi hay đang gặp khó khăn. Tốt nhất nên xem từng kỹ năng một thay vì chỉ nhìn tổng thể, vì mỗi lĩnh vực như giao tiếp, vận động hay xã hội đều có vai trò riêng biệt trong sự phát triển của bé. Nếu bạn chưa rõ phần nào là quan trọng nhất, mình có thể hỗ trợ giải thích từng phần theo độ tuổi và tình trạng của bé."
+      ]
+    },
+{
+      "tag": "Không hiểu bảng kết quả - Không hiểu bảng tổng kết & các phần của kết quả - Không rõ về nội dung kỹ năng trong các lĩnh vực",
+      "patterns": [
+  "Phần vận động tinh và vận động thô khác nhau thế nào?",
+  "Giải quyết vấn đề trong bài test bao gồm những dạng kỹ năng gì?",
+  "Kỹ năng giao tiếp có bao gồm cả phi ngôn ngữ không?",
+  "Phần cá nhân – xã hội là đánh giá hành vi hay cảm xúc của bé?",
+  "Mỗi kỹ năng được đo bằng bao nhiêu câu hỏi trong test?"
+      ],
+      "responses": [
+"Mỗi lĩnh vực trong ASQ-3 sẽ đánh giá một nhóm kỹ năng phát triển riêng của bé. Mỗi kỹ năng thường được đánh giá qua 6 câu hỏi phù hợp với độ tuổi của bé: 1. Vận động thô: di chuyển cơ thể, như bò, đi, chạy, nhảy.2. Vận động tinh: thao tác tay ngón, như cầm nắm, xếp khối, cài nút.3. Giải quyết vấn đề: quan sát, suy nghĩ, thử – sai, như tìm đồ vật, xếp hình.4. Giao tiếp: cả ngôn ngữ nói và phi ngôn ngữ (chỉ tay, gật đầu...).5. Cá nhân – xã hội: khả năng tự phục vụ, chơi độc lập và tương tác với người khác."
+      ]
+    },
+{
+      "tag": "Không hiểu bảng kết quả - Không hiểu bảng tổng kết & các phần của kết quả - Không rõ vì sao test ở độ tuổi đó",
+      "patterns": [
+        "Sao bé 26 tháng nhưng lại được làm test 27 tháng?",
+  "Mỗi bảng test chỉ dùng cho đúng tuổi hay có thể linh hoạt?",
+  "Nếu bé sinh non thì chọn mốc tuổi nào để test cho đúng?",
+  "Có nên làm lại test nếu bé vừa bước sang tháng tuổi mới không?",
+  "Thang điểm có thay đổi theo độ tuổi không?"
+      ],
+      "responses": [
+        "ASQ-3 được chia thành nhiều bộ câu hỏi theo từng mốc tuổi cụ thể (như 24, 27, 30 tháng...). Bé sẽ được làm bài test phù hợp với độ tuổi gần nhất tại thời điểm làm test, để phản ánh chính xác nhất mức độ phát triển. Trang web đã phân loại độ tuổi cho trẻ tương ứng với bài test phù hợp"
+      ]
+    },
+{
+      "tag": "Không hiểu bảng kết quả - Không hiểu cách đọc điểm - Không hiểu ý nghĩa của ngưỡng điểm và cách đánh giá",
+      "patterns": [
+        "Con em được 15 điểm nhưng ngưỡng là 25.31, vậy là sao?",
+
+"Có phải cứ dưới ngưỡng là chậm phát triển không?",
+
+"Ngưỡng điểm là gì? Có phải chuẩn cho tất cả trẻ không?",
+
+"Bé được 45 điểm, có nghĩa là phát triển tốt rồi không?"
+      ],
+      "responses": [
+        "Ngưỡng điểm là mốc chuẩn để so sánh sự phát triển của bé. Nếu điểm cao hơn ngưỡng là tốt. Nếu thấp hơn, có thể cần theo dõi hoặc đánh giá thêm. Kết quả cần được hiểu cùng với hành vi thực tế của bé."
+      ]
+    },
+{
+      "tag": "Không hiểu bảng kết quả - Không hiểu cách đọc điểm - Không hiểu màu sắc hoặc biểu đồ thể hiện gì",
+      "patterns": [
+        "Vùng màu đậm là tốt hay xấu ạ?",
+	"Màu xanh, vàng và xám trong bảng kết quả có ý nghĩa gì?",
+  	"Biểu đồ có các thanh màu, em không biết nhìn như thế nào?",
+  	"Có phải cứ nằm ở vùng màu xanh là an toàn không?",
+  	"Nếu bé nằm ở vùng màu xám thì có nguy hiểm không?",
+  	"Em thấy có hình người đứng trong biểu đồ, nó thể hiện điều gì?"
+],
+      "responses": [
+        "Các vùng màu trong bảng ASQ-3 giúp minh họa nhanh tình trạng phát triển. Biểu tượng hình người và vị trí trong biểu đồ thể hiện điểm của bé so với ngưỡng. Tuy nhiên, vẫn cần đọc kỹ điểm số để đánh giá chính xác: 1. Xanh: phát triển bình thường.2. Xám: cần theo dõi thêm.3. Đậm: có thể cần hỗ trợ hoặc đánh giá chuyên sâu"
+      ]
+    },
+{
+      "tag": "Không hiểu bảng kết quả - Không hiểu biểu tượng (hình người đỏ), trục số, thanh màu",
+      "patterns": [
+        "Sao trong hình có bé đứng ở giữa, có bé ở cuối?",
+        "Các con số 0–60 có ý nghĩa như thế nào?",
+        "Có phải càng gần bên phải là càng tốt không?",
+        "Thanh màu thể hiện sự phát triển theo chiều nào?"
+      ],
+      "responses": [
+"1. Các con số từ 0 đến 60 là thang điểm tối đa cho mỗi kỹ năng, tùy mốc tuổi.2. Bé càng nằm về bên phải của thanh màu thì điểm càng cao, tức là kỹ năng phát triển tốt hơn.3. Thanh màu chia vùng: xanh (bình thường), vàng (cần theo dõi), xám (chậm rõ rệt)."
+      ]
+    },
+    {
+      "tag": "Không hiểu bảng kết quả - Giải thích cụm chuyên môn - Theo dõi & Hỗ trợ phát triển",
+      "patterns": [
+        "'Cần theo dõi thêm' nghĩa là gì? Có phải bé đang gặp vấn đề?",
+        "'Cần hỗ trợ phát triển' là phải đi khám luôn đúng không?",
+        "Phân loại 'Cần theo dõi' khác gì với 'Cần hỗ trợ phát triển'?"
+      ],
+      "responses": [
+        "Các cụm 'Cần theo dõi thêm' và 'Cần hỗ trợ phát triển' giúp xác định mức độ cần can thiệp: 'Cần theo dõi' nghĩa là bé có dấu hiệu nhẹ, nên quan sát thêm. 'Cần hỗ trợ phát triển' tức là kỹ năng bé dưới ngưỡng, cần đánh giá chuyên sâu hoặc can thiệp sớm."
+      ]
+    },
+    {
+      "tag": "Không hiểu bảng kết quả - Giải thích cụm chuyên môn - Không áp dụng & Gợi ý cho gia đình",
+      "patterns": [
+        "Mục 'không áp dụng' là bỏ qua hay đánh giá kiểu khác?",
+        "Phần 'gợi ý cho gia đình' có bắt buộc làm không?",
+        "'Gợi ý cho gia đình': không bắt buộc, nhưng là hoạt động hữu ích giúp hỗ trợ kỹ năng bé tại nhà."
+      ],
+      "responses": [
+        "'Không áp dụng' là câu hỏi không phù hợp với tình huống của bé và được loại khỏi khi tính điểm. 'Gợi ý cho gia đình' là các hoạt động không bắt buộc, nhưng giúp bố mẹ hỗ trợ kỹ năng bé ngay tại nhà một cách chủ động."
+      ]
+    },
+    {
+      "tag": "Không hiểu bảng kết quả - Giải thích cụm chuyên môn M-CHAT-R",
+      "patterns": [
+        "Tại sao ghi là 'khuyến nghị làm M-CHAT-R'? Đó là gì?",
+        "'M-CHAT-R' là gì, tại sao cần làm thêm?",
+        "Khi nào trẻ cần làm 'M-CHAT-R'? "
+      ],
+      "responses": [
+        "'M-CHAT-R' là bảng sàng lọc sớm nguy cơ tự kỷ dành cho trẻ từ 16 đến 30 tháng tuổi. Nếu kết quả ASQ-3 cho thấy một số dấu hiệu có thể liên quan đến tự kỷ (ví dụ: thiếu tương tác, không phản ứng với gọi tên...), chuyên gia có thể khuyến nghị làm thêm M-CHAT-R để kiểm tra kỹ hơn. Việc này không có nghĩa là bé bị tự kỷ, mà chỉ là bước đánh giá tiếp theo để đảm bảo can thiệp kịp thời nếu cần."
+      ]
+    },
+    {
+      "tag": "Không hiểu bảng kết quả - Giải thích cụm chuyên môn - Can thiệp sớm",
+      "patterns": [
+        "Cụm 'Can thiệp sớm' được nhắc tới, là can thiệp kiểu gì vậy?",
+        "Em thấy cụm 'Đánh giá chuyên sâu' nhưng không rõ là ở đâu?"
+      ],
+      "responses": [
+        "'Can thiệp sớm' nghĩa là áp dụng các chương trình hỗ trợ kỹ năng cho trẻ ngay khi phát hiện vấn đề, càng sớm càng tốt để tối ưu phát triển. Có thể là các lớp học, trung tâm để dạy trẻ các kỹ."
+      ]
+    },
+    {
+      "tag": "Không hiểu bảng kết quả - Giải thích cụm chuyên môn - Ngưỡng phát triển & Đạt mốc",
+      "patterns": [
+        "ASQ-3 có ghi 'Giới hạn ngưỡng' là gì vậy ạ?",
+        "Trong bảng có ghi 'đạt mốc' và 'không đạt mốc', nghĩa là gì?",
+        "'Không áp dụng': phần câu hỏi không phù hợp với bé nên được bỏ qua khi tính điểm."
+      ],
+      "responses": [
+        "'Giới hạn ngưỡng' là điểm cắt được xác định theo độ tuổi để đánh giá kỹ năng. Nếu bé đạt trên ngưỡng thì được xem là phát triển bình thường. Các cụm 'đạt mốc' và 'không đạt mốc' phản ánh xem kỹ năng đó đã phù hợp với tuổi hay chưa."
+      ]
+    },
+{
+      "tag": "Không hiểu bảng kết quả - Không biết ý nghĩa từng phần chi tiết - Không hiểu ý nghĩa khi chỉ 1 phần thấp hoặc sát ngưỡng",
+      "patterns": [
+  "Chỉ có phần vận động tinh hơi thấp, vậy có cần lo không?",
+  "Bé đạt điểm tốt ở 4 kỹ năng, chỉ 1 kỹ năng dưới ngưỡng thì sao?",
+  "Nếu một phần thấp nhưng bé vẫn hoạt động bình thường thì có cần theo dõi không?",
+  "Điểm gần ngưỡng theo dõi có đáng lo không?",
+  "Một kỹ năng nằm ở ngưỡng thấp nhất vùng an toàn thì có cần luyện thêm không?"
+      ],
+      "responses": [
+      "Nếu chỉ một kỹ năng thấp hoặc sát ngưỡng, bạn chưa cần lo lắng quá, nhưng nên theo dõi thêm kỹ năng đó trong vài tuần. Mỗi bé có thể phát triển không đều giữa các kỹ năng. Tuy nhiên, nếu phần nào đó nằm gần hoặc dưới ngưỡng, phụ huynh nên hỗ trợ thêm ở kỹ năng đó để đảm bảo bé phát triển đồng đều. Một kỹ năng thấp không có nghĩa bé gặp vấn đề, nhưng có thể là dấu hiệu ban đầu để mình quan sát kỹ hơn."
+      ]
+    },
+{
+      "tag": "Không hiểu bảng kết quả - Không biết ý nghĩa từng phần chi tiết - Không hiểu vì sao điểm cao mà vẫn có khuyến nghị, cần đánh giá thêm",
+      "patterns": [
+  "Em không hiểu tại sao bé cao điểm mà vẫn bị ghi là cần đánh giá thêm?",
+  "Vì sao các phần đều cao nhưng vẫn có mục khuyến nghị?",
+  "Bé đạt điểm cao hết mà vẫn được khuyên làm thêm M-CHAT-R, là sao ạ?",
+  "Tổng điểm của bé đều vượt ngưỡng, sao vẫn ghi là cần quan sát?",
+  "Điểm phần nào cũng tốt nhưng hệ thống vẫn báo cần đánh giá tiếp?",
+  "Tại sao kết quả tốt mà vẫn có hướng dẫn can thiệp?",
+  "Em nghĩ bé ổn nhưng test vẫn hiện màu vàng ở mục tư vấn – có cần lo không?"
+      ],
+      "responses": [
+        "Ngay cả khi điểm cao, nếu có dấu hiệu nhỏ chưa rõ ràng hoặc không ổn định, hệ thống vẫn có thể gợi ý theo dõi hoặc đánh giá thêm để đảm bảo an toàn cho bé. Khuyến nghị là hướng dẫn để phụ huynh quan sát kỹ hơn, không có nghĩa là bé đang gặp vấn đề."
+      ]
+    },
+{
+      "tag": "Không hiểu bảng kết quả - Không hiểu về công cụ đánh giá liên quan (ví dụ M-CHAT-R) - Không hiểu M-CHAT-R là gì, dùng để làm gì",
+      "patterns": [
+  "M-CHAT dùng để sàng lọc vấn đề gì vậy?",
+  "Có phải M-CHAT-R là test chẩn đoán tự kỷ không?",
+  "M-CHAT-R có thay thế cho ASQ-3 không?",
+  "Nếu điểm ASQ-3 tốt thì có cần làm M-CHAT-R không?",
+  "Làm M-CHAT-R có phát hiện được tự kỷ sớm không?"      
+],
+      "responses": [
+"M-CHAT-R là công cụ sàng lọc sớm nguy cơ rối loạn phổ tự kỷ cho trẻ từ 16–30 tháng. Khác với ASQ-3 là đánh giá phát triển toàn diện, M-CHAT-R tập trung riêng vào khả năng giao tiếp xã hội và hành vi. Nếu bé có điểm thấp ở các mục như giao tiếp hoặc xã hội trong ASQ-3, phụ huynh sẽ được khuyến nghị làm thêm M-CHAT-R để kiểm tra kỹ hơn. M-CHAT-R không phải công cụ chẩn đoán, nhưng rất quan trọng để phát hiện sớm nguy cơ."
+      ]
+    },
+{
+      "tag": "Không hiểu bảng kết quả - Không hiểu về công cụ đánh giá liên quan (ví dụ M-CHAT-R) - Không rõ cách thực hiện và liên quan giữa các công cụ",
+      "patterns": [
+"Làm M-CHAT ở đâu và có mất phí không?",
+"ASQ-3 có cần làm lại sau khi có kết quả M-CHAT không?", 
+"Nếu kết quả M-CHAT bình thường thì có cần làm lại ASQ-3 không?",
+"M-CHAT-R với ASQ-3 có cần làm cùng lúc không?"
+      ],
+      "responses": [
+"M-CHAT-R có thể làm online miễn phí hoặc thực hiện tại các cơ sở y tế, trung tâm phát triển trẻ em. ASQ-3 và M-CHAT-R là hai công cụ khác nhau nhưng bổ sung cho nhau. ASQ-3 không cần làm lại sau khi có kết quả M-CHAT-R, trừ khi có nghi ngờ mới hoặc muốn theo dõi tiến triển. Thời gian làm M-CHAT-R khá ngắn (chỉ khoảng 5–10 phút), và thường được khuyến nghị nếu có dấu hiệu lo ngại trong phần giao tiếp hoặc xã hội."
+      ]
+    }
+
+  ]
+}
