@@ -1,0 +1,17 @@
+
+.custom-button:hover {
+  background-color: #2673f2;  
+  border: 1.5px solid #2673f2;
+  outline: none;
+}
+
+.custom-button.clicked {
+  background-color: white;     
+  color: #2673f2;
+  border: 1.5px solid #2673f2;
+}
+
+.custom-button:focus {
+  outline: none;
+  box-shadow: none;             
+}

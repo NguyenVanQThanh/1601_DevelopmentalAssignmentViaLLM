@@ -1,0 +1,25 @@
+.form-button-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Khoảng cách giữa 2 nút */
+    margin-top: 32px;
+    flex-wrap: wrap;
+  }
+  
+  .form-button-wrapper button {
+    background-color: #2979ff;
+    color: white;
+    font-weight: bold;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    min-width: 200px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .form-button-wrapper button:hover {
+    background-color: #1565c0;
+  }
+  

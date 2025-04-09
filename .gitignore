@@ -1,5 +1,16 @@
+<<<<<<< HEAD
 .env
 Product/models
 Product/data
 Product/dts_finetuning
 Product/venv
+=======
+Model/MentalBART/MentalBART.ipynb
+Model/MentalT5/MentalT5.ipynb
+Product/data
+Product/dts_finetuning
+Product/models
+Product/vectorstores
+Product/venv
+.env
+>>>>>>> 1461dc85d81348d2e25009771746ceb4eca68bfe
