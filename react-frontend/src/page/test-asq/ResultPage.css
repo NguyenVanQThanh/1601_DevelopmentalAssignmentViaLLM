@@ -1,0 +1,110 @@
+.result-page {
+    background: #fff;
+    padding: 32px;
+    border-radius: 10px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .section {
+    margin-bottom: 40px;
+  }
+  
+  .title {
+    text-align: center;
+    color: #004aad;
+    margin-bottom: 32px;
+  }
+  .chapter{
+    color: #004aad;
+  }
+  
+  .info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  
+  .score-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .score-table th, .score-table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .legend p {
+    margin: 4px 0;
+  }
+  
+  .result-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 32px;
+  }
+  .title{
+    font-size: 35px;
+  }
+  .slider-container {
+    margin-top: 12px;
+    position: relative;
+  }
+  
+  .slider-track {
+    width: 100%;
+    height: 15px;
+    background: linear-gradient(
+      to right,
+      #757575 0%,       
+      #757575 20%,
+      #f1a446 20%,     
+      #f1a446 40%,
+      #40679e 40%,     
+      #40679e 40%
+    
+    );
+    border-radius: 5px;
+  }
+  
+  .slider-dot {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    position: absolute;
+    top: -7px;
+    transform: translateX(-50%);
+    background-color: #568f68;
+  }
+  .lv1{
+    color: #757575;
+  }
+  .lv2{
+    color: #f1a446;
+  }
+  .lv3{
+    color: #40679e;
+  }
+  .print-pdf{
+    padding: 40px;
+  }
+  .pdf-only-header {
+    display: none;
+  }
+  
+  .result-page.printing .pdf-only-header {
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .pdf-title{
+    font-size: 30px;
+    align-items: center;
+    color: #004aad;
+  }
+  
+  
+  

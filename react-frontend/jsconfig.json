@@ -1,0 +1,25 @@
+// {
+//     "compilerOptions": {
+//       "baseUrl": "src",
+//       "paths": {
+//         "*": ["*"]
+//       }
+//     },
+//     "include": ["src"]
+//   }
+  
+
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "jsx": "react-jsx",
+    "module": "ESNext",
+    "moduleResolution": "node",
+
+    "baseUrl": "src",
+    "paths": {
+      "*": ["*"]
+    }
+  },
+  "include": ["src"]
+}
