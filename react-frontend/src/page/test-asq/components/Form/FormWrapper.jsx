@@ -20,6 +20,8 @@ function FormWrapper({
   const handleSubmit = (e) => {
     e.preventDefault();
 
+  
+
     // ✅ Kiểm tra các trường bắt buộc
     const missingFields = fields.filter((field) => {
       const value = formData[field.name];
@@ -38,33 +40,66 @@ function FormWrapper({
     for (const field of fields) {
       const value = formData[field.name];
 
-      if (field.name === "phone") {
-        const phoneIsValid = /^[0-9]+$/.test(value);
-        if (!phoneIsValid) {
-          alert("Số điện thoại chỉ được chứa chữ số (0-9).");
+
+      // --- 1) Kiểm tra HỌ TÊN ---
+      if (field.name === "fullName") {
+        // Chỉ cho phép chữ cái Unicode, khoảng trắng, dấu nháy đơn và gạch nối
+        const nameIsValid = /^[\p{L}\s'‑-]+$/u.test(value.trim());
+        if (!nameIsValid) {
+          alert("Tên không được chứa số hoặc ký tự đặc biệt.");
           return;
         }
       }
 
-      if (field.name === "birthYear") {
-        const yearIsValid = /^\d{4}$/.test(value) && parseInt(value, 10) > 1950;
-        if (!yearIsValid) {
-          alert("Năm sinh không hợp lệ.");
+      if (field.name === "phone") {
+        // chỉ khớp đúng 10 ký tự 0‑9
+        const phoneIsValid = /^\d{10}$/.test(value);
+        if (!phoneIsValid) {
+          alert("Số điện thoại phải gồm đúng 10 chữ số (0‑9).");
           return;
         }
+      }
+
+      
+    // 4) NGÀY SINH (không được ở tương lai)
+    if (field.name === "birthDate") {
+      const inputDate = new Date(value);   // value = "YYYY-MM-DD"
+      const today     = new Date();
+    
+      // Đưa cả hai mốc về 00:00 để so sánh “ngày” thuần
+      inputDate.setHours(0, 0, 0, 0);
+      today.setHours(0, 0, 0, 0);
+    
+      // 1) Không cho phép ngày sinh ở tương lai
+      if (isNaN(inputDate) || inputDate > today) {
+        alert("Ngày sinh không được lớn hơn ngày hiện tại.");
+        return;
+      }
+    
+      // 2) Tính tuổi theo THÁNG (độ chính xác tới ngày)
+      let months =
+        (today.getFullYear() - inputDate.getFullYear()) * 12 +
+        (today.getMonth()  - inputDate.getMonth());
+    
+      if (today.getDate() < inputDate.getDate()) months--;
+    
+      if (months < 2 || months > 54) {
+        alert("Chỉ hỗ trợ trẻ từ 2 tháng đến 4,5 tuổi (54 tháng).");
+        return;
       }
     }
 
+
+
+}
     onSubmit(formData);
   };
-
+  const todayISO = new Date().toISOString().split("T")[0];
   const renderField = (field) => {
     switch (field.type) {
       case "text":
-      case "date":
       case "file":
         return (
-          
           <input
             type={field.type}
             name={field.name}
@@ -76,10 +111,37 @@ function FormWrapper({
               const value =
                 field.type === "file" ? e.target.files[0] : e.target.value;
               handleChange(field.name, value);
-              if (field.onChange) field.onChange(field.name, value); 
+              if (field.onChange) field.onChange(field.name, value);
             }}
           />
         );
+
+        case "date":
+          return (
+            <input
+              type="date"
+              name={field.name}
+              placeholder={field.placeholder || ""}
+              value={formData[field.name] || ""}
+              /* chặn ngày lớn hơn hôm nay */
+              max={todayISO}
+              // nếu muốn chặn thêm ngày quá xa trong quá khứ:
+                 min="1950-01-01"
+              
+              onChange={(e) => {
+                const value = e.target.value;
+                handleChange(field.name, value);
+                field.onChange?.(field.name, value);
+              }}
+              /* thông báo mặc định của trình duyệt */
+              onInvalid={(e) =>
+                e.target.setCustomValidity(
+                  "Ngày không được lớn hơn ngày hiện tại."
+                )
+              }
+              onInput={(e) => e.target.setCustomValidity("")} // reset khi hợp lệ
+            />
+          );
 
       case "select":
         return (
