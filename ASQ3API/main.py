@@ -5,6 +5,7 @@ import json
 import uvicorn
 from fastapi.middleware.cors import CORSMiddleware
 app = FastAPI()
+#XỬ LÝ PHÂN LỚP TUỔI CHO BỘ CÂU HỎI 
 
 # Đọc file JSON chứa câu hỏi
 with open("data/18month.json", "r", encoding="utf-8") as f:
@@ -13,7 +14,7 @@ with open("data/18month.json", "r", encoding="utf-8") as f:
 # Thêm middleware CORS để cho phép frontend truy cập API
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],  # URL của frontend React
+    allow_origins=["http://localhost:5173"],  # URL của frontend React sửa port lại Thanh 5174, Hảo 5173
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -119,3 +120,27 @@ async def submit_form(data: SectionAnswers):
 # Tự động chạy ứng dụng khi chạy file
 if __name__ == "__main__":
     uvicorn.run("main:app", host="127.0.0.1", port=8000, reload=True)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
