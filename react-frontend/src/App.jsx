@@ -87,7 +87,7 @@ function App() {
     {
       type: "select",
       name: "result",
-      label: "Kết quả chuẩn đoán:",
+      label: "Kết quả chuẩn đoán cụ thể:",
       options: results,
       onChange: handleChildInfoChange,
     },

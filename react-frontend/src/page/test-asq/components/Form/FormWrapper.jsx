@@ -20,8 +20,6 @@ function FormWrapper({
   const handleSubmit = (e) => {
     e.preventDefault();
 
-  
-
     // ✅ Kiểm tra các trường bắt buộc
     const missingFields = fields.filter((field) => {
       const value = formData[field.name];
