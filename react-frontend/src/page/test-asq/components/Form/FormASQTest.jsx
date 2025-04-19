@@ -2,6 +2,16 @@ import Button from "../Button/Button";
 import "./FormASQTest.css";
 import React, { useState, useEffect } from "react";
 import TitleBox from "../../../../components/Title_box/TitleBox";
+const imageModules = import.meta.glob(
+  "../../../../assets/images/*.{png,jpg,jpeg,svg}",
+  { eager: true }
+);
+
+const images = {};
+for (const path in imageModules) {
+  const fileName = path.split("/").pop();
+  images[fileName] = imageModules[path].default;
+}
 
 function FormASQTest({ onBack, onSubmit, defaultValues = {} }) {
   const defaultAnswers = defaultValues.answers || {};
@@ -10,28 +20,28 @@ function FormASQTest({ onBack, onSubmit, defaultValues = {} }) {
   const [viewMode, setViewMode] = useState(defaultValues.viewMode || "all");
   const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
   const [completedSection, setCompletedSection] = useState(
-    defaultValues.completedSection || []
+    defaultValues?.completedSection || []
   );
   const [age, setAge] = useState(defaultValues.age || null);
   const [testSections, setTestSections] = useState([]); // State để lưu dữ liệu fetch từ API
   const [loading, setLoading] = useState(true); // State để xử lý trạng thái loading
   const [error, setError] = useState(null); // State để xử lý lỗi
   const [result, setResult] = useState(null); // State để lưu kết quả từ backend
-
-  // Fetch dữ liệu từ endpoint /form khi component được mount
   useEffect(() => {
     const fetchFormData = async () => {
       try {
-        setLoading(true);
-        const response = await fetch("http://127.0.0.1:8000/form");
-        console.log("Response từ API /form:", response);
-        if (!response.ok) {
-          throw new Error("Failed to fetch form data");
-        }
-        const data = await response.json();
-        console.log("Dữ liệu từ API /form sau khi parse:", data);
+        const ageInDays = defaultValues.age?.childAgeInDays;
+        if (!ageInDays) throw new Error("Thiếu thông tin số ngày tuổi");
 
-        // Định nghĩa title cho từng section
+        const response = await fetch(
+          `http://127.0.0.1:8000/form?age_in_days=${ageInDays}`
+        );
+        if (!response.ok) throw new Error("Failed to fetch form data");
+
+        const data = await response.json();
+        setAge(data.age);
+
+        // Mapping tiêu đề section
         const titleMapping = {
           communication: "A. GIAO TIẾP",
           gross_motor: "B. VẬN ĐỘNG THÔ",
@@ -40,19 +50,15 @@ function FormASQTest({ onBack, onSubmit, defaultValues = {} }) {
           personal_social: "E. CÁ NHÂN XÃ HỘI",
         };
 
-        // Lấy các key từ data.question (communication, gross_motor, ...)
         const apiKeys = Object.keys(data.question);
-
-        // Chuyển đổi dữ liệu từ API thành định dạng testSections
         const sections = apiKeys.map((key) => ({
-          apiKey: key, // Lưu apiKey để sử dụng trực tiếp
+          apiKey: key,
           title: titleMapping[key],
           content: data.question[key],
         }));
-        setTestSections(sections);
-        console.log("Test Sections:", sections); // Log testSections để kiểm tra
 
-        setAge(data.age); // Lưu thông tin tuổi từ API
+        setTestSections(sections);
+        console.log("Test Sections:", sections);
         setLoading(false);
       } catch (err) {
         setError(err.message);
@@ -62,12 +68,6 @@ function FormASQTest({ onBack, onSubmit, defaultValues = {} }) {
 
     fetchFormData();
   }, []);
-
-  useEffect(() => {
-    setAnswers(defaultValues.answers || {});
-    setCompletedSection(defaultValues.completedSection || []);
-    setViewMode(defaultValues.viewMode || "all");
-  }, [defaultValues]);
 
   const handleChange = (name, value) => {
     setAnswers((prev) => {
@@ -102,31 +102,43 @@ function FormASQTest({ onBack, onSubmit, defaultValues = {} }) {
     console.log(`Rendering question: ${questionName}`); // Log để kiểm tra câu hỏi được render
     return (
       <div className="question-box" key={questionName}>
-        <div className="question-label">
-          <strong>Câu {idx + 1}:</strong> {q.text}
-          {q.note && (
-            <p className="question-note">
-              <em>{q.note}</em>
-            </p>
+        <div className="question-content">
+          <div className="question-text">
+            <div className="question-label">
+              <strong>Câu {idx + 1}:</strong> {q.text}
+              {q.note && (
+                <p className="question-note">
+                  <em>({q.note})</em>
+                </p>
+              )}
+            </div>
+
+            <div className="radio-group">
+              {q.options.map((optRaw) => {
+                const opt = optRaw.trim();
+                return (
+                  <label key={opt} className="radio-option">
+                    <input
+                      type="radio"
+                      name={questionName}
+                      value={opt}
+                      checked={answers[questionName] === opt}
+                      onChange={() => handleChange(questionName, opt)}
+                      disabled={result !== null}
+                    />
+                    {opt}
+                  </label>
+                );
+              })}
+            </div>
+          </div>
+
+          {q.image_filepath && images[q.image_filepath] && (
+            <div className="question-image">
+              <img src={images[q.image_filepath]} alt="Ảnh minh họa" />
+            </div>
           )}
-        </div>
-        <div className="radio-group">
-          {q.options.map((optRaw) => {
-            const opt = optRaw.trim();
-            return (
-              <label key={opt} className="radio-option">
-                <input
-                  type="radio"
-                  name={questionName}
-                  value={opt}
-                  checked={answers[questionName] === opt}
-                  onChange={() => handleChange(questionName, opt)}
-                  disabled={result !== null} // Vô hiệu hóa nếu đã có kết quả
-                />
-                {opt}
-              </label>
-            );
-          })}
+
         </div>
       </div>
     );
@@ -237,13 +249,51 @@ function FormASQTest({ onBack, onSubmit, defaultValues = {} }) {
     if (viewMode === "step" && currentSectionIndex > 0) {
       setCurrentSectionIndex((prev) => prev - 1);
     } else {
-      onBack({
+      const snapshot = {
         answers,
         viewMode,
         age,
         completedSection,
         comment: "Dữ liệu nhận xét sẽ render từ BE",
-      });
+      };
+      console.log("Quay lại Step 1 với snapshot:", snapshot);
+      onBack(snapshot);
+    }
+  };
+
+  const fetchFormData = async () => {
+    try {
+      const ageInDays = defaultValues.age?.childAgeInDays;
+      if (!ageInDays) throw new Error("Thiếu thông tin số ngày tuổi");
+
+      const response = await fetch(
+        `http://127.0.0.1:8000/form?age_in_days=${ageInDays}`
+      );
+      if (!response.ok) throw new Error("Failed to fetch form data");
+
+      const data = await response.json();
+      setAge(data.age);
+
+      const titleMapping = {
+        communication: "A. GIAO TIẾP",
+        gross_motor: "B. VẬN ĐỘNG THÔ",
+        fine_motor: "C. VẬN ĐỘNG TINH",
+        problem_solving: "D. GIẢI QUYẾT VẤN ĐỀ",
+        personal_social: "E. CÁ NHÂN XÃ HỘI",
+      };
+
+      const apiKeys = Object.keys(data.question);
+      const sections = apiKeys.map((key) => ({
+        apiKey: key,
+        title: titleMapping[key],
+        content: data.question[key],
+      }));
+
+      setTestSections(sections);
+      setLoading(false);
+    } catch (err) {
+      setError(err.message);
+      setLoading(false);
     }
   };
 
@@ -315,8 +365,13 @@ function FormASQTest({ onBack, onSubmit, defaultValues = {} }) {
         {viewMode === "step" && (
           <div className="question-section">
             <h3>{testSections[currentSectionIndex].title}</h3>
-            {testSections[currentSectionIndex].content.questions.map((q, qIdx) =>
-              renderQuestion(q, qIdx, testSections[currentSectionIndex].apiKey)
+            {testSections[currentSectionIndex].content.questions.map(
+              (q, qIdx) =>
+                renderQuestion(
+                  q,
+                  qIdx,
+                  testSections[currentSectionIndex].apiKey
+                )
             )}
           </div>
         )}
