@@ -91,7 +91,7 @@
             "Chưa"
           ],
           "note": "Bạn hãy đứng cách xa bé khoảng 5 feet/1.5 m và cho bé thử 2-3 lần trước khi đánh dấu trả lời.",
-          "image_filepath": "image_placeholder.png"
+          "image_filepath": "image42_1.png"
         },
         {
           "id": 2,
@@ -113,7 +113,7 @@
             "Chưa"
           ],
           "note": "Đánh dấu 'chưa' nếu bé làm rơi bóng hoặc để bàn tay cầm bóng thấp hơn vai khi ném",
-          "image_filepath": "image_placeholder.png"
+          "image_filepath": "image33_1.png"
         },
         {
           "id": 4,
@@ -146,7 +146,7 @@
             "Chưa"
           ],
           "note": "Bạn có thể cho bé thử hai hay ba lần trước khi đánh dấu trả lời câu này",
-          "image_filepath": "image_placeholder.png"
+          "image_filepath": "image30_1.png"
         }
       ],
       "cutoff": 32.78,
@@ -174,7 +174,7 @@
             "Chưa"
           ],
           "note": "Bạn phải trông chừng cần thận để đảm bảo an toàn cho trẻ khi dùng kéo.",
-          "image_filepath": "image_placeholder.png"
+          "image_filepath": "image33_2.png"
         },
         {
           "id": 3,
@@ -246,7 +246,7 @@
             "Chưa"
           ],
           "note": "Bạn hãy hỏi câu hỏi này mà không giúp trẻ bằng cách chỉ, ra hiệu hoặc nhìn vào hình nhỏ nhất.",
-          "image_filepath": "image_placeholder.png"
+          "image_filepath": "image42_3.png"
         },
         {
           "id": 3,

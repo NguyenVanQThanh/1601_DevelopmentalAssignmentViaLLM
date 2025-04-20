@@ -4,6 +4,8 @@ from typing import List, Dict, Optional
 import json
 import uvicorn
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi import Query
+import os
 app = FastAPI()
 #XỬ LÝ PHÂN LỚP TUỔI CHO BỘ CÂU HỎI 
 
@@ -76,10 +78,76 @@ def determine_status(total_score: float, cutoff: float, max_score: float) -> str
     else:
         return "BÌNH THƯỜNG"
 
-# 1. Endpoint để lấy nội dung câu hỏi
+def replace_image_placeholders(data):
+    title_to_prefix = {
+        "2m Questionnaire": "image2_",
+        "4m Questionnaire": "image4_",
+        "6m Questionnaire": "image6_",
+        "8m Questionnaire": "image8_",
+        "9m Questionnaire": "image9_",
+        "12m Questionnaire": "image12_",
+        "14m Questionnaire": "image14_",
+        "18m Questionnaire": "image18_",
+        "20m Questionnaire": "image20_",
+        "22m Questionnaire": "image22_",
+        "24m Questionnaire": "image24_",
+        "27m Questionnaire": "image27_",
+        "30m Questionnaire": "image30_",
+        "33m Questionnaire": "image33_",
+        "36m Questionnaire": "image36_",
+        "42m Questionnaire": "image42_",
+        "48m Questionnaire": "image48_",
+        "60m Questionnaire": "image60_"
+    }
+
+    title = data.get("age", {}).get("title")
+    print("🔍 Đang xử lý bộ:", title)
+
+    if not title or title not in title_to_prefix:
+        print("⛔️ Không khớp với bộ nào, bỏ qua.")
+        return data
+
+    prefix = title_to_prefix[title]
+    counter = 1
+
+    for section_key, section in data["question"].items():
+        for question in section.get("questions", []):
+            if question.get("image_filepath") == "image_placeholder.png":
+                new_name = f"{prefix}{counter}.png"
+                print(f"✅ Gán {new_name} cho ID {question['id']}")
+                question["image_filepath"] = new_name
+                counter += 1
+
+    return data
+
+
 @app.get("/form")
-async def get_form():
-    return asq_data
+async def get_form(age_in_days: int = Query(..., description="Số ngày tuổi của trẻ")):
+    data_dir = "data"
+    matched_file = None
+
+    for filename in os.listdir(data_dir):
+        if filename.endswith(".json"):
+            filepath = os.path.join(data_dir, filename)
+            with open(filepath, "r", encoding="utf-8") as f:
+                data = json.load(f)
+                try:
+                    min_days = data["age"]["range_in_days"]["min_days"]
+                    max_days = data["age"]["range_in_days"]["max_days"]
+                    if min_days <= age_in_days <= max_days:
+                        matched_file = data
+                        break
+                except KeyError:
+                    continue
+
+    if not matched_file:
+        raise HTTPException(status_code=404, detail="Không tìm thấy bộ câu hỏi phù hợp với độ tuổi.")
+
+    # ✅ Áp dụng tự động gán ảnh nếu có
+    matched_file = replace_image_placeholders(matched_file)
+
+    return matched_file
+
 
 # 2. Endpoint để nhận câu trả lời và trả về kết quả
 @app.post("/form/result")

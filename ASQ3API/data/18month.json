@@ -98,7 +98,7 @@
                     "text": "Khi bạn hướng dẫn con của bạn đá quả bóng/banh lớn, bé có cố gắng đá bằng cách đưa chân về phía trước hoặc đi về phía quả bóng không?",
                     "options": ["Có", "Thỉnh Thoảng", "Chưa"],
                     "note": "Nếu bé đã biết đá bóng thì ghi 'có' vào câu hỏi này.",
-                    "image_filepath": "image_18_6_gross_motor.png"
+                    "image_filepath": "image_placeholder.png"
                 }
             ],
             "cutoff": 37.38,
@@ -111,8 +111,7 @@
                     "text": "Con của bạn có vung cánh tay về phía trước để ném quả bóng nhỏ không?",
                     "options": ["Có", "Thỉnh Thoảng", "Chưa"],
                     "note": "Nếu bé chỉ cầm rồi thả rơi quả bóng, thì đánh dấu 'Chưa' cho câu hỏi này.",
-                    "image_filepath": "image_18_1_fine_motor.png"
-                },
+                    "image_filepath": "image_placeholder.png"                },
                 {
                     "id": 2,
                     "text": "Con của bạn có xếp chồng được một khối gỗ nhỏ hoặc đồ chơi lên khối gỗ/đồ chơi khác không?",
@@ -125,21 +124,21 @@
                     "text": "Khi tập vẽ, con của bạn có biết dùng đầu bút chì (hoặc bút màu, bút lông) để tạo ra nét vẽ trên giấy không?",
                     "options": ["Có", "Thỉnh Thoảng", "Chưa"],
                     "note": null,
-                    "image_filepath": "image_18_3_fine_motor.png"
+                    "image_filepath": "image_placeholder.png"
                 },
                 {
                     "id": 4,
                     "text": "Con của bạn có tự xếp được ba khối gỗ nhỏ hoặc đồ chơi lên nhau không?",
                     "options": ["Có", "Thỉnh Thoảng", "Chưa"],
                     "note": null,
-                    "image_filepath": "image_18_4_fine_motor.png"
+                    "image_filepath": null
                 },
                 {
                     "id": 5,
                     "text": "Con của bạn có biết lật từng trang sách không?",
                     "options": ["Có", "Thỉnh Thoảng", "Chưa"],
                     "note": "Bé có thể lật nhiều trang cùng lúc.",
-                    "image_filepath": "image_18_5_fine_motor.png"
+                    "image_filepath": null
                 },
                 {
                     "id": 6,
@@ -166,7 +165,7 @@
                     "text": "Sau khi bạn hướng dẫn, con bạn có biết cách dùng thìa, gậy/que hay một dụng cụ tương tự để kéo một món đồ chơi nhỏ ở ngoài tầm với về gần mình không?",
                     "options": ["Có", "Thỉnh Thoảng", "Chưa"],
                     "note": null,
-                    "image_filepath": "image_18_2_problem_solving.png"
+                    "image_filepath": "image_placeholder.png"
                 },
                 {
                     "id": 3,
@@ -187,7 +186,7 @@
                     "text": "Sau khi quan sát bạn dùng bút màu (bút chì/bút bi) vẽ một đường thẳng từ đầu xuống cuối trang giấy, con của bạn có bắt chước bạn vẽ được tương tự không?",
                     "options": ["Có", "Thỉnh Thoảng", "Chưa"],
                     "note": "Đánh dấu 'chưa' nếu bé vẽ nguệch ngoạc lên xuống.",
-                    "image_filepath": "image_18_5_problem_solving.png"
+                    "image_filepath": "image_placeholder.png"
                 },
                 {
                     "id": 6,

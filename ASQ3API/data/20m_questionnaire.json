@@ -52,7 +52,7 @@
             "Chưa"
           ],
           "note": null,
-          "image_filepath": "image_placeholder.png"
+          "image_filepath": "image18_1.png"
         },
         {
           "id": 5,
@@ -63,7 +63,7 @@
             "Chưa"
           ],
           "note": null,
-          "image_filepath": "image_placeholder.png"
+          "image_filepath": null
         },
         {
           "id": 6,
@@ -74,7 +74,7 @@
             "Chưa"
           ],
           "note": "Không tính những từ ghép diễn tả cùng một nghĩa như 'Bai-bai', 'Mất rồi', 'Gâu gâu', 'Được rồi', và 'Cái gì vậy?' ...",
-          "image_filepath": "image_placeholder.png"
+          "image_filepath": null
         }
       ],
       "cutoff": 20.50,
@@ -124,7 +124,7 @@
             "Chưa"
           ],
           "note": "Nếu bé đã biết đá bóng thì ghi 'có' vào câu hỏi này.",
-          "image_filepath": "image_placeholder.png"
+          "image_filepath": "image18_1.png"
         },
         {
           "id": 5,
@@ -163,7 +163,7 @@
             "Chưa"
           ],
           "note": null,
-          "image_filepath": "image_placeholder.png"
+          "image_filepath": "image18_3.png"
         },
         {
           "id": 2,
@@ -246,7 +246,7 @@
             "Chưa"
           ],
           "note": "Đánh dấu 'chưa' nếu bé vẽ nguệch ngoạc lên xuống.",
-          "image_filepath": "image_placeholder.png"
+          "image_filepath": "image18_5.png"
         },
         {
           "id": 3,

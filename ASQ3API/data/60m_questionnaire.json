@@ -2,10 +2,10 @@
   "age": {
     "range": "51 tháng và 56 tháng 30 ngày",
     "range_in_days": {
-      "min_days": 1530,
-      "max_days": 1710
+      "min_days": 1735,
+      "max_days": 2010
     },
-    "title": "54m Questionnaire"
+    "title": "60m Questionnaire"
   },
   "question": {
     "communication": {
@@ -91,7 +91,7 @@
             "Chưa"
           ],
           "note": "Đánh dấu 'chưa' nếu bé làm rơi bóng hoặc để bàn tay cầm bóng thấp hơn vai khi ném.",
-          "image_filepath": null
+          "image_filepath": "image33_1.png"
         },
         {
           "id": 2,
@@ -102,7 +102,7 @@
             "Chưa"
           ],
           "note": "Chú ý: Khi bắt đầu nhảy, hai chân bé phải bật lên cùng một lúc.",
-          "image_filepath": null
+          "image_filepath": "image42_1.png"
         },
         {
           "id": 3,
@@ -113,7 +113,7 @@
             "Chưa"
           ],
           "note": "Bạn hãy đứng cách xa bé khoảng 5 feet/1.5 m và cho bé thử 2-3 lần trước khi đánh dấu trả lời.",
-          "image_filepath": "image_placeholder.png"
+          "image_filepath": "image30_1.png"
         },
         {
           "id": 4,
@@ -124,7 +124,7 @@
             "Chưa"
           ],
           "note": "Bạn có thể cho bé thử hai hay ba lần trước khi đánh dấu trả lời câu này.",
-          "image_filepath": "image_placeholder.png"
+          "image_filepath": null
         },
         {
           "id": 5,
@@ -174,7 +174,7 @@
             "Chưa"
           ],
           "note": null,
-          "image_filepath": null
+          "image_filepath": "image33_2.png"
         },
         {
           "id": 4,
@@ -196,7 +196,7 @@
             "Chưa"
           ],
           "note": null,
-          "image_filepath": null
+          "image_filepath": "image_placeholder.png"
         },
         {
           "id": 6,
@@ -207,7 +207,7 @@
             "Chưa"
           ],
           "note": "Bạn nhớ trông chừng cẩn thận để đảm bảo an toàn cho trẻ.",
-          "image_filepath": "image_placeholder.png"
+          "image_filepath": null
         }
       ],
       "cutoff": 17.32,
@@ -224,7 +224,7 @@
             "Chưa"
           ],
           "note": "Đánh dấu 'có' nếu bé trả lời đúng và sử dụng cả 5 màu.",
-          "image_filepath": null
+          "image_filepath": "image_placeholder.png"
         },
         {
           "id": 2,
@@ -257,7 +257,7 @@
             "Chưa"
           ],
           "note": "Bạn hãy hỏi câu hỏi này mà không giúp trẻ bằng cách chỉ, ra hiệu hoặc nhìn vào hình nhỏ nhất.",
-          "image_filepath": "image_placeholder.png"
+          "image_filepath": null
         },
         {
           "id": 5,
@@ -268,7 +268,7 @@
             "Chưa"
           ],
           "note": null,
-          "image_filepath": null
+          "image_filepath": "image_placeholder.png"
         },
         {
           "id": 6,
