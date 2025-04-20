@@ -310,7 +310,7 @@ function FormASQTest({ onBack, onSubmit, defaultValues = {} }) {
       <form className="form-questions" onSubmit={(e) => e.preventDefault()}>
         <TitleBox
           title={`LÀM BÀI SÀNG LỌC ĐÁNH GIÁ PHÁT TRIỂN THEO ĐỘ TUỔI ASQ-3`}
-          subtitle={`(${age?.title || "Bộ câu hỏi"})`}
+          subtitle={`( ${age?.title || "Bộ câu hỏi"} )`}
           onBack={handleBack}
         />
         <div className="instruction-box">

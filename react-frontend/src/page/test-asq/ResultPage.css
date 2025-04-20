@@ -25,9 +25,16 @@
     gap: 16px;
   }
   
-  .score-table {
+  /* .score-table {
     width: 100%;
     border-collapse: collapse;
+  } */
+  .score-table {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    table-layout: fixed;
   }
   
   .score-table th, .score-table td {
@@ -49,44 +56,63 @@
   .title{
     font-size: 35px;
   }
+ 
   .slider-container {
-    margin-top: 12px;
     position: relative;
+    height: 24px;
+    width: 100%;
+    margin-top: 12px;
   }
+
   
   .slider-track {
+    position: relative;
+    height: 12px;
+    border-radius: 6px;
     width: 100%;
-    height: 15px;
     background: linear-gradient(
       to right,
       #757575 0%,       
       #757575 20%,
       #f1a446 20%,     
       #f1a446 40%,
-      #40679e 40%,     
-      #40679e 40%
+      #7acc98 40%,     
+      #7acc98 40%
     
     );
-    border-radius: 5px;
+  }
+  .slider-marker {
+    position: absolute;
+    top: -20px;
+    font-size: 12px;
+    color: #333;
+    transform: translateX(-50%);
   }
   
+  
   .slider-dot {
-    width: 26px;
-    height: 26px;
+    width: 22px;
+    height: 22px;
     border-radius: 50%;
     position: absolute;
     top: -7px;
     transform: translateX(-50%);
     background-color: #568f68;
   }
-  .lv1{
+  .lv1 {
     color: #757575;
+    font-weight: bold;
+    font-size: 16px;
   }
   .lv2{
     color: #f1a446;
+    font-weight: bold;
+    font-size: 16px;
   }
   .lv3{
-    color: #40679e;
+    color: #7acc98;
+    font-weight: bold;
+    font-size: 16px;
   }
   .print-pdf{
     padding: 40px;
