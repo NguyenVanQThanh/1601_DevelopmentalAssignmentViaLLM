@@ -1,70 +1,72 @@
-import './ResultPage.css';
-import Button from './components/Button/Button';
-import { useRef } from 'react';
-import jsPDF from 'jspdf';
-import html2canvas from 'html2canvas';
+import "./ResultPage.css";
+import Button from "./components/Button/Button";
+import { useRef } from "react";
+import jsPDF from "jspdf";
+import html2canvas from "html2canvas";
 
 function ResultPage({ childInfo, parentInfo, testResult }) {
   const resultRef = useRef();
   console.log(testResult);
   // Chuyển đổi testResult (resultTest) thành lstScores
   const lstScores = testResult
-  ? Object.entries(testResult.resultTest).map(([section, data]) => {
-    const sectionMapping = {
-      communication: "GIAO TIẾP",
-      gross_motor: "VẬN ĐỘNG THÔ",
-      fine_motor: "VẬN ĐỘNG TINH",
-      problem_solving: "GIẢI QUYẾT VẤN ĐỀ",
-      personal_social: "CÁ NHÂN XÃ HỘI",
-    };
-    return {
-      field: sectionMapping[section] || section.toUpperCase(),
-      score: data.total_score,
-      cutoff: data.cutoff,
-      max: data.max,
-      status: data.status,
-    };
-  })
-  : [];
+    ? Object.entries(testResult.resultTest).map(([section, data]) => {
+        const sectionMapping = {
+          communication: "GIAO TIẾP",
+          gross_motor: "VẬN ĐỘNG THÔ",
+          fine_motor: "VẬN ĐỘNG TINH",
+          problem_solving: "GIẢI QUYẾT VẤN ĐỀ",
+          personal_social: "CÁ NHÂN XÃ HỘI",
+        };
+        return {
+          field: sectionMapping[section] || section.toUpperCase(),
+          score: data.total_score,
+          cutoff: data.cutoff,
+          max: data.max,
+          status: data.status,
+        };
+      })
+    : [];
   console.log(lstScores);
 
   const formatDate = (dateStr) => {
-    if (!dateStr) return '';
-    const [year, month, day] = dateStr.split('-');
+    if (!dateStr) return "";
+    const [year, month, day] = dateStr.split("-");
     return `${day}/${month}/${year}`;
   };
 
   const handleDownloadPDF = async () => {
     const element = resultRef.current;
-    const pdfHeader = element.querySelector('.pdf-only-header');
+    const pdfHeader = element.querySelector(".pdf-only-header");
 
     // Tạm thời hiển thị tiêu đề
-    pdfHeader.style.display = 'block';
+    pdfHeader.style.display = "block";
 
     // Đợi một chút để DOM cập nhật (html2canvas cần render đúng)
-    await new Promise(resolve => setTimeout(resolve, 200));
+    await new Promise((resolve) => setTimeout(resolve, 200));
 
     // Tạo canvas từ DOM đã hiển thị
     const canvas = await html2canvas(element, { scale: 2 });
-    const imgData = canvas.toDataURL('image/png');
+    const imgData = canvas.toDataURL("image/png");
 
-    const pdf = new jsPDF('p', 'mm', 'a4');
+    const pdf = new jsPDF("p", "mm", "a4");
     const imgProps = pdf.getImageProperties(imgData);
     const pdfWidth = pdf.internal.pageSize.getWidth();
     const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
 
-    pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
-    pdf.save('ASQ3_KetQua.pdf');
+    pdf.addImage(imgData, "PNG", 0, 0, pdfWidth, pdfHeight);
+    pdf.save("ASQ3_KetQua.pdf");
 
     // Ẩn lại tiêu đề
-    pdfHeader.style.display = 'none';
+    pdfHeader.style.display = "none";
   };
 
   return (
     <div className="result-page">
       <div className="print-pdf" ref={resultRef}>
         <div className="pdf-only-header">
-          <h2 className="pdf-title">Kết quả bài sàng lọc đánh giá phát triển theo độ tuổi ASQ-3</h2>
+          <h2 className="pdf-title">
+            Kết quả bài sàng lọc đánh giá phát triển theo độ tuổi ASQ-3
+          </h2>
           <p className="pdf-time">Thời gian: {new Date().toLocaleString()}</p>
         </div>
 
@@ -72,22 +74,43 @@ function ResultPage({ childInfo, parentInfo, testResult }) {
         <section className="section">
           <h3 className="chapter">1. THÔNG TIN CHUNG</h3>
           <div className="info-grid">
-            <div><strong>Họ và tên trẻ:</strong> {childInfo.fullName}</div>
-            <div><strong>Ngày sinh:</strong> {formatDate(childInfo.birthDate)}</div>
-            <div><strong>SĐT liên hệ:</strong> {parentInfo.phone}</div>
-            <div><strong>Nơi sàng lọc:</strong> {parentInfo.place}</div>
-            <div><strong>Ngày thực hiện:</strong> {new Date().toLocaleDateString()}</div>
+            <div>
+              <strong>Họ và tên trẻ:</strong> {childInfo.fullName}
+            </div>
+            <div>
+              <strong>Ngày sinh:</strong> {formatDate(childInfo.birthDate)}
+            </div>
+            <div>
+              <strong>SĐT liên hệ:</strong> {parentInfo.phone}
+            </div>
+            <div>
+              <strong>Nơi sàng lọc:</strong> {parentInfo.place}
+            </div>
+            <div>
+              <strong>Ngày thực hiện:</strong> {new Date().toLocaleDateString()}
+            </div>
           </div>
         </section>
 
         {/* 2. GIẢI THÍCH */}
         <section className="section">
           <h3 className="chapter">2. GIẢI THÍCH VỀ SÀNG LỌC ASQ-3</h3>
-          <p>ASQ-3 là bộ sàng lọc chuẩn dành cho cha mẹ/ người chăm sóc để tự điền nhằm sàng lọc sự phát triển của trẻ nhỏ...</p>
+          <p>
+            ASQ-3 là bộ sàng lọc chuẩn dành cho cha mẹ/ người chăm sóc để tự
+            điền nhằm sàng lọc sự phát triển của trẻ nhỏ...
+          </p>
           <div className="legend">
-            <p className="lv1">- Vùng điểm thể hiện trẻ đang gặp khó khăn - CHẬM PHÁT TRIỂN</p>
-            <p className="lv2">- Vùng điểm thể hiện trẻ cần được theo dõi thêm và làm sàng lọc lại do một số kỹ năng chưa thành thục - CẦN THEO DÕI </p>
-            <p className="lv3">- Vùng điểm thể hiện trẻ có sự phát triển bình thường - BÌNH THƯỜNG</p>
+            <p className="lv1">
+              - Vùng điểm thể hiện trẻ đang gặp khó khăn - CHẬM PHÁT TRIỂN
+            </p>
+            <p className="lv2">
+              - Vùng điểm thể hiện trẻ cần được theo dõi thêm và làm sàng lọc
+              lại do một số kỹ năng chưa thành thục - CẦN THEO DÕI{" "}
+            </p>
+            <p className="lv3">
+              - Vùng điểm thể hiện trẻ có sự phát triển bình thường - BÌNH
+              THƯỜNG
+            </p>
           </div>
         </section>
 
@@ -99,34 +122,65 @@ function ResultPage({ childInfo, parentInfo, testResult }) {
               <tr>
                 <th>Lĩnh vực</th>
                 <th>Ngưỡng điểm</th>
-                <th>Điểm tối đa</th>
+                {/* <th>Điểm tối đa</th> */}
                 <th>Điểm của trẻ</th>
-                <th>Thang chuẩn 0 - 60</th>
                 <th>Trạng thái</th>
+
+                <th style={{ width: '400px' }}>Thang chuẩn 0 - 60</th>
               </tr>
             </thead>
             <tbody>
               {Array.isArray(lstScores) && lstScores.length > 0 ? (
+                // lstScores.map(({ field, score, cutoff, status }, idx) => {
                 lstScores.map(({ field, score, cutoff, max, status }, idx) => {
-                  const leftPercent = Math.min(Math.max((score / 60) * 100, 0), 100);
+                  const leftPercent = Math.min(
+                    Math.max((score / 60) * 100, 0),
+                    100
+                  );
+                  const cutoffPercent = Math.round((cutoff / 60) * 100);
+                  const maxPercent = Math.round((max / 60) * 100);
+
                   return (
                     <tr key={idx}>
                       <td>{field}</td>
                       <td>{cutoff}</td>
-                      <td>{max}</td>
+                      {/* <td>{max}</td> */}
                       <td>{`${score}`}</td>
+                      <td>{status}</td>
+
                       <td>
                         <div className="slider-container">
-                          <div className="slider-track"></div>
                           <div
-                            className="slider-dot"
-                            style={{ left: `${leftPercent}%` }}
-                            title={`Điểm: ${score}`}
-                          />
+                            className="slider-track"
+                            style={{
+                              background: `linear-gradient(
+                to right,
+                #757575 0%,
+                #757575 ${cutoffPercent}%,
+                #f1a446 ${cutoffPercent}%,
+                #f1a446 ${maxPercent}%,
+                #7acc98 ${maxPercent}%,
+                #7acc98 100%
+              )`,
+                            }}
+                          >
+                            {[0, 15, 30, 45, 60].map((val) => (
+                              <span
+                                key={val}
+                                className="slider-marker"
+                                style={{ left: `${(val / 60) * 100}%` }}
+                              >
+                                {val}
+                              </span>
+                            ))}
+                          </div>
+                          <div className="slider-dot" style={{ left: `${leftPercent}%` }} />
+
                         </div>
-                        <div style={{ marginTop: 4, textAlign: 'center' }}>{score}</div>
+                        <div style={{ marginTop: 4, textAlign: "center" }}>
+                          {/* {score} */}
+                        </div>
                       </td>
-                      <td>{status}</td>
                     </tr>
                   );
                 })
@@ -141,7 +195,9 @@ function ResultPage({ childInfo, parentInfo, testResult }) {
 
         {/* 4 + 5 */}
         <section className="section">
-          <h3 className="chapter">4. KẾT QUẢ DỰ ĐOÁN MỨC ĐỘ PHÁT TRIỂN CỦA TRẺ</h3>
+          <h3 className="chapter">
+            4. KẾT QUẢ DỰ ĐOÁN MỨC ĐỘ PHÁT TRIỂN CỦA TRẺ
+          </h3>
           <p>..............</p>
           <h3 className="chapter">5. ĐỀ XUẤT GIẢI PHÁP</h3>
           <p>..............</p>

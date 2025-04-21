@@ -1,0 +1,361 @@
+{
+  "age": {
+    "range": "51 tháng và 56 tháng 30 ngày",
+    "range_in_days": {
+      "min_days": 1735,
+      "max_days": 2010
+    },
+    "title": "60m Questionnaire"
+  },
+  "question": {
+    "communication": {
+      "questions": [
+        {
+          "id": 1,
+          "text": "Con của bạn có thể kể tên ít nhất 2 đặc điểm của một vật? Ví dụ bạn có thế hỏi: 'Quả bóng của con thế nào?', bé có thể trả lời 'Quả bóng tròn / to ... Con đá nó' không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": null
+        },
+        {
+          "id": 2,
+          "text": "Con của bạn có biết dùng các loại từ khác nhau để nói một câu hoàn chỉnh không? Ví dụ: 'Con đi chơi công viên' thay vì: 'Chơi công viên' hoặc, 'Con muốn có áo đẹp' thay vì 'Con áo đẹp', hoặc 'Bà bế con nhé' thay vì 'Bà bế'.",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": null
+        },
+        {
+          "id": 3,
+          "text": "Con của bạn có sử dụng được các từ chỉ số lượng ít/nhiều để diễn đạt ý của mình không? Ví dụ như, bé có nói rằng ' con thấy hai con mèo' hay 'con thấy có nhiều cái kẹo' không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": null
+        },
+        {
+          "id": 4,
+          "text": "Con của bạn có làm được ba việc không liên quan đến nhau mà không cần bạn nhắc lại yêu vầu hoặc dùng cử chỉ, điệu bộ để gợi ý không? Bạn đưa ra 3 yêu cầu cùng một lúc. Ví dụ: 'Con vỗ tay; đi ra cửa và ngồi xuống'; hoặc: 'Con đưa cho mẹ/bố cái bút; mở sách ra và đứng dậy'.",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": null
+        },
+        {
+          "id": 5,
+          "text": "Con của bạn đã biết nói câu có bốn đến năm từ chưa? Vi dụ, con có nói 'Con muốn cái ô tô này'?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": null
+        },
+        {
+          "id": 6,
+          "text": "Con của bạn đã biết phân biệt các loại từ khác nhau hoặc diễn đạt các ý khác nhau về thời gian chưa? Ví dụ, con có biết dùng các từ 'sẽ', 'đã', 'rồi', 'chua' trong câu con nói hoặc trong cách con trả lời về những điều đã xảy ra, hoặc dùng các từ như 'hôm qua', 'ngày mai' không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": null
+        }
+      ],
+      "cutoff": 31.85,
+    "max": 45
+    },
+    "gross_motor": {
+      "questions": [
+        {
+          "id": 1,
+          "text": "Khi đứng, con bạn có thể ném bóng về phía người đối diện đứng cách trẻ ít nhất khoảng 6 feet/2 m không? Để ném bóng, bé phải gio tay cao ngang vai và ném bóng về phía trước.",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": "Đánh dấu 'chưa' nếu bé làm rơi bóng hoặc để bàn tay cầm bóng thấp hơn vai khi ném.",
+          "image_filepath": "image33_1.png"
+        },
+        {
+          "id": 2,
+          "text": "Con của bạn có thể nhảy chụm chân một đoạn khoảng 20 inches/50 cm từ vị trí bé đứng không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": "Chú ý: Khi bắt đầu nhảy, hai chân bé phải bật lên cùng một lúc.",
+          "image_filepath": "image42_1.png"
+        },
+        {
+          "id": 3,
+          "text": "Con của bạn có thể bắt được một quả bóng to bằng cả hai bàn tay không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": "Bạn hãy đứng cách xa bé khoảng 5 feet/1.5 m và cho bé thử 2-3 lần trước khi đánh dấu trả lời.",
+          "image_filepath": "image30_1.png"
+        },
+        {
+          "id": 4,
+          "text": "Không phải bám vào vật gì, con bạn có thể đứng bằng một chân ít nhất trong 5 giây mà không bị mất thăng bằng hay phải hạ chân kia xuống không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": "Bạn có thể cho bé thử hai hay ba lần trước khi đánh dấu trả lời câu này.",
+          "image_filepath": null
+        },
+        {
+          "id": 5,
+          "text": "Trẻ có thể đi kiễng/đi nhón trên đầu ngón chân được khoảng 15 feet/4.5 m (bằng chiều dài của một chiếc ô tô lớn) không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": "Bạn có thể hướng dẫn trẻ thực hiện hoạt động này.",
+          "image_filepath": null
+        }
+      ],
+      "cutoff": 35.18,
+    "max": 45
+    },
+    "fine_motor": {
+      "questions": [
+        {
+          "id": 1,
+          "text": "Dùng các hình dưới đây làm hình mẫu, con của bạn có vẽ lại được ít nhất 3 hình bằng bút chì (bút màu/bút bi) trên tờ giấy lớn mà không vẽ chồng lên hình mẫu không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": "Hình bé vẽ phải tương tự với hình mẫu, nhưng kích cỡ có thể khác.",
+          "image_filepath": "image_placeholder.png"
+        },
+        {
+          "id": 2,
+          "text": "Con của bạn có biết coi một hoac nhiều khuy/nut ao không? Bé có thể thao tác trên quần áo của mình hoặc quần áo của búp bê.",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": null
+        },
+        {
+          "id": 3,
+          "text": "Khi tô màu, con bạn có thường tô phía trong hầu hết các đường viền của bức tranh trong sách tô màu hoặc một hình tròn có đường kính khoảng 2-inch/5 cm mà không bị lem ra ngoài hơn 1/4 inch/1 cm không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": "image33_2.png"
+        },
+        {
+          "id": 4,
+          "text": "Cho con bạn tô theo dòng kẻ dưới đây bằng bút chì. Bé có tô theo đường kẻ mà không bị chệch ra ngoài nhiều hơn 2 lần không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": "Đánh dấu 'thỉnh thoảng' nếu bé tô chệch ra ngoài 3 lần.",
+          "image_filepath": "image_placeholder.png"
+        },
+        {
+          "id": 5,
+          "text": "Hãy yêu cầu con của bạn vẽ một hình người lên tờ giấy trắng. Ví dụ, bạn có thể nói, 'Hãy vẽ hình bé trai/gái'. Nếu bé vẽ được cả 4 bộ phận: đầu, thân, tay, và chân, đánh dấu 'có'. Nếu bé chỉ vẽ được 3 trong 4 bộ phận trên, đánh dấu 'thỉnh thoảng'. Nếu hình con bạn vẽ có 2 hoặc ít hơn 2 bộ phận trong 4 bộ phận nói trên, đánh dấu trả lời 'chưa' cho câu hỏi này. Bạn hãy nhớ đính kèm bức vẽ của bé cho bảng hỏi này.",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": "image_placeholder.png"
+        },
+        {
+          "id": 6,
+          "text": "Bạn vẽ một đường thẳng cắt ngang tờ giấy, yêu cầu con của bạn dùng kéo (loại dành cho trẻ con) và cắt tờ giấy làm đôi theo đường thẳng này, đường cắt không cần phải thẳng hoàn toàn. Liệu con có làm được không, bằng cách chuyển động lưỡi kéo lên xuống?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": "Bạn nhớ trông chừng cẩn thận để đảm bảo an toàn cho trẻ.",
+          "image_filepath": null
+        }
+      ],
+      "cutoff": 17.32,
+    "max": 35
+    },
+    "problem_solving": {
+      "questions": [
+        {
+          "id": 1,
+          "text": "Khi bạn chỉ vào đồ vật và hỏi 'Màu gì đây?', con của bạn có biết 5 màu khác nhau như đỏ, xanh, vàng, cam, đen, trắng hoặc hồng không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": "Đánh dấu 'có' nếu bé trả lời đúng và sử dụng cả 5 màu.",
+          "image_filepath": "image_placeholder.png"
+        },
+        {
+          "id": 2,
+          "text": "Con của bạn có mặc đồ để “diễn xuất', đóng giả là người nào khác hoặc vật gì khác không? Ví dụ, bé có mặc các loại quần áo khác nhau để giả vờ là bố, mẹ, anh, chị, hoặc nhân vật hoặc con vật tưởng tượng nào đó?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": null
+        },
+        {
+          "id": 3,
+          "text": "Nếu bạn đặt 5 đồ vật trước mặt con của bạn, bé có thể đếm “một, hai, ba, bốn, năm” theo thứ tự không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": "Bạn không dùng điệu bộ, cử chỉ, hoặc gọi tên chữ số để gợi ý cho bé.",
+          "image_filepath": null
+        },
+        {
+          "id": 4,
+          "text": "Khi được hỏi: “Hình tròn nào nhỏ nhất?', con của bạn có chỉ vào hình nhỏ nhất hay không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": "Bạn hãy hỏi câu hỏi này mà không giúp trẻ bằng cách chỉ, ra hiệu hoặc nhìn vào hình nhỏ nhất.",
+          "image_filepath": null
+        },
+        {
+          "id": 5,
+          "text": "Con của bạn có biết đếm từ 1-15 mà không bị sai? Nếu bé đếm đúng, đánh dấu 'Có'. Nếu bé đếm được đến 12 mà không bị sai, đánh dấu 'Thỉnh thoảng'.",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": "image_placeholder.png"
+        },
+        {
+          "id": 6,
+          "text": "Con của bạn có biết gọi tên các chữ số không? Đánh dấu “có” nếu con gọi tên được ba chữ số (3, 1, 2) dưới đây. Đánh dấu 'Thỉnh thoảng' nếu con gọi tên được hai trong ba chữ số.",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": "image_placeholder.png"
+        }
+      ],
+      "cutoff": 28.12,
+      "max": 40
+    },
+    "personal_social": {
+      "questions": [
+        {
+          "id": 1,
+          "text": "Con của bạn có biết rửa tay bằng nước và xà phòng, sau đó lau khô tay bằng khăn mà không cần bạn giúp không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": null
+        },
+        {
+          "id": 2,
+          "text": "Con của bạn có thể kể ít nhất tên hai người bạn của mình, không kể anh / chị / em ruột không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": "Bạn hãy hỏi bé câu này mà không nhắc nhở hay gợi ý tên gọi của bạn của bé.",
+          "image_filepath": null
+        },
+        {
+          "id": 3,
+          "text": "Con của bạn có thể tự mình đánh răng bằng cách cho kem lên bàn chải và chải tất cả các răng mà không cần bạn giúp?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": "Bạn hãy hỏi bé câu này mà không nhắc nhở hay gợi ý tên gọi của bạn của bé.",
+          "image_filepath": null
+        },
+        {
+          "id": 4,
+          "text": "Con của bạn biết cách tự ăn uống, sử dụng thìa/muỗng, muôi / vá và bát / tô chưa? Ví dụ, con có biết sử dụng thìa/muỗng lớn để múc nước canh hoặc lấy cơm từ bát/tô to ra bát/tô nhỏ không? Hoặc nếu biết dùng đũa, con có dùng đua gắp thức ăn mà không làm rơi vãi nhiều không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": null
+        },
+        {
+          "id": 5,
+          "text": "Con có nói đúng ít nhất 4 trong số: tên, họ, tuổi, giới tính, địa chỉ, số điện thoại không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": null
+        },
+        {
+          "id": 6,
+          "text": "Trẻ có tự mặc và cởi đồ, gồm cả biết cài cúc áo/nút áo (cỡ vừa) và kéo khóa/dây kéo ở phía trước không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": null
+        }
+      ],
+      "cutoff": 32.33,
+    "max": 45
+    }
+  }
+}
