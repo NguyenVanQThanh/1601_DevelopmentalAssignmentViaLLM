@@ -8,3 +8,4 @@ Product/__pycache__
 ASQ3API/venv
 ASQ3API/__pycache__
 .env
+Product/conversation_history.json
