@@ -4,6 +4,7 @@ Product/dts_finetuning
 Product/models
 Product/vectorstores
 Product/venv
+Product/__pycache__
 ASQ3API/venv
 ASQ3API/__pycache__
 .env

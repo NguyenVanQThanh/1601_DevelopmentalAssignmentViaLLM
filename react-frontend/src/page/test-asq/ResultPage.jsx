@@ -60,6 +60,103 @@ function ResultPage({ childInfo, parentInfo, testResult }) {
     pdfHeader.style.display = "none";
   };
 
+  const domainMapping = {
+    communication: "GIAO TIẾP",
+    gross_motor: "VẬN ĐỘNG THÔ",
+    fine_motor: "VẬN ĐỘNG TINH",
+    problem_solving: "GIẢI QUYẾT VẤN ĐỀ",
+    personal_social: "CÁ NHÂN XÃ HỘI",
+  };
+
+  const convertResultToArray = (resultTest) => {
+    return Object.entries(resultTest).map(([key, value]) => ({
+      domainName: domainMapping[key] || key,
+      status: value.status.toUpperCase(),
+    }));
+  };
+  const groupByStatus = (results) => {
+    const grouped = {
+      "BÌNH THƯỜNG": [],
+      CHẬM: [],
+      "CHẬM RÕ RỆT": [],
+    };
+
+    results.forEach(({ domainName, status }) => {
+      if (grouped[status]) {
+        grouped[status].push(domainName);
+      }
+    });
+
+    return grouped;
+  };
+
+  const DevelopmentSummary = ({ resultTest }) => {
+    const rawResults = convertResultToArray(resultTest);
+    const statusGroups = groupByStatus(rawResults);
+
+    return (
+      <div>
+        {statusGroups["BÌNH THƯỜNG"].length > 0 && (
+          <p style={{ color: "color: #757575" }}>
+            Trẻ có trạng thái sự phát triển <b>BÌNH THƯỜNG</b> ở các lĩnh vực{" "}
+            <b>{statusGroups["BÌNH THƯỜNG"].join(", ")}</b>. Ta thấy trẻ có điểm
+            nằm trong vùng màu <b>XANH LÁ</b>. Điều này có nghĩa là trẻ phát
+            triển tương đương với trẻ khác ở cùng độ tuổi trong các lĩnh vực
+            này. Phụ huynh nếu vẫn lo lắng về tình trạng của trẻ có thể kết hợp
+            các giải pháp dạy tại nhà thông qua <b>CHATBOT</b> của chúng tôi và
+            làm lại bài kiểm tra sau 2 tháng với các lĩnh vực này.
+          </p>
+        )}
+
+        {statusGroups["CHẬM"].length > 0 && (
+          <p>
+            Trẻ có trạng thái sự phát triển <b>CHẬM</b> ở lĩnh vực{" "}
+            <b>{statusGroups["CHẬM"].join(", ")}</b>. Ta thấy trẻ có điểm nằm
+            trong vùng màu <b>CAM</b>. Điều này có nghĩa có một số các kỹ năng
+            trong các lĩnh vực này trẻ chưa thực hiện được, hoặc đã thực hiện
+            được nhưng chưa thường xuyên. Phụ huynh không cần quá lo lắng nhưng
+            nên đưa trẻ đến phòng khám để chuẩn đoán với bác sĩ.
+          </p>
+        )}
+
+        {statusGroups["CHẬM RÕ RỆT"].length > 0 && (
+          <p>
+            Trẻ có trạng thái sự phát triển <b>CHẬM RÕ RỆT</b> ở lĩnh vực{" "}
+            <b>{statusGroups["CHẬM RÕ RỆT"].join(", ")}</b>. Ta thấy trẻ có điểm
+            nằm trong vùng màu <b>XÁM</b>. Điều đó có nghĩa có một số các kỹ
+            năng trong các lĩnh vực này trẻ chưa thực hiện được, hoặc đã thực
+            hiện được nhưng chưa thường xuyên tức là trẻ chậm so với các trẻ
+            khác cùng tuổi ở lĩnh vực này. Phụ huynh nên đưa trẻ đến phòng khám
+            để chuẩn đoán chính xác với bác sĩ và có giải pháp can thiệp sớm cho
+            trẻ.
+          </p>
+        )}
+      </div>
+    );
+  };
+
+  const solutionSuggestions = {
+    "GIAO TIẾP": `Gia đình nên đưa trẻ đi đến cơ sở y tế để đánh giá thêm về sự phát triển của trẻ và Kiểm tra về thính lực cho trẻ, Khám chuyên khoa để kiểm tra thêm, Khám chuyên khoa nhi (khoa tâm bệnh, khoa tâm lý, khoa phục hồi chức năng...), Kiểm tra về thị lực cho trẻ.
+  
+  Gia đình có thể tham khảo một số trò chơi hữu ích cho sự phát triển của trẻ cùng CHATBOT.`,
+
+    "VẬN ĐỘNG TINH": `Gia đình nên đưa trẻ đi đến cơ sở y tế để đánh giá thêm về sự phát triển của trẻ và Kiểm tra vận động của trẻ, Kiểm tra về thị lực cho trẻ, Kiểm tra về thính lực cho trẻ, Khám chuyên khoa để kiểm tra thêm.
+  
+  Gia đình có thể tham khảo một số trò chơi hữu ích cho sự phát triển của trẻ cùng CHATBOT.`,
+
+    "VẬN ĐỘNG THÔ": `Gia đình nên đưa trẻ đi đến cơ sở y tế để đánh giá thêm về sự phát triển của trẻ và Kiểm tra về thính lực cho trẻ, Khám chuyên khoa để kiểm tra thêm, Khám chuyên khoa nhi (khoa tâm bệnh, khoa tâm lý, khoa phục hồi chức năng...), Kiểm tra về thị lực cho trẻ.
+  
+  Gia đình có thể tham khảo một số trò chơi hữu ích cho sự phát triển của trẻ cùng CHATBOT.`,
+
+    "CÁ NHÂN XÃ HỘI": `Gia đình nên đưa trẻ đi đến cơ sở y tế để đánh giá thêm về sự phát triển của trẻ và Kiểm tra vận động của trẻ.
+  
+  Gia đình có thể tham khảo một số trò chơi hữu ích cho sự phát triển của trẻ cùng CHATBOT.`,
+
+    "GIẢI QUYẾT VẤN ĐỀ": `Gia đình nên đưa trẻ đi đến cơ sở y tế để đánh giá thêm về sự phát triển của trẻ và Kiểm tra về thính lực cho trẻ, Khám chuyên khoa để kiểm tra thêm, Khám chuyên khoa nhi (khoa tâm bệnh, khoa tâm lý, khoa phục hồi chức năng...), Kiểm tra về thị lực cho trẻ.
+  
+  Gia đình có thể tham khảo một số trò chơi hữu ích cho sự phát triển của trẻ cùng CHATBOT.`,
+  };
+
   return (
     <div className="result-page">
       <div className="print-pdf" ref={resultRef}>
@@ -126,12 +223,11 @@ function ResultPage({ childInfo, parentInfo, testResult }) {
                 <th>Điểm của trẻ</th>
                 <th>Trạng thái</th>
 
-                <th style={{ width: '400px' }}>Thang chuẩn 0 - 60</th>
+                <th style={{ width: "400px" }}>Thang chuẩn 0 - 60</th>
               </tr>
             </thead>
             <tbody>
               {Array.isArray(lstScores) && lstScores.length > 0 ? (
-                // lstScores.map(({ field, score, cutoff, status }, idx) => {
                 lstScores.map(({ field, score, cutoff, max, status }, idx) => {
                   const leftPercent = Math.min(
                     Math.max((score / 60) * 100, 0),
@@ -174,8 +270,10 @@ function ResultPage({ childInfo, parentInfo, testResult }) {
                               </span>
                             ))}
                           </div>
-                          <div className="slider-dot" style={{ left: `${leftPercent}%` }} />
-
+                          <div
+                            className="slider-dot"
+                            style={{ left: `${leftPercent}%` }}
+                          />
                         </div>
                         <div style={{ marginTop: 4, textAlign: "center" }}>
                           {/* {score} */}
@@ -196,11 +294,31 @@ function ResultPage({ childInfo, parentInfo, testResult }) {
         {/* 4 + 5 */}
         <section className="section">
           <h3 className="chapter">
-            4. KẾT QUẢ DỰ ĐOÁN MỨC ĐỘ PHÁT TRIỂN CỦA TRẺ
+            4. NHẬN XÉT CHUNG VỀ MỨC ĐỘ PHÁT TRIỂN CỦA TRẺ
           </h3>
-          <p>..............</p>
-          <h3 className="chapter">5. ĐỀ XUẤT GIẢI PHÁP</h3>
-          <p>..............</p>
+
+          <DevelopmentSummary resultTest={testResult.resultTest} />
+
+          <div>
+            <h3 className="chapter">5. ĐỀ XUẤT GIẢI PHÁP</h3>
+            {lstScores
+              .filter(
+                (item) =>
+                  item.status === "CHẬM" || item.status === "CHẬM RÕ RỆT"
+              )
+              .map((item, index) => (
+                <div key={index} style={{ marginBottom: "1rem" }}>
+                  <h4 style={{ color: "#d84315" }}>
+                    {index + 1}.{" "}
+                    {item.status === "CHẬM" ? "Chậm" : "Chậm rõ rệt"}{" "}
+                    {item.field}
+                  </h4>
+                  <p style={{ whiteSpace: "pre-line" }}>
+                    {solutionSuggestions[item.field]}
+                  </p>
+                </div>
+              ))}
+          </div>
         </section>
       </div>
 

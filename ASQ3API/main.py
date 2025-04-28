@@ -1,13 +1,19 @@
-from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel
-from typing import List, Dict, Optional
+import logging
 import json
+import os
+from fastapi import FastAPI, HTTPException, Query
+from pydantic import BaseModel
+from typing import List, Optional
 import uvicorn
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi import Query
-import os
+
+# Cấu hình logging
+logging.basicConfig(level=logging.DEBUG)
+logger = logging.getLogger(__name__)
+
 app = FastAPI()
-#XỬ LÝ PHÂN LỚP TUỔI CHO BỘ CÂU HỎI 
+
+# XỬ LÝ PHÂN LỚP TUỔI CHO BỘ CÂU HỎI
 
 # Đọc file JSON chứa câu hỏi
 with open("data/18month.json", "r", encoding="utf-8") as f:
@@ -21,6 +27,7 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 # Định nghĩa mô hình Pydantic để nhận câu trả lời từ front-end
 class Answer(BaseModel):
     id: int
@@ -97,14 +104,15 @@ def replace_image_placeholders(data):
         "36m Questionnaire": "image36_",
         "42m Questionnaire": "image42_",
         "48m Questionnaire": "image48_",
-        "60m Questionnaire": "image60_"
+        "60m Questionnaire": "image60_",
+        "BỘ CÂU HỎI 4 THÁNG TUỔI": "image4_",
     }
 
     title = data.get("age", {}).get("title")
-    print("🔍 Đang xử lý bộ:", title)
+    logger.debug(f"🔍 Đang xử lý bộ: {title}")
 
     if not title or title not in title_to_prefix:
-        print("⛔️ Không khớp với bộ nào, bỏ qua.")
+        logger.warning("⛔️ Không khớp với bộ nào, bỏ qua.")
         return data
 
     prefix = title_to_prefix[title]
@@ -112,9 +120,9 @@ def replace_image_placeholders(data):
 
     for section_key, section in data["question"].items():
         for question in section.get("questions", []):
-            if question.get("image_filepath") == "image_placeholder.png":
+            if question.get("image_filepath") in (None, "image_placeholder.png"):
                 new_name = f"{prefix}{counter}.png"
-                print(f"✅ Gán {new_name} cho ID {question['id']}")
+                logger.debug(f"✅ Gán {new_name} cho ID {question['id']} trong mục {section_key}")
                 question["image_filepath"] = new_name
                 counter += 1
 
@@ -143,9 +151,12 @@ async def get_form(age_in_days: int = Query(..., description="Số ngày tuổi 
     if not matched_file:
         raise HTTPException(status_code=404, detail="Không tìm thấy bộ câu hỏi phù hợp với độ tuổi.")
 
-    # ✅ Áp dụng tự động gán ảnh nếu có
+    # ✅ Thay thế ảnh placeholder thành tên ảnh thực
+    logger.debug("🔍 Đang thay thế ảnh placeholder...")
     matched_file = replace_image_placeholders(matched_file)
 
+    # Trả về cho frontend
+    logger.debug("✅ Đã thay thế ảnh thành công, trả về dữ liệu cho frontend.")
     return matched_file
 
 
@@ -183,32 +194,10 @@ async def submit_form(data: SectionAnswers):
 
         return result
     except Exception as e:
+        logger.error(f"Lỗi trong việc xử lý câu trả lời: {str(e)}")
         raise HTTPException(status_code=400, detail=str(e))
+
 
 # Tự động chạy ứng dụng khi chạy file
 if __name__ == "__main__":
     uvicorn.run("main:app", host="127.0.0.1", port=8000, reload=True)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
