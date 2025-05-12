@@ -1,0 +1,372 @@
+{
+  "age": {
+    "range": "7 tháng và 8 tháng 30 ngày",
+    "range_in_days": {
+      "min_days": 210,
+      "max_days": 270
+    },
+    "title": "BỘ CÂU HỎI 8 THÁNG TUỔI"
+  },
+  "question": {
+    "communication": {
+      "questions": [
+        {
+          "id": 1,
+          "text": "Khi bạn gọi con của bạn ở một vị trí mà bé không nhìn thấy, bé có quay nhìn về hướng bạn gọi không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": null
+        },
+        {
+          "id": 2,
+          "text": "Khi có một tiếng động lớn, con của bạn có quay nhìn về hướng phát ra tiếng động ấy không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": null
+        },
+        {
+          "id": 3,
+          "text": "Nếu bạn bắt chước âm thanh mà con của bạn tạo ra, bé có lặp lại âm thanh đó đáp lại bạn không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": null
+        },
+        {
+          "id": 4,
+          "text": "Con của bạn có phát ra các âm thanh như “đa”, “ga”, “ca” và “ba” không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": null
+        },
+        {
+          "id": 5,
+          "text": "Con của bạn có phản ứng với giọng điệu của bạn và dừng hoạt động (dù chỉ một chút) khi bạn nói “không-không” với bé không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": null
+        },
+        {
+          "id": 6,
+          "text": "Con của bạn có phát ra hai âm giống nhau như “ba-ba”, “đa-đa” hoặc “ga-ga” không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": "Các âm này không nhất thiết phải có nghĩa",
+          "image_filepath": null
+        }
+      ],
+      "cutoff": 33.06,
+    "max": 45
+    },
+    "gross_motor": {
+      "questions": [
+        {
+          "id": 1,
+          "text": "Khi bạn đặt con lên sàn, con của bạn có chống hai tay lên sàn nhà để đỡ thân mình trong khi ngồi không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": "Nếu bé đã biết ngồi thẳng mà không cần dùng hai tay chống lên sàn, đánh dấu 'Có' cho câu hỏi này",
+          "image_filepath": "image_placeholder.png"
+        },
+        {
+          "id": 2,
+          "text": "Con của bạn có biết lật/lẫy từ nằm ngửa sang nằm sấp và tự rút cả hai tay ra ngoài không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": null
+        },
+        {
+          "id": 3,
+          "text": "Con của bạn có chống hai tay và đầu gối để bò không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": "image_placeholder.png"
+        },
+        {
+          "id": 4,
+          "text": "Con của bạn có tự đứng khi bạn nắm hai tay bé để giữ thăng bằng cho bé không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": "image_placeholder.png"
+        },
+        {
+          "id": 5,
+          "text": "Khi ngồi trên sàn nhà, con của bạn có thể ngồi thẳng trong vài phút mà không cần chống tay không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": "image_placeholder.png"
+        },
+        {
+          "id": 6,
+          "text": "Khi bạn để con của bạn đứng cạnh bàn hoặc thành nôi, bé có thể vịn tay đứng được mà không cần tựa ngực không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": "image_placeholder.png"
+        }
+      ],
+      "cutoff": 30.61,
+    "max": 45
+    },
+    "fine_motor": {
+      "questions": [
+        {
+          "id": 1,
+          "text": "Con của bạn có với tay lấy mẩu bánh nhỏ và chạm ngón tay hoặc bàn tay vào bánh không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": "Nếu bé đã biết nhặt những vật có kích thước nhỏ như hạt đậu thì đánh dấu 'Có' cho câu hỏi này.",
+          "image_filepath": "image_placeholder.png"
+        },
+        {
+          "id": 2,
+          "text": "Con của bạn có biết nhặt một món đồ chơi nhỏ rồi nắm chặt món đồ trong lòng bàn tay (với các ngón tay vòng quanh món đồ) không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": "image_placeholder.png"
+        },
+        {
+          "id": 3,
+          "text": "Con của bạn có cố nhặt mẩu bánh nhỏ bằng cách dùng ngón tay cái và các ngón tay khác, ngay cả khi bé không nhặt được không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": "Nếu bé đã biết nhặt mẩu bánh thì đánh dấu 'Có' cho câu hỏi này.",
+          "image_filepath": "image_placeholder.png"
+        },
+        {
+          "id": 4,
+          "text": "Con của bạn có nhặt một món đồ chơi nhỏ chỉ bằng một tay không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": "image_placeholder.png"
+        },
+        {
+          "id": 5,
+          "text": "Con của bạn có nhặt được mẩu bánh nhỏ bằng cách dùng ngón tay cái và các ngón tay khác không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": "Nếu bé đã biết nhặt mẩu bánh thì đánh dấu 'Có' cho câu hỏi này.",
+          "image_filepath": "image_placeholder.png"
+        },
+        {
+          "id": 6,
+          "text": "Con của bạn có dùng đầu ngón tay cái và các đầu ngón tay khác để nhặt một đồ chơi nhỏ không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": "Bạn phải thấy được khoảng trống giữa đồ chơi và lòng bàn tay của bé.",
+          "image_filepath": "image_placeholder.png"
+        }
+      ],
+      "cutoff": 40.15,
+    "max": 50
+    },
+    "problem_solving": {
+      "questions": [
+        {
+          "id": 1,
+          "text": "Con của bạn có nhặt đồ chơi và cho vào miệng không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": "image_placeholder.png"
+        },
+        {
+          "id": 2,
+          "text": "Khi nằm ngửa và đánh rơi đồ chơi, con của bạn có cố gắng nhặt lại nếu nhìn thấy nó không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": null
+        },
+        {
+          "id": 3,
+          "text": "Con của bạn có chơi bằng cách đập gõ đồ chơi xuống sàn nhà hay mặt bàn không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": "image_placeholder.png"
+        },
+        {
+          "id": 4,
+          "text": "Con của bạn có chuyển đồ chơi từ tay này sang tay kia không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": "image_placeholder.png"
+        },
+        {
+          "id": 5,
+          "text": "Con của bạn có nhặt hai đồ chơi nhỏ, mỗi tay một cái và cầm chúng trong khoảng 1 phút không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": "image_placeholder.png"
+        },
+        {
+          "id": 6,
+          "text": "Khi cầm một món đồ chơi trên tay, con bạn có đập nó lên món đồ chơi khác ở trên bàn không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": "image_placeholder.png"
+        }
+      ],
+      "cutoff": 36.17,
+    "max": 45
+    },
+    "personal_social": {
+      "questions": [
+        {
+          "id": 1,
+          "text": "Khi nằm ngửa, con của bạn có nắm lấy bàn chân mình để chơi không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": "image_placeholder.png"
+        },
+        {
+          "id": 2,
+          "text": "Khi đứng trước một cái gương lớn, con của bạn có với tay để đập đập vào gương không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": "image_placeholder.png"
+        },
+        {
+          "id": 3,
+          "text": "Con của bạn có tìm cách lấy một món đồ chơi ngoài tầm với của mình không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": "Bé có thể lăn, xoay trên bụng mình, hoặc bò để lấy.)(Bạn phải thấy được khoảng trống giữa đồ chơi và lòng bàn tay của bé.",
+          "image_filepath": null
+        },
+        {
+          "id": 4,
+          "text": "Khi nằm ngửa, con của bạn có cho bàn chân vào miệng không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": "image_placeholder.png"
+        },
+        {
+          "id": 5,
+          "text": "Con của bạn có uống nước lọc, nước trái cây, hoặc sữa bằng ly/cốc nếu bạn cầm giúp bé không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": null
+        },
+        {
+          "id": 6,
+          "text": "Con của bạn có tự ăn bánh quy không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": null
+        }
+      ],
+      "cutoff": 35.84,
+    "max": 45
+    }
+  }
+}

@@ -1,0 +1,372 @@
+{
+  "age": {
+    "range": "26 tháng và 27 tháng 30 ngày",
+    "range_in_days": {
+      "min_days": 780,
+      "max_days": 840
+    },
+    "title": "BỘ CÂU HỎI 27 THÁNG TUỔI"
+  },
+  "question": {
+    "communication": {
+      "questions": [
+        {
+          "id": 1,
+          "text": "Không ra hiệu hoặc gợi ý bằng cử chỉ điệu bộ, khi bạn nói những yêu cầu như: 'Đặt đồ chơi lên bàn', 'Đóng cửa lại', 'Đưa cho mẹ cái khăn', 'Lấy áo khoác cho mẹ', 'Nắm tay mẹ', 'Lấy quyển sách cho mẹ' – con bạn có làm đúng ít nhất 3 yêu cầu không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": null
+        },
+        {
+          "id": 2,
+          "text": "Khi bạn chỉ vào hình quả bóng (hoặc con mèo, cái ly/cốc, mũ/nón) và hỏi: “Đây là cái gì?”, bé có gọi tên đúng ít nhất một hình không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": null
+        },
+        {
+          "id": 3,
+          "text": "Khi yêu cầu con bạn chỉ vào: mũi, mắt, tóc, tai, miệng, chân, tay, răng, tóc, bụng… bé có chỉ đúng ít nhất 7 bộ phận trên cơ thể không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": "Bé có thể chỉ vào bộ phận trên cơ thể của bé, của bạn hoặc của búp bê. Đánh dấu 'thỉnh thoảng' nếu bé chỉ được ít nhất 3 bộ phận của cơ thể.",
+          "image_filepath": null
+        },
+        {
+          "id": 4,
+          "text": "Con bạn có sử dụng đúng ít nhất hai từ/cụm từ như: “con”, “của con”, “mẹ”, “cô” không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": null
+        },
+        {
+          "id": 5,
+          "text": "Con bạn có nói được câu có 3–4 từ không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": null
+        },
+        {
+          "id": 6,
+          "text": "Không ra hiệu hoặc dùng cử chỉ, khi yêu cầu con: “Con đặt sách trên bàn” và “Con đặt giày dưới ghế”, bé có thực hiện đúng cả 2 mệnh lệnh không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": null
+        }
+      ],
+      "cutoff": 24.02,
+    "max": 40
+    },
+    "gross_motor": {
+      "questions": [
+        {
+          "id": 1,
+          "text": "Con bạn có thể tự bước lên hoặc xuống ít nhất hai bậc cầu thang không? (có thể vịn)",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": "Bạn có thể quan sát bé ở cửa hàng, sân chơi, hoặc ở nhà.",
+          "image_filepath": "image20_2.png"
+        },
+        {
+          "id": 2,
+          "text": "Con bạn có thể chạy khá vững và tự dừng lại mà không cần va chạm hay té ngã không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": "image20_1.png"
+        },
+        {
+          "id": 3,
+          "text": "Con bạn có thể nhảy với hai chân rời khỏi mặt đất cùng lúc không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": "image22_1.png"
+        },
+        {
+          "id": 4,
+          "text": "Con bạn có thể đá bóng bằng cách vung chân về phía trước mà không cần vịn không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": "image22_2.png"
+        },
+        {
+          "id": 5,
+          "text": "Con bạn có thể bật nhảy về phía trước khoảng 8cm bằng cả hai chân rời khỏi mặt đất không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": "image_placeholder.png"
+        },
+        {
+          "id": 6,
+          "text": "Khi đi lên cầu thang, con bạn có thể bước lần lượt từng chân lên mỗi bậc không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": "Ví dụ, chân trái thì ở một bậc còn chân phải thì ở bậc tiếp theo Bé có thể vịn vào tay vịn cầu thang hoặc tường .",
+          "image_filepath": "image20_2.png"
+        }
+      ],
+      "cutoff": 28.01,
+    "max": 40
+    },
+    "fine_motor": {
+      "questions": [
+        {
+          "id": 1,
+          "text": "Con bạn có thực hiện thao tác vặn xoay như mở nắp cửa, vặn nút chai, xoay con vụ hoặc lên dây cót không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": null
+        },
+        {
+          "id": 2,
+          "text": "Con bạn có biết bật và tắt công tắc không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": null
+        },
+        {
+          "id": 3,
+          "text": "Sau khi bạn vẽ đường thẳng dọc, bé có bắt chước vẽ giống không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": "image18_5.png"
+        },
+        {
+          "id": 4,
+          "text": "Con bạn có xếp được 7 khối gỗ nhỏ chồng lên nhau không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": "Bạn có thể dùng đồ chơi hoặc đồ vật kích cỡ khoảng 1 inch/2.5 cm.",
+          "image_filepath": null
+        },
+        {
+          "id": 5,
+          "text": "Con bạn có biết xâu hạt thành chuỗi không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": "image22_3.png"
+        },
+        {
+          "id": 6,
+          "text": "Sau khi con của bạn quan sát bạn dùng bút chì (bút màu/bút bi) vẽ một đường thẳng ngang từ trái sang phải trang giấy. Bạn yêu cầu bé bắt chước vẽ giống đường thẳng bạn đã vẽ mà không được đồ/tô lại. Bé có vẽ được không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": "image22_3.png"
+        }
+      ],
+      "cutoff": 18.42,
+    "max": 35
+    },
+    "problem_solving": {
+      "questions": [
+        {
+          "id": 1,
+          "text": "Con của bạn có biết chơi giả bộ không? Ví dụ: bé để cái ly lên tai giả vờ là điện thoại, bé đặt một chiếc hộp lên đầu giả vờ là chiếc mũ/nón, bé dùng khối gỗ hoặc đồ chơi nhỏ làm thức ăn.",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": null
+        },
+        {
+          "id": 2,
+          "text": "Con của bạn có biết đặt đồ đạc đúng vị trí không? Ví dụ, đồ chơi ở trên kệ, chăn/mền ở trên giường và chén đĩa thì đặt ở nhà bếp?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": null
+        },
+        {
+          "id": 3,
+          "text": "Khi đang cùng bé nhìn vào gương, bạn hỏi '(Dùng tên bé) đâu rồi?' Bé có chỉ vào hình ảnh của mình trong gương không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": null
+        },
+        {
+          "id": 4,
+          "text": "Nếu con của bạn muốn lấy một vật ở trên cao mà không với tới được, bé có tìm ghế hoặc hộp để đứng lên không (ví dụ lấy đồ chơi trên kệ hoặc 'giúp' mẹ làm bếp)?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": null
+        },
+        {
+          "id": 5,
+          "text": "Cho con nhìn bạn xếp bốn đồ vật như khối hộp hoặc ô-tô thành một hàng, con có biết bắt chước bạn xếp cả bốn đồ vật thành một hàng không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": "Bạn có thể dùng các loại đồ vật khác như lõi cuộn chỉ, hộp nhỏ hoặc đồ chơi khác.",
+          "image_filepath": "image24_1.png"
+        },
+        {
+          "id": 6,
+          "text": "Khi bạn chỉ vào hình bên và hỏi “Hình gì đây?', con của bạn có nói được từ có liên quan đến người hoặc cái gì đó tương tự?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": "Đánh dấu 'có' khi con nói được một trong các từ như: 'người tuyết', 'con trai', 'đàn ông', 'con gái', 'bố', 'người ngoài hành tinh', 'con khỉ', 'con gà'.",
+          "image_filepath": "image_placeholder.png"
+        }
+      ],
+      "cutoff": 27.62,
+    "max": 40
+    },
+    "personal_social": {
+      "questions": [
+        {
+          "id": 1,
+          "text": "Nếu bạn làm các động tác như há miệng, nháy mắt, kéo tai, vỗ má… bé có bắt chước ít nhất một hành động không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": null
+        },
+        {
+          "id": 2,
+          "text": "Con bạn có biết ăn bằng thìa (muỗng) không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": null
+        },
+        {
+          "id": 3,
+          "text": "Khi chơi với thú nhồi bông hoặc búp bê, con của bạn có giả bộ ru em ngủ, cho em ăn, thay tã cho em, đặt em vào giường, và làm các hành động tương tự vậy hay không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": null
+        },
+        {
+          "id": 4,
+          "text": "Con của bạn có biết đẩy một toa xe, xe đẩy hoặc đồ chơi có bánh xe vòng quanh đồ vật và biết lùi lại ra khỏi góc hẹp nếu bé không thể rẽ/quẹo trái hay phải được không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": null
+        },
+        {
+          "id": 5,
+          "text": "Con của bạn có thường dùng từ 'con', 'cháu' để xưng hô hơn dùng tên của bé “không? Ví dụ, bé nói: 'Con làm cái này' thường hơn 'Bi làm cái này'.",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": null
+        },
+        {
+          "id": 6,
+          "text": "Con bạn có thể tự mặc áo khoác, áo lạnh, áo sơ mi không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": null
+        }
+      ],
+      "cutoff": 25.31,
+    "max": 40
+    }
+  }
+}

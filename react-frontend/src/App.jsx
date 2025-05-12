@@ -15,6 +15,7 @@ import { hospitals } from "./dataweb/hospitals";
 import { results } from "./dataweb/results";
 import { doctors } from "./dataweb/doctors";
 
+
 function App() {
   const [showExtraFields, setShowExtraFields] = useState(false);
   const [step, setStep] = useState(1);
@@ -23,12 +24,38 @@ function App() {
   const [parentInfo, setParentInfo] = useState(null);
 
   const handleChildInfoChange = (fieldName, value) => {
-    setChildInfo((prev) => ({
-      ...prev,
-      [fieldName]: value,
-    }));
+    setChildInfo((prev) => {
+      const updated = { ...prev, [fieldName]: value };
+
+      if (fieldName === "birthDate") {
+        const birth = new Date(value);
+        const today = new Date();
+        birth.setHours(0, 0, 0, 0);
+        today.setHours(0, 0, 0, 0);
+
+        const ageInDays = Math.floor((today - birth) / (1000 * 60 * 60 * 24));
+        updated.childAgeInDays = ageInDays;
+
+        console.log(`Trẻ có số ngày tuổi: ${ageInDays} ngày`);
+      }
+
+      if (fieldName === "pre-result" && value === "Không") {
+        const fieldsToClear = [
+          "result",
+          "resultDate",
+          "hospital",
+          "doctor",
+          "pre-test",
+        ];
+        fieldsToClear.forEach((key) => delete updated[key]);
+        console.log("Cleared extra diagnosis fields due to 'Không' selection");
+      }
+
+      return updated;
+    });
 
     if (fieldName === "pre-result") {
+      console.log("User selected 'pre-result':", value);
       setShowExtraFields(value === "Có");
     }
   };
@@ -87,7 +114,7 @@ function App() {
     {
       type: "select",
       name: "result",
-      label: "Kết quả chuẩn đoán:",
+      label: "Kết quả chuẩn đoán cụ thể:",
       options: results,
       onChange: handleChildInfoChange,
     },
@@ -119,6 +146,8 @@ function App() {
       onChange: handleChildInfoChange,
     },
   ];
+  const [age, setAge] = useState(null); // sẽ chứa object như { title: "6m Questionnaire", ... }
+
 
   return (
     <div className="container-page">
@@ -140,34 +169,60 @@ function App() {
                           : formFields
                       }
                       defaultValues={childInfo || {}}
-                      onSubmit={(data) => {
+                      // onSubmit={(data) => {
+                      //   console.log("Child info submitted:", data);
+                      //   setChildInfo(data);
+                      //   setStep(2);
+                      // }}
+                      onSubmit={async (data) => {
+                        console.log("Child info submitted:", data);
                         setChildInfo(data);
+                      
+                        const ageInDays = data.childAgeInDays;
+                      
+                        if (ageInDays) {
+                          try {
+                            const res = await fetch(`http://127.0.0.1:8000/form?age_in_days=${ageInDays}`);
+                            const result = await res.json();
+                            setAge(result.age); // 👈 Lưu age từ backend vào state
+                            console.log("Fetched age info:", result.age);
+                          } catch (error) {
+                            console.error("Error fetching age:", error);
+                          }
+                        }
+                      
                         setStep(2);
                       }}
+                      
+
                     />
                   </>
                 )}
 
                 {step === 2 && (
-                  <>
-                    <FormASQTest
-                      key={
-                        step +
-                        (testResult
-                          ? Object.keys(testResult.answers || {}).length
-                          : 0)
-                      }
-                      onBack={(snapshot) => {
-                        setTestResult(snapshot);
-                        setStep(1);
-                      }}
-                      onSubmit={(dto) => {
-                        setTestResult(dto);
-                        setStep(3);
-                      }}
-                      defaultValues={testResult || {}}
-                    />
-                  </>
+                  <FormASQTest
+                    key={
+                      step +
+                      (testResult
+                        ? Object.keys(testResult.answers || {}).length
+                        : 0)
+                    }
+                    onBack={(snapshot) => {
+                      setTestResult(snapshot);
+                      setStep(1);
+                    }}
+                    onSubmit={(dto) => {
+                      console.log("ASQ test submitted:", dto);
+                      setTestResult(dto);
+                      setStep(3);
+                    }}
+                    defaultValues={{
+                      ...testResult,
+                      age: {
+                        childAgeInDays: childInfo?.childAgeInDays || null,
+                      },
+                    }}
+                  />
                 )}
 
                 {step === 3 && (
@@ -181,6 +236,7 @@ function App() {
                       onChange={handleParentInfoChange}
                       onBack={() => setStep(2)}
                       onSubmit={(parentInfo) => {
+                        console.log("Parent info submitted:", parentInfo);
                         setParentInfo(parentInfo);
                         setStep(4);
                       }}
@@ -192,7 +248,7 @@ function App() {
                   <>
                     <TitleBox
                       title="Kết quả bài sàng lọc đánh giá phát triển theo độ tuổi ASQ-3"
-                      subtitle="(Bộ câu hỏi 20 tháng tuổi)"
+                      subtitle={`( ${age.title} )`}
                     />
                     <ResultPage
                       childInfo={childInfo}
