@@ -22,7 +22,10 @@
 \usepackage{placeins}
 \usepackage{tcolorbox}
 \usepackage{verbatim}
-
+\usepackage{enumitem}
+\usepackage{float}       % hỗ trợ [H]
+\usepackage{placeins}    % hỗ trợ \FloatBarrier
+\usepackage{caption}     % nếu dùng caption ngoài môi trường float
 
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
@@ -290,8 +293,181 @@ The prompt is constructed by concatenating the user query, the retrieved context
   \verb|<|im\_start|>|assistant
 \end{tcolorbox}
 \subsection{Dataset}
-  
+
+The dataset used in this research comprises two main types: 
+\begin{enumerate}
+    \item A conversational dataset used to train chatbot models.
+    \item A document dataset used for knowledge retrieval and context injection within the RAG pipeline.
+\end{enumerate}
+\subsubsection*{1. Conversational Dataset for Chatbot}
+
+This dataset was designed to support instruction-based training of Vietnamese LLMs. It consists of natural language dialogues relevant to concerns raised by parents at pediatric mental health clinics.
+
+\textbf{\item Internal Dataset:} This dataset was manually collected from real conversations on social platforms such as TikTok, Zalo, and Facebook, between parents and psychologists at a children's psychology clinic in Ho Chi Minh City. Key topics include:
+\begin{itemize}
+  - Greetings and consultation openings\\
+  - Developmental milestones\\
+  - ASQ-3 screening instructions\\
+  - Solutions and concerns regarding ASD or developmental delays
+\end{itemize}
+All entries were reviewed and filtered by clinical psychologists for relevance and quality.
+
+\textbf{\item Collected Dataset:} This dataset was constructed by extracting user queries related to child development and mental health using the Google Suggest API. The resulting keywords were clustered into topics matching the internal dataset and were validated by psychologists.
+
+\textbf{\item Merged Dataset:} The internal and collected datasets were combined to form high-quality instruction–response pairs, allowing the chatbot to generate both natural and professional replies.
+
+\begin{enumerate}[label=(\alph*)]
+\item Example Dataset: 
+An example data entry follows the seq2seq JSON format:
+
+\begin{verbatim}
+{
+  "instruction": "Câu chào hỏi",
+  "input": "Chào, cho mình hỏi?",
+  "output": "Bạn cần mình giúp gì nào?"
+}
+\end{verbatim}
+
+\item Number of Attributes: 
+Each record contains three key-value pairs:
+\begin{itemize}
+    \item \texttt{instruction}: the purpose or theme of the conversation
+    \item \texttt{input}: the user's question
+    \item \texttt{output}: the chatbot's expected response
+\end{itemize}
+
+\item Dataset Size: 
+\begin{itemize}
+    \item Number of files: 4 (General Chatbot, ASD, Development, Delayed Speech)
+    \item File sizes: 100KB, 45KB, 30KB, and 12KB respectively
+    \item Total records: ~2,000 dialogue pairs
+\end{itemize}
+
+\item Usage: 
+This dataset is used for fine-tuning and evaluating multiple Vietnamese LLMs, including:
+\begin{itemize}
+    \item \texttt{Viet-Mistral/Vistral-7B-Chat}
+    \item \texttt{SeaLLMs/SeaLLMs-v3-7B-Chat}
+    \item \texttt{vilm/vinallama-7b-chat}
+    \item \texttt{vietgpt/dama-2-7b-chat}
+\end{itemize}
+\end{enumerate}
+\subsubsection*{2. Document Dataset for Knowledge Retrieval}
+
+This dataset comprises curated documents obtained from both public and proprietary sources, including pediatric guidelines, diagnostic manuals, and intervention documents from clinical psychologists. It supports the RAG framework by providing factual context to enhance chatbot responses.
+\begin{enumerate}[label=(\alph*)]
+\item Example Dataset: 
+A representative document is a 10–12 page PDF outlining intervention strategies for ASD in children aged 10–12 months. The file contains textual content, tables, and clinical diagrams.
+
+\item Number of Attributes: 
+This dataset contains unstructured PDF documents; no structured attributes are defined.
+
+\item Dataset Size: 
+\begin{itemize}
+    \item Number of documents: 53 PDF files
+    \item Total size: approximately 124 MB
+\end{itemize}
+
+\item Usage: 
+The documents are split into text chunks, embedded using the BGE-M3 model, and stored in a FAISS vector database. During inference, the retriever fetches relevant documents, which are injected as context into the LLM using the RAG architecture.
+\end{enumerate}
+
 \section{Results and Discussion}
+\label{sec:results-discussion}
+
+This section presents the performance evaluation of four fine-tuned large language models-SeaLLM, VinaLLaMA, Vistral, and Dama-2 on the Vietnamese mental health dialogue dataset. The evaluation was conducted using both single run testing and 5 fold cross validation, with standard metrics including ROUGE-1, ROUGE-2, ROUGE-L, METEOR, and Cosine Similarity. These metrics assess various aspects of text generation quality such as lexical overlap, fluency, semantic alignment, and vector-based similarity.
+
+\subsection{Single-Run Evaluation}
+
+Table I, II summarizes the evaluation scores for a single inference run across all models.
+
+\begin{table}[H]
+\centering
+\caption{Single-run ROUGE Scores for All Models}
+\label{tab:rouge-single-run}
+\begin{tabular}{|l|c|c|c|}
+\hline
+\textbf{Model} & \textbf{ROUGE-1} & \textbf{ROUGE-2} & \textbf{ROUGE-L} \\
+\hline
+Vistral       & \textbf{0.6422} & \textbf{0.3083} & \textbf{0.4188} \\
+Dama-2        & 0.6154          & 0.2795          & 0.3940          \\
+VinaLLaMA     & 0.5917          & 0.2472          & 0.3697          \\
+SeaLLM        & 0.5592          & 0.1893          & 0.3304          \\
+\hline
+\end{tabular}
+\end{table} 
+
+\begin{table}[H]
+\centering
+\caption{Single-run Semantic Similarity Metrics}
+\label{tab:semantic-single-run}
+\begin{tabular}{|l|c|c|}
+\hline
+\textbf{Model} & \textbf{METEOR} & \textbf{Cosine Similarity} \\
+\hline
+Vistral       & \textbf{0.3529} & \textbf{0.7343} \\
+Dama-2        & 0.3215          & 0.7181          \\
+VinaLLaMA     & 0.2822          & 0.6946          \\
+SeaLLM        & 0.1714          & 0.6145          \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{Cross-Validation Evaluation}
+
+To assess the models' robustness and generalization capabilities, we applied 5-fold cross-validation. Table III, IV shows the average scores across the folds.
+
+\begin{table}[H]
+\centering
+\caption{Cross-Validation ROUGE Scores (K=5)}
+\label{tab:cv-rouge}
+\begin{tabular}{|l|c|c|c|}
+\hline
+\textbf{Model} & \textbf{ROUGE-1} & \textbf{ROUGE-2} & \textbf{ROUGE-L} \\
+\hline
+SeaLLM     & 0.5645 & 0.1976 & 0.3339 \\
+VinaLLaMA  & 0.5786 & 0.2423 & 0.3710 \\
+Vistral    & \textbf{0.6320} & \textbf{0.3094} & \textbf{0.4236} \\
+Dama-2     & 0.6106 & 0.2834 & 0.3956 \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Cross-Validation Semantic Similarity Scores (K=5)}
+\label{tab:cv-semantic}
+\begin{tabular}{|l|c|c|}
+\hline
+\textbf{Model} & \textbf{METEOR} & \textbf{Cosine Similarity} \\
+\hline
+SeaLLM     & 0.1897 & 0.6319 \\
+VinaLLaMA  & 0.2534 & 0.6808 \\
+Vistral    & \textbf{0.3373} & \textbf{0.7323} \\
+Dama-2     & 0.3328 & 0.7220 \\
+\hline
+\end{tabular}
+\end{table}
+
+
+\subsection{Discussion}
+
+From the experimental results, it is evident that the \textbf{Vistral model} consistently outperformed all others in both the single-run and cross-validation settings. Vistral achieved the highest scores across all metrics, including:
+
+\begin{itemize}
+  \item \textbf{ROUGE-1, ROUGE-2, and ROUGE-L:} Indicating high lexical and structural overlap with the ground truth responses, especially in capturing unigrams and bigrams relevant to user intent.
+  \item \textbf{METEOR:} Showing strong alignment in semantics and stemming, which is essential for the flexible Vietnamese grammar.
+  \item \textbf{Cosine Similarity:} Suggesting high semantic closeness between generated and reference embeddings.
+\end{itemize}
+
+While \textbf{Dama-2} followed closely behind in performance, it showed slightly less consistency in capturing long-range dependencies (ROUGE-L) and semantic accuracy compared to Vistral. However, it still performed better than SeaLLM and showed high Cosine Similarity.
+
+\textbf{VinaLLaMA} exhibited strong single-run scores, particularly in METEOR and ROUGE-2, indicating better local coherence and language fluency. However, its cross-validation scores were slightly lower than Dama-2, suggesting variability during training and inference.
+
+\textbf{SeaLLM} ranked the lowest across all metrics, indicating room for improvement in capturing both lexical and semantic features, especially under the constraints of Vietnamese-specific contexts.
+
+Overall, the results support the robustness of the Vistral model in the task of generating contextual, coherent, and semantically accurate responses in Vietnamese mental health chatbot applications.
+
 
 
 \begin{thebibliography}{9}
