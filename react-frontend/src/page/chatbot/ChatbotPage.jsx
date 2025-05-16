@@ -12,7 +12,6 @@ function ChatbotPage() {
   const [isLoading, setIsLoading] = useState(false);
   const chatBodyRef = useRef(null);
 
-  // Auto-scroll to bottom when new messages are added
   useEffect(() => {
     if (chatBodyRef.current) {
       chatBodyRef.current.scrollTop = chatBodyRef.current.scrollHeight;
@@ -22,29 +21,48 @@ function ChatbotPage() {
   const handleSend = async () => {
     if (!input.trim()) return;
 
+    // Lấy API base URL từ biến môi trường
+    const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
+    // Tạo URL đầy đủ cho endpoint /ask
+    const apiUrl = `${apiBaseUrl}/ask`; 
+
     const userMessage = { sender: 'user', text: input };
     setMessages((prev) => [...prev, userMessage]);
     setInput('');
     setIsLoading(true);
 
     try {
-      const res = await fetch('http://localhost:8000/ask', {
+      // Sử dụng apiUrl đã tạo
+      const res = await fetch(apiUrl, { 
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ msg: input }),
       });
 
       if (!res.ok) {
-        throw new Error(`HTTP error! Status: ${res.status}`);
+        // Cố gắng lấy thông tin lỗi chi tiết từ server nếu có
+        let errorMessage = `HTTP error! Status: ${res.status}`;
+        try {
+            const errorData = await res.json();
+            if (errorData && errorData.detail) {
+                errorMessage = errorData.detail;
+            }
+        } catch (jsonError) {
+            // Bỏ qua nếu response không phải là JSON hoặc lỗi parse
+            console.error("Could not parse error response as JSON:", jsonError);
+        }
+        throw new Error(errorMessage);
       }
 
       const data = await res.json();
       const botMessage = { sender: 'bot', text: data.reply };
       setMessages((prev) => [...prev, botMessage]);
     } catch (err) {
-      const botMessage = { sender: 'bot', text: '⚠️ Lỗi kết nối đến máy chủ. Vui lòng thử lại.' };
+      // Hiển thị thông báo lỗi cụ thể hơn nếu có
+      const displayErrorMessage = err.message || 'Lỗi kết nối đến máy chủ. Vui lòng thử lại.';
+      const botMessage = { sender: 'bot', text: `⚠️ ${displayErrorMessage}` };
       setMessages((prev) => [...prev, botMessage]);
-      console.error(err);
+      console.error("Fetch error:", err);
     } finally {
       setIsLoading(false);
     }
@@ -73,7 +91,11 @@ function ChatbotPage() {
         <input
           value={input}
           onChange={(e) => setInput(e.target.value)}
-          onKeyDown={(e) => e.key === 'Enter' && handleSend()}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter' && !isLoading) { // Thêm điều kiện !isLoading
+              handleSend();
+            }
+          }}
           placeholder="Nhập câu hỏi..."
           disabled={isLoading}
         />

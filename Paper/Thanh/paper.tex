@@ -8,9 +8,15 @@
 \usepackage{textcomp}
 \usepackage{xcolor}
 \usepackage[utf8]{inputenc}
-\usepackage[vietnamese]{babel}
-\addto\captionsvietnamese{%
+\usepackage[english,vietnamese]{babel}
+\addto\captionsvietnamese{
+  \renewcommand{\tablename}{Table}
+}
+\addto\captionsvietnamese{
   \renewcommand{\abstractname}{Abstract}
+}
+\addto\captionsvietnamese{
+  \renewcommand{\refname}{References}
 }
 \usepackage{amsmath}
 \usepackage{hyperref}
@@ -26,6 +32,7 @@
 \usepackage{float}       % hỗ trợ [H]
 \usepackage{placeins}    % hỗ trợ \FloatBarrier
 \usepackage{caption}     % nếu dùng caption ngoài môi trường float
+
 
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
@@ -105,16 +112,44 @@ To further ensure data quality and minimize retrieval noise, we test the resulti
 \subsubsection{LLM Fine-Tuning}
 \label{sec:LLM Fine-Tuning}
 
-Pretrained base models such as VinaLLaMA, Vistral-7B, SeaLLMs, and Dama-2 were loaded from Hugging Face repositories. To reduce memory consumption and accelerate training, all models were quantized to 8-bit (int8) precision using bitsandbytes.
+This section details the methodology employed for fine-tuning various Large Language Models (LLMs) on a Vietnamese language task. The process encompasses model selection, quantization, data preprocessing, fine-tuning strategy, and evaluation.
 
-The training process applies Low-Rank Adaptation (LoRA) for parameter-efficient fine-tuning. Common attention and feedforward modules (e.g., \texttt{q\_proj}, \texttt{v\_proj}, \texttt{k\_proj}, \texttt{o\_proj}) were targeted for adaptation to maintain general language capabilities while enabling task-specific learning.
+\paragraph{Model Selection and Quantization}
+Pretrained base models, specifically \textbf{VinaLLaMA (vilm/vinallama-7b-chat)}, \textbf{Vistral-7B (Viet-Mistral/Vistral-7B-Chat)}, \textbf{SeaLLMs (SeaLLMs/SeaLLMs-v3-7B-Chat)}, and \textbf{Dama-2 (vietgpt/dama-2-7b-chat)}, were loaded from their respective Hugging Face repositories. To mitigate memory consumption and accelerate the training process, a strategic quantization approach was adopted. For initial single-run evaluations (Section~\ref{sec:single_run_eval}), models were quantized to \textbf{8-bit (int8)} precision using the \texttt{bitsandbytes} library. However, for the more extensive 5-fold cross-validation (Section~\ref{sec:cross_validation_eval}), \textbf{4-bit (int4)} quantization (specifically NF4 with \texttt{bnb\_4bit\_compute\_dtype=torch.bfloat16} and \texttt{bnb\_4bit\_use\_double\_quant=True}) was applied. This choice aimed to further reduce the memory footprint, enabling robust training across multiple folds within available hardware constraints. Crucially, for a dataset of moderate size relative to the 7B parameter scale of the models, int4 quantization also serves to \textbf{economize on both fine-tuning time and computational costs}, without a substantial degradation in model quality, making the comprehensive cross-validation process more feasible.
 
-To ensure training data quality, the input dataset was filtered by computing cosine similarity between instruction and response pairs using a pretrained embedding model. Pairs with similarity scores below a specified \texttt{score\_threshold} (e.g., 0.9) were removed to eliminate noisy or inconsistent samples.
+\paragraph{Low-Rank Adaptation (LoRA) Configuration}
+The fine-tuning process leverages Low-Rank Adaptation (LoRA) \cite{hu2021lora} for parameter-efficient fine-tuning. A LoRA rank (\texttt{r}) of \textbf{32} was chosen as a balance between model adaptability and computational overhead, a common practice providing sufficient capacity for adaptation without an excessive increase in trainable parameters. The LoRA alpha (\texttt{lora\_alpha}) was also set to 32, and a dropout rate (\texttt{lora\_dropout}) of 0.5 was applied to LoRA layers to prevent overfitting.
 
-A 5-fold cross-validation strategy was employed to assess the robustness and generalization performance of each fine-tuned model. The dataset was split accordingly, and fine-tuning was performed independently on each fold.
+To effectively adapt the models, LoRA was applied to a comprehensive set of target modules within the transformer architecture. These include:
+\begin{itemize}
+    \item \textbf{Attention Mechanism Modules}: \texttt{q\_proj} (query projection), \texttt{k\_proj} (key projection), \texttt{v\_proj} (value projection), and \texttt{o\_proj} (output projection). Targeting these modules allows the model to refine how it weighs and combines information from different parts of the input sequence, crucial for understanding context and relationships.
+    \item \textbf{Feed-Forward Network (FFN) Modules}: \texttt{gate\_proj} (gating projection in SwiGLU/GeGLU variants), \texttt{up\_proj} (upscaling projection in FFN), and \texttt{down\_proj} (downscaling projection in FFN). Adapting these layers enables the model to learn more complex, task-specific feature transformations.
+\end{itemize}
+This selection aims to imbue the model with task-specific knowledge while largely preserving its pretrained general language understanding capabilities by only updating the low-rank decomposition matrices.
 
-Evaluation metrics used in this study include:
+\paragraph{Data Preprocessing}
+Rigorous data preprocessing was conducted to ensure the quality and consistency of the training dataset:
+\begin{enumerate}
+    \item \textbf{Text Normalization}: All text data (both instructions and responses) was converted to lowercase. Punctuation was removed to reduce noise and focus on lexical content. Vietnamese word tokenization was performed using the \texttt{underthesea} library.
+    \item \textbf{Duplicate and Near-Duplicate Removal}: To prevent data leakage and improve model generalization, a fuzzy matching technique was employed. The \texttt{thefuzz} library (specifically, \texttt{fuzz.ratio}) was used to calculate the similarity between all pairs of input instructions and, separately, all pairs of output responses. Records where either the input or output exhibited a similarity score greater than a specified threshold (0.9, i.e., 90\% similarity) with another record were removed, keeping only the first occurrence. This step helps ensure a more diverse and less redundant training set.
+    \item \textbf{Instruction-Response Coherence (Optional but mentioned in original thought process)}: Initially, consideration was given to filtering instruction-response pairs based on their cosine similarity using a pretrained embedding model. Pairs with similarity scores below a threshold (e.g., 0.9) would be removed to eliminate noisy or inconsistent samples. However, the primary implemented filtering focused on fuzzy matching of inputs and outputs separately as described above.
+\end{enumerate}
 
+\paragraph{Single-Run Evaluation}
+\label{sec:single_run_eval}
+Before proceeding to full cross-validation, an initial single-run fine-tuning and evaluation was performed for each model. The preprocessed dataset was split into a training set (80\%) and an evaluation set (20\%) using a fixed \texttt{random\_state} for reproducibility. Models were fine-tuned using the LoRA configuration and int8 quantization as described above. The primary purpose of this step was to obtain a preliminary assessment of each model's performance and to debug the training pipeline.
+
+\paragraph{5-Fold Cross-Validation}
+\label{sec:cross_validation_eval}
+To robustly assess generalization performance and mitigate potential biases from a single train-test split, a 5-fold cross-validation strategy was employed. The entire preprocessed dataset (after fuzzy duplicate removal) was divided into five mutually exclusive folds. For each iteration, one fold served as the evaluation set, while the remaining four folds were combined to form the training set. Fine-tuning was performed independently for each of the five iterations using the LoRA configuration and int4 quantization. This approach provides a more reliable estimate of model performance across different subsets of the data.
+
+\paragraph{Evaluation Metrics}
+The performance of the fine-tuned models was evaluated using a suite of standard metrics for text generation tasks:
+\begin{itemize}
+    \item \textbf{ROUGE (Recall-Oriented Understudy for Gisting Evaluation)} \cite{b11}: ROUGE-1, ROUGE-2, and ROUGE-L scores were calculated to measure n-gram overlap between the generated and reference texts.
+    \item \textbf{METEOR (Metric for Evaluation of Translation with Explicit ORdering)} \cite{b12}: METEOR considers synonymy and stemming along with precision and recall.
+    \item \textbf{Cosine Similarity}: To assess semantic similarity, sentence embeddings were generated for both predicted and reference texts using the \textbf{BAAI/bge-m3} model from Sentence Transformers \cite{b9}. The cosine similarity between these embedding vectors was then computed, providing a measure of how semantically close the generated output is to the target.
+\end{itemize}
 \vspace{1em}
 \noindent \textbf{\textit{ROUGE-1}}\\
 
@@ -249,6 +284,15 @@ Cosine similarity measures the angle between two vectors in a high-dimensional s
   \item $-1$: the vectors are in opposite directions (rare in non-negative text embeddings).
 \end{itemize}
 
+All metrics were calculated using the \texttt{evaluate} library. For cross-validation, metrics were averaged across the five folds.
+
+\paragraph{Best Model Selection and Merging}
+Based on the average cross-validation results, particularly prioritizing Cosine Similarity, the best performing fold's adapter weights were selected for each base model. These LoRA adapters were then merged into their respective full-precision (BF16) base models to create a fine-tuned, standalone model. This merged model represents the final fine-tuned version intended for subsequent deployment or conversion.
+
+\paragraph{GGUF Conversion for Ollama Deployment}
+\label{sec:gguf_conversion}
+As a final step towards practical deployment, the merged fine-tuned models (in BF16 format) are intended to be converted to the GGUF (GPT-Generated Unified Format). This format is optimized for efficient inference on CPU and GPU, and is widely supported by platforms such as Ollama, facilitating local execution and broader accessibility of the fine-tuned models. The conversion process typically involves scripts provided by projects like \texttt{llama.cpp}.
+
 \subsubsection{Integration with RAG and LangChain}
 
 The final system was fully implemented by integrating the RAG (Retrieval-Augmented Generation) architecture with the LangChain framework, and deploying it as a production-ready chatbot using Ollama and FastAPI. Workflow of the system is shown in Figure~\ref{fig:architecture}.
@@ -303,18 +347,21 @@ The dataset used in this research comprises two main types:
 
 This dataset was designed to support instruction-based training of Vietnamese LLMs. It consists of natural language dialogues relevant to concerns raised by parents at pediatric mental health clinics.
 
-\textbf{\item Internal Dataset:} This dataset was manually collected from real conversations on social platforms such as TikTok, Zalo, and Facebook, between parents and psychologists at a children's psychology clinic in Ho Chi Minh City. Key topics include:
-\begin{itemize}
-  - Greetings and consultation openings\\
-  - Developmental milestones\\
-  - ASQ-3 screening instructions\\
-  - Solutions and concerns regarding ASD or developmental delays
-\end{itemize}
-All entries were reviewed and filtered by clinical psychologists for relevance and quality.
+\begin{enumerate}
+    \item \textbf{Internal Dataset:} This dataset was manually collected from real conversations on social platforms such as TikTok, Zalo, and Facebook, between parents and psychologists at a children's psychology clinic in Ho Chi Minh City. Key topics include:
+    \begin{itemize}
+        \item Greetings and consultation openings
+        \item Developmental milestones
+        \item ASQ-3 screening instructions
+        \item Solutions and concerns regarding ASD or developmental delays
+    \end{itemize}
+    All entries were reviewed and filtered by clinical psychologists for relevance and quality.
 
-\textbf{\item Collected Dataset:} This dataset was constructed by extracting user queries related to child development and mental health using the Google Suggest API. The resulting keywords were clustered into topics matching the internal dataset and were validated by psychologists.
+    \item \textbf{Collected Dataset:} This dataset was constructed by extracting user queries related to child development and mental health using the Google Suggest API. The resulting keywords were clustered into topics matching the internal dataset and were validated by psychologists.
 
-\textbf{\item Merged Dataset:} The internal and collected datasets were combined to form high-quality instruction–response pairs, allowing the chatbot to generate both natural and professional replies.
+    \item \textbf{Merged Dataset:} The internal and collected datasets were combined to form high-quality instruction–response pairs, allowing the chatbot to generate both natural and professional replies.
+\end{enumerate}
+
 
 \begin{enumerate}[label=(\alph*)]
 \item Example Dataset: 
@@ -389,10 +436,10 @@ Table I, II summarizes the evaluation scores for a single inference run across a
 \hline
 \textbf{Model} & \textbf{ROUGE-1} & \textbf{ROUGE-2} & \textbf{ROUGE-L} \\
 \hline
-Vistral       & \textbf{0.6422} & \textbf{0.3083} & \textbf{0.4188} \\
-Dama-2        & 0.6154          & 0.2795          & 0.3940          \\
-VinaLLaMA     & 0.5917          & 0.2472          & 0.3697          \\
-SeaLLM        & 0.5592          & 0.1893          & 0.3304          \\
+Vistral       & \textbf{0.6409} & \textbf{0.3247} & \textbf{0.4375} \\
+Dama-2        & 0.6079          & 0.2874          & 0.3984          \\
+VinaLLaMA     & 0.6076          & 0.2652          & 0.3891          \\
+SeaLLM        & 0.6210          & 0.2679          & 0.3887          \\
 \hline
 \end{tabular}
 \end{table} 
@@ -405,10 +452,10 @@ SeaLLM        & 0.5592          & 0.1893          & 0.3304          \\
 \hline
 \textbf{Model} & \textbf{METEOR} & \textbf{Cosine Similarity} \\
 \hline
-Vistral       & \textbf{0.3529} & \textbf{0.7343} \\
-Dama-2        & 0.3215          & 0.7181          \\
-VinaLLaMA     & 0.2822          & 0.6946          \\
-SeaLLM        & 0.1714          & 0.6145          \\
+Vistral       & \textbf{0.3567} & \textbf{0.7993} \\
+Dama-2        & 0.3269          & 0.7793          \\
+VinaLLaMA     & 0.2958          & 0.7726          \\
+SeaLLM        & 0.2989          & 0.7167          \\
 \hline
 \end{tabular}
 \end{table}
@@ -425,10 +472,10 @@ To assess the models' robustness and generalization capabilities, we applied 5-f
 \hline
 \textbf{Model} & \textbf{ROUGE-1} & \textbf{ROUGE-2} & \textbf{ROUGE-L} \\
 \hline
-SeaLLM     & 0.5645 & 0.1976 & 0.3339 \\
-VinaLLaMA  & 0.5786 & 0.2423 & 0.3710 \\
-Vistral    & \textbf{0.6320} & \textbf{0.3094} & \textbf{0.4236} \\
-Dama-2     & 0.6106 & 0.2834 & 0.3956 \\
+Vistral    & \textbf{0.6399} & \textbf{0.3158} & \textbf{0.4259} \\
+Dama-2     & 0.6084 & 0.2806 & 0.3935 \\
+VinaLLaMA  & 0.6104 & 0.2735 & 0.3905 \\
+SeaLLM     & 0.6184 & 0.2664 & 0.3839 \\
 \hline
 \end{tabular}
 \end{table}
@@ -441,15 +488,15 @@ Dama-2     & 0.6106 & 0.2834 & 0.3956 \\
 \hline
 \textbf{Model} & \textbf{METEOR} & \textbf{Cosine Similarity} \\
 \hline
-SeaLLM     & 0.1897 & 0.6319 \\
-VinaLLaMA  & 0.2534 & 0.6808 \\
-Vistral    & \textbf{0.3373} & \textbf{0.7323} \\
-Dama-2     & 0.3328 & 0.7220 \\
+Vistral    & \textbf{0.3549} & \textbf{0.7972} \\
+Dama-2     & 0.3360 & 0.7757 \\
+VinaLLaMA  & 0.3075 & 0.7746 \\
+SeaLLM     & 0.2986 & 0.7079 \\
 \hline
 \end{tabular}
 \end{table}
 
-
+\subsection{Expert opinion}
 \subsection{Discussion}
 
 From the experimental results, it is evident that the \textbf{Vistral model} consistently outperformed all others in both the single-run and cross-validation settings. Vistral achieved the highest scores across all metrics, including:
@@ -481,6 +528,8 @@ Overall, the results support the robustness of the Vistral model in the task of 
     \bibitem{b8} Róbert Lakatos, Péter Pollner, András Hajdu, Tamás Joó, "Investigating the Performance of Retrieval-Augmented Generation and Fine-Tuning for the Development of AI-Driven Knowledge-Based Systems," arXiv preprint arXiv:2403.09727v1, 2024.
     \bibitem{b9} Harald Steck, Chaitanya Ekanadham, Nathan Kallus, "Is Cosine-Similarity of Embeddings Really About Similarity?" arXiv preprint arXiv:2403.05440v1, 2024.
     \bibitem{b10} Li, H., Li, X., Hu, P., Lei, Y., Li, C., Zhou, Y., … \& Zhou, Y. (2023). ``Boosting Multi-modal Model Performance with Adaptive Gradient Modulation''. arXiv preprint arXiv:2308.07686.
+    \bibitem{b11} Lin, C.-Y. (2004). ``ROUGE: A Package for Automatic Evaluation of Summaries.'' In *Proceedings of the Workshop on Text Summarization Branches Out (WAS 2004), Post-Conference Workshop of ACL 2004*, Barcelona, Spain.
+    \bibitem{b12} Banerjee, S., \& Lavie, A. (2005). ``METEOR: An Automatic Metric for MT Evaluation with Improved Correlation with Human Judgments.'' In *Proceedings of the ACL Workshop on Intrinsic and Extrinsic Evaluation Measures for Machine Translation and/or Summarization*, Ann Arbor, Michigan, pp. 65--72.
 \end{thebibliography}
 
 \end{document}

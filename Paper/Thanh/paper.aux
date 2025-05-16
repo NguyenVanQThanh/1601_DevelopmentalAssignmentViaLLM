@@ -32,8 +32,23 @@
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {III-B}1}Vector Database Construction}{2}{subsubsection.3.2.1}\protected@file@percent }
 \newlabel{sec:LLM Fine-Tuning}{{\mbox  {III-B}2}{2}{LLM Fine-Tuning}{subsubsection.3.2.2}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {III-B}2}LLM Fine-Tuning}{2}{subsubsection.3.2.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {III-B}3}Integration with RAG and LangChain}{4}{subsubsection.3.2.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-C}}Dataset}{5}{subsection.3.3}\protected@file@percent }
+\citation{hu2021lora}
+\citation{b11}
+\citation{b12}
+\citation{b9}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {\mbox  {III-B}2a}Model Selection and Quantization}{3}{paragraph.3.2.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {\mbox  {III-B}2b}Low-Rank Adaptation (LoRA) Configuration}{3}{paragraph.3.2.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {\mbox  {III-B}2c}Data Preprocessing}{3}{paragraph.3.2.2.3}\protected@file@percent }
+\newlabel{sec:single_run_eval}{{\mbox  {III-B}2d}{3}{Single-Run Evaluation}{paragraph.3.2.2.4}{}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {\mbox  {III-B}2d}Single-Run Evaluation}{3}{paragraph.3.2.2.4}\protected@file@percent }
+\newlabel{sec:cross_validation_eval}{{\mbox  {III-B}2e}{3}{5-Fold Cross-Validation}{paragraph.3.2.2.5}{}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {\mbox  {III-B}2e}5-Fold Cross-Validation}{3}{paragraph.3.2.2.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {\mbox  {III-B}2f}Evaluation Metrics}{3}{paragraph.3.2.2.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {\mbox  {III-B}2g}Best Model Selection and Merging}{5}{paragraph.3.2.2.7}\protected@file@percent }
+\newlabel{sec:gguf_conversion}{{\mbox  {III-B}2h}{5}{GGUF Conversion for Ollama Deployment}{paragraph.3.2.2.8}{}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {\mbox  {III-B}2h}GGUF Conversion for Ollama Deployment}{5}{paragraph.3.2.2.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {III-B}3}Integration with RAG and LangChain}{5}{subsubsection.3.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-C}}Dataset}{6}{subsection.3.3}\protected@file@percent }
 \bibcite{b1}{1}
 \bibcite{b2}{2}
 \bibcite{b3}{3}
@@ -41,21 +56,24 @@
 \bibcite{b5}{5}
 \bibcite{b6}{6}
 \bibcite{b7}{7}
+\@writefile{toc}{\contentsline {section}{\numberline {IV}Results and Discussion}{7}{section.4}\protected@file@percent }
+\newlabel{sec:results-discussion}{{IV}{7}{Results and Discussion}{section.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-A}}Single-Run Evaluation}{7}{subsection.4.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces Single-run ROUGE Scores for All Models}}{7}{table.caption.4}\protected@file@percent }
+\newlabel{tab:rouge-single-run}{{I}{7}{Single-run ROUGE Scores for All Models}{table.caption.4}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {II}{\ignorespaces Single-run Semantic Similarity Metrics}}{7}{table.caption.5}\protected@file@percent }
+\newlabel{tab:semantic-single-run}{{II}{7}{Single-run Semantic Similarity Metrics}{table.caption.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-B}}Cross-Validation Evaluation}{7}{subsection.4.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {III}{\ignorespaces Cross-Validation ROUGE Scores (K=5)}}{7}{table.caption.6}\protected@file@percent }
+\newlabel{tab:cv-rouge}{{III}{7}{Cross-Validation ROUGE Scores (K=5)}{table.caption.6}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {IV}{\ignorespaces Cross-Validation Semantic Similarity Scores (K=5)}}{7}{table.caption.7}\protected@file@percent }
+\newlabel{tab:cv-semantic}{{IV}{7}{Cross-Validation Semantic Similarity Scores (K=5)}{table.caption.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-C}}Expert opinion}{7}{subsection.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-D}}Discussion}{7}{subsection.4.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{References}{7}{section*.8}\protected@file@percent }
 \bibcite{b8}{8}
-\@writefile{toc}{\contentsline {section}{\numberline {IV}Results and Discussion}{6}{section.4}\protected@file@percent }
-\newlabel{sec:results-discussion}{{IV}{6}{Results and Discussion}{section.4}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-A}}Single-Run Evaluation}{6}{subsection.4.1}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces Single-run ROUGE Scores for All Models}}{6}{table.caption.4}\protected@file@percent }
-\newlabel{tab:rouge-single-run}{{I}{6}{Single-run ROUGE Scores for All Models}{table.caption.4}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {II}{\ignorespaces Single-run Semantic Similarity Metrics}}{6}{table.caption.5}\protected@file@percent }
-\newlabel{tab:semantic-single-run}{{II}{6}{Single-run Semantic Similarity Metrics}{table.caption.5}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-B}}Cross-Validation Evaluation}{6}{subsection.4.2}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {III}{\ignorespaces Cross-Validation ROUGE Scores (K=5)}}{6}{table.caption.6}\protected@file@percent }
-\newlabel{tab:cv-rouge}{{III}{6}{Cross-Validation ROUGE Scores (K=5)}{table.caption.6}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {IV}{\ignorespaces Cross-Validation Semantic Similarity Scores (K=5)}}{6}{table.caption.7}\protected@file@percent }
-\newlabel{tab:cv-semantic}{{IV}{6}{Cross-Validation Semantic Similarity Scores (K=5)}{table.caption.7}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-C}}Discussion}{6}{subsection.4.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{T\`ai li\d \ecircumflex u}{6}{section*.8}\protected@file@percent }
 \bibcite{b9}{9}
 \bibcite{b10}{10}
-\gdef \@abspage@last{7}
+\bibcite{b11}{11}
+\bibcite{b12}{12}
+\gdef \@abspage@last{8}

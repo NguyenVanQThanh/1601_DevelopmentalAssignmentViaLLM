@@ -179,10 +179,13 @@ function App() {
                         setChildInfo(data);
                       
                         const ageInDays = data.childAgeInDays;
-                      
+                            // Lấy API base URL từ biến môi trường
+                        const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
+                        // Tạo URL đầy đủ cho endpoint /ask
+                        const apiUrl = `${apiBaseUrl}/form?age_in_days=${ageInDays}`; 
                         if (ageInDays) {
                           try {
-                            const res = await fetch(`http://127.0.0.1:8000/form?age_in_days=${ageInDays}`);
+                            const res = await fetch(apiUrl);
                             const result = await res.json();
                             setAge(result.age); // 👈 Lưu age từ backend vào state
                             console.log("Fetched age info:", result.age);
