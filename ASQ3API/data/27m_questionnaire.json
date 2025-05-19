@@ -178,7 +178,7 @@
         },
         {
           "id": 3,
-          "text": "Sau khi bạn vẽ đường thẳng dọc, bé có bắt chước vẽ giống không?",
+          "text": "Sau khi con của bạn quan sát bạn dùng bút chì (bút màu/bút bi) vẽ một đường thẳng dọc từ đầu đến cuối trang giấy, bạn yêu cầu bé bắt chước vẽ giống đường thẳng bạn đã vẽ mà không được đồ/tô lại. Bé có vẽ được không?",
           "options": [
             "Có",
             "Thỉnh Thoảng",
@@ -218,7 +218,7 @@
             "Chưa"
           ],
           "note": null,
-          "image_filepath": "image22_3.png"
+          "image_filepath": "image27_3.png"
         }
       ],
       "cutoff": 18.42,
