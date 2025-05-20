@@ -12,7 +12,7 @@
       "questions": [
         {
           "id": 1,
-          "text": "Không ra hiệu hoặc gợi ý bằng cử chỉ điệu bộ, khi bạn nói những yêu cầu như: 'Đặt đồ chơi lên bàn', 'Đóng cửa lại', 'Đưa cho mẹ cái khăn', 'Lấy áo khoác cho mẹ', 'Nắm tay mẹ', 'Lấy quyển sách cho mẹ' – con bạn có làm đúng ít nhất 3 yêu cầu không?",
+          "text": "Không ra hiệu hoặc gợi ý bằng cử chỉ điệu bộ, khi bạn nói những yêu cầu như: 'Đặt đồ chơi lên bàn', 'Đóng cửa lại', 'Đưa cho mẹ cái khăn', 'Lấy áo khoác cho mẹ', 'Nắm tay mẹ', 'Lấy quyển sách cho mẹ'. Con bạn có làm đúng ít nhất 3 yêu cầu không?",
           "options": [
             "Có",
             "Thỉnh Thoảng",
@@ -23,7 +23,7 @@
         },
         {
           "id": 2,
-          "text": "Khi bạn chỉ vào hình quả bóng (hoặc con mèo, cái ly/cốc, mũ/nón) và hỏi: “Đây là cái gì?”, bé có gọi tên đúng ít nhất một hình không?",
+          "text": "Khi bạn chỉ vào hình quả bóng (hoặc con mèo, cái ly/cốc, mũ/nón) và hỏi: 'Đây là cái gì?', bé có gọi tên đúng ít nhất một hình không?",
           "options": [
             "Có",
             "Thỉnh Thoảng",
@@ -45,7 +45,7 @@
         },
         {
           "id": 4,
-          "text": "Con bạn có sử dụng đúng ít nhất hai từ/cụm từ như: “con”, “của con”, “mẹ”, “cô” không?",
+          "text": "Con bạn có sử dụng đúng ít nhất hai từ/cụm từ như: 'con', 'của con', 'mẹ', 'cô' không?",
           "options": [
             "Có",
             "Thỉnh Thoảng",
@@ -67,7 +67,7 @@
         },
         {
           "id": 6,
-          "text": "Không ra hiệu hoặc dùng cử chỉ, khi yêu cầu con: “Con đặt sách trên bàn” và “Con đặt giày dưới ghế”, bé có thực hiện đúng cả 2 mệnh lệnh không?",
+          "text": "Không ra hiệu hoặc dùng cử chỉ, khi yêu cầu con: 'Con đặt sách trên bàn' và 'Con đặt giày dưới ghế', bé có thực hiện đúng cả 2 mệnh lệnh không?",
           "options": [
             "Có",
             "Thỉnh Thoảng",
@@ -84,7 +84,7 @@
       "questions": [
         {
           "id": 1,
-          "text": "Con bạn có thể tự bước lên hoặc xuống ít nhất hai bậc cầu thang không? (có thể vịn)",
+          "text": "Con bạn có thể tự bước lên hoặc xuống ít nhất hai bậc cầu thang không? Bé có thể vịn vào tường hoặc tay vịn cầu thang",
           "options": [
             "Có",
             "Thỉnh Thoảng",
@@ -139,7 +139,7 @@
         },
         {
           "id": 6,
-          "text": "Khi đi lên cầu thang, con bạn có thể bước lần lượt từng chân lên mỗi bậc không?",
+          "text": "Khi đi lên cầu thang, con bạn có thể bước lần lượt từng chân lên mỗi bậc không? Bé có thể vịn vào tay vịn cầu thang hoặc tường",
           "options": [
             "Có",
             "Thỉnh Thoảng",
@@ -189,7 +189,7 @@
         },
         {
           "id": 4,
-          "text": "Con bạn có xếp được 7 khối gỗ nhỏ chồng lên nhau không?",
+          "text": "Con bạn có xếp được 7 khối gỗ hoặc đồ chơi nhỏ chồng lên nhau không?",
           "options": [
             "Có",
             "Thỉnh Thoảng",
@@ -250,7 +250,7 @@
         },
         {
           "id": 3,
-          "text": "Khi đang cùng bé nhìn vào gương, bạn hỏi '(Dùng tên bé) đâu rồi?' Bé có chỉ vào hình ảnh của mình trong gương không?",
+          "text": "Khi đang cùng bé nhìn vào gương, bạn hỏi '(Dùng tên bé) ... đâu rồi?' Bé có chỉ vào hình ảnh của mình trong gương không?",
           "options": [
             "Có",
             "Thỉnh Thoảng",
@@ -283,13 +283,13 @@
         },
         {
           "id": 6,
-          "text": "Khi bạn chỉ vào hình bên và hỏi “Hình gì đây?', con của bạn có nói được từ có liên quan đến người hoặc cái gì đó tương tự?",
+          "text": "Khi bạn chỉ vào hình bên và hỏi 'Hình gì đây?', con của bạn có nói được từ có liên quan đến người hoặc cái gì đó tương tự?",
           "options": [
             "Có",
             "Thỉnh Thoảng",
             "Chưa"
           ],
-          "note": "Đánh dấu 'có' khi con nói được một trong các từ như: 'người tuyết', 'con trai', 'đàn ông', 'con gái', 'bố', 'người ngoài hành tinh', 'con khỉ', 'con gà'.",
+          "note": "Đánh dấu 'Có' khi con nói được một trong các từ như: 'người tuyết', 'con trai', 'đàn ông', 'con gái', 'bố', 'người ngoài hành tinh', 'con khỉ', 'con gà'.",
           "image_filepath": "image_placeholder.png"
         }
       ],
@@ -300,7 +300,7 @@
       "questions": [
         {
           "id": 1,
-          "text": "Nếu bạn làm các động tác như há miệng, nháy mắt, kéo tai, vỗ má… bé có bắt chước ít nhất một hành động không?",
+          "text": "Nếu bạn làm các động tác như há và ngậm miệng, nháy mắt, kéo tai, vỗ nhẹ lên má… bé có bắt chước ít nhất một hành động không?",
           "options": [
             "Có",
             "Thỉnh Thoảng",
@@ -344,7 +344,7 @@
         },
         {
           "id": 5,
-          "text": "Con của bạn có thường dùng từ 'con', 'cháu' để xưng hô hơn dùng tên của bé “không? Ví dụ, bé nói: 'Con làm cái này' thường hơn 'Bi làm cái này'.",
+          "text": "Con của bạn có thường dùng từ 'Con', 'Cháu' để xưng hô hơn dùng tên của bé không? Ví dụ, bé nói: 'Con làm cái này' thường hơn 'Bi làm cái này'.",
           "options": [
             "Có",
             "Thỉnh Thoảng",

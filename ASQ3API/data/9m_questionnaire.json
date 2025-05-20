@@ -12,7 +12,7 @@
       "questions": [
         {
           "id": 1,
-          "text": "Con của bạn có phát ra các âm thanh như “đa”, “ga”, “ca” và “ba” không?",
+          "text": "Con của bạn có phát ra các âm thanh như 'Đa', 'Ga', 'Ca' và 'Ba' không?",
           "options": [
             "Có",
             "Thỉnh Thoảng",
@@ -34,7 +34,7 @@
         },
         {
           "id": 3,
-          "text": "Con của bạn có phát ra hai âm giống nhau như “ba-ba”, “đa-đa” hoặc “ga-ga” không?",
+          "text": "Con của bạn có phát ra hai âm giống nhau như 'Ba-ba', 'Đa-đa' hoặc 'Ga-ga' không?",
           "options": [
             "Có",
             "Thỉnh Thoảng",
@@ -45,7 +45,7 @@
         },
         {
           "id": 4,
-          "text": "Nếu bạn yêu cầu con của bạn chơi một trong các trò chơi sau: “ú òa”, “chi chi chành chành”, “vỗ tay” hoặc “hôn tạm biệt”… mà không hướng dẫn, thì bé có chơi được không?",
+          "text": "Nếu bạn yêu cầu con của bạn chơi một trong các trò chơi sau: 'ú òa', 'chi chi chành chành', 'vỗ tay' hoặc 'hôn tạm biệt'... mà không hướng dẫn, thì bé có chơi được không?",
           "options": [
             "Có",
             "Thỉnh Thoảng",
@@ -56,7 +56,7 @@
         },
         {
           "id": 5,
-          "text": "Nếu bạn đưa ra một yêu cầu đơn giản như: “lại đây”, “đưa cho mẹ” hoặc “để/đặt đồ xuống”, mà không kèm theo cử chỉ điệu bộ thì con của bạn có làm theo yêu cầu đó không?",
+          "text": "Nếu bạn đưa ra một yêu cầu đơn giản như: 'Lại đây', 'Đưa cho mẹ' hoặc 'Để/đặt đồ xuống', mà không kèm theo cử chỉ điệu bộ thì con của bạn có làm theo yêu cầu đó không?",
           "options": [
             "Có",
             "Thỉnh Thoảng",
@@ -67,7 +67,7 @@
         },
         {
           "id": 6,
-          "text": "Con của bạn đã biết nói 3 từ, ví dụ “baba”, “mama”, hoặc “mummum”?",
+          "text": "Con của bạn đã biết nói 3 từ, ví dụ 'Baba', 'Mama', hoặc 'Mummum'?",
           "options": [
             "Có",
             "Thỉnh Thoảng",

@@ -5,7 +5,7 @@
       "min_days": 1735,
       "max_days": 2010
     },
-    "title": "BỘ CÂU HỎI 60 THÁNG TUỔI"
+    "title": "BỘ CÂU HỎI 54 THÁNG TUỔI"
   },
   "question": {
     "communication": {
@@ -67,7 +67,7 @@
         },
         {
           "id": 6,
-          "text": "Con của bạn đã biết phân biệt các loại từ khác nhau hoặc diễn đạt các ý khác nhau về thời gian chưa? Ví dụ, con có biết dùng các từ 'sẽ', 'đã', 'rồi', 'chua' trong câu con nói hoặc trong cách con trả lời về những điều đã xảy ra, hoặc dùng các từ như 'hôm qua', 'ngày mai' không?",
+          "text": "Con của bạn đã biết phân biệt các loại từ khác nhau hoặc diễn đạt các ý khác nhau về thời gian chưa? Ví dụ, con có biết dùng các từ 'sẽ', 'đã', 'rồi', 'chưa' trong câu con nói hoặc trong cách con trả lời về những điều đã xảy ra, hoặc dùng các từ như 'hôm qua', 'ngày mai' không?",
           "options": [
             "Có",
             "Thỉnh Thoảng",
@@ -84,7 +84,7 @@
       "questions": [
         {
           "id": 1,
-          "text": "Khi đứng, con bạn có thể ném bóng về phía người đối diện đứng cách trẻ ít nhất khoảng 6 feet/2 m không? Để ném bóng, bé phải gio tay cao ngang vai và ném bóng về phía trước.",
+          "text": "Con của bạn có thể nhảy lò cò ít nhất 1 bước (trên chân phải hoặc trái đều được) mà không bị mất thăng bằng hay bị ngã không?",
           "options": [
             "Có",
             "Thỉnh Thoảng",
@@ -93,8 +93,20 @@
           "note": "Đánh dấu 'chưa' nếu bé làm rơi bóng hoặc để bàn tay cầm bóng thấp hơn vai khi ném.",
           "image_filepath": "image33_1.png"
         },
+        
         {
           "id": 2,
+          "text": "Khi đứng, con bạn có thể ném bóng về phía người đối diện đứng cách trẻ ít nhất khoảng 6 feet/2 m không? Để ném bóng, bé phải gio tay cao ngang vai và ném bóng về phía trước.",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": "Đánh dấu 'chưa' nếu bé làm rơi bóng hoặc để bàn tay cầm bóng thấp hơn vai khi ném.",
+          "image_filepath": "image42_1.png"
+        },
+        {
+          "id": 3,
           "text": "Con của bạn có thể nhảy chụm chân một đoạn khoảng 20 inches/50 cm từ vị trí bé đứng không?",
           "options": [
             "Có",
@@ -105,7 +117,7 @@
           "image_filepath": "image42_1.png"
         },
         {
-          "id": 3,
+          "id": 4,
           "text": "Con của bạn có thể bắt được một quả bóng to bằng cả hai bàn tay không?",
           "options": [
             "Có",
@@ -116,7 +128,7 @@
           "image_filepath": "image30_1.png"
         },
         {
-          "id": 4,
+          "id": 5,
           "text": "Không phải bám vào vật gì, con bạn có thể đứng bằng một chân ít nhất trong 5 giây mà không bị mất thăng bằng hay phải hạ chân kia xuống không?",
           "options": [
             "Có",
@@ -127,7 +139,7 @@
           "image_filepath": null
         },
         {
-          "id": 5,
+          "id": 6,
           "text": "Trẻ có thể đi kiễng/đi nhón trên đầu ngón chân được khoảng 15 feet/4.5 m (bằng chiều dài của một chiếc ô tô lớn) không?",
           "options": [
             "Có",
@@ -156,7 +168,7 @@
         },
         {
           "id": 2,
-          "text": "Con của bạn có biết coi một hoac nhiều khuy/nut ao không? Bé có thể thao tác trên quần áo của mình hoặc quần áo của búp bê.",
+          "text": "Con của bạn có biết cởi một hoặc nhiều khuy/nút áo không? Bé có thể thao tác trên quần áo của mình hoặc quần áo của búp bê.",
           "options": [
             "Có",
             "Thỉnh Thoảng",
@@ -174,7 +186,7 @@
             "Chưa"
           ],
           "note": null,
-          "image_filepath": "image33_2.png"
+          "image_filepath": null
         },
         {
           "id": 4,
@@ -196,7 +208,7 @@
             "Chưa"
           ],
           "note": null,
-          "image_filepath": "image_placeholder.png"
+          "image_filepath": null
         },
         {
           "id": 6,
@@ -207,7 +219,7 @@
             "Chưa"
           ],
           "note": "Bạn nhớ trông chừng cẩn thận để đảm bảo an toàn cho trẻ.",
-          "image_filepath": null
+          "image_filepath": "image_placeholder.png"
         }
       ],
       "cutoff": 17.32,
@@ -224,11 +236,11 @@
             "Chưa"
           ],
           "note": "Đánh dấu 'có' nếu bé trả lời đúng và sử dụng cả 5 màu.",
-          "image_filepath": "image_placeholder.png"
+          "image_filepath": null
         },
         {
           "id": 2,
-          "text": "Con của bạn có mặc đồ để “diễn xuất', đóng giả là người nào khác hoặc vật gì khác không? Ví dụ, bé có mặc các loại quần áo khác nhau để giả vờ là bố, mẹ, anh, chị, hoặc nhân vật hoặc con vật tưởng tượng nào đó?",
+          "text": "Con của bạn có mặc đồ để 'diễn xuất', đóng giả là người nào khác hoặc vật gì khác không? Ví dụ, bé có mặc các loại quần áo khác nhau để giả vờ là bố, mẹ, anh, chị, hoặc nhân vật hoặc con vật tưởng tượng nào đó?",
           "options": [
             "Có",
             "Thỉnh Thoảng",
@@ -257,7 +269,7 @@
             "Chưa"
           ],
           "note": "Bạn hãy hỏi câu hỏi này mà không giúp trẻ bằng cách chỉ, ra hiệu hoặc nhìn vào hình nhỏ nhất.",
-          "image_filepath": null
+          "image_filepath": "image_placeholder.png"
         },
         {
           "id": 5,
@@ -268,7 +280,7 @@
             "Chưa"
           ],
           "note": null,
-          "image_filepath": "image_placeholder.png"
+          "image_filepath": null
         },
         {
           "id": 6,
@@ -322,7 +334,7 @@
         },
         {
           "id": 4,
-          "text": "Con của bạn biết cách tự ăn uống, sử dụng thìa/muỗng, muôi / vá và bát / tô chưa? Ví dụ, con có biết sử dụng thìa/muỗng lớn để múc nước canh hoặc lấy cơm từ bát/tô to ra bát/tô nhỏ không? Hoặc nếu biết dùng đũa, con có dùng đua gắp thức ăn mà không làm rơi vãi nhiều không?",
+          "text": "Con của bạn biết cách tự ăn uống, sử dụng thìa/muỗng, muôi/vá và bát/tô chưa? Ví dụ, con có biết sử dụng thìa/muỗng lớn để múc nước canh hoặc lấy cơm từ bát/tô to ra bát/tô nhỏ không? Hoặc nếu biết dùng đũa, con có dùng đũa gắp thức ăn mà không làm rơi vãi nhiều không?",
           "options": [
             "Có",
             "Thỉnh Thoảng",
@@ -333,7 +345,7 @@
         },
         {
           "id": 5,
-          "text": "Con có nói đúng ít nhất 4 trong số: tên, họ, tuổi, giới tính, địa chỉ, số điện thoại không?",
+          "text": "Con có nói đúng ít nhất 4 trong số: tên, họ, tuổi, con trai/con gái, tỉnh/thành phố đang sống, số điện thoại không?",
           "options": [
             "Có",
             "Thỉnh Thoảng",
