@@ -1,137 +1,135 @@
-import './ResultPage.css'; 
-import Button from './components/Button/Button';
-import { useRef } from 'react';
-import jsPDF from 'jspdf';
-import html2canvas from 'html2canvas';
+import React, { useRef } from "react";
+import "./ResultPage.css";
+import Button from "./components/Button/Button";
+import { Link, useNavigate } from "react-router-dom";
+import jsPDF from "jspdf";
+import html2canvas from "html2canvas";
 
-function ResultPage({ childInfo, parentInfo, testResult }) {
-  const { age, comment, lstScores } = testResult;
-  const resultRef = useRef();
+const formatDate = (dateStr) => {
+  if (!dateStr) return "N/A";
+  const date = new Date(dateStr);
+  if (isNaN(date.getTime())) return "N/A";
+  const day = String(date.getDate()).padStart(2, '0');
+  const month = String(date.getMonth() + 1).padStart(2, '0');
+  const year = date.getFullYear();
+  return `${day}/${month}/${year}`;
+};
 
-  const formatDate = (dateStr) => {
-    if (!dateStr) return '';
-    const [year, month, day] = dateStr.split('-');
-    return `${day}/${month}/${year}`;
+const domainDisplayMapping = {
+  communication: "GIAO TIẾP",
+  gross_motor: "VẬN ĐỘNG THÔ",
+  fine_motor: "VẬN ĐỘNG TINH",
+  problem_solving: "GIẢI QUYẾT VẤN ĐỀ",
+  personal_social: "CÁ NHÂN XÃ HỘI",
+};
+
+const DevelopmentSummary = ({ sectionsResult }) => {
+  if (!sectionsResult || Object.keys(sectionsResult).length === 0) {
+    return <p>Không có dữ liệu nhận xét chi tiết.</p>;
+  }
+  const statusGroups = {
+    "PHÁT TRIỂN BÌNH THƯỜNG": [],
+    "CÓ NGUY CƠ CHẬM (Cần theo dõi sát)": [],
+    "CHẬM RÕ RỆT (Cần đánh giá chuyên sâu)": [],
+    "KHÁC": []
   };
+  Object.values(sectionsResult).forEach((section) => {
+    (statusGroups[section.status] || statusGroups["KHÁC"]).push(section.display_name);
+  });
+  const normalK = "PHÁT TRIỂN BÌNH THƯỜNG", riskK="CÓ NGUY CƠ CHẬM (Cần theo dõi sát)", delayK="CHẬM RÕ RỆT (Cần đánh giá chuyên sâu)";
+
+  return (
+    <div className="development-summary">
+      {statusGroups[normalK]?.length > 0 && (<p>Trẻ có trạng thái phát triển <b>BÌNH THƯỜNG</b> ở các lĩnh vực: <b>{statusGroups[normalK].join(", ")}</b>. Điểm số của trẻ trong các lĩnh vực này nằm trong vùng màu <b>XANH LÁ</b>, cho thấy sự phát triển phù hợp với lứa tuổi. Phụ huynh nên tiếp tục tạo điều kiện và khuyến khích trẻ phát huy các kỹ năng này. Nếu có bất kỳ thắc mắc nào, bạn có thể trao đổi thêm với <b>CHATBOT</b> để có thêm gợi ý hoạt động.</p>)}
+      {statusGroups[riskK]?.length > 0 && (<p>Trẻ có trạng thái <b>CÓ NGUY CƠ CHẬM</b> ở các lĩnh vực: <b>{statusGroups[riskK].join(", ")}</b>. Điểm số của trẻ trong các lĩnh vực này nằm trong vùng màu <b>CAM</b>. Điều này gợi ý rằng một số kỹ năng của trẻ có thể chưa thành thục hoặc trẻ thực hiện chưa thường xuyên. Phụ huynh nên chú ý theo dõi sát hơn, cung cấp thêm các hoạt động kích thích phù hợp cho các lĩnh vực này và có thể làm lại bài sàng lọc sau một thời gian. Nếu lo lắng, việc tham khảo ý kiến của bác sĩ hoặc chuyên gia phát triển trẻ em là rất cần thiết.</p>)}
+      {statusGroups[delayK]?.length > 0 && (<p>Trẻ có trạng thái <b>CHẬM RÕ RỆT</b> ở các lĩnh vực: <b>{statusGroups[delayK].join(", ")}</b>. Điểm số của trẻ trong các lĩnh vực này nằm trong vùng màu <b>XÁM</b>. Điều này cho thấy trẻ có thể đang gặp khó khăn đáng kể so với các bạn cùng tuổi. Phụ huynh nên sớm đưa trẻ đến gặp bác sĩ nhi khoa hoặc các chuyên gia phát triển trẻ em để được đánh giá chuyên sâu, chẩn đoán chính xác và có kế hoạch can thiệp sớm phù hợp.</p>)}
+      {statusGroups["KHÁC"]?.length > 0 && (<p>Lưu ý: Có một số lĩnh vực với trạng thái <b>{statusGroups["KHÁC"].join(", ")}</b>. Vui lòng tham khảo ý kiến chuyên gia.</p>)}
+    </div>
+  );
+};
+
+function ResultPage({ childInfo, parentInfo, processedAsqResults, llmGeneratedSolutions, onRestartTest }) {
+  const resultRef = useRef();
+  const navigate = useNavigate();
+
+  if (!processedAsqResults) {
+    return <div className="result-page-loading"><p>Đang tải kết quả, vui lòng chờ...</p></div>;
+  }
+
+  const { sections = {}, overall_summary, questionnaire_title, age_at_test_months } = processedAsqResults;
+
+  const lstScores = Object.entries(sections).map(([key, data]) => ({
+    field: data.display_name || domainDisplayMapping[key] || key.toUpperCase(),
+    score: data.total_score, cutoff: data.cutoff, monitor: data.monitor, status: data.status,
+  }));
 
   const handleDownloadPDF = async () => {
-    const element = resultRef.current;
-    const pdfHeader = element.querySelector('.pdf-only-header');
-  
-    // 👉 Tạm thời hiển thị tiêu đề
-    pdfHeader.style.display = 'block';
-  
-    // 👉 Đợi một chút để DOM cập nhật (html2canvas cần render đúng)
-    await new Promise(resolve => setTimeout(resolve, 200));
-  
-    // 👉 Tạo canvas từ DOM đã hiển thị
-    const canvas = await html2canvas(element, { scale: 2 });
-    const imgData = canvas.toDataURL('image/png');
-  
-    const pdf = new jsPDF('p', 'mm', 'a4');
-    const imgProps = pdf.getImageProperties(imgData);
-    const pdfWidth = pdf.internal.pageSize.getWidth();
-    const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
-  
-    pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
-    pdf.save('ASQ3_KetQua.pdf');
-  
-    // 👉 Ẩn lại tiêu đề
-    pdfHeader.style.display = 'none';
+    const elementToCapture = resultRef.current; if (!elementToCapture) return;
+    const pdfHeader = elementToCapture.querySelector(".pdf-only-header");
+    if (pdfHeader) pdfHeader.style.display = "block";
+    await new Promise((resolve) => setTimeout(resolve, 100));
+    try {
+      const canvas = await html2canvas(elementToCapture, { scale: 2, useCORS: true, logging: false });
+      const imgData = canvas.toDataURL("image/png", 1.0);
+      const pdf = new jsPDF({ orientation: "p", unit: "mm", format: "a4" });
+      const imgProps = pdf.getImageProperties(imgData);
+      const pdfWidth = pdf.internal.pageSize.getWidth(); const pdfPageHeight = pdf.internal.pageSize.getHeight();
+      const imgHeight = (imgProps.height * pdfWidth) / imgProps.width;
+      let heightLeft = imgHeight; let position = 0;
+      pdf.addImage(imgData, "PNG", 0, position, pdfWidth, imgHeight); heightLeft -= pdfPageHeight;
+      while (heightLeft > 0) { position -= pdfPageHeight; pdf.addPage(); pdf.addImage(imgData, "PNG", 0, position, pdfWidth, imgHeight); heightLeft -= pdfPageHeight; }
+      pdf.save(`ASQ3_KetQua_${childInfo?.fullName?.replace(/\s+/g, '_')||'Tre'}_${new Date().toISOString().slice(0,10)}.pdf`);
+    } catch (error) { console.error("Lỗi tạo PDF:", error); alert("Lỗi khi tạo file PDF.");
+    } finally { if (pdfHeader) pdfHeader.style.display = "none"; }
   };
   
-  
+  const handleRestart = () => { if(onRestartTest) onRestartTest(); navigate('/guest/asq3-test'); }
 
   return (
     <div className="result-page">
-        <div className="print-pdf" ref={resultRef}>
-    <div className="pdf-only-header">
-    <h2 className="pdf-title">Kết quả bài sàng lọc đánh giá phát triển theo độ tuổi ASQ-3</h2>
-    <p className="pdf-time">Thời gian: {new Date().toLocaleString()}</p>
-  </div>
-      {/* 1. THÔNG TIN TRẺ */}
-      <section className="section">
-        <h3 className="chapter">1. THÔNG TIN CHUNG</h3>
-        <div className="info-grid">
-          <div><strong>Họ và tên trẻ:</strong> {childInfo.fullName}</div>
-          <div><strong>Ngày sinh:</strong> {formatDate(childInfo.birthDate)}</div>
-          <div><strong>SĐT liên hệ:</strong> {parentInfo.phone}</div>
-          <div><strong>Nơi sàng lọc:</strong> {parentInfo.place}</div>
-          <div><strong>Ngày thực hiện:</strong> {new Date().toLocaleDateString()}</div>
+      <div className="print-pdf" ref={resultRef}>
+        <div className="pdf-only-header" style={{display:"none", textAlign:'center', marginBottom:'20px'}}>
+          <h2 className="pdf-title">KẾT QUẢ SÀNG LỌC PHÁT TRIỂN ASQ-3</h2>
+          {questionnaire_title && <p className="pdf-subtitle">(Bộ câu hỏi: {questionnaire_title})</p>}
+          <p className="pdf-time">Thời gian xuất: {new Date().toLocaleString('vi-VN')}</p>
         </div>
-      </section>
-
-      {/* 2. GIẢI THÍCH */}
-      <section className="section">
-        <h3 className="chapter">2. GIẢI THÍCH VỀ SÀNG LỌC ASQ-3</h3>
-        <p>ASQ-3 là bộ sàng lọc chuẩn dành cho cha mẹ/ người chăm sóc để tự điền nhằm sàng lọc sự phát triển của trẻ nhỏ...</p>
-        <div className="legend">
-          <p className="lv1">- Vùng điểm thể hiện trẻ đang gặp khó khăn - CHẬM PHÁT TRIỂN</p>
-          <p className="lv2">- Vùng điểm thể hiện trẻ cần được theo dõi thêm và làm sàng lọc lại do một số kỹ năng chưa thành thục - CẦN THEO DÕI </p>
-          <p className="lv3">- Vùng điểm thể hiện trẻ có sự phát triển bình thường - BÌNH THƯỜNG</p>
-        </div>
-      </section>
-
-      {/* 3. ĐIỂM */}
-      <section className="section">
-        <h3 className="chapter">3. ĐIỂM CỦA TRẺ SAU KHI SÀNG LỌC</h3>
-        <table className="score-table">
-          <thead>
-            <tr>
-              <th>Lĩnh vực</th>
-              <th>Ngưỡng điểm</th>
-              <th>Điểm của trẻ</th>
-              <th>Thang chuẩn 0 - 60 </th>
-            </tr>
-          </thead>
-          <tbody>
-            {Array.isArray(lstScores) ? (
-              lstScores.map(({ field, score }, idx) => {
-                const leftPercent = Math.min(Math.max((score / 60) * 100, 0), 100);
-                return (
-                  <tr key={idx}>
-                    <td>{field}</td>
-                    <td> </td>
-                    <td>{`${score}`}</td>
-                    <td>
-                      <div className="slider-container">
-                        <div className="slider-track"></div>
-                        <div
-                          className="slider-dot"
-                          style={{ left: `${leftPercent}%` }}
-                          title={`Điểm: ${score}`}
-                        />
-                      </div>
-                      <div style={{ marginTop: 4, textAlign: 'center' }}>{score}</div>
-                    </td>
-                  </tr>
-                );
-              })
-            ) : (
-              <tr>
-                <td colSpan="4">Không có dữ liệu điểm sàng lọc</td>
-              </tr>
-            )}
-          </tbody>
-        </table>
-      </section>
-
-      {/* 4 + 5 */}
-      <section className="section">
-        <h3 className="chapter">4. KẾT QUẢ DỰ ĐOÁN MỨC ĐỘ PHÁT TRIỂN CỦA TRẺ</h3>
-        <p>..............</p>
-        <h3 className="chapter">5. ĐỀ XUẤT GIẢI PHÁP</h3>
-        <p>..............</p>
-      </section>
-
+        <section className="section result-section"><h3 className="chapter">1. THÔNG TIN CHUNG</h3><div className="info-grid">
+            <div><strong>Họ tên trẻ:</strong> {childInfo?.fullName||'N/A'}</div><div><strong>Ngày sinh:</strong> {formatDate(childInfo?.birthDate)}</div>
+            <div><strong>Tuổi (test):</strong> {age_at_test_months!==undefined?`${age_at_test_months} tháng`:'N/A'}</div><div><strong>Giới tính:</strong> {childInfo?.gender||'N/A'}</div>
+            <div><strong>SĐT liên hệ:</strong> {parentInfo?.phone||'N/A'}</div><div><strong>Địa chỉ:</strong> {parentInfo?.address||'N/A'}</div>
+            <div><strong>Nơi sàng lọc:</strong> {parentInfo?.place||'N/A'}</div><div><strong>Ngày thực hiện:</strong> {new Date().toLocaleDateString('vi-VN')}</div>
+        </div></section>
+        <section className="section result-section"><h3 className="chapter">2. GIẢI THÍCH KẾT QUẢ</h3>
+            <p>ASQ-3 là công cụ sàng lọc sự phát triển của trẻ. Kết quả giúp đánh giá kỹ năng của trẻ so với mốc phát triển theo độ tuổi.</p>
+            <div className="legend">
+                <p className="legend-item legend-gray"><span className="color-box gray"></span>Vùng XÁM: Chậm phát triển rõ rệt. Cần đánh giá chuyên sâu.</p>
+                <p className="legend-item legend-orange"><span className="color-box orange"></span>Vùng CAM: Có nguy cơ chậm. Cần theo dõi, kích thích, có thể đánh giá lại.</p>
+                <p className="legend-item legend-green"><span className="color-box green"></span>Vùng XANH LÁ: Phát triển bình thường. Tiếp tục khuyến khích trẻ.</p>
+            </div>
+        </section>
+        <section className="section result-section"><h3 className="chapter">3. ĐIỂM SÀNG LỌC CỦA TRẺ</h3>
+            <p><em>Tóm tắt từ hệ thống: {overall_summary}</em></p>
+            <table className="score-table">
+                <thead><tr><th>Lĩnh vực</th><th>Ngưỡng "Chậm" </th><th>Ngưỡng "Theo dõi" </th><th>Điểm</th><th style={{width:'200px'}}>Trạng thái</th><th style={{width:"250px"}}>Thang điểm (0-60)</th></tr></thead>
+                <tbody>{lstScores.map(({field,score,cutoff,monitor,status},idx)=>{
+                    const sp=Math.min(Math.max((score/60)*100,0),100); const cp=Math.round((cutoff/60)*100); const mp=Math.round((monitor/60)*100);
+                    let bg; if(mp>cp)bg=`linear-gradient(to right, #BDBDBD ${cp}%, #FFB74D ${cp}%, #FFB74D ${mp}%, #81C784 ${mp}%, #81C784 100%)`;else bg=`linear-gradient(to right, #BDBDBD ${mp}%, #81C784 ${mp}%, #81C784 100%)`;
+                    return(<tr key={idx}><td>{field}</td><td>{`< ${cutoff.toFixed(0)}`}</td><td>{`${cutoff.toFixed(0)} - ${monitor.toFixed(0)}`}</td><td><b>{score.toFixed(0)}</b></td><td style={{fontWeight:status!=="PHÁT TRIỂN BÌNH THƯỜNG"?"bold":"normal",color:status.includes("RÕ RỆT")?"#757575":status.includes("NGUY CƠ")?"#EF6C00":"#2E7D32"}}>{status}</td><td><div className="slider-container"><div className="slider-track"style={{background:bg}}>{[0,10,20,30,40,50,60].map(v=>(<span key={v}className="slider-marker"style={{left:`${(v/60)*100}%`}}>{v}</span>))}</div><div className="slider-dot"style={{left:`${sp}%`}}title={`Điểm: ${score.toFixed(0)}`}/></div></td></tr>);
+                })}</tbody>
+            </table>
+        </section>
+        <section className="section result-section"><h3 className="chapter">4. NHẬN XÉT CHUNG</h3><DevelopmentSummary sectionsResult={sections}/></section>
+        <section className="section result-section"><h3 className="chapter">5. GỢI Ý VÀ ĐỀ XUẤT TỪ TRỢ LÝ AI</h3>
+            {llmGeneratedSolutions ? (<div className="llm-solutions" style={{whiteSpace:"pre-line"}}>{llmGeneratedSolutions.split('\n').map((l,i)=>(<p key={i}>{l}</p>))}</div>) : (<p>Đang tải gợi ý từ trợ lý AI hoặc chưa có gợi ý chi tiết. Bạn có thể trò chuyện với trợ lý để được tư vấn thêm.</p>)}
+            <p style={{marginTop:'20px',fontStyle:'italic',fontSize:'0.9em'}}>Lưu ý quan trọng: Kết quả ASQ-3 là công cụ sàng lọc ban đầu, không phải là chẩn đoán y tế. Nếu có bất kỳ lo ngại nào, phụ huynh nên đưa trẻ đến gặp bác sĩ hoặc chuyên gia để được đánh giá và tư vấn cụ thể.</p>
+        </section>
       </div>
-
       <div className="result-buttons">
-        <Button onClick={handleDownloadPDF}>Tải kết quả</Button>
-        <Button>Xem kết quả qua email</Button>
+        <Button onClick={handleDownloadPDF}>Tải kết quả (PDF)</Button>
+        <Button onClick={handleRestart} variant="outlined">Làm lại bài Test</Button>
+        <Link to="/guest/chatbot"><Button variant="secondary">Trò chuyện với Trợ lý AI</Button></Link>
       </div>
     </div>
   );
 }
-
 export default ResultPage;

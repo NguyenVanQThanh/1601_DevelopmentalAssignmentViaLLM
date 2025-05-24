@@ -67,20 +67,58 @@
 }
 
 /* Mobile responsive */
-@media (max-width: 768px) {
-  .header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
 
-  .nav {
+  
+  /* .nav {
     width: 100%;
     flex-direction: column;
     align-items: flex-start;
     font-size: 22px;
   }
 
-  .nav a {
+  
+  .account-icon{
+    padding-left: 20px;
+  }
+} */
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 40px; /* Khoảng cách giữa nav và icon */
+}
+
+.nav-account-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-left: auto;
+}
+
+.account-icon {
+  color: #1f2c3f;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .account-icon {
+    padding-left: 0;
+    margin-top: 10px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+.nav a {
     width: 100%;
     text-align: left;
     font-size: 22px;

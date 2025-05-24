@@ -41,12 +41,17 @@ const PERSON_IMG = "/static/img/person.png";
 const BOT_NAME = "Psychiatrist Bot";
 const PERSON_NAME = "You";
 
-// Hàm xử lý ký tự xuống dòng
+// Hàm xử lý ký tự xuống dòng và loại bỏ khoảng trắng dư
 function formatText(text) {
   if (typeof text !== 'string') {
     return ''; // Trả về chuỗi rỗng nếu text không phải là string
   }
-  return text.replace(/\n/g, '<br>'); // Thay \n bằng <br>
+  // Loại bỏ khoảng trắng dư, chuẩn hóa khoảng trắng giữa các từ, giữ lại xuống dòng
+  text = text
+    .trim() // Loại bỏ khoảng trắng ở đầu và cuối
+    .replace(/\s+/g, ' ') // Thay thế nhiều khoảng trắng liên tiếp bằng 1 khoảng trắng
+    .replace(/\n/g, '<br>'); // Thay \n bằng <br>
+  return text;
 }
 
 // Hàm thêm tin nhắn vào giao diện
@@ -92,15 +97,15 @@ msgerForm.addEventListener("submit", event => {
   botResponse(msgText);
 });
 
-// Gửi yêu cầu đến server và nhận phản hồi với try-catch
 async function botResponse(rawText) {
   try {
     const response = await fetch(`/get?msg=${encodeURIComponent(rawText)}`);
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }
+    console.log(response);
     const data = await response.json(); // Parse JSON
-    const botMessage = data.response || "Không có phản hồi từ server."; // Kiểm tra data.response
+    const botMessage = data || "Không có phản hồi từ server."; // Dùng trực tiếp data
     console.log("User message:", rawText);
     console.log("Bot response:", botMessage);
     removeLoading(); // Xóa loading
