@@ -9,12 +9,15 @@ import FormASQTest from "./page/test-asq/components/Form/FormASQTest";
 import FormParentInfo from "./page/test-asq/components/Form/FormParentInfo";
 import ResultPage from "./page/test-asq/ResultPage";
 import ChatbotPage from "./page/chatbot/ChatbotPage";
+import Predict1 from './page/predict/Predict1';
+import Predict2 from "./page/predict/Predict2";
+import Predict3 from "./page/predict/Predict3";
+
 
 import { provinces } from "./dataweb/provinces";
 import { hospitals } from "./dataweb/hospitals";
 import { results as diagnosisResults } from "./dataweb/results";
 import { doctors } from "./dataweb/doctors";
-
 function App() {
   const [showExtraFields, setShowExtraFields] = useState(false);
   const [step, setStep] = useState(1);
@@ -203,6 +206,10 @@ function App() {
             </section></main>
           } />
         <Route path="/guest/chatbot" element={<ChatbotPage initialMessage={initialChatbotMessage} sessionId={sessionId} accessToken={accessToken} onInitialMessageShown={() => { setInitialChatbotMessage(null); }} />} />
+        <Route path="/guest/predict" element={<Predict1/>} />
+        <Route path="/guest/predict/step2" element={<Predict2 />} />
+        <Route path="/guest/predict/step3" element={<Predict3 />} />
+
       </Routes>
       <div className="container-footer"><Footer /></div>
     </div>
