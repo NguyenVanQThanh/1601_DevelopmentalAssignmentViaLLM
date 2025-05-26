@@ -12,7 +12,7 @@
       "questions": [
         {
           "id": 1,
-          "text": "Con của bạn đã biết nói 3 từ, ví dụ “baba”, “mama”, hoặc “mummum”?",
+          "text": "Con của bạn đã biết nói 3 từ, ví dụ 'Baba', 'Mama', hoặc 'Mummum'?",
           "options": [
             "Có",
             "Thỉnh Thoảng",
@@ -34,7 +34,7 @@
         },
         {
           "id": 3,
-          "text": "Con của bạn có biết lắc hoặc gật đầu khi muốn thể hiện “không” hoặc “có” không?",
+          "text": "Con của bạn có biết lắc hoặc gật đầu khi muốn thể hiện 'Không' hoặc 'Có' không?",
           "options": [
             "Có",
             "Thỉnh Thoảng",
@@ -56,7 +56,7 @@
         },
         {
           "id": 5,
-          "text": "Ngoài từ “baba” và “mama” con của bạn còn nói thêm ít nhất 4 từ khác nữa không?",
+          "text": "Ngoài từ 'Baba' và 'Mama' con của bạn còn nói thêm ít nhất 4 từ khác nữa không?",
           "options": [
             "Có",
             "Thỉnh Thoảng",
@@ -256,7 +256,7 @@
             "Thỉnh Thoảng",
             "Chưa"
           ],
-          "note": "Nếu bé đã biết tự vẽ nguệch ngoạc, đánh dấu 'có' cho câu hỏi này.",
+          "note": "Nếu bé đã biết tự vẽ nguệch ngoạc, đánh dấu 'Có' cho câu hỏi này.",
           "image_filepath": null
         },
         {

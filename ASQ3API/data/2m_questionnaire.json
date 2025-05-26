@@ -13,7 +13,7 @@
         {
         
           "id": 1,
-          "text": "Con của bạn có thỉnh  thoảng tạo ra âm thanh gừ gừ từ cổ họng không?",
+          "text": "Con của bạn có thỉnh thoảng tạo ra âm thanh gừ gừ từ cổ họng không?",
           "options": [
             "Có",
             "Thỉnh Thoảng",
@@ -24,7 +24,7 @@
         },
         {
           "id": 2,
-          "text": "Con của bạn có tạo ra âm thanh kéo dài, như “uuu”, “ga..”, và “a…” không?",
+          "text": "Con của bạn có tạo ra âm thanh kéo dài, như 'uuu', 'ga...', và 'a...' không?",
           "options": [
             "Có",
             "Thỉnh Thoảng",
@@ -140,7 +140,7 @@
         },
         {
           "id": 6,
-          "text": "Sau khi nằm sấp và ngẩng/giữ đầu cao, con của  bạn có từ từ đặt đầu xuống  sàn, chứ không phải gục đầu nhanh xuống sàn, không?",
+          "text": "Sau khi nằm sấp và ngẩng/giữ đầu cao, con của  bạn có từ từ đặt đầu xuống sàn, chứ không phải gục đầu nhanh xuống sàn, không?",
           "options": [
             "Có",
             "Thỉnh Thoảng",
@@ -163,7 +163,7 @@
             "Thỉnh Thoảng",
             "Chưa"
           ],
-          "note": "(Nếu bé từng nắm như  vậy nhưng giờ không còn nữa, thì đánh dấu 'Có'.)",
+          "note": "Nếu bé từng nắm như  vậy nhưng giờ không còn nữa, thì đánh dấu 'Có'.",
           "image_filepath": null
         },
         {

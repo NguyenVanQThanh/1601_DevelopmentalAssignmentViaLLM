@@ -26,7 +26,7 @@
                 },
                 {
                     "id": 3,
-                    "text": "Ngoài từ 'mama' và 'baba', con của bạn có nói thêm ít nhất 8 từ khác nữa không?",
+                    "text": "Ngoài từ 'Mama' và 'Baba', con của bạn có nói thêm ít nhất 8 từ khác nữa không?",
                     "options": ["Có", "Thỉnh Thoảng", "Chưa"],
                     "note": null,
                     "image_filepath": null

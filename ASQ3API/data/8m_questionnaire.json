@@ -45,7 +45,7 @@
         },
         {
           "id": 4,
-          "text": "Con của bạn có phát ra các âm thanh như “đa”, “ga”, “ca” và “ba” không?",
+          "text": "Con của bạn có phát ra các âm thanh như 'Đa', 'Ga', 'Ca' và 'Ba' không?",
           "options": [
             "Có",
             "Thỉnh Thoảng",
@@ -56,7 +56,7 @@
         },
         {
           "id": 5,
-          "text": "Con của bạn có phản ứng với giọng điệu của bạn và dừng hoạt động (dù chỉ một chút) khi bạn nói “không-không” với bé không?",
+          "text": "Con của bạn có phản ứng với giọng điệu của bạn và dừng hoạt động (dù chỉ một chút) khi bạn nói 'Không-không' với bé không?",
           "options": [
             "Có",
             "Thỉnh Thoảng",
@@ -67,7 +67,7 @@
         },
         {
           "id": 6,
-          "text": "Con của bạn có phát ra hai âm giống nhau như “ba-ba”, “đa-đa” hoặc “ga-ga” không?",
+          "text": "Con của bạn có phát ra hai âm giống nhau như 'Ba-ba', 'Đa-đa' hoặc 'Ga-ga' không?",
           "options": [
             "Có",
             "Thỉnh Thoảng",
@@ -328,7 +328,7 @@
             "Thỉnh Thoảng",
             "Chưa"
           ],
-          "note": "Bé có thể lăn, xoay trên bụng mình, hoặc bò để lấy.)(Bạn phải thấy được khoảng trống giữa đồ chơi và lòng bàn tay của bé.",
+          "note": "Bé có thể lăn, xoay trên bụng mình, hoặc bò để lấy.",
           "image_filepath": null
         },
         {
