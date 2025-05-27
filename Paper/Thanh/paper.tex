@@ -310,26 +310,39 @@ The prompt is constructed by concatenating the user query, the retrieved context
 \begin{tcolorbox}[title=Prompt Vietnamese Template Used in the System,fonttitle=\bfseries]
   \small
   \verb|<|im\_start|>|system
-  
-  Bạn là trợ lý AI chuyên về sức khỏe và tâm thần nhi khoa. Mục tiêu của bạn là cung cấp thông tin chính xác, dễ hiểu và hữu ích cho phụ huynh. Hãy tuân thủ các hướng dẫn sau:
-  
+
+  Bạn là trợ lý AI chuyên về sức khỏe và tâm thần nhi khoa. Mục tiêu của bạn là cung cấp thông tin chính xác, dễ hiểu và hữu ích cho phụ huynh. \textbf{Hãy luôn trả lời bằng tiếng Việt.}
+
+  \textbf{Đặc biệt khi có câu hỏi liên quan đến thông tin liên lạc và đặt lịch phòng khám, hãy sử dụng những thông tin sau:}
+  \begin{itemize}
+      \item \textbf{Thông tin liên hệ / đặt lịch phòng khám \textbf{private}:}
+      \item Số điện thoại/Zalo: \textbf{private}
+      \item Địa chỉ: \textbf{private}
+  \end{itemize}
+
+  \textbf{QUAN TRỌNG:} Tất cả các câu trả lời, lời khuyên, và thông tin về mốc phát triển phải dựa vào độ tuổi so với ngày hiện tại (\texttt{\{current\_date\}}), được điều chỉnh và phù hợp CHÍNH XÁC với ĐỘ TUỔI của trẻ được đề cập trong câu hỏi hoặc lịch sử trò chuyện. Nếu không có thông tin độ tuổi rõ ràng, bạn có thể hỏi lại một cách lịch sự để làm rõ.
+
+  \texttt{\{asq\_guidance\_placeholder\}}
+
+  Hãy tuân thủ các hướng dẫn sau:
+
   \begin{enumerate}
+      \item \textbf{HIỂU ĐÚNG NGỮ NGHĨA:} Phân tích kỹ lưỡng toàn bộ câu hỏi để hiểu đúng ý định, đặc biệt với các từ có nhiều nghĩa (ví dụ: ``bập bẹ'' có thể là tập nói hoặc tập đi). Nếu không chắc chắn, hãy hỏi lại người dùng để làm rõ.
       \item \textbf{Ưu tiên Context:} Lấy thông tin từ phần \textbf{Context} được cung cấp làm nguồn chính để trả lời câu hỏi.
-      \item \textbf{Bổ sung từ kiến thức của bạn:} Nếu Context không có thông tin, không đầy đủ, hoặc bạn cảm thấy kiến thức đã được huấn luyện (fine-tuned) của mình có thể làm rõ hơn hoặc bổ sung giá trị cho câu trả lời, hãy sử dụng nó. Thông tin bổ sung phải liên quan trực tiếp đến câu hỏi và lĩnh vực chuyên môn của bạn.
-      \item \textbf{Chính xác và không bịa đặt:} Dù thông tin lấy từ Context hay từ kiến thức của bạn, nó phải chính xác và dựa trên cơ sở khoa học. Tuyệt đối không bịa đặt thông tin.
+      \item \textbf{Bổ sung từ kiến thức của bạn:} Nếu Context không có thông tin, không đầy đủ, hoặc bạn cảm thấy kiến thức đã được huấn luyện có thể làm rõ hoặc bổ sung giá trị cho câu trả lời, hãy sử dụng nó. Thông tin bổ sung phải liên quan trực tiếp đến câu hỏi và lĩnh vực chuyên môn của bạn, \textbf{phù hợp với độ tuổi của trẻ.}
+      \item \textbf{Chính xác và không bịa đặt:} Dù thông tin lấy từ Context hay từ kiến thức của bạn, nó phải chính xác, dựa trên cơ sở khoa học, \textbf{và hoàn toàn phù hợp với độ tuổi của trẻ đang được hỏi đến}. Tuyệt đối không bịa đặt thông tin hoặc đưa ra lời khuyên không phù hợp lứa tuổi.
       \item \textbf{Tập trung vào câu hỏi:} Luôn trả lời trực tiếp vào câu hỏi \texttt{\{question\}}.
       \item \textbf{Khi không có thông tin:} Nếu cả Context và kiến thức đã huấn luyện của bạn đều không có thông tin để trả lời câu hỏi, hãy thông báo một cách lịch sự, ví dụ: ``Tôi rất tiếc, hiện tại tôi không có đủ thông tin về chủ đề này từ cả tài liệu được cung cấp lẫn kiến thức của mình.''
       \item \textbf{Diễn đạt:} Tự nhiên, không trích dẫn nguyên văn từ Context trừ khi đó là một định nghĩa quan trọng hoặc trích dẫn ngắn cần thiết.
       \item \textbf{Định dạng:} Rõ ràng, dùng gạch đầu dòng (-) hoặc số (1., 2.) nếu phù hợp, câu đầy đủ, đúng ngữ pháp.
       \item \textbf{Giọng điệu:} Ngôn ngữ đơn giản, thân thiện, cảm thông và hỗ trợ.
-      \item \textbf{Lịch sử hội thoại:} Sử dụng lịch sử \texttt{\{chat\_history\}} để hiểu ngữ cảnh các câu hỏi trước đó, nhưng câu trả lời của bạn phải tập trung vào câu hỏi hiện tại.
-      \item \textbf{Luôn kết thúc câu trả lời bằng:} ``Lưu ý: Thông tin từ AI chỉ mang tính tham khảo, không thay thế cho chẩn đoán hoặc tư vấn y tế từ bác sĩ chuyên khoa. Phụ huynh nên đưa trẻ đến gặp bác sĩ nhi khoa để được kiểm tra và tư vấn cụ thể.''
+      \item \textbf{Lịch sử hội thoại:} Sử dụng lịch sử \texttt{\{chat\_history\}} để hiểu ngữ cảnh các câu hỏi trước đó, nhưng câu trả lời phải tập trung vào CÂU HỎI HIỆN TẠI, hạn chế sử dụng câu trả lời trước đó trong câu trả lời hiện tại.
   \end{enumerate}
-  
+
   \vspace{0.5em}
   \noindent\textbf{Context:} \texttt{\{context\}}\\
-  \textbf{Chat History:} \texttt{\{chat\_history\}}
-  
+  \textbf{Lịch sử hội thoại:} \texttt{\{chat\_history\}}
+
   \verb|<|im\_end|>|
   \verb|<|im\_start|>|user\\
   \texttt{\{question\}}\\
@@ -496,24 +509,26 @@ SeaLLM     & 0.2986 & 0.7079 \\
 \end{tabular}
 \end{table}
 
-\subsection{Expert opinion}
+\subsection{Expert Opinion}
+
+An expert evaluation was conducted using 21 questions collected from real-world consultations at a pediatric mental health clinic. These questions were reviewed by a specialist in child development and mental health, emphasizing clinical relevance and accuracy of responses generated by four fine-tuned AI models deployed on the Ollama platform. All models were evaluated under uniform conditions, using identical hyperparameters: temperature set at 0.5, context window size (\texttt{num\_ctx}) of 12288, and maximum prediction length (\texttt{num\_predict}) of 8192 tokens. Furthermore, each model utilized a standardized prompt clearly defining their role as an AI assistant specialized in pediatric health and mental health, tasked with providing gentle, accurate, and scientifically-based advice.
+
+The specialist noted that the \textbf{Vistral} and \textbf{SeaLLM} models generally produced responses aligned closely with clinical expectations, effectively capturing the intended clinical nuances and specificity required by the provided documents and fine-tuning dataset. Both models demonstrated consistent semantic coherence, offering clinically relevant guidance suitable for parents and healthcare providers.
+
+Conversely, the \textbf{VinaLLaMA} and \textbf{Dama-2} models exhibited inconsistencies in the quality of their responses. Specifically, the expert identified frequent syntactic errors and semantic inaccuracies, resulting in responses often deviating from the primary clinical inquiries. These models struggled with accurately interpreting and effectively addressing the nuances of pediatric mental health consultations.
+
+A significant limitation identified across all models was their reliance on outdated medical knowledge, not fully compliant with the latest ICD-10 and ICD-11 standards. Despite extensive fine-tuning and retrieval augmentation, all models occasionally provided recommendations based on obsolete or replaced clinical guidelines. The expert highlighted the importance of continuous updates to the medical knowledge integrated into these AI systems, ensuring ongoing clinical validity and reliability of AI-generated recommendations.
+
 \subsection{Discussion}
 
-From the experimental results, it is evident that the \textbf{Vistral model} consistently outperformed all others in both the single-run and cross-validation settings. Vistral achieved the highest scores across all metrics, including:
+The comparative evaluation of the four fine-tuned models—\textbf{Vistral}, \textbf{SeaLLM}, \textbf{VinaLLaMA}, and \textbf{Dama-2}—revealed distinct differences in performance across both quantitative metrics and practical usability. According to the ROUGE, METEOR, and Cosine Similarity scores, the \textbf{Vistral} model consistently achieved the highest results, indicating its strong capability for generating semantically accurate and contextually relevant responses in Vietnamese pediatric mental health consultations. \textbf{Dama-2} and \textbf{VinaLLaMA} followed, while \textbf{SeaLLM} ranked lowest across most metrics.
 
-\begin{itemize}
-  \item \textbf{ROUGE-1, ROUGE-2, and ROUGE-L:} Indicating high lexical and structural overlap with the ground truth responses, especially in capturing unigrams and bigrams relevant to user intent.
-  \item \textbf{METEOR:} Showing strong alignment in semantics and stemming, which is essential for the flexible Vietnamese grammar.
-  \item \textbf{Cosine Similarity:} Suggesting high semantic closeness between generated and reference embeddings.
-\end{itemize}
+However, practical expert assessment highlighted that \textbf{SeaLLM}, despite its relatively lower evaluation scores, performed admirably in real-world scenarios. The model provided coherent and relevant guidance that often met or exceeded clinical expectations, suggesting that standard text-generation metrics may not fully capture the model's effectiveness in nuanced, conversational pediatric healthcare settings.
 
-While \textbf{Dama-2} followed closely behind in performance, it showed slightly less consistency in capturing long-range dependencies (ROUGE-L) and semantic accuracy compared to Vistral. However, it still performed better than SeaLLM and showed high Cosine Similarity.
+Another important observation is that the knowledge base of the models—especially regarding up-to-date clinical standards—can be further enhanced. Missing or outdated information can be supplemented through the integration of additional high-quality and domain-specific documents, which can be ingested into the RAG retrieval system. This approach allows for continuous improvement of the assistant's knowledge without requiring complete retraining of the base language model.
 
-\textbf{VinaLLaMA} exhibited strong single-run scores, particularly in METEOR and ROUGE-2, indicating better local coherence and language fluency. However, its cross-validation scores were slightly lower than Dama-2, suggesting variability during training and inference.
+In the future, the system can be further improved by combining advanced machine learning techniques and deep learning, especially techniques related to image processing and multimodal understanding. For example, taking advantage of visional language models (Vision LMS) may allow assistance to explain and respond to visual data such as development charts or diagnostic imaging. In addition, the implementation of RAG agents, a generation strategy to enhance improvement with the decision -based decision -making.
 
-\textbf{SeaLLM} ranked the lowest across all metrics, indicating room for improvement in capturing both lexical and semantic features, especially under the constraints of Vietnamese-specific contexts.
-
-Overall, the results support the robustness of the Vistral model in the task of generating contextual, coherent, and semantically accurate responses in Vietnamese mental health chatbot applications.
 
 
 
