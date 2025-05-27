@@ -37,42 +37,24 @@
     },
     {
         "id": 7,
-        "topic": "Sai việc & Nhờ vả",
-        "question": "Trẻ có khả năng hiểu lệnh, thực hiện yêu cầu từ người khác",
-        "options": ["Tốt", "Khá", "Kém"]
-    },
-    {
-        "id": 8,
         "topic": "Chơi luân phiên",
         "question": "Trẻ có thể chơi luân phiên là khi hai người (trẻ-trẻ hoặc trẻ-người lớn) thay nhau thực hiện một hành động có tính phối hợp, có quy luật qua lại - chờ đợi - phản hồi như truyền banh...",
         "options": ["Tốt", "Khá", "Kém"]
     },
     {
-        "id": 9,
-        "topic": "Chơi chức năng",
-        "question": "Trẻ từ 12 tháng trở đi có thể dùng đồ vật đúng chức năng",
-        "options": ["Tốt", "Khá", "Kém"]
-    },
-    {
-        "id": 10,
+        "id": 8,
         "topic": "Cô lập",
         "question": "Trẻ thích chơi một mình, ít rủ bạn chơi hay thích làm theo ý cá nhân",
         "options": ["Có", "Thỉnh thoảng", "Không"]
     },
     {
-        "id": 11,
+        "id": 9,
         "topic": "Đi nhón chân",
         "question": "Trẻ sau 3 tuổi vẫn đi nhón chân hoặc nhón gót",
         "options": ["Có", "Thỉnh thoảng", "Không"]
     },
     {
-        "id": 12,
-        "topic": "Chơi giả vờ & Bắt chước",
-        "question": "Trẻ sau 3 tuổi có thể chơi giả vờ như lấy đồ chơi làm thành thức ăn, đưa một khúc gỗ lên tai gọi điện “alo”, hay đút cho thú bông ăn",
-        "options": ["Có", "Thỉnh thoảng", "Không"]
-    },
-    {
-        "id": 13,
+        "id": 10,
         "topic": "Cứng nhắc",
         "question": "Trẻ chơi duy nhất một thứ quen thuộc, khó thích nghi với thay đổi",
         "options": ["Có", "Thỉnh thoảng", "Không"]
