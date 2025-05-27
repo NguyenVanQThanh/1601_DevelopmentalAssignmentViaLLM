@@ -22,6 +22,20 @@ const domainDisplayMapping = {
   problem_solving: "GIẢI QUYẾT VẤN ĐỀ",
   personal_social: "CÁ NHÂN XÃ HỘI",
 };
+// Function Name: getDotColorForStatus
+// Functionality: Returns a specific color based on the developmental status string.
+// Input: status (string) - The developmental status string.
+// Output: string - The hex color code for the dot.
+const getDotColorForStatus = (status) => {
+  if (status.includes("CHẬM RÕ RỆT")) {
+    return "#757575"; 
+  } else if (status.includes("CÓ NGUY CƠ CHẬM")) {
+    return "#FFB74D"; 
+  } else if (status.includes("BÌNH THƯỜNG")) {
+    return "#81C784"; 
+  }
+  return "#004aad"; 
+};
 
 const DevelopmentSummary = ({ sectionsResult }) => {
   if (!sectionsResult || Object.keys(sectionsResult).length === 0) {
@@ -112,9 +126,47 @@ function ResultPage({ childInfo, parentInfo, processedAsqResults, llmGeneratedSo
             <table className="score-table">
                 <thead><tr><th>Lĩnh vực</th><th>Ngưỡng "Chậm" </th><th>Ngưỡng "Theo dõi" </th><th>Điểm</th><th style={{width:'200px'}}>Trạng thái</th><th style={{width:"250px"}}>Thang điểm (0-60)</th></tr></thead>
                 <tbody>{lstScores.map(({field,score,cutoff,monitor,status},idx)=>{
-                    const sp=Math.min(Math.max((score/60)*100,0),100); const cp=Math.round((cutoff/60)*100); const mp=Math.round((monitor/60)*100);
-                    let bg; if(mp>cp)bg=`linear-gradient(to right, #BDBDBD ${cp}%, #FFB74D ${cp}%, #FFB74D ${mp}%, #81C784 ${mp}%, #81C784 100%)`;else bg=`linear-gradient(to right, #BDBDBD ${mp}%, #81C784 ${mp}%, #81C784 100%)`;
-                    return(<tr key={idx}><td>{field}</td><td>{`< ${cutoff.toFixed(0)}`}</td><td>{`${cutoff.toFixed(0)} - ${monitor.toFixed(0)}`}</td><td><b>{score.toFixed(0)}</b></td><td style={{fontWeight:status!=="PHÁT TRIỂN BÌNH THƯỜNG"?"bold":"normal",color:status.includes("RÕ RỆT")?"#757575":status.includes("NGUY CƠ")?"#EF6C00":"#2E7D32"}}>{status}</td><td><div className="slider-container"><div className="slider-track"style={{background:bg}}>{[0,10,20,30,40,50,60].map(v=>(<span key={v}className="slider-marker"style={{left:`${(v/60)*100}%`}}>{v}</span>))}</div><div className="slider-dot"style={{left:`${sp}%`}}title={`Điểm: ${score.toFixed(0)}`}/></div></td></tr>);
+                    const scorePercent = Math.min(Math.max((score/60)*100,0),100); 
+                    const cutoffPercent = Math.round((cutoff/60)*100); 
+                    const monitorPercent = Math.round((monitor/60)*100);
+                    
+                    const dotColor = getDotColorForStatus(status);
+
+                    let trackBackground; 
+                    if(monitorPercent > cutoffPercent) {
+                        trackBackground=`linear-gradient(to right, #BDBDBD ${cutoffPercent}%, #FFB74D ${cutoffPercent}%, #FFB74D ${monitorPercent}%, #81C784 ${monitorPercent}%, #81C784 100%)`;
+                    } else { 
+                        trackBackground=`linear-gradient(to right, #BDBDBD ${monitorPercent}%, #81C784 ${monitorPercent}%, #81C784 100%)`;
+                    }
+                    return(
+                        <tr key={idx}>
+                            <td>{field}</td>
+                            <td>{`< ${cutoff.toFixed(0)}`}</td>
+                            <td>{`${cutoff.toFixed(0)} - ${monitor.toFixed(0)}`}</td>
+                            <td><b>{score.toFixed(0)}</b></td>
+                            <td style={{
+                                fontWeight: status !== "PHÁT TRIỂN BÌNH THƯỜNG" ? "bold" : "normal",
+                                color: dotColor 
+                            }}>
+                                {status}
+                            </td>
+                            <td>
+                                <div className="slider-container">
+                                    <div className="slider-track" style={{background: trackBackground}}>
+                                        {[0,10,20,30,40,50,60].map(v=>(<span key={v} className="slider-marker" style={{left:`${(v/60)*100}%`}}>{v}</span>))}
+                                    </div>
+                                    <div 
+                                        className="slider-dot" 
+                                        style={{ 
+                                            left: `${scorePercent}%`,
+                                            backgroundColor: dotColor 
+                                        }} 
+                                        title={`Điểm: ${score.toFixed(0)}`}
+                                    />
+                                </div>
+                            </td>
+                        </tr>
+                    );
                 })}</tbody>
             </table>
         </section>

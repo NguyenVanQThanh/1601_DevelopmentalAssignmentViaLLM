@@ -1,0 +1,211 @@
+/* Feedback Button Styles */
+.feedback-button-fixed {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 50; /* Đảm bảo nút nổi lên trên */
+  padding: 12px;
+  background-color: #007bff; /* Màu xanh dương làm ví dụ */
+  color: white;
+  border: none;
+  border-radius: 50%; /* Làm cho nút tròn */
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  display: flex; /* Để căn giữa icon (nếu có) */
+  align-items: center;
+  justify-content: center;
+  width: 56px; /* Kích thước cố định cho nút tròn */
+  height: 56px;
+}
+
+.feedback-button-fixed:hover {
+  background-color: #0056b3; /* Màu xanh đậm hơn khi hover */
+  transform: scale(1.1);
+}
+
+.feedback-button-fixed:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* Hiệu ứng focus */
+}
+
+.feedback-button-fixed svg { /* Style cho icon SVG nếu bạn dùng */
+  width: 24px;
+  height: 24px;
+}
+
+/* Feedback Dialog Styles */
+.feedback-dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6); /* Lớp phủ mờ đậm hơn một chút */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* Đảm bảo dialog nổi trên tất cả */
+  opacity: 0; /* Bắt đầu ẩn */
+  visibility: hidden; /* Bắt đầu ẩn hoàn toàn */
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.feedback-dialog-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.feedback-dialog-content {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  width: 90%;
+  max-width: 480px; /* Giới hạn chiều rộng tối đa */
+  transform: scale(0.95); /* Bắt đầu nhỏ hơn một chút */
+  transition: transform 0.3s ease-in-out;
+}
+
+.feedback-dialog-overlay.open .feedback-dialog-content {
+  transform: scale(1); /* Phóng to ra khi mở */
+}
+
+.feedback-dialog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 15px;
+}
+
+.feedback-dialog-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.feedback-close-button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #888;
+  padding: 0; /* Reset padding */
+  line-height: 1; /* Reset line-height */
+}
+.feedback-close-button:hover {
+  color: #555;
+}
+
+
+.feedback-form-group {
+  margin-bottom: 15px;
+}
+
+.feedback-form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.feedback-form-group input[type="text"],
+.feedback-form-group input[type="tel"],
+.feedback-form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box; /* Quan trọng để padding không làm tăng kích thước */
+  font-size: 0.95rem;
+}
+.feedback-form-group input[type="text"]:focus,
+.feedback-form-group input[type="tel"]:focus,
+.feedback-form-group textarea:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+
+.feedback-form-group textarea {
+  resize: vertical; /* Cho phép resize theo chiều dọc */
+  min-height: 80px;
+}
+
+.feedback-rating-container {
+  margin-bottom: 20px;
+}
+
+.feedback-rating-stars {
+  display: flex;
+  justify-content: center; /* Hoặc space-around */
+  gap: 8px; /* Khoảng cách giữa các ngôi sao */
+}
+
+.feedback-star-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  color: #ccc; /* Màu sao chưa chọn */
+  font-size: 2rem; /* Kích thước sao lớn hơn */
+  transition: color 0.2s;
+}
+
+.feedback-star-button svg {
+    width: 30px; /* Điều chỉnh kích thước icon sao */
+    height: 30px;
+}
+
+
+.feedback-star-button.selected,
+.feedback-star-button:hover {
+  color: #ffc107; /* Màu vàng cho sao đã chọn hoặc hover */
+}
+
+
+.feedback-submit-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.feedback-submit-button:hover {
+  background-color: #0056b3;
+}
+
+.feedback-submit-button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+.feedback-status-message {
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.feedback-status-message.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.feedback-status-message.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}

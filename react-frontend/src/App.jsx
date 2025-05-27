@@ -12,7 +12,7 @@ import ChatbotPage from "./page/chatbot/ChatbotPage";
 import Predict1 from './page/predict/Predict1';
 import Predict2 from "./page/predict/Predict2";
 import Predict3 from "./page/predict/Predict3";
-
+import FeedbackButton from "./components/Feedback/FeedbackButton.jsx";
 
 import { provinces } from "./dataweb/provinces";
 import { hospitals } from "./dataweb/hospitals";
@@ -212,6 +212,7 @@ function App() {
 
       </Routes>
       <div className="container-footer"><Footer /></div>
+      <FeedbackButton />
     </div>
   );
 }

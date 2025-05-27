@@ -68,13 +68,13 @@
 
  /* BUTTON GROUP */
  .form-button-wrapper {
-  grid-column: 1 / -1;        /* phủ cả 2 cột của form */
-  display: flex;
-  justify-content: center;   /* căn giữa theo chiều ngang */
-  align-items: center;       /* căn giữa theo chiều dọc */
-  margin-top: 24px;
-  height: 70px;
-}
+   grid-column: 1 / 3;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 24px;
+   height: 70px;
+ }
 
  .custom-button {
    width: 500px;
@@ -120,19 +120,4 @@
 .custom-button:focus {
   outline: none !important;
   box-shadow: none !important;             
-}
-.field-input-container {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
-
-.field-note {
-  font-size: 15px;
-  color: #1e88e5;
-  font-style: italic;
-  margin-top: 4px;
-  word-wrap: break-word;      /* Cho phép xuống dòng tại từ dài */
-  white-space: normal;        /* Cho phép xuống dòng tự động */
-  line-height: 1.4;           /* Giãn dòng nhẹ cho dễ đọc */
 }
