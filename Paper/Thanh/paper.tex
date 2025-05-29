@@ -115,10 +115,9 @@ To further ensure data quality and minimize retrieval noise, we test the resulti
 This section details the methodology employed for fine-tuning various Large Language Models (LLMs) on a Vietnamese language task. The process encompasses model selection, quantization, data preprocessing, fine-tuning strategy, and evaluation.
 
 \paragraph{Model Selection and Quantization}
-Pretrained base models, specifically \textbf{VinaLLaMA (vilm/vinallama-7b-chat)}, \textbf{Vistral-7B (Viet-Mistral/Vistral-7B-Chat)}, \textbf{SeaLLMs (SeaLLMs/SeaLLMs-v3-7B-Chat)}, and \textbf{Dama-2 (vietgpt/dama-2-7b-chat)}, were loaded from their respective Hugging Face repositories. To mitigate memory consumption and accelerate the training process, a strategic quantization approach was adopted. For initial single-run evaluations (Section~\ref{sec:single_run_eval}), models were quantized to \textbf{8-bit (int8)} precision using the \texttt{bitsandbytes} library. However, for the more extensive 5-fold cross-validation (Section~\ref{sec:cross_validation_eval}), \textbf{4-bit (int4)} quantization (specifically NF4 with \texttt{bnb\_4bit\_compute\_dtype=torch.bfloat16} and \texttt{bnb\_4bit\_use\_double\_quant=True}) was applied. This choice aimed to further reduce the memory footprint, enabling robust training across multiple folds within available hardware constraints. Crucially, for a dataset of moderate size relative to the 7B parameter scale of the models, int4 quantization also serves to \textbf{economize on both fine-tuning time and computational costs}, without a substantial degradation in model quality, making the comprehensive cross-validation process more feasible.
-
+Pretrained base models, specifically VinaLLaMA (\texttt{vilm/vinallama-7b-chat}), Vistral-7B (\texttt{Viet-Mistral/Vistral-7B-Chat}), SeaLLMs (\texttt{SeaLLMs/SeaLLMs-v3-7B-Chat}), and Dama-2 (\texttt{vietgpt/dama-2-7b-chat}), were loaded from their respective Hugging Face repositories. To mitigate memory consumption and accelerate the training process, a strategic Post-Training Quantization (PTQ) approach was adopted using the \texttt{bitsandbytes} library. For initial single-run evaluations (Section III-B2d), models were quantized to 8-bit (int8) precision. However, for the more extensive 5-fold cross-validation (Section III-B2e), 4-bit (int4) quantization, specifically the Normalized Float 4-bit (NF4) format with \texttt{bnb\_4bit\_compute\_dtype=torch.bfloat16} and \texttt{bnb\_4bit\_use\_double\_quant=True}, was applied. This INT4 PTQ configuration reduced the memory footprint by up to 50\% compared to FP16, enabling multiple training iterations on standard GPU hardware (e.g., NVIDIA A100). The impact of quantization was rigorously evaluated using ROUGE, METEOR, and Cosine Similarity metrics, confirming minimal degradation in response quality.
 \paragraph{Low-Rank Adaptation (LoRA) Configuration}
-The fine-tuning process leverages Low-Rank Adaptation (LoRA) \cite{hu2021lora} for parameter-efficient fine-tuning. A LoRA rank (\texttt{r}) of \textbf{32} was chosen as a balance between model adaptability and computational overhead, a common practice providing sufficient capacity for adaptation without an excessive increase in trainable parameters. The LoRA alpha (\texttt{lora\_alpha}) was also set to 32, and a dropout rate (\texttt{lora\_dropout}) of 0.5 was applied to LoRA layers to prevent overfitting.
+The fine-tuning process leverages Low-Rank Adaptation (LoRA) \cite{b7} for parameter-efficient fine-tuning. A LoRA rank (\texttt{r}) of \textbf{32} was chosen as a balance between model adaptability and computational overhead, a common practice providing sufficient capacity for adaptation without an excessive increase in trainable parameters. The LoRA alpha (\texttt{lora\_alpha}) was also set to 32, and a dropout rate (\texttt{lora\_dropout}) of 0.5 was applied to LoRA layers to prevent overfitting.
 
 To effectively adapt the models, LoRA was applied to a comprehensive set of target modules within the transformer architecture. These include:
 \begin{itemize}
@@ -527,24 +526,36 @@ However, practical expert assessment highlighted that \textbf{SeaLLM}, despite i
 
 Another important observation is that the knowledge base of the models—especially regarding up-to-date clinical standards—can be further enhanced. Missing or outdated information can be supplemented through the integration of additional high-quality and domain-specific documents, which can be ingested into the RAG retrieval system. This approach allows for continuous improvement of the assistant's knowledge without requiring complete retraining of the base language model.
 
-In the future, the system can be further improved by combining advanced machine learning techniques and deep learning, especially techniques related to image processing and multimodal understanding. For example, taking advantage of visional language models (Vision LMS) may allow assistance to explain and respond to visual data such as development charts or diagnostic imaging. In addition, the implementation of RAG agents, a generation strategy to enhance improvement with the decision -based decision -making.
+In the future, the system can be further improved by combining advanced machine learning techniques and deep learning, especially techniques related to image processing and multimodal understanding. For example, taking advantage of vision large language model (Vision LLM) may allow assistance to explain and respond to visual data such as development charts or diagnostic imaging. In addition, the implementation of RAG agents, a generation strategy to enhance improvement with the decision -based decision -making.
 
 
 
 
 \begin{thebibliography}{9}
-    \bibitem{b1} Kailai Yang, Tianlin Zhang, Ziyan Kuang, Qianqian Xie, Jimin Huang, Sophia Ananiadou, "MentaLLaMA: Interpretable Mental Health Analysis on Social Media with Large Language Models," arXiv preprint arXiv:2309.13567v3, 2024
-    \bibitem{b2} Albert Q. Jiang, Alexandre Sablayrolles, Arthur Mensch, Chris Bamford, Devendra Singh Chaplot, Diego de las Casas, Florian Bressand, Gianna Lengyel, Guillaume Lample, Lucile Saulnier, Lélio Renard Lavaud, Marie-Anne Lachaux, Pierre Stock, Teven Le Scao, Thibaut Lavril, Thomas Wang, Timothée Lacroix, William El Sayed, "Mistral 7B: Towards Efficient and High-Performance Language Models," arXiv preprint arXiv:2302.13971, 2023.
-    \bibitem{b3} Quan Nguyen, Huy Pham, Dung Dao, "VinaLLaMA: LLaMA-based Vietnamese Foundation Model," arXiv preprint arXiv:2312.11011v1, 2023.
-    \bibitem{b4} Xuan-Phi Nguyen, Wenxuan Zhang, Xin Li, Mahani Aljunied, Zhiqiang Hu, Chenhui Shen, Yew Ken Chia, Xingxuan Li, Jianyu Wang, Qingyu Tan, Liying Cheng, Guanzheng Chen, Yue Deng, Sen Yang, Chaoqun Liu, Hang Zhang, Lidong Bing, "SeaLLMs: Large Language Models for Southeast Asia," arXiv preprint arXiv:2312.16934v2, 2023.
-    \bibitem{b5} Yunfan Gao, Yun Xiong, Xinyu Gao, Kangxiang Jia, Jinliu Pan, Yuxi Bi, Yi Dai, Jiawei Sun, Meng Wang, Haofen Wang, "Retrieval-Augmented Generation for Large Language Models: A Survey," arXiv preprint arXiv:2312.10997v5, 2024.
-    \bibitem{b6} Liam Hebert, Lukasz Golab, Pascal Poupart, Robin Cohen, ``FedFormer: Contextual Federation with Attention in Reinforcement Learning''.
-    \bibitem{b7} Jianlv Chen, Shitao Xiao, Peitian Zhang, Kun Luo, Defu Lian, Zheng Liu, "M3-Embedding: Multi-Linguality, Multi-Functionality, Multi-Granularity Text Embeddings Through Self-Knowledge Distillation," arXiv preprint arXiv:2402.03216v4, 2024.
-    \bibitem{b8} Róbert Lakatos, Péter Pollner, András Hajdu, Tamás Joó, "Investigating the Performance of Retrieval-Augmented Generation and Fine-Tuning for the Development of AI-Driven Knowledge-Based Systems," arXiv preprint arXiv:2403.09727v1, 2024.
-    \bibitem{b9} Harald Steck, Chaitanya Ekanadham, Nathan Kallus, "Is Cosine-Similarity of Embeddings Really About Similarity?" arXiv preprint arXiv:2403.05440v1, 2024.
-    \bibitem{b10} Li, H., Li, X., Hu, P., Lei, Y., Li, C., Zhou, Y., … \& Zhou, Y. (2023). ``Boosting Multi-modal Model Performance with Adaptive Gradient Modulation''. arXiv preprint arXiv:2308.07686.
-    \bibitem{b11} Lin, C.-Y. (2004). ``ROUGE: A Package for Automatic Evaluation of Summaries.'' In *Proceedings of the Workshop on Text Summarization Branches Out (WAS 2004), Post-Conference Workshop of ACL 2004*, Barcelona, Spain.
-    \bibitem{b12} Banerjee, S., \& Lavie, A. (2005). ``METEOR: An Automatic Metric for MT Evaluation with Improved Correlation with Human Judgments.'' In *Proceedings of the ACL Workshop on Intrinsic and Extrinsic Evaluation Measures for Machine Translation and/or Summarization*, Ann Arbor, Michigan, pp. 65--72.
+\bibitem{b1} Yang, K., Zhang, T., Kuang, Z., Xie, Q., Huang, J., \& Ananiadou, S. (2024). ``MentaLLaMA: Interpretable Mental Health Analysis on Social Media with Large Language Models.'' arXiv preprint arXiv:2309.13567v3.
+
+\bibitem{b2} Jiang, A. Q., Sablayrolles, A., Mensch, A., Bamford, C., Chaplot, D. S., de las Casas, D., Bressand, F., Lengyel, G., Lample, G., Saulnier, L., Lavaud, L. R., Lachaux, M.-A., Stock, P., Le Scao, T., Lavril, T., Wang, T., Lacroix, T., \& El Sayed, W. (2023). ``Mistral 7B: Towards Efficient and High-Performance Language Models.'' arXiv preprint arXiv:2302.13971.
+
+\bibitem{b3} Nguyen, Q., Pham, H., \& Dao, D. (2023). ``VinaLLaMA: LLaMA-based Vietnamese Foundation Model.'' arXiv preprint arXiv:2312.11011v1.
+
+\bibitem{b4} Nguyen, X.-P., Zhang, W., Li, X., Aljunied, M., Hu, Z., Shen, C., Chia, Y. K., Li, X., Wang, J., Tan, Q., Cheng, L., Chen, G., Deng, Y., Yang, S., Liu, C., Zhang, H., \& Bing, L. (2023). ``SeaLLMs: Large Language Models for Southeast Asia.'' arXiv preprint arXiv:2312.16934v2.
+
+\bibitem{b5} Gao, Y., Xiong, Y., Gao, X., Jia, K., Pan, J., Bi, Y., Dai, Y., Sun, J., Wang, M., \& Wang, H. (2024). ``Retrieval-Augmented Generation for Large Language Models: A Survey.'' arXiv preprint arXiv:2312.10997v5.
+
+\bibitem{b6} Hebert, L., Golab, L., Poupart, P., \& Cohen, R. (n.d.). ``FedFormer: Contextual Federation with Attention in Reinforcement Learning.'' [Unpublished manuscript].
+
+\bibitem{b7} Hu, E. J., Shen, Y., Wallis, P., Allen-Zhu, Z., Li, Y., Wang, S., Wang, L., \& Chen, W. (2021). ``LoRA: Low-Rank Adaptation of Large Language Models.'' arXiv preprint arXiv:2106.09685.
+
+\bibitem{b8} Lakatos, R., Pollner, P., Hajdu, A., \& Joó, T. (2024). ``Investigating the Performance of Retrieval-Augmented Generation and Fine-Tuning for the Development of AI-Driven Knowledge-Based Systems.'' arXiv preprint arXiv:2403.09727v1.
+
+\bibitem{b9} Steck, H., Ekanadham, C., \& Kallus, N. (2024). ``Is Cosine-Similarity of Embeddings Really About Similarity?'' arXiv preprint arXiv:2403.05440v1.
+
+\bibitem{b10} Li, H., Li, X., Hu, P., Lei, Y., Li, C., Zhou, Y., ... \& Zhou, Y. (2023). ``Boosting Multi-modal Model Performance with Adaptive Gradient Modulation.'' arXiv preprint arXiv:2308.07686.
+
+\bibitem{b11} Lin, C.-Y. (2004). ``ROUGE: A Package for Automatic Evaluation of Summaries.'' In *Proceedings of the Workshop on Text Summarization Branches Out (WAS 2004), Post-Conference Workshop of ACL 2004*, Barcelona, Spain.
+
+\bibitem{b12} Banerjee, S., \& Lavie, A. (2005). ``METEOR: An Automatic Metric for MT Evaluation with Improved Correlation with Human Judgments.'' In *Proceedings of the ACL Workshop on Intrinsic and Extrinsic Evaluation Measures for Machine Translation and/or Summarization*, Ann Arbor, Michigan, pp. 65--72.
+
 \end{thebibliography}
 
 \end{document}
