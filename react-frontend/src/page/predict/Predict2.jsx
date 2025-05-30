@@ -7,7 +7,7 @@ import React from "react";
 import questions from "./QuestionPredict.json";
 import { useNavigate } from "react-router-dom";
 
-function Predict2() {
+function Predict2({sessionId, accessToken}) {
   const navigate = useNavigate();
 
   const location = useLocation();

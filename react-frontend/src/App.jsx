@@ -206,9 +206,9 @@ function App() {
             </section></main>
           } />
         <Route path="/guest/chatbot" element={<ChatbotPage initialMessage={initialChatbotMessage} sessionId={sessionId} accessToken={accessToken} onInitialMessageShown={() => { setInitialChatbotMessage(null); }} />} />
-        <Route path="/guest/predict" element={<Predict1/>} />
-        <Route path="/guest/predict/step2" element={<Predict2 />} />
-        <Route path="/guest/predict/step3" element={<Predict3 />} />
+        <Route path="/guest/predict" element={<Predict1 sessionId={sessionId} accessToken={accessToken} />} />
+        <Route path="/guest/predict/step2" element={<Predict2 sessionId={sessionId} accessToken={accessToken} />} />
+        <Route path="/guest/predict/step3" element={<Predict3  sessionId={sessionId} accessToken={accessToken} />} />
 
       </Routes>
       <div className="container-footer"><Footer /></div>
