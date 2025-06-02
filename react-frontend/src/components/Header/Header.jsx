@@ -17,6 +17,12 @@ function Header() {
         </div>
         <nav className="nav">
           <NavLink
+              to="/guest/predict"
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              Dự đoán Tự Kỷ
+            </NavLink>
+          <NavLink
             to="/guest/asq3-test"
             className={({ isActive }) => (isActive ? "active" : "")}
           >

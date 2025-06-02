@@ -12,7 +12,7 @@
       "questions": [
         {
           "id": 1,
-          "text": "Con của bạn có bắt chước nói một câu có hai từ không? Ví dụ, khi bạn nói một cụm từ gồm hai từ như “Mẹ ăn”, “Bố chơi”, “Về nhà”, hoặc “Gì đây?”, bé có lặp lại cả hai tiếng không?",
+          "text": "Con của bạn có bắt chước nói một câu có hai từ không? Ví dụ, khi bạn nói một cụm từ gồm hai từ như 'Mẹ ăn', 'Bố chơi', 'Về nhà', hoặc 'Gì đây?', bé có lặp lại cả hai tiếng không?",
           "options": [
             "Có",
             "Thỉnh Thoảng",
@@ -23,7 +23,7 @@
         },
         {
           "id": 2,
-          "text": "Ngoài từ “mama” và “baba” con của bạn còn nói thêm ít nhất 8 từ khác nữa không?",
+          "text": "Ngoài từ 'Mama' và 'Baba' con của bạn còn nói thêm ít nhất 8 từ khác nữa không?",
           "options": [
             "Có",
             "Thỉnh Thoảng",
@@ -34,7 +34,7 @@
         },
         {
           "id": 3,
-          "text": "Khi bạn không hướng dẫn mà chỉ hỏi bé: “Chỉ cho mẹ con mèo” hoặc “con chó ở đâu?” , bé có chỉ được đúng hình không?",
+          "text": "Khi bạn không hướng dẫn mà chỉ hỏi bé: 'Chỉ cho mẹ con mèo' hoặc 'Con chó ở đâu?' , bé có chỉ được đúng hình không?",
           "options": [
             "Có",
             "Thỉnh Thoảng",
@@ -45,14 +45,14 @@
         },
         {
           "id": 4,
-          "text": "Khi bạn chỉ vào hình quả bóng (hoặc con mèo, cái ly/cốc , mũ/nón) và hỏi con của bạn: “Đây là cái gì?”, bé có gọi tên chính xác ít nhất một hình không?",
+          "text": "Khi bạn chỉ vào hình quả bóng (hoặc con mèo, cái ly/cốc , mũ/nón) và hỏi con của bạn: 'Đây là cái gì?', bé có gọi tên chính xác ít nhất một hình không?",
           "options": [
             "Có",
             "Thỉnh Thoảng",
             "Chưa"
           ],
           "note": null,
-          "image_filepath": "image18_1.png"
+          "image_filepath": null
         },
         {
           "id": 5,
@@ -67,7 +67,7 @@
         },
         {
           "id": 6,
-          "text": "Con của bạn có nói được câu có hai hoặc ba từ biểu hiện các ý tưởng khác nhau không? Ví dụ như “Thấy chó”, “Mẹ về rồi” hoặc “Mèo đi rồi.”",
+          "text": "Con của bạn có nói được câu có hai hoặc ba từ biểu hiện các ý tưởng khác nhau không? Ví dụ như 'Thấy chó', 'Mẹ về rồi' hoặc 'Mèo đi rồi.'",
           "options": [
             "Có",
             "Thỉnh Thoảng",
@@ -106,7 +106,7 @@
         },
         {
           "id": 3,
-          "text": "Con của bạn có tự đi xuống cầu thang nếu bạn dắt một tay bé không?",
+          "text": "Con của bạn có tự đi xuống cầu thang nếu bạn dắt một tay bé không? Bé cũng có thể vịn vào tường hoặc tay vịn cầu thang.",
           "options": [
             "Có",
             "Thỉnh Thoảng",
@@ -123,7 +123,7 @@
             "Thỉnh Thoảng",
             "Chưa"
           ],
-          "note": "Nếu bé đã biết đá bóng thì ghi 'có' vào câu hỏi này.",
+          "note": "Nếu bé đã biết đá bóng thì ghi 'Có' vào câu hỏi này.",
           "image_filepath": "image18_1.png"
         },
         {
@@ -239,18 +239,18 @@
         },
         {
           "id": 2,
-          "text": "Sau khi quan sát bạn dùng bút màu (bút chì/bút bi) vẽ một đường thẳng, con của bạn có bắt chước bạn vẽ một đường liền nét không?",
+          "text": "Sau khi quan sát bạn dùng bút màu (bút chì/bút bi) vẽ một đường thẳng, con của bạn có bắt chước bạn vẽ một đường liền nét không? Đường thẳng này có thể đi theo bất kỳ hướng nào.",
           "options": [
             "Có",
             "Thỉnh Thoảng",
             "Chưa"
           ],
-          "note": "Đánh dấu 'chưa' nếu bé vẽ nguệch ngoạc lên xuống.",
+          "note": "Đánh dấu 'Chưa' nếu bé vẽ nguệch ngoạc lên xuống.",
           "image_filepath": "image18_5.png"
         },
         {
           "id": 3,
-          "text": "Nếu bạn thực hiện các động tác sau, con của bạn có bắt chước làm theo được ít nhất một động tác không? (Há miệng, nháy mắt, kéo tai, vỗ má...)",
+          "text": "Nếu bạn thực hiện các động tác sau, con của bạn có bắt chước làm theo được ít nhất một động tác không? (Há và ngậm miệng, nháy mắt, kéo tai, vỗ nhẹ vào má...)",
           "options": [
             "Có",
             "Thỉnh Thoảng",

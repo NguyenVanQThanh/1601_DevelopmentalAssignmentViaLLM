@@ -34,7 +34,7 @@
         },
         {
           "id": 3,
-          "text": "Không ra hiệu hoặc dùng cử chỉ điệu bộ, bạn hãy yêu cầu con: “Con đặt sách trên bàn” và “Con đặt giày dưới ghế”. Con của bạn có thực hiện đúng cả 2 mệnh lệnh này không?",
+          "text": "Không ra hiệu hoặc dùng cử chỉ điệu bộ, bạn hãy yêu cầu con: 'Con đặt sách trên bàn' và 'Con đặt giày dưới ghế'. Con của bạn có thực hiện đúng cả 2 mệnh lệnh này không?",
           "options": [
             "Có",
             "Thỉnh Thoảng",
@@ -56,7 +56,7 @@
         },
         {
           "id": 5,
-          "text": "Chỉ cho con của bạn thấy cach keo ao khoac len xuống. Mỗi khi kéo khóa lên thì nói 'Kéo khóa lên', mỗi khi kéo khóa xuống thì nói: 'Kéo khóa xuống'. Hãy để khóa kéo ở giữa và yêu cầu bé kéo xuống. Trả khóa kéo về vị trí ở giữa và yêu cầu bé kéo nó lên. Lặp lại nhiều lần, và nhớ để khóa kéo ở giữa trước khi bảo bé kéo lên hoặc xuống. Con của bạn có luôn luôn làm đung khi bạn yêu cầu bé kéo khóa 'lên'  hoặc “xuống' không?",
+          "text": "Chỉ cho con của bạn thấy cách kéo áo khoác lên xuống. Mỗi khi kéo khóa lên thì nói 'Kéo khóa lên', mỗi khi kéo khóa xuống thì nói: 'Kéo khóa xuống'. Hãy để khóa kéo ở giữa và yêu cầu bé kéo xuống. Trả khóa kéo về vị trí ở giữa và yêu cầu bé kéo nó lên. Lặp lại nhiều lần, và nhớ để khóa kéo ở giữa trước khi bảo bé kéo lên hoặc xuống. Con của bạn có luôn luôn làm đúng khi bạn yêu cầu bé kéo khóa 'lên'  hoặc “xuống' không?",
           "options": [
             "Có",
             "Thỉnh Thoảng",
@@ -67,7 +67,7 @@
         },
         {
           "id": 6,
-          "text": "Khi được hỏi “Họ tên của con là gì?” thì con bạn có trả lời cả họ và tên không?",
+          "text": "Khi được hỏi 'Họ tên của con là gì?' thì con bạn có trả lời cả họ và tên không?",
           "options": [
             "Có",
             "Thỉnh Thoảng",
@@ -134,7 +134,7 @@
             "Thỉnh Thoảng",
             "Chưa"
           ],
-          "note": "Đánh dấu 'chưa' nếu bé làm rơi bóng hoặc bàn tay cầm bóng thấp hơn vai",
+          "note": "Đánh dấu 'Chưa' nếu bé làm rơi bóng hoặc bàn tay cầm bóng thấp hơn vai",
           "image_filepath": "image33_1.png"
         },
         {
@@ -239,7 +239,7 @@
         },
         {
           "id": 2,
-          "text": "Nếu con của bạn muốn lấy một vật ở trên cao mà không với tới được, bé có tìm ghế hoac hộp để đứng lên không (ví dụ lấy đồ chơi trên kệ hoặc 'giúp' mẹ làm bếp)?",
+          "text": "Nếu con của bạn muốn lấy một vật ở trên cao mà không với tới được, bé có tìm ghế hoặc hộp để đứng lên không (ví dụ lấy đồ chơi trên kệ hoặc 'giúp' mẹ làm bếp)?",
           "options": [
             "Có",
             "Thỉnh Thoảng",
@@ -250,18 +250,18 @@
         },
         {
           "id": 3,
-          "text": "Khi bạn chỉ vào hình bên và hỏi 'Hình gì đây?',con của bạn có nói được từ có liên quan đến người hoặc cái gì đó tương tự? (Đánh dấu 'có' khi con nói được một trong các từ như: “người tuyết', 'con trai', 'đàn ông', 'con gái', “bố', 'người ngoài hành tinh', 'con khỉ”, 'con gà'.)",
+          "text": "Khi bạn chỉ vào hình bên và hỏi 'Hình gì đây?',con của bạn có nói được từ có liên quan đến người hoặc cái gì đó tương tự?",
           "options": [
             "Có",
             "Thỉnh Thoảng",
             "Chưa"
           ],
-          "note": null,
+          "note": "Đánh dấu 'Có' khi con nói được một trong các từ như: 'người tuyết', 'con trai', 'đàn ông', 'con gái', 'bố', 'người ngoài hành tinh', 'con khỉ', 'con gà'.",
           "image_filepath": "image27_2.png"
         },
         {
           "id": 4,
-          "text": "Khi nghe bạn noi 'Con hay noi 7, 3', con cua bạn co the lap lại hai số này theo đúng thứ tự không? Không nhắc lại cặp số đó cho trẻ. Nếu cần, hãy sử dụng cặp số khác như “8, 2'. Bé chỉ cần lặp lại một dãy số (gồm hai chữ số) được tính là “có'.",
+          "text": "Khi nghe bạn nói 'Con hãy nói 7, 3', con của bạn có thể lặp lại hai số này theo đúng thứ tự không? Không nhắc lại cặp số đó cho trẻ. Nếu cần, hãy sử dụng cặp số khác như '8, 2'. Bé chỉ cần lặp lại một dãy số (gồm hai chữ số) được tính là 'Có'.",
           "options": [
             "Có",
             "Thỉnh Thoảng",
@@ -283,7 +283,7 @@
         },
         {
           "id": 6,
-          "text": "Khi bạn nói: 'Con hãy nói 5, 8, 3', con của bạn có nói lặp lại ba số này theo đúng thứ tự đó không? Không nhắc lại dãy số đó cho bé. Nếu cần, hãy sử dụng ba số khác như “6, 9, 2'. Bé chỉ cần lặp lại được một dãy số (gồm ba chữ số) thì được tính là 'Có'.",
+          "text": "Khi bạn nói: 'Con hãy nói 5, 8, 3', con của bạn có nói lặp lại ba số này theo đúng thứ tự đó không? Không nhắc lại dãy số đó cho bé. Nếu cần, hãy sử dụng ba số khác như '6, 9, 2'. Bé chỉ cần lặp lại được một dãy số (gồm ba chữ số) thì được tính là 'Có'.",
           "options": [
             "Có",
             "Thỉnh Thoảng",
@@ -322,7 +322,7 @@
         },
         {
           "id": 3,
-          "text": "Khi con của bạn nhìn vào gương và bạn hỏi 'Ai trong gương thế?' bé có trả lời bằng cách nói “con đấy!' hoặc '(Tên bé) ... đấy” không?",
+          "text": "Khi con của bạn nhìn vào gương và bạn hỏi 'Ai trong gương thế?' bé có trả lời bằng cách nói 'Con đấy!' hoặc '(Tên bé) ... đấy' không?",
           "options": [
             "Có",
             "Thỉnh Thoảng",
@@ -344,7 +344,7 @@
         },
         {
           "id": 5,
-          "text": "Hãy dùng chính xác những từ sau để hỏi con của bạn: 'Con là con gái hay con trai?' Be có biết trả lời đúng không?",
+          "text": "Hãy dùng chính xác những từ sau để hỏi con của bạn: 'Con là con gái hay con trai?' Bé có biết trả lời đúng không?",
           "options": [
             "Có",
             "Thỉnh Thoảng",

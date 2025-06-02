@@ -23,7 +23,7 @@
         },
         {
           "id": 2,
-          "text": "Ngoài từ “baba” và “mama” con của bạn còn nói thêm ít nhất 4 từ khác nữa không?",
+          "text": "Ngoài từ 'Baba' và 'Mama' con của bạn còn nói thêm ít nhất 4 từ khác nữa không?",
           "options": [
             "Có",
             "Thỉnh Thoảng",
@@ -67,7 +67,7 @@
         },
         {
           "id": 6,
-          "text": "Ngoài từ “mama” và “baba” con của bạn còn nói thêm ít nhất 8 từ khác nữa không?",
+          "text": "Ngoài từ 'Mama' và 'Baba' con của bạn còn nói thêm ít nhất 8 từ khác nữa không?",
           "options": [
             "Có",
             "Thỉnh Thoảng",
@@ -234,7 +234,7 @@
             "Thỉnh Thoảng",
             "Chưa"
           ],
-          "note": "Nếu bé đã biết tự vẽ nguệch ngoạc, đánh dấu 'có' cho câu hỏi này.",
+          "note": "Nếu bé đã biết tự vẽ nguệch ngoạc, đánh dấu 'Có' cho câu hỏi này.",
           "image_filepath": null
         },
         {

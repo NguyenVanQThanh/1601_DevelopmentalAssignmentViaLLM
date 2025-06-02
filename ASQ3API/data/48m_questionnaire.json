@@ -12,7 +12,7 @@
       "questions": [
         {
           "id": 1,
-          "text": "Con của bạn có gọi tên được ít nhất 3 thứ trong cùng một nhóm được không? Ví dụ khi hỏi trẻ: 'Con hay kể những thứ ăn được?', con sẽ trả lời: 'Bánh quy, trứng, cơm' hoac 'Cơm, thịt, rau'. Hoặc hỏi 'Con kể tên những con vật', con sẽ trả lời: 'Bò, chó, voi'.",
+          "text": "Con của bạn có gọi tên được ít nhất 3 thứ trong cùng một nhóm được không? Ví dụ khi hỏi trẻ: 'Con hãy kể những thứ ăn được?', con sẽ trả lời: 'Bánh quy, trứng, cơm' hoặc 'Cơm, thịt, rau'. Hoặc hỏi 'Con kể tên những con vật', con sẽ trả lời: 'Bò, chó, voi'.",
           "options": [
             "Có",
             "Thỉnh Thoảng",
@@ -23,13 +23,13 @@
         },
         {
           "id": 2,
-          "text": "Khi bạn hỏi con hai câu hỏi sau, con của bạn có trả lời được không? (Đánh dấu'thỉnh thoảng” nếu con chỉ biết trả lời một câu hỏi.)",
+          "text": "Khi bạn hỏi con hai câu hỏi sau, con của bạn có trả lời được không?\n 1. 'Lúc đói con làm gì?' (Câu trả lời có thể chấp nhận: 'Lấy đồ ăn', 'Ăn', 'Hỏi những thứ để ăn ... ', 'Mở tủ lạnh/mở chạn/đi lấy bát' .... )\n 2. 'Khi mệt con làm gì?' (Câu trả lời có thể chấp nhận: 'Nghỉ', 'Đi ngủ', 'Nằm', 'Ngồi xuống.')",
           "options": [
             "Có",
             "Thỉnh Thoảng",
             "Chưa"
           ],
-          "note": null,
+          "note": "Đánh dấu 'thỉnh thoảng' nếu con chỉ biết trả lời một câu hỏi.",
           "image_filepath": null
         },
         {
@@ -45,7 +45,7 @@
         },
         {
           "id": 4,
-          "text": "Con của bạn có sử dụng được các từ chỉ số lượng ít/nhiều để diễn đạt ý của mình không? Ví dụ như, bé có nói rằng ' con thấy hai con mèo' hay 'con thấy có nhiều cái kẹo' không?",
+          "text": "Con của bạn có sử dụng được các từ chỉ số lượng ít/nhiều để diễn đạt ý của mình không? Ví dụ như, bé có nói rằng ' Con thấy hai con mèo ' hay 'Con thấy có nhiều cái kẹo' không?",
           "options": [
             "Có",
             "Thỉnh Thoảng",
@@ -200,7 +200,7 @@
         },
         {
           "id": 5,
-          "text": "Con của bạn đa biết ve hình ngưoi với ít nhất 3 bộ phận trong các bộ phận sau: đầu, mắt, mũi, miệng, cổ, tóc, thân, hai cánh tay, hai bàn tay, hai chân hoac hai bàn chân?",
+          "text": "Con của bạn đa biết vẽ hình người với ít nhất 3 bộ phận trong các bộ phận sau: đầu, mắt, mũi, miệng, cổ, tóc, thân, hai cánh tay, hai bàn tay, hai chân hoac hai bàn chân?",
           "options": [
             "Có",
             "Thỉnh Thoảng",
@@ -211,7 +211,7 @@
         },
         {
           "id": 6,
-          "text": "Khi tô màu, con bạn co thưong tô phía trong hầu het cac đường viền của bức tranh trong sách tô màu hoặc một hình tròn có đường kính khoảng 2-inch/5 cm mà không bị lem ra ngoài hơn 1/4 inch/1 cm không?",
+          "text": "Khi tô màu, con bạn co thường tô phía trong hầu hết các đường viền của bức tranh trong sách tô màu hoặc một hình tròn có đường kính khoảng 2-inch/5 cm mà không bị lem ra ngoài hơn 1/4 inch/1 cm không?",
           "options": [
             "Có",
             "Thỉnh Thoảng",
@@ -239,7 +239,7 @@
         },
         {
           "id": 2,
-          "text": "Khi được hỏi: 'Hình tròn nao nho nhat?', con của bạn co chỉ vao hình nhỏ nhất hay không?",
+          "text": "Khi được hỏi: 'Hình tròn nào nhỏ nhất?', con của bạn có chỉ vào hình nhỏ nhất hay không?",
           "options": [
             "Có",
             "Thỉnh Thoảng",
@@ -250,7 +250,7 @@
         },
         {
           "id": 3,
-          "text": "Không cần bạn hưong dẫn, con của bạn có biết làm theo ba hiệu lệnh chỉ vị trí: 'dưới', 'ở giữa' và 'ở chính giữa' không? Ví dụ: yêu cầu bé để giầy “dưới cái ghế dài'. Sau đó yêu cầu bé để quả bóng “giữa những cái ghế' và để quyển sách 'ở chính giữa cái bàn'.",
+          "text": "Không cần bạn hướng dẫn, con của bạn có biết làm theo ba hiệu lệnh chỉ vị trí: 'dưới', 'ở giữa' và 'ở chính giữa' không? Ví dụ: yêu cầu bé để giày “dưới cái ghế dài'. Sau đó yêu cầu bé để quả bóng “giữa những cái ghế' và để quyển sách 'ở chính giữa cái bàn'.",
           "options": [
             "Có",
             "Thỉnh Thoảng",
@@ -300,7 +300,7 @@
       "questions": [
         {
           "id": 1,
-          "text": "Con của bạn biết cách tự ăn uống, sử dụng thìa/muỗng, muôi / vá và bát / tô chưa? Ví dụ, con có biết sử dụng thìa/muỗng lớn để múc nước canh hoặc lấy cơm từ bát/tô to ra bát/tô nhỏ không? Hoặc nếu biết dùng đũa, con có dùng đũa gắp thức ăn mà không làm rơi vãi nhiều không?",
+          "text": "Con của bạn biết cách tự ăn uống, sử dụng thìa/muỗng, muôi/vá và bát/tô chưa? Ví dụ, con có biết sử dụng thìa/muỗng lớn để múc nước canh hoặc lấy cơm từ bát/tô to ra bát/tô nhỏ không? Hoặc nếu biết dùng đũa, con có dùng đũa gắp thức ăn mà không làm rơi vãi nhiều không?",
           "options": [
             "Có",
             "Thỉnh Thoảng",
@@ -344,7 +344,7 @@
         },
         {
           "id": 5,
-          "text": "Con cua bạn co the tu mình đanh rang bang cach cho kem len ban chải và chải tất cả các răng mà không cần bạn giúp?",
+          "text": "Con của bạn có thể tự mình đánh răng băng cách cho kem lên bàn chải và chải tất cả các răng mà không cần bạn giúp?",
           "options": [
             "Có",
             "Thỉnh Thoảng",

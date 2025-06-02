@@ -18,7 +18,7 @@
             "Thỉnh Thoảng",
             "Chưa"
           ],
-          "note": "Bạn có thể quan sát bé ở cửa hàng, sân chơi, hoặc ở nhà.",
+          "note": null,
           "image_filepath": null
         },
         {
@@ -34,13 +34,13 @@
         },
         {
           "id": 3,
-          "text": "Chỉ cho con của bạn thấy cách kéo áo khoác lên xuống. Mỗi khi kéo khóa lên thì nói “Kéo khóa lên', mỗi khi kéo khóa xuống thì nói: 'Kéo khóa xuống'. Hãy để khóa kéo ở giữa và yêu cầu bé kéo xuống. Trả khóa kéo về vị trí ở giữa và yêu cầu bé kéo nó lên. Lặp lại nhiều lần, và nhớ để khóa kéo ở giữa trước khi bảo bé kéo lên hoặc xuống. Con của bạn có luôn luôn làm đúng khi bạn yêu cầu bé kéo khóa “lên' hoặc 'xuống” không?",
+          "text": "Chỉ cho con của bạn thấy cách kéo áo khoác lên xuống. Mỗi khi kéo khóa lên thì nói “Kéo khóa lên', mỗi khi kéo khóa xuống thì nói: 'Kéo khóa xuống'. Hãy để khóa kéo ở giữa và yêu cầu bé kéo xuống. Trả khóa kéo về vị trí ở giữa và yêu cầu bé kéo nó lên. Lặp lại nhiều lần, và nhớ để khóa kéo ở giữa trước khi bảo bé kéo lên hoặc xuống. Con của bạn có luôn luôn làm đúng khi bạn yêu cầu bé kéo khóa 'lên' hoặc 'xuống' không?",
           "options": [
             "Có",
             "Thỉnh Thoảng",
             "Chưa"
           ],
-          "note": "Đánh dấu 'chưa' nếu bé làm rơi bóng hoặc bàn tay cầm bóng thấp hơn vai.",
+          "note": null,
           "image_filepath": null
         },
         {
@@ -62,7 +62,7 @@
             "Thỉnh Thoảng",
             "Chưa"
           ],
-          "note": "Bạn hãy đứng cách xa bé khoảng 5 feet/1.5 m và cho bé thử 2-3 lần trước khi đánh dấu trả lời.",
+          "note": null,
           "image_filepath": null
         },
         {
@@ -167,7 +167,7 @@
         },
         {
           "id": 2,
-          "text": "Sau khi con của bạn quan sát bạn dùng bút chì (bút màu/bút bi) vẽ một đường thẳng ngang từ trái sang phải trang giấy. Bạn yêu cầu bé bắt chước vẽ giống đường thẳng bạn đã vẽ mà không được đồ/tô lại. Bé Được tính là 'chưa' có vẽ được không?",
+          "text": "Sau khi con của bạn quan sát bạn dùng bút chì (bút màu/bút bi) vẽ một đường thẳng ngang từ trái sang phải trang giấy. Bạn yêu cầu bé bắt chước vẽ giống đường thẳng bạn đã vẽ mà không được đồ/tô lại. Bé có vẽ được không?",
           "options": [
             "Có",
             "Thỉnh Thoảng",
@@ -200,7 +200,7 @@
         },
         {
           "id": 5,
-          "text": "Con của bạn co biết ghép một bức tranh từ 5 đen 7 mảnh hình khác nhau không?",
+          "text": "Con của bạn co biết ghép một bức tranh từ 5 đến 7 mảnh hình khác nhau không?",
           "options": [
             "Có",
             "Thỉnh Thoảng",
@@ -228,18 +228,18 @@
       "questions": [
         {
           "id": 1,
-          "text": "Khi bạn chỉ vào hình bên và hỏi “Hình gì đây?', con của bạn có nói được từ có liên quan đến người hoặc cái gì đó tương tự? (Đánh dấu “có' khi con nói được một trong các từ như: “người tuyết', 'con trai', 'đàn ông', 'con gái', “bố', “người ngoài hành tinh', 'con khỉ', 'con gà'.)",
+          "text": "Khi bạn chỉ vào hình bên và hỏi 'Hình gì đây?', con của bạn có nói được từ có liên quan đến người hoặc cái gì đó tương tự?",
           "options": [
             "Có",
             "Thỉnh Thoảng",
             "Chưa"
           ],
-          "note": null,
+          "note": "Đánh dấu 'Có' khi con nói được một trong các từ như: 'người tuyết', 'con trai', 'đàn ông', 'con gái', 'bố', 'người ngoài hành tinh', 'con khỉ', 'con gà'.",
           "image_filepath": "image27_2.png"
         },
         {
           "id": 2,
-          "text": "Khi nghe bạn nói 'Con hãy nói 7, 3', con của bạn có thể lặp lại hai số này theo đúng thứ tự không? Không nhắc lại cặp số đó cho trẻ. Nếu cần, hãy sử dụng cặp số khác như “8, 2'.",
+          "text": "Khi nghe bạn nói 'Con hãy nói 7, 3', con của bạn có thể lặp lại hai số này theo đúng thứ tự không? Không nhắc lại cặp số đó cho trẻ. Nếu cần, hãy sử dụng cặp số khác như '8, 2'.",
           "options": [
             "Có",
             "Thỉnh Thoảng",
@@ -261,13 +261,13 @@
         },
         {
           "id": 4,
-          "text": "Khi bạn nói: 'Con hãy nói 5, 8, 3', con của bạn có nói lặp lại ba số này theo đúng thứ tự đó không? Không nhắc lại dãy số đó cho bé. Nếu cần, hãy sử dụng ba số khác như “6, 9, 2'. Bé chỉ cần lặp lại được một dãy số (gồm ba chữ số) thì được tính là “Có'.",
+          "text": "Khi bạn nói: 'Con hãy nói 5, 8, 3', con của bạn có nói lặp lại ba số này theo đúng thứ tự đó không? Không nhắc lại dãy số đó cho bé. Nếu cần, hãy sử dụng ba số khác như '6, 9, 2'.",
           "options": [
             "Có",
             "Thỉnh Thoảng",
             "Chưa"
           ],
-          "note": null,
+          "note": "Bé chỉ cần lặp lại được một dãy số (gồm ba chữ số) thì được tính là 'Có'.",
           "image_filepath": null
         },
         {
@@ -283,7 +283,7 @@
         },
         {
           "id": 6,
-          "text": "Con của bạn có mặc đồ để “diễn xuất', đóng giả là người nào khác hoặc vật gì khác không? Ví dụ, bé có mặc các loại quần áo khác nhau để giả vờ là bố, mẹ, anh, chị, hoặc nhân vật hoặc con vật tưởng tượng nào đó?",
+          "text": "Con của bạn có mặc đồ để 'diễn xuất', đóng giả là người nào khác hoặc vật gì khác không? Ví dụ, bé có mặc các loại quần áo khác nhau để giả vờ là bố, mẹ, anh, chị, hoặc nhân vật hoặc con vật tưởng tượng nào đó?",
           "options": [
             "Có",
             "Thỉnh Thoảng",
@@ -300,7 +300,7 @@
       "questions": [
         {
           "id": 1,
-          "text": "Khi nhìn vào gương và được hỏi “Ai trong gương thế?”, con có trả lời là “con đấy” không?",
+          "text": "Khi nhìn vào gương và được hỏi 'Ai trong gương thế?', con có trả lời là 'Con đấy' hoặc '(Tên bé) ... đấy' không?",
           "options": [
             "Có",
             "Thỉnh Thoảng",
@@ -322,7 +322,7 @@
         },
         {
           "id": 3,
-          "text": "Con có trả lời đúng câu hỏi: “Con là con gái hay con trai?” không?",
+          "text": "Hãy dùng chính xác những từ sau để hỏi con của bạn: 'Con là con gái hay con trai?' Bé có biết trả lời đúng không?",
           "options": [
             "Có",
             "Thỉnh Thoảng",

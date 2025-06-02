@@ -12,7 +12,7 @@
       "questions": [
         {
           "id": 1,
-          "text": "Khi bạn chỉ vào hình quả bóng (hoặc con mèo, cái ly/cốc , mũ/nón) và hỏi con của bạn: “Đây là cái gì?”, bé có gọi tên chính xác ít nhất một hình không?",
+          "text": "Khi bạn chỉ vào hình quả bóng (hoặc con mèo, cái ly/cốc , mũ/nón) và hỏi con của bạn: 'Đây là cái gì?', bé có gọi tên chính xác ít nhất một hình không?",
           "options": [
             "Có",
             "Thỉnh Thoảng",
@@ -23,7 +23,7 @@
         },
         {
           "id": 2,
-          "text": "Không ra hiệu hoặc gợi ý bằng cử chỉ điệu bộ, khi bạn nói những yêu cầu sau, con của bạn có thực hiện được ít nhất 3 trong số các yêu cầu đó không (Đặt đồ chơi lên bàn, Đóng cửa lại, Đưa cho mẹ cái khăn) ?",
+          "text": "Không ra hiệu hoặc gợi ý bằng cử chỉ điệu bộ, khi bạn nói những yêu cầu sau, con của bạn có thực hiện được ít nhất 3 trong số các yêu cầu đó không (Đặt đồ chơi lên bàn, Đóng cửa lại, Đưa cho mẹ cái khăn, Lấy áo khóa cho mẹ, Nắm tay mẹ, Lấy quyển sách cho mẹ) ?",
           "options": [
             "Có",
             "Thỉnh Thoảng",
@@ -56,7 +56,7 @@
         },
         {
           "id": 5,
-          "text": "Không ra hiệu hoặc dùng cử chỉ điệu bộ, bạn hãy yêu cầu con: “Con đặt sách trên bàn” và “Con đặt giày dưới ghế”. Con của bạn có thực hiện đúng cả 2 mệnh lệnh này không?",
+          "text": "Không ra hiệu hoặc dùng cử chỉ điệu bộ, bạn hãy yêu cầu con: 'Con đặt sách trên bàn' và 'Con đặt giày dưới ghế'. Con của bạn có thực hiện đúng cả 2 mệnh lệnh này không?",
           "options": [
             "Có",
             "Thỉnh Thoảng",
@@ -67,7 +67,7 @@
         },
         {
           "id": 6,
-          "text": "Khi xem truyện tranh, con của bạn có nói cho bạn biết những gì đang diễn ra hoặc là hành động nào đang diễn ra trong tranh không? (Ví dụ 'sủa', 'chạy', 'ăn” và “khóc'). Bạn có thể hỏi, “Con chó đang  làm gì?' hoặc 'Bạn này đang làm gì?'",
+          "text": "Khi xem truyện tranh, con của bạn có nói cho bạn biết những gì đang diễn ra hoặc là hành động nào đang diễn ra trong tranh không? (Ví dụ 'sủa', 'chạy', 'ăn” và “khóc'). Bạn có thể hỏi, 'Con chó đang  làm gì?' hoặc 'Bạn này đang làm gì?'",
           "options": [
             "Có",
             "Thỉnh Thoảng",
@@ -135,7 +135,7 @@
             "Chưa"
           ],
           "note": null,
-          "image_filepath": "image20_1.png"
+          "image_filepath": "image20_2.png"
         },
         {
           "id": 6,
@@ -167,7 +167,7 @@
         },
         {
           "id": 2,
-          "text": "Sau khi con của bạn quan sát bạn dùng bút chì vẽ một đường thẳng dọc từ đầu đến cuối trang giấy, bé có bắt chước vẽ giống không?",
+          "text": "Sau khi con của bạn quan sát bạn dùng bút chì (bút màu/bút bi) vẽ một đường thẳng dọc từ đầu đến cuối trang giấy, bạn yêu cầu bé bắt chước vẽ giống đường thẳng bạn đã vẽ mà không được đồ/tô lại. Bé có vẽ được không?",
           "options": [
             "Có",
             "Thỉnh Thoảng",
@@ -200,7 +200,7 @@
         },
         {
           "id": 5,
-          "text": "Sau khi con của bạn quan sát bạn ve mẫu một đường tròn trên tờ giấy bằng bút chì (bút màu/bút bi), hãy yêu cầu bé bắt chước vẽ giống đường tròn bạn đã vẽ mà không được đồ/tô lại. Bé có vẽ được không?",
+          "text": "Sau khi con của bạn quan sát bạn vẽ mẫu một đường tròn trên tờ giấy bằng bút chì (bút màu/bút bi), hãy yêu cầu bé bắt chước vẽ giống đường tròn bạn đã vẽ mà không được đồ/tô lại. Bé có vẽ được không?",
           "options": [
             "Có",
             "Thỉnh Thoảng",
@@ -228,7 +228,7 @@
       "questions": [
         {
           "id": 1,
-          "text": "Khi đang cùng bé nhìn vào gương, bạn hỏi “(Dùng tên bé) đâu rồi?” Bé có chỉ vào hình ảnh của mình trong gương không?",
+          "text": "Khi đang cùng bé nhìn vào gương, bạn hỏi '(Dùng tên bé) ... đâu rồi?' Bé có chỉ vào hình ảnh của mình trong gương không?",
           "options": [
             "Có",
             "Thỉnh Thoảng",
@@ -239,7 +239,7 @@
         },
         {
           "id": 2,
-          "text": "Nếu con của bạn muốn lấy một vật ở trên cao mà không với tới được, bé có tìm ghế hoặc hộp để đứng lên không (ví dụ lấy đồ chơi trên kệ hoặc “giúp' mẹ làm bếp)?",
+          "text": "Nếu con của bạn muốn lấy một vật ở trên cao mà không với tới được, bé có tìm ghế hoặc hộp để đứng lên không (ví dụ lấy đồ chơi trên kệ hoặc 'giúp' mẹ làm bếp)?",
           "options": [
             "Có",
             "Thỉnh Thoảng",
@@ -250,7 +250,7 @@
         },
         {
           "id": 3,
-          "text": "Cho con nhìn bạn xếp bốn đồ vật thành một hàng, bé có bắt chước xếp giống không?",
+          "text": "Cho con nhìn bạn xếp bốn đồ vật như khối hộp hoặc ô-tô thành một hàng, con có biết bắt chước bạn xếp cả bốn đồ vật thành một hàng không?",
           "options": [
             "Có",
             "Thỉnh Thoảng",
@@ -272,7 +272,7 @@
         },
         {
           "id": 5,
-          "text": "Khi nghe bạn nói 'Con hay noi 7, 3', con của bạn có thể lặp lại hai số này theo đúng thứ tự không? Không nhắc lại cặp số đó cho trẻ. Nếu cần, hãy sử dụng cặp số khác như “8, 2'. Bé chỉ cần lặp lại một dãy số (gồm hai chữ số) được tính là 'có'.",
+          "text": "Khi nghe bạn nói 'Con hãy nói 7, 3', con của bạn có thể lặp lại hai số này theo đúng thứ tự không? Không nhắc lại cặp số đó cho trẻ. Nếu cần, hãy sử dụng cặp số khác như '8, 2'. Bé chỉ cần lặp lại một dãy số (gồm hai chữ số) được tính là 'Có'.",
           "options": [
             "Có",
             "Thỉnh Thoảng",
@@ -283,7 +283,7 @@
         },
         {
           "id": 6,
-          "text": "Sau khi vẽ một “bức tranh” dù là nguệch ngoạc, bé có nói cho bạn biết bé vẽ gì không?",
+          "text": "Sau khi con của bạn vẽ một 'bức tranh' dù là nguệch ngoạc, bé có nói cho bạn biết bé vẽ gì không?",
           "options": [
             "Có",
             "Thỉnh Thoảng",
@@ -300,7 +300,7 @@
       "questions": [
         {
           "id": 1,
-          "text": "Nếu bạn thực hiện các động tác như há miệng, nháy mắt, kéo tai, vỗ má… bé có bắt chước được không?",
+          "text": "Nếu bạn thực hiện các động tác như há và ngậm miệng, nháy mắt, kéo tai, vỗ nhẹ lên má thì bé có bắt chước làm theo được ít nhất một động tác không?",
           "options": [
             "Có",
             "Thỉnh Thoảng",
@@ -344,7 +344,7 @@
         },
         {
           "id": 5,
-          "text": "Khi bạn cho con của bạn xỏ chân vao hai ong quần rộng, bé có biết tự kéo quần lên ngang bụng không?",
+          "text": "Khi bạn cho con của bạn xỏ chân vào hai ống quần rộng, bé có biết tự kéo quần lên ngang bụng không?",
           "options": [
             "Có",
             "Thỉnh Thoảng",
@@ -355,7 +355,7 @@
         },
         {
           "id": 6,
-          "text": "Khi con cua bạn nhìn vao guong va bạn hoi 'Ai trong gương thế?' bé có trả lời bằng cách nói 'con đấy!' hoặc '(Tên bé) ... đấy' không?",
+          "text": "Khi con của bạn nhìn vào gương và bạn hỏi 'Ai trong gương thế?' bé có trả lời bằng cách nói 'Con đấy!' hoặc '(Tên bé) ... đấy' không?",
           "options": [
             "Có",
             "Thỉnh Thoảng",

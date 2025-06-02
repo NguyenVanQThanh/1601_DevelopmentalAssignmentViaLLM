@@ -12,7 +12,7 @@
       "questions": [
         {
           "id": 1,
-          "text": "Khi bạn chỉ vào hình quả bóng (hoặc con mèo, cái ly/cốc , mũ/nón) và hỏi con của bạn: “Đây là cái gì?”, bé có gọi tên chính xác ít nhất một hình không?",
+          "text": "Khi bạn chỉ vào hình quả bóng (hoặc con mèo, cái ly/cốc , mũ/nón) và hỏi con của bạn: 'Đây là cái gì?', bé có gọi tên chính xác ít nhất một hình không?",
           "options": [
             "Có",
             "Thỉnh Thoảng",
@@ -23,7 +23,7 @@
         },
         {
           "id": 2,
-          "text": "Không ra hiệu hoặc gợi ý bằng cử chỉ điệu bộ, khi bạn nói những yêu cầu sau, con của bạn có thực hiện được ít nhất 3 trong số các yêu cầu đó không? (Đặt đồ chơi lên bàn, Đóng cửa lại, Đưa cho mẹ cái khăn, Lấy áo khoác cho mẹ, Nắm tay mẹ, Lấy quyển sách cho mẹ)",
+          "text": "Không ra hiệu hoặc gợi ý bằng cử chỉ điệu bộ, khi bạn nói những yêu cầu sau, con của bạn có thực hiện được ít nhất 3 trong số các yêu cầu sau không? (Đặt đồ chơi lên bàn, Đóng cửa lại, Đưa cho mẹ cái khăn, Lấy áo khoác cho mẹ, Nắm tay mẹ, Lấy quyển sách cho mẹ)",
           "options": [
             "Có",
             "Thỉnh Thoảng",
@@ -45,7 +45,7 @@
         },
         {
           "id": 4,
-          "text": "Ngoài từ “ba” và “mẹ”, con của bạn còn nói thêm ít nhất 15 từ khác nữa không?",
+          "text": "Ngoài từ 'ba' và 'Mẹ', con của bạn còn nói thêm ít nhất 15 từ khác nữa không?",
           "options": [
             "Có",
             "Thỉnh Thoảng",
@@ -56,7 +56,7 @@
         },
         {
           "id": 5,
-          "text": "Con của bạn có sử dụng đúng ít nhất hai trong số các từ/cụm từ như: “con”, “của con”, “mẹ”, “cô” không?",
+          "text": "Con của bạn có sử dụng đúng ít nhất hai trong số các từ/cụm từ như: 'Con', 'của con', 'mẹ', 'cô' không?",
           "options": [
             "Có",
             "Thỉnh Thoảng",
@@ -67,7 +67,7 @@
         },
         {
           "id": 6,
-          "text": "Con của bạn có nói được câu có hai hoặc ba từ biểu hiện các ý tưởng khác nhau không? Ví dụ như “Thấy chó”, “Mẹ về rồi” hoặc “Mèo đi rồi.”",
+          "text": "Con của bạn có nói được câu có hai hoặc ba từ biểu hiện các ý tưởng khác nhau không? Ví dụ như 'Thấy chó', 'Mẹ về rồi' hoặc 'Mèo đi rồi.'",
           "options": [
             "Có",
             "Thỉnh Thoảng",
@@ -90,7 +90,7 @@
             "Thỉnh Thoảng",
             "Chưa"
           ],
-          "note": "Nếu bé đã biết đá bóng thì ghi 'có' vào câu hỏi này.",
+          "note": "Nếu bé đã biết đá bóng thì ghi 'Có' vào câu hỏi này.",
           "image_filepath": "image18_1.png"
         },
         {
@@ -106,7 +106,7 @@
         },
         {
           "id": 3,
-          "text": "Con của bạn có tự đi xuống cầu thang nếu bạn dắt một tay bé không?",
+          "text": "Con của bạn có tự đi xuống cầu thang nếu bạn dắt một tay bé không? Bé cũng có thể vịn vào tường hoặc tay vịn cầu thang.",
           "options": [
             "Có",
             "Thỉnh Thoảng",
@@ -267,7 +267,7 @@
             "Thỉnh Thoảng",
             "Chưa"
           ],
-          "note": "Đánh dấu 'chưa' nếu bé vẽ nguệch ngoạc lên xuống",
+          "note": "Đánh dấu 'Chưa' nếu bé vẽ nguệch ngoạc lên xuống",
           "image_filepath": "image18_5.png"
         },
         {

@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "topic": "Tiếp xúc mắt",
+        "question": "Trẻ giao tiếp mắt, tiếp xúc mắt ổn định và đủ lâu với người thân",
+        "options": ["Tốt", "Khá", "Kém"]
+    },
+    {
+        "id": 2,
+        "topic": "Chậm nói",
+        "question": "Trẻ dưới 1 tuổi: phát được âm nhưng chưa có nghĩa ( âm gừ gừ, nói ê a..) một mình hoặc với người thân\\nTrẻ 1-2 tuổi: nói được 1 hay 2 từ (bà, mẹ, chó, đi chơi…)\\nTrẻ 2-3 tuổi: nói được 2-3 từ thành câu có nghĩa ('Mẹ ăn'; 'Bi uống'; 'Em chơi', 'Con muốn ăn', 'Con muốn đi')\\nTrẻ 3-5 tuổi: có thể nói câu có 4 từ trở lên, kể chuyện ngắn, duy trì hội thoại tốt (Bố đi làm rồi....)",
+        "options": ["Tốt", "Khá", "Kém"]
+    },
+    {
+        "id": 3,
+        "topic": "Kỹ năng giao tiếp sớm",
+        "question": "Trẻ biết đòi, biết khoe, biết lắc đầu/gật đầu khi được hỏi, biết thể hiện ý nghĩ với người thân và có chú ý khi được người khác chỉ/dạy một thứ gì đó",
+        "options": ["Tốt", "Khá", "Kém"]
+    },
+    {
+        "id": 4,
+        "topic": "Hành vi lặp lại",
+        "question": "Trẻ có biểu hiện: xếp đồ chơi thẳng hàng, quay các đối tượng, lắc đồ vật, đẩy xe tới lui, hoặc mở và đóng ngăn kéo hoặc cửa ra vào... hàng giờ.",
+        "options": ["Tốt", "Khá", "Kém"]
+    },
+    {
+        "id": 5,
+        "topic": "Phản ứng với tên gọi",
+        "question": "Trẻ đáp ứng với tên gọi của mình từ người thân hoặc người lạ khi được gọi",
+        "options": ["Tốt", "Khá", "Kém"]
+    },
+    {
+        "id": 6,
+        "topic": "Chỉ trỏ",
+        "question": "Trẻ dùng ngón trỏ để chỉ về phía vật hoặc người để khoe, đòi, hướng sự chú ý từ người khác",
+        "options": ["Tốt", "Khá", "Kém"]
+    },
+    {
+        "id": 7,
+        "topic": "Chơi luân phiên",
+        "question": "Trẻ có thể chơi luân phiên là khi hai người (trẻ-trẻ hoặc trẻ-người lớn) thay nhau thực hiện một hành động có tính phối hợp, có quy luật qua lại - chờ đợi - phản hồi như chuyền banh...",
+        "options": ["Tốt", "Khá", "Kém"]
+    },
+    {
+        "id": 8,
+        "topic": "Cô lập",
+        "question": "Trẻ thích chơi một mình, ít rủ bạn chơi hay thích làm theo ý cá nhân",
+        "options": ["Có", "Thỉnh thoảng", "Không"]
+    },
+    {
+        "id": 9,
+        "topic": "Đi nhón chân",
+        "question": "Trẻ nhỏ hơn 3 tuổi nhưng đi nhón gót/chân thường xuyên, liên tục, bất chấp mọi mặt phẳng.\\nTrẻ sau 3 tuổi nhưng vẫn còn duy trì thói quen đi nhón gót/chân",
+        "options": ["Có", "Thỉnh thoảng", "Không"]
+    },
+    {
+        "id": 10,
+        "topic": "Cứng nhắc",
+        "question": "Trẻ thích chơi với một thứ quen thuộc và duy nhất, trẻ khó thích nghi với sự thay đổi từ môi trường bên ngoài. Nếu có thay đổi nhỏ là không chịu hoặc rất cáu gắt.",
+        "options": ["Có", "Thỉnh thoảng", "Không"]
+    }
+]
