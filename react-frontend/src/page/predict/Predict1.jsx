@@ -4,7 +4,7 @@ import TitleBox from "../../components/Title_box/TitleBox";
 import FormWrapper from "../test-asq/components/Form/FormWrapper";
 import { useNavigate } from "react-router-dom";
 
-function Predict1() {
+function Predict1({sessionId, accessToken}) {
   const navigate = useNavigate();
   
   const fields = [
@@ -63,7 +63,7 @@ function Predict1() {
 
   const handleSubmit = (formData) => {
   console.log("Dữ liệu gửi từ Predict1:", formData);
-  navigate("/guest/predict/step2", { state: formData }); // Truyền data nếu cần
+  navigate("/guest/predict/step2", { state: formData }); 
 };
   return (
     <div className="predict-container">

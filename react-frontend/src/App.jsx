@@ -31,8 +31,8 @@ function App() {
   const [processedAsqResults, setProcessedAsqResults] = useState(null);
   const [llmAsqSolutions, setLlmAsqSolutions] = useState(null);
 
-  const [sessionId, setSessionId] = useState(() => localStorage.getItem('sessionId') || null);
-  const [accessToken, setAccessToken] = useState(() => localStorage.getItem('accessToken') || null);
+  const [sessionId, setSessionId] = useState(() => sessionStorage.getItem('sessionId') || null);
+  const [accessToken, setAccessToken] = useState(() => sessionStorage.getItem('accessToken') || null);
   const [initialChatbotMessage, setInitialChatbotMessage] = useState(null);
   const [initialMessageFetchedOrUsed, setInitialMessageFetchedOrUsed] = useState(false);
 
@@ -62,7 +62,7 @@ function App() {
 
 
   const fetchToken = useCallback(async () => {
-    if (!localStorage.getItem('accessToken')) {
+    if (!sessionStorage.getItem('accessToken')) {
       try {
         // Use fetchWithNgrokHeaders for /token as well, though it won't add Authorization for this specific call
         const response = await fetchWithNgrokHeaders(`${API_BASE_URL}/token`, { method: 'POST' });
@@ -73,17 +73,17 @@ function App() {
         const data = await response.json();
         setAccessToken(data.access_token);
         setSessionId(data.session_id);
-        localStorage.setItem('accessToken', data.access_token);
-        localStorage.setItem('sessionId', data.session_id);
+        sessionStorage.setItem('accessToken', data.access_token);
+        sessionStorage.setItem('sessionId', data.session_id);
         console.log("Token và ID phiên mới đã được lấy và lưu trữ:", data.session_id);
       } catch (error) {
         console.error("Lỗi khi lấy token phiên:", error);
         alert(`Không thể khởi tạo phiên làm việc: ${error.message}. Vui lòng làm mới trang.`);
       }
     } else {
-      if (!accessToken) setAccessToken(localStorage.getItem('accessToken'));
-      if (!sessionId) setSessionId(localStorage.getItem('sessionId'));
-       console.log("Token và ID phiên được tải từ localStorage:", localStorage.getItem('sessionId'));
+      if (!accessToken) setAccessToken(sessionStorage.getItem('accessToken'));
+      if (!sessionId) setSessionId(sessionStorage.getItem('sessionId'));
+       console.log("Token và ID phiên được tải từ sessionStorage:", sessionStorage.getItem('sessionId'));
     }
   }, [accessToken, sessionId, API_BASE_URL, fetchWithNgrokHeaders]);
 
@@ -206,9 +206,9 @@ function App() {
             </section></main>
           } />
         <Route path="/guest/chatbot" element={<ChatbotPage initialMessage={initialChatbotMessage} sessionId={sessionId} accessToken={accessToken} onInitialMessageShown={() => { setInitialChatbotMessage(null); }} />} />
-        <Route path="/guest/predict" element={<Predict1/>} />
-        <Route path="/guest/predict/step2" element={<Predict2 />} />
-        <Route path="/guest/predict/step3" element={<Predict3 />} />
+        <Route path="/guest/predict" element={<Predict1 sessionId={sessionId} accessToken={accessToken} />} />
+        <Route path="/guest/predict/step2" element={<Predict2 sessionId={sessionId} accessToken={accessToken} />} />
+        <Route path="/guest/predict/step3" element={<Predict3  sessionId={sessionId} accessToken={accessToken} />} />
 
       </Routes>
       <div className="container-footer"><Footer /></div>

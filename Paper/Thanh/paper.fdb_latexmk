@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1747691715.66593 "d:/Project/1601_DevelopmentalAssignmentViaLLM/Paper/Thanh/paper.tex" "paper.pdf" "paper" 1747691716.62845 0
+["pdflatex"] 1748533071.64469 "d:/Project/1601_DevelopmentalAssignmentViaLLM/Paper/Thanh/paper.tex" "paper.pdf" "paper" 1748533072.656 0
   "C:/Users/Thanh/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1747690667 89969 e95579120a3aa0ebc21d2737ca2ba701 ""
   "C:/Users/Thanh/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1746860375 13157640 2dc99f370e1b4647fc32046eac517dd1 ""
   "C:/Users/Thanh/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/vntex/t5.enc" 1368738347 7824 21ade6c3c7fd67cb4ace8dbc91c53118 ""
@@ -199,11 +199,11 @@
   "C:/Users/Thanh/AppData/Local/Programs/MiKTeX/tex/latex/vntex/t5pcr.fd" 1368738347 1102 fa6916e6165172f21d71f8ac0a56bf11 ""
   "C:/Users/Thanh/AppData/Local/Programs/MiKTeX/tex/latex/vntex/t5ptm.fd" 1368738347 1100 803888e7a6edcd8c143317c75deceb08 ""
   "C:/Users/Thanh/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
-  "bibliography/Figure/system-architech.png" 1747072035 202025 34be1a8fe1570e44053d195bf39fe515 ""
-  "d:/Project/1601_DevelopmentalAssignmentViaLLM/Paper/Thanh/paper.tex" 1747691715 46539 ca8cb142ce8c71fbf822f54681bc2616 ""
-  "paper.aux" 1747691716 6375 2ff26d163b51089612222a5debada35f "pdflatex"
-  "paper.out" 1747691716 2301 cabcd7a73b4fb6f27970c0217db6cbd6 "pdflatex"
-  "paper.tex" 1747691715 46539 ca8cb142ce8c71fbf822f54681bc2616 ""
+  "bibliography/Figure/system-architech.png" 1748490670 202025 34be1a8fe1570e44053d195bf39fe515 ""
+  "d:/Project/1601_DevelopmentalAssignmentViaLLM/Paper/Thanh/paper.tex" 1748533071 46206 a01ec5b7f89656f3541c897cc76a03f1 ""
+  "paper.aux" 1748533072 6367 0d93defeec856f406c4b91839b3388ad "pdflatex"
+  "paper.out" 1748533072 2301 cabcd7a73b4fb6f27970c0217db6cbd6 "pdflatex"
+  "paper.tex" 1748533071 46206 a01ec5b7f89656f3541c897cc76a03f1 ""
   (generated)
   "paper.aux"
   "paper.log"

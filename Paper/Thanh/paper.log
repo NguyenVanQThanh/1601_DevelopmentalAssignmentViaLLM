@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.5.9)  20 MAY 2025 04:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.5.9)  29 MAY 2025 22:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1014,132 +1014,93 @@ Underfull \hbox (badness 2932) in paragraph at lines 95--96
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 118--119
- \T5/ptm/m/it/10 a) Model Se-lec-tion and Quan-ti-za-tion: [][] \T5/ptm/m/n/10 Pre-trained
- []
-
-
-Underfull \hbox (badness 4193) in paragraph at lines 118--119
-\T5/ptm/m/n/10 base mod-els, specif-i-cally \T5/ptm/b/n/10 VinaL-LaMA (vilm/vinallama-
+\T5/ptm/m/n/10 SeaLLMs (\T5/pcr/m/n/10 SeaLLMs/SeaLLMs-v3-7B-Chat\T5/ptm/m/n/10 ), and
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 118--119
-\T5/ptm/b/n/10 7b-chat)\T5/ptm/m/n/10 , \T5/ptm/b/n/10 Vistral-7B (Viet-Mistral/Vistral-7B-Chat)\T5/ptm/m/n/10 ,
+\T5/ptm/m/n/10 Dama-2 (\T5/pcr/m/n/10 vietgpt/dama-2-7b-chat\T5/ptm/m/n/10 ), were loaded
  []
 
 
-Underfull \hbox (badness 1648) in paragraph at lines 118--119
-\T5/ptm/b/n/10 SeaLLMs (SeaLLMs/SeaLLMs-v3-7B-Chat)\T5/ptm/m/n/10 , and \T5/ptm/b/n/10 Dama-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 118--119
-\T5/ptm/b/n/10 2 (vietgpt/dama-2-7b-chat)\T5/ptm/m/n/10 , were loaded from their
- []
-
-
-Underfull \hbox (badness 1888) in paragraph at lines 118--119
-\T5/ptm/m/n/10 quan-ti-za-tion ap-proach was adopted. For ini-tial single-run
- []
-
-
-Underfull \hbox (badness 3088) in paragraph at lines 118--119
-\T5/ptm/m/n/10 eval-u-a-tions (Sec-tion [][]2d[]), mod-els were quan-tized to
- []
-
-
-Underfull \hbox (badness 1675) in paragraph at lines 118--119
-\T5/ptm/b/n/10 8-bit (int8) \T5/ptm/m/n/10 pre-ci-sion us-ing the \T5/pcr/m/n/10 bit-sand-bytes \T5/ptm/m/n/10 li-brary.
- []
-
-
-Underfull \hbox (badness 3977) in paragraph at lines 118--119
-\T5/ptm/m/n/10 How-ever, for the more ex-ten-sive 5-fold cross-validation
+Underfull \hbox (badness 1371) in paragraph at lines 118--119
+\T5/ptm/m/n/10 mem-ory con-sump-tion and ac-cel-er-ate the train-ing pro-cess,
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 118--119
-\T5/ptm/m/n/10 with \T5/pcr/m/n/10 bnb_4bit_compute_dtype=torch.bfloat16
+\T5/pcr/m/n/10 bnb_4bit_compute_dtype=torch.bfloat16 \T5/ptm/m/n/10 and
  []
 
 
-Underfull \hbox (badness 2744) in paragraph at lines 118--119
-\T5/ptm/m/n/10 size rel-a-tive to the 7B pa-ram-e-ter scale of the mod-els,
- []
-
-
-Underfull \hbox (badness 2142) in paragraph at lines 118--119
-\T5/ptm/m/n/10 degra-da-tion in model qual-ity, mak-ing the com-pre-hen-sive
+Underfull \hbox (badness 10000) in paragraph at lines 118--119
+\T5/pcr/m/n/10 bnb_4bit_use_double_quant=True\T5/ptm/m/n/10 , was ap-plied.
  []
 
 
 
 [2 <./bibliography/Figure/system-architech.png>]
-
-LaTeX Warning: Citation `hu2021lora' on page 3 undefined on input line 121.
-
-
-Underfull \hbox (badness 2213) in paragraph at lines 121--122
+Underfull \hbox (badness 2213) in paragraph at lines 120--121
  \T5/ptm/m/it/10 b) Low-Rank Adap-ta-tion (LoRA) Con-fig-u-ra-tion: [][] \T5/ptm/m/n/10 The
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 126--127
+Underfull \hbox (badness 10000) in paragraph at lines 125--126
 \T5/ptm/m/n/10 (gat-ing pro-jec-tion in SwiGLU/GeGLU vari-ants),
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 126--127
+Underfull \hbox (badness 10000) in paragraph at lines 125--126
 \T5/pcr/m/n/10 up_proj \T5/ptm/m/n/10 (up-scal-ing pro-jec-tion in FFN), and
  []
 
 
 
 
-Underfull \hbox (badness 2073) in paragraph at lines 140--141
+Underfull \hbox (badness 2073) in paragraph at lines 139--140
  \T5/ptm/m/it/10 d) Single-Run Eval-u-a-tion: [][] \T5/ptm/m/n/10 Be-fore pro-ceed-ing to full
  []
 
 
-Underfull \hbox (badness 3861) in paragraph at lines 149--150
+Underfull \hbox (badness 3861) in paragraph at lines 148--149
 []\T5/ptm/b/n/10 ROUGE (Recall-Oriented Un-der-study for Gist-ing
  []
 
 
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 154--155
+Underfull \hbox (badness 10000) in paragraph at lines 153--154
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 180--181
+Underfull \hbox (badness 10000) in paragraph at lines 179--180
 
  []
 
 
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 205--206
+Underfull \hbox (badness 10000) in paragraph at lines 204--205
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 232--233
+Underfull \hbox (badness 10000) in paragraph at lines 231--232
 
  []
 
 
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 262--263
+Underfull \hbox (badness 10000) in paragraph at lines 261--262
 
  []
 
 
 
 
-Underfull \hbox (badness 3323) in paragraph at lines 298--299
+Underfull \hbox (badness 3323) in paragraph at lines 297--298
 \T5/ptm/m/n/10 Augmented Gen-er-a-tion) ar-chi-tec-ture with the LangChain
  []
 
@@ -1151,7 +1112,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [5]
 
 
-Overfull \hbox (2.0pt too wide) in paragraph at lines 387--387
+Overfull \hbox (2.0pt too wide) in paragraph at lines 386--386
  []  \T5/pcr/m/n/10 "output": "B¤n c¦n m¼nh gióp g¼ n o?"[] 
  []
 
@@ -1162,36 +1123,21 @@ Overfull \hbox (2.0pt too wide) in paragraph at lines 387--387
 
 
 [7]
-Underfull \hbox (badness 5064) in paragraph at lines 526--527
+Underfull \hbox (badness 5064) in paragraph at lines 525--526
 []\T5/ptm/m/n/10 However, prac-ti-cal ex-pert as-sess-ment high-lighted that
  []
 
 
-Underfull \hbox (badness 1584) in paragraph at lines 536--537
-\T5/ptm/m/n/8 y-sis on So-cial Me-dia with Large Lan-guage Mod-els,"arXiv preprint
+Underfull \hbox (badness 10000) in paragraph at lines 551--552
+[]\T5/ptm/m/n/8 Steck, H., Ekanad-ham, C., & Kallus, N. (2024). ``Is Cosine-
  []
 
 
-Underfull \hbox (badness 2922) in paragraph at lines 540--541
-[]\T5/ptm/m/n/8 Yunfan Gao, Yun Xiong, Xinyu Gao, Kangx-i-ang Jia, Jin-liu Pan,
+Underfull \hbox (badness 1675) in paragraph at lines 551--552
+\T5/ptm/m/n/8 Similarity of Em-bed-dings Re-ally About Sim-i-lar-ity?'' arXiv preprint
  []
 
 
-Underfull \hbox (badness 4429) in paragraph at lines 542--543
-[]\T5/ptm/m/n/8 Jianlv Chen, Shi-tao Xiao, Peitian Zhang, Kun Luo, Defu Lian,
- []
-
-
-
-
-Underfull \hbox (badness 5036) in paragraph at lines 544--545
-[]\T5/ptm/m/n/8 Harald Steck, Chai-tanya Ekanad-ham, Nathan Kallus, "Is Cosine-
- []
-
-
-Underfull \hbox (badness 3612) in paragraph at lines 544--545
-\T5/ptm/m/n/8 Similarity of Em-bed-dings Re-ally About Sim-i-lar-ity?"arXiv preprint
- []
 
 
 ** Conference Paper **
@@ -1211,25 +1157,21 @@ Before submitting the final camera ready copy, remember to:
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-04-14>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
 Package rerunfilecheck Info: File `paper.out' has not changed.
 (rerunfilecheck)             Checksum: CABCD7A73B4FB6F27970C0217DB6CBD6;2301.
  ) 
 Here is how much of TeX's memory you used:
- 27282 strings out of 469941
- 523101 string characters out of 5469431
- 903710 words of memory out of 5000000
- 53567 multiletter control sequences out of 15000+600000
+ 27274 strings out of 469941
+ 522966 string characters out of 5469431
+ 903711 words of memory out of 5000000
+ 53559 multiletter control sequences out of 15000+600000
  694422 words of font info for 135 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 98i,12n,101p,1394b,565s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 98i,12n,101p,1271b,565s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Thanh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Thanh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Thanh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Thanh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Thanh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/Thanh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Thanh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Thanh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Thanh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/Thanh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Thanh/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/urwvn/ucrr8v.pfb><C:/Users/Thanh/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/urwvn/utmb8v.pfb><C:/Users/Thanh/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/urwvn/utmbi8v.pfb><C:/Users/Thanh/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/urwvn/utmr8v.pfb><C:/Users/Thanh/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/urwvn/utmri8v.pfb>
-Output written on paper.pdf (8 pages, 442051 bytes).
+Output written on paper.pdf (8 pages, 441275 bytes).
 PDF statistics:
- 280 PDF objects out of 1000 (max. 8388607)
+ 279 PDF objects out of 1000 (max. 8388607)
  86 named destinations out of 1000 (max. 500000)
  138 words of extra memory for PDF output out of 10000 (max. 10000000)
 
