@@ -67,7 +67,7 @@ To address these challenges, this study introduces Overall Local Accuracy (OLA),
 % Tổng quan các công trình nghiên cứu liên quan, so sánh và xác định khoảng trống nghiên cứu.
 Harshita Chandrappa, Swaathi BR, Prof. Swimpy Pahuja.~\cite{b1} proposed a hybrid machine learning framework for predicting Autism Spectrum Disorder (ASD) across all age groups. The system incorporates multiple ML classifiers such as Decision Tree, Naive Bayes, Random Forest, SVM, and Logistic Regression into a web-based diagnostic application. Through preprocessing and classification on a structured ASD dataset, their approach demonstrated high accuracy in predicting ASD traits. Among the models evaluated, Support Vector Machine and Random Forest yielded the best results in terms of accuracy and robustness. The authors highlighted the importance of early screening and presented a chatbot-based interface to assist users in understanding ASD symptoms and diagnosis.
 
-José A. Sáez, Julián Luengo, Jerzy Stefanowski, Francisco Herrera ~\cite{b2} introduced SMOTE-IDF, a novel text classification method combining SMOTE oversampling with IDF weighting to tackle class imbalance in textual datasets. Using a Deep Neural Network (DNN) classifier, SMOTE-IDF balances minority class samples while preserving the significance of rare, informative terms. Tested on datasets like 20 Newsgroups, it outperformed traditional oversampling and baseline classifiers in accuracy, precision, recall, and F1-score, highlighting the value of hybrid sampling and feature weighting for imbalanced textual data.
+Jose A. Saez, Julian Luengo, Jerzy Stefanowski, Francisco Herrera ~\cite{b2} introduced SMOTE-IDF, a novel text classification method combining SMOTE oversampling with IDF weighting to tackle class imbalance in textual datasets. Using a Deep Neural Network (DNN) classifier, SMOTE-IDF balances minority class samples while preserving the significance of rare, informative terms. Tested on datasets like 20 Newsgroups, it outperformed traditional oversampling and baseline classifiers in accuracy, precision, recall, and F1-score, highlighting the value of hybrid sampling and feature weighting for imbalanced textual data.
 
 % Hanen Karamti, Raed Alharthi, Amira Al Anizi, Reemah M. Alhebshi, Ala’ Abdulmajid Eshmawi, Shtwai Alsubai, Muhammad Umer.~\cite{b3} introduced an enhanced oversampling technique named SMOTE-KNN, which improves upon the original SMOTE algorithm by integrating a K-Nearest Neighbors (KNN)-based adaptive mechanism. The proposed method dynamically selects appropriate neighbor samples for synthetic instance generation, aiming to reduce noise and overlap between classes in imbalanced datasets. The authors validated SMOTE-KNN on multiple benchmark datasets and compared its performance with traditional SMOTE, Borderline-SMOTE, and ADASYN. Experimental results demonstrated that SMOTE-KNN significantly enhances classification metrics such as precision, recall, and F1-score across various classifiers. The study underlines the importance of local data structure in oversampling and offers a more robust strategy for handling imbalance in binary classification problems.
 
@@ -562,6 +562,10 @@ This study introduces the Overall Local Accuracy (OLA) framework to improving fe
 
 The key contribution is a new approach that balances local accuracy to overcome global biases, making it more reliable for ASD diagnosis. This work lays the foundation for better, fairer diagnostic tools, especially for early screening where missing cases is a concern. However, challenges like the need for customization and limited dataset size remain. Future efforts should test OLA on larger datasets and include multi-modal data, like images and videos, to further enhance its effectiveness.
 
+\section{Acknowledgment}
+We would like to express our sincere gratitude to the University of Information Technology, Vietnam National University Ho Chi Minh City (UIT, VNU-HCM), for their support and for providing the necessary resources throughout this research. This research was supported by The VNUHCM-University of Information Technology’s Scientific Research Support Fund.\\
+
+We also would like to thank experts in the field of psychological health for providing young medical record data and professional documents, who supported the research team to authenticate and consolidate professional knowledge so that the group can achieve the best research results.
 
 % ---------- REFERENCES ----------
 \begin{thebibliography}{99}
@@ -597,7 +601,7 @@ Available: \url{https://doi.org/10.22214/ijraset.2023.52417}
 
 \bibitem{b15} J. Huang, L. Zhao, and D. Liu, ``An improved SMOTE approach with missing value imputation and feature enhancement for clinical data,'' \textit{IEEE Access}, vol. 9, pp. 44264--44273, 2021.
 
-\bibitem{b16} Overall Local Accuracy. Available: \url{https://deslib.readthedocs.io/en/latest/modules/dcs/ola.html}
+% \bibitem{b16} Overall Local Accuracy. Available: \url{https://deslib.readthedocs.io/en/latest/modules/dcs/ola.html}
 
 \bibitem{b17} R. M. O. Cruz, R. Sabourin, and G. D. C. Cavalcanti, ``DESlib: A dynamic ensemble selection library in Python,'' 2018. Available: \url{https://github.com/scikit-learn-contrib/DESlib}
 
