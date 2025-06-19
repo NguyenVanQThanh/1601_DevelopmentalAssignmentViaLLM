@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.5.9)  29 MAY 2025 22:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.5.9)  2 JUN 2025 22:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -992,7 +992,7 @@ Underfull \hbox (badness 2318) in paragraph at lines 67--68
 
 
 ]
-<bibliography/Figure/system-architech.png, id=88, 997.47656pt x 549.55313pt>
+<bibliography/Figure/system-architech.png, id=92, 997.47656pt x 549.55313pt>
 File: bibliography/Figure/system-architech.png Graphic file (type png)
 <use bibliography/Figure/system-architech.png>
 Package pdftex.def Info: bibliography/Figure/system-architech.png  used on input line 87.
@@ -1128,12 +1128,12 @@ Underfull \hbox (badness 5064) in paragraph at lines 525--526
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 551--552
+Underfull \hbox (badness 10000) in paragraph at lines 553--554
 []\T5/ptm/m/n/8 Steck, H., Ekanad-ham, C., & Kallus, N. (2024). ``Is Cosine-
  []
 
 
-Underfull \hbox (badness 1675) in paragraph at lines 551--552
+Underfull \hbox (badness 1675) in paragraph at lines 553--554
 \T5/ptm/m/n/8 Similarity of Em-bed-dings Re-ally About Sim-i-lar-ity?'' arXiv preprint
  []
 
@@ -1158,20 +1158,20 @@ LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-04-14>
  ***********
 Package rerunfilecheck Info: File `paper.out' has not changed.
-(rerunfilecheck)             Checksum: CABCD7A73B4FB6F27970C0217DB6CBD6;2301.
+(rerunfilecheck)             Checksum: 40C0200414CAD6248DF00561973096F2;2439.
  ) 
 Here is how much of TeX's memory you used:
- 27274 strings out of 469941
- 522966 string characters out of 5469431
+ 27276 strings out of 469941
+ 522996 string characters out of 5469431
  903711 words of memory out of 5000000
- 53559 multiletter control sequences out of 15000+600000
+ 53560 multiletter control sequences out of 15000+600000
  694422 words of font info for 135 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  98i,12n,101p,1271b,565s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Thanh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Thanh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Thanh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Thanh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Thanh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/Thanh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Thanh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Thanh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Thanh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/Thanh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Thanh/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/urwvn/ucrr8v.pfb><C:/Users/Thanh/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/urwvn/utmb8v.pfb><C:/Users/Thanh/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/urwvn/utmbi8v.pfb><C:/Users/Thanh/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/urwvn/utmr8v.pfb><C:/Users/Thanh/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/urwvn/utmri8v.pfb>
-Output written on paper.pdf (8 pages, 441275 bytes).
+Output written on paper.pdf (8 pages, 441744 bytes).
 PDF statistics:
- 279 PDF objects out of 1000 (max. 8388607)
- 86 named destinations out of 1000 (max. 500000)
- 138 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 283 PDF objects out of 1000 (max. 8388607)
+ 87 named destinations out of 1000 (max. 500000)
+ 146 words of extra memory for PDF output out of 10000 (max. 10000000)
 
