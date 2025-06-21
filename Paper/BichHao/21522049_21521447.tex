@@ -16,6 +16,7 @@
 \usepackage{url}
 \usepackage{enumitem} % đặt ở phần đầu file
 \usepackage{placeins}
+\usepackage{booktabs}   % kẻ bảng đẹp
 
 
 % ---------- TABLE ADJUSTMENT ----------
@@ -64,7 +65,7 @@ In Vietnam, while official statistics are lacking, preliminary estimates suggest
 
 Traditional screening tools, such as M-CHAT-R/F and ADOS, are resource-intensive, requiring specialized expertise and limiting their accessibility in low-resource settings, particularly in developing countries like Vietnam ~\cite{b3}. The absence of specific medical tests for ASD further complicates diagnosis, relying heavily on subjective observational assessments. Recent advancements in artificial intelligence (AI) and machine learning (ML) offer promising opportunities for automated ASD screening by leveraging electronic medical records (EMR). However, using EMR for ASD prediction remains a nascent field, particularly in contexts like Vietnam, where medical data is often heterogeneous, imbalanced (fewer ASD cases), and prone to feature bias (over-reliance on specific indicators) ~\cite{b4}. Previous ML studies have applied models like Decision Trees, XGBoost, and CatBoost, achieving high accuracy in controlled settings but struggling with real-world generalizability due to data imbalances and dominant features.
 
-This study proposes an ML-based ASD screening tool utilizing psychological EMRs from children aged 1–8 years, addressing practical challenges such as class imbalance and feature bias. We evaluate four ML models-Decision Tree, XGBoost, CatBoost, and an enhanced Overall Local Accuracy (OLA) framework-introducing SMOTE-IPF for data augmentation and tailored adjustments to OLA to mitigate bias. Our contributions include: (1) a robust dataset combining 300 public records and 600 clinical EMRs, preprocessed with expert guidance; (2) an improved OLA framework for adaptive and unbiased predictions; and (3) a cost-effective, scalable tool tailored for resource-constrained settings. 
+This study proposes an ML-based ASD screening tool utilizing psychological EMRs from children aged 1-8 years, addressing practical challenges such as class imbalance and feature bias. We evaluate four ML models-Decision Tree, XGBoost, CatBoost, and an enhanced Overall Local Accuracy (OLA) framework-introducing SMOTE-IPF for data augmentation and tailored adjustments to OLA to mitigate bias. Our contributions include: (1) a robust dataset combining 300 public records and 600 clinical EMRs, preprocessed with expert guidance; (2) an improved OLA framework for adaptive and unbiased predictions; and (3) a cost-effective, scalable tool tailored for resource-constrained settings. 
 
 The paper is organized as follows: Section 2 reviews related work, Section 3 describes the datasets and preprocessing, Section 4 details the methodology, Section 5 presents experimental results and analysis, and Section 6 discusses contributions, limitations, and future directions.
 
@@ -102,8 +103,10 @@ The public dataset was sourced from Kaggle \cite{b17}, consisting of responses t
     \item Number and types of features: 36 columns included raw columns and label columns
 \end{itemize}
 \subsection{Summary Dataset}
+
+The research utilized two datasets to evaluate an ASD detection approach. The public dataset from Kaggle contains 292 balanced records with 20 features, including 10 binary behavioral responses. The private dataset, collected from a psychology clinic, comprises 594 records with 36 features, predominantly ASD cases (93\%), derived from standardized medical records.
+
 These datasets have 18 labeled features that are used for analysis and predict. These labeled features are listed below:
-\usepackage{booktabs}   % kẻ bảng đẹp
 \newcounter{attr}       % bộ đếm cho cột ID
 \newcommand{\attrrow}[1]{%
   \stepcounter{attr}\theattr & #1 \\ }  % macro sinh 1 dòng
@@ -339,15 +342,17 @@ Therefore, private dataset with SMOTE-IPF over 800 records were balanced used fo
 a1) Metrics Cross Validation: \\
 % \begin{itemize}
 Observations on Performance Metrics\\
+
 - The Decision Tree model yields moderately low results, performing the least effectively among the evaluated models.
 
 - CatBoost delivers good performance, though it is slightly outperformed by XGBoost, with a minimal difference of approximately 0.01.
 
 - XGBoost exhibits very strong results, demonstrating high effectiveness.
 
-Consequently, the Overall Local Accuracy (OLA) model also achieves very good performance, showcasing its adaptability to the data and surpassing both XGBoost and CatBoost in overall outcomes.
+- Overall Local Accuracy (OLA) model also achieves very good performance, showcasing its adaptability to the data and surpassing both XGBoost and CatBoost in overall outcomes.
 
-\begin{table}[ht]
+General comment, the Online Learning Algorithm (OLA) demonstrates superior effectiveness, with exceptional adaptability and high accuracy, positioning it as a highly promising model for deployment and further development on real-world datasets. XGBoost and CatBoost are also robust choices, with XGBoost slightly outperforming CatBoost by a marginal difference, indicating their strength in handling complex predictive tasks. Conversely, the Decision Tree model exhibits the lowest performance, making it more suitable for simpler problems or scenarios where model interpretability is prioritized over predictive power.
+\begin{table}[H]
 \caption{Cross-validation performance (Public dataset)}
 \label{tab:cv-public}
 \centering
@@ -395,8 +400,9 @@ Consequently, the Overall Local Accuracy (OLA) model also achieves very good per
 \hline
 \end{tabular}
 \end{table}
+
 a2) Chart Feature Importance Analysis:\\
-Consequently, the chart results reveal that the dataset lacks significant column bias, resulting in a relatively uniform distribution across features. The models effectively recognize these features and produce graphs with balanced distributions, ranked from best to worst in a single run as follows: CatBoost – OLA – XGBoost – Decision Tree. OLA and CatBoost demonstrate superior column recognition compared to XGBoost and Decision Tree.
+General comment, the chart results reveal that the dataset lacks significant column bias, resulting in a relatively uniform distribution across features. The models effectively recognize these features and produce graphs with balanced distributions, ranked from best to worst in a single run as follows: CatBoost - OLA - XGBoost - Decision Tree. OLA and CatBoost demonstrate superior column recognition compared to XGBoost and Decision Tree.
 
 \begin{figure}[H]
     \centering
@@ -432,20 +438,20 @@ Consequently, the chart results reveal that the dataset lacks significant column
 
 
 \paragraph{Private Dataset}\mbox{}\\
-a1) Metrics Cross Validation: \\
-- The Decision Tree model continues to yield moderately low results, performing the least effectively among the evaluated models.
+b1) Metrics Cross Validation: \\
 
-- CatBoost outperforms Decision Tree but exhibits suboptimal performance due to the instability of the dataset.
+The empirical evaluation of the machine learning models on the real-world dataset highlights their varying performance under conditions of data instability. 
 
-- XGBoost delivers better results than CatBoost, though with a slight deviation of approximately 0.01.
+- The Decision Tree model maintains a moderate performance, consistent with its predictions on standardized datasets, but remains the least effective among the evaluated models. 
 
-- The Overall Local Accuracy (OLA) model achieves significantly superior evaluation results, demonstrating notable flexibility in adapting to the unstable clinic dataset, surpassing both XGBoost and CatBoost.
+- CatBoost, while demonstrating good performance, exhibits a notable decline compared to its predictions on standardized datasets. This reduction is attributed to the instability of the dataset and CatBoost's suitability for larger, more stable datasets. 
 
-- The enhanced OLA framework shows no significant improvement in evaluation metrics, with results remaining comparable to the traditional OLA or showing only a minor difference.
+- XGBoost, initially predicted to yield excellent results, achieves a good performance with a metric of 0.9, outperforming both Decision Tree and CatBoost, though it falls short of its anticipated excellence due to data variability. 
 
-Consequently, OLA emerges as the most suitable model for a dataset lacking stability and clear data trends, though the potential for column bias in this unstable dataset may contribute to the observed inconsistencies.
+General comment, the Overall Local Accuracy (OLA) delivers outstanding performance, surpassing other models on this real-world dataset. Despite a slight reduction in metrics compared to predictions (approximately 0.02), OLA's adaptability to the unstable data from the clinical setting is evident, outperforming XGBoost and CatBoost in flexibility. Notably, the OLA Framework shows no significant improvement over traditional OLA, with evaluation metrics remaining comparable or exhibiting minimal differences.
 
-\begin{table}[ht]
+These findings suggest that OLA is the most suitable model for datasets lacking stability and clear trends, as encountered in this study. However, potential biases in the dataset's feature columns may contribute to the observed instability, warranting further investigation to mitigate such issues in future applications.
+\begin{table}[H]
 \caption{Cross-validation performance (Private dataset)}
 \label{tab:private_cv_updated}
 \centering
@@ -503,7 +509,7 @@ Consequently, OLA emerges as the most suitable model for a dataset lacking stabi
 \end{tabular}
 \end{table}
 
-a2) Chart Feature Importance Analysis:\\
+b2) Chart Feature Importance Analysis:\\
 The bias column evaluation charts reveal the following insights:
 
 The dataset exhibits a significant bias toward the "TiepXucMat" (Eye Contact) column across all four models, leading to overly optimistic evaluation metrics. However, when applied to new datasets in real-world scenarios, the results fall short of expectations if the "TiepXucMat" column is not accurately assessed.
@@ -512,7 +518,7 @@ Although CatBoost shows lower Cross Validation performance compared to other mod
 
 OLA remains a promising model for further improvement due to its flexible adaptability.
 
-Consequently, the dataset is predominantly biased toward the "TiepXucMat" column, necessitating enhancements to the adaptable OLA model. These improvements should aim to achieve a more uniform and balanced differentiation across columns, ensuring that the screening process does not miss positive cases.
+General comment, the dataset is predominantly biased toward the "TiepXucMat" column, necessitating enhancements to the adaptable OLA model. These improvements should aim to achieve a more uniform and balanced differentiation across columns, ensuring that the screening process does not miss positive cases.
 \begin{figure}[H]
     \centering
     \begin{subfigure}[b]{0.45\linewidth}
@@ -600,9 +606,7 @@ Further analysis of column bias reveals a significant skew toward the "TiepXucMa
 \subsection{Conclusion}
 
 This study introduces a screening tool leveraging machine learning models trained on psychological medical records of children, utilizing the Overall Local Accuracy (OLA) framework following advanced preprocessing techniques. These include balancing class labels with SMOTE-IPF and mitigating column bias through the OLA framework. Traditional models, including advanced ones like CatBoost, struggled with imbalanced data, facing limitations due to a "column causing data bias" that undermined reliability, particularly given the hidden biases often present in real-world datasets. The enhanced OLA, equipped with additional techniques to control this bias, proved to be a robust solution, significantly improving ASD case detection and ensuring stable performance.
-
 The primary contribution of this research is a novel approach to developing an ASD screening tool, with potential applicability to screening other medical conditions using psychological medical records and machine learning. This work lays the groundwork for more accurate, equitable, and user-friendly diagnostic tools, particularly for early screening where missing cases are a critical concern. However, challenges remain, including the limited dataset size and the unreliable nature of manual labeling. Future efforts should focus on testing the OLA framework on larger datasets, validated through real-world software trials combined with corresponding medical records to further train the model. This approach will ensure the capture of outlier cases and enable broader scalability, extending the tool’s use beyond a single clinic to multiple healthcare facilities and hospitals nationwide. The OLA Framework’s strength lies in its dynamic model selection and adaptability, making it highly suitable for building ASD screening tools in the context of volatile real-world datasets. Its ability to maintain high performance despite data instability and column bias positions it as an ideal solution for clinical applications, especially in resource-constrained settings where robust and flexible tools are vital. Future enhancements should prioritize refining feature weighting to improve generalizability across diverse populations.
-\newpage
 
 \section{Acknowledgment}
 We would like to express our sincere gratitude to the University of Information Technology, Vietnam National University Ho Chi Minh City (UIT, VNU-HCM), for their support and for providing the necessary resources throughout this research. This research was supported by The VNUHCM-University of Information Technology’s Scientific Research Support Fund.\\
@@ -613,19 +617,19 @@ We also would like to thank experts in the field of psychological health for pro
 \begin{thebibliography}{99}
 \bibitem{b1} Holly Hodges, Casey Fealko, Neelkamal Soares. "Autism spectrum disorder: definition, epidemiology, causes, and clinical evaluation", 2020. doi: https://doi.org/10.21037/tp.2019.09.09
 
-\bibitem{b2} Bang Le. "Tỷ lệ trẻ tự kỷ ở Việt Nam và Thế giới: Những con số báo động", 2025. url: https://tretuky.edu.vn/ty-le-tre-tu-ky-o-viet-nam-va-the-gioi/
+\bibitem{b2} Bang Le. "Ty le tre tu ky o Viet Nam va The gioi: Nhung con so bao dong", 2025. url: https://tretuky.edu.vn/ty-le-tre-tu-ky-o-viet-nam-va-the-gioi/
 
 \bibitem{b3} Clara Lucato dos Santos, Indyanara Inacio Barreto, Idevaldo Floriano, Luca Schiliró Tristao, Antonio Silvinato, Wanderley Marques Bernardo. "Screening and diagnostic tools for autism spectrum disorder: Systematic review and meta-analysis", March 2024. doi: https://doi.org/10.1016/j.clinsp.2023.100323
 
 \bibitem{b4} Paul Olubudo. "Statistical Bias Correction in Imbalanced Datasets", April 2025. doi: https://www.researchgate.net/publication/390805682
 
-\bibitem{b5} Harshita Chandrappa, Swaathi BR, Prof. Swimpy Pahuja. ``Prediction of Autism Spectrum Disorder based on Machine Learning Approach,'' \textit{International Journal for Research in Applied Science \& Engineering Technology (IJRASET)}, vol. 11, no. V, pp. 3521–3526, May 2023. doi: 10.22214/ijraset.2023.52417. Available: \url{https://doi.org/10.22214/ijraset.2023.52417}
+\bibitem{b5} Harshita Chandrappa, Swaathi BR, Prof. Swimpy Pahuja. ``Prediction of Autism Spectrum Disorder based on Machine Learning Approach,'' \textit{International Journal for Research in Applied Science \& Engineering Technology (IJRASET)}, vol. 11, no. V, pp. 3521-3526, May 2023. doi: 10.22214/ijraset.2023.52417. Available: \url{https://doi.org/10.22214/ijraset.2023.52417}
 
 \bibitem{b6} J. A. Sáez, J. Luengo, J. Stefanowski, and F. Herrera, ``A novel technique for text classification using SMOTE-IPF based oversampling and deep neural network'' \textit{Int. J. of Advanced Computer Science and Applications}, vol. 12, no. 10, 2014. doi: 10.14569/IJACSA.2021.051.
 
 \bibitem{b7} H. Karamti \textit{et al.}, ``SMOTE-KNN: An improved algorithm based on SMOTE and K-nearest neighbors for imbalanced data,'' \textit{IEEE Access}, vol. 9, pp. 95690--95701, 2023. doi: 10.1109/ACCESS.2023.5174412.
 
-\bibitem{b8} B. D. Hung, V. V. Thoa, and X. T. Dang, ``KSI – A combined clustering and resampling method with noise filtering algorithm for imbalanced data classification,'' \textit{J. of Information and Communication Technology}, vol. 1, no. 1, pp. xx--xx, 2019.
+\bibitem{b8} B. D. Hung, V. V. Thoa, and X. T. Dang, ``KSI - A combined clustering and resampling method with noise filtering algorithm for imbalanced data classification,'' \textit{J. of Information and Communication Technology}, vol. 1, no. 1, pp. xx--xx, 2019.
 
 \bibitem{b9} Y. Hong and E. Yang, ``Unbiased classification through bias-contrastive and bias-balanced learning,'' in \textit{Advances in Neural Information Processing Systems (NeurIPS)}, vol. 34, pp. 20153--20165, 2021.
 

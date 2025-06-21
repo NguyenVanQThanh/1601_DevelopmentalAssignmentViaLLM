@@ -1,7 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1750446698.4958 "d:/_Documents/KLTN/Product/1601_DevelopmentalAssignmentViaLLM/Paper/BichHao/21522049_21521447.tex" "21522049_21521447.pdf" "21522049_21521447" 1750446699.88455 2
-  "21522049_21521447.aux" 1750446699 8489 331eb58a886c146af9d1110c803b75f1 "pdflatex"
-  "21522049_21521447.tex" 1750446697 50898 a5779d663f59a19148f4b2c37b8bceb0 ""
+["pdflatex"] 1750527127.36193 "d:/_Documents/KLTN/Product/1601_DevelopmentalAssignmentViaLLM/Paper/BichHao/main.tex" "main.pdf" "main" 1750527128.76354 2
   "C:/Users/nguye/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1747202160 89969 e95579120a3aa0ebc21d2737ca2ba701 ""
   "C:/Users/nguye/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1717919749 24263121 8a689cadfc71b8432ba00f627dbd47a2 ""
   "C:/Users/nguye/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -107,7 +105,7 @@
   "C:/Users/nguye/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/nguye/AppData/Local/Programs/MiKTeX/tex/latex/varwidth/varwidth.sty" 1238469540 10894 d359a13923460b2a73d4312d613554c8 ""
   "C:/Users/nguye/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
-  "d:/_Documents/KLTN/Product/1601_DevelopmentalAssignmentViaLLM/Paper/BichHao/21522049_21521447.tex" 1750446697 50898 a5779d663f59a19148f4b2c37b8bceb0 ""
+  "d:/_Documents/KLTN/Product/1601_DevelopmentalAssignmentViaLLM/Paper/BichHao/main.tex" 1750527124 52542 32ce0efe9e7d75744dad96182afe5606 ""
   "images/cat_cot.png" 1750434505 28802 a3fd8fa71b9c52df971a2fbb94e6c55b ""
   "images/feature_cat.png" 1748974903 38737 c43b9e9f2bcb69d225267a97d7c7117d ""
   "images/feature_dt.png" 1748974859 39878 76fc0ae7d14cf56e123c75239b9ca935 ""
@@ -122,8 +120,10 @@
   "images/structure_imp_ola.png" 1749062019 88783 60612fe2b4ba0b2850100dc7dcb5d250 ""
   "images/tree_cot.png" 1750434466 31758 2cf483ea6955043a8a4adbe7d8972cd4 ""
   "images/xgb_cot.png" 1750434483 27938 235794a86d15ae5cea0489f15801c80e ""
+  "main.aux" 1750527128 8489 6f8d4efab470b4b41a5c9baaf980fd78 "pdflatex"
+  "main.tex" 1750527124 52542 32ce0efe9e7d75744dad96182afe5606 ""
   (generated)
-  "21522049_21521447.aux"
-  "21522049_21521447.log"
-  "21522049_21521447.pdf"
+  "main.aux"
+  "main.log"
+  "main.pdf"
   (rewritten before read)

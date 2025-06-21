@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.9)  21 JUN 2025 02:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.9)  22 JUN 2025 00:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**d:/_Documents/KLTN/Product/1601_DevelopmentalAssignmentViaLLM/Paper/BichHao/21522049_21521447.tex
-(d:/_Documents/KLTN/Product/1601_DevelopmentalAssignmentViaLLM/Paper/BichHao/21522049_21521447.tex
+**d:/_Documents/KLTN/Product/1601_DevelopmentalAssignmentViaLLM/Paper/BichHao/main.tex
+(d:/_Documents/KLTN/Product/1601_DevelopmentalAssignmentViaLLM/Paper/BichHao/main.tex
 LaTeX2e <2024-06-01>
 L3 programming layer <2024-05-08>
 (C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/ieeetran\IEEEtran.cls
@@ -373,24 +373,24 @@ Package: longtable 2023-11-01 v4.19 Multi-page Table package (DPC)
 Package: stfloats 2017/03/27 v3.3 Improve float mechanism and baselineskip settings
 \@dblbotnum=\count312
 \c@dblbotnumber=\count313
-) (21522049_21521447.aux)
-\openout1 = `21522049_21521447.aux'.
+)
+No file main.aux.
+\openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
 -- Lines per column: 56 (exact).
 (C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -417,27 +417,27 @@ Package caption Info: longtable package is loaded.
 Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 )
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Calculating math sizes for size <11> on input line 39.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 39.
+LaTeX Font Info:    Calculating math sizes for size <11> on input line 40.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 40.
  (C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 39.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 40.
  (C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for OMS+ptm on input line 39.
+LaTeX Font Info:    Trying to load font information for OMS+ptm on input line 40.
  (C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <11> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 39.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 40.
 
 
-LaTeX Warning: Citation `b1' on page 1 undefined on input line 57.
+LaTeX Warning: Citation `b1' on page 1 undefined on input line 58.
 
 
-LaTeX Warning: Citation `b2' on page 1 undefined on input line 57.
+LaTeX Warning: Citation `b2' on page 1 undefined on input line 58.
 
 
 Underfull \vbox (badness 7362) has occurred while \output is active []
@@ -445,10 +445,10 @@ Underfull \vbox (badness 7362) has occurred while \output is active []
 
 
 
-LaTeX Warning: Citation `b3' on page 1 undefined on input line 65.
+LaTeX Warning: Citation `b3' on page 1 undefined on input line 66.
 
 
-LaTeX Warning: Citation `b4' on page 1 undefined on input line 65.
+LaTeX Warning: Citation `b4' on page 1 undefined on input line 66.
 
 
 
@@ -457,216 +457,223 @@ LaTeX Warning: Citation `b4' on page 1 undefined on input line 65.
 
 ]
 
-LaTeX Warning: Citation `b5' on page 2 undefined on input line 73.
+LaTeX Warning: Citation `b5' on page 2 undefined on input line 74.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 73--74
+Underfull \hbox (badness 10000) in paragraph at lines 74--75
 []\OT1/ptm/m/n/10 Harshita Chan-drappa, Swaathi BR, Prof. Swimpy
  []
 
 
-LaTeX Warning: Citation `b6' on page 2 undefined on input line 75.
+LaTeX Warning: Citation `b6' on page 2 undefined on input line 76.
 
 
-LaTeX Warning: Citation `b7' on page 2 undefined on input line 77.
+LaTeX Warning: Citation `b7' on page 2 undefined on input line 78.
 
 
 
 
-LaTeX Warning: Citation `b8' on page 2 undefined on input line 79.
+LaTeX Warning: Citation `b8' on page 2 undefined on input line 80.
 
 
-LaTeX Warning: Citation `b9' on page 2 undefined on input line 81.
+LaTeX Warning: Citation `b9' on page 2 undefined on input line 82.
 
 
-LaTeX Warning: Citation `b10' on page 2 undefined on input line 83.
+LaTeX Warning: Citation `b10' on page 2 undefined on input line 84.
 
 
-LaTeX Warning: Citation `b17' on page 2 undefined on input line 88.
+LaTeX Warning: Citation `b17' on page 2 undefined on input line 89.
 
 
 
 [2]
 
-LaTeX Warning: Citation `b11' on page 3 undefined on input line 97.
+LaTeX Warning: Citation `b11' on page 3 undefined on input line 98.
 
 
-LaTeX Warning: Citation `b12' on page 3 undefined on input line 97.
+LaTeX Warning: Citation `b12' on page 3 undefined on input line 98.
 
 
-LaTeX Warning: Citation `b13' on page 3 undefined on input line 97.
+LaTeX Warning: Citation `b13' on page 3 undefined on input line 98.
 
 
-LaTeX Warning: Citation `b14' on page 3 undefined on input line 97.
+LaTeX Warning: Citation `b14' on page 3 undefined on input line 98.
 
 
-LaTeX Warning: Citation `b15' on page 3 undefined on input line 97.
+LaTeX Warning: Citation `b15' on page 3 undefined on input line 98.
 
 
-LaTeX Warning: Citation `b16' on page 3 undefined on input line 97.
-
-
-! LaTeX Error: Can be used only in preamble.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.106 \usepackage
-                 {booktabs}   % kẻ bảng đẹp
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
+LaTeX Warning: Citation `b16' on page 3 undefined on input line 98.
 
 \c@attr=\count320
 <images/processASD.drawio.png, id=15, 805.0075pt x 734.745pt>
 File: images/processASD.drawio.png Graphic file (type png)
 <use images/processASD.drawio.png>
-Package pdftex.def Info: images/processASD.drawio.png  used on input line 143.
+Package pdftex.def Info: images/processASD.drawio.png  used on input line 146.
 (pdftex.def)             Requested size: 239.39923pt x 218.49686pt.
 
 
 
-Underfull \hbox (badness 6284) in paragraph at lines 157--158
-[]\OT1/ptm/m/it/10 Method: \OT1/ptm/m/n/10 All personally-identifiable in-for-ma-tion (e.g.,
- []
+Underfull \vbox (badness 1038) has occurred while \output is active []
 
 
 
 [3 <./images/processASD.drawio.png>]
-LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 180.
- (C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1pcr.fd
+Underfull \hbox (badness 6284) in paragraph at lines 160--161
+[]\OT1/ptm/m/it/10 Method: \OT1/ptm/m/n/10 All personally-identifiable in-for-ma-tion (e.g.,
+ []
+
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 183.
+(C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
 
-LaTeX Warning: Citation `b6' on page 4 undefined on input line 192.
+LaTeX Warning: Citation `b6' on page 4 undefined on input line 195.
 
 
-LaTeX Warning: Citation `b7' on page 4 undefined on input line 194.
+LaTeX Warning: Citation `b7' on page 4 undefined on input line 197.
 
 
 
 
-Underfull \hbox (badness 1424) in paragraph at lines 218--220
+Underfull \hbox (badness 1424) in paragraph at lines 221--223
 \OT1/ptm/m/n/10 and com-pu-ta-tional ef-fi-ciency. Un-like tra-di-tional De-ci-sion
  []
 
 
-LaTeX Warning: Citation `b18' on page 4 undefined on input line 226.
+LaTeX Warning: Citation `b18' on page 4 undefined on input line 229.
 
 
-LaTeX Warning: Citation `b19' on page 4 undefined on input line 227.
-
-
-Underfull \hbox (badness 1990) in paragraph at lines 229--230
-[]\OT1/ptm/m/n/10 This ap-proach ex-cels in han-dling com-plex, het-ero-ge-
- []
+LaTeX Warning: Citation `b19' on page 4 undefined on input line 230.
 
 
 
 [4]
-Underfull \hbox (badness 1616) in paragraph at lines 234--235
+Underfull \hbox (badness 1990) in paragraph at lines 232--233
+[]\OT1/ptm/m/n/10 This ap-proach ex-cels in han-dling com-plex, het-ero-ge-
+ []
+
+
+Underfull \hbox (badness 1616) in paragraph at lines 237--238
 []\OT1/ptm/m/n/10 Implemented with cus-tom code to in-te-grate with the
  []
 
 
-Underfull \hbox (badness 2591) in paragraph at lines 251--252
+Underfull \hbox (badness 2591) in paragraph at lines 254--255
 []\OT1/ptm/m/n/10 Group 2 (Bias-controlled): Ran-dom-Forest-Clas-si-fier
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 265--266
+Underfull \hbox (badness 10000) in paragraph at lines 268--269
 []\OT1/ptm/m/n/10 All mod-els out-put prob-a-bil-ity es-ti-mates via
  []
 
-<images/structure_imp_ola.png, id=26, 712.6625pt x 899.36pt>
+
+Underfull \vbox (badness 1939) has occurred while \output is active []
+
+
+
+<images/structure_imp_ola.png, id=25, 712.6625pt x 899.36pt>
 File: images/structure_imp_ola.png Graphic file (type png)
 <use images/structure_imp_ola.png>
-Package pdftex.def Info: images/structure_imp_ola.png  used on input line 274.
+Package pdftex.def Info: images/structure_imp_ola.png  used on input line 277.
 (pdftex.def)             Requested size: 239.39923pt x 302.11429pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
 
 
 [5 <./images/structure_imp_ola.png>]
 <images/pca_smote_knn.png, id=32, 615.0478pt x 449.42906pt>
 File: images/pca_smote_knn.png Graphic file (type png)
 <use images/pca_smote_knn.png>
-Package pdftex.def Info: images/pca_smote_knn.png  used on input line 323.
+Package pdftex.def Info: images/pca_smote_knn.png  used on input line 326.
 (pdftex.def)             Requested size: 120.95892pt x 88.38237pt.
 <images/pca_smote_ipf.png, id=33, 643.6547pt x 451.6875pt>
 File: images/pca_smote_ipf.png Graphic file (type png)
 <use images/pca_smote_ipf.png>
-Package pdftex.def Info: images/pca_smote_ipf.png  used on input line 329.
+Package pdftex.def Info: images/pca_smote_ipf.png  used on input line 332.
 (pdftex.def)             Requested size: 120.95892pt x 84.87727pt.
 
+Underfull \hbox (badness 10000) in paragraph at lines 341--345
+
+ []
 
 
-Overfull \hbox (5.26668pt too wide) in paragraph at lines 357--397
+
+
+Overfull \hbox (5.26668pt too wide) in paragraph at lines 362--402
  [][] 
  []
 
-<images/tree_cot.png, id=34, 502.12593pt x 236.38312pt>
+
+
+[6 <./images/pca_smote_knn.png> <./images/pca_smote_ipf.png>]
+<images/tree_cot.png, id=39, 502.12593pt x 236.38312pt>
 File: images/tree_cot.png Graphic file (type png)
 <use images/tree_cot.png>
-Package pdftex.def Info: images/tree_cot.png  used on input line 404.
+Package pdftex.def Info: images/tree_cot.png  used on input line 410.
 (pdftex.def)             Requested size: 113.39923pt x 53.38228pt.
-<images/xgb_cot.png, id=35, 452.4403pt x 216.81pt>
+<images/xgb_cot.png, id=40, 452.4403pt x 216.81pt>
 File: images/xgb_cot.png Graphic file (type png)
 <use images/xgb_cot.png>
-Package pdftex.def Info: images/xgb_cot.png  used on input line 410.
+Package pdftex.def Info: images/xgb_cot.png  used on input line 416.
 (pdftex.def)             Requested size: 113.39923pt x 54.338pt.
-<images/cat_cot.png, id=36, 456.95718pt x 227.34938pt>
+<images/cat_cot.png, id=41, 456.95718pt x 227.34938pt>
 File: images/cat_cot.png Graphic file (type png)
 <use images/cat_cot.png>
-Package pdftex.def Info: images/cat_cot.png  used on input line 418.
+Package pdftex.def Info: images/cat_cot.png  used on input line 424.
 (pdftex.def)             Requested size: 113.39923pt x 56.41743pt.
-<images/ola_cot.png, id=37, 453.19313pt x 219.06844pt>
+<images/ola_cot.png, id=42, 453.19313pt x 219.06844pt>
 File: images/ola_cot.png Graphic file (type png)
 <use images/ola_cot.png>
-Package pdftex.def Info: images/ola_cot.png  used on input line 424.
+Package pdftex.def Info: images/ola_cot.png  used on input line 430.
 (pdftex.def)             Requested size: 113.39923pt x 54.81377pt.
 
+Underfull \hbox (badness 10000) in paragraph at lines 440--442
 
-[6 <./images/pca_smote_knn.png> <./images/pca_smote_ipf.png> <./images/tree_cot.png> <./images/xgb_cot.png> <./images/cat_cot.png> <./images/ola_cot.png>]
-Overfull \hbox (5.26668pt too wide) in paragraph at lines 455--504
+ []
+
+
+Overfull \hbox (5.26668pt too wide) in paragraph at lines 461--510
  [][] 
  []
 
 
 
-<images/feature_dt.png, id=47, 795.72281pt x 362.85562pt>
+<images/feature_dt.png, id=43, 795.72281pt x 362.85562pt>
 File: images/feature_dt.png Graphic file (type png)
 <use images/feature_dt.png>
-Package pdftex.def Info: images/feature_dt.png  used on input line 519.
+Package pdftex.def Info: images/feature_dt.png  used on input line 525.
 (pdftex.def)             Requested size: 113.39923pt x 51.70746pt.
-<images/feature_xgb.png, id=48, 780.66656pt x 378.66469pt>
+<images/feature_xgb.png, id=44, 780.66656pt x 378.66469pt>
 File: images/feature_xgb.png Graphic file (type png)
 <use images/feature_xgb.png>
-Package pdftex.def Info: images/feature_xgb.png  used on input line 525.
+Package pdftex.def Info: images/feature_xgb.png  used on input line 531.
 (pdftex.def)             Requested size: 113.39923pt x 55.0003pt.
-<images/feature_cat.png, id=49, 776.9025pt x 370.38374pt>
+<images/feature_cat.png, id=45, 776.9025pt x 370.38374pt>
 File: images/feature_cat.png Graphic file (type png)
 <use images/feature_cat.png>
-Package pdftex.def Info: images/feature_cat.png  used on input line 533.
+Package pdftex.def Info: images/feature_cat.png  used on input line 539.
 (pdftex.def)             Requested size: 113.39923pt x 54.05748pt.
-<images/feature_ola.png, id=50, 785.18344pt x 362.85562pt>
+<images/feature_ola.png, id=46, 785.18344pt x 362.85562pt>
 File: images/feature_ola.png Graphic file (type png)
 <use images/feature_ola.png>
-Package pdftex.def Info: images/feature_ola.png  used on input line 539.
+Package pdftex.def Info: images/feature_ola.png  used on input line 545.
 (pdftex.def)             Requested size: 113.39923pt x 52.40509pt.
-<images/feature_enhanced_ola.png, id=51, 780.66656pt x 347.04657pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[7 <./images/tree_cot.png> <./images/xgb_cot.png> <./images/cat_cot.png> <./images/ola_cot.png>]
+<images/feature_enhanced_ola.png, id=55, 780.66656pt x 347.04657pt>
 File: images/feature_enhanced_ola.png Graphic file (type png)
 <use images/feature_enhanced_ola.png>
-Package pdftex.def Info: images/feature_enhanced_ola.png  used on input line 552.
+Package pdftex.def Info: images/feature_enhanced_ola.png  used on input line 558.
 (pdftex.def)             Requested size: 214.20154pt x 95.22363pt.
+
 ! Undefined control sequence.
 \enit@enditemize ->\enit@after 
                                \endlist \ifx \enit@series \relax \else \ifnu...
-l.558 \end{itemize}
+l.564 \end{itemize}
                    
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -677,7 +684,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \enit@enditemize ...x \else \ifnum \enit@resuming 
                                                   =\@ne \enit@setresumekeys ...
-l.558 \end{itemize}
+l.564 \end{itemize}
                    
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -688,7 +695,7 @@ and I'll forget about whatever was undefined.
 ! Missing number, treated as zero.
 <to be read again> 
                    =
-l.558 \end{itemize}
+l.564 \end{itemize}
                    
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -697,7 +704,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Undefined control sequence.
 \enit@setresumekeys ...xpandafter {\enit@savekeys 
                                                   }\xdef \enit@afterlist {#2...
-l.558 \end{itemize}
+l.564 \end{itemize}
                    
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -708,7 +715,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \enit@setresumekeys ...it@toks }\ifnum \enit@type 
                                                   =\z@ #3\def \enit@noexcs {...
-l.558 \end{itemize}
+l.564 \end{itemize}
                    
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -719,7 +726,7 @@ and I'll forget about whatever was undefined.
 ! Missing number, treated as zero.
 <to be read again> 
                    =
-l.558 \end{itemize}
+l.564 \end{itemize}
                    
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -728,7 +735,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Undefined control sequence.
 <argument> enit@resume@series@\enit@series 
                                            
-l.558 \end{itemize}
+l.564 \end{itemize}
                    
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -739,7 +746,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \enit@setresumekeys ...me@#1}{\csname c@\@listctr 
                                                   \endcsname \the \csname c@...
-l.558 \end{itemize}
+l.564 \end{itemize}
                    
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -750,7 +757,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \enit@setresumekeys ...e \the \csname c@\@listctr 
                                                   \endcsname }\fi }
-l.558 \end{itemize}
+l.564 \end{itemize}
                    
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -761,14 +768,14 @@ and I'll forget about whatever was undefined.
 ! You can't use `\relax' after \the.
 <recently read> \c@ 
                     
-l.558 \end{itemize}
+l.564 \end{itemize}
                    
 I'm forgetting what you said and using zero instead.
 
 ! Undefined control sequence.
 \enit@enditemize ...ist \fi \ifnum \enit@resuming 
                                                   =\thr@@ \enit@setresumekey...
-l.558 \end{itemize}
+l.564 \end{itemize}
                    
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -779,7 +786,7 @@ and I'll forget about whatever was undefined.
 ! Missing number, treated as zero.
 <to be read again> 
                    =
-l.558 \end{itemize}
+l.564 \end{itemize}
                    
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -788,7 +795,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Undefined control sequence.
 \enit@setresumekeys ...xpandafter {\enit@savekeys 
                                                   }\xdef \enit@afterlist {#2...
-l.558 \end{itemize}
+l.564 \end{itemize}
                    
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -799,7 +806,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \enit@setresumekeys ...it@toks }\ifnum \enit@type 
                                                   =\z@ #3\def \enit@noexcs {...
-l.558 \end{itemize}
+l.564 \end{itemize}
                    
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -810,7 +817,7 @@ and I'll forget about whatever was undefined.
 ! Missing number, treated as zero.
 <to be read again> 
                    =
-l.558 \end{itemize}
+l.564 \end{itemize}
                    
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -819,7 +826,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Undefined control sequence.
 \enit@setresumekeys ...me@#1}{\csname c@\@listctr 
                                                   \endcsname \the \csname c@...
-l.558 \end{itemize}
+l.564 \end{itemize}
                    
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -830,7 +837,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \enit@setresumekeys ...e \the \csname c@\@listctr 
                                                   \endcsname }\fi }
-l.558 \end{itemize}
+l.564 \end{itemize}
                    
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -841,7 +848,7 @@ and I'll forget about whatever was undefined.
 ! You can't use `\relax' after \the.
 <recently read> \c@ 
                     
-l.558 \end{itemize}
+l.564 \end{itemize}
                    
 I'm forgetting what you said and using zero instead.
 
@@ -852,7 +859,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.558 \end{itemize}
+l.564 \end{itemize}
                    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -861,218 +868,43 @@ or  <return>  to continue without it.
 ! Extra \endgroup.
 <recently read> \endgroup 
                           
-l.558 \end{itemize}
+l.564 \end{itemize}
                    
 Things are pretty mixed up, but I think the worst is over.
 
 
 
-[7 <./images/feature_dt.png> <./images/feature_xgb.png> <./images/feature_cat.png> <./images/feature_ola.png> <./images/feature_enhanced_ola.png>]
-<images/screen.png, id=61, 1414.53468pt x 501.37312pt>
+<images/screen.png, id=56, 1414.53468pt x 501.37312pt>
 File: images/screen.png Graphic file (type png)
 <use images/screen.png>
-Package pdftex.def Info: images/screen.png  used on input line 596.
+Package pdftex.def Info: images/screen.png  used on input line 602.
 (pdftex.def)             Requested size: 214.20154pt x 75.92184pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-
-
-
-[8 <./images/screen.png>]
-Underfull \hbox (badness 1721) in paragraph at lines 608--609
+[8 <./images/feature_dt.png> <./images/feature_xgb.png> <./images/feature_cat.png> <./images/feature_ola.png> <./images/feature_enhanced_ola.png> <./images/screen.png>]
+Underfull \hbox (badness 1721) in paragraph at lines 612--613
 \OT1/ptm/m/n/10 Uni-ver-sity of In-for-ma-tion Tech-nol-ogy, Viet-nam Na-tional
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 608--609
+Underfull \hbox (badness 10000) in paragraph at lines 612--613
 
  []
 
 
-! LaTeX Error: Unicode character ỷ (U+1EF7)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.616 \bibitem{b2} Bang Le. "Tỷ
-                                  lệ trẻ tự kỷ ở Việt Nam và Th...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ệ (U+1EC7)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.616 \bibitem{b2} Bang Le. "Tỷ lệ
-                                       trẻ tự kỷ ở Việt Nam và Th...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ẻ (U+1EBB)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.616 \bibitem{b2} Bang Le. "Tỷ lệ trẻ
-                                             tự kỷ ở Việt Nam và Th...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ự (U+1EF1)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.616 \bibitem{b2} Bang Le. "Tỷ lệ trẻ tự
-                                                  kỷ ở Việt Nam và Th...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ỷ (U+1EF7)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.616 ...m{b2} Bang Le. "Tỷ lệ trẻ tự kỷ
-                                                   ở Việt Nam và Thế ...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ở (U+1EDF)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.616 ...} Bang Le. "Tỷ lệ trẻ tự kỷ ở
-                                                   Việt Nam và Thế gi�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ệ (U+1EC7)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.616 ... Le. "Tỷ lệ trẻ tự kỷ ở Việ
-                                                  t Nam và Thế giới: Nh...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ế (U+1EBF)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.616 ... trẻ tự kỷ ở Việt Nam và Thế
-                                                   giới: Những con số ...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ớ (U+1EDB)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.616 ... tự kỷ ở Việt Nam và Thế giớ
-                                                  i: Những con số báo �...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ữ (U+1EEF)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.616 ...�� ở Việt Nam và Thế giới: Nhữ
-                                                  ng con số báo động",...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character ố (U+1ED1)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.616 ...�t Nam và Thế giới: Những con số
-                                                   báo động", 2025. url:...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Command \dj unavailable in encoding OT1.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.616 ...à Thế giới: Những con số báo đ
-                                                  ộng", 2025. url: https:/...
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: Unicode character ộ (U+1ED9)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.616 ...Thế giới: Những con số báo độ
-                                                  ng", 2025. url: https://tr...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-Underfull \hbox (badness 1953) in paragraph at lines 618--619
+Underfull \hbox (badness 1953) in paragraph at lines 622--623
 \OT1/ptm/m/n/8 ri-ano, Luca Schilir[]o Tris-tao, An-to-nio Silv-inato, Wan-der-ley Mar-
  []
 
 
 
 
-Underfull \hbox (badness 3291) in paragraph at lines 646--647
+Underfull \hbox (badness 3291) in paragraph at lines 650--651
 \OT1/ptm/m/n/8 list 10 ques-tion to pre-dict ASD in kag-gle in \OT1/ptm/m/it/8 Proc. 1st Int.
  []
 
 
-Underfull \hbox (badness 2689) in paragraph at lines 648--649
+Underfull \hbox (badness 2689) in paragraph at lines 652--653
 []\OT1/ptm/m/n/8 Overall Lo-cal Ac-cu-racy. Avail-able: $https : / / deslib . readthedocs . io / en /
  []
 
@@ -1089,7 +921,7 @@ Before submitting the final camera ready copy, remember to:
 
 
 
-[9] (21522049_21521447.aux)
+[9] (main.aux)
  ***********
 LaTeX2e <2024-06-01>
 L3 programming layer <2024-05-08>
@@ -1103,15 +935,15 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 7712 strings out of 473938
- 137152 string characters out of 5727392
- 1958893 words of memory out of 5000000
- 30415 multiletter control sequences out of 15000+600000
+ 7697 strings out of 473938
+ 136801 string characters out of 5727392
+ 1960893 words of memory out of 5000000
+ 30402 multiletter control sequences out of 15000+600000
  605375 words of font info for 132 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 79i,13n,93p,1558b,544s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 79i,13n,93p,1545b,544s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/nguye/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/nguye/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/nguye/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/nguye/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/nguye/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/nguye/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/nguye/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/nguye/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/nguye/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/nguye/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on 21522049_21521447.pdf (9 pages, 646993 bytes).
+Output written on main.pdf (9 pages, 648133 bytes).
 PDF statistics:
  112 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
