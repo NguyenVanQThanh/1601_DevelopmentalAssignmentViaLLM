@@ -21,7 +21,7 @@
         "id": 4,
         "topic": "Hành vi lặp lại",
         "question": "Trẻ có biểu hiện: xếp đồ chơi thẳng hàng, quay các đối tượng, lắc đồ vật, đẩy xe tới lui, hoặc mở và đóng ngăn kéo hoặc cửa ra vào... hàng giờ.",
-        "options": ["Tốt", "Khá", "Kém"]
+        "options": ["Có", "Thỉnh thoảng", "Không"]
     },
     {
         "id": 5,

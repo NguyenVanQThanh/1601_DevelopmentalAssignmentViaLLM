@@ -25,12 +25,12 @@ function Predict3({sessionId, accessToken}) {
 
         // Ánh xạ các câu trả lời từ formData thành đặc trưng cho API
         const answerMapping = {
-          "Có": 1.0,
+          "Có": 0.0,
           "Thỉnh Thoảng": 0.5,
-          "Không": 0.0,
-          "Tốt": 1.0,
+          "Không": 1.0,
+          "Tốt": 0.0,
           "Khá": 0.5,
-          "Kém": 0.0
+          "Kém": 1.0
         };
 
         const olaInput = {
