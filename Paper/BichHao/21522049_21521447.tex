@@ -1,4 +1,4 @@
-\documentclass[conference]{IEEEtran}
+\documentclass[runningheads]{llncs}
 
 % ---------- PACKAGES ----------
 \usepackage[utf8]{inputenc}
@@ -29,16 +29,17 @@
 % ---------- TITLE ----------
 \title{Developing a Machine Learning-Based Tool for Autism Screening Using Psychological Medical Records}
 
-\author{
-Hao Nguyen Thi Bich $^{1}$, Thanh Nguyen Van Quoc $^{2}$, Nhut Nguyen Minh$^{3}$, Thuan Nguyen Dinh$^{4}$\\
-\textit{Faculty of Information Systems} \\
-\textit{University of Information Technology - Vietnam National University} \\
-Ho Chi Minh City, Vietnam \\
-\{ 21522049@gm.uit.edu.vn, 21521447@gm.uit.edu.vn, nhutnm.17@grad.uit.edu.vn, thuannd@uit.edu.vn\}
-}
+\author{Hao Nguyen Thi Bich\inst{1} \and
+Thanh Nguyen Van Quoc\inst{2} \and
+Nhut Nguyen Minh\inst{3} \and
+Thuan Nguyen Dinh\inst{4}}
+\authorrunning{Nguyen T.B. Hao, Nguyen V.Q. Thanh, Nguyen M. Nhut, Nguyen D. Thuan}
+
+
+\institute{Faculty of Information Systems, University of Information Technology - Vietnam National University, Ho Chi Minh City, Vietnam\\
+\email{\{21521447@gm.uit.edu.vn, 21522049@gm.uit.edu.vn, nhutnm.17@grad.uit.edu.vn, thuannd@uit.edu.vn\}}}
 
 \maketitle
-\IEEEpeerreviewmaketitle
 
 % ---------- ABSTRACT ----------
 \begin{abstract}
@@ -51,9 +52,7 @@ Four machine learning models were implemented: Decision Tree, XGBoost, CatBoost,
 To address these issues, we applied the SMOTE-IPF technique to balance the ASD and non-ASD class ratios and enhanced the OLA framework by incorporating dynamic weighting and regularization to reduce dependency on specific features. The improved models achieved an F1-Score of 0.89 and an AUC-ROC of 0.90, with significantly reduced feature bias, as evidenced by a more balanced distribution of feature importance. The proposed screening tool offers a cost-effective and scalable solution, particularly suitable for resource-constrained settings. It has the potential for further improvement through training on larger datasets, enhancing its ability to handle outliers and increasing overall accuracy.\end{abstract}
 
 % ---------- KEYWORDS ----------
-\begin{IEEEkeywords}
-Autism Spectrum Disorder, Machine Learning, Psychological Medical Records, SMOTE-IPF, OLA, Screening Tool
-\end{IEEEkeywords}
+\keywords{Autism Spectrum Disorder, Machine Learning, Psychological Medical Records, SMOTE-IPF, OLA, Screening Tool}
 \section{Introduction}
 Autism Spectrum Disorder (ASD) is a neurodevelopmental condition characterized by challenges in social interaction, communication, and repetitive behaviors, affecting individuals across childhood, adolescence, and adulthood ~\cite{b1}. Early detection in children is critical for timely interventions that optimize long-term outcomes. However, as children age, diagnosis and intervention become increasingly complex due to overlapping symptoms with other mental health disorders. According to the U.S. Centers for Disease Control and Prevention (CDC), the prevalence of ASD in the United States has risen sharply from 1 in 150 children in 2000 to 1 in 36 in 2023~\cite{b2}. Similar trends are observed globally, some reported rates: 
 \begin{itemize}
@@ -561,7 +560,7 @@ To address this, Enhanced OLA was applied to reduce bias and diversify feature i
 \end{figure}
 
 \noindent\textbf{Summary:} Enhanced OLA framework successfully reduced the dominance of \textit{TiepXucMat}, improving balance among features and robustness for ASD classification on the private dataset.
-\end{itemize}
+% \end{itemize}
 
 \subsection{Discussion}
 This section analyzes the performance patterns across the evaluated models, discusses the improvements of OLA's local selection mechanism over global bias, compares our results with related work, and highlights limitations, strengths, weaknesses, and the practical applicability of OLA on the private dataset.
