@@ -49,17 +49,12 @@ The EMR dataset from the clinic includes 18 labeled features corresponding to ev
 
 Four machine learning models were implemented: Decision Tree, XGBoost, CatBoost, and Overall Local Accuracy (OLA). Results showed that OLA exhibited superior adaptability across both standard and potentially noisy datasets. However, initial experiments revealed two main challenges: (1) class imbalance (90\% ASD vs. 10\% non-ASD), and (2) feature bias due to the high accuracy of expert-labeled EMR data, causing models to over-rely on certain features. These limitations reduced the models’ reliability in real-world applications.
 
-To address these issues, we applied the SMOTE-IPF technique to balance the ASD and non-ASD class ratios and enhanced the OLA framework by incorporating dynamic weighting and regularization to reduce dependency on specific features. The improved models achieved an F1-Score of 0.89 and an AUC-ROC of 0.90, with significantly reduced feature bias, as evidenced by a more balanced distribution of feature importance. The proposed screening tool offers a cost-effective and scalable solution, particularly suitable for resource-constrained settings. It has the potential for further improvement through training on larger datasets, enhancing its ability to handle outliers and increasing overall accuracy.\end{abstract}
+To address these issues, we applied the SMOTE-IPF technique to balance the ASD and non-ASD class ratios and enhanced the OLA framework by incorporating dynamic weighting and regularization to reduce dependency on specific features. The proposed screening tool offers a cost-effective and scalable solution, particularly suitable for resource-constrained settings. \end{abstract}
 
 % ---------- KEYWORDS ----------
 \keywords{Autism Spectrum Disorder, Machine Learning, Psychological Medical Records, SMOTE-IPF, OLA, Screening Tool}
 \section{Introduction}
-Autism Spectrum Disorder (ASD) is a neurodevelopmental condition characterized by challenges in social interaction, communication, and repetitive behaviors, affecting individuals across childhood, adolescence, and adulthood ~\cite{b1}. Early detection in children is critical for timely interventions that optimize long-term outcomes. However, as children age, diagnosis and intervention become increasingly complex due to overlapping symptoms with other mental health disorders. According to the U.S. Centers for Disease Control and Prevention (CDC), the prevalence of ASD in the United States has risen sharply from 1 in 150 children in 2000 to 1 in 36 in 2023~\cite{b2}. Similar trends are observed globally, some reported rates: 
-\begin{itemize}
-    \item Accounting for 1 in 57 in the United Kingdom
-    \item Accounting for 1 in 100 in Japan 
-    \item Accounting for 1 in 120 in China
-\end{itemize}
+Autism Spectrum Disorder (ASD) is a neurodevelopmental condition characterized by challenges in social interaction, communication, and repetitive behaviors, affecting individuals across childhood, adolescence, and adulthood ~\cite{b1}. Early detection in children is critical for timely interventions that optimize long-term outcomes. However, as children age, diagnosis and intervention become increasingly complex due to overlapping symptoms with other mental health disorders. According to the U.S. Centers for Disease Control and Prevention (CDC), the prevalence of ASD in the United States has risen sharply from 1 in 150 children in 2000 to 1 in 36 in 2023~\cite{b2}. 
 In Vietnam, while official statistics are lacking, preliminary estimates suggest a prevalence of approximately 1 in 68 children, driven by increased societal awareness, improved diagnostic capabilities, and potential environmental and lifestyle factors.
 
 Traditional screening tools, such as M-CHAT-R/F and ADOS, are resource-intensive, requiring specialized expertise and limiting their accessibility in low-resource settings, particularly in developing countries like Vietnam ~\cite{b3}. The absence of specific medical tests for ASD further complicates diagnosis, relying heavily on subjective observational assessments. Recent advancements in artificial intelligence (AI) and machine learning (ML) offer promising opportunities for automated ASD screening by leveraging electronic medical records (EMR). However, using EMR for ASD prediction remains a nascent field, particularly in contexts like Vietnam, where medical data is often heterogeneous, imbalanced (fewer ASD cases), and prone to feature bias (over-reliance on specific indicators) ~\cite{b4}. Previous ML studies have applied models like Decision Trees, XGBoost, and CatBoost, achieving high accuracy in controlled settings but struggling with real-world generalizability due to data imbalances and dominant features.
@@ -70,20 +65,20 @@ The paper is organized as follows: Section 2 reviews related work, Section 3 des
 
 \section{Related Works}
 
-Harshita Chandrappa, Swaathi BR, Prof. Swimpy Pahuja.~\cite{b5} proposed a hybrid machine learning framework for predicting Autism Spectrum Disorder (ASD) across all age groups. The system incorporates multiple ML classifiers such as Decision Tree, Naive Bayes, Random Forest, SVM, and Logistic Regression into a web-based diagnostic application. Through preprocessing and classification on a structured ASD dataset, their approach demonstrated high accuracy in predicting ASD traits. Among the models evaluated, Support Vector Machine and Random Forest yielded the best results in terms of accuracy and robustness. The authors highlighted the importance of early screening and presented a chatbot-based interface to assist users in understanding ASD symptoms and diagnosis.
+Harshita Chandrappa~\cite{b5} proposed a hybrid machine learning framework for predicting Autism Spectrum Disorder (ASD) across all age groups. The system incorporates multiple ML classifiers such as Decision Tree, Naive Bayes, Random Forest, SVM, and Logistic Regression into a web-based diagnostic application. Through preprocessing and classification on a structured ASD dataset, their approach demonstrated high accuracy in predicting ASD traits. Among the models evaluated, Support Vector Machine and Random Forest yielded the best results in terms of accuracy and robustness. The authors highlighted the importance of early screening and presented a chatbot-based interface to assist users in understanding ASD symptoms and diagnosis.
 
-Jose A. Saez, Julian Luengo, Jerzy Stefanowski, Francisco Herrera ~\cite{b6} introduced SMOTE-IDF, a novel text classification method combining SMOTE oversampling with IDF weighting to tackle class imbalance in textual datasets. Using a Deep Neural Network (DNN) classifier, SMOTE-IDF balances minority class samples while preserving the significance of rare, informative terms. Tested on datasets like 20 Newsgroups, it outperformed traditional oversampling and baseline classifiers in accuracy, precision, recall, and F1-score, highlighting the value of hybrid sampling and feature weighting for imbalanced textual data.
+Jose A. Saez ~\cite{b6} introduced SMOTE-IDF, a novel text classification method combining SMOTE oversampling with IDF weighting to tackle class imbalance in textual datasets. Using a Deep Neural Network (DNN) classifier, SMOTE-IDF balances minority class samples while preserving the significance of rare, informative terms. Tested on datasets like 20 Newsgroups, it outperformed traditional oversampling and baseline classifiers in accuracy, precision, recall, and F1-score, highlighting the value of hybrid sampling and feature weighting for imbalanced textual data.
 
-Hanen Karamti, Raed Alharthi, Amira Al Anizi, Reemah M. Alhebshi, Ala’ Abdulmajid Eshmawi, Shtwai Alsubai, Muhammad Umer.~\cite{b7} introduced an enhanced oversampling technique named SMOTE-KNN, which improves upon the original SMOTE algorithm by integrating a K-Nearest Neighbors (KNN)-based adaptive mechanism. The proposed method dynamically selects appropriate neighbor samples for synthetic instance generation, aiming to reduce noise and overlap between classes in imbalanced datasets. The authors validated SMOTE-KNN on multiple benchmark datasets and compared its performance with traditional SMOTE, Borderline-SMOTE, and ADASYN. Experimental results demonstrated that SMOTE-KNN significantly enhances classification metrics such as precision, recall, and F1-score across various classifiers. The study underlines the importance of local data structure in oversampling and offers a more robust strategy for handling imbalance in binary classification problems.
+% Hanen Karamti ~\cite{b7} introduced an enhanced oversampling technique named SMOTE-KNN, which improves upon the original SMOTE algorithm by integrating a K-Nearest Neighbors (KNN)-based adaptive mechanism. The proposed method dynamically selects appropriate neighbor samples for synthetic instance generation, aiming to reduce noise and overlap between classes in imbalanced datasets. The authors validated SMOTE-KNN on multiple benchmark datasets and compared its performance with traditional SMOTE, Borderline-SMOTE, and ADASYN. Experimental results demonstrated that SMOTE-KNN significantly enhances classification metrics such as precision, recall, and F1-score across various classifiers. The study underlines the importance of local data structure in oversampling and offers a more robust strategy for handling imbalance in binary classification problems.
 
-B. D. Hung, V. V. Thoa, and X. T. Dang.~\cite{b8} introduced KSI, a novel hybrid method that combines clustering with SMOTE and iterative noise filtering (IPF) to enhance classification performance on imbalanced datasets. While traditional SMOTE and SMOTE-IPF approaches are commonly used for over-sampling minority classes, they often generate noisy or overlapping samples, reducing classification accuracy. KSI addresses this by using k-means clustering to identify local distributions where minority instances may dominate or be sparse. Synthetic samples are only generated in regions where local minority density is low, followed by IPF to remove noise. Experiments on multiple UCI datasets demonstrated that KSI outperforms baseline methods (SMOTE, IPF, SMOTE-IPF) in terms of G-mean and AUC, particularly on noisy and borderline samples.
+B. D. Hung ~\cite{b8} introduced KSI, a novel hybrid method that combines clustering with SMOTE and iterative noise filtering (IPF) to enhance classification performance on imbalanced datasets. While traditional SMOTE and SMOTE-IPF approaches are commonly used for over-sampling minority classes, they often generate noisy or overlapping samples, reducing classification accuracy. KSI addresses this by using k-means clustering to identify local distributions where minority instances may dominate or be sparse. Synthetic samples are only generated in regions where local minority density is low, followed by IPF to remove noise. Experiments on multiple UCI datasets demonstrated that KSI outperforms baseline methods (SMOTE, IPF, SMOTE-IPF) in terms of G-mean and AUC, particularly on noisy and borderline samples.
 
-Youngkyu Hong, Eunho Yang.~\cite{b9} proposed a dual-branch learning framework to address bias in image classification. It uses Bias-Contrastive Learning (BCL) to capture spurious correlations in a biased branch and Bias-Balanced Learning (BBL) to focus on robust features in an unbiased branch. By minimizing biased branch loss and maximizing unbiased branch agreement with true labels, the method reduces reliance on dataset biases, outperforming traditional debiasing techniques on datasets like Biased-MNIST and ImageNet-9.
+Youngkyu Hong ~\cite{b9} proposed a dual-branch learning framework to address bias in image classification. It uses Bias-Contrastive Learning (BCL) to capture spurious correlations in a biased branch and Bias-Balanced Learning (BBL) to focus on robust features in an unbiased branch. By minimizing biased branch loss and maximizing unbiased branch agreement with true labels, the method reduces reliance on dataset biases, outperforming traditional debiasing techniques on datasets like Biased-MNIST and ImageNet-9.
 
-Y. Zeng, J. Liu, H. Lam, and H. Namkoong.~\cite{b10} introduces Ola, an advanced omni-modal language model capable of understanding images, audio, and video. It uses progressive modality alignment-gradually learning from image-text, audio, then video-to reduce training costs. Ola supports streaming speech generation and demonstrates state-of-the-art performance among open-source omni-modal models, rivaling specialized systems across diverse tasks.
+Y. Zeng ~\cite{b10} introduces Ola, an advanced omni-modal language model capable of understanding images, audio, and video. It uses progressive modality alignment-gradually learning from image-text, audio, then video-to reduce training costs. Ola supports streaming speech generation and demonstrates state-of-the-art performance among open-source omni-modal models, rivaling specialized systems across diverse tasks.
 
 \section{Dataset}
-This section provides an overview of the datasets employed in the research, offering insights into their composition, size, and the practical processes involved in their collection from real-world sources. To comprehensively evaluate the proposed approach, two datasets were utilized.
+% This section provides an overview of the datasets employed in the research, offering insights into their composition, size, and the practical processes involved in their collection from real-world sources. To comprehensively evaluate the proposed approach, two datasets were utilized.
 \subsection{Public Dataset}
 The public dataset was sourced from Kaggle \cite{b17}, consisting of responses to 10 behavioral screening questions designed to detect ASD symptoms in children. The dataset is balanced, with an approximately equal distribution between ASD and non-ASD labels, each record includes binary responses to 10 questions, personal information and other relevant details. These 10 questions in the dataset are labeled to correspond with evaluation topic, which also support the labeling of the private dataset under the guidance and verification of psychological experts.
 \begin{itemize}
@@ -110,39 +105,57 @@ These datasets have 18 labeled features that are used for analysis and predict. 
 \newcommand{\attrrow}[1]{%
   \stepcounter{attr}\theattr & #1 \\ }  % macro sinh 1 dòng
 
+% \begin{table}[htbp]
+%   \centering
+%   \caption{List of labeled features in the dataset}
+%   \begin{tabular}{@{}ll@{}}
+%     \toprule
+%     \textbf{ID} & \textbf{Labeled Features Description} \\ \midrule
+%     \attrrow{Medical History}
+%     \attrrow{Speech Delay}
+%     \attrrow{Behavioral Rigidity}
+%     \attrrow{Behavioral Isolation }
+%     \attrrow{Sensorimotor Play}
+%     \attrrow{Functional Play}
+%     \attrrow{Combinatorial Play}
+%     \attrrow{Symbolic Play}
+%     \attrrow{Repetitive/Stereotyped Play}
+%     \attrrow{Social Communication Skills}
+%     \attrrow{Turn-Taking Play}
+%     \attrrow{Imitation}
+%     \attrrow{Task Requesting}
+%     \attrrow{Response to Name in Infants}
+%     \attrrow{Toe Walking after 3 years}
+%     \attrrow{Making a Point}
+%     \attrrow{Joint Attention}
+%     \attrrow{Eye Contact } \\ \bottomrule
+%   \end{tabular}
+% \end{table}
 \begin{table}[htbp]
   \centering
   \caption{List of labeled features in the dataset}
   \begin{tabular}{@{}ll@{}}
     \toprule
-    \textbf{ID} & \textbf{Labeled Features Description} \\ \midrule
-    \attrrow{Medical History}
-    \attrrow{Speech Delay}
-    \attrrow{Behavioral Rigidity}
-    \attrrow{Behavioral Isolation }
-    \attrrow{Sensorimotor Play}
-    \attrrow{Functional Play}
-    \attrrow{Combinatorial Play}
-    \attrrow{Symbolic Play}
-    \attrrow{Repetitive/Stereotyped Play}
-    \attrrow{Social Communication Skills}
-    \attrrow{Turn-Taking Play}
-    \attrrow{Imitation}
-    \attrrow{Task Requesting}
-    \attrrow{Response to Name in Infants}
-    \attrrow{Toe Walking after 3 years}
-    \attrrow{Making a Point}
-    \attrrow{Joint Attention}
-    \attrrow{Eye Contact } \\ \bottomrule
+    \textbf{Feature 1} & \textbf{Feature 2} \\ \midrule
+    Medical History & Turn-Taking Play \\
+    Speech Delay & Imitation \\
+    Behavioral Rigidity & Task Requesting \\
+    Behavioral Isolation & Response to Name in Infants \\
+    Sensorimotor Play & Toe Walking after 3 years \\
+    Functional Play & Making a Point \\
+    Combinatorial Play & Joint Attention \\
+    Symbolic Play & Eye Contact \\
+    Repetitive/Stereotyped Play & Social Communication Skills \\ 
+    \bottomrule
   \end{tabular}
 \end{table}
 
 \section{Proposed Methodology}
-This section outlines the proposed methodology for developing an Autism Spectrum Disorder (ASD) screening tool, detailing the implementation methods, procedures, and theoretical foundations underpinning each approach. By presenting a structured workflow and the rationale behind the selected techniques, this section aims to provide readers with a comprehensive and accurate understanding of the process involved in constructing a robust, automated screening tool for ASD detection. The methodology integrates advanced machine learning techniques and data preprocessing strategies tailored to address the unique challenges of psychological medical records.
-Below is a inage and detail for each implementation method: 
+% This section outlines the proposed methodology for developing an Autism Spectrum Disorder (ASD) screening tool, detailing the implementation methods, procedures, and theoretical foundations underpinning each approach. By presenting a structured workflow and the rationale behind the selected techniques, this section aims to provide readers with a comprehensive and accurate understanding of the process involved in constructing a robust, automated screening tool for ASD detection. The methodology integrates advanced machine learning techniques and data preprocessing strategies tailored to address the unique challenges of psychological medical records.
+Below is a image and detail for each implementation method: 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.95\linewidth]{images/processASD.drawio.png} 
+    \includegraphics[width=0.8\linewidth]{images/processASD.drawio.png} 
     \caption{Overview of implementation methods}
     \label{fig:ola_pipeline}
 \end{figure}
@@ -186,9 +199,9 @@ The pipeline comprised five sequential stages, each with a clear \emph{objective
 \subsubsection{\textbf{Step 5:} SMOTE-IPF Balancing}
 .
 
-\textit{Objective:} Mitigate class imbalance between ASD and non-ASD cases. 
+% \textit{Objective:} Mitigate class imbalance between ASD and non-ASD cases. 
 
-\textit{Method:} SMOTE was applied to generate synthetic ASD samples via interpolation of feature vectors. Iterative Proportional Fitting (IPF) was then used to eliminate noisy synthetic instances. Unsafe non-ASD samples flagged via KNN-based neighborhood voting were relabeled as ASD to improve balance. This process was repeated iteratively for refinement.
+% \textit{Method:} SMOTE was applied to generate synthetic ASD samples via interpolation of feature vectors. Iterative Proportional Fitting (IPF) was then used to eliminate noisy synthetic instances. Unsafe non-ASD samples flagged via KNN-based neighborhood voting were relabeled as ASD to improve balance. This process was repeated iteratively for refinement.
 
 \vspace{0.5em}
 Based on domain knowledge, SMOTE-IPF (Synthetic Minority Oversampling Technique with Iterative Partitioning Filter)~\cite{b6} was ultimately selected due to its superior performance in both class balancing and noise reduction.
@@ -220,7 +233,7 @@ An ensemble learning method based on gradient boosting, XGBoost integrates multi
 CatBoost is an advanced Gradient Boosting Decision Trees (GBDT) algorithm that builds an ensemble of symmetric (oblivious) decision trees to enhance predictive performance and computational efficiency.  
 Unlike traditional Decision Trees, CatBoost combines multiple weak learners with ordered boosting and regularization to reduce overfitting, achieving superior generalization on complex datasets. It was configured with a depth of 6 and 100 iterations, leveraging its ability to process ordinal features (e.g., poor-moderate-good encodings) directly.
 
-Compared to Decision Trees, CatBoost excels in handling categorical features through automated label encoding with Bayesian smoothing, eliminating the need for manual preprocessing. Relative to XGBoost, CatBoost offers improved categorical feature processing, optimized GPU performance via histogram-based computations, and automatic feature combinations for complex data patterns.  
+% Compared to Decision Trees, CatBoost excels in handling categorical features through automated label encoding with Bayesian smoothing, eliminating the need for manual preprocessing. Relative to XGBoost, CatBoost offers improved categorical feature processing, optimized GPU performance via histogram-based computations, and automatic feature combinations for complex data patterns.  
 However, CatBoost may still struggle with bias toward dominant features in imbalanced datasets, as applied in this study.
 
 \subsubsection{OLA (Overall Local Accuracy)~\cite{b18}}
@@ -239,46 +252,28 @@ Implemented with custom code to integrate with the SMOTE-IPF preprocessed datase
 \paragraph{Framework with OLA}
 
 This subsection illustrates the enhanced OLA pipeline designed to mitigate feature bias, particularly caused by dominant features such as \texttt{TiepXucMat}: 
-
-\begin{itemize}
-\item \textbf{Step 1:} Data Normalization and Dimensionality Reduction with PCA~\\
-\textit{Description:} StandardScaler is applied (mean = 0, variance = 1), followed by PCA with $n\_components = 0.95$ to retain 95\% of variance.  
-\textit{Output:} Normalized and PCA-transformed data.  
-\textit{Purpose:} Reduces noise and dominant feature bias while preserving essential structure.
-
-\item \textbf{Step 2:} Create 3 Diverse Classifier Pools~\\
-\textit{Description:}  
-\begin{itemize}
-    \item Group 1 (PCA-based): DecisionTreeClassifier, XGBClassifier trained on PCA data.  
-    \item Group 2 (Bias-controlled): RandomForestClassifier trained on raw data excluding \texttt{TiepXucMat}.  
-    \item Group 3 (Raw): KNeighborsClassifier ($k=5$) trained on raw data.
-\end{itemize}
-\textit{Purpose:} Provides model diversity and flexibility in selection.
-
-\item \textbf{Step 3:} Local Accuracy Estimation and Training OLA Model~\\
-\textit{Description:} OLA is trained using Group 1 and selects the most competent classifier for each instance based on KNN-local accuracy.  
-\textit{Output:} Trained OLA model using PCA-transformed data.  
-\textit{Purpose:} Improves fairness in predictions by choosing locally optimal models.
-
-\item \textbf{Step 4:} Prediction Probabilities from All Model Groups~\\
-\textit{Description:}  
-\begin{itemize}
-    \item OLA produces predictions ($y\_pred$) using Group 1.  
-    \item All models output probability estimates via \texttt{predict\_proba}.  
-    \item Probabilities are averaged into a final score $y\_prob$.
-\end{itemize}
-\textit{Purpose:} Mitigates influence of any single biased group; improves ensemble reliability for metrics like ROC AUC.
-\end{itemize}
-
-
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.95\linewidth]{images/structure_imp_ola.png} 
+    \includegraphics[width=0.5\linewidth]{images/structure_imp_ola.png} 
     \caption{Framework OLA}
     \label{fig:ola_pipeline}
 \end{figure}
 
+\begin{itemize}
+\item \textbf{Step 1:} Data Preprocessing~\\
+\begin{itemize}
+    \item Standardization with StandardScaler: Transform data to a standard normal distribution (mean=0, variance=1) to reduce the influence of features with large values (e.g., TiepXucMat), ensuring efficient model performance.  
+    \item Dimensionality Reduction with PCA (Principal Component Analysis): Reduce data dimensions, removing noise and bias from dominant features while lowering computational cost.  
+\end{itemize}
 
+\item \textbf{Step 2:} Create PCA-based Group - Using PCA-reduced Data~\\
+\begin{itemize}
+    \item Model Group Creation: PCA-based group - XGBClassifier, CatBoostClassifier, and RandomForestClassifier trained on PCA data, focusing on key features to minimize noise.  
+    \item This diversity enhances flexibility, allowing OLA to select the most suitable model for each test sample.  
+\end{itemize}
+
+\item \textbf{Step 3:} Deploy OLA Model~\\
+Implement with the above models on the PCA-processed dataset to provide predictions for each data sample.
 
 \subsection{Evaluation Metrics and Validation}
 
@@ -301,17 +296,17 @@ Process: The dataset was divided into 5 folds with preserved class distribution.
 
 Evaluates the influence of original features on the model's predictions, providing insights into feature relevance for the ASD classification task.
 
-Process: The importance scores of each original feature were computed using the model's built-in feature importance method. These scores were extracted for all features, ranked in descending order based on their contribution, and summed to reflect their overall impact. The results were visualized to highlight the most influential features, aiding in understanding feature bias, such as from the \textit{TiepXucMat} column.
+% Process: The importance scores of each original feature were computed using the model's built-in feature importance method. These scores were extracted for all features, ranked in descending order based on their contribution, and summed to reflect their overall impact. The results were visualized to highlight the most influential features, aiding in understanding feature bias, such as from the \textit{TiepXucMat} column.
 
 
 % ---------- CONTINUED SECTIONS ----------
 
 
 \section{Result and Discussion}
-This section presents the key findings from the experiments conducted to evaluate the proposed ASD screening tool, focusing on the performance of the Decision Tree, XGBoost, CatBoost, and enhanced Overall Local Accuracy (OLA) models. The results highlight the effectiveness of the SMOTE-IPF technique and OLA framework in addressing class imbalance and feature bias, with a particular emphasis on achieving high Recall scores to ensure maximum ASD detection.
+% This section presents the key findings from the experiments conducted to evaluate the proposed ASD screening tool, focusing on the performance of the Decision Tree, XGBoost, CatBoost, and enhanced Overall Local Accuracy (OLA) models. The results highlight the effectiveness of the SMOTE-IPF technique and OLA framework in addressing class imbalance and feature bias, with a particular emphasis on achieving high Recall scores to ensure maximum ASD detection.
 
 \subsection{Experimental Results}
-This subsection presents the results of the four experimental steps, including performance metrics for all models on both datasets, feature importance analysis, and the impact of the enhanced OLA model. The results are reported using single-run evaluations, 5-fold cross-validation, and visualizations.
+% This subsection presents the results of the four experimental steps, including performance metrics for all models on both datasets, feature importance analysis, and the impact of the enhanced OLA model. The results are reported using single-run evaluations, 5-fold cross-validation, and visualizations.
 
 \subsubsection{Evaluation Balancing Private Dataset}
 .
@@ -321,13 +316,13 @@ Therefore, private dataset with SMOTE-IPF over 800 records were balanced used fo
 
 \begin{figure}[H]
     \centering
-    \begin{subfigure}[b]{0.48\linewidth}
+    \begin{subfigure}[b]{0.4\linewidth}
         \includegraphics[width=\linewidth]{images/pca_smote_knn.png}
         \caption{PCA with SMOTE-KNN}
         \label{fig:pca-smote-knn}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[b]{0.48\linewidth}
+    \begin{subfigure}[b]{0.4\linewidth}
         \includegraphics[width=\linewidth]{images/pca_smote_ipf.png}
         \caption{PCA with SMOTE-IPF}
         \label{fig:pca-smote-ipf}
@@ -406,13 +401,13 @@ General comment, the chart results reveal that the dataset lacks significant col
 \begin{figure}[H]
     \centering
     \begin{subfigure}[b]{0.45\linewidth}
-        \includegraphics[width=\linewidth]{images/tree_cot.png}
+        \includegraphics[width=0.8\linewidth]{images/tree_cot.png}
         \caption{Decision Tree}
         \label{fig:x1}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.45\linewidth}
-        \includegraphics[width=\linewidth]{images/xgb_cot.png}
+        \includegraphics[width=0.8\linewidth]{images/xgb_cot.png}
         \caption{XGBoost}
         \label{fig:x2}
     \end{subfigure}
@@ -420,13 +415,13 @@ General comment, the chart results reveal that the dataset lacks significant col
     \vspace{1em}
 
     \begin{subfigure}[b]{0.45\linewidth}
-        \includegraphics[width=\linewidth]{images/cat_cot.png}
+        \includegraphics[width=0.8\linewidth]{images/cat_cot.png}
         \caption{CatBoost}
         \label{fig:x3}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.45\linewidth}
-        \includegraphics[width=\linewidth]{images/ola_cot.png}
+        \includegraphics[width=0.8\linewidth]{images/ola_cot.png}
         \caption{OLA}
         \label{fig:x4}
     \end{subfigure}
@@ -439,7 +434,7 @@ General comment, the chart results reveal that the dataset lacks significant col
 \paragraph{Private Dataset}\mbox{}\\
 b1) Metrics Cross Validation: \\
 
-The empirical evaluation of the machine learning models on the real-world dataset highlights their varying performance under conditions of data instability. 
+% The empirical evaluation of the machine learning models on the real-world dataset highlights their varying performance under conditions of data instability. 
 
 - The Decision Tree model maintains a moderate performance, consistent with its predictions on standardized datasets, but remains the least effective among the evaluated models. 
 
@@ -554,7 +549,7 @@ To address this, Enhanced OLA was applied to reduce bias and diversify feature i
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.85\linewidth]{images/feature_enhanced_ola.png}
+    \includegraphics[width=0.6\linewidth]{images/feature_enhanced_ola.png}
     \caption{Enhanced OLA framework with TiepXucMat}
     \label{fig:importance_after}
 \end{figure}
