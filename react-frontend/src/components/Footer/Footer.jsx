@@ -19,7 +19,11 @@ function Footer() {
               hành vi, sức khỏe tinh thần ở trẻ em và trẻ vị thành niên
             </p>
             <p>
-              <strong>Địa chỉ:</strong> 625 Hậu Giang, Quận 6, TP. Hồ Chí Minh
+              <a href="https://maps.app.goo.gl/Ni2XNa6DoymUHRDh8"
+              target="_blank"
+              rel="noopener noreferrer">
+                <strong>Địa chỉ:</strong> 34 Đường số 20, Phường 11, Quận 6, TP.HCM
+                </a>
             </p>
             <p>
               <strong>Số điện thoại:</strong> 098.150.2721
@@ -42,12 +46,20 @@ function Footer() {
           <h3>Kết nối với chúng tôi</h3>
           <div className="social-icons">
             <div className="icon-item">
-              <img src={facebookIcon} alt="Facebook" />
-              <span>Facebook</span>
+              <a href="https://www.facebook.com/tamlynhidong"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                <img src={facebookIcon} alt="Facebook" />
+                {/* <span>Facebook</span> */}
+              </a>
             </div>
             <div className="icon-item">
-              <img src={tiktokIcon} alt="TikTok" />
-              <span>Tiktok</span>
+               <a href="https://www.tiktok.com/@tamlynhidong"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                <img src={tiktokIcon} alt="TikTok" />
+                {/* <span>Tiktok</span> */}
+              </a>
             </div>
           </div>
         </div>

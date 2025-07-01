@@ -34,18 +34,13 @@
   color: #888;
 }
 .container-page {
-  /* padding: 10px 20px;         */
-  /* top/bottom = 10px, left/right = 20px */
-  box-sizing: border-box;   /* đảm bảo padding không làm tràn width */
-  width: 100%;              /* chiếm toàn bộ chiều ngang màn hình */
-  min-height: 100vh;        /* tùy chọn: đủ chiều cao nếu muốn full trang */
-  box-sizing: border-box; /* đảm bảo padding không làm bể layout */
-
+  box-sizing: border-box;   
+  width: 100%;              
+  min-height: 100vh;       
+  box-sizing: border-box; 
   display: flex;
-  flex-direction: column; /* xếp các phần header, main, footer theo chiều dọc */
-  justify-content: space-between; /* để đẩy footer xuống cuối nếu cần */
-  /* align-items: center;  */
-  /* căng giữa các phần tử con theo chiều ngang */
+  flex-direction: column; 
+  justify-content: space-between; 
 
 }
 

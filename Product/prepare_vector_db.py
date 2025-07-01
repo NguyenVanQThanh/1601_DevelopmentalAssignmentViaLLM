@@ -2,80 +2,98 @@ import os
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.document_loaders import PyPDFLoader, DirectoryLoader
 from langchain_community.vectorstores import FAISS
-from sentence_transformers import SentenceTransformer
-from langchain_core.embeddings import Embeddings
 from typing import List
+from custom_embeddings import BGEM3Embeddings
 import numpy as np
 
-# Khai báo biến
+# Configuration
 pdf_data_path = "data"
 vector_db_path = "vectorstores/db_faiss"
-bge_m3_model_path = "models/bge-m3"  # Đường dẫn lưu mô hình BGE-M3
-max_length = 512  # Giới hạn độ dài token của BGE-M3
+bge_m3_model_path = "models/bge-m3"
+chunk_size = 1000
+chunk_overlap = 200
 
-# Tạo lớp embedding tùy chỉnh cho SentenceTransformer
-class SentenceTransformerEmbeddings(Embeddings):
-    def __init__(self, model_path: str):
-        self.model = SentenceTransformer(model_path)
+def validate_pdf_files():
+    """Kiểm tra tính hợp lệ của file PDF"""
+    if not os.path.exists(pdf_data_path):
+        raise FileNotFoundError(f"Thư mục {pdf_data_path} không tồn tại")
+    
+    pdf_files = [f for f in os.listdir(pdf_data_path) if f.endswith('.pdf')]
+    if not pdf_files:
+        raise ValueError(f"Không tìm thấy file PDF nào trong {pdf_data_path}")
+    return pdf_files
 
-    def embed_documents(self, texts: List[str]) -> List[List[float]]:
-        """Tạo embedding cho danh sách các tài liệu."""
-        embeddings = self.model.encode(
-            texts, convert_to_tensor=False, show_progress_bar=False
+def load_and_split_documents():
+    """Tải và chia nhỏ tài liệu"""
+    try:
+        loader = DirectoryLoader(pdf_data_path, glob="*.pdf", loader_cls=PyPDFLoader)
+        documents = loader.load()
+        
+        text_splitter = RecursiveCharacterTextSplitter(
+            chunk_size=chunk_size,
+            chunk_overlap=chunk_overlap,
+            length_function=len,
+            separators=["\n\n", "\n", ". ", " ", ""],
+            keep_separator=True
         )
-        return embeddings.tolist()
+        return text_splitter.split_documents(documents)
+    except Exception as e:
+        raise RuntimeError(f"Lỗi khi tải hoặc chia tài liệu: {str(e)}")
 
-    def embed_query(self, text: str) -> List[float]:
-        """Tạo embedding cho một câu hỏi."""
-        embedding = self.model.encode([text], convert_to_tensor=False, show_progress_bar=False).tolist()[0]
-        return embedding
+def create_vector_store(chunks):
+    """Tạo và lưu vector store"""
+    try:
+        # Tạo embeddings
+        embeddings = BGEM3Embeddings(bge_m3_model_path)
+        
+        # Tạo FAISS vector store (không cần truyền metadatas)
+        db = FAISS.from_documents(chunks, embeddings)
+        
+        # Kiểm tra tính toàn vẹn trước khi lưu
+        if len(db.index_to_docstore_id) != len(chunks):
+            raise ValueError("Số lượng vector không khớp với số lượng chunks")
+            
+        # Lưu vector store
+        os.makedirs(os.path.dirname(vector_db_path), exist_ok=True)
+        db.save_local(vector_db_path)
+        
+        # Kiểm tra sau khi lưu
+        if not os.path.exists(f"{vector_db_path}/index.faiss"):
+            raise RuntimeError("Lưu vector store thất bại")
+            
+        return db
+    except Exception as e:
+        raise RuntimeError(f"Lỗi khi tạo vector store: {str(e)}")
 
-def create_db_from_files():
-    # Khai báo loader để quét toàn bộ thư mục data
-    loader = DirectoryLoader(pdf_data_path, glob="*.pdf", loader_cls=PyPDFLoader)
-    documents = loader.load()
+def main():
+    try:
+        print("Đang kiểm tra file PDF...")
+        pdf_files = validate_pdf_files()
+        print(f"Tìm thấy {len(pdf_files)} file PDF hợp lệ")
+        
+        print("Đang tải và chia nhỏ tài liệu...")
+        chunks = load_and_split_documents()
+        print(f"Đã chia thành {len(chunks)} chunks")
+        
+        print("Đang tạo vector store...")
+        db = create_vector_store(chunks)
+        print(f"Đã tạo và lưu vector store tại {vector_db_path}")
+        
+        # Test thử
+        test_query = "Nội dung chính của tài liệu là gì?"
+        results = db.similarity_search(test_query, k=1)
+        print(f"\nKết quả test với query '{test_query}':")
+        print(f"Chunk đầu tiên: {results[0].page_content[:100]}...")
+        print(f"Nguồn: {results[0].metadata.get('source', 'unknown')}")
+        
+    except Exception as e:
+        print(f"Lỗi: {str(e)}")
+        if os.path.exists(vector_db_path):
+            import shutil
+            shutil.rmtree(vector_db_path)
+            print(f"Đã xóa vector store không hợp lệ tại {vector_db_path}")
 
-    # Chia tài liệu thành các đoạn với các tham số được tối ưu
-    text_splitter = RecursiveCharacterTextSplitter(
-        chunk_size=1500,
-        chunk_overlap=200,
-        length_function=len,
-        separators=["\n\n", "\n", ". ", " ", ""],
-        keep_separator=True
-    )
-    chunks = text_splitter.split_documents(documents)
-
-    # In ra các đoạn để kiểm tra
-    print("Các đoạn văn bản sau khi chia:")
-    for i, chunk in enumerate(chunks):
-        print(f"Chunk {i}: {chunk.page_content[:100]}...")
-
-    # Kiểm tra và tải/lưu mô hình BGE-M3
-    if not os.path.exists(bge_m3_model_path):
-        print(f"Thư mục {bge_m3_model_path} không tồn tại. Đang tải mô hình BGE-M3...")
-        embedding_model = SentenceTransformer('BAAI/bge-m3')  # Tải từ Hugging Face
-        print(f"Đang lưu mô hình vào {bge_m3_model_path}...")
-        embedding_model.save(bge_m3_model_path)  # Lưu mô hình vào thư mục models
-        print(f"Đã lưu mô hình BGE-M3 vào {bge_m3_model_path}.")
-    else:
-        print(f"Thư mục {bge_m3_model_path} đã tồn tại. Đang tải mô hình BGE-M3 từ local...")
-        embedding_model = SentenceTransformer(bge_m3_model_path)  # Tải từ local
-        print(f"Tải xong mô hình BGE-M3 từ {bge_m3_model_path}.")
-
-    # Tạo đối tượng embedding tùy chỉnh
-    custom_embeddings = SentenceTransformerEmbeddings(bge_m3_model_path)
-
-    # Tạo FAISS vector store
-    print("Đang tạo FAISS vector store...")
-    db = FAISS.from_documents(chunks, custom_embeddings)
-    db.save_local(vector_db_path)
-    print("Đã tạo và lưu FAISS vector store thành công!")
-    return db
-
-# Gọi hàm
 if __name__ == "__main__":
     # Đảm bảo thư mục models tồn tại
-    if not os.path.exists("models"):
-        os.makedirs("models")
-        print("Đã tạo thư mục models.")
-    create_db_from_files()
+    os.makedirs("models", exist_ok=True)
+    main()

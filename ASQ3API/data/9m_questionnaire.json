@@ -1,0 +1,372 @@
+{
+  "age": {
+    "range": "9 tháng và 9 tháng 30 ngày",
+    "range_in_days": {
+      "min_days": 270,
+      "max_days": 300
+    },
+    "title": "BỘ CÂU HỎI 9 THÁNG TUỔI"
+  },
+  "question": {
+    "communication": {
+      "questions": [
+        {
+          "id": 1,
+          "text": "Con của bạn có phát ra các âm thanh như 'Đa', 'Ga', 'Ca' và 'Ba' không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": null
+        },
+        {
+          "id": 2,
+          "text": "Nếu bạn bắt chước âm thanh mà con của bạn tạo ra, bé có lặp lại âm thanh đó đáp lại bạn không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": null
+        },
+        {
+          "id": 3,
+          "text": "Con của bạn có phát ra hai âm giống nhau như 'Ba-ba', 'Đa-đa' hoặc 'Ga-ga' không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": "Các âm này không nhất thiết phải có nghĩa,",
+          "image_filepath": null
+        },
+        {
+          "id": 4,
+          "text": "Nếu bạn yêu cầu con của bạn chơi một trong các trò chơi sau: 'ú òa', 'chi chi chành chành', 'vỗ tay' hoặc 'hôn tạm biệt'... mà không hướng dẫn, thì bé có chơi được không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": null
+        },
+        {
+          "id": 5,
+          "text": "Nếu bạn đưa ra một yêu cầu đơn giản như: 'Lại đây', 'Đưa cho mẹ' hoặc 'Để/đặt đồ xuống', mà không kèm theo cử chỉ điệu bộ thì con của bạn có làm theo yêu cầu đó không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": null
+        },
+        {
+          "id": 6,
+          "text": "Con của bạn đã biết nói 3 từ, ví dụ 'Baba', 'Mama', hoặc 'Mummum'?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": "Các 'Từ' này là một âm thanh hoặc một chuỗi âm thanh mà bé phát ra một cách thường xuyên để chỉ một cái/ai đó/điều gì đó.",
+          "image_filepath": null
+        }
+      ],
+     "cutoff": 13.97,
+    "max": 30
+    },
+    "gross_motor": {
+      "questions": [
+        {
+          "id": 1,
+          "text": "Con của bạn có tự đứng khi bạn nắm hai tay bé để giữ thăng bằng cho bé không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": "image_placeholder.png"
+        },
+        {
+          "id": 2,
+          "text": "Khi ngồi trên sàn nhà, con của bạn có thể ngồi thẳng trong vài phút mà không cần chống tay không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": "image_placeholder.png"
+        },
+        {
+          "id": 3,
+          "text": "Khi bạn để con của bạn đứng cạnh bàn hoặc thành nôi, bé có thể vịn tay đứng được mà không cần tựa ngực không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": "image_placeholder.png"
+        },
+        {
+          "id": 4,
+          "text": "Khi đứng vịn vào bàn/ghế, con của bạn có thể cúi xuống để nhặt đồ chơi trên sàn rồi lại đứng thẳng lên không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": "image_placeholder.png"
+        },
+        {
+          "id": 5,
+          "text": "Khi vịn vào bàn/ghế, con của bạn có thể từ từ hạ người xuống mà không ngã hoặc đổ người xuống không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": null
+        },
+        {
+          "id": 6,
+          "text": "Con của bạn có đi gần đồ đạc mà chỉ vịn bằng một tay hay không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": null
+        }
+      ],
+      "cutoff": 17.82,
+    "max": 35
+    },
+    "fine_motor": {
+      "questions": [
+        {
+          "id": 1,
+          "text": "Con của bạn có nhặt một món đồ chơi nhỏ chỉ bằng một tay không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": "image_placeholder.png"
+        },
+        {
+          "id": 2,
+          "text": "Con của bạn có nhặt được mẩu bánh nhỏ bằng cách dùng ngón tay cái và các ngón tay khác không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": "Nếu bé đã biết nhặt mẩu bánh thì đánh dấu 'Có' cho câu hỏi này.",
+          "image_filepath": "image_placeholder.png"
+        },
+        {
+          "id": 3,
+          "text": "Con của bạn có dùng đầu ngón tay cái và các đầu ngón tay khác để nhặt một đồ chơi nhỏ không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": "Bạn phải thấy được khoảng trống giữa đồ chơi và lòng bàn tay của bé.",
+          "image_filepath": "image_placeholder.png"
+        },
+        {
+          "id": 4,
+          "text": "Sau một hoặc hai lần thử, con của bạn có nhặt một đoạn dây bằng cách dùng ngón trỏ và ngón cái được không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": "Sợi dây có thể gắn với đồ chơi.",
+          "image_filepath": "image_placeholder.png"
+        },
+        {
+          "id": 5,
+          "text": "Con của bạn có dùng đầu ngón tay cái và một ngón tay khác để nhặt mẩu bánh không? Bé có thể tựa cạnh tay hoặc bàn tay lên mặt bàn khi bé hiện hành động này",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": "image_placeholder.png"
+        },
+        {
+          "id": 6,
+          "text": "Con của bạn có từ từ hạ một đồ chơi nhỏ xuống sàn mà không làm rơi và sau đó buông tay ra không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": null
+        }
+      ],
+      "cutoff": 31.32,
+    "max": 45
+    },
+    "problem_solving": {
+      "questions": [
+        {
+          "id": 1,
+          "text": "Con của bạn có chuyển đồ chơi từ tay này sang tay kia không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": "image_placeholder.png"
+        },
+        {
+          "id": 2,
+          "text": "Con của bạn có nhặt hai đồ chơi nhỏ, mỗi tay một cái và cầm chúng trong khoảng 1 phút không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": "image_placeholder.png"
+        },
+        {
+          "id": 3,
+          "text": "Khi cầm một món đồ chơi trên tay, con bạn có đập nó lên món đồ chơi khác ở trên bàn không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": "image_placeholder.png"
+        },
+        {
+          "id": 4,
+          "text": "Khi mỗi tay cầm một đồ chơi nhỏ, con của bạn có gõ hai đồ chơi vào nhau không (như kiểu vỗ tay) ?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": null
+        },
+        {
+          "id": 5,
+          "text": "Con của bạn có đưa ngón tay vào hoặc cố gắng lấy một mẩu bánh nhỏ trong cái chai trong suốt (như chai nước ngọt bang nhựa hoặc bình sữa trẻ em) không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": null
+        },
+        {
+          "id": 6,
+          "text": "Sau khi nhìn thấy bạn giấu một đồ chơi nhỏ dưới mảnh vải hoặc tờ giấy, con của bạn có tìm ra đồ chơi đó không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": "Mảnh vải hoặc tờ giấy phải hoàn toàn che phủ đồ chơi.",
+          "image_filepath": null
+        }
+      ],
+      "cutoff": 28.72,
+    "max": 40
+    },
+    "personal_social": {
+      "questions": [
+        {
+          "id": 1,
+          "text": "Khi nằm ngửa, con của bạn có cho bàn chân vào miệng không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": "image_placeholder.png"
+        },
+        {
+          "id": 2,
+          "text": "Con của bạn có uống nước lọc, nước trái cây, hoặc sữa bằng ly/cốc nếu bạn cầm giúp bé không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": null
+        },
+        {
+          "id": 3,
+          "text": "Con của bạn có tự ăn bánh quy không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": null
+        },
+        {
+          "id": 4,
+          "text": "Khi bạn chìa tay ra và yêu cầu con của bạn đưa đồ chơi cho bạn, bé có đưa không, mặc dù bé có thể không thả đồ chơi vào tay bạn?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": "Nếu bé đã biết để đồ chơi vào tay bạn, đánh dấu 'Có' cho câu hỏi này",
+          "image_filepath": null
+        },
+        {
+          "id": 5,
+          "text": "Khi bạn mặc áo cho con của bạn, bé có biết xỏ tay qua ống tay áo ngay khi bàn tay của bé đặt ở đầu ống tay áo không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": null
+        },
+        {
+          "id": 6,
+          "text": "Khi bạn chìa tay ra và bảo con của bạn đưa đồ chơi cho bạn, bé có để đồ chơi vào bàn tay bạn rồi buông tay không?",
+          "options": [
+            "Có",
+            "Thỉnh Thoảng",
+            "Chưa"
+          ],
+          "note": null,
+          "image_filepath": null
+        }
+      ],
+      "cutoff": 18.91,
+    "max": 30
+    }
+  }
+}
