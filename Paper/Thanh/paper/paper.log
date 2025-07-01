@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.6)  23 JUN 2025 07:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.6)  30 JUN 2025 21:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -950,15 +950,20 @@ Overfull \hbox (9.40051pt too wide) in paragraph at lines 65--66
 [1
 
 {C:/Users/Admin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+Overfull \hbox (4.40063pt too wide) in paragraph at lines 74--75
+\T5/cmr/m/n/10 English), Vinallama-7B-Chat achieved ad-vanced re-sults on im-por-tant NLP bench-
+ []
+
+
 Underfull \vbox (badness 2158) has occurred while \output is active []
 
 
 
 [2]
-<bibliography/Figure/system-architech.png, id=52, 997.47656pt x 549.55313pt>
+<bibliography/Figure/system-architech.png, id=54, 997.47656pt x 549.55313pt>
 File: bibliography/Figure/system-architech.png Graphic file (type png)
 <use bibliography/Figure/system-architech.png>
-Package pdftex.def Info: bibliography/Figure/system-architech.png  used on input line 86.
+Package pdftex.def Info: bibliography/Figure/system-architech.png  used on input line 85.
 (pdftex.def)             Requested size: 329.7663pt x 181.68013pt.
 
 
@@ -966,108 +971,104 @@ Package pdftex.def Info: bibliography/Figure/system-architech.png  used on input
 <bibliography/Figure/QLoRA.png, id=68, 886.81313pt x 827.34094pt>
 File: bibliography/Figure/QLoRA.png Graphic file (type png)
 <use bibliography/Figure/QLoRA.png>
-Package pdftex.def Info: bibliography/Figure/QLoRA.png  used on input line 118.
+Package pdftex.def Info: bibliography/Figure/QLoRA.png  used on input line 117.
 (pdftex.def)             Requested size: 329.7663pt x 307.6515pt.
 
-Overfull \hbox (1.23474pt too wide) in paragraph at lines 123--125
+Overfull \hbox (1.23474pt too wide) in paragraph at lines 122--124
 \T5/cmr/m/n/10 Vistral-7B (\T5/cmtt/m/n/10 Viet-Mistral/Vistral-7B-Chat\T5/cmr/m/n/10 ), SeaLLMs (\T5/cmtt/m/n/10 SeaLLMs/SeaLLMs-v3
  []
 
 
 
 [4]
-Overfull \hbox (6.42792pt too wide) in paragraph at lines 126--128
+Overfull \hbox (6.42792pt too wide) in paragraph at lines 125--127
 \T5/cmr/m/n/10 The fine-tuning pro-cess lever-ages Low-Rank Adap-ta-tion (LoRA) [[]] for parameter-
  []
 
 
-Underfull \vbox (badness 3792) has occurred while \output is active []
-
-
 
 [5 <./bibliography/Figure/QLoRA.png (PNG copy)>]
-Overfull \hbox (15.46152pt too wide) in paragraph at lines 141--142
+Overfull \hbox (15.46152pt too wide) in paragraph at lines 140--141
 \T5/cmr/bx/n/10 nal thought pro-cess)\T5/cmr/m/n/10 : Ini-tially, con-sid-er-a-tion was given to fil-ter-ing instruction-
  []
 
 
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 155--156
+Underfull \hbox (badness 10000) in paragraph at lines 154--155
 
  []
 
 
-Overfull \hbox (5.15521pt too wide) in paragraph at lines 173--175
+Overfull \hbox (5.15521pt too wide) in paragraph at lines 172--174
 []\T5/cmr/m/n/10 Cosine sim-i-lar-ity mea-sures the an-gle be-tween two vec-tors in a high-dimensional
  []
 
 
 
 [7]
-
-[8]
-
-[9]
-Underfull \hbox (badness 10000) in paragraph at lines 242--243
+Underfull \hbox (badness 10000) in paragraph at lines 197--198
 
  []
 
 
-Overfull \hbox (21.87384pt too wide) in paragraph at lines 246--247
+Overfull \hbox (21.87384pt too wide) in paragraph at lines 201--202
 []\T5/cmr/m/n/10 Handling age-specific rec-om-men-da-tions us-ing the cur-rent date (\T5/cmtt/m/n/10 {current_date}\T5/cmr/m/n/10 ). 
  []
 
 
 
-[10
+[8]
 
-]
-Overfull \hbox (3.50748pt too wide) in paragraph at lines 302--303
+[9]
+Overfull \hbox (3.50748pt too wide) in paragraph at lines 257--258
 []\T5/cmr/m/n/10 Number of files: 4 (Gen-eral Chat-bot, ASD, De-vel-op-ment, De-layed Speech) 
  []
 
 
 
+[10]
+
 [11]
+Overfull \hbox (27.07175pt too wide) in alignment at lines 374--380
+ [] [] [] 
+ []
+
+
+Overfull \hbox (27.07175pt too wide) in alignment at lines 380--385
+ [] [] [] 
+ []
+
+
+Overfull \hbox (27.07175pt too wide) in alignment at lines 385--388
+ [] [] [] 
+ []
+
+
+Overfull \hbox (27.07175pt too wide) in alignment at lines 388--407
+ [] [] [] 
+ []
 
 [12]
-Overfull \hbox (27.07175pt too wide) in alignment at lines 419--425
- [] [] [] 
- []
+Underfull \vbox (badness 3746) has occurred while \output is active []
 
 
-Overfull \hbox (27.07175pt too wide) in alignment at lines 425--430
- [] [] [] 
- []
-
-
-Overfull \hbox (27.07175pt too wide) in alignment at lines 430--433
- [] [] [] 
- []
-
-
-Overfull \hbox (27.07175pt too wide) in alignment at lines 433--452
- [] [] [] 
- []
 
 [13]
-
-[14]
-Overfull \hbox (1.88846pt too wide) in paragraph at lines 460--461
+Overfull \hbox (1.88846pt too wide) in paragraph at lines 415--416
 \T5/cmr/bx/n/10 VinaL-LaMA\T5/cmr/m/n/10 , and \T5/cmr/bx/n/10 Dama-2\T5/cmr/m/n/10 ^^Vrevealed dis-tinct dif-fer-ences in per-for-mance across
  []
 
 
-Overfull \hbox (26.48334pt too wide) in paragraph at lines 464--465
+Overfull \hbox (26.48334pt too wide) in paragraph at lines 419--420
 []\T5/cmr/m/n/10 Another im-por-tant ob-ser-va-tion is that the knowl-edge base of the mod-els^^Vespecially
  []
 
 
 
-[15]
+[14]
 
-[16] (paper.aux)
+[15] (paper.aux)
  ***********
 LaTeX2e <2024-06-01>
 L3 programming layer <2024-05-08>
@@ -1076,17 +1077,17 @@ Package rerunfilecheck Info: File `paper.out' has not changed.
 (rerunfilecheck)             Checksum: C483D9EFA6317430F2CBD61632FA594B;405.
  ) 
 Here is how much of TeX's memory you used:
- 24436 strings out of 473937
- 457353 string characters out of 5727371
- 1942893 words of memory out of 5000000
- 46769 multiletter control sequences out of 15000+600000
+ 24370 strings out of 473937
+ 455845 string characters out of 5727371
+ 1941893 words of memory out of 5000000
+ 46714 multiletter control sequences out of 15000+600000
  574910 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 83i,10n,87p,1316b,749s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 83i,10n,87p,1316b,669s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnbx10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnbx12.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnbx9.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnbxti10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr9.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnti10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vntt10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vntt9.pfb>
-Output written on paper.pdf (16 pages, 808575 bytes).
+Output written on paper.pdf (15 pages, 761465 bytes).
 PDF statistics:
- 287 PDF objects out of 1000 (max. 8388607)
- 93 named destinations out of 1000 (max. 500000)
+ 271 PDF objects out of 1000 (max. 8388607)
+ 82 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

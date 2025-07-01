@@ -67,16 +67,15 @@ Our research objective is to apply the Retrieval-Augmented Generation framework 
 
 \section{Related Works}
 \label{sec:Related Works}
-Kailai Yang, Tianlin Zhang, Ziyan Kuang, Qianqian Xie, Jimin Huang, and Sophia Ananiadou \cite{b1} presented a paper on the integration of mental health analysis and Llama. The authors argued that Large Language Models (LLMs), particularly Llama, and their fine-tuning could significantly improve precision and clarity in predicting mental health conditions from social media data. Although LLMs such as ChatGPT and GPT-4 show good performance, they still have limitations in providing solutions and empathetic analysis based on user or client input. Therefore, fine-tuning these models with data from social networks has proven their strong generalization ability for a variety of tasks, while maintaining the quality of explanations close to human-level reasoning.
+Kailai Yang \cite{b1} presented a paper on the integration of mental health analysis and Llama. The authors argued that Large Language Models (LLMs), particularly Llama, and their fine-tuning could significantly improve precision and clarity in predicting mental health conditions from social media data. Although LLMs such as ChatGPT and GPT-4 show good performance, they still have limitations in providing solutions and empathetic analysis based on user or client input. Therefore, fine-tuning these models with data from social networks has proven their strong generalization ability for a variety of tasks, while maintaining the quality of explanations close to human-level reasoning.
 
-Albert Q. Jiang, Alexandre Sablayrolles, Arthur Mensch, Chris Bamford, Devendra Singh Chaplot, Diego de las Casas, Florian Bressand, Gianna Lengyel, Guillaume Lample, Lucile Saulnier, Lélio Renard Lavaud, Marie-Anne Lachaux, Pierre Stock, Teven Le Scao, Thibaut Lavril, Thomas Wang, Timothée Lacroix, William El Sayed \cite{b2} introduced the Mistral 7B model, an LLM based on the LLaMA architecture, with 7 billion parameters designed to optimize performance and efficiency while still delivering impressive results. According to the authors, Mistral 7B outperforms the open 13B model (Llama 2) and the 34B model (Llama 1) across various benchmarks such as reasoning, mathematics, and code generation. The Grouped-Query Attention (GQA) and Sliding Window Attention (SWA) mechanisms played a crucial role in improving speed and reducing costs during training and fine-tuning. Viet-Mistral/Vistral-7B-Chat, a multi-turn conversational LLM, was created by fine-tuning the Vietnamese dataset with the proposal to extend the tokenizer for better support of the Vietnamese language.
+Albert Q. Jiang\cite{b2} introduced the Mistral 7B model, an LLM based on the LLaMA architecture, with 7 billion parameters designed to optimize performance and efficiency while still delivering impressive results. According to the authors, Mistral 7B outperforms the open 13B model (Llama 2) and the 34B model (Llama 1) across various benchmarks such as reasoning, mathematics, and code generation. The Grouped-Query Attention (GQA) and Sliding Window Attention (SWA) mechanisms played a crucial role in improving speed and reducing costs during training and fine-tuning. Viet-Mistral/Vistral-7B-Chat, a multi-turn conversational LLM, was created by fine-tuning the Vietnamese dataset with the proposal to extend the tokenizer for better support of the Vietnamese language.
 
-Quan Nguyen, Huy Pham and Dung Dao \cite{b3} introduced Vinallama, a large language model of Vietnam based on LLAMA-2, enhanced with more than 800 billion additional training notification codes. The model shows strong fluency in Vietnamese and deep understanding of local culture. Adjusted by 1 million bilingual patterns (English-English), Vinallama-7B-Chat achieved advanced results on important NLP benchmarks of Vietnam such as VLSP, Vmlu and Vicuna benchmarks. This emphasizes its ability for specialized applications in the context of Vietnam, especially in scenarios based on dialogue. At the time the article was studied, Vinallama-7B-Chat performed quite well in the benchmark score compared to other models.
+Quan Nguyen\cite{b3} introduced Vinallama, a large language model of Vietnam based on LLAMA-2, enhanced with more than 800 billion additional training notification codes. The model shows strong fluency in Vietnamese and deep understanding of local culture. Adjusted by 1 million bilingual patterns (English-English), Vinallama-7B-Chat achieved advanced results on important NLP benchmarks of Vietnam such as VLSP, Vmlu and Vicuna benchmarks. This emphasizes its ability for specialized applications in the context of Vietnam, especially in scenarios based on dialogue. At the time the article was studied, Vinallama-7B-Chat performed quite well in the benchmark score compared to other models.
 
 Xuan-phi Nguyen et al. \cite{b4} SEALLMS is proposed, a family of large language models specifically designed for Southeast Asian languages (SEA). These models address the language imbalance found in major LLMs by incorporating extended vocabularies, region-specific fine-tuning, and guidance links tailored to maritime languages. SEALLMS outperforms TATGPT-3.5 in several low-resource languages such as Lao, Khmer, and Burmese, demonstrating strong capabilities in multilingual guided applications and cultural awareness. We decided to include SEALLM in our research due to their flexible parameter configurations (1.5B, 7B, and 13B), as well as their continuous updates aimed at enhancing performance and language coverage over time.
 
 Within the scope of this research, we adopt a Retrieval-Augmented Generation (RAG) architecture in combination with LangChain \cite{b5} to enhance contextual understanding for Vietnamese mental health-related queries. To enable efficient and semantically meaningful retrieval, we employ the BGE-M3 embedding model \cite{b6} to generate dense vector representations of textual data. These vectors are indexed using FAISS \cite{b8}, which allows for rapid and accurate similarity search during the retrieval phase. The retrieved context is subsequently passed to one of the selected fine-tuned LLMs (e.g., Vistral-7B-Chat, VinaLLaMA-7B, or SeaLLM-7B), enabling the system to produce contextually relevant and domain-specific responses tailored for pediatric development and mental health consultations. In addition, the research team employs evaluation metrics such as METEOR, ROUGE, and Cosine Similarity \cite{b9} \cite{b10} to assess the contextual relevance and response quality of each model. These benchmarks allow for a comprehensive comparison, enabling the selection of the most suitable model for real-world deployment in mental health and pediatric development consultation.
-
 \section{System Architecture}
 \label{sec:System Architecture}
 \subsection{Overall System Design}
@@ -194,50 +193,6 @@ The user submits a query to the API endpoint. This query is passed into the retr
 
 \noindent\textbf{Retrieval Phase:}
 The retriever searches using \texttt{search\_type = similarity} with $k$ and a \texttt{score\_threshold}. Only documents that satisfy the semantic similarity threshold are used to construct the context for the model.
-
-
-\begin{tcolorbox}[title= The Hint Of Prompt Vietnamese Template,fonttitle=\bfseries, breakable]
-  \small
-  \verb|<|im\_start|>|system
-
-  Bạn là trợ lý AI chuyên về sức khỏe và tâm thần nhi khoa. Mục tiêu của bạn là cung cấp thông tin chính xác, dễ hiểu và hữu ích cho phụ huynh. \textbf{Hãy luôn trả lời bằng tiếng Việt.}
-
-  \textbf{Đặc biệt khi có câu hỏi liên quan đến thông tin liên lạc và đặt lịch phòng khám, hãy sử dụng những thông tin sau:}
-  \begin{itemize}
-      \item \textbf{Thông tin liên hệ / đặt lịch phòng khám \textbf{private}:}
-      \item Số điện thoại/Zalo: \textbf{private}
-      \item Địa chỉ: \textbf{private}
-  \end{itemize}
-
-  \textbf{QUAN TRỌNG:} Tất cả các câu trả lời, lời khuyên, và thông tin về mốc phát triển phải dựa vào độ tuổi so với ngày hiện tại (\texttt{\{current\_date\}}), được điều chỉnh và phù hợp CHÍNH XÁC với ĐỘ TUỔI của trẻ được đề cập trong câu hỏi hoặc lịch sử trò chuyện. Nếu không có thông tin độ tuổi rõ ràng, bạn có thể hỏi lại một cách lịch sự để làm rõ.
-
-  \texttt{\{asq\_guidance\_placeholder\}}
-
-  Hãy tuân thủ các hướng dẫn sau:
-
-  \begin{enumerate}
-      \item \textbf{HIỂU ĐÚNG NGỮ NGHĨA:} Phân tích kỹ lưỡng toàn bộ câu hỏi để hiểu đúng ý định, đặc biệt với các từ có nhiều nghĩa (ví dụ: ``bập bẹ'' có thể là tập nói hoặc tập đi). Nếu không chắc chắn, hãy hỏi lại người dùng để làm rõ.
-      \item \textbf{Ưu tiên Context:} Lấy thông tin từ phần \textbf{Context} được cung cấp làm nguồn chính để trả lời câu hỏi.
-      \item \textbf{Bổ sung từ kiến thức của bạn:} Nếu Context không có thông tin, không đầy đủ, hoặc bạn cảm thấy kiến thức đã được huấn luyện có thể làm rõ hoặc bổ sung giá trị cho câu trả lời, hãy sử dụng nó. Thông tin bổ sung phải liên quan trực tiếp đến câu hỏi và lĩnh vực chuyên môn của bạn, \textbf{phù hợp với độ tuổi của trẻ.}
-      \item \textbf{Chính xác và không bịa đặt:} Dù thông tin lấy từ Context hay từ kiến thức của bạn, nó phải chính xác, dựa trên cơ sở khoa học, \textbf{và hoàn toàn phù hợp với độ tuổi của trẻ đang được hỏi đến}. Tuyệt đối không bịa đặt thông tin hoặc đưa ra lời khuyên không phù hợp lứa tuổi.
-      \item \textbf{Tập trung vào câu hỏi:} Luôn trả lời trực tiếp vào câu hỏi \texttt{\{question\}}.
-      \item \textbf{Khi không có thông tin:} Nếu cả Context và kiến thức đã huấn luyện của bạn đều không có thông tin để trả lời câu hỏi, hãy thông báo một cách lịch sự, ví dụ: ``Tôi rất tiếc, hiện tại tôi không có đủ thông tin về chủ đề này từ cả tài liệu được cung cấp lẫn kiến thức của mình.''
-      \item \textbf{Diễn đạt:} Tự nhiên, không trích dẫn nguyên văn từ Context trừ khi đó là một định nghĩa quan trọng hoặc trích dẫn ngắn cần thiết.
-      \item \textbf{Định dạng:} Rõ ràng, dùng gạch đầu dòng (-) hoặc số (1., 2.) nếu phù hợp, câu đầy đủ, đúng ngữ pháp.
-      \item \textbf{Giọng điệu:} Ngôn ngữ đơn giản, thân thiện, cảm thông và hỗ trợ.
-      \item \textbf{Lịch sử hội thoại:} Sử dụng lịch sử \texttt{\{chat\_history\}} để hiểu ngữ cảnh các câu hỏi trước đó, nhưng câu trả lời phải tập trung vào CÂU HỎI HIỆN TẠI, hạn chế sử dụng câu trả lời trước đó trong câu trả lời hiện tại.
-  \end{enumerate}
-
-  \vspace{0.5em}
-  \noindent\textbf{Context:} \texttt{\{context\}}\\
-  \textbf{Lịch sử hội thoại:} \texttt{\{chat\_history\}}
-
-  \verb|<|im\_end|>|
-  \verb|<|im\_start|>|user\\
-  \texttt{\{question\}}\\
-  \verb|<|im\_end|>|
-  \verb|<|im\_start|>|assistant
-\end{tcolorbox}
 
 \subsubsection*{System Prompt Template (Vietnamese)}\mbox{}\\
 
@@ -414,7 +369,7 @@ SeaLLM     & 0.2986 & 0.7079 \\
 
 An expert evaluation was conducted using 21 questions collected from real-world consultations at a pediatric mental health clinic. These questions were reviewed by a specialist in child development and mental health, emphasizing clinical relevance and accuracy of responses generated by four fine-tuned AI models deployed on the Ollama platform. All models were evaluated under uniform conditions, using identical hyperparameters: temperature set at 0.5, context window size (\texttt{num\_ctx}) of 12288, and maximum prediction length (\texttt{num\_predict}) of 8192 tokens. Furthermore, each model utilized a standardized prompt clearly defining their role as an AI assistant specialized in pediatric health and mental health, tasked with providing gentle, accurate, and scientifically-based advice.
 
-Table \ref{tab:model-response-comparison} summarizes the expert's evaluation of the responses generated by each model for a specific case involving an 18-month-old child showing signs of developmental delay. With a question Vietnamese: \textit{Con mình 18m nói đc khá nhìu từ. nói đc cả 3 từ 1 câu. nhưng bé ko thích chơi vs ai lạ. quen thì bé giỡn và chơi vui lắm. nhìu khi cảm giác mình gọi bé lơ ko thèm quan tâm.}
+Table \ref{tab:model-response-comparison} summarizes the expert's evaluation of the responses generated by each model for a specific case involving an 18-month-old child showing signs of developmental delay. With a question Vietnamese: \textit{My child is 18 months old and can say quite a lot of words, even form three-word sentences. However, the child does not like to play with strangers. When familiar, the child laughs and plays happily. Sometimes, it feels like when I call, the child ignores me and does not}
 \renewcommand{\arraystretch}{1.4}
 \begin{longtable}{|>{\raggedright\arraybackslash}p{3cm}|>{\raggedright\arraybackslash}p{8cm}|>{\centering\arraybackslash}p{1.8cm}|}
 \caption{Compare answers from LLM models about the case of 18-month-old children showing special signs}
@@ -433,19 +388,19 @@ Table \ref{tab:model-response-comparison} summarizes the expert's evaluation of 
 \endfoot
 
 Vistral-7B-Chat &  
-Con bạn có thể hiểu được những câu dài hơn, nói tốt nhưng hơi ngại người lạ. Điều này cũng bình thường vì trẻ cần thời gian để làm quen với môi trường mới. Bạn nên dần dần cho con tiếp xúc và kiên nhẫn trong quá trình thích nghi. & 
+Your child can understand longer sentences and speaks well, but is a bit shy around strangers. This is also normal because children need time to get used to new environments. You should gradually let your child interact with others and be patient during the adaptation process. & 
 1.1 \\
 \hline
 VinaLLaMA-7B-Chat & 
-Con 18m nói được nhiều từ rồi. Nói được cả 3 từ một câu. nhưng không thích chơi với người lạ. Quen thì bé cười và chơi vui lắm. Đôi khi bé chỉ nghe lời mình gọi mà không muốn tham gia. Nên luyện trò chuyện đơn giản cùng bé & 
+At 18 months, your child can say many words and can form three-word sentences, but may not enjoy playing with strangers. When familiar, they laugh and play happily. Sometimes, they may only respond to their name without wanting to engage. It's important to practice simple conversations with them. & 
 0.927 \\
 \hline
-Dama-27B-Chat & 
-Chào bạn, con của bạn hiện đã 18 tháng tuổi và có thể nói được kha khá từ đơn với ngữ điệu rõ ràng. Tuy nhiên, nếu không biết chơi cùng người lạ hoặc tỏ ra thờ ơ khi bị gọi tên thì nảy sinh một số lo ngại về kỹ năng xã hội cần phải theo dõi thêm để đảm bảo sự phát triển toàn diện của trẻ. Bạn nên tiếp tục trò chuyện và quan sát bé để đánh giá tình trạng sức khỏe tinh thần và cảm xúc, cũng như cải thiện khả năng giao tiếp với môi trường xung quanh nếu có thể! Cảm ơn bạn đã chia sẻ câu hỏi này. Chúc con yêu luôn vui vẻ và khỏe mạnh! &
+Dama-2-7B-Chat & 
+Hello, your child is now 18 months old and can say quite a few single words with clear intonation. However, if they do not know how to play with strangers or seem indifferent when called by name, there are some concerns about social skills that need to be monitored to ensure the child's overall development. You should continue to talk and observe your child to assess their mental and emotional health, as well as improve their communication skills with the surrounding environment if possible! Thank you for sharing this question. Wishing your beloved child always happy and healthy! &
 2.207 \\
 \hline
 SeaLLMs-v3-7B-Chat & 
-Trẻ 18 tháng thường có khả năng nói khoảng 50-70 từ, nên nếu con bạn chỉ nói được một vài từ là cần lưu ý. Bạn nên đưa con đến gặp chuyên gia đánh giá ngôn ngữ để đảm bảo không có vấn đề phát triển ngôn ngữ. Về việc chơi với người lạ, đây cũng là dấu hiệu cần quan tâm vì trẻ ở độ tuổi này nên bắt đầu mở rộng mối quan hệ xã hội và tương tác với nhiều người khác nhau. Bạn có thể thử dần dần đưa con vào môi trường nhóm nhỏ để giúp con làm quen và thích nghi hơn. Nếu có bất kỳ lo lắng nào về sự phát triển của con, hãy tìm chuyên gia tâm lý trẻ em để được tư vấn chi tiết và cụ thể cho từng trường hợp. &
+At 18 months, children typically have the ability to say about 50-70 words, so if your child can only say a few words, it is a cause for concern. You should take your child to see a language assessment specialist to ensure there are no language development issues. Regarding playing with strangers, this is also a sign to pay attention to because children at this age should start to expand their social relationships and interact with different people. You can gradually introduce your child to a small group environment to help them become more familiar and adapt. If you have any concerns about your child's development, please seek a child psychologist for detailed and specific advice for each case. &
 2.703 \\
 \hline
 
@@ -467,7 +422,7 @@ In the future, the system can be further improved by combining advanced machine 
 
 \subsection{Acknowledgement}
 
-We would like to express our sincere gratitude to the University of Information Technology, Vietnam National University Ho Chi Minh City (UIT, VNU-HCM), for their support and for providing the necessary resources throughout this research. This research was supported by The VNUHCM-University of Information Technology’s Scientific Research Support Fund.
+This research was supported by The VNUHCM-University of Information Technology’s Scientific Research Support Fund.
 
 We also would like to thank the experts in the field of Psychological Health for providing data and professional materials, especially the Tam Ly Nhi Dong Clinic for supporting the research team in authenticating and consolidating professional knowledge for the RAG system.
 
