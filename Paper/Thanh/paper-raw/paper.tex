@@ -79,14 +79,14 @@ Within the scope of this research, we adopt a Retrieval-Augmented Generation (RA
 \begin{figure}[ht]
 \centering
 \includegraphics[width=0.95\linewidth]{bibliography/Figure/system-architech.png}
-\caption{System architecture of the proposed RAG-based consulting assistant using LangChain and vinallama-2.7b-chat.}
+\caption{AI Chatbot Architecture Proposal}
 \label{fig:architecture}
 \end{figure}
-The overall architecture of our system is based on the Retrieval-Augmented Generation (RAG) framework, combining a retriever and a large language model (LLM) for more accurate and context-aware responses. The system consists of two main modules: Retrieval and Generation, as illustrated in Figure~\ref{fig:architecture}.
+The overall architecture of our system is based on the Retrieval-Augmented Generation (RAG) framework, combining a retriever and a large language model (LLM) for more accurate and context-aware responses. Figure~\ref{fig:architecture} illustrates the key components and their interactions.
 
-In the \textbf{Retrieval} module, when a user submits a query, the system encodes it into a vector embedding and compares it against a pre-built FAISS vector database. This database contains vectorized embeddings of documents that were preprocessed and selected from sources related to child development and mental health. The retrieval process employs a search method using \texttt{search\_type = "similarity"} to identify documents that exhibit a high degree of relevance to the input query. Only documents that meet a predefined similarity score threshold (\texttt{score\_threshold}) are selected. These documents are then compiled into a context that is passed to the Generation module for further processing.
+The VectorDB FAISS component which is created from the BGE-M3 embeddings serves as the backbone for the retrieval process, allowing for efficient similarity searches over the document embeddings.
 
-The \textbf{Generation} module uses a Vietnamese LLM—\texttt{vinallama-2.7b-chat} —which has been fine-tuned on domain-specific instruction data to enhance its ability to generate context-aware and helpful responses in the field of child development and mental health. The retrieved documents, along with the current prompt, context from the retrieval module, and chat history, are passed to the model as input. The model then produces a response, which is returned to the user and optionally saved for continuous interaction.
+After fine-tuning, the LLM component receives a prompt that includes the user's question, relevant context, and screening test results (such as the ASQ-3), and then generates an appropriate response.
 
 \subsection{Component Implementation Details}
 \label{sec:Component Implementation Details}

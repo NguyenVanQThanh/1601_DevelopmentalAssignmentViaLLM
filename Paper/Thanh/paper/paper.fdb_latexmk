@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1751294186.99061 "d:/StudyUIT/KLTN/1601_DevelopmentalAssignmentViaLLM/Paper/Thanh/paper/paper.tex" "paper.pdf" "paper" 1751294188.75318 0
+["pdflatex"] 1751531162.46659 "d:/StudyUIT/KLTN/1601_DevelopmentalAssignmentViaLLM/Paper/Thanh/paper/paper.tex" "paper.pdf" "paper" 1751531165.34409 0
   "C:/Users/Admin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1750552377 89969 e95579120a3aa0ebc21d2737ca2ba701 ""
   "C:/Users/Admin/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1717653928 24263162 c597aebf14cfff09de0628a1ece8b069 ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
@@ -186,11 +186,11 @@
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/latex/vntex/t5enc.dfu" 1368738347 13949 387dd4fa58aea5f873839c93430fffed ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
   "bibliography/Figure/QLoRA.png" 1750574180 362649 9bc1d3140bb26708a84e5888610dec44 ""
-  "bibliography/Figure/system-architech.png" 1747208164 202025 34be1a8fe1570e44053d195bf39fe515 ""
-  "d:/StudyUIT/KLTN/1601_DevelopmentalAssignmentViaLLM/Paper/Thanh/paper/paper.tex" 1751294184 40656 d29efcb17446cd4a3b077c9a43d4dda3 ""
-  "paper.aux" 1751294188 6919 39f23b465c7c48b0d5557f67d7921832 "pdflatex"
-  "paper.out" 1751294188 405 c483d9efa6317430f2cbd61632fa594b "pdflatex"
-  "paper.tex" 1751294184 40656 d29efcb17446cd4a3b077c9a43d4dda3 ""
+  "bibliography/Figure/system-architech.png" 1751528512 459202 8c4774428cea59f044b0be4dd63daaee ""
+  "d:/StudyUIT/KLTN/1601_DevelopmentalAssignmentViaLLM/Paper/Thanh/paper/paper.tex" 1751531158 39701 4dee5237fe12a6fe26ff226eae5aeb3e ""
+  "paper.aux" 1751531164 6770 8f24b55cb63b1c7080050d9d037e75ef "pdflatex"
+  "paper.out" 1751531164 405 c483d9efa6317430f2cbd61632fa594b "pdflatex"
+  "paper.tex" 1751531158 39701 4dee5237fe12a6fe26ff226eae5aeb3e ""
   (generated)
   "paper.aux"
   "paper.log"
