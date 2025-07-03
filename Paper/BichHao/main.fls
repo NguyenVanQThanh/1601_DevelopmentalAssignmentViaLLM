@@ -136,6 +136,9 @@ INPUT C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex\latex\tools\longtable.sty
 INPUT C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex\latex\tools\longtable.sty
 INPUT C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex\latex\sttools\stfloats.sty
 INPUT C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex\latex\sttools\stfloats.sty
+INPUT .\main.aux
+INPUT .\main.aux
+INPUT main.aux
 OUTPUT main.aux
 INPUT C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\nguye\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
