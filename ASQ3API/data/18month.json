@@ -2,7 +2,7 @@
     "age": {
         "range": "17 tháng và 18 tháng 30 ngày",
         "range_in_days": {
-            "min_days": 517,
+            "min_days": 510,
             "max_days": 578
         },
         "title": "BỘ CÂU HỎI 18 THÁNG TUỔI"
@@ -26,7 +26,7 @@
                 },
                 {
                     "id": 3,
-                    "text": "Ngoài từ 'Mama' và 'Baba', con của bạn có nói thêm ít nhất 8 từ khác nữa không?",
+                    "text": "Ngoài từ 'mama' và 'baba', con của bạn có nói thêm ít nhất 8 từ khác nữa không?",
                     "options": ["Có", "Thỉnh Thoảng", "Chưa"],
                     "note": null,
                     "image_filepath": null

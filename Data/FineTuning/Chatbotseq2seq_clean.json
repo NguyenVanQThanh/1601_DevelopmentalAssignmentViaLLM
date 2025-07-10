@@ -1,0 +1,3238 @@
+[
+    {
+        "input": "Chào, cho mình hỏi?",
+        "output": "Chào bạn! Mình sẵn sàng hỗ trợ, bạn đang gặp khó khăn gì vậy?"
+      },
+      {
+        "input": "Xin chào, mình cần tư vấn một vài thông tin.",
+        "output": "Chào bạn, cứ thoải mái đặt câu hỏi nhé, mình sẽ cố gắng hỗ trợ chi tiết nhất có thể."
+      },
+      {
+        "input": "Hi, mình có vấn đề cần hỏi?",
+        "output": "Chào bạn! Bạn đang thắc mắc điều gì? Cứ hỏi, mình ở đây để giúp."
+      },
+      {
+        "input": "Chào bạn, tôi có thắc mắc muốn hỏi.",
+        "output": "Vâng, bạn cứ nêu câu hỏi cụ thể, mình sẽ tư vấn rõ ràng cho bạn."
+      },
+      {
+        "input": "Hello, tôi muốn hỏi về trường hợp của con.",
+        "output": "Chào bạn, bạn hãy mô tả chi tiết tình huống của bé để mình hỗ trợ đúng trọng tâm nhé."
+      },
+      {
+        "input": "Này, tôi vừa nhận kết quả và muốn hỏi thêm.",
+        "output": "Bạn có thể gửi mình nội dung kết quả hoặc điểm bạn chưa rõ để mình giải thích thêm nhé."
+      },
+      {
+        "input": "Xin chào ạ, em cần hỏi về kết quả bài test",
+        "output": "Chào bạn, bạn vui lòng cung cấp chi tiết kết quả để mình cùng phân tích rõ hơn nhé."
+      },
+      {
+        "input": "Tôi cần được hỗ trợ về ASQ-3.",
+        "output": "Bạn có thể cho mình biết kết quả hoặc điểm bạn đang phân vân trong bảng ASQ-3 để mình giải thích kỹ hơn."
+      },
+      {
+        "input": "Ê, cho tao xin tư vấn với.",
+        "output": "Chào bạn, mình luôn sẵn sàng hỗ trợ. Bạn cần tư vấn về điều gì vậy?"
+      },
+      {
+        "input": "Mình vừa làm bài test xong, giờ cần hỏi thêm",
+        "output": "Rất tốt! Bạn cứ nêu rõ kết quả hoặc điều bạn đang băn khoăn, mình sẽ giải đáp ngay."
+      },
+      {
+        "input": "Tôi cần tư vấn",
+        "output": "Bạn có thể chia sẻ cụ thể hơn để mình hỗ trợ đúng nội dung bạn đang cần nhé."
+      },
+      {
+        "input": "Cảm ơn bạn nhiều nhé.",
+        "output": "Rất vui được hỗ trợ bạn. Nếu cần thêm thông tin, cứ nhắn mình bất kỳ lúc nào!"
+      },
+      {
+        "input": "Thế là đủ rồi, cảm ơn bạn.",
+        "output": "Cảm ơn bạn đã tin tưởng! Chúc bạn và bé thật nhiều sức khỏe và niềm vui."
+      },
+      {
+        "input": "Vậy thôi, mình hỏi vậy thôi.",
+        "output": "Dạ vâng, nếu sau này bạn cần thêm gì cứ quay lại hỏi mình nhé!"
+      },
+      {
+        "input": "Tôi hiểu rồi, cảm ơn.",
+        "output": "Mình rất mừng khi bạn đã hiểu rõ. Nếu có gì chưa rõ, bạn cứ hỏi thêm nha."
+      },
+      {
+        "input": "Mình hỏi vậy là rõ rồi.",
+        "output": "Tốt quá! Nếu bạn cần thêm tài liệu hoặc hướng dẫn, mình sẵn sàng cung cấp."
+      },
+      {
+        "input": "Ok, cảm ơn bạn đã hỗ trợ.",
+        "output": "Rất vui được giúp bạn. Chúc bạn mọi điều tốt đẹp!"
+      },
+      {
+        "input": "Cảm ơn, mình sẽ theo dõi thêm.",
+        "output": "Bạn theo dõi thêm là rất đúng, nếu có gì bất thường, nên trao đổi với chuyên gia nhé!"
+      },
+      {
+        "input": "Tạm biệt!",
+        "output": "Chúc bạn một ngày tốt lành, hẹn gặp lại bạn!"
+      },
+      {
+        "input": "Oke",
+        "output": "Vâng ạ, nếu có gì bạn cần, mình luôn sẵn sàng!"
+      },
+      {
+        "input": "Cảm ơn",
+        "output": "Bạn luôn được chào đón, cảm ơn bạn đã tin tưởng!"
+      },
+      {
+        "input": "Bye",
+        "output": "Tạm biệt bạn, chúc bạn thật nhiều sức khỏe!"
+      },
+      {
+        "input": "Trẻ chưa sử dụng tốt ngôn ngữ",
+        "output": "Nếu trẻ chưa sử dụng ngôn ngữ hiệu quả so với lứa tuổi, bạn nên đưa bé đi đánh giá ngôn ngữ để xác định mức độ chậm nói hoặc rối loạn ngôn ngữ."
+      },
+      {
+        "input": "Trẻ chưa biết nói",
+        "output": "Nếu bé đã qua 18 tháng mà chưa biết nói từ đơn, bạn nên cho bé được sàng lọc ngôn ngữ và phát triển càng sớm càng tốt."
+      },
+      {
+        "input": "Trẻ nói được từ đơn",
+        "output": "Trẻ biết nói từ đơn là bước khởi đầu tốt, tuy nhiên sau 24 tháng trẻ nên biết ghép từ. Nếu chưa, bạn nên đánh giá sự phát triển ngôn ngữ cho bé."
+      },
+      {
+        "input": "Con chưa biết nói ở ... tháng",
+        "output": "Tùy vào độ tuổi cụ thể, nếu trẻ chưa đạt được các mốc ngôn ngữ phù hợp thì cần được đánh giá sớm bởi chuyên gia phát triển."
+      },
+      {
+        "input": "Trẻ bị chậm nói",
+        "output": "Khi trẻ có dấu hiệu chậm nói, bạn nên đưa bé đến cơ sở chuyên khoa như phục hồi chức năng hoặc tâm lý nhi để đánh giá và can thiệp kịp thời."
+      },
+      {
+        "input": "Trẻ 2 tuổi chưa biết nói có sao không?",
+        "output": "Trẻ 2 tuổi chưa nói được từ có nghĩa hoặc câu đơn là dấu hiệu cần được đánh giá sớm để loại trừ chậm phát triển ngôn ngữ hoặc các rối loạn phát triển."
+      },
+      {
+        "input": "Con tôi gần 2 tuổi rồi mà vẫn chưa nói được",
+        "output": "Bạn nên cho bé đi kiểm tra phát triển ngôn ngữ và sàng lọc nguy cơ rối loạn phát triển để được tư vấn can thiệp phù hợp."
+      },
+      {
+        "input": "Bé nhà tôi chỉ nói được vài từ, có phải bị chậm nói không?",
+        "output": "Nếu bé đã trên 2 tuổi nhưng vốn từ hạn chế và không biết ghép câu, đây có thể là dấu hiệu chậm nói – nên được đánh giá sớm."
+      },
+      {
+        "input": "Con chỉ nói được một từ rồi im, có bình thường không?",
+        "output": "Nếu bé không tiếp tục phát triển thêm vốn từ hoặc không có tiến bộ trong thời gian dài, nên cho bé được đánh giá ngôn ngữ."
+      },
+      {
+        "input": "Trẻ chỉ nói vài từ đơn giản mà không nối câu",
+        "output": "Sau 2 tuổi, trẻ nên biết nối câu đơn giản. Nếu không, đây là dấu hiệu chậm nói và nên được can thiệp ngôn ngữ sớm."
+      },
+      {
+        "input": "Trẻ ít tương tác với mọi người",
+        "output": "Trẻ ít giao tiếp có thể là dấu hiệu của rối loạn tương tác xã hội hoặc ngôn ngữ – bạn nên đưa bé đi đánh giá phát triển toàn diện."
+      },
+      {
+        "input": "Trẻ không nói, nghịch phá, kém tập trung",
+        "output": "Tổ hợp các biểu hiện này có thể gợi ý đến rối loạn phát triển. Nên đưa trẻ đến chuyên khoa để đánh giá đa lĩnh vực."
+      },
+      {
+        "input": "Trẻ có thể nghe và làm mọi thứ nhưng không chịu nói",
+        "output": "Trẻ nghe và hiểu nhưng không nói có thể gặp vấn đề diễn đạt hoặc rối loạn ngôn ngữ diễn đạt. Nên được chuyên gia kiểm tra."
+      },
+      {
+        "input": "Trẻ phát triển bình thường nhưng không nói và hay chỉ tay vào vật",
+        "output": "Việc trẻ chỉ tay thay vì nói có thể là dấu hiệu chậm nói hoặc phổ tự kỷ. Cần đánh giá ngôn ngữ và hành vi giao tiếp xã hội của trẻ."
+      },
+      {
+        "input": "Cách test phát triển cho con, trẻ",
+        "output": "Bạn có thể sử dụng các công cụ như ASQ-3, M-CHAT hoặc Denver II để sàng lọc phát triển trẻ nhỏ. Nên thực hiện định kỳ."
+      },
+      {
+        "input": "Trẻ hiểu ý tốt, sai được nhưng không nói, ít tương tác bằng ngôn ngữ, ít tương tác xã hội, không giao tiếp nhiều với bạn",
+        "output": "Các biểu hiện bạn mô tả phù hợp với dấu hiệu của rối loạn phổ tự kỷ hoặc chậm phát triển giao tiếp – nên sàng lọc sớm."
+      },
+      {
+        "input": "Tại sao bé không nói chuyện dù nghe hiểu rất tốt?",
+        "output": "Có thể trẻ gặp vấn đề về khả năng diễn đạt, rối loạn phát triển ngôn ngữ hoặc kỹ năng xã hội. Đánh giá chuyên sâu là cần thiết."
+      },
+      {
+        "input": "Bé không gọi ba mẹ dù đã hơn 18 tháng tuổi",
+        "output": "Sau 18 tháng mà trẻ chưa biết gọi ba mẹ là dấu hiệu bất thường. Cần đánh giá ngôn ngữ, nghe và tương tác xã hội của trẻ."
+      },
+      {
+        "input": "Trẻ gọi được tên ba mẹ nhưng ít nói",
+        "output": "Dù trẻ có thể gọi tên ba mẹ, việc ít nói vẫn là dấu hiệu cần theo dõi để đánh giá khả năng giao tiếp và phát triển ngôn ngữ."
+      },
+      {
+        "input": "Trẻ có nói nhưng không rõ lời",
+        "output": "Trẻ phát âm không rõ có thể do yếu tố phát âm, cấu trúc miệng hoặc rối loạn ngôn ngữ – nên kiểm tra sớm để hỗ trợ đúng cách."
+      },
+      {
+        "input": "Trẻ nói nhiều nhưng không ai hiểu gì",
+        "output": "Nếu lời nói không rõ ràng hoặc không có ý nghĩa, đây có thể là biểu hiện rối loạn phát âm hoặc ngôn ngữ, cần được đánh giá."
+      },
+      {
+        "input": "Bé chỉ nói líu ríu, không rõ chữ",
+        "output": "Trẻ nói líu ríu, phát âm mơ hồ có thể đang gặp khó khăn trong điều phối âm thanh – nên được kiểm tra chức năng nói và ngôn ngữ."
+      },
+      {
+        "input": "Trẻ nói ngọng",
+        "output": "Nói ngọng kéo dài sau 4 tuổi có thể là rối loạn phát âm, bạn nên cho bé khám chuyên khoa ngôn ngữ trị liệu."
+      },
+      {
+        "input": "Trẻ nói nhại lại lời người khác",
+        "output": "Việc trẻ lặp lại lời nói người khác thường xuyên có thể là dấu hiệu của echolalia – cần được đánh giá ngôn ngữ và tương tác xã hội."
+      },
+      {
+        "input": "Trẻ nói được nhưng không sử dụng đúng ngữ cảnh",
+        "output": "Nếu trẻ dùng lời không phù hợp hoàn cảnh, nên kiểm tra khả năng sử dụng ngôn ngữ chức năng và kỹ năng giao tiếp xã hội."
+      },
+      {
+        "input": "Trẻ nói chuyện không đúng hoàn cảnh",
+        "output": "Trẻ nói nội dung không phù hợp tình huống có thể đang gặp khó khăn về ngữ dụng ngôn ngữ – nên được đánh giá sớm."
+      },
+      {
+        "input": "Trẻ hay lặp lại lời người khác",
+        "output": "Lặp lại lời người khác có thể là hành vi bắt chước máy móc, nên đánh giá thêm về phát triển ngôn ngữ và tương tác xã hội của trẻ."
+      },
+      {
+        "input": "Trẻ nói tốt nhưng không trả lời được câu hỏi",
+        "output": "Trẻ có thể nói nhưng không phản hồi câu hỏi cho thấy có thể khó khăn trong xử lý ngôn ngữ hoặc thiếu kỹ năng tương tác."
+      },
+      {
+        "input": "Trẻ không thể trả lời câu hỏi",
+        "output": "Nếu trẻ không trả lời được dù nghe rõ, cần đánh giá khả năng hiểu và diễn đạt ngôn ngữ."
+      },
+      {
+        "input": "Trẻ không biết đặt câu hỏi",
+        "output": "Việc không đặt câu hỏi có thể cho thấy trẻ thiếu kỹ năng giao tiếp chủ động – đây là điểm cần được can thiệp."
+      },
+      {
+        "input": "Trẻ không đặt câu hỏi",
+        "output": "Nếu trẻ không thể hiện thắc mắc hay nhu cầu qua câu hỏi, bạn nên theo dõi và hỗ trợ phát triển ngôn ngữ diễn đạt."
+      },
+      {
+        "input": "Trẻ không biết cách đặt câu hỏi",
+        "output": "Thiếu khả năng đặt câu hỏi là biểu hiện của chậm phát triển ngôn ngữ chủ động, cần được luyện tập với chuyên gia."
+      },
+      {
+        "input": "Trẻ không hỏi khi cần giúp đỡ",
+        "output": "Khi trẻ không biết nhờ người khác hỗ trợ bằng lời nói, đây là dấu hiệu chậm phát triển giao tiếp chức năng."
+      },
+      {
+        "input": "Trẻ không phản ứng khi được hỏi",
+        "output": "Nếu trẻ không phản hồi câu hỏi, có thể do chưa hiểu nội dung hoặc thiếu kỹ năng tương tác xã hội."
+      },
+      {
+        "input": "Trẻ không đáp lại khi người khác hỏi",
+        "output": "Trẻ không trả lời khi được hỏi là biểu hiện nên theo dõi để kiểm tra khả năng hiểu lời và phản xạ giao tiếp."
+      },
+      {
+        "input": "Trẻ không biết trả lời người khác",
+        "output": "Nếu trẻ không biết trả lời trong tình huống đối thoại, có thể là thiếu hụt kỹ năng đối đáp – nên can thiệp ngôn ngữ."
+      },
+      {
+        "input": "Trẻ không phản hồi khi được hỏi",
+        "output": "Trẻ không phản hồi là dấu hiệu cần sàng lọc kỹ về ngôn ngữ, thính giác và khả năng chú ý."
+      },
+      {
+        "input": "Trẻ không trả lời được câu hỏi đơn giản",
+        "output": "Nếu trẻ không trả lời được các câu như 'con tên gì?', 'mẹ đâu?', nên kiểm tra phát triển ngôn ngữ và kỹ năng hiểu lời."
+      },
+      {
+        "input": "Trẻ không biết trò chuyện qua lại",
+        "output": "Trẻ không duy trì được đối thoại qua lại là dấu hiệu hạn chế về kỹ năng giao tiếp – cần được can thiệp sớm."
+      },
+      {
+        "input": "Trẻ không biết bắt đầu cuộc trò chuyện",
+        "output": "Nếu trẻ không biết mở lời hay khởi xướng giao tiếp, nên hỗ trợ phát triển ngôn ngữ chủ động và tương tác xã hội."
+      },
+      {
+        "input": "Trẻ không duy trì được cuộc trò chuyện",
+        "output": "Trẻ không giữ được cuộc nói chuyện có thể do vốn từ kém hoặc thiếu kỹ năng ngữ dụng – cần được luyện tập thêm."
+      },
+      {
+        "input": "Trẻ không có nhu cầu nói chuyện",
+        "output": "Thiếu nhu cầu giao tiếp bằng lời có thể là dấu hiệu rối loạn phát triển ngôn ngữ hoặc xã hội – nên đánh giá càng sớm càng tốt."
+      },
+      {
+        "input": "Trẻ không chủ động giao tiếp",
+        "output": "Nếu trẻ không tự khởi xướng giao tiếp, có thể đang gặp khó khăn trong ngôn ngữ diễn đạt hoặc kỹ năng xã hội."
+      },
+      {
+        "input": "Trẻ không nói chuyện với người lạ",
+        "output": "Nếu trẻ chỉ né tránh người lạ nhưng giao tiếp tốt với người thân, có thể là nhút nhát. Nếu tránh hoàn toàn, cần đánh giá thêm về tương tác xã hội."
+      },
+      {
+        "input": "Trẻ không trả lời khi người lạ hỏi",
+        "output": "Không trả lời người lạ có thể là do lo âu xã hội hoặc khó khăn trong kỹ năng thích nghi giao tiếp – cần quan sát thêm."
+      },
+      {
+        "input": "Trẻ không phản ứng khi người lạ bắt chuyện",
+        "output": "Nếu trẻ không có phản ứng giao tiếp với người lạ, đây có thể là dấu hiệu chậm phát triển kỹ năng xã hội."
+      },
+      {
+        "input": "Trẻ không cười khi người khác nói chuyện",
+        "output": "Trẻ không cười đáp lại trong giao tiếp có thể thiếu phản xạ xã hội hoặc khả năng cảm nhận cảm xúc – nên sàng lọc rối loạn phát triển."
+      },
+      {
+        "input": "Trẻ không có biểu cảm khi giao tiếp",
+        "output": "Thiếu biểu cảm khi giao tiếp là dấu hiệu quan trọng trong sàng lọc rối loạn phổ tự kỷ hoặc chậm phát triển cảm xúc – xã hội."
+      },
+      {
+        "input": "Trẻ không thay đổi ngữ điệu khi nói",
+        "output": "Trẻ nói đều giọng, thiếu lên xuống là biểu hiện chậm điều tiết giọng nói – thường gặp trong rối loạn ngữ dụng hoặc phổ tự kỷ."
+      },
+      {
+        "input": "Trẻ nói giọng đều đều, không có cảm xúc",
+        "output": "Giọng nói đều đều, thiếu biểu cảm là một trong các dấu hiệu sớm của rối loạn phát triển xã hội hoặc ngôn ngữ."
+      },
+      {
+        "input": "Trẻ nói giọng lạ",
+        "output": "Trẻ nói với âm sắc lạ hoặc không tự nhiên có thể là biểu hiện bất thường trong kiểm soát phát âm hoặc giao tiếp – nên đánh giá chuyên sâu."
+      },
+      {
+        "input": "Trẻ nói nhanh, nói lắp",
+        "output": "Nói quá nhanh hoặc nói lắp là dấu hiệu cần theo dõi, đặc biệt nếu kéo dài – có thể liên quan đến lo âu hoặc rối loạn ngôn ngữ."
+      },
+      {
+        "input": "Trẻ nói như hát",
+        "output": "Nếu trẻ nói với nhịp điệu như hát hoặc ngân dài bất thường, đây có thể là biểu hiện của rối loạn ngữ điệu trong phổ tự kỷ."
+      },
+      {
+        "input": "Trẻ không hiểu người khác đang nói gì",
+        "output": "Nếu trẻ không hiểu lời nói phù hợp độ tuổi, cần đánh giá ngôn ngữ tiếp nhận và khả năng tập trung của trẻ."
+      },
+      {
+        "input": "Trẻ không nghe lời",
+        "output": "Trẻ không nghe lời có thể do không hiểu yêu cầu, thiếu chú ý hoặc chống đối. Cần phân tích rõ nguyên nhân để can thiệp đúng."
+      },
+      {
+        "input": "Trẻ không làm theo hướng dẫn",
+        "output": "Không thực hiện theo chỉ dẫn đơn giản là dấu hiệu cần theo dõi – có thể liên quan đến ngôn ngữ tiếp nhận hoặc chú ý."
+      },
+      {
+        "input": "Trẻ không tuân theo quy tắc",
+        "output": "Nếu trẻ không hiểu hoặc không tuân thủ quy tắc sinh hoạt, có thể gặp khó khăn trong kiểm soát hành vi hoặc chậm phát triển nhận thức."
+      },
+      {
+        "input": "Trẻ làm mọi thứ theo ý mình",
+        "output": "Trẻ không hợp tác, làm mọi thứ theo ý mình có thể là biểu hiện của khó điều chỉnh hành vi hoặc rối loạn phát triển hành vi – cần được đánh giá."
+      },
+      {
+        "input": "Trẻ không biết chia sẻ đồ chơi",
+        "output": "Nếu trẻ không chia sẻ đồ chơi, có thể là do kỹ năng xã hội chưa phát triển hoặc thiếu tương tác – cần hỗ trợ trẻ trong hoạt động nhóm."
+      },
+      {
+        "input": "Trẻ không nhường đồ chơi cho bạn",
+        "output": "Không biết nhường đồ chơi cho bạn có thể cho thấy trẻ chưa học được khái niệm chia sẻ – nên hướng dẫn qua chơi có giám sát."
+      },
+      {
+        "input": "Trẻ không thích chơi chung với bạn",
+        "output": "Trẻ tránh chơi chung với bạn bè có thể là biểu hiện của lo âu xã hội, chậm kỹ năng xã hội hoặc rối loạn phát triển – nên đánh giá thêm."
+      },
+      {
+        "input": "Trẻ chỉ chơi một mình",
+        "output": "Thường xuyên chơi một mình, không mời gọi ai chơi cùng có thể là dấu hiệu thiếu tương tác – nên được sàng lọc nguy cơ rối loạn phát triển."
+      },
+      {
+        "input": "Trẻ không mời người khác chơi cùng",
+        "output": "Không khởi xướng chơi với người khác là biểu hiện thiếu chủ động giao tiếp xã hội – cần hướng dẫn trẻ phát triển kỹ năng này."
+      },
+      {
+        "input": "Trẻ không tương tác khi chơi",
+        "output": "Chơi mà không giao tiếp hay nhìn người khác là dấu hiệu hạn chế kỹ năng xã hội – cần được hỗ trợ qua hoạt động nhóm nhỏ."
+      },
+      {
+        "input": "Trẻ không hợp tác khi chơi",
+        "output": "Không hợp tác, không chia sẻ vai trò khi chơi cùng bạn là biểu hiện kỹ năng chơi nhóm chưa phát triển – cần hướng dẫn cụ thể."
+      },
+      {
+        "input": "Trẻ không chơi theo nhóm",
+        "output": "Nếu trẻ tránh xa nhóm chơi hoặc không tham gia khi được mời, đây có thể là khó khăn tương tác xã hội hoặc sợ tiếp xúc – cần theo dõi kỹ."
+      },
+      {
+        "input": "Trẻ không biết chơi luân phiên",
+        "output": "Không hiểu khái niệm thay phiên khi chơi có thể là dấu hiệu trẻ chưa đạt mốc phát triển kỹ năng chơi xã hội – nên tập luyện qua trò chơi cụ thể."
+      },
+      {
+        "input": "Trẻ không chờ đến lượt",
+        "output": "Trẻ không biết chờ lượt mình trong trò chơi cho thấy khả năng điều chỉnh hành vi và kiểm soát cảm xúc còn yếu – cần rèn luyện thêm."
+      },
+      {
+        "input": "Trẻ không làm theo quy tắc chơi",
+        "output": "Không tuân theo luật chơi có thể là do trẻ chưa hiểu hoặc khó kiểm soát bản thân – cần can thiệp kỹ năng chơi có hướng dẫn."
+      },
+      {
+        "input": "Trẻ không phản hồi khi người khác nói chuyện",
+        "output": "Không đáp lại khi người khác nói chuyện có thể là biểu hiện của rối loạn giao tiếp – nên sàng lọc phát triển toàn diện."
+      },
+      {
+        "input": "Trẻ không biết nói lời chào",
+        "output": "Không chào hỏi người khác là hành vi xã hội chưa đạt mốc – cần dạy trẻ chào qua ngữ cảnh và mô phỏng hành vi."
+      },
+      {
+        "input": "Trẻ không chào hỏi người khác",
+        "output": "Thiếu hành vi chào hỏi cho thấy trẻ chưa học kỹ năng xã hội cơ bản – nên luyện qua trò chơi đóng vai hoặc hướng dẫn mô hình."
+      },
+      {
+        "input": "Trẻ không nói lời cảm ơn",
+        "output": "Không biết cảm ơn là biểu hiện của kỹ năng ứng xử xã hội chưa phát triển – nên dạy thông qua tình huống thực tế."
+      },
+      {
+        "input": "Trẻ không biết nói xin lỗi",
+        "output": "Trẻ không xin lỗi sau khi làm sai có thể do chưa hiểu khái niệm hoặc không nhận ra cảm xúc người khác – cần can thiệp qua mô phỏng."
+      },
+      {
+        "input": "Trẻ không thể hiện phép lịch sự",
+        "output": "Thiếu phép lịch sự như chào hỏi, cảm ơn, xin lỗi... là dấu hiệu chậm kỹ năng xã hội – cần hỗ trợ qua mô hình hóa hành vi."
+      },
+      {
+        "input": "Trẻ không có hành vi xã hội phù hợp",
+        "output": "Trẻ có thể gặp khó khăn trong việc hiểu và thực hiện các hành vi xã hội phù hợp – nên đánh giá khả năng giao tiếp xã hội."
+      },
+      {
+        "input": "Trẻ không phản ứng khi người khác khen",
+        "output": "Trẻ không phản ứng khi được khen có thể là dấu hiệu chậm khả năng phản xạ cảm xúc hoặc khó khăn trong nhận biết cảm xúc xã hội."
+      },
+      {
+        "input": "Trẻ không biết cảm ơn khi được giúp đỡ",
+        "output": "Không biết cảm ơn khi được hỗ trợ là kỹ năng xã hội cơ bản cần được hướng dẫn, đặc biệt thông qua hành vi mẫu từ người lớn."
+      },
+      {
+        "input": "Trẻ không dùng cử chỉ để giao tiếp",
+        "output": "Trẻ không dùng cử chỉ như chỉ tay, ra hiệu là dấu hiệu quan trọng cho thấy kỹ năng giao tiếp phi ngôn ngữ đang chậm phát triển."
+      },
+      {
+        "input": "Trẻ không gật đầu hay lắc đầu",
+        "output": "Không gật/lắc đầu thể hiện trẻ chưa sử dụng cử chỉ giao tiếp – nên khuyến khích trẻ qua trò chơi tương tác đơn giản."
+      },
+      {
+        "input": "Trẻ không dùng nét mặt để giao tiếp",
+        "output": "Không thể hiện cảm xúc qua nét mặt là biểu hiện thiếu khả năng điều chỉnh cảm xúc hoặc rối loạn tương tác – nên được đánh giá chuyên sâu."
+      },
+      {
+        "input": "Trẻ không vẫy tay chào",
+        "output": "Không biết vẫy tay chào sau 12–15 tháng là dấu hiệu sớm cần đánh giá phát triển kỹ năng phi ngôn ngữ."
+      },
+      {
+        "input": "Trẻ không dùng ánh mắt để giao tiếp",
+        "output": "Không có giao tiếp bằng mắt là chỉ số đặc trưng trong sàng lọc rối loạn phổ tự kỷ – nên được đánh giá càng sớm càng tốt."
+      },
+      {
+        "input": "Trẻ không quay đầu khi gọi tên",
+        "output": "Nếu sau 12 tháng trẻ không phản ứng khi gọi tên, cần kiểm tra thính lực và khả năng tương tác xã hội."
+      },
+      {
+        "input": "Trẻ không trả lời khi được gọi tên",
+        "output": "Không phản hồi khi gọi tên là dấu hiệu quan trọng trong sàng lọc rối loạn phát triển – cần sàng lọc ngay cả khi trẻ nghe tốt."
+      },
+      {
+        "input": "Trẻ không nhìn người khác khi giao tiếp",
+        "output": "Không nhìn vào người đối thoại là biểu hiện thiếu kết nối xã hội – cần luyện tập giao tiếp ánh mắt từ sớm."
+      },
+      {
+        "input": "Trẻ không có giao tiếp bằng mắt",
+        "output": "Trẻ không dùng ánh mắt để thể hiện nhu cầu hay phản hồi là chỉ số điển hình trong rối loạn phổ tự kỷ."
+      },
+      {
+        "input": "Trẻ không chỉ tay vào vật",
+        "output": "Trẻ không dùng hành vi chỉ tay để biểu thị nhu cầu hoặc chia sẻ là dấu hiệu chậm phát triển kỹ năng phi ngôn ngữ."
+      },
+      {
+        "input": "Trẻ không đưa tay ra hiệu khi cần giúp đỡ",
+        "output": "Không ra hiệu khi cần hỗ trợ cho thấy trẻ chưa phát triển kỹ năng giao tiếp chức năng – nên luyện tập trong ngữ cảnh cụ thể."
+      },
+      {
+        "input": "Trẻ không nhờ người khác giúp đỡ",
+        "output": "Không biết nhờ giúp đỡ là dấu hiệu trẻ chưa hiểu được giao tiếp hai chiều – cần can thiệp qua hành vi mô phỏng."
+      },
+      {
+        "input": "Trẻ không chỉ tay để yêu cầu",
+        "output": "Trẻ không dùng chỉ tay để đòi hỏi là hành vi cần có ở trẻ 12–15 tháng – nếu thiếu, nên đánh giá ngôn ngữ và tương tác."
+      },
+      {
+        "input": "Trẻ không kéo tay người khác để nhờ giúp",
+        "output": "Không kéo tay người khác để thể hiện nhu cầu là biểu hiện trẻ thiếu chủ động trong giao tiếp phi ngôn ngữ."
+      },
+      {
+        "input": "Trẻ không biết gọi người khác",
+        "output": "Nếu trẻ không biết gọi người thân bằng tên hay vai trò (mẹ, ba...), đây là dấu hiệu cần đánh giá phát triển ngôn ngữ."
+      },
+      {
+        "input": "Trẻ không biết dùng lời để gọi người khác",
+        "output": "Không gọi người khác bằng lời cho thấy hạn chế trong phát triển ngôn ngữ chủ động – nên can thiệp càng sớm càng tốt."
+      },
+      {
+        "input": "Trẻ không nói khi đói hoặc khát",
+        "output": "Trẻ không dùng lời nói để diễn đạt nhu cầu cơ bản là dấu hiệu chậm phát triển giao tiếp chức năng – nên được đánh giá toàn diện."
+      },
+      {
+        "input": "Trẻ không báo khi cần đi vệ sinh",
+        "output": "Không thông báo khi cần đi vệ sinh cho thấy trẻ chưa kiểm soát hành vi hoặc chưa phát triển ngôn ngữ yêu cầu – nên được hỗ trợ luyện tập."
+      },
+      {
+        "input": "Trẻ không bày tỏ cảm xúc bằng lời",
+        "output": "Nếu trẻ không diễn đạt cảm xúc như vui, buồn bằng lời nói, có thể do thiếu vốn từ hoặc khó khăn trong giao tiếp cảm xúc – nên can thiệp ngôn ngữ cảm xúc."
+      },
+      {
+        "input": "Trẻ không nói lời yêu thương với người thân",
+        "output": "Không thể hiện tình cảm bằng lời có thể do trẻ chưa được hướng dẫn hoặc thiếu kết nối xã hội – cần hỗ trợ phát triển cảm xúc và ngôn ngữ tình cảm."
+      },
+      {
+        "input": "Trẻ không biết xưng hô với người khác",
+        "output": "Nếu trẻ không biết gọi người khác bằng danh xưng phù hợp như 'ông', 'bà', 'cô', 'chú'... thì có thể kỹ năng ngôn ngữ xã hội của trẻ đang chậm phát triển."
+      },
+      {
+        "input": "Trẻ không nói tên của mình",
+        "output": "Trẻ trên 2 tuổi chưa nói được tên của bản thân là dấu hiệu cần theo dõi về ngôn ngữ diễn đạt và khả năng nhận diện bản thân."
+      },
+      {
+        "input": "Trẻ không phản ứng khi gọi tên",
+        "output": "Không quay đầu hoặc phản hồi khi được gọi tên là dấu hiệu cảnh báo – cần đánh giá thính lực và tương tác xã hội của trẻ."
+      },
+      {
+        "input": "Trẻ không biết tên người thân",
+        "output": "Nếu trẻ không nhận ra và gọi đúng tên những người thân quen thì có thể trẻ đang gặp khó khăn trong ghi nhớ và sử dụng từ ngữ phù hợp."
+      },
+      {
+        "input": "Trẻ không phân biệt người quen và người lạ",
+        "output": "Trẻ không thể phân biệt ai là người thân, ai là người lạ là một trong những dấu hiệu chậm phát triển nhận thức xã hội cần được đánh giá."
+      },
+      {
+        "input": "Trẻ không nhận ra người thân trong gia đình",
+        "output": "Không nhận diện được người thân là dấu hiệu cần quan tâm về phát triển nhận thức và khả năng ghi nhớ – nên kiểm tra thêm về ngôn ngữ và trí tuệ."
+      },
+      {
+        "input": "Trẻ không nhớ tên bạn bè",
+        "output": "Không nhớ tên bạn bè có thể là biểu hiện của chậm phát triển trí nhớ ngôn ngữ hoặc ít tương tác xã hội – cần được theo dõi thêm."
+      },
+      {
+        "input": "Trẻ không nhớ tên đồ vật quen thuộc",
+        "output": "Nếu trẻ không thể gọi tên đồ vật sử dụng hằng ngày, có thể là biểu hiện rối loạn ngôn ngữ diễn đạt hoặc nhận diện từ ngữ."
+      },
+      {
+        "input": "Trẻ không biết gọi tên đồ vật",
+        "output": "Không biết gọi tên đồ vật là dấu hiệu quan trọng của chậm phát triển ngôn ngữ – cần đánh giá ngôn ngữ diễn đạt sớm."
+      },
+      {
+        "input": "Trẻ không thể học từ mới",
+        "output": "Khả năng học từ mới rất chậm là biểu hiện chậm ngôn ngữ diễn đạt và tiếp nhận – nên can thiệp ngôn ngữ càng sớm càng tốt."
+      },
+      {
+        "input": "Trẻ học từ mới rất chậm",
+        "output": "Tốc độ học từ mới thấp hơn bình thường có thể là dấu hiệu rối loạn ngôn ngữ tiếp nhận hoặc giảm tương tác môi trường."
+      },
+      {
+        "input": "Trẻ không nhớ được từ mới đã học",
+        "output": "Nếu trẻ không ghi nhớ từ mới qua các tình huống hàng ngày, cần hỗ trợ trẻ bằng cách lặp lại và thực hành ngôn ngữ nhiều hơn."
+      },
+      {
+        "input": "Trẻ không dùng từ đúng lúc",
+        "output": "Trẻ sử dụng từ không đúng ngữ cảnh hoặc không phù hợp tình huống là dấu hiệu cần đánh giá khả năng ngữ dụng ngôn ngữ."
+      },
+      {
+        "input": "Trẻ dùng từ sai ngữ cảnh",
+        "output": "Nếu trẻ dùng từ không đúng lúc, không đúng nghĩa thì có thể là biểu hiện rối loạn ngôn ngữ ngữ dụng hoặc nhận thức."
+      },
+      {
+        "input": "Trẻ không biết sử dụng đại từ nhân xưng",
+        "output": "Không biết dùng các đại từ như 'con', 'mẹ', 'ba', 'tôi', 'bạn' là dấu hiệu chậm phát triển ngôn ngữ xã hội cần can thiệp sớm."
+      },
+      {
+        "input": "Trẻ dùng sai đại từ xưng hô",
+        "output": "Trẻ gọi sai đại từ xưng hô (ví dụ gọi mẹ là ba) là dấu hiệu cần theo dõi về ngôn ngữ biểu đạt và nhận thức xã hội."
+      },
+      {
+        "input": "Trẻ không biết gọi mình là con",
+        "output": "Trẻ không biết tự xưng là 'con' khi nói chuyện với người lớn là một thiếu hụt trong kỹ năng ngôn ngữ xã hội – cần được luyện tập."
+      },
+      {
+        "input": "Trẻ không biết gọi mẹ là mẹ",
+        "output": "Trẻ không gọi đúng tên vai trò của người thân là dấu hiệu cần kiểm tra khả năng học ngôn ngữ và liên kết từ – khái niệm."
+      },
+      {
+        "input": "Trẻ không phân biệt “con”, “mẹ”, “ba”",
+        "output": "Nếu trẻ không hiểu hoặc không phân biệt được các đại từ cơ bản này, đây là biểu hiện rõ của chậm ngôn ngữ hoặc phát triển nhận thức."
+      },
+      {
+        "input": "Trẻ không biết cách diễn đạt mong muốn",
+        "output": "Trẻ không thể nói ra điều mình muốn là dấu hiệu của chậm phát triển ngôn ngữ diễn đạt – cần được hỗ trợ qua thực hành lặp lại và hướng dẫn giao tiếp."
+      },
+      {
+        "input": "Trẻ không biết yêu cầu người khác làm gì",
+        "output": "Không thể đưa ra yêu cầu bằng lời là biểu hiện kỹ năng ngôn ngữ chức năng chưa phát triển – cần luyện tập qua ngữ cảnh thực tế."
+      },
+      {
+        "input": "Trẻ không thể nói ra nhu cầu cá nhân",
+        "output": "Không diễn đạt được các nhu cầu cơ bản như ăn, uống, vệ sinh là một chỉ số cần can thiệp sớm về ngôn ngữ chức năng."
+      },
+      {
+        "input": "Trẻ không biết diễn đạt cảm xúc",
+        "output": "Trẻ không nói được mình đang vui hay buồn là dấu hiệu chưa phát triển ngôn ngữ cảm xúc – cần dạy trẻ nhận biết và gọi tên cảm xúc."
+      },
+      {
+        "input": "Trẻ không diễn đạt được suy nghĩ của mình",
+        "output": "Trẻ không thể nói ra suy nghĩ hoặc mô tả điều mình nghĩ là biểu hiện chậm phát triển tư duy ngôn ngữ – cần được luyện tập có hướng dẫn."
+      },
+      {
+        "input": "Trẻ nói không rõ ràng, người khác không hiểu",
+        "output": "Nếu lời nói không rõ ràng, âm mơ hồ hoặc cấu trúc câu rối loạn thì cần đánh giá khả năng phát âm và ngôn ngữ diễn đạt."
+      },
+      {
+        "input": "Trẻ dùng từ ngữ không phù hợp tuổi",
+        "output": "Trẻ sử dụng từ ngữ chưa phù hợp với lứa tuổi có thể do phát triển ngôn ngữ bị lệch pha – cần được hướng dẫn sử dụng từ đúng ngữ cảnh."
+      },
+      {
+        "input": "Trẻ nói những câu vô nghĩa",
+        "output": "Nếu trẻ thường nói câu không rõ nội dung hoặc không liên quan ngữ cảnh, cần đánh giá rối loạn ngôn ngữ và chú ý đến khả năng tư duy."
+      },
+      {
+        "input": "Trẻ nói nhảm",
+        "output": "Nói nhảm lặp lại nhiều lần mà không theo nội dung giao tiếp có thể là hành vi tự kích thích hoặc biểu hiện rối loạn phát triển – nên được đánh giá."
+      },
+      {
+        "input": "Trẻ lặp lại từ vô nghĩa",
+        "output": "Trẻ thường xuyên lặp lại từ không có nghĩa hoặc âm vô nghĩa là dấu hiệu cần can thiệp ngôn ngữ sớm để tránh kéo dài thành thói quen."
+      },
+      {
+        "input": "Trẻ phát ra âm thanh lạ thay vì nói",
+        "output": "Nếu trẻ thay vì nói lại phát ra âm thanh không rõ nghĩa thì cần kiểm tra khả năng phát âm, ngôn ngữ và loại trừ rối loạn phổ tự kỷ."
+      },
+      {
+        "input": "Trẻ chỉ phát âm vài âm tiết",
+        "output": "Sau 18 tháng mà trẻ chỉ phát âm được vài âm đơn lẻ thì có khả năng chậm phát triển ngôn ngữ – cần được đánh giá toàn diện."
+      },
+      {
+        "input": "Trẻ chỉ bập bẹ mà không nói thành lời",
+        "output": "Chỉ bập bẹ mà không có từ rõ nghĩa sau 2 tuổi là dấu hiệu chậm nói – cần sàng lọc và can thiệp càng sớm càng tốt."
+      },
+      {
+        "input": "Trẻ không thể ghép từ thành câu",
+        "output": "Không thể nối từ thành câu thể hiện trẻ chưa phát triển ngôn ngữ kết cấu – nên luyện tập ghép từ qua ngữ cảnh thực tế."
+      },
+      {
+        "input": "Trẻ chỉ nói được từ đơn",
+        "output": "Nếu sau 2 tuổi mà trẻ vẫn chỉ dùng từ đơn thì có thể là biểu hiện chậm phát triển ngôn ngữ diễn đạt – nên can thiệp sớm."
+      },
+      {
+        "input": "Trẻ không biết nối câu",
+        "output": "Không nối được nhiều từ thành câu là biểu hiện rõ của hạn chế cấu trúc ngữ pháp – cần tập luyện qua mẫu câu ngắn đơn giản."
+      },
+      {
+        "input": "Trẻ không biết đặt câu",
+        "output": "Không biết đặt câu hỏi hay câu đơn giản là dấu hiệu trẻ chưa phát triển kỹ năng ngữ pháp – nên can thiệp ngôn ngữ phù hợp."
+      },
+      {
+        "input": "Trẻ nói không có chủ ngữ vị ngữ rõ ràng",
+        "output": "Nếu trẻ nói câu không đủ thành phần chủ vị thì có thể kỹ năng ngữ pháp chưa hoàn thiện – cần được luyện tập ngữ pháp cơ bản."
+      },
+      {
+        "input": "Trẻ không dùng câu để kể chuyện",
+        "output": "Trẻ không thể kể chuyện bằng câu hoàn chỉnh là dấu hiệu kỹ năng ngôn ngữ tự sự chưa phát triển – cần được luyện qua truyện tranh và kể mẫu."
+      },
+      {
+        "input": "Trẻ không biết kể lại sự việc",
+        "output": "Nếu trẻ không thể kể lại điều vừa xảy ra là dấu hiệu chậm ngôn ngữ tự sự và ghi nhớ – cần luyện tập qua hoạt động thực tế."
+      },
+      {
+        "input": "Trẻ không biết kể về bản thân",
+        "output": "Không thể kể về tên, tuổi, sở thích là dấu hiệu thiếu kỹ năng giao tiếp cá nhân – nên rèn luyện từ các mẫu câu giới thiệu bản thân đơn giản."
+      },
+      {
+        "input": "Trẻ không biết nói về sở thích của mình",
+        "output": "Nếu trẻ không thể nói mình thích gì, có thể kỹ năng ngôn ngữ diễn đạt và biểu đạt cảm xúc chưa phát triển – cần luyện tập qua câu hỏi đơn giản."
+      },
+      {
+        "input": "Trẻ không kể được những việc mình đã làm",
+        "output": "Không thể kể lại hành động bản thân là dấu hiệu chậm phát triển ngôn ngữ tự thuật – nên luyện tập kể chuyện theo hình ảnh hoặc tranh."
+      },
+      {
+        "input": "Trẻ không biết mô tả người khác",
+        "output": "Không mô tả được người quen (cao, tóc dài...) cho thấy trẻ hạn chế vốn từ và kỹ năng quan sát – nên luyện qua hoạt động nhận diện."
+      },
+      {
+        "input": "Trẻ không mô tả được sự vật xung quanh",
+        "output": "Trẻ không nói được đặc điểm đồ vật như màu, kích thước là dấu hiệu vốn từ và khả năng biểu đạt ngôn ngữ còn yếu – cần hỗ trợ."
+      },
+      {
+        "input": "Trẻ không nói về các sự kiện hàng ngày",
+        "output": "Nếu trẻ không kể lại sinh hoạt hằng ngày như ăn, chơi, đi học, có thể là biểu hiện của chậm phát triển ngôn ngữ chức năng – nên can thiệp sớm."
+      },
+      {
+        "input": "Trẻ không kể lại những gì diễn ra ở lớp học",
+        "output": "Không kể chuyện ở lớp có thể do trẻ thiếu kỹ năng ghi nhớ, ngôn ngữ hoặc sự gắn kết với môi trường học – cần được quan sát thêm."
+      },
+      {
+        "input": "Trẻ không chia sẻ chuyện ở nhà với cô giáo",
+        "output": "Trẻ không chia sẻ thông tin với giáo viên có thể là biểu hiện rối loạn giao tiếp xã hội hoặc thiếu kỹ năng biểu đạt – nên đánh giá ngôn ngữ tự thuật."
+      },
+      {
+        "input": "Trẻ không nhớ gì để kể lại",
+        "output": "Trẻ không nhớ để kể chuyện có thể gặp vấn đề trong trí nhớ ngắn hạn hoặc thiếu kỹ năng kể chuyện – cần luyện kể theo chuỗi hình ảnh."
+      },
+      {
+        "input": "Trẻ không biết diễn đạt nguyên nhân – kết quả",
+        "output": "Không nói được 'vì sao lại...' hoặc 'nên...' là dấu hiệu chậm tư duy logic và ngôn ngữ giải thích – cần luyện tập từ cấu trúc đơn giản."
+      },
+      {
+        "input": "Trẻ không biết dùng từ để giải thích",
+        "output": "Nếu trẻ không thể nói vì sao điều gì xảy ra, nên tập cho trẻ trả lời theo mẫu giải thích ngắn, dần nâng cao."
+      },
+      {
+        "input": "Trẻ không dùng từ nối như “vì”, “nên”",
+        "output": "Thiếu từ nối trong câu khiến lời nói thiếu logic – cần can thiệp ngữ pháp và luyện tập thông qua câu chuyện ngắn."
+      },
+      {
+        "input": "Trẻ không hiểu các khái niệm thời gian",
+        "output": "Trẻ không biết sáng – tối, hôm qua – mai là biểu hiện chậm phát triển khái niệm – cần hỗ trợ qua hình ảnh, lịch trực quan."
+      },
+      {
+        "input": "Trẻ không hiểu “hôm qua”, “hôm nay”, “ngày mai”",
+        "output": "Không hiểu từ chỉ thời gian là dấu hiệu chậm nhận thức và ngôn ngữ – nên luyện thông qua lịch sinh hoạt hoặc kể chuyện theo mốc thời gian."
+      },
+      {
+        "input": "Trẻ không biết kể theo trình tự",
+        "output": "Kể chuyện không theo thứ tự cho thấy trẻ thiếu kỹ năng tổ chức thông tin – cần luyện với truyện tranh có tranh minh họa đơn giản."
+      },
+      {
+        "input": "Trẻ không biết kể chuyện có mở đầu và kết thúc",
+        "output": "Không biết cấu trúc 'bắt đầu – giữa – kết' là dấu hiệu chưa phát triển ngôn ngữ kể chuyện – nên luyện kể theo khung mẫu rõ ràng."
+      },
+      {
+        "input": "Trẻ không hiểu cấu trúc câu chuyện",
+        "output": "Nếu trẻ không nhận ra đâu là mở đầu – cao trào – kết thúc thì cần hỗ trợ phân tích câu chuyện đơn giản theo khung."
+      },
+      {
+        "input": "Trẻ không đặt được câu hỏi “vì sao”",
+        "output": "Không đặt câu hỏi vì sao cho thấy trẻ thiếu tư duy phản biện và ngôn ngữ suy luận – nên kích thích bằng trò chơi hỏi – đáp."
+      },
+      {
+        "input": "Trẻ không hỏi “ai”, “gì”, “ở đâu”",
+        "output": "Không đặt câu hỏi là thiếu kỹ năng giao tiếp chủ động – nên luyện tập bằng mô hình hỏi đáp tương tác qua hình ảnh."
+      },
+      {
+        "input": "Trẻ không đặt câu hỏi phù hợp ngữ cảnh",
+        "output": "Nếu trẻ hỏi không liên quan tình huống, có thể gặp khó khăn về ngôn ngữ thực dụng – cần luyện phân biệt ngữ cảnh phù hợp."
+      },
+      {
+        "input": "Trẻ không hiểu khi người khác hỏi",
+        "output": "Không hiểu câu hỏi đơn giản là dấu hiệu chậm ngôn ngữ tiếp nhận – nên được đánh giá khả năng hiểu lời nói."
+      },
+      {
+        "input": "Trẻ không biết trả lời câu hỏi “có/không”",
+        "output": "Không biết trả lời đúng – sai là thiếu kỹ năng phản xạ ngôn ngữ – nên luyện từ những câu hỏi rất đơn giản."
+      },
+      {
+        "input": "Trẻ không biết trả lời câu hỏi “tại sao”",
+        "output": "Không trả lời được 'tại sao' cho thấy trẻ thiếu kỹ năng suy luận nguyên nhân – nên luyện phản xạ tư duy – ngôn ngữ."
+      },
+      {
+        "input": "Trẻ không biết trả lời câu hỏi “làm gì”",
+        "output": "Không phản hồi 'con đang làm gì?' là biểu hiện chậm diễn đạt hành vi bản thân – nên luyện qua trò chơi đóng vai."
+      },
+      {
+        "input": "Trẻ không biết trả lời “khi nào”, “ở đâu”",
+        "output": "Không trả lời được mốc thời gian – địa điểm là dấu hiệu chậm tiếp nhận từ chỉ thời gian – không gian – cần can thiệp sớm."
+      },
+      {
+        "input": "Trẻ không biết kể theo thứ tự các bước",
+        "output": "Không kể đúng trình tự như đánh răng, rửa tay cho thấy kỹ năng tổ chức ngôn ngữ chưa phát triển – cần hỗ trợ thông qua mô hình hóa hành vi."
+      },
+      {
+        "input": "Trẻ không biết kể cách làm một việc",
+        "output": "Nếu không diễn đạt được trình tự thao tác, nên luyện kể chuyện bằng hoạt động thực tế kết hợp câu mẫu."
+      },
+      {
+        "input": "Trẻ không diễn đạt được ý tưởng rõ ràng",
+        "output": "Nói không rõ ý, lan man là dấu hiệu chậm diễn đạt – cần luyện tập tổ chức ý tưởng thành câu logic."
+      },
+      {
+        "input": "Trẻ nói lộn xộn không theo mạch chuyện",
+        "output": "Nếu câu chuyện của trẻ không có trình tự, nên luyện kể có khung định hướng như tranh thứ tự, bảng mô tả."
+      },
+      {
+        "input": "Trẻ không biết bắt đầu câu chuyện từ đâu",
+        "output": "Không biết bắt đầu từ chi tiết nào là biểu hiện chậm tổ chức ngôn ngữ – cần hỗ trợ bằng câu mẫu, từ khóa gợi ý."
+      },
+      {
+        "input": "Trẻ không biết kết thúc câu chuyện",
+        "output": "Không kết thúc được khiến câu chuyện bị cụt – nên luyện trẻ nói 'hết rồi', hoặc phần kết đơn giản trước."
+      },
+      {
+        "input": "Trẻ không hiểu trình tự sự việc",
+        "output": "Trẻ không hiểu cái gì xảy ra trước – sau là chỉ báo chậm phát triển tư duy và ngôn ngữ – cần luyện sắp xếp thứ tự tranh."
+      },
+      {
+        "input": "Trẻ kể chuyện không có logic",
+        "output": "Câu chuyện rời rạc, không liên quan giữa các đoạn là biểu hiện chưa phát triển tư duy kể chuyện – cần luyện ghép tranh kể lại."
+      },
+      {
+        "input": "Trẻ không biết nhấn mạnh ý chính khi nói",
+        "output": "Không biết làm nổi bật thông tin quan trọng là dấu hiệu chưa kiểm soát được ngữ điệu và trọng âm – nên luyện với câu hỏi dẫn dắt."
+      },
+      {
+        "input": "Trẻ nói đều đều, không có nhấn giọng",
+        "output": "Giọng nói đều không có nhấn nhá làm giảm hiệu quả giao tiếp – cần luyện nói với cảm xúc qua trò chơi mô phỏng."
+      },
+      {
+        "input": "Trẻ nói không đúng ngữ điệu câu hỏi, câu kể",
+        "output": "Trẻ nói tất cả câu cùng một ngữ điệu là dấu hiệu rối loạn ngữ dụng – nên dạy phân biệt qua tình huống thật."
+      },
+      {
+        "input": "Trẻ nói một cách rập khuôn, không linh hoạt",
+        "output": "Ngôn ngữ rập khuôn, không thay đổi theo tình huống là biểu hiện phổ biến ở trẻ tự kỷ – cần luyện tập điều chỉnh lời nói theo ngữ cảnh."
+      },
+      {
+        "input": "Trẻ không biết thay đổi cách nói theo ngữ cảnh",
+        "output": "Trẻ không biết cách nói khác khi giao tiếp với bạn bè, người lớn là dấu hiệu cần can thiệp ngữ dụng xã hội."
+      },
+      {
+        "input": "Trẻ không điều chỉnh cách nói khi người khác không hiểu",
+        "output": "Nếu người nghe không hiểu mà trẻ vẫn nói y hệt thì trẻ thiếu kỹ năng điều chỉnh ngôn ngữ – nên luyện hỏi 'con nói lại nhé?'"
+      },
+      {
+        "input": "Trẻ không chú ý đến phản ứng người nghe",
+        "output": "Trẻ không quan tâm đến người nghe có hiểu hay không là dấu hiệu rối loạn tương tác xã hội – nên tăng cường giao tiếp mắt và phản hồi."
+      },
+      {
+        "input": "Trẻ không thay đổi lời nói để phù hợp người nghe",
+        "output": "Nếu trẻ nói giống nhau với mọi người, không phân biệt người quen – lạ, lớn – bé, là biểu hiện của rối loạn ngữ dụng – cần can thiệp cá nhân hóa ngôn ngữ."
+      },
+      {
+        "input": "Trẻ không biết sử dụng ngữ điệu khi nói",
+        "output": "Nếu trẻ nói mà giọng đều, không có ngữ điệu, đây có thể là dấu hiệu rối loạn ngôn ngữ ngữ dụng – cần luyện tập điều chỉnh ngữ điệu trong giao tiếp."
+      },
+      {
+        "input": "Trẻ nói không thể hiện cảm xúc",
+        "output": "Khi trẻ nói mà không thể hiện cảm xúc vui, buồn, ngạc nhiên... thì khả năng biểu đạt cảm xúc bằng lời đang hạn chế – cần luyện qua đóng vai."
+      },
+      {
+        "input": "Trẻ nói với giọng đơn điệu",
+        "output": "Giọng đơn điệu là biểu hiện của thiếu điều tiết giọng nói – thường gặp ở trẻ có khó khăn giao tiếp xã hội – cần luyện thay đổi cao độ và tốc độ nói."
+      },
+      {
+        "input": "Trẻ không biết dùng giọng nói để nhấn mạnh",
+        "output": "Không biết nhấn trọng âm hoặc nhấn ý chính trong câu cho thấy kỹ năng giao tiếp nâng cao chưa phát triển – nên luyện qua mẫu câu nhấn mạnh."
+      },
+      {
+        "input": "Trẻ nói như đang đọc thuộc lòng",
+        "output": "Trẻ nói một cách rập khuôn, như đọc lại kịch bản là biểu hiện rối loạn ngôn ngữ ngữ dụng – cần luyện nói linh hoạt qua tương tác thực tế."
+      },
+      {
+        "input": "Trẻ không biết điều chỉnh tốc độ nói",
+        "output": "Nói quá nhanh hoặc quá chậm đều ảnh hưởng đến hiệu quả giao tiếp – nên luyện qua trò chơi điều chỉnh tốc độ phát âm."
+      },
+      {
+        "input": "Trẻ nói quá nhanh hoặc quá chậm",
+        "output": "Tốc độ nói bất thường có thể liên quan đến lo âu, tăng động hoặc rối loạn ngôn ngữ – cần đánh giá và luyện tốc độ phù hợp ngữ cảnh."
+      },
+      {
+        "input": "Trẻ không biết điều chỉnh âm lượng khi nói",
+        "output": "Trẻ không biết nói nhỏ trong lớp, nói to khi ở xa là thiếu kỹ năng điều chỉnh âm lượng – nên luyện qua tình huống thực tế."
+      },
+      {
+        "input": "Trẻ nói quá to hoặc quá nhỏ",
+        "output": "Âm lượng nói không phù hợp làm giảm hiệu quả giao tiếp – cần luyện kỹ năng điều tiết giọng nói theo bối cảnh."
+      },
+      {
+        "input": "Trẻ không biết thì thầm khi cần thiết",
+        "output": "Không biết thì thầm khi vào nơi cần yên lặng là thiếu kỹ năng giao tiếp xã hội – nên luyện bằng trò chơi tình huống."
+      },
+      {
+        "input": "Trẻ không biết nói rõ ràng trong giao tiếp",
+        "output": "Phát âm không rõ khiến người khác khó hiểu – nên can thiệp luyện phát âm, nói từng từ rõ ràng và chậm rãi."
+      },
+      {
+        "input": "Trẻ không sửa lỗi khi nói sai",
+        "output": "Không tự sửa lỗi khi phát âm sai có thể do thiếu nhận thức ngôn ngữ – nên luyện kỹ năng nghe lại và nhắc lại đúng."
+      },
+      {
+        "input": "Trẻ không biết tự điều chỉnh khi bị nhắc nhở",
+        "output": "Khi người lớn nhắc mà trẻ không thay đổi cách nói, đây là thiếu kỹ năng điều chỉnh hành vi ngôn ngữ – cần dạy kỹ năng phản hồi và thích ứng."
+      },
+      {
+        "input": "Trẻ không biết nói khác đi khi không ai hiểu",
+        "output": "Trẻ không thay đổi cách diễn đạt khi không được hiểu là dấu hiệu thiếu linh hoạt ngôn ngữ – nên luyện diễn đạt lại ý bằng từ khác."
+      },
+      {
+        "input": "Trẻ không hỏi lại khi không nghe rõ",
+        "output": "Không phản hồi bằng cách hỏi lại cho thấy thiếu kỹ năng kiểm tra thông tin – cần luyện mẫu câu 'Cô nói gì ạ?', 'Con chưa nghe rõ'."
+      },
+      {
+        "input": "Trẻ không tìm cách truyền đạt lại khi người khác không hiểu",
+        "output": "Không tìm cách diễn đạt lại khi không được hiểu là thiếu kỹ năng giao tiếp hiệu quả – nên luyện từ đồng nghĩa, tranh minh họa để hỗ trợ."
+      },
+      {
+        "input": "Trẻ không chú ý đến biểu cảm của người khác khi giao tiếp",
+        "output": "Trẻ không nhận ra nét mặt người nghe là thiếu kỹ năng cảm nhận cảm xúc xã hội – nên luyện qua hình ảnh cảm xúc và đóng vai."
+      },
+      {
+        "input": "Trẻ không phản ứng khi người khác không hiểu mình",
+        "output": "Nếu trẻ không nhận ra người khác đang bối rối, đây là biểu hiện chậm tương tác xã hội – nên can thiệp qua phản hồi giả lập."
+      },
+      {
+        "input": "Trẻ không biết kiểm tra xem người khác có hiểu không",
+        "output": "Thiếu kỹ năng hỏi lại 'Bạn hiểu chưa?' hoặc quan sát phản ứng khiến giao tiếp kém hiệu quả – nên luyện phản hồi hai chiều."
+      },
+      {
+        "input": "Trẻ không phản hồi khi người khác phản đối",
+        "output": "Trẻ không biết làm gì khi bị từ chối hoặc không đồng tình là dấu hiệu thiếu điều tiết hành vi giao tiếp – nên luyện đối thoại phản hồi cảm xúc."
+      },
+      {
+        "input": "Trẻ không biết cách xin lỗi khi làm sai",
+        "output": "Không thể hiện sự xin lỗi là biểu hiện thiếu kỹ năng xã hội cơ bản – nên luyện mẫu câu và ngữ cảnh dùng lời xin lỗi phù hợp."
+      },
+      {
+        "input": "Trẻ không biết thương lượng trong giao tiếp",
+        "output": "Không biết đưa ra thỏa hiệp hoặc đề xuất là dấu hiệu trẻ chưa phát triển kỹ năng thương lượng – cần dạy qua trò chơi tương tác nhóm."
+      },
+      {
+        "input": "Trẻ không biết yêu cầu lịch sự",
+        "output": "Trẻ ra lệnh thay vì xin phép là thiếu ngôn ngữ lịch sự – nên luyện từ 'làm ơn', 'có thể giúp con...' qua ngữ cảnh cụ thể."
+      },
+      {
+        "input": "Trẻ không hiểu khi bị từ chối",
+        "output": "Nếu trẻ tiếp tục yêu cầu khi bị từ chối là thiếu hiểu biết xã hội – nên dạy trẻ chấp nhận từ chối thông qua đóng vai."
+      },
+      {
+        "input": "Trẻ không biết từ chối một cách phù hợp",
+        "output": "Trẻ không biết nói 'không' một cách lịch sự là thiếu kỹ năng tự bảo vệ và giao tiếp xã hội – cần luyện cách từ chối mềm mỏng."
+      },
+      {
+        "input": "Trẻ không biết chấm dứt cuộc trò chuyện",
+        "output": "Trẻ tiếp tục nói dù người khác đã rời đi là dấu hiệu thiếu tín hiệu kết thúc giao tiếp – nên luyện mẫu câu 'Chúng ta nói chuyện sau nhé'."
+      },
+      {
+        "input": "Trẻ không biết chuyển chủ đề khi nói chuyện",
+        "output": "Không chuyển được chủ đề đúng lúc khiến hội thoại nhàm chán – cần luyện nhận biết dấu hiệu thay đổi mạch nói."
+      },
+      {
+        "input": "Trẻ không nhận ra khi người khác muốn kết thúc cuộc trò chuyện",
+        "output": "Không nhận biết ngôn ngữ cơ thể hoặc dấu hiệu chấm dứt trò chuyện là thiếu hiểu biết xã hội – nên dạy trẻ qua đóng vai phản hồi tình huống."
+      },
+      {
+        "input": "Trẻ nói chuyện không biết điểm dừng",
+        "output": "Trẻ nói quá nhiều, không dừng lại là biểu hiện rối loạn điều tiết hành vi hoặc ngôn ngữ – cần luyện kỹ năng giới hạn thời gian nói."
+      },
+      {
+        "input": "Trẻ không biết chờ người khác nói xong",
+        "output": "Hay cắt lời người khác là hành vi phổ biến ở trẻ chậm phát triển xã hội – nên dạy trẻ chờ bằng tín hiệu tay hoặc đồ vật."
+      },
+      {
+        "input": "Trẻ hay ngắt lời người khác",
+        "output": "Ngắt lời liên tục thể hiện trẻ thiếu kỹ năng kiểm soát hành vi trong trò chuyện – cần can thiệp luyện kỹ năng phiên lượt nói."
+      },
+      {
+        "input": "Trẻ không biết điều chỉnh lượt nói trong trò chuyện",
+        "output": "Không chia lượt nói làm giảm chất lượng hội thoại – cần luyện phiên lượt bằng trò chơi xen kẽ vai trò."
+      },
+      {
+        "input": "Trẻ không biết khi nào nên nói",
+        "output": "Trẻ nói không đúng lúc (giữa bài học, khi người khác đang nói) là thiếu kỹ năng định thời điểm – nên luyện bằng tín hiệu giao tiếp xã hội."
+      },
+      {
+        "input": "Trẻ không biết khi nào nên im lặng",
+        "output": "Nói liên tục không ngừng khi cần im lặng là dấu hiệu rối loạn điều tiết hành vi – nên dạy qua quy tắc lớp học và hình ảnh minh họa."
+      },
+      {
+        "input": "Trẻ không biết giữ khoảng cách phù hợp khi giao tiếp",
+        "output": "Trẻ đứng quá gần hoặc quá xa người khác là thiếu nhận thức về không gian cá nhân – cần luyện qua vòng tròn không gian giao tiếp."
+      },
+      {
+        "input": "Trẻ đứng quá gần hoặc quá xa khi nói chuyện",
+        "output": "Khoảng cách giao tiếp không phù hợp có thể làm người khác khó chịu – nên luyện giữ khoảng cách bằng vạch sàn hoặc hình mẫu."
+      },
+      {
+        "input": "Trẻ không hiểu không gian cá nhân",
+        "output": "Không phân biệt được không gian của mình và người khác là biểu hiện rối loạn nhận thức xã hội – nên được hướng dẫn bằng hình ảnh trực quan."
+      },
+      {
+        "input": "Trẻ không nhận ra dấu hiệu khó chịu từ người khác",
+        "output": "Không phát hiện ánh mắt khó chịu, sự né tránh là dấu hiệu thiếu cảm nhận cảm xúc – cần luyện nhận diện cảm xúc qua nét mặt, tranh ảnh."
+      },
+      {
+        "input": "Trẻ không thay đổi hành vi khi người khác không hài lòng",
+        "output": "Nếu trẻ không điều chỉnh khi người khác thể hiện không hài lòng, đây là thiếu kỹ năng điều tiết xã hội – cần luyện phản hồi cảm xúc."
+      },
+      {
+        "input": "Trẻ không biết cách điều chỉnh hành vi giao tiếp",
+        "output": "Trẻ nói hoặc hành động không phù hợp mà không biết sửa là dấu hiệu thiếu tự điều chỉnh – nên luyện tự phản ánh hành vi qua câu hỏi gợi mở."
+      },
+      {
+        "input": "Trẻ không biết cách mở đầu câu chuyện",
+        "output": "Nếu trẻ không biết bắt đầu câu chuyện, có thể do thiếu kỹ năng tổ chức ngôn ngữ – nên luyện các mẫu câu mở đầu đơn giản như 'Hôm nay con...' hoặc 'Lúc nãy con...'."
+      },
+      {
+        "input": "Trẻ không biết kể chuyện theo trình tự thời gian",
+        "output": "Kể chuyện không theo thứ tự thời gian cho thấy trẻ thiếu kỹ năng tổ chức thông tin – nên luyện kể theo khung 'trước – trong – sau'."
+      },
+      {
+        "input": "Trẻ không biết kể lại hoạt động hàng ngày",
+        "output": "Nếu trẻ không kể được các hoạt động như ăn, ngủ, đi học, nên hỗ trợ luyện kể qua hình ảnh sinh hoạt hoặc nhật ký hình."
+      },
+      {
+        "input": "Trẻ không biết kể chuyện đã xảy ra với mình",
+        "output": "Không kể lại chuyện cá nhân là dấu hiệu chậm phát triển ngôn ngữ tự thuật – nên luyện kể lại sự kiện theo trình tự và cảm xúc."
+      },
+      {
+        "input": "Trẻ không biết mô tả cảm xúc của mình",
+        "output": "Trẻ không nói được mình đang vui, buồn hay sợ là thiếu vốn từ cảm xúc – nên luyện từ hình ảnh nét mặt và trò chơi đoán cảm xúc."
+      },
+      {
+        "input": "Trẻ không biết nói ra điều mình thích",
+        "output": "Không diễn đạt sở thích cá nhân là hạn chế kỹ năng tự biểu đạt – nên luyện bằng mẫu câu 'Con thích... vì...'."
+      },
+      {
+        "input": "Trẻ không biết hỏi về người khác",
+        "output": "Trẻ không đặt câu hỏi về người khác cho thấy thiếu chủ động giao tiếp – nên luyện mẫu hỏi 'Bạn tên gì?', 'Bạn thích gì?'."
+      },
+      {
+        "input": "Trẻ không quan tâm đến người khác đang nói gì",
+        "output": "Nếu trẻ không chú ý khi người khác đang nói, có thể do thiếu kỹ năng chú ý xã hội – nên luyện giao tiếp mắt và phản hồi đơn giản."
+      },
+      {
+        "input": "Trẻ không đáp lại khi người khác chia sẻ thông tin",
+        "output": "Không phản hồi khi được chia sẻ cho thấy kỹ năng tương tác chưa hình thành – nên luyện câu phản hồi như 'Ồ vậy à!', 'Thật hả?'."
+      },
+      {
+        "input": "Trẻ không biết giữ chủ đề khi trò chuyện",
+        "output": "Trẻ thường nói lệch chủ đề là dấu hiệu rối loạn ngôn ngữ ngữ dụng – cần luyện duy trì chủ đề qua câu hỏi và phản hồi."
+      },
+      {
+        "input": "Trẻ thay đổi chủ đề liên tục khi nói chuyện",
+        "output": "Nếu trẻ chuyển chủ đề liên tục mà không có kết nối, nên luyện trò chuyện theo sơ đồ chủ đề hoặc bảng hỗ trợ hình ảnh."
+      },
+      {
+        "input": "Trẻ không biết dùng câu hỏi để duy trì hội thoại",
+        "output": "Không đặt câu hỏi tiếp theo làm hội thoại bị gián đoạn – nên luyện mẫu như 'Thế sau đó sao?', 'Rồi bạn làm gì tiếp?'."
+      },
+      {
+        "input": "Trẻ không biết đưa ra bình luận phù hợp",
+        "output": "Nếu trẻ không biết bình luận như 'vui quá', 'thật hay', cần luyện kỹ năng đưa ra nhận xét ngắn về sự việc – cảm xúc."
+      },
+      {
+        "input": "Trẻ không biết phản hồi khi người khác chia sẻ cảm xúc",
+        "output": "Không biết nói 'con xin lỗi', 'con vui với bạn' là dấu hiệu thiếu kỹ năng đồng cảm – nên luyện phản hồi cảm xúc đơn giản."
+      },
+      {
+        "input": "Trẻ không thể hiện sự quan tâm đến cảm xúc người khác",
+        "output": "Nếu trẻ không để ý khi người khác buồn hay tức giận, đây là dấu hiệu chậm nhận diện cảm xúc xã hội – cần luyện qua phim ảnh và đóng vai."
+      },
+      {
+        "input": "Trẻ không biết sử dụng lời khen",
+        "output": "Không biết khen bạn là 'bạn hát hay', 'bạn đẹp'... là thiếu kỹ năng giao tiếp tích cực – nên luyện lời khen qua trò chơi nhóm."
+      },
+      {
+        "input": "Trẻ không biết đáp lại lời khen",
+        "output": "Nếu trẻ không biết nói 'cảm ơn' khi được khen, nên luyện phản xạ xã hội cơ bản qua trò chơi tương tác đơn giản."
+      },
+      {
+        "input": "Trẻ không biết chia sẻ niềm vui với người khác",
+        "output": "Trẻ không nói 'hôm nay con được điểm tốt' hoặc 'con vui lắm' là thiếu kỹ năng chia sẻ – nên khuyến khích trẻ chia sẻ cảm xúc tích cực."
+      },
+      {
+        "input": "Trẻ không biết chia sẻ nỗi buồn với người khác",
+        "output": "Không thể hiện nỗi buồn, không tìm người chia sẻ là dấu hiệu đáng chú ý – nên luyện từ mẫu câu 'Con buồn vì...'."
+      },
+      {
+        "input": "Trẻ không biết thể hiện sự đồng cảm",
+        "output": "Thiếu đồng cảm khi người khác gặp khó khăn là dấu hiệu chậm kỹ năng xã hội – nên luyện phản ứng phù hợp khi thấy bạn buồn, bị té..."
+      },
+      {
+        "input": "Trẻ không hiểu khi người khác buồn",
+        "output": "Nếu trẻ không nhận ra nét mặt buồn, giọng trầm là thiếu nhận diện cảm xúc – nên luyện phân biệt nét mặt, giọng nói qua tranh hoặc video."
+      },
+      {
+        "input": "Trẻ không nhận ra khi người khác vui",
+        "output": "Không nhận ra trạng thái vui, hào hứng ở người khác là thiếu kỹ năng cảm nhận – nên luyện qua hình ảnh và phản hồi tích cực."
+      },
+      {
+        "input": "Trẻ không biết an ủi người khác khi họ buồn",
+        "output": "Không nói 'không sao đâu', 'đừng buồn nhé' khi bạn khóc là thiếu phản xạ đồng cảm – cần dạy bằng mô hình hành vi và lặp lại."
+      },
+      {
+        "input": "Trẻ không biết thể hiện niềm vui khi người khác thành công",
+        "output": "Nếu trẻ không vỗ tay, khen bạn khi bạn được thưởng, đây là thiếu kỹ năng chia sẻ niềm vui xã hội – cần luyện qua trò chơi nhóm."
+      },
+      {
+        "input": "Trẻ không biết chia sẻ khi được người khác hỏi thăm",
+        "output": "Khi người khác hỏi 'Hôm nay con thế nào?' mà trẻ im lặng, nên luyện mẫu phản hồi đơn giản như 'Con khỏe ạ'."
+      },
+      {
+        "input": "Trẻ không biết duy trì chủ đề khi được người khác quan tâm",
+        "output": "Không tiếp nối câu chuyện sau khi được hỏi thăm là dấu hiệu thiếu kỹ năng kéo dài tương tác – nên luyện trả lời kèm thêm câu chia sẻ."
+      },
+      {
+        "input": "Trẻ không biết cảm ơn khi nhận lời khen",
+        "output": "Không phản hồi 'cảm ơn' khi được khen là thiếu kỹ năng ứng xử cơ bản – nên luyện phản xạ xã hội qua trò chơi đóng vai."
+      },
+      {
+        "input": "Trẻ không biết khi nào nên im lặng lắng nghe",
+        "output": "Trẻ nói khi người khác đang nói là biểu hiện thiếu điều tiết hành vi – nên luyện quy tắc nghe: nhìn người nói, im lặng, chờ lượt."
+      },
+      {
+        "input": "Trẻ không biết khi nào nên ngắt lời để góp ý",
+        "output": "Không biết chen lời đúng lúc hoặc luôn ngắt lời sai chỗ là biểu hiện rối loạn ngữ dụng – nên luyện kỹ năng ngắt lời lịch sự."
+      },
+      {
+        "input": "Trẻ không biết điều chỉnh giọng nói khi người khác đang buồn",
+        "output": "Nói quá to, vui đùa khi người khác buồn là dấu hiệu thiếu cảm nhận tình huống – nên luyện phản xạ điều chỉnh giọng theo cảm xúc người đối diện."
+      },
+      {
+        "input": "Trẻ không biết giảm âm lượng khi vào nơi yên tĩnh",
+        "output": "Không biết nói nhỏ ở nơi cần im lặng (thư viện, lớp học...) là thiếu kỹ năng điều chỉnh hành vi – cần luyện phản xạ qua trò chơi bối cảnh."
+      },
+      {
+        "input": "Trẻ không biết tôn trọng không gian riêng tư",
+        "output": "Trẻ hay xông vào phòng người khác, không gõ cửa là thiếu hiểu về ranh giới cá nhân – nên luyện qua tranh minh họa hoặc bảng quy tắc."
+      },
+      {
+        "input": "Trẻ không biết chờ đến lượt mình nói chuyện",
+        "output": "Không chờ người khác nói xong mà tự nói chen là thiếu kỹ năng luân phiên hội thoại – nên luyện bằng trò chơi phiên lượt với tín hiệu rõ ràng."
+      },
+      {
+        "input": "Trẻ không biết xin phép khi muốn xen vào câu chuyện",
+        "output": "Trẻ chen ngang không nói 'cho con nói với', 'con muốn chia sẻ' là thiếu kỹ năng lịch sự – nên luyện mẫu câu ngắt lời phù hợp."
+      },
+      {
+        "input": "Trẻ không biết giữ bí mật khi được yêu cầu",
+        "output": "Nếu trẻ nói ra điều được dặn giữ kín, nên dạy phân biệt 'bí mật an toàn' và luyện tình huống giữ kín thông tin cá nhân."
+      },
+      {
+        "input": "Trẻ không hiểu khái niệm “bí mật” trong giao tiếp",
+        "output": "Không hiểu bí mật là gì, nói tuốt mọi chuyện là dấu hiệu thiếu phân biệt thông tin cá nhân – cần được hướng dẫn cụ thể và lặp lại."
+      },
+      {
+        "input": "Trẻ không biết phân biệt thông tin riêng tư và công khai",
+        "output": "Trẻ nói chuyện vệ sinh cá nhân nơi đông người là thiếu hiểu biết xã hội – nên dạy qua ví dụ minh họa và trò chơi phân loại thông tin."
+      },
+      {
+        "input": "Trẻ không biết điều chỉnh cách giao tiếp với người lạ",
+        "output": "Nói chuyện quá thân thiết hoặc xa cách với người lạ là dấu hiệu thiếu kỹ năng xã hội – cần luyện phản xạ phù hợp với từng loại người."
+      },
+      {
+        "input": "Trẻ không biết cách giới thiệu bản thân với người mới",
+        "output": "Không biết nói 'Con tên là...', 'Con học lớp...' là thiếu kỹ năng giao tiếp cơ bản – nên luyện qua trò chơi làm quen."
+      },
+      {
+        "input": "Trẻ không biết hỏi thông tin cơ bản khi gặp người lạ",
+        "output": "Không biết hỏi 'Tên bạn là gì?', 'Bạn học ở đâu?'... là kỹ năng xã hội bị thiếu – nên luyện mẫu câu làm quen qua hoạt động nhóm."
+      },
+      {
+        "input": "Trẻ không biết cách giữ liên lạc với bạn bè",
+        "output": "Trẻ không duy trì liên lạc với bạn có thể thiếu kỹ năng xã hội duy trì mối quan hệ – nên luyện cách chào hỏi, nhắn tin đơn giản, gọi điện thăm bạn."
+      },
+      {
+        "input": "Trẻ không biết hỏi thăm khi bạn nghỉ học",
+        "output": "Không hỏi thăm khi bạn vắng mặt là thiếu phản xạ xã hội – cần luyện mẫu câu như 'Bạn bị ốm à?', 'Bạn nghỉ học hôm qua à?'."
+      },
+      {
+        "input": "Trẻ không biết chúc mừng sinh nhật bạn",
+        "output": "Nếu trẻ không nói lời chúc trong dịp sinh nhật bạn, nên luyện cách thể hiện quan tâm qua mẫu câu: 'Chúc mừng sinh nhật!', 'Chúc bạn vui vẻ!'."
+      },
+      {
+        "input": "Trẻ không biết nói lời chia tay khi bạn chuyển lớp",
+        "output": "Không thể hiện chia tay là thiếu kỹ năng chia sẻ – nên luyện mẫu câu 'Chúc bạn học tốt ở lớp mới nhé!'."
+      },
+      {
+        "input": "Trẻ không biết rủ bạn chơi chung",
+        "output": "Không biết mời bạn chơi là thiếu chủ động trong tương tác – nên luyện mẫu câu như 'Bạn chơi với mình nhé!'."
+      },
+      {
+        "input": "Trẻ không biết mời bạn tham gia hoạt động nhóm",
+        "output": "Không mời gọi khi hoạt động theo nhóm là thiếu kỹ năng hợp tác – nên luyện mẫu như 'Bạn vào nhóm mình được không?'."
+      },
+      {
+        "input": "Trẻ không biết từ chối lời mời không phù hợp",
+        "output": "Không biết nói 'mình không thể chơi lúc này' là thiếu kỹ năng từ chối lịch sự – nên luyện cách nói nhẹ nhàng, rõ lý do."
+      },
+      {
+        "input": "Trẻ không biết xin lỗi khi làm bạn buồn",
+        "output": "Không xin lỗi sau khi làm bạn tổn thương là thiếu phản xạ xã hội – nên luyện mẫu câu 'Mình xin lỗi, mình không cố ý'."
+      },
+      {
+        "input": "Trẻ không biết làm lành sau khi cãi nhau",
+        "output": "Không chủ động làm hòa sau xích mích là thiếu kỹ năng hàn gắn quan hệ – nên luyện mẫu câu: 'Chúng mình chơi lại nhé!'."
+      },
+      {
+        "input": "Trẻ không biết giữ hòa khí khi chơi với bạn",
+        "output": "Trẻ dễ gây mâu thuẫn khi chơi là dấu hiệu thiếu kỹ năng điều chỉnh cảm xúc – nên luyện trò chơi hợp tác và giải quyết vấn đề."
+      },
+      {
+        "input": "Trẻ không biết phân vai khi chơi cùng nhóm",
+        "output": "Không phân chia vai trò khi chơi nhóm là thiếu kỹ năng tổ chức – nên luyện trò chơi nhập vai có luật chia vai rõ ràng."
+      },
+      {
+        "input": "Trẻ không biết nhường nhịn khi có xung đột nhỏ",
+        "output": "Không biết nhường khi có va chạm là thiếu điều tiết cảm xúc – nên luyện mẫu hành vi 'Bạn dùng trước đi, tí mình dùng sau'."
+      },
+      {
+        "input": "Trẻ không biết giải quyết mâu thuẫn khi chơi",
+        "output": "Không thể giải quyết tranh cãi là thiếu kỹ năng đàm phán – nên luyện cách đề xuất giải pháp hoặc nhờ người lớn hỗ trợ đúng lúc."
+      },
+      {
+        "input": "Trẻ không biết xin phép khi muốn mượn đồ bạn",
+        "output": "Mượn đồ không hỏi là thiếu kỹ năng lịch sự – nên luyện mẫu câu 'Bạn ơi, cho mình mượn nhé!'."
+      },
+      {
+        "input": "Trẻ không biết trả lại đồ đã mượn",
+        "output": "Không hoàn trả đồ đúng lúc là thiếu trách nhiệm xã hội – nên luyện kỹ năng nhớ – nhắc – cảm ơn khi mượn xong."
+      },
+      {
+        "input": "Trẻ không biết nói cảm ơn sau khi mượn đồ",
+        "output": "Không cảm ơn sau khi được giúp đỡ là thiếu kỹ năng giao tiếp cơ bản – cần luyện phản xạ 'Cảm ơn bạn đã cho mình mượn!'."
+      },
+      {
+        "input": "Trẻ không biết nhắc bạn trả đồ đã mượn một cách lịch sự",
+        "output": "Không dám hoặc nói gắt khi đòi đồ là thiếu kỹ năng giao tiếp tích cực – nên luyện mẫu như 'Bạn ơi, bạn có thể trả lại giúp mình không?'."
+      },
+      {
+        "input": "Trẻ không biết phản ứng khi bị bạn từ chối chơi chung",
+        "output": "Giận dỗi hoặc buồn bã quá mức khi bị từ chối là dấu hiệu thiếu điều tiết cảm xúc – nên luyện phản ứng nhẹ nhàng: 'Không sao, mình chơi lúc khác'."
+      },
+      {
+        "input": "Trẻ không biết cách làm quen với bạn mới",
+        "output": "Không chủ động bắt chuyện với người mới là thiếu kỹ năng khởi đầu tương tác – nên luyện mẫu 'Bạn tên gì?', 'Bạn thích gì?'."
+      },
+      {
+        "input": "Trẻ không biết bắt chuyện khi gặp người quen",
+        "output": "Không chào hỏi người quen cho thấy thiếu kỹ năng duy trì quan hệ – nên luyện phản xạ chào, hỏi thăm ngắn."
+      },
+      {
+        "input": "Trẻ không biết hỏi thăm người lớn tuổi",
+        "output": "Trẻ không biết nói 'Bà khỏe không ạ?', 'Ông ăn cơm chưa?' là thiếu phép lịch sự – nên luyện mẫu giao tiếp theo vai vế."
+      },
+      {
+        "input": "Trẻ không biết chào hỏi đúng vai vế",
+        "output": "Gọi sai xưng hô với người lớn là thiếu kiến thức xã hội – nên luyện gọi đúng từ 'ông, bà, cô, chú...' tùy tình huống."
+      },
+      {
+        "input": "Trẻ không biết giữ lễ phép khi nói chuyện với người lớn",
+        "output": "Nói trống không hoặc cắt ngang người lớn là thiếu kỹ năng lễ phép – nên luyện dùng kính ngữ và chờ lượt nói."
+      },
+      {
+        "input": "Trẻ không biết cách trả lời khi được người lớn hỏi thăm",
+        "output": "Không biết đáp lại câu hỏi đơn giản như 'Con học lớp mấy?' là dấu hiệu thiếu kỹ năng phản hồi – nên luyện mẫu phản hồi ngắn gọn."
+      },
+      {
+        "input": "Trẻ không biết cách cư xử khi được người lớn cho quà",
+        "output": "Không nói cảm ơn hoặc phản ứng bất lịch sự là thiếu kỹ năng giao tiếp tích cực – nên luyện hành vi cảm ơn và đón nhận quà đúng mực."
+      },
+      {
+        "input": "Trẻ không biết từ chối khi được cho đồ không phù hợp",
+        "output": "Nhận bừa hoặc từ chối thô lỗ là thiếu kỹ năng lịch sự – nên luyện cách từ chối nhẹ nhàng: 'Con cảm ơn, nhưng con không dùng ạ'."
+      },
+      {
+        "input": "Trẻ không biết nhờ người lớn giúp khi gặp khó khăn",
+        "output": "Không dám nhờ giúp khi cần là thiếu kỹ năng cầu cứu – nên luyện mẫu câu: 'Cô giúp con với được không ạ?'."
+      },
+      {
+        "input": "Trẻ không biết tìm người lớn khi bị lạc",
+        "output": "Không tìm bảo vệ, công an, thầy cô khi lạc là nguy cơ an toàn – nên luyện phản xạ tìm người đáng tin và nói rõ tên – lớp."
+      },
+      {
+        "input": "Trẻ không biết cung cấp thông tin cá nhân cơ bản khi cần thiết",
+        "output": "Không nhớ tên bố mẹ, địa chỉ, số điện thoại là thiếu kỹ năng an toàn cơ bản – nên luyện qua trò chơi hỏi – đáp."
+      },
+      {
+        "input": "Trẻ không biết gọi điện thoại khi cần giúp đỡ",
+        "output": "Không biết bấm số hoặc gọi người thân là thiếu kỹ năng an toàn – nên luyện thực hành bấm số khẩn cấp, nhờ người lớn."
+      },
+      {
+        "input": "Trẻ không biết ghi nhớ số điện thoại của người thân",
+        "output": "Không nhớ số điện thoại là thiếu kỹ năng phản xạ khi khẩn cấp – nên luyện học số qua bài hát hoặc nhịp vần dễ nhớ."
+      },
+      {
+        "input": "Trẻ không biết cung cấp địa chỉ nhà khi được hỏi",
+        "output": "Không thể nói tên đường, số nhà là thiếu kiến thức cơ bản – nên luyện câu mẫu 'Con ở số... đường... phường...'."
+      },
+      {
+        "input": "Trẻ không biết nhờ người lớn đáng tin cậy khi gặp nguy hiểm",
+        "output": "Nếu trẻ không tìm người lớn quen khi bị đe dọa, cần luyện kỹ năng phân biệt người có thể tin tưởng như thầy cô, công an, nhân viên bảo vệ."
+      },
+      {
+        "input": "Trẻ không phân biệt người lạ đáng tin và không đáng tin",
+        "output": "Trẻ quá tin hoặc quá sợ người lạ là thiếu kỹ năng đánh giá nguy cơ – cần luyện phân biệt qua tranh và tình huống cụ thể."
+      },
+      {
+        "input": "Trẻ không biết kêu cứu khi gặp người lạ nguy hiểm",
+        "output": "Không la hét hoặc chạy khi gặp người xấu là nguy cơ an toàn – nên luyện hét to, chạy vào nơi đông người và nhờ giúp."
+      },
+      {
+        "input": "Trẻ không biết tìm nơi an toàn khi gặp nguy hiểm",
+        "output": "Trẻ không biết vào siêu thị, trường học, công an khi gặp nguy hiểm là thiếu kiến thức sống – nên luyện qua bản đồ an toàn khu vực sống."
+      },
+      {
+        "input": "Trẻ không biết tránh các tình huống nguy hiểm",
+        "output": "Không biết né ổ điện, xa hồ nước, không theo người lạ là nguy cơ cao – nên luyện tranh cảnh báo và trò chơi tình huống."
+      },
+      {
+        "input": "Trẻ không biết kể lại sự việc nguy hiểm cho người lớn",
+        "output": "Không kể lại chuyện vừa xảy ra là thiếu kỹ năng báo cáo – nên luyện kể ngắn gọn theo mẫu: 'Lúc nãy con...'."
+      },
+      {
+        "input": "Trẻ không nhớ quy tắc an toàn khi đi học",
+        "output": "Không nhớ quy tắc qua đường, đi thẳng đến trường là nguy cơ – nên luyện bằng hình ảnh trực quan và trò chơi mô phỏng."
+      },
+      {
+        "input": "Trẻ không biết tuân theo quy định khi tham gia giao thông",
+        "output": "Đi sai làn, không đội mũ, vượt đèn đỏ là thiếu nhận thức an toàn – cần luyện luật giao thông cơ bản qua trò chơi và tình huống minh họa."
+      },
+      {
+        "input": "Trẻ không biết phân biệt trái – phải",
+        "output": "Không phân biệt được trái – phải là dấu hiệu chậm phát triển nhận thức định hướng không gian – nên luyện qua trò chơi chỉ hướng hoặc vận động cơ thể."
+      },
+      {
+        "input": "Trẻ không biết phân biệt trước – sau",
+        "output": "Không biết vị trí trước – sau cho thấy kỹ năng không gian – thời gian chưa hình thành – nên luyện thông qua xếp hàng, kể chuyện theo thứ tự."
+      },
+      {
+        "input": "Trẻ không biết phân biệt trên – dưới",
+        "output": "Không hiểu vị trí trên – dưới là thiếu nhận thức không gian – nên luyện qua trò chơi tìm đồ vật 'Trên bàn – dưới ghế'."
+      },
+      {
+        "input": "Trẻ không biết phân biệt to – nhỏ",
+        "output": "Không phân biệt kích thước là dấu hiệu chậm phát triển tư duy hình ảnh – nên luyện qua so sánh đồ vật thật hoặc hình ảnh minh họa."
+      },
+      {
+        "input": "Trẻ không biết phân biệt dài – ngắn",
+        "output": "Nếu trẻ không phân biệt được chiều dài, nên dạy trẻ bằng hoạt động so sánh dây, bút hoặc que kích thước khác nhau."
+      },
+      {
+        "input": "Trẻ không biết phân biệt cao – thấp",
+        "output": "Không biết cao – thấp cho thấy trẻ chưa có khái niệm chiều cao – nên luyện so sánh giữa đồ vật hoặc người thật."
+      },
+      {
+        "input": "Trẻ không biết phân biệt nhanh – chậm",
+        "output": "Không hiểu khái niệm tốc độ là dấu hiệu chậm tư duy vận động – nên luyện qua trò chơi chạy – đi chậm."
+      },
+      {
+        "input": "Trẻ không biết phân biệt nặng – nhẹ",
+        "output": "Không cảm nhận được trọng lượng khác nhau là thiếu kinh nghiệm vận động – nên luyện cầm đồ vật thật để so sánh."
+      },
+      {
+        "input": "Trẻ không biết phân biệt ngày – đêm",
+        "output": "Không phân biệt sáng – tối, ngày – đêm là thiếu hiểu biết thời gian – nên luyện qua hình ảnh mặt trời – mặt trăng."
+      },
+      {
+        "input": "Trẻ không biết phân biệt sáng – tối",
+        "output": "Không biết khi nào là sáng – khi nào là tối là dấu hiệu thiếu kỹ năng nhận thức cơ bản – nên luyện từ hình ảnh và thực tế."
+      },
+      {
+        "input": "Trẻ không biết phân biệt nhiều – ít",
+        "output": "Không nhận ra số lượng là vấn đề nhận thức định lượng – nên luyện qua đếm chấm tròn, viên bi, đồ chơi."
+      },
+      {
+        "input": "Trẻ không biết phân biệt số lượng",
+        "output": "Không phân biệt số nhiều – ít là chưa đạt kỹ năng toán học tiền tiểu học – nên luyện đếm và so sánh số lượng nhóm đồ vật."
+      },
+      {
+        "input": "Trẻ không biết đếm số từ 1 đến 10",
+        "output": "Không đếm được là biểu hiện chậm phát triển tư duy số học – nên luyện đếm qua bài hát, trò chơi vận động có số."
+      },
+      {
+        "input": "Trẻ không biết nhận diện chữ cái",
+        "output": "Không nhận diện chữ là chậm ngôn ngữ tiền đọc viết – nên luyện qua bảng chữ cái, sách tranh, và trò chơi lắp chữ."
+      },
+      {
+        "input": "Trẻ không biết nhận diện số",
+        "output": "Không biết mặt số 1–10 là chậm phát triển toán học cơ bản – nên luyện nhận diện qua thẻ số và ghép số với đồ vật."
+      },
+      {
+        "input": "Trẻ không biết nhận diện màu sắc",
+        "output": "Không phân biệt màu là thiếu phát triển nhận thức thị giác – nên luyện qua bảng màu, tô màu, phân loại đồ vật theo màu."
+      },
+      {
+        "input": "Trẻ không biết nhận diện hình khối",
+        "output": "Không biết hình vuông, tròn, tam giác... là chậm phát triển kỹ năng tiền học – nên luyện thông qua đồ chơi xếp hình, tranh ảnh minh họa."
+      },
+      {
+        "input": "Trẻ không biết sắp xếp theo thứ tự",
+        "output": "Không sắp xếp từ thấp đến cao, nhỏ đến lớn là kỹ năng tư duy chưa hình thành – nên luyện qua trò chơi phân loại và xếp hình."
+      },
+      {
+        "input": "Trẻ không biết phân loại đồ vật",
+        "output": "Không phân nhóm theo màu, hình, chức năng là biểu hiện chậm phát triển nhận thức – nên luyện phân loại qua thực tế (muỗng, nĩa, ly...)."
+      },
+      {
+        "input": "Trẻ không biết ghép cặp đồ vật tương ứng",
+        "output": "Không biết ghép vớ – giày, chén – muỗng là chậm kỹ năng liên tưởng – nên luyện ghép cặp đồ vật qua tranh và vật thật."
+      },
+      {
+        "input": "Trẻ không biết gọi tên các bộ phận cơ thể",
+        "output": "Không biết gọi đầu, tay, chân... là thiếu vốn từ cơ bản – nên luyện qua bài hát, trò chơi chỉ điểm trên cơ thể."
+      },
+      {
+        "input": "Trẻ không biết nhận diện cảm xúc trên khuôn mặt",
+        "output": "Không nhận ra khuôn mặt buồn, vui, giận là thiếu kỹ năng xã hội – nên luyện nhận diện qua hình ảnh cảm xúc hoặc trò chơi đóng vai."
+      },
+      {
+        "input": "Trẻ không biết phân biệt các mùa trong năm",
+        "output": "Không biết xuân – hạ – thu – đông là thiếu nhận thức thời gian – nên luyện qua tranh ảnh thời tiết, đặc điểm mùa."
+      },
+      {
+        "input": "Trẻ không biết phân biệt thời tiết",
+        "output": "Không phân biệt nắng – mưa – gió là thiếu vốn từ và nhận thức – nên luyện qua tranh minh họa và quan sát thực tế."
+      },
+      {
+        "input": "Trẻ không biết kể tên các loài động vật",
+        "output": "Không gọi tên được con mèo, chó, gà... là thiếu vốn từ vựng – nên luyện qua tranh ảnh, âm thanh và trò chơi gọi tên."
+      },
+      {
+        "input": "Trẻ không biết kể tên các loại rau củ quả",
+        "output": "Không phân biệt rau, cà rốt, bắp cải... là dấu hiệu thiếu tương tác thực tế – nên luyện qua đi chợ giả lập và tranh ảnh."
+      },
+      {
+        "input": "Trẻ không biết kể tên đồ dùng học tập",
+        "output": "Không gọi tên bút, thước, gôm... là thiếu vốn từ chủ đề học đường – nên luyện qua hoạt động thật ở lớp hoặc trò chơi lớp học giả lập."
+      },
+      {
+        "input": "Trẻ không biết kể tên các phương tiện giao thông",
+        "output": "Không phân biệt xe máy, xe đạp, ô tô là thiếu kiến thức xã hội – nên luyện qua tranh ảnh, video hoặc đồ chơi phương tiện."
+      },
+      {
+        "input": "Trẻ không biết kể tên thành viên trong gia đình",
+        "output": "Không gọi tên ông, bà, ba, mẹ, anh, chị... là thiếu vốn từ về mối quan hệ – nên luyện qua sơ đồ gia đình và ảnh thật."
+      },
+      {
+        "input": "Trẻ không biết kể tên nghề nghiệp quen thuộc",
+        "output": "Không gọi được giáo viên, bác sĩ, công an... là thiếu vốn từ xã hội – nên luyện qua trò chơi đóng vai và tranh minh họa nghề."
+      },
+      {
+        "input": "Trẻ không biết sử dụng đồ vật theo đúng chức năng",
+        "output": "Dùng muỗng để chải tóc, dùng bút để ăn là dấu hiệu rối loạn sử dụng công cụ – nên luyện chức năng đồ vật qua hoạt động thực tế."
+      },
+      {
+        "input": "Trẻ không biết mô tả công dụng của đồ vật",
+        "output": "Không biết bút để viết, ly để uống là thiếu khả năng mô tả – nên luyện mẫu câu 'Cái này dùng để...'."
+      },
+      {
+        "input": "Trẻ không biết dùng từ để mô tả sự vật",
+        "output": "Không thể nói 'quả táo màu đỏ, tròn' là thiếu vốn từ tính từ – nên luyện mô tả qua hình ảnh vật quen thuộc."
+      },
+      {
+        "input": "Trẻ không biết dùng từ để mô tả hành động",
+        "output": "Không biết nói 'bạn đang chạy, mẹ đang nấu' là thiếu động từ – nên luyện mô tả hành động qua ảnh hoặc bắt chước hành động."
+      },
+      {
+        "input": "Trẻ không biết mô tả trình tự hành động",
+        "output": "Không kể được 'rửa tay → lấy khăn → lau khô' là thiếu tư duy trình tự – nên luyện theo chuỗi hình ảnh hoạt động."
+      },
+      {
+        "input": "Trẻ không biết nói tên món ăn quen thuộc",
+        "output": "Không gọi được cơm, canh, trứng, sữa... là thiếu vốn từ thực phẩm – nên luyện gọi món ăn qua thực tế và tranh ảnh."
+      },
+      {
+        "input": "Trẻ không biết phân biệt vị giác: ngọt, mặn, chua, đắng",
+        "output": "Không nhận ra vị là thiếu trải nghiệm giác quan – nên luyện qua nếm có hướng dẫn và gọi tên cảm giác vị."
+      },
+      {
+        "input": "Trẻ không biết phân biệt mùi hương",
+        "output": "Không nhận ra mùi hoa, mùi thơm thức ăn, mùi khó chịu... là thiếu trải nghiệm khứu giác – nên luyện qua trò chơi ngửi – đoán."
+      },
+      {
+        "input": "Trẻ không biết phân biệt âm thanh quen thuộc",
+        "output": "Không nhận ra tiếng chuông, tiếng xe, tiếng chó sủa... là thiếu phân biệt thính giác – nên luyện nghe âm thanh và gọi tên."
+      },
+      {
+        "input": "Trẻ không biết mô tả cảm giác: nóng, lạnh, đau",
+        "output": "Không biết diễn đạt cảm giác cơ thể là nguy cơ thiếu tự bảo vệ – nên luyện gọi tên cảm giác thông qua trải nghiệm thật và hình ảnh minh họa."
+      },
+      {
+        "input": "Trẻ không biết mô tả thời tiết hôm nay",
+        "output": "Nếu trẻ không thể nói hôm nay nắng, mưa hay lạnh, có thể do thiếu từ vựng và nhận thức môi trường – nên luyện mô tả thời tiết qua tranh, thực tế và câu mẫu."
+      },
+      {
+        "input": "Trẻ không biết kể về hoạt động vào các buổi trong ngày",
+        "output": "Trẻ không kể được sáng làm gì, chiều làm gì cho thấy thiếu kỹ năng sắp xếp thời gian – nên luyện mô tả theo lịch sinh hoạt cá nhân."
+      },
+      {
+        "input": "Trẻ không biết kể tên các ngày trong tuần",
+        "output": "Không phân biệt thứ hai đến chủ nhật là thiếu nhận thức thời gian cơ bản – nên luyện qua bài hát, bảng thời gian, trò chơi sắp xếp lịch."
+      },
+      {
+        "input": "Trẻ không biết kể tên các tháng trong năm",
+        "output": "Không nhớ được tên các tháng cho thấy trẻ chậm phát triển khái niệm thời gian – nên luyện qua lịch, bài hát và trò chơi ghép thẻ tháng."
+      },
+      {
+        "input": "Trẻ không biết phân biệt hôm qua – hôm nay – ngày mai",
+        "output": "Không nhận thức được mốc thời gian gần là dấu hiệu cần hỗ trợ – nên luyện phân biệt bằng câu hỏi mẫu: 'Hôm qua con làm gì?', 'Hôm nay là ngày gì?'."
+      },
+      {
+        "input": "Trẻ không biết kể tên các đồ vật trong lớp học",
+        "output": "Không gọi tên được bảng, ghế, bút... là thiếu vốn từ học đường – nên luyện qua môi trường lớp học thực tế và hình ảnh minh họa."
+      },
+      {
+        "input": "Trẻ không biết kể tên các phòng trong nhà",
+        "output": "Không biết phòng khách, bếp, ngủ là thiếu vốn từ sinh hoạt – nên luyện qua sơ đồ nhà và gọi tên qua tranh ảnh."
+      },
+      {
+        "input": "Trẻ không biết kể tên các đồ vật trong nhà bếp",
+        "output": "Không nhận diện được chảo, nồi, bếp là chậm vốn từ chủ đề bếp núc – nên luyện bằng đồ vật thật hoặc hình ảnh thực tế."
+      },
+      {
+        "input": "Trẻ không biết kể tên các đồ vật trong phòng tắm",
+        "output": "Không gọi được xà phòng, bàn chải, vòi sen là dấu hiệu chậm từ vựng – nên luyện bằng hoạt động thực tế và tranh minh họa."
+      },
+      {
+        "input": "Trẻ không biết kể tên các thiết bị điện trong nhà",
+        "output": "Không biết tivi, máy giặt, quạt... là thiếu từ vựng – nên luyện gọi tên bằng quan sát thực tế và trò chơi đoán đồ dùng."
+      },
+      {
+        "input": "Trẻ không biết phân biệt trang phục mùa hè và mùa đông",
+        "output": "Không biết áo khoác mặc mùa lạnh là thiếu hiểu biết thời tiết – nên luyện chọn đồ qua trò chơi phân loại hoặc thực tế."
+      },
+      {
+        "input": "Trẻ không biết lựa chọn trang phục phù hợp thời tiết",
+        "output": "Mặc sai loại đồ khi trời mưa, nắng, lạnh là thiếu kỹ năng nhận thức môi trường – nên luyện chọn trang phục theo thời tiết qua hình ảnh."
+      },
+      {
+        "input": "Trẻ không biết tên các trò chơi quen thuộc",
+        "output": "Không gọi được tên trò chơi như đá banh, lắp ghép là thiếu kinh nghiệm chơi – nên luyện qua hoạt động nhóm và trò chơi có hướng dẫn."
+      },
+      {
+        "input": "Trẻ không biết luật chơi của trò chơi đơn giản",
+        "output": "Không tuân thủ luật như 'ai tới trước thì chơi trước' là thiếu hiểu luật – nên luyện qua trò chơi luân phiên, có quy định rõ ràng."
+      },
+      {
+        "input": "Trẻ không biết chia sẻ đồ chơi với bạn",
+        "output": "Không nhường đồ chơi là thiếu kỹ năng xã hội – nên luyện chia sẻ qua các trò chơi hợp tác hoặc theo cặp."
+      },
+      {
+        "input": "Trẻ không biết chờ đến lượt khi chơi",
+        "output": "Không chờ lượt là rối loạn điều tiết hành vi – nên luyện phiên lượt bằng trò chơi có luật rõ và tín hiệu chuyển lượt."
+      },
+      {
+        "input": "Trẻ không biết hợp tác với bạn trong trò chơi nhóm",
+        "output": "Không phối hợp với bạn thể hiện kỹ năng hợp tác kém – nên luyện trò chơi nhóm yêu cầu chia vai, chia nhiệm vụ."
+      },
+      {
+        "input": "Trẻ không biết thể hiện cảm xúc khi thắng hoặc thua",
+        "output": "Không thể hiện vui – buồn khi chơi là dấu hiệu chậm phản xạ cảm xúc – nên luyện qua trò chơi thi đấu nhỏ và hướng dẫn cách bày tỏ cảm xúc."
+      },
+      {
+        "input": "Trẻ không biết tuân theo quy tắc khi chơi",
+        "output": "Không chơi đúng luật là thiếu ý thức tập thể – nên luyện qua trò chơi có giám sát, luật đơn giản, khen thưởng khi tuân thủ."
+      },
+      {
+        "input": "Trẻ không biết kết thúc trò chơi một cách tích cực",
+        "output": "Không nói 'hết rồi', 'chơi vui quá'... là thiếu kỹ năng kết thúc tương tác – nên luyện mẫu câu kết thúc và cử chỉ tích cực khi chơi xong."
+      },
+      {
+        "input": "Trẻ không biết tham gia trò chuyện theo nhóm",
+        "output": "Trẻ không biết chờ lượt, giữ chủ đề khi nói nhóm là thiếu kỹ năng hội thoại xã hội – nên luyện đối thoại có luân phiên và hỗ trợ trực quan."
+      },
+      {
+        "input": "Trẻ không biết trình bày ý kiến trước tập thể",
+        "output": "Trẻ im lặng hoặc nói lí nhí khi phát biểu là thiếu kỹ năng thể hiện bản thân – nên luyện nói trước nhóm nhỏ với hỗ trợ từ giáo viên."
+      },
+      {
+        "input": "Trẻ không biết lắng nghe khi người khác phát biểu",
+        "output": "Không nhìn, không chú ý khi người khác nói là thiếu kỹ năng nghe tích cực – nên luyện kỹ năng lắng nghe qua trò chơi 'nghe và làm theo'."
+      },
+      {
+        "input": "Trẻ không biết giơ tay khi muốn phát biểu",
+        "output": "Nói chen hoặc chờ không đúng lúc là chưa biết quy tắc giao tiếp lớp học – nên luyện phản xạ giơ tay, chờ cô gọi mới nói."
+      },
+      {
+        "input": "Trẻ không biết phản hồi ý kiến người khác một cách phù hợp",
+        "output": "Không biết nói 'con cũng nghĩ vậy', hoặc 'con không đồng ý'... là thiếu kỹ năng phản hồi xã hội – nên luyện mẫu câu thảo luận."
+      },
+      {
+        "input": "Trẻ không biết sử dụng ngôn ngữ cơ thể trong giao tiếp",
+        "output": "Không biết gật đầu, lắc đầu, vẫy tay... là thiếu phản xạ phi ngôn ngữ – nên luyện qua trò chơi biểu cảm không lời."
+      },
+      {
+        "input": "Trẻ không biết điều chỉnh tư thế khi giao tiếp",
+        "output": "Ngồi gục, quay lưng khi nói chuyện là thiếu kỹ năng hình thể – nên luyện tư thế chuẩn qua mô hình và phản hồi trực tiếp từ giáo viên."
+      },
+      {
+        "input": "Trẻ không biết nhìn vào người đối diện khi nói chuyện",
+        "output": "Không giao tiếp bằng mắt là dấu hiệu hạn chế tương tác xã hội – nên luyện tiếp xúc ánh mắt từng giây ngắn với người thân."
+      },
+      {
+        "input": "Trẻ không biết sử dụng nét mặt để thể hiện cảm xúc",
+        "output": "Không biết cười khi vui, nhăn mặt khi giận là thiếu biểu đạt cảm xúc – nên luyện biểu cảm khuôn mặt qua gương hoặc ảnh."
+      },
+      {
+        "input": "Trẻ không biết sử dụng ánh mắt để thể hiện sự chú ý",
+        "output": "Không dùng ánh mắt nhìn người nói, đồ vật là thiếu kỹ năng điều phối thị giác – nên luyện 'nhìn – chỉ – nói' trong trò chơi tương tác."
+      },
+      {
+        "input": "Trẻ không biết nhận biết cảm xúc qua nét mặt người khác",
+        "output": "Không phân biệt nét mặt vui, buồn, giận là thiếu đồng cảm xã hội – nên luyện qua hình ảnh minh họa cảm xúc."
+      },
+      {
+        "input": "Trẻ không biết phân biệt giọng nói thể hiện cảm xúc",
+        "output": "Không nhận ra giọng tức giận, vui vẻ, buồn là thiếu kỹ năng nghe cảm xúc – nên luyện qua trò chơi 'đoán cảm xúc theo giọng'."
+      },
+      {
+        "input": "Trẻ không biết bày tỏ cảm xúc một cách phù hợp",
+        "output": "La hét khi tức giận, cười phá khi vui là thiếu điều tiết cảm xúc – nên luyện biểu cảm phù hợp qua mô hình hành vi."
+      },
+      {
+        "input": "Trẻ không biết tự điều chỉnh cảm xúc khi bị từ chối",
+        "output": "Khóc to, giận dữ khi bị từ chối là thiếu kỹ năng quản lý cảm xúc – nên luyện phản ứng thay thế qua trò chơi mô phỏng tình huống."
+      },
+      {
+        "input": "Trẻ không biết bày tỏ sự tức giận một cách phù hợp",
+        "output": "Ném đồ, đánh người khi giận là phản ứng sai lệch – nên luyện mẫu câu 'Con đang tức', 'Cho con ngồi một mình'."
+      },
+      {
+        "input": "Trẻ không biết xoa dịu cảm xúc tiêu cực của bản thân",
+        "output": "Không biết hít thở, tìm nơi yên tĩnh là thiếu kỹ năng làm dịu – nên luyện chiến lược làm dịu cảm xúc qua bài tập đơn giản."
+      },
+      {
+        "input": "Trẻ không biết chia sẻ cảm xúc với người khác",
+        "output": "Giữ trong lòng, không chia sẻ là thiếu kết nối xã hội – nên luyện mẫu câu như 'Con đang buồn vì...'."
+      },
+      {
+        "input": "Trẻ không biết đồng cảm với cảm xúc người khác",
+        "output": "Không phản ứng khi bạn khóc, buồn là thiếu đồng cảm – nên luyện nhận biết cảm xúc và đưa ra phản hồi phù hợp."
+      },
+      {
+        "input": "Trẻ không biết điều chỉnh lời nói theo cảm xúc người nghe",
+        "output": "Không nói nhẹ lại khi người nghe buồn là thiếu cảm nhận đối tượng giao tiếp – nên luyện thay đổi ngữ điệu theo bối cảnh."
+      },
+      {
+        "input": "Trẻ không biết giữ bình tĩnh khi bị kích động",
+        "output": "La hét, khóc lớn khi bị kích thích là rối loạn điều tiết cảm xúc – nên luyện chiến lược bình tĩnh: đếm số, hít thở, tìm góc nghỉ."
+      },
+      {
+        "input": "Trẻ không biết chấp nhận sự thay đổi trong sinh hoạt",
+        "output": "Khi lịch sinh hoạt thay đổi, nếu trẻ phản ứng tiêu cực là do chưa linh hoạt – nên luyện thích nghi dần với thay đổi nhỏ hằng ngày."
+      },
+      {
+        "input": "Trẻ không biết thích nghi khi có sự thay đổi bất ngờ",
+        "output": "Trẻ dễ hoảng loạn khi có thay đổi đột ngột cho thấy thiếu kỹ năng điều chỉnh – nên luyện ứng phó bằng kịch bản thay thế trước."
+      },
+      {
+        "input": "Trẻ không biết giữ bình tĩnh khi kế hoạch bị thay đổi",
+        "output": "Trẻ cần luyện kỹ năng hít thở sâu, đếm chậm để bình tĩnh khi có thay đổi – nên tạo môi trường an toàn và hướng dẫn trước mỗi chuyển đổi."
+      },
+      {
+        "input": "Trẻ không biết ứng phó khi bị chê trách",
+        "output": "Phản ứng quá mức khi bị góp ý là do trẻ chưa kiểm soát cảm xúc – nên luyện phản hồi như 'Con sẽ cố gắng sửa' thay vì phản kháng."
+      },
+      {
+        "input": "Trẻ không biết chịu trách nhiệm khi làm sai",
+        "output": "Nếu trẻ đổ lỗi, trốn tránh sai lầm, nên luyện mẫu câu 'Đó là lỗi của con' và khuyến khích sửa lỗi thay vì trừng phạt."
+      },
+      {
+        "input": "Trẻ không biết sửa lỗi khi được nhắc nhở",
+        "output": "Khi trẻ bị nhắc nhưng không thay đổi, là do thiếu phản xạ điều chỉnh – nên luyện phản hồi tích cực sau góp ý."
+      },
+      {
+        "input": "Trẻ không biết học từ sai lầm của bản thân",
+        "output": "Không rút kinh nghiệm từ lỗi là thiếu kỹ năng tự phản ánh – nên luyện trò chuyện cuối ngày: 'Hôm nay con học được gì từ lỗi của mình?'."
+      },
+      {
+        "input": "Trẻ không biết chấp nhận điểm yếu của bản thân",
+        "output": "Trẻ giấu điểm yếu hoặc thất vọng khi không hoàn hảo là thiếu kỹ năng tự nhận thức – nên luyện chấp nhận bằng việc so sánh tiến bộ thay vì hoàn hảo."
+      },
+      {
+        "input": "Trẻ không biết phát huy điểm mạnh của mình",
+        "output": "Không sử dụng thế mạnh là do thiếu nhận thức bản thân – nên luyện nói về điều mình làm tốt và tạo cơ hội phát huy qua hoạt động nhóm."
+      },
+      {
+        "input": "Trẻ không biết đặt mục tiêu cá nhân",
+        "output": "Không biết mình muốn gì là thiếu kỹ năng định hướng – nên luyện đặt mục tiêu ngắn hạn theo mẫu 'Con muốn hôm nay làm gì?'."
+      },
+      {
+        "input": "Trẻ không biết lên kế hoạch thực hiện mục tiêu",
+        "output": "Khi trẻ có mục tiêu nhưng không biết cách làm – nên luyện lên kế hoạch bằng biểu đồ đơn giản: việc – thời gian – ai hỗ trợ."
+      },
+      {
+        "input": "Trẻ không biết kiên trì theo đuổi mục tiêu",
+        "output": "Dễ bỏ cuộc là thiếu khả năng chịu đựng thất bại – nên luyện qua trò chơi nhỏ yêu cầu hoàn thành từng bước, có khích lệ từng phần."
+      },
+      {
+        "input": "Trẻ không biết tự đánh giá kết quả công việc",
+        "output": "Không nhận biết tốt – chưa tốt là thiếu phản xạ tự điều chỉnh – nên luyện đánh giá bằng thang mặt cười hoặc chấm điểm đơn giản."
+      },
+      {
+        "input": "Trẻ không biết xin giúp đỡ khi gặp khó khăn trong học tập",
+        "output": "Trẻ ngại hỏi hoặc không biết diễn đạt khó khăn là thiếu kỹ năng yêu cầu hỗ trợ – nên luyện mẫu câu 'Con chưa hiểu phần này, cô giúp con với được không?'."
+      },
+      {
+        "input": "Trẻ không biết tự điều chỉnh cách học khi không hiệu quả",
+        "output": "Trẻ học mãi không xong mà không thay đổi là thiếu kỹ năng tự điều chỉnh – nên luyện phản xạ 'Có cách nào khác không?', hoặc hỏi người lớn."
+      },
+      {
+        "input": "Trẻ không biết quản lý thời gian học tập hợp lý",
+        "output": "Không chia được thời gian học là do thiếu tổ chức cá nhân – nên luyện lập thời gian biểu đơn giản với giờ học – giờ chơi."
+      },
+      {
+        "input": "Trẻ không biết phân chia thời gian giữa học và chơi",
+        "output": "Chơi quá nhiều hoặc học không nghỉ là mất cân bằng – nên luyện thời gian biểu có minh họa rõ ràng bằng tranh hoặc đồng hồ màu."
+      },
+      {
+        "input": "Trẻ không biết giữ gìn đồ dùng cá nhân",
+        "output": "Làm mất đồ, quăng bút... là thiếu kỹ năng tổ chức – nên luyện giữ gìn qua việc đánh dấu tên, nhắc nhở trách nhiệm cá nhân."
+      },
+      {
+        "input": "Trẻ không biết sắp xếp góc học tập ngăn nắp",
+        "output": "Bàn học bừa bộn, không tìm được đồ là do thiếu hướng dẫn – nên luyện xếp đúng vị trí bằng nhãn tên và dọn dẹp cùng người lớn."
+      },
+      {
+        "input": "Trẻ không biết chuẩn bị đồ dùng học tập đầy đủ",
+        "output": "Không mang đủ sách vở, bút là thiếu tự lập – nên luyện kiểm danh sách trước khi đến trường bằng tranh minh họa hoặc checklist."
+      },
+      {
+        "input": "Trẻ không biết nhắc nhở bản thân hoàn thành nhiệm vụ",
+        "output": "Hay quên việc, không chủ động là thiếu tự điều chỉnh – nên luyện kỹ năng dùng đồng hồ, ghi chú hoặc người nhắc nhở bằng tín hiệu vui."
+      },
+      {
+        "input": "Trẻ không biết tự giác làm bài tập về nhà",
+        "output": "Cần nhắc mới làm bài là thiếu động lực nội tại – nên luyện tạo thói quen cố định, có phần thưởng nhỏ và phản hồi tích cực."
+      },
+      {
+        "input": "Trẻ không biết tự giác thức dậy đúng giờ",
+        "output": "Ngủ dậy trễ, lười rời giường là chưa có nhịp sinh hoạt ổn định – nên luyện đi ngủ – dậy đúng giờ với sự hỗ trợ của báo thức vui nhộn."
+      },
+      {
+        "input": "Trẻ không biết tự giác vệ sinh cá nhân hàng ngày",
+        "output": "Phải nhắc mới đánh răng, rửa mặt là chưa hình thành thói quen – nên luyện qua bảng theo dõi dán hình và phần thưởng nhỏ."
+      },
+      {
+        "input": "Trẻ không biết tự giác ăn uống đúng giờ",
+        "output": "Ăn trễ hoặc bỏ bữa là dấu hiệu chưa có nhịp sinh học ổn – nên luyện thời gian biểu đều đặn và tạo động lực khi ăn đúng giờ."
+      },
+      {
+        "input": "Trẻ không biết lựa chọn thực phẩm tốt cho sức khỏe",
+        "output": "Chỉ thích ăn đồ ngọt, chiên... là thiếu hiểu biết dinh dưỡng – nên luyện chọn thực phẩm tốt qua tranh ảnh và trò chơi nhận biết."
+      },
+      {
+        "input": "Trẻ không biết giữ gìn vệ sinh khi ăn uống",
+        "output": "Ăn bốc, làm rơi vãi thức ăn là thiếu kỹ năng ăn uống lịch sự – nên luyện qua mô hình mẫu và phản hồi tích cực khi thực hiện đúng."
+      },
+      {
+        "input": "Trẻ không biết nhắc nhở người khác giữ vệ sinh chung",
+        "output": "Im lặng khi người khác xả rác là thiếu kỹ năng xã hội – nên luyện câu mẫu: 'Mình cùng giữ sạch chỗ này nhé!'."
+      },
+      {
+        "input": "Trẻ không biết bảo vệ môi trường xung quanh",
+        "output": "Không biết bỏ rác đúng chỗ, tiết kiệm tài nguyên là thiếu nhận thức cộng đồng – nên luyện qua hoạt động lớp học xanh, phân loại rác."
+      },
+      {
+        "input": "Trẻ không biết tiết kiệm điện, nước trong sinh hoạt",
+        "output": "Không tắt điện, vòi nước sau dùng là thiếu kỹ năng bảo vệ tài nguyên – nên luyện nhắc đi nhắc lại, dán hình hướng dẫn gần công tắc, vòi."
+      },
+      {
+        "input": "Trẻ không biết sử dụng đồ dùng cẩn thận",
+        "output": "Hay làm rơi vỡ, vẽ bậy là thiếu kiểm soát hành vi – nên luyện giữ gìn thông qua trò chơi chăm sóc đồ vật như bạn thân."
+      },
+      {
+        "input": "Trẻ không biết xử lý khi đồ vật bị hỏng",
+        "output": "Giấu hoặc hoảng loạn khi đồ hỏng là thiếu kỹ năng giải quyết sự cố – nên luyện phản ứng: 'Báo cho cô/ba/mẹ biết ngay để cùng sửa'."
+      },
+      {
+        "input": "Trẻ không biết nhờ người lớn hỗ trợ khi cần thiết",
+        "output": "Không tìm đến người lớn khi gặp khó là thiếu kỹ năng cầu cứu – nên luyện kỹ năng 'tìm đúng người, nói rõ việc'."
+      },
+      {
+        "input": "Trẻ không biết nói lời cảm ơn khi được giúp đỡ",
+        "output": "Không cảm ơn khi được giúp là thiếu phép lịch sự – nên luyện phản xạ cảm ơn bằng lời hoặc hành động ngay sau hỗ trợ."
+      },
+      {
+        "input": "Trẻ không biết phản ứng khi thấy người khác gặp nạn",
+        "output": "Không giúp bạn té ngã hoặc báo người lớn là thiếu kỹ năng ứng xử nhân văn – nên luyện phản xạ giúp đỡ hoặc báo tin cho người lớn ngay."
+      },
+      {
+        "input": "Trẻ không biết chia sẻ trách nhiệm trong công việc nhóm",
+        "output": "Không làm phần việc được giao là thiếu hợp tác – nên luyện phân vai, có người giám sát và khuyến khích khi hoàn thành nhiệm vụ."
+      },
+      {
+        "input": "Trẻ không biết giữ đúng lời hứa",
+        "output": "Hay hứa cho vui rồi quên là thiếu trách nhiệm – nên luyện lời hứa gắn với hành động thực tế và nhắc lại cam kết."
+      },
+      {
+        "input": "Trẻ không biết xin lỗi khi không thực hiện lời hứa",
+        "output": "Im lặng hoặc tránh né khi sai hứa là thiếu kỹ năng đối diện lỗi – nên luyện phản xạ nhận lỗi và đề xuất cách sửa."
+      },
+      {
+        "input": "Trẻ không biết chấp nhận thất bại",
+        "output": "Khóc, giận, bỏ cuộc khi thua là thiếu khả năng chịu đựng – nên luyện trò chơi có thắng thua và làm gương chấp nhận của người lớn."
+      },
+      {
+        "input": "Trẻ không biết động viên bản thân vượt qua khó khăn",
+        "output": "Tự chê bản thân, dễ nản là thiếu kỹ năng động lực nội tại – nên luyện mẫu câu tự động viên: 'Con làm được mà', 'Cố thêm lần nữa nhé!'."
+      },
+      {
+        "input": "Trẻ không biết lập kế hoạch cho một ngày",
+        "output": "Không lên lịch hoạt động trong ngày là thiếu kỹ năng tổ chức – nên luyện với bảng thời gian biểu có hình ảnh trực quan, theo giờ cụ thể."
+      },
+      {
+        "input": "Trẻ không biết kiểm soát cảm xúc khi bị nhắc nhở",
+        "output": "Trẻ phản ứng quá mức khi bị góp ý là thiếu tự điều chỉnh – nên luyện kỹ năng hít thở, nghe – nghĩ – nói lại sau 5 giây."
+      },
+      {
+        "input": "Trẻ không biết diễn đạt mong muốn một cách rõ ràng",
+        "output": "Nếu trẻ không nói rõ điều mình cần là thiếu kỹ năng giao tiếp mục tiêu – nên luyện mẫu câu 'Con muốn... vì...'."
+      },
+      {
+        "input": "Trẻ không biết tự tin khi trình bày trước đám đông",
+        "output": "Trẻ e ngại, nói lí nhí là thiếu kỹ năng thể hiện – nên luyện nói trước nhóm nhỏ, tăng dần độ khó, khích lệ sau mỗi lần trình bày."
+      },
+      {
+        "input": "Trẻ không biết chấp nhận lời góp ý",
+        "output": "Khi bị góp ý, trẻ giận hoặc im lặng là thiếu kỹ năng phản hồi tích cực – nên luyện phản ứng mẫu như 'Con sẽ lắng nghe và sửa'."
+      },
+      {
+        "input": "Trẻ không biết phản hồi lời góp ý một cách tích cực",
+        "output": "Nếu trẻ chỉ nói 'Không phải lỗi con' là thiếu kỹ năng tiếp nhận – nên luyện nói 'Con hiểu rồi', 'Cảm ơn cô đã nhắc'."
+      },
+      {
+        "input": "Trẻ không biết điều chỉnh hành vi sau khi được góp ý",
+        "output": "Trẻ tiếp tục hành vi sai sau góp ý là thiếu phản xạ thay đổi – nên luyện phản hồi có theo dõi kết quả sau góp ý bằng bảng hành vi."
+      },
+      {
+        "input": "Trẻ không biết đánh giá ưu – nhược điểm của bản thân",
+        "output": "Trẻ không biết mình mạnh/yếu gì là thiếu tự nhận thức – nên luyện bằng bảng liệt kê điểm con làm tốt và điểm cần cải thiện."
+      },
+      {
+        "input": "Trẻ không biết ghi nhớ các bước thực hiện công việc",
+        "output": "Trẻ dễ quên trình tự việc là thiếu kỹ năng lập kế hoạch – nên luyện ghi nhớ bằng sơ đồ 3–5 bước có hình minh họa."
+      },
+      {
+        "input": "Trẻ không biết phân biệt việc quan trọng và không quan trọng",
+        "output": "Làm việc phụ trước việc chính là thiếu kỹ năng ưu tiên – nên luyện qua bảng so sánh việc nào cần làm ngay, việc nào để sau."
+      },
+      {
+        "input": "Trẻ không biết hoàn thành công việc đúng thời hạn",
+        "output": "Hay quên hoặc trễ deadline là thiếu tổ chức – nên luyện đặt nhắc nhở, dùng bảng thời gian và phần thưởng hoàn thành đúng giờ."
+      },
+      {
+        "input": "Trẻ không biết điều chỉnh mục tiêu khi điều kiện thay đổi",
+        "output": "Khi kế hoạch thay đổi, trẻ bối rối là thiếu linh hoạt – nên luyện đưa ra phương án B cho mỗi tình huống."
+      },
+      {
+        "input": "Trẻ không biết ưu tiên việc cần làm trước",
+        "output": "Trẻ làm lung tung, không theo thứ tự là thiếu khả năng lập thứ tự ưu tiên – nên luyện bằng trò chơi sắp xếp theo độ quan trọng."
+      },
+      {
+        "input": "Trẻ không biết lên lịch làm việc theo ngày/tuần",
+        "output": "Không có kế hoạch rõ ràng khiến trẻ dễ quên – nên luyện thiết lập lịch cá nhân bằng bảng hoặc app đơn giản."
+      },
+      {
+        "input": "Trẻ không biết chia nhỏ công việc lớn thành từng bước nhỏ",
+        "output": "Gặp việc lớn là trẻ dễ bỏ cuộc – nên luyện phân tách công việc theo các bước đơn giản với minh họa rõ ràng."
+      },
+      {
+        "input": "Trẻ không biết theo dõi tiến độ hoàn thành nhiệm vụ",
+        "output": "Không kiểm soát tiến độ là thiếu kỹ năng tự giám sát – nên luyện dùng bảng theo dõi có ô tích tick từng bước."
+      },
+      {
+        "input": "Trẻ không biết tự khen ngợi bản thân khi làm tốt",
+        "output": "Không ghi nhận thành công khiến trẻ thiếu tự tin – nên luyện tự nói câu tích cực: 'Con đã cố gắng và con làm được!'."
+      },
+      {
+        "input": "Trẻ không biết phản ánh trung thực kết quả công việc",
+        "output": "Trẻ giấu lỗi hoặc nói sai sự thật là thiếu kỹ năng trung thực – nên luyện phản xạ: 'Con chưa làm phần này, con sẽ làm thêm'."
+      },
+      {
+        "input": "Trẻ không biết phân biệt thông tin đúng và sai",
+        "output": "Tin mọi thứ trên mạng là thiếu tư duy phản biện – nên luyện kiểm tra thông tin qua hỏi người lớn, so sánh nguồn tin."
+      },
+      {
+        "input": "Trẻ không biết xác minh độ tin cậy của thông tin",
+        "output": "Trẻ dễ bị lừa hoặc tin tin đồn – nên luyện kỹ năng xác minh: 'Ai nói? Có bằng chứng không?'."
+      },
+      {
+        "input": "Trẻ không biết tìm kiếm thông tin khi cần thiết",
+        "output": "Trẻ chờ người khác cung cấp thay vì chủ động tìm – nên luyện sử dụng từ khóa cơ bản trên sách, mạng an toàn (có giám sát)."
+      },
+      {
+        "input": "Trẻ không biết sử dụng công nghệ đúng cách",
+        "output": "Trẻ dùng điện thoại chỉ để chơi, không học – nên luyện giới hạn thời gian và hướng dẫn dùng app học, tra cứu đơn giản."
+      },
+      {
+        "input": "Trẻ không biết đặt câu hỏi để mở rộng kiến thức",
+        "output": "Trẻ chỉ nghe mà không hỏi là thiếu phản xạ tư duy – nên khuyến khích hỏi mỗi khi học xong bài hoặc đọc xong một đoạn truyện."
+      },
+      {
+        "input": "Trẻ không biết liên hệ thông tin mới với kiến thức cũ",
+        "output": "Học bài mới nhưng không liên hệ bài cũ là học rời rạc – nên luyện đặt câu hỏi: 'Bài này giống bài nào trước con đã học?'."
+      },
+      {
+        "input": "Trẻ không biết áp dụng kiến thức vào thực tế",
+        "output": "Học xong không biết ứng dụng – nên luyện áp dụng qua hoạt động hàng ngày như đếm khi đi chợ, đọc chữ trên bảng hiệu."
+      },
+      {
+        "input": "Trẻ không biết học từ trải nghiệm thực tế",
+        "output": "Đi chơi, trải nghiệm mà không ghi nhớ là thiếu kỹ năng học từ thực tế – nên luyện kể lại điều đã thấy, đã học sau mỗi chuyến đi."
+      },
+      {
+        "input": "Trẻ không biết đặt câu hỏi khi không hiểu bài",
+        "output": "Không hiểu mà im lặng là thiếu kỹ năng học chủ động – nên luyện mẫu câu: 'Con chưa hiểu phần này, cô nói lại giúp con nhé?'."
+      },
+      {
+        "input": "Trẻ không biết trao đổi với bạn để hiểu bài hơn",
+        "output": "Chỉ học một mình, không chia sẻ là thiếu kỹ năng hợp tác – nên luyện hoạt động cặp đôi: hỏi – trả lời – cùng sửa bài."
+      },
+      {
+        "input": "Trẻ không biết hợp tác trong hoạt động học nhóm",
+        "output": "Không làm việc chung được là do thiếu kỹ năng phối hợp – nên luyện chia vai rõ ràng và khen khi hợp tác tốt."
+      },
+      {
+        "input": "Trẻ không biết giữ vai trò khi làm việc nhóm",
+        "output": "Trẻ không biết mình làm gì là thiếu kỹ năng vai trò – nên luyện giao nhiệm vụ rõ ràng, dán nhãn vai trò trên thẻ tên."
+      },
+      {
+        "input": "Trẻ không biết đưa ra ý kiến cá nhân khi làm việc nhóm",
+        "output": "Trẻ sợ nói hoặc nói không rõ là thiếu kỹ năng thể hiện bản thân – nên luyện mẫu câu: 'Con nghĩ rằng...', 'Ý của con là...'."
+      },
+      {
+        "input": "Trẻ không biết lắng nghe ý kiến bạn trong nhóm",
+        "output": "Không chú ý hoặc phủ nhận ý bạn là thiếu tôn trọng – nên luyện nghe xong lặp lại ý bạn: 'Bạn nói rằng... đúng không?'."
+      },
+      {
+        "input": "Trẻ không biết điều chỉnh ý kiến khi nhóm phản biện",
+        "output": "Trẻ cố chấp, không thay đổi là thiếu linh hoạt – nên luyện nói: 'Con sẽ suy nghĩ lại', hoặc 'Ý bạn cũng hay đó!'."
+      },
+      {
+        "input": "Trẻ không biết tổng hợp ý kiến để đưa ra quyết định nhóm",
+        "output": "Không biết kết luận sau thảo luận là thiếu tư duy tổ chức – nên luyện ghi lại ý, gạch chân ý trùng và quyết định dựa vào số đông."
+      },
+      {
+        "input": "Trẻ không biết sử dụng tranh luận tích cực trong nhóm",
+        "output": "Trẻ cãi nhau thay vì trao đổi – nên luyện cách tranh luận: không lớn tiếng, dùng lý lẽ và tôn trọng ý khác biệt."
+      },
+      {
+        "input": "Trẻ không biết khích lệ thành viên nhóm khi làm tốt",
+        "output": "Không nói lời khen là thiếu kỹ năng động viên – nên luyện câu đơn giản như 'Bạn làm giỏi quá!', 'Cảm ơn bạn!'."
+      },
+      {
+        "input": "Trẻ không biết chia sẻ khi nhóm gặp khó khăn",
+        "output": "Im lặng khi nhóm rối loạn là thiếu kỹ năng đồng đội – nên luyện mẫu phản hồi: 'Chúng mình làm thế này thử nhé!'."
+      },
+      {
+        "input": "Trẻ không biết giữ tinh thần trách nhiệm trong nhóm",
+        "output": "Làm qua loa, bỏ ngang việc là thiếu cam kết – nên luyện thỏa thuận trước: 'Con đồng ý làm phần này và sẽ hoàn thành'."
+      },
+      {
+        "input": "Trẻ không biết hoàn thành phần việc được giao trong nhóm",
+        "output": "Trẻ bỏ dở nhiệm vụ là thiếu theo dõi và hỗ trợ – nên luyện đánh giá sau nhóm, có bảng nhiệm vụ và tick khi hoàn thành."
+      },
+      {
+        "input": "Trẻ không biết nhận xét – đánh giá sau khi hoàn thành nhóm",
+        "output": "Không phản hồi sau khi làm xong là thiếu kỹ năng phản tư – nên luyện mẫu: 'Điều con làm tốt là...', 'Lần sau con cần làm khác là...'."
+      },
+      {
+    "input": "Trẻ không biết tự đánh giá vai trò của mình trong nhóm",
+    "output": "Nếu trẻ không nhận ra mình đã làm gì trong nhóm, nên luyện phản xạ đánh giá bản thân sau mỗi hoạt động với mẫu: 'Con đã giúp nhóm bằng việc...'."
+  },
+  {
+    "input": "Trẻ không biết cách xây dựng mục tiêu nhóm",
+    "output": "Khi nhóm làm việc không có mục tiêu rõ ràng, trẻ không biết định hướng – nên luyện mẫu: 'Chúng mình muốn đạt được điều gì?'."
+  },
+  {
+    "input": "Trẻ không biết điều phối hoạt động trong nhóm",
+    "output": "Không chia thời gian, việc làm cho các thành viên là thiếu kỹ năng điều phối – nên luyện qua trò chơi chia vai và theo dõi tiến độ."
+  },
+  {
+    "input": "Trẻ không biết kiểm soát mâu thuẫn trong nhóm",
+    "output": "Khi có tranh cãi, trẻ im lặng hoặc to tiếng – nên luyện mẫu câu: 'Chúng mình cùng nghe nhau nói lần lượt nhé!'."
+  },
+  {
+    "input": "Trẻ không biết giữ sự công bằng trong phân công công việc",
+    "output": "Nếu trẻ nhận phần dễ, giao bạn phần khó – nên luyện kỹ năng chia đều bằng hình thức rút thăm hoặc thỏa thuận công khai."
+  },
+  {
+    "input": "Trẻ không biết ghi nhận thành tích chung của nhóm",
+    "output": "Không nói lời khen sau khi nhóm hoàn thành – nên luyện mẫu: 'Cả nhóm mình đã cố gắng rất tốt, mọi người giỏi lắm!'."
+  },
+  {
+    "input": "Trẻ không biết xây dựng tinh thần đoàn kết trong nhóm",
+    "output": "Làm việc riêng lẻ, không gắn kết là thiếu kỹ năng đồng đội – nên luyện hoạt động nhóm có chia sẻ, giao lưu trước khi bắt đầu."
+  },
+  {
+    "input": "Trẻ không biết tạo động lực cho nhóm hoàn thành mục tiêu",
+    "output": "Không khích lệ, không cổ vũ khi nhóm mệt – nên luyện câu cổ vũ đơn giản: 'Cố lên nào!', 'Chúng mình gần xong rồi!'."
+  },
+  {
+    "input": "Trẻ không biết giải quyết xung đột giữa các bạn",
+    "output": "Khi bạn giận nhau, trẻ tránh né hoặc can không đúng – nên luyện kỹ năng lắng nghe – đặt câu hỏi trung lập như: 'Hai bạn có thể nói rõ cho mình nghe không?'."
+  },
+  {
+    "input": "Trẻ không biết đóng vai trò trung gian hòa giải",
+    "output": "Không biết can thiệp khi bạn cãi nhau là thiếu kỹ năng xã hội – nên luyện phản ứng trung gian: 'Mình nghĩ chúng ta nên nói chuyện bình tĩnh hơn'."
+  },
+  {
+    "input": "Trẻ không biết tránh né tình huống gây xung đột",
+    "output": "Cố tranh cãi đến cùng dễ gây căng thẳng – nên luyện kỹ năng lùi lại, thay đổi chủ đề hoặc nhờ người lớn giúp."
+  },
+  {
+    "input": "Trẻ không biết sử dụng lời nói tích cực để hòa giải",
+    "output": "Sử dụng lời đổ lỗi sẽ làm căng thẳng hơn – nên luyện mẫu câu: 'Chúng mình đều muốn vui vẻ, cùng nghĩ cách giải quyết nhé!'."
+  },
+  {
+    "input": "Trẻ không biết xin lỗi khi làm tổn thương bạn",
+    "output": "Khi làm bạn buồn mà không xin lỗi là thiếu nhận thức hậu quả hành vi – nên luyện mẫu: 'Mình xin lỗi vì... Mình sẽ sửa'."
+  },
+  {
+    "input": "Trẻ không biết tha thứ khi bạn đã xin lỗi",
+    "output": "Giận dai, không tha thứ là chưa hiểu giá trị hoà giải – nên luyện mẫu: 'Mình chấp nhận lời xin lỗi, lần sau mình chơi vui hơn nhé!'."
+  },
+  {
+    "input": "Trẻ không biết thiết lập ranh giới cá nhân khi chơi cùng bạn",
+    "output": "Trẻ dễ bị ép chơi điều không thích là thiếu kỹ năng đặt giới hạn – nên luyện nói: 'Mình không thích vậy, mình muốn chơi khác'."
+  },
+  {
+    "input": "Trẻ không biết tôn trọng ranh giới của người khác",
+    "output": "Cố ép bạn làm theo ý mình là chưa có kỹ năng đồng thuận – nên luyện hỏi: 'Bạn có muốn chơi thế này không?' trước khi bắt đầu."
+  },
+  {
+    "input": "Trẻ không biết phân biệt hành vi phù hợp và không phù hợp",
+    "output": "Không nhận ra hành động làm người khác khó chịu là thiếu nhận thức xã hội – nên luyện đánh giá hành vi qua tranh tình huống."
+  },
+  {
+    "input": "Trẻ không biết từ chối hành vi xâm phạm ranh giới cá nhân",
+    "output": "Nếu trẻ im lặng khi bị đụng chạm quá mức, nên luyện kỹ năng nói 'KHÔNG' rõ ràng và dứt khoát khi thấy không thoải mái."
+  },
+  {
+    "input": "Trẻ không biết nhờ người lớn hỗ trợ khi bị làm phiền",
+    "output": "Khi bị làm phiền, trẻ không biết tìm ai giúp – nên luyện gọi tên cụ thể như: 'Cô ơi, bạn làm con khó chịu quá!'."
+  },
+  {
+    "input": "Trẻ không biết mô tả lại tình huống bị xâm phạm để được giúp đỡ",
+    "output": "Nếu trẻ không kể lại rõ ràng chuyện xảy ra – nên luyện mô tả theo mẫu: Ai – làm gì – ở đâu – con cảm thấy thế nào."
+  },
+  {
+    "input": "Trẻ không biết tự bảo vệ bản thân trước nguy cơ bị xâm hại",
+    "output": "Không biết cách phản kháng, rút lui – nên luyện kỹ năng hô to, bỏ chạy, nói rõ ràng: 'KHÔNG! DỪNG LẠI NGAY!'."
+  },
+  {
+    "input": "Trẻ không biết phân biệt hành vi xâm hại và không xâm hại",
+    "output": "Không rõ hành động nào là bình thường, hành vi nào là sai trái – nên luyện phân biệt bằng tranh vẽ và quy tắc 5 vùng cơ thể."
+  },
+  {
+    "input": "Trẻ không biết nói “không” với hành vi xâm hại",
+    "output": "Khi bị người khác sờ soạng mà im lặng là nguy cơ cao – nên luyện dứt khoát nói KHÔNG, bỏ đi và kể ngay cho người lớn tin cậy."
+  },
+  {
+    "input": "Trẻ không biết kêu cứu khi gặp nguy hiểm về thân thể",
+    "output": "Không hét, không chạy khi bị nắm tay kéo đi – nên luyện hô: 'CỨU CON VỚI!', chạy vào nơi đông người và tìm người lớn."
+  },
+  {
+    "input": "Trẻ không biết kể lại sự việc xâm hại cho người đáng tin cậy",
+    "output": "Trẻ giấu chuyện vì sợ hoặc không biết ai tin cậy – nên luyện chọn 3 người tin cậy (ba, mẹ, cô giáo...) để chia sẻ khi cần."
+  },
+  {
+    "input": "Trẻ không biết giữ bí mật an toàn và không an toàn",
+    "output": "Giữ bí mật bị dọa, bị sờ là nguy cơ lớn – nên luyện phân biệt: bí mật làm con lo lắng thì PHẢI nói với người lớn."
+  },
+  {
+    "input": "Trẻ không biết khi nào nên chia sẻ bí mật với người lớn",
+    "output": "Trẻ nghĩ rằng giữ bí mật là tốt – nên luyện nguyên tắc: nếu bí mật khiến con sợ, con phải kể ra để được bảo vệ."
+  },
+  {
+    "input": "Trẻ không biết tránh tiếp xúc thân thể không phù hợp",
+    "output": "Nếu ai vuốt má, ôm mà con không thích, nên luyện kỹ năng né tránh nhẹ nhàng và nói: 'Con không thích vậy ạ!'."
+  },
+  {
+    "input": "Trẻ không biết quy tắc “5 vùng cơ thể” an toàn",
+    "output": "Trẻ không biết đâu là vùng riêng tư là nguy cơ cao – nên luyện bằng hình vẽ minh họa vùng đỏ – vàng – xanh và luật: 'Không ai được chạm vào vùng đỏ'."
+  },
+  {
+    "input": "Trẻ không biết phản ứng khi bị đụng chạm vùng kín",
+    "output": "Trẻ bị động khi bị sờ vùng kín là nguy cơ xâm hại – nên luyện hô to, đẩy ra, bỏ chạy và nói ngay với người đáng tin."
+  },
+  {
+    "input": "Trẻ không biết ai là người đáng tin cậy để kể chuyện riêng tư",
+    "output": "Trẻ kể với người không an toàn là nguy cơ – nên luyện chọn người đáng tin qua bảng 3 người hỗ trợ luôn bảo vệ con."
+  },
+  {
+    "input": "Trẻ không biết đánh giá hành vi của người khác có đáng tin không",
+    "output": "Không nhận ra ai đang lợi dụng, ai thật lòng là thiếu kỹ năng nhận biết – nên luyện nhận diện dấu hiệu bất thường: dọa, cho quà, bắt giữ bí mật."
+  },
+  {
+    "input": "Trẻ không biết cách rút lui khỏi tình huống nguy hiểm",
+    "output": "Trẻ bị giữ lại mà không biết cách thoát – nên luyện kỹ năng nói dối an toàn như 'Con đi lấy đồ cho mẹ' để rút lui."
+  },
+  {
+    "input": "Trẻ không biết giữ an toàn khi sử dụng mạng xã hội",
+    "output": "Kết bạn lung tung, chia sẻ ảnh cá nhân là rủi ro – nên luyện quy tắc: 'Không chia sẻ thông tin cá nhân – Không gặp người lạ online'."
+  },
+  {
+    "input": "Trẻ không biết bảo vệ thông tin cá nhân khi online",
+    "output": "Chia sẻ tên, trường, địa chỉ là nguy cơ – nên luyện kỹ năng giữ bí mật thông tin và không điền vào form lạ."
+  },
+  {
+    "input": "Trẻ không biết chặn hoặc báo cáo khi bị làm phiền trên mạng",
+    "output": "Khi bị nhắn tin làm phiền mà im lặng là nguy cơ – nên luyện thao tác chặn tài khoản và báo người lớn khi có chuyện bất thường."
+  },
+  {
+    "input": "Trẻ không biết kiểm tra độ tin cậy của người quen trên mạng",
+    "output": "Dễ tin người mới quen online là nguy cơ – nên luyện kiểm tra danh tính thật và hỏi ý kiến người lớn trước khi tương tác."
+  },
+  {
+    "input": "Trẻ không biết phân biệt nội dung lành mạnh và độc hại trên mạng",
+    "output": "Trẻ xem nội dung bạo lực, đồi trụy mà không nhận biết là nguy cơ – nên luyện nhận diện dấu hiệu và báo người lớn khi thấy nội dung xấu."
+  },
+  {
+    "input": "Trẻ không biết thời gian sử dụng thiết bị công nghệ phù hợp",
+    "output": "Dùng máy quá lâu gây nghiện, mỏi mắt – nên luyện dùng đồng hồ hẹn giờ và quy tắc 'chơi 30 phút – nghỉ 10 phút'."
+  },
+  {
+    "input": "Trẻ không biết kết thúc hoạt động online đúng lúc",
+    "output": "Trẻ bướng, không chịu dừng chơi là thiếu tự kiểm soát – nên luyện quy tắc 'con chọn tắt hay mẹ tắt', và tạo thói quen chuyển hoạt động mềm."
+  },
+  {
+    "input": "Trẻ không biết tự đánh giá vai trò của mình trong nhóm",
+    "output": "Nếu trẻ không nhận ra mình đã làm gì trong nhóm, nên luyện phản xạ đánh giá bản thân sau mỗi hoạt động với mẫu: 'Con đã giúp nhóm bằng việc...'."
+  },
+  {
+    "input": "Trẻ không biết cách xây dựng mục tiêu nhóm",
+    "output": "Khi nhóm làm việc không có mục tiêu rõ ràng, trẻ không biết định hướng – nên luyện mẫu: 'Chúng mình muốn đạt được điều gì?'."
+  },
+  {
+    "input": "Trẻ không biết điều phối hoạt động trong nhóm",
+    "output": "Không chia thời gian, việc làm cho các thành viên là thiếu kỹ năng điều phối – nên luyện qua trò chơi chia vai và theo dõi tiến độ."
+  },
+  {
+    "input": "Trẻ không biết kiểm soát mâu thuẫn trong nhóm",
+    "output": "Khi có tranh cãi, trẻ im lặng hoặc to tiếng – nên luyện mẫu câu: 'Chúng mình cùng nghe nhau nói lần lượt nhé!'."
+  },
+  {
+    "input": "Trẻ không biết giữ sự công bằng trong phân công công việc",
+    "output": "Nếu trẻ nhận phần dễ, giao bạn phần khó – nên luyện kỹ năng chia đều bằng hình thức rút thăm hoặc thỏa thuận công khai."
+  },
+  {
+    "input": "Trẻ không biết ghi nhận thành tích chung của nhóm",
+    "output": "Không nói lời khen sau khi nhóm hoàn thành – nên luyện mẫu: 'Cả nhóm mình đã cố gắng rất tốt, mọi người giỏi lắm!'."
+  },
+  {
+    "input": "Trẻ không biết xây dựng tinh thần đoàn kết trong nhóm",
+    "output": "Làm việc riêng lẻ, không gắn kết là thiếu kỹ năng đồng đội – nên luyện hoạt động nhóm có chia sẻ, giao lưu trước khi bắt đầu."
+  },
+  {
+    "input": "Trẻ không biết tạo động lực cho nhóm hoàn thành mục tiêu",
+    "output": "Không khích lệ, không cổ vũ khi nhóm mệt – nên luyện câu cổ vũ đơn giản: 'Cố lên nào!', 'Chúng mình gần xong rồi!'."
+  },
+  {
+    "input": "Trẻ không biết giải quyết xung đột giữa các bạn",
+    "output": "Khi bạn giận nhau, trẻ tránh né hoặc can không đúng – nên luyện kỹ năng lắng nghe – đặt câu hỏi trung lập như: 'Hai bạn có thể nói rõ cho mình nghe không?'."
+  },
+  {
+    "input": "Trẻ không biết đóng vai trò trung gian hòa giải",
+    "output": "Không biết can thiệp khi bạn cãi nhau là thiếu kỹ năng xã hội – nên luyện phản ứng trung gian: 'Mình nghĩ chúng ta nên nói chuyện bình tĩnh hơn'."
+  },
+  {
+    "input": "Trẻ không biết tránh né tình huống gây xung đột",
+    "output": "Cố tranh cãi đến cùng dễ gây căng thẳng – nên luyện kỹ năng lùi lại, thay đổi chủ đề hoặc nhờ người lớn giúp."
+  },
+  {
+    "input": "Trẻ không biết sử dụng lời nói tích cực để hòa giải",
+    "output": "Sử dụng lời đổ lỗi sẽ làm căng thẳng hơn – nên luyện mẫu câu: 'Chúng mình đều muốn vui vẻ, cùng nghĩ cách giải quyết nhé!'."
+  },
+  {
+    "input": "Trẻ không biết xin lỗi khi làm tổn thương bạn",
+    "output": "Khi làm bạn buồn mà không xin lỗi là thiếu nhận thức hậu quả hành vi – nên luyện mẫu: 'Mình xin lỗi vì... Mình sẽ sửa'."
+  },
+  {
+    "input": "Trẻ không biết tha thứ khi bạn đã xin lỗi",
+    "output": "Giận dai, không tha thứ là chưa hiểu giá trị hoà giải – nên luyện mẫu: 'Mình chấp nhận lời xin lỗi, lần sau mình chơi vui hơn nhé!'."
+  },
+  {
+    "input": "Trẻ không biết thiết lập ranh giới cá nhân khi chơi cùng bạn",
+    "output": "Trẻ dễ bị ép chơi điều không thích là thiếu kỹ năng đặt giới hạn – nên luyện nói: 'Mình không thích vậy, mình muốn chơi khác'."
+  },
+  {
+    "input": "Trẻ không biết tôn trọng ranh giới của người khác",
+    "output": "Cố ép bạn làm theo ý mình là chưa có kỹ năng đồng thuận – nên luyện hỏi: 'Bạn có muốn chơi thế này không?' trước khi bắt đầu."
+  },
+  {
+    "input": "Trẻ không biết phân biệt hành vi phù hợp và không phù hợp",
+    "output": "Không nhận ra hành động làm người khác khó chịu là thiếu nhận thức xã hội – nên luyện đánh giá hành vi qua tranh tình huống."
+  },
+  {
+    "input": "Trẻ không biết từ chối hành vi xâm phạm ranh giới cá nhân",
+    "output": "Nếu trẻ im lặng khi bị đụng chạm quá mức, nên luyện kỹ năng nói 'KHÔNG' rõ ràng và dứt khoát khi thấy không thoải mái."
+  },
+  {
+    "input": "Trẻ không biết nhờ người lớn hỗ trợ khi bị làm phiền",
+    "output": "Khi bị làm phiền, trẻ không biết tìm ai giúp – nên luyện gọi tên cụ thể như: 'Cô ơi, bạn làm con khó chịu quá!'."
+  },
+  {
+    "input": "Trẻ không biết mô tả lại tình huống bị xâm phạm để được giúp đỡ",
+    "output": "Nếu trẻ không kể lại rõ ràng chuyện xảy ra – nên luyện mô tả theo mẫu: Ai – làm gì – ở đâu – con cảm thấy thế nào."
+  },
+  {
+    "input": "Trẻ không biết tự bảo vệ bản thân trước nguy cơ bị xâm hại",
+    "output": "Không biết cách phản kháng, rút lui – nên luyện kỹ năng hô to, bỏ chạy, nói rõ ràng: 'KHÔNG! DỪNG LẠI NGAY!'."
+  },
+  {
+    "input": "Trẻ không biết phân biệt hành vi xâm hại và không xâm hại",
+    "output": "Không rõ hành động nào là bình thường, hành vi nào là sai trái – nên luyện phân biệt bằng tranh vẽ và quy tắc 5 vùng cơ thể."
+  },
+  {
+    "input": "Trẻ không biết nói “không” với hành vi xâm hại",
+    "output": "Khi bị người khác sờ soạng mà im lặng là nguy cơ cao – nên luyện dứt khoát nói KHÔNG, bỏ đi và kể ngay cho người lớn tin cậy."
+  },
+  {
+    "input": "Trẻ không biết kêu cứu khi gặp nguy hiểm về thân thể",
+    "output": "Không hét, không chạy khi bị nắm tay kéo đi – nên luyện hô: 'CỨU CON VỚI!', chạy vào nơi đông người và tìm người lớn."
+  },
+  {
+    "input": "Trẻ không biết kể lại sự việc xâm hại cho người đáng tin cậy",
+    "output": "Trẻ giấu chuyện vì sợ hoặc không biết ai tin cậy – nên luyện chọn 3 người tin cậy (ba, mẹ, cô giáo...) để chia sẻ khi cần."
+  },
+  {
+    "input": "Trẻ không biết giữ bí mật an toàn và không an toàn",
+    "output": "Giữ bí mật bị dọa, bị sờ là nguy cơ lớn – nên luyện phân biệt: bí mật làm con lo lắng thì PHẢI nói với người lớn."
+  },
+  {
+    "input": "Trẻ không biết khi nào nên chia sẻ bí mật với người lớn",
+    "output": "Trẻ nghĩ rằng giữ bí mật là tốt – nên luyện nguyên tắc: nếu bí mật khiến con sợ, con phải kể ra để được bảo vệ."
+  },
+  {
+    "input": "Trẻ không biết tránh tiếp xúc thân thể không phù hợp",
+    "output": "Nếu ai vuốt má, ôm mà con không thích, nên luyện kỹ năng né tránh nhẹ nhàng và nói: 'Con không thích vậy ạ!'."
+  },
+  {
+    "input": "Trẻ không biết quy tắc “5 vùng cơ thể” an toàn",
+    "output": "Trẻ không biết đâu là vùng riêng tư là nguy cơ cao – nên luyện bằng hình vẽ minh họa vùng đỏ – vàng – xanh và luật: 'Không ai được chạm vào vùng đỏ'."
+  },
+  {
+    "input": "Trẻ không biết phản ứng khi bị đụng chạm vùng kín",
+    "output": "Trẻ bị động khi bị sờ vùng kín là nguy cơ xâm hại – nên luyện hô to, đẩy ra, bỏ chạy và nói ngay với người đáng tin."
+  },
+  {
+    "input": "Trẻ không biết ai là người đáng tin cậy để kể chuyện riêng tư",
+    "output": "Trẻ kể với người không an toàn là nguy cơ – nên luyện chọn người đáng tin qua bảng 3 người hỗ trợ luôn bảo vệ con."
+  },
+  {
+    "input": "Trẻ không biết đánh giá hành vi của người khác có đáng tin không",
+    "output": "Không nhận ra ai đang lợi dụng, ai thật lòng là thiếu kỹ năng nhận biết – nên luyện nhận diện dấu hiệu bất thường: dọa, cho quà, bắt giữ bí mật."
+  },
+  {
+    "input": "Trẻ không biết cách rút lui khỏi tình huống nguy hiểm",
+    "output": "Trẻ bị giữ lại mà không biết cách thoát – nên luyện kỹ năng nói dối an toàn như 'Con đi lấy đồ cho mẹ' để rút lui."
+  },
+  {
+    "input": "Trẻ không biết giữ an toàn khi sử dụng mạng xã hội",
+    "output": "Kết bạn lung tung, chia sẻ ảnh cá nhân là rủi ro – nên luyện quy tắc: 'Không chia sẻ thông tin cá nhân – Không gặp người lạ online'."
+  },
+  {
+    "input": "Trẻ không biết bảo vệ thông tin cá nhân khi online",
+    "output": "Chia sẻ tên, trường, địa chỉ là nguy cơ – nên luyện kỹ năng giữ bí mật thông tin và không điền vào form lạ."
+  },
+  {
+    "input": "Trẻ không biết chặn hoặc báo cáo khi bị làm phiền trên mạng",
+    "output": "Khi bị nhắn tin làm phiền mà im lặng là nguy cơ – nên luyện thao tác chặn tài khoản và báo người lớn khi có chuyện bất thường."
+  },
+  {
+    "input": "Trẻ không biết kiểm tra độ tin cậy của người quen trên mạng",
+    "output": "Dễ tin người mới quen online là nguy cơ – nên luyện kiểm tra danh tính thật và hỏi ý kiến người lớn trước khi tương tác."
+  },
+  {
+    "input": "Trẻ không biết phân biệt nội dung lành mạnh và độc hại trên mạng",
+    "output": "Trẻ xem nội dung bạo lực, đồi trụy mà không nhận biết là nguy cơ – nên luyện nhận diện dấu hiệu và báo người lớn khi thấy nội dung xấu."
+  },
+  {
+    "input": "Trẻ không biết thời gian sử dụng thiết bị công nghệ phù hợp",
+    "output": "Dùng máy quá lâu gây nghiện, mỏi mắt – nên luyện dùng đồng hồ hẹn giờ và quy tắc 'chơi 30 phút – nghỉ 10 phút'."
+  },
+  {
+    "input": "Trẻ không biết kết thúc hoạt động online đúng lúc",
+    "output": "Trẻ bướng, không chịu dừng chơi là thiếu tự kiểm soát – nên luyện quy tắc 'con chọn tắt hay mẹ tắt', và tạo thói quen chuyển hoạt động mềm."
+  },
+  {
+    "input": "Trẻ không biết chia sẻ cảm xúc khi sử dụng internet",
+    "output": "Nếu trẻ gặp nội dung khiến lo lắng hoặc buồn nhưng không chia sẻ, nên luyện kỹ năng kể lại với người lớn những cảm xúc khi online."
+  },
+  {
+    "input": "Trẻ không biết báo cáo khi thấy nội dung không phù hợp",
+    "output": "Khi thấy nội dung xấu như bạo lực, nhạy cảm, trẻ cần biết báo cáo với người lớn hoặc nhấn nút 'report'."
+  },
+  {
+    "input": "Trẻ không biết hỏi ý kiến người lớn khi muốn tải ứng dụng mới",
+    "output": "Tải ứng dụng không rõ nguồn là nguy cơ bảo mật – nên luyện thói quen hỏi: 'Mẹ ơi, con muốn cài app này được không?'."
+  },
+  {
+    "input": "Trẻ không biết đọc kỹ điều khoản khi sử dụng dịch vụ online",
+    "output": "Không hiểu nội dung mình đang đồng ý là nguy cơ – nên luyện đọc cùng người lớn, giải thích đơn giản các điều khoản chính."
+  },
+  {
+    "input": "Trẻ không biết nhận diện quảng cáo lừa đảo trên mạng",
+    "output": "Quảng cáo 'trúng thưởng', 'click nhận quà' thường là lừa đảo – nên luyện kỹ năng nghi ngờ và không bấm vào liên kết lạ."
+  },
+  {
+    "input": "Trẻ không biết xử lý khi bị hack tài khoản",
+    "output": "Nếu mất quyền truy cập tài khoản, trẻ cần biết nhờ người lớn đổi mật khẩu, báo cáo và bảo vệ lại thông tin cá nhân."
+  },
+  {
+    "input": "Trẻ không biết đặt mật khẩu an toàn cho tài khoản",
+    "output": "Mật khẩu dễ đoán như 123456 là rủi ro cao – nên luyện đặt mật khẩu dài, có chữ – số – ký tự, không chia sẻ."
+  },
+  {
+    "input": "Trẻ không biết không chia sẻ mật khẩu cho người khác",
+    "output": "Trẻ cần hiểu mật khẩu là riêng tư – nên luyện phản xạ: 'Xin lỗi, con không thể nói mật khẩu đâu ạ'."
+  },
+  {
+    "input": "Trẻ không biết nhận diện hành vi bắt nạt trên mạng",
+    "output": "Nếu bị nhắn tin xúc phạm, đăng ảnh xấu... trẻ cần hiểu đó là bắt nạt mạng – nên luyện nhận diện và nhờ người lớn can thiệp."
+  },
+  {
+    "input": "Trẻ không biết ứng phó khi bị bắt nạt online",
+    "output": "Không phản ứng hoặc phản ứng tiêu cực đều nguy hiểm – nên luyện cách chặn, lưu bằng chứng và nói với người đáng tin cậy."
+  },
+  {
+    "input": "Trẻ không biết hỗ trợ bạn khi bạn bị bắt nạt mạng",
+    "output": "Không nên đứng ngoài hoặc cổ vũ – nên luyện nói với bạn: 'Bạn không sai, mình sẽ giúp bạn báo cô/ba mẹ'."
+  },
+  {
+    "input": "Trẻ không biết nói với người lớn khi thấy nội dung xấu",
+    "output": "Giữ trong lòng hoặc xem tiếp sẽ ảnh hưởng tâm lý – nên luyện phản xạ chia sẻ ngay với người lớn đáng tin cậy."
+  },
+  {
+    "input": "Trẻ không biết sử dụng mạng để học hỏi tích cực",
+    "output": "Chỉ chơi game là phí thời gian – nên hướng dẫn truy cập các kênh học vui như dạy vẽ, thí nghiệm, kiến thức tuổi nhỏ."
+  },
+  {
+    "input": "Trẻ không biết tạo nội dung có trách nhiệm trên mạng",
+    "output": "Nếu đăng bài chế giễu, lan truyền sai lệch là hành vi không lành mạnh – nên luyện tư duy trách nhiệm trước khi chia sẻ."
+  },
+  {
+    "input": "Trẻ không biết tương tác lịch sự trên mạng xã hội",
+    "output": "Bình luận thô, tranh cãi nặng lời là không phù hợp – nên luyện mẫu: 'Con không đồng ý, nhưng con tôn trọng ý kiến của bạn'."
+  },
+  {
+    "input": "Trẻ không biết tôn trọng ý kiến khác biệt trên mạng",
+    "output": "Không ai giống ai – nên luyện nói: 'Bạn nghĩ khác mình nhưng mình vẫn nghe bạn'."
+  },
+  {
+    "input": "Trẻ không biết giữ hình ảnh cá nhân tích cực khi online",
+    "output": "Đăng ảnh phản cảm, video nguy hiểm là rủi ro – nên luyện quy tắc: 'Nếu không muốn thầy cô – cha mẹ xem thì đừng đăng'."
+  },
+  {
+    "input": "Trẻ không biết phân biệt tin giả và tin thật",
+    "output": "Tin giả thường giật gân, không nguồn – nên luyện kiểm tra trên nhiều nguồn chính thống trước khi tin."
+  },
+  {
+    "input": "Trẻ không biết xác minh thông tin trước khi chia sẻ",
+    "output": "Chia sẻ bừa sẽ lan tin sai – nên luyện phản xạ: 'Con chưa chắc chắn nên con sẽ kiểm tra lại'."
+  },
+  {
+    "input": "Trẻ không biết dừng việc lan truyền tin chưa kiểm chứng",
+    "output": "Nếu thấy tin chưa rõ mà vẫn chia sẻ là chưa hiểu hậu quả – nên luyện kỹ năng chậm lại, kiểm tra rồi mới chia sẻ."
+  },
+  {
+    "input": "Trẻ không biết vai trò của cảm xúc trong giao tiếp",
+    "output": "Không hiểu cảm xúc ảnh hưởng đến lời nói – nên luyện ví dụ khi giận thì nên chờ bình tĩnh mới nói chuyện."
+  },
+  {
+    "input": "Trẻ không biết nhận diện cảm xúc của bản thân",
+    "output": "Không biết mình đang buồn, lo hay tức là thiếu từ vựng cảm xúc – nên luyện bảng cảm xúc hàng ngày, hỏi con: 'Hôm nay con thấy sao?'."
+  },
+  {
+    "input": "Trẻ không biết đặt tên cho cảm xúc đang trải qua",
+    "output": "Không gọi tên được cảm xúc thì khó xử lý – nên luyện mẫu: 'Con thấy thất vọng, con thấy hơi lo lắng...'."
+  },
+  {
+    "input": "Trẻ không biết chấp nhận cảm xúc tiêu cực",
+    "output": "Cảm xúc tiêu cực là bình thường – nên luyện mẫu: 'Buồn là cảm xúc tự nhiên, con không sai khi cảm thấy vậy'."
+  },
+  {
+    "input": "Trẻ không biết điều chỉnh hành vi khi cảm xúc mạnh",
+    "output": "Đập đồ, la hét khi tức giận là thiếu kiểm soát – nên luyện kỹ năng: tạm dừng – hít thở – đếm chậm."
+  },
+  {
+    "input": "Trẻ không biết sử dụng từ ngữ phù hợp khi đang tức giận",
+    "output": "Nói lời xúc phạm là tổn thương người khác – nên luyện mẫu: 'Con đang rất bực, nhưng con sẽ nói nhẹ hơn để mọi người hiểu'."
+  },
+  {
+    "input": "Trẻ không biết thể hiện cảm xúc một cách tôn trọng",
+    "output": "Không ai cấm cảm xúc, nhưng cần nói với thái độ phù hợp – nên luyện phản hồi vừa thành thật vừa lịch sự."
+  },
+  {
+    "input": "Trẻ không biết lắng nghe cảm xúc người khác",
+    "output": "Nghe nhưng không để ý đến cảm xúc người khác là thiếu đồng cảm – nên luyện nghe kết hợp nhìn mặt, giọng, tư thế."
+  },
+  {
+    "input": "Trẻ không biết phản hồi cảm xúc một cách đồng cảm",
+    "output": "Không biết nói gì khi bạn buồn – nên luyện mẫu: 'Bạn buồn, mình hiểu. Mình ở đây nếu bạn cần'."
+  },
+  {
+    "input": "Trẻ không biết chia sẻ cảm xúc tích cực với người khác",
+    "output": "Giấu niềm vui làm người khác khó gần – nên luyện mẫu: 'Hôm nay con vui vì được khen!'."
+  },
+  {
+    "input": "Trẻ không biết lựa chọn người phù hợp để chia sẻ cảm xúc",
+    "output": "Chia sẻ sai người có thể bị chế giễu – nên luyện kỹ năng chọn người lắng nghe, giữ bí mật và tôn trọng con."
+  },
+  {
+    "input": "Trẻ không biết giữ bí mật cảm xúc cá nhân nếu cần thiết",
+    "output": "Không phải ai cũng cần biết con đang nghĩ gì – nên luyện quyền giữ riêng tư, nhưng không được dồn nén quá lâu."
+  },
+  {
+    "input": "Trẻ không biết viết nhật ký để xử lý cảm xúc",
+    "output": "Viết ra giúp nhẹ lòng – nên luyện viết ngắn, đều đặn, không cần đúng sai, chỉ cần thật với chính mình."
+  },
+  {
+    "input": "Trẻ không biết dùng nghệ thuật để thể hiện cảm xúc",
+    "output": "Vẽ, hát, nhảy... là cách thể hiện cảm xúc – nên khuyến khích trẻ sáng tạo để giải tỏa tâm trạng."
+  },
+  {
+    "input": "Trẻ không biết tìm hoạt động giúp thư giãn khi căng thẳng",
+    "output": "Khi stress mà không biết làm gì thì dễ bùng nổ – nên luyện chọn hoạt động như đi bộ, vẽ, nghe nhạc nhẹ, ôm gấu bông..."
+  },
+  {
+    "input": "Trẻ không biết nhờ người hỗ trợ khi cảm xúc quá tải",
+    "output": "Căng thẳng kéo dài mà không chia sẻ là nguy cơ – nên luyện nói với người thân, cô giáo, hoặc viết thư chia sẻ."
+  },
+  {
+    "input": "Trẻ không biết quản lý cảm xúc khi bị hiểu lầm",
+    "output": "Cảm xúc tiêu cực dễ bùng nổ khi bị oan – nên luyện bình tĩnh giải thích: 'Con không có ý như vậy, con muốn nói lại'."
+  },
+  {
+    "input": "Trẻ không biết xin lỗi khi cảm xúc ảnh hưởng đến người khác",
+    "output": "Giận dỗi rồi nói lời làm tổn thương – nên luyện mẫu: 'Con xin lỗi vì đã cáu gắt với mẹ lúc nãy'."
+  },
+  {
+    "input": "Trẻ không biết tha thứ khi người khác trút giận lên mình",
+    "output": "Bạn giận nói nặng lời, nếu xin lỗi thì nên tha thứ – luyện mẫu: 'Mình hiểu bạn đang tức. Mình không giận nữa đâu'."
+  },
+  {
+    "input": "Trẻ không biết thiết lập ranh giới cảm xúc với người xung quanh",
+    "output": "Người khác buồn không có nghĩa con phải buồn theo – nên luyện kỹ năng: lắng nghe, đồng cảm nhưng vẫn giữ ổn định tâm lý cá nhân."
+  },
+  {
+    "input": "Trẻ không biết kiểm soát hành vi khi lo lắng",
+    "output": "Trẻ lo lắng thường có hành vi tiêu cực như bứt tóc, la hét – nên luyện kỹ năng thư giãn: hít sâu, thở chậm, đếm 1–10."
+  },
+  {
+    "input": "Trẻ không biết diễn tả nỗi sợ bằng lời nói",
+    "output": "Không nói được 'Con sợ bóng tối' hay 'Con sợ cô la' là thiếu vốn từ cảm xúc – nên luyện mẫu câu và sử dụng bảng cảm xúc trực quan."
+  },
+  {
+    "input": "Trẻ không biết chia sẻ nỗi sợ với người khác",
+    "output": "Giữ nỗi sợ trong lòng làm tăng căng thẳng – nên luyện kỹ năng chia sẻ với người thân qua mẫu câu: 'Con sợ... vì...'."
+  },
+  {
+    "input": "Trẻ không biết vượt qua nỗi sợ đơn giản",
+    "output": "Sợ tiếng sấm, bóng tối... quá mức là thiếu rèn luyện – nên luyện dần bằng tiếp xúc an toàn và khích lệ sau mỗi lần can đảm."
+  },
+  {
+    "input": "Trẻ không biết nhận diện dấu hiệu lo âu ở bản thân",
+    "output": "Không nhận ra tay đổ mồ hôi, tim đập nhanh là dấu hiệu lo – nên luyện quan sát cảm giác cơ thể và ghi nhận qua hình ảnh cơ thể."
+  },
+  {
+    "input": "Trẻ không biết tìm cách giảm lo âu trước khi thi",
+    "output": "Lo lắng quá mức làm giảm hiệu suất – nên luyện kỹ năng hít thở sâu, hình dung tích cực, ăn ngủ đúng giờ trước thi."
+  },
+  {
+    "input": "Trẻ không biết quản lý cảm xúc khi thất bại trong học tập",
+    "output": "Bị điểm thấp mà bỏ học là thiếu điều tiết cảm xúc – nên luyện kỹ năng chấp nhận sai và lên kế hoạch học lại."
+  },
+  {
+    "input": "Trẻ không biết giữ động lực học tập sau khi bị điểm kém",
+    "output": "Trẻ nản lòng nhanh là thiếu khả năng phục hồi – nên luyện nhìn vào nỗ lực và tiến bộ, không chỉ vào điểm số."
+  },
+  {
+    "input": "Trẻ không biết phản hồi tích cực khi bị phê bình học tập",
+    "output": "Nổi nóng, im lặng khi bị nhắc là thiếu kỹ năng tiếp nhận – nên luyện phản ứng: 'Con cảm ơn, con sẽ sửa lại phần này'."
+  },
+  {
+    "input": "Trẻ không biết yêu cầu hỗ trợ khi gặp khó khăn trong bài học",
+    "output": "Không dám hỏi là thiếu chủ động – nên luyện mẫu câu: 'Cô ơi, chỗ này con chưa hiểu, cô chỉ lại giúp con với'."
+  },
+  {
+    "input": "Trẻ không biết tự đặt mục tiêu học tập phù hợp",
+    "output": "Mục tiêu quá xa vời làm con dễ nản – nên luyện đặt mục tiêu SMART: cụ thể – đo được – khả thi – liên quan – thời hạn."
+  },
+  {
+    "input": "Trẻ không biết lập kế hoạch ôn tập trước khi kiểm tra",
+    "output": "Học sát ngày, không có kế hoạch là nguyên nhân lo âu – nên luyện chia thời gian học theo sơ đồ tuần."
+  },
+  {
+    "input": "Trẻ không biết tự đánh giá kết quả học tập của mình",
+    "output": "Chỉ chờ thầy cô chấm điểm là thiếu tự phản ánh – nên luyện thang điểm cá nhân và tự nhận xét sau mỗi bài học."
+  },
+  {
+    "input": "Trẻ không biết điều chỉnh cách học khi không hiệu quả",
+    "output": "Học mãi mà không tiến bộ – nên luyện kỹ năng đánh giá lại phương pháp và thử cách khác như sơ đồ tư duy, thuyết trình."
+  },
+  {
+    "input": "Trẻ không biết lựa chọn phương pháp học tập phù hợp",
+    "output": "Không biết mình học tốt khi nghe – nhìn – vận động là thiếu nhận thức phong cách học – nên luyện thử các kiểu học và chọn phù hợp."
+  },
+  {
+    "input": "Trẻ không biết tìm nguồn học liệu đáng tin cậy",
+    "output": "Tìm bài sai nguồn hoặc quá khó – nên luyện kỹ năng chọn sách chuẩn, trang web giáo dục uy tín có kiểm duyệt."
+  },
+  {
+    "input": "Trẻ không biết chia sẻ kinh nghiệm học với bạn bè",
+    "output": "Học riêng lẻ, không kết nối với bạn – nên luyện kỹ năng nói: 'Mình học phần này bằng cách... bạn thử xem!'."
+  },
+  {
+    "input": "Trẻ không biết hợp tác với bạn trong học nhóm hiệu quả",
+    "output": "Làm nhóm nhưng không chia việc – nên luyện phân công rõ ràng, chấm công việc từng người và hỗ trợ nhau."
+  },
+  {
+    "input": "Trẻ không biết ghi chú khi nghe giảng hoặc đọc sách",
+    "output": "Chỉ nghe hoặc đọc mà không viết lại là kém ghi nhớ – nên luyện ghi ý chính bằng từ khóa, hình ảnh hoặc ký hiệu cá nhân."
+  },
+  {
+    "input": "Trẻ không biết tóm tắt nội dung đã học bằng lời của mình",
+    "output": "Học thuộc lòng mà không hiểu là học máy móc – nên luyện nói lại bằng cách kể lại bằng từ ngữ của chính mình."
+  },
+  {
+    "input": "Trẻ không biết liên hệ kiến thức với thực tế cuộc sống",
+    "output": "Không áp dụng được kiến thức đã học là thiếu khả năng tích hợp – nên luyện đặt câu hỏi: 'Bài này dùng được ở đâu ngoài đời?'."
+  },
+  {
+    "input": "Trẻ không biết trình bày ý tưởng một cách mạch lạc",
+    "output": "Nói rời rạc, thiếu đầu – thân – kết – nên luyện trình bày theo cấu trúc 3 phần và dùng từ nối hợp lý."
+  },
+  {
+    "input": "Trẻ không biết phản biện ý kiến trong lớp học một cách lịch sự",
+    "output": "Trẻ bác bỏ ý người khác mà không tôn trọng – nên luyện mẫu câu: 'Con có một góc nhìn khác, xin phép chia sẻ...'."
+  },
+  {
+    "input": "Trẻ không biết tiếp nhận phản biện mà không cáu giận",
+    "output": "Bị góp ý mà phản ứng mạnh là thiếu kiểm soát – nên luyện bình tĩnh, cảm ơn bạn đã đưa ra góp ý khác biệt."
+  },
+  {
+    "input": "Trẻ không biết đưa ra ví dụ minh họa khi trình bày",
+    "output": "Nói lý thuyết mà không có ví dụ khiến người nghe khó hiểu – nên luyện tìm ví dụ gần gũi trong cuộc sống, bài học cũ."
+  },
+  {
+    "input": "Trẻ không biết phân tích và so sánh hai ý kiến khác nhau",
+    "output": "Không thấy sự khác biệt hoặc chọn bên cảm tính – nên luyện phân tích điểm giống – khác – lý do chọn hoặc dung hòa."
+  },
+  {
+    "input": "Trẻ không biết nhận diện luận điểm chính trong bài học",
+    "output": "Chỉ ghi nhớ chi tiết mà quên ý chính – nên luyện tìm câu chốt, dùng sơ đồ cây để tách luận điểm – luận cứ."
+  },
+  {
+    "input": "Trẻ không biết phát hiện lỗi sai trong lập luận của bản thân",
+    "output": "Trẻ tự tin quá mức vào ý mình mà không kiểm tra – nên luyện tự đặt câu hỏi phản biện với chính mình trước khi phát biểu."
+  },
+  {
+    "input": "Trẻ không biết đặt câu hỏi để làm rõ kiến thức chưa hiểu",
+    "output": "Nghe bài mà mơ hồ nhưng không hỏi – nên luyện mẫu: 'Thầy ơi, chỗ này có nghĩa là gì ạ?'."
+  },
+  {
+    "input": "Trẻ không biết xây dựng lập luận chặt chẽ",
+    "output": "Ý rời rạc, thiếu dẫn chứng – nên luyện theo cấu trúc: Luận điểm – Giải thích – Ví dụ – Kết nối lại."
+  },
+  {
+    "input": "Trẻ không biết trình bày quan điểm cá nhân một cách tự tin",
+    "output": "Ngại ngùng, nói lí nhí là thiếu kỹ năng tự thể hiện – nên luyện phát biểu trước nhóm nhỏ với hỗ trợ tích cực."
+  },
+  {
+    "input": "Trẻ không biết sử dụng ví dụ thực tế để hỗ trợ lập luận",
+    "output": "Lý luận không gắn với đời thực sẽ thiếu sức thuyết phục – nên luyện liên hệ với cuộc sống, tin tức, trải nghiệm."
+  },
+  {
+    "input": "Trẻ không biết bảo vệ quan điểm khi bị phản đối",
+    "output": "Trẻ dễ thay đổi ý kiến hoặc phản ứng tiêu cực – nên luyện phản biện nhẹ nhàng: 'Con vẫn giữ quan điểm vì...'."
+  },
+  {
+    "input": "Trẻ không biết chấp nhận rằng ý kiến mình có thể chưa đúng",
+    "output": "Luôn muốn đúng là thiếu linh hoạt – nên luyện mẫu: 'Bạn nói vậy, con thấy ý mình chưa đúng lắm, con sẽ suy nghĩ thêm'."
+  },
+  {
+    "input": "Trẻ không biết chọn lọc thông tin phù hợp với đề bài",
+    "output": "Chép cả đoạn mà không chọn lọc là kém tư duy – nên luyện gạch chân ý liên quan và bỏ thông tin lan man."
+  },
+  {
+    "input": "Trẻ không biết phân loại ý chính và ý phụ trong đoạn văn",
+    "output": "Không biết câu nào quan trọng nhất là thiếu kỹ năng đọc hiểu – nên luyện tìm chủ đề và các ý bổ trợ qua sơ đồ tư duy."
+  },
+  {
+    "input": "Trẻ không biết tạo dàn ý trước khi viết bài",
+    "output": "Viết lan man, sai trọng tâm là do không có khung bài – nên luyện dàn ý theo 3 phần: mở bài – thân bài – kết luận."
+  },
+  {
+    "input": "Trẻ không biết chỉnh sửa bài viết sau khi hoàn thành",
+    "output": "Viết xong là bỏ qua lỗi chính tả, ngữ pháp – nên luyện đọc lại, tra từ điển, hỏi bạn hoặc người lớn giúp rà lỗi."
+  },
+  {
+    "input": "Trẻ không biết nhận xét bài viết của bạn một cách xây dựng",
+    "output": "Chê bai không lý do hoặc khen quá mức là thiếu phản hồi hiệu quả – nên luyện mẫu: 'Bạn làm tốt phần này, phần kia bạn có thể thêm...'."
+  },
+  {
+    "input": "Trẻ không biết học hỏi từ nhận xét của bạn hoặc giáo viên",
+    "output": "Bị góp ý mà không thay đổi là chưa có phản xạ học từ lỗi – nên luyện ghi nhận, sửa bài rồi phản hồi: 'Con đã sửa chỗ này như cô dặn ạ'."
+  },
+  {
+    "input": "Trẻ không biết phân tích cấu trúc đoạn văn",
+    "output": "Không xác định được câu chủ đề – ý bổ sung – kết đoạn là thiếu kỹ năng phân tích văn bản – nên luyện nhận diện các phần trong đoạn mẫu."
+  },
+  {
+    "input": "Trẻ không biết chuyển ý mạch lạc trong bài viết",
+    "output": "Viết đoạn văn bị rời rạc là thiếu kỹ năng chuyển đoạn – nên luyện dùng từ nối như 'Tiếp theo', 'Ngoài ra', 'Cuối cùng'."
+  },
+  {
+    "input": "Trẻ không biết dùng từ nối để liên kết câu",
+    "output": "Không sử dụng từ nối khiến bài viết thiếu mạch lạc – nên luyện các từ nối theo nhóm: thời gian, nguyên nhân – kết quả, so sánh..."
+  },
+  {
+    "input": "Trẻ không biết sử dụng dấu câu hợp lý trong đoạn văn",
+    "output": "Viết không chấm câu hoặc chấm sai làm bài khó hiểu – nên luyện cách dùng dấu chấm, phẩy, hai chấm, chấm hỏi đúng ngữ cảnh."
+  },
+  {
+    "input": "Trẻ không biết điều chỉnh độ dài câu phù hợp",
+    "output": "Câu quá dài hoặc quá ngắn gây rối – nên luyện viết câu trung bình 10–15 từ và kiểm tra sự rõ ràng sau khi viết."
+  },
+  {
+    "input": "Trẻ không biết sử dụng ngôn ngữ chính xác, rõ ràng",
+    "output": "Viết dùng từ mơ hồ, sai nghĩa là chưa làm chủ từ vựng – nên luyện chọn từ cụ thể, dễ hiểu, tránh từ sáo rỗng."
+  },
+  {
+    "input": "Trẻ không biết phân biệt văn viết và văn nói",
+    "output": "Viết như khi nói (viết tắt, sai chuẩn) là sai phong cách – nên luyện phân biệt qua ví dụ và sửa lỗi thường gặp."
+  },
+  {
+    "input": "Trẻ không biết lựa chọn phong cách diễn đạt phù hợp",
+    "output": "Dùng từ ngữ quá trang trọng trong văn kể hoặc quá suồng sã trong văn nghị luận là không đúng – nên luyện nhận biết phong cách ngôn ngữ."
+  },
+  {
+    "input": "Trẻ không biết viết theo thể loại yêu cầu (miêu tả, kể chuyện...)",
+    "output": "Viết lạc đề do không phân biệt thể loại – nên luyện phân tích đề bài và đọc mẫu văn theo từng thể loại."
+  },
+  {
+    "input": "Trẻ không biết sáng tạo khi viết văn",
+    "output": "Viết rập khuôn, sao chép mẫu là thiếu sáng tạo – nên luyện thêm chi tiết, tưởng tượng và sử dụng ngôn ngữ hình ảnh."
+  },
+  {
+    "input": "Trẻ không biết thể hiện cảm xúc trong bài viết",
+    "output": "Bài văn khô khan, không có cảm xúc – nên luyện dùng từ biểu cảm, cảm thán, và liên hệ cá nhân khi viết."
+  },
+  {
+    "input": "Trẻ không biết tránh lặp từ trong văn bản",
+    "output": "Dùng một từ quá nhiều lần khiến văn kém hấp dẫn – nên luyện sử dụng từ đồng nghĩa hoặc thay đổi cấu trúc câu."
+  },
+  {
+    "input": "Trẻ không biết kiểm tra lỗi ngữ pháp sau khi viết",
+    "output": "Bài viết nhiều lỗi cơ bản – nên luyện đọc lại chậm rãi từng câu hoặc dùng bảng kiểm lỗi sau viết."
+  },
+  {
+    "input": "Trẻ không biết viết câu chủ đề cho đoạn văn",
+    "output": "Không có câu nêu ý chính làm đoạn thiếu định hướng – nên luyện viết câu đầu rõ nội dung chính của đoạn."
+  },
+  {
+    "input": "Trẻ không biết mở rộng ý từ câu chủ đề",
+    "output": "Không biết phát triển ý khiến đoạn ngắn, nghèo nàn – nên luyện thêm ví dụ, phân tích, liên hệ từ ý chính."
+  },
+  {
+    "input": "Trẻ không biết kết thúc đoạn văn một cách rõ ràng",
+    "output": "Đoạn văn kết thúc đột ngột hoặc không rõ – nên luyện câu kết chốt lại nội dung chính hoặc chuyển ý nhẹ nhàng."
+  },
+  {
+    "input": "Trẻ không biết trích dẫn nguồn khi sử dụng tài liệu tham khảo",
+    "output": "Sử dụng nội dung từ sách/báo/mạng mà không ghi nguồn là thiếu kỹ năng học thuật – nên luyện ghi nguồn theo chuẩn đơn giản."
+  },
+  {
+    "input": "Trẻ không biết ghi lại ý chính khi đọc sách",
+    "output": "Đọc không ghi chú dẫn đến quên nhanh – nên luyện ghi ý bằng từ khóa, sơ đồ hoặc bảng 3 cột (ý – ví dụ – cảm nghĩ)."
+  },
+  {
+    "input": "Trẻ không biết phản hồi nội dung sách đã đọc",
+    "output": "Không biết nói mình thích/không thích điểm gì – nên luyện mẫu câu phản hồi: 'Con ấn tượng vì...', 'Con chưa đồng tình vì...'."
+  },
+  {
+    "input": "Trẻ không biết liên hệ sách với trải nghiệm bản thân",
+    "output": "Đọc xong không liên hệ được với bản thân – nên luyện đặt câu hỏi: 'Chi tiết nào giống với con?', 'Nếu là con thì con sẽ...?'."
+  },
+  {
+    "input": "Trẻ không biết tìm sách phù hợp với độ tuổi và sở thích",
+    "output": "Chọn sách quá khó hoặc quá nhàm – nên luyện cách xem bìa, mục lục, vài trang đầu để đánh giá mức độ phù hợp."
+  },
+  {
+    "input": "Trẻ không biết xây dựng thói quen đọc sách hằng ngày",
+    "output": "Đọc sách thất thường là khó hình thành thói quen – nên luyện đọc 10–15 phút mỗi ngày, chọn khung giờ cố định và không gian yên tĩnh."
+  },
+  {
+    "input": "Trẻ không biết sử dụng thư viện hiệu quả",
+    "output": "Vào thư viện mà không biết cách tìm sách – nên luyện kỹ năng tra mục lục, hỏi thủ thư và giữ trật tự khi đọc."
+  },
+  {
+    "input": "Trẻ không biết chia sẻ sách hay với bạn bè",
+    "output": "Đọc sách tốt mà không giới thiệu là thiếu kỹ năng kết nối – nên luyện nói về tên sách, điểm hay và lý do nên đọc."
+  },
+  {
+    "input": "Trẻ không biết viết bài giới thiệu sách ngắn gọn, hấp dẫn",
+    "output": "Giới thiệu dài dòng, thiếu trọng tâm – nên luyện cấu trúc: tên sách – tác giả – nội dung chính – lý do nên đọc."
+  },
+  {
+    "input": "Trẻ không biết tổ chức thời gian đọc sách hợp lý",
+    "output": "Đọc dồn dập hoặc bỏ giữa chừng – nên luyện phân chia thời gian đọc theo từng chương, đặt báo thức đọc đều mỗi ngày."
+  },
+  {
+    "input": "Trẻ không biết tránh bị phân tâm khi đọc sách",
+    "output": "Dễ bị xao nhãng bởi điện thoại, âm thanh – nên luyện tạo không gian đọc tĩnh, tắt thiết bị và đặt mục tiêu thời gian đọc."
+  },
+  {
+    "input": "Trẻ không biết đọc hiểu văn bản nhiều tầng nghĩa",
+    "output": "Chỉ hiểu bề mặt văn bản mà bỏ qua hàm ý – nên luyện đọc lại, đặt câu hỏi 'tại sao' và thảo luận sau khi đọc."
+  },
+  {
+    "input": "Trẻ không biết phân tích nhân vật trong truyện",
+    "output": "Không nêu được đặc điểm, hành động, tính cách nhân vật – nên luyện bảng phân tích: tên – đặc điểm – hành động – cảm nhận."
+  },
+  {
+    "input": "Trẻ không biết nhận xét cốt truyện một cách logic",
+    "output": "Không xác định được diễn biến – cao trào – kết thúc – nên luyện vẽ sơ đồ tóm tắt cốt truyện theo trình tự thời gian."
+  },
+  {
+    "input": "Trẻ không biết so sánh hai truyện cùng chủ đề",
+    "output": "Không nhận ra điểm giống – khác giữa hai truyện – nên luyện bảng so sánh: bối cảnh – nhân vật – thông điệp – cảm nhận."
+  },
+  {
+    "input": "Trẻ không biết trình bày cảm nhận sau khi đọc",
+    "output": "Không biết diễn đạt cảm xúc với truyện – nên luyện mẫu câu: 'Con thích chi tiết...', 'Con học được điều...'."
+  },
+  {
+    "input": "Trẻ không biết đặt câu hỏi phản biện sau khi đọc",
+    "output": "Chỉ đọc và chấp nhận mà không đặt câu hỏi – nên luyện kỹ năng nghi vấn: 'Nếu nhân vật làm khác thì...?'."
+  },
+  {
+    "input": "Trẻ không biết liên hệ nội dung truyện với bài học cuộc sống",
+    "output": "Đọc truyện xong không biết ứng dụng – nên luyện câu hỏi: 'Từ truyện này, con rút ra điều gì cho bản thân?'."
+  },
+  {
+    "input": "Trẻ không biết đánh giá độ tin cậy của sách thông tin",
+    "output": "Tin mọi điều sách nói mà không kiểm chứng – nên luyện so sánh với nguồn khác và kiểm tra tác giả, nhà xuất bản."
+  },
+  {
+    "input": "Trẻ không biết phân biệt thể loại sách khác nhau",
+    "output": "Không phân biệt truyện tranh, sách kỹ năng, sách khoa học – nên luyện phân loại qua bìa sách và đặc điểm nội dung."
+  },
+  {
+    "input": "Trẻ không biết nêu lý do chọn một cuốn sách yêu thích",
+    "output": "Chỉ nói 'vì con thích' mà không nêu lý do rõ – nên luyện mẫu: 'Con thích sách này vì nhân vật..., nội dung...'."
+  },
+  {
+    "input": "Trẻ không biết diễn đạt ý tưởng đọc hiểu bằng sơ đồ tư duy",
+    "output": "Không tóm tắt được nội dung bằng hình ảnh – nên luyện ghi ý chính, phân nhánh và thêm hình vẽ vào sơ đồ tư duy."
+  },
+  {
+    "input": "Trẻ không biết viết cảm nhận bằng hình thức sáng tạo (thơ, tranh...)",
+    "output": "Chỉ viết văn đơn thuần là hạn chế – nên luyện vẽ tranh minh họa, viết thơ ngắn hoặc nhật ký cảm xúc sau khi đọc."
+  },
+  {
+    "input": "Trẻ không biết tham gia hoạt động đọc sách cùng nhóm",
+    "output": "Đọc sách cá nhân nhưng không thảo luận cùng nhóm – nên luyện chia sẻ sau khi đọc, đặt câu hỏi và cùng cảm nhận nội dung."
+  },
+  {
+    "input": "Trẻ không biết xây dựng nhóm đọc sách hiệu quả",
+    "output": "Không biết mời bạn cùng đọc hoặc chọn sách phù hợp – nên luyện kỹ năng tổ chức nhóm 3–5 bạn và phân chia lượt đọc hợp lý."
+  },
+  {
+    "input": "Trẻ không biết lập kế hoạch đọc cho nhóm",
+    "output": "Đọc không theo lịch khiến nhóm dễ bỏ cuộc – nên luyện làm kế hoạch theo tuần với tên sách, ngày đọc, người phụ trách."
+  },
+  {
+    "input": "Trẻ không biết phân công vai trò trong nhóm đọc",
+    "output": "Ai cũng làm hoặc không ai làm là kém hiệu quả – nên luyện chia vai: người đọc, người ghi chú, người phản hồi, người tổng hợp."
+  },
+  {
+    "input": "Trẻ không biết điều phối thảo luận trong nhóm đọc",
+    "output": "Trẻ không kiểm soát được lượt nói – nên luyện kỹ năng nhắc bạn theo thứ tự và khuyến khích mọi người đều có ý kiến."
+  },
+  {
+    "input": "Trẻ không biết tôn trọng lượt nói trong thảo luận nhóm",
+    "output": "Nói chen hoặc ngắt lời bạn là thiếu kỹ năng xã hội – nên luyện quy tắc giơ tay, chờ bạn nói xong mới phản hồi."
+  },
+  {
+    "input": "Trẻ không biết ghi chú lại ý kiến nhóm khi đọc sách",
+    "output": "Nghe rồi quên là thiếu kỹ năng ghi nhớ – nên luyện dùng bảng ghi nhóm có chia cột: người nói – ý chính – cảm nhận."
+  },
+  {
+    "input": "Trẻ không biết tổng hợp ý kiến sau buổi đọc nhóm",
+    "output": "Chỉ ghi chép mà không đúc kết – nên luyện kỹ năng chọn ý chung và viết lại 3–5 câu tổng kết."
+  },
+  {
+    "input": "Trẻ không biết đánh giá hiệu quả buổi đọc nhóm",
+    "output": "Không nhận xét sau buổi đọc làm mất cơ hội cải thiện – nên luyện đặt câu hỏi: 'Điều gì tốt?', 'Điều gì cần cải thiện?'."
+  },
+  {
+    "input": "Trẻ không biết lên ý tưởng cho hoạt động ngoại khóa",
+    "output": "Chỉ tham gia chứ không chủ động đề xuất – nên luyện viết 3 ý tưởng và chọn theo tiêu chí: thú vị – phù hợp – thực tế."
+  },
+  {
+    "input": "Trẻ không biết lập kế hoạch tổ chức hoạt động nhóm",
+    "output": "Không biết làm gì trước – sau – nên luyện sơ đồ kế hoạch gồm: mục tiêu – nội dung – thời gian – người phụ trách – dụng cụ."
+  },
+  {
+    "input": "Trẻ không biết chuẩn bị công cụ – tài liệu cho hoạt động",
+    "output": "Bị thiếu đồ vào phút chót là do không kiểm tra trước – nên luyện làm checklist và chia người phụ trách chuẩn bị từng mục."
+  },
+  {
+    "input": "Trẻ không biết mời người tham gia hoạt động một cách lịch sự",
+    "output": "Gọi bạn kiểu ép buộc dễ gây khó chịu – nên luyện mẫu: 'Bạn có muốn tham gia cùng nhóm mình không? Nhóm mình sẽ làm...'."
+  },
+  {
+    "input": "Trẻ không biết giới thiệu hoạt động một cách thu hút",
+    "output": "Nói quá chung chung làm người khác không hứng thú – nên luyện nói rõ: tên hoạt động – ý nghĩa – điều thú vị."
+  },
+  {
+    "input": "Trẻ không biết phân công nhiệm vụ rõ ràng trong nhóm",
+    "output": "Làm việc chồng chéo hoặc bỏ sót – nên luyện ghi nhiệm vụ rõ ràng trên giấy hoặc bảng và nhắc lại trước khi bắt đầu."
+  },
+  {
+    "input": "Trẻ không biết phối hợp với các nhóm khác trong hoạt động chung",
+    "output": "Tự làm mà không liên kết sẽ rời rạc – nên luyện trao đổi, thống nhất kế hoạch, chia thời gian dùng chung không gian."
+  },
+  {
+    "input": "Trẻ không biết ứng phó khi hoạt động gặp sự cố",
+    "output": "Bị rối, hoảng khi có trục trặc – nên luyện lập phương án dự phòng và giữ bình tĩnh để tìm người hỗ trợ."
+  },
+  {
+    "input": "Trẻ không biết đánh giá hoạt động sau khi kết thúc",
+    "output": "Làm xong là bỏ – nên luyện phản hồi nhóm: cái gì tốt – chưa tốt – lần sau nên làm gì khác."
+  },
+  {
+    "input": "Trẻ không biết ghi nhận đóng góp của các thành viên",
+    "output": "Không khen bạn nào làm tốt là thiếu ghi nhận – nên luyện nói lời cảm ơn cụ thể: 'Cảm ơn bạn A vì đã phụ trách phần trò chơi rất tốt'."
+  },
+  {
+    "input": "Trẻ không biết cảm ơn người tham gia hoạt động",
+    "output": "Không cảm ơn khách mời hoặc người hỗ trợ là thiếu lịch sự – nên luyện viết lời cảm ơn hoặc gửi lời trực tiếp sau chương trình."
+  },
+  {
+    "input": "Trẻ không biết chia sẻ kết quả hoạt động với người khác",
+    "output": "Chỉ hoạt động nội bộ mà không chia sẻ ra ngoài – nên luyện viết bài tóm tắt, báo cáo miệng, vẽ tranh giới thiệu kết quả."
+  },
+  {
+    "input": "Trẻ không biết xây dựng chủ đề hoạt động vì cộng đồng",
+    "output": "Làm không có định hướng rõ – nên luyện đặt chủ đề cụ thể như: 'Chung tay bảo vệ môi trường', 'Lan tỏa yêu thương'."
+  },
+  {
+    "input": "Trẻ không biết xác định nhu cầu cộng đồng để thiết kế hoạt động",
+    "output": "Làm hoạt động không trúng nhu cầu – nên luyện hỏi ý kiến, khảo sát hoặc quan sát trước khi lên kế hoạch."
+  },
+  {
+    "input": "Trẻ không biết liên hệ với người lớn khi cần hỗ trợ hoạt động",
+    "output": "Tự làm hết mà không hiệu quả – nên luyện viết thư, gọi điện hoặc nhờ giáo viên liên hệ hỗ trợ đúng người."
+  },
+  {
+    "input": "Trẻ không biết vận động các nguồn lực cho hoạt động cộng đồng",
+    "output": "Thiếu đồ dùng, kinh phí – nên luyện kỹ năng xin tài trợ nhỏ như giấy in, màu vẽ từ gia đình hoặc trường."
+  },
+  {
+    "input": "Trẻ không biết truyền thông cho hoạt động cộng đồng",
+    "output": "Làm mà không ai biết – nên luyện viết thiệp mời, làm poster, chia sẻ qua bản tin lớp hoặc mạng xã hội (có kiểm duyệt)."
+  },
+  {
+    "input": "Trẻ không biết phản ánh ý nghĩa hoạt động cộng đồng qua bài viết",
+    "output": "Viết báo cáo chỉ nêu việc đã làm – nên luyện thêm phần cảm nhận, ý nghĩa hoạt động với người tham gia và người nhận."
+  },
+  {
+    "input": "Trẻ không biết trình bày kết quả hoạt động cộng đồng trước tập thể",
+    "output": "E ngại, nói không rõ – nên luyện trình bày với slide đơn giản và tập nói trước bạn bè để quen không khí."
+  },
+  {
+    "input": "Trẻ không biết tham gia phỏng vấn thu thập ý kiến cộng đồng",
+    "output": "Không biết hỏi gì – nên luyện chuẩn bị câu hỏi trước, nói rõ ràng, cảm ơn sau khi được trả lời."
+  },
+  {
+    "input": "Trẻ không biết sử dụng hình ảnh minh họa kết quả hoạt động",
+    "output": "Không chụp hình hoặc chọn hình mờ nhạt – nên luyện chọn hình rõ người – rõ hành động – có cảm xúc."
+  },
+  {
+    "input": "Trẻ không biết thiết kế bảng tin hoặc poster hoạt động",
+    "output": "Thiết kế rối mắt, khó đọc – nên luyện dán ảnh + chữ rõ ràng, bố cục 3 phần: tên hoạt động – hình ảnh – kết quả."
+  },
+  {
+    "input": "Trẻ không biết xây dựng video giới thiệu hoạt động nhóm",
+    "output": "Video dài dòng, thiếu nội dung – nên luyện quay clip 1–2 phút với phần giới thiệu, hoạt động, kết thúc cảm ơn."
+  },
+  {
+    "input": "Trẻ không biết chia sẻ kết quả hoạt động trên mạng xã hội một cách an toàn",
+    "output": "Chia sẻ kèm ảnh nhạy cảm, thông tin cá nhân – nên luyện chọn hình chung, không ghi tên thật, kiểm tra nội dung trước khi đăng."
+  },
+  {
+    "input": "Trẻ không biết đánh giá tác động của hoạt động đến cộng đồng",
+    "output": "Không biết hoạt động mình giúp được gì – nên luyện hỏi: 'Sau hoạt động, người nhận có vui hơn không?', 'Có thay đổi gì tích cực không?'."
+  },
+  {
+    "input": "Trẻ không biết đề xuất cải tiến hoạt động cho lần sau",
+    "output": "Chỉ lặp lại cái cũ – nên luyện phản hồi cuối chương trình: 'Nếu lần sau làm lại, mình sẽ...'."
+  },
+  {
+    "input": "Trẻ không biết rút kinh nghiệm sau hoạt động nhóm",
+    "output": "Không nhìn lại điểm sai – nên luyện viết nhật ký hoạt động: điều thành công – điều chưa tốt – điều cần làm khác."
+  },
+  {
+    "input": "Trẻ không biết giữ tinh thần tích cực khi hoạt động chưa thành công",
+    "output": "Kết quả không như mong đợi dễ làm nản lòng – nên luyện nhìn vào nỗ lực và bài học rút ra thay vì chỉ tập trung vào kết quả."
+  },
+  {
+    "input": "Trẻ không biết động viên các thành viên sau hoạt động",
+    "output": "Chỉ phê bình mà không khích lệ – nên luyện câu động viên: 'Mình làm được bước đầu rồi, cố thêm lần sau tốt hơn'."
+  },
+  {
+    "input": "Trẻ không biết ghi nhận bài học cá nhân sau mỗi trải nghiệm tập thể",
+    "output": "Tham gia mà không đọng lại gì – nên luyện viết 1–3 dòng: 'Con học được gì sau hoạt động này?'."
+  },
+  {
+    "input": "Trẻ không biết liên hệ hoạt động nhóm với bài học ở lớp",
+    "output": "Không thấy sự liên kết – nên luyện đặt câu hỏi: 'Điều gì trong hoạt động giúp con hiểu bài học nào trên lớp?'."
+  },
+  {
+    "input": "Trẻ không biết viết báo cáo ngắn gọn, rõ ràng về hoạt động đã tham gia",
+    "output": "Báo cáo lan man – nên luyện viết theo khung: mục tiêu – nội dung – kết quả – cảm nhận."
+  },
+  {
+    "input": "Trẻ không biết giữ thái độ tích cực khi làm việc nhóm",
+    "output": "Tỏ ra chán nản, không tham gia là thiếu tinh thần hợp tác – nên luyện thái độ tích cực qua câu khích lệ, mỉm cười và lắng nghe nhóm."
+  },
+  {
+    "input": "Trẻ không biết chia sẻ vai trò trong nhóm một cách công bằng",
+    "output": "Lấy hết việc dễ hoặc từ chối vai trò khó là không công bằng – nên luyện chia vai rõ ràng theo năng lực và thỏa thuận nhóm."
+  },
+  {
+    "input": "Trẻ không biết chủ động giúp đỡ bạn trong hoạt động nhóm",
+    "output": "Chỉ làm phần mình mà không hỗ trợ bạn là thiếu hợp tác – nên luyện kỹ năng hỏi: 'Bạn có cần mình giúp không?'."
+  },
+  {
+    "input": "Trẻ không biết đề xuất ý tưởng cho nhóm khi gặp khó khăn",
+    "output": "Im lặng khi nhóm bí ý tưởng là thiếu chủ động – nên luyện mẫu: 'Mình nghĩ nhóm có thể thử cách...'."
+  },
+  {
+    "input": "Trẻ không biết điều chỉnh thái độ khi bất đồng ý kiến",
+    "output": "Cãi lại hoặc bỏ về là thiếu kỹ năng giải quyết mâu thuẫn – nên luyện nói: 'Mình nghĩ khác, nhưng mình sẽ lắng nghe bạn'."
+  },
+  {
+    "input": "Trẻ không biết đưa ra quyết định nhóm một cách dân chủ",
+    "output": "Chỉ theo bạn thân hoặc ép người khác là không công bằng – nên luyện lấy ý kiến biểu quyết và tôn trọng số đông."
+  },
+  {
+    "input": "Trẻ không biết tôn trọng quyết định chung của nhóm",
+    "output": "Không hài lòng nhưng vẫn phản đối sau khi nhóm đã chọn – nên luyện kỹ năng tuân theo quyết định nhóm dù không phải ý mình."
+  },
+  {
+    "input": "Trẻ không biết tiếp nhận phản hồi từ bạn một cách xây dựng",
+    "output": "Giận khi bị góp ý là chưa kiểm soát cảm xúc – nên luyện mẫu: 'Cảm ơn bạn, mình sẽ xem lại phần đó'."
+  },
+  {
+    "input": "Trẻ không biết phản hồi bạn khi thấy bạn làm chưa đúng",
+    "output": "Im lặng hoặc nói mỉa mai là thiếu xây dựng – nên luyện mẫu: 'Mình thấy phần này hơi thiếu, bạn có muốn chỉnh lại không?'."
+  },
+  {
+    "input": "Trẻ không biết giữ tinh thần hợp tác trong suốt hoạt động nhóm",
+    "output": "Chỉ hợp tác lúc đầu rồi tách ra là thiếu cam kết – nên luyện phân chia thời gian hợp lý và nhắc nhau duy trì phối hợp."
+  },
+  {
+    "input": "Trẻ không biết xin lỗi khi có hành vi ảnh hưởng đến nhóm",
+    "output": "Sai mà không nhận lỗi làm mất lòng nhóm – nên luyện mẫu: 'Xin lỗi cả nhóm vì mình làm trễ, mình sẽ sửa ngay'."
+  },
+  {
+    "input": "Trẻ không biết làm trung gian giải hòa khi nhóm có mâu thuẫn",
+    "output": "Đứng ngoài hoặc châm dầu vào lửa là sai – nên luyện mẫu: 'Hai bạn dừng lại chút nhé, mình cùng tìm cách giải quyết'."
+  },
+  {
+    "input": "Trẻ không biết đề nghị nhóm cùng điều chỉnh kế hoạch",
+    "output": "Kế hoạch sai mà không dám đề xuất sửa – nên luyện kỹ năng đề xuất nhẹ nhàng: 'Nhóm mình đổi thứ tự này thử nhé?'."
+  },
+  {
+    "input": "Trẻ không biết hỗ trợ nhóm hoàn thành mục tiêu đúng thời hạn",
+    "output": "Làm chậm khiến nhóm bị ảnh hưởng – nên luyện kiểm tra tiến độ hằng ngày và nhờ hỗ trợ nếu cần."
+  },
+  {
+    "input": "Trẻ không biết đánh giá vai trò của bản thân trong nhóm",
+    "output": "Không biết mình đã đóng góp gì – nên luyện viết nhật ký nhóm: 'Hôm nay mình làm phần... cảm thấy...'."
+  },
+  {
+    "input": "Trẻ không biết ghi nhận sự tiến bộ của nhóm sau mỗi hoạt động",
+    "output": "Chỉ chê chưa đủ tốt – nên luyện nói: 'Nhóm mình tiến bộ hơn lần trước ở chỗ...'."
+  },
+  {
+    "input": "Trẻ không biết điều chỉnh cảm xúc khi làm việc tập thể căng thẳng",
+    "output": "Căng là cáu, giận dỗi – nên luyện thở sâu, tạm rời nhóm vài phút, sau đó quay lại trao đổi bình tĩnh."
+  },
+  {
+    "input": "Trẻ không biết tạo động lực cho nhóm khi gặp trở ngại",
+    "output": "Gặp khó mà im lặng là thiếu động viên – nên luyện câu khích lệ: 'Chúng mình cố thêm tí nữa, gần xong rồi!'."
+  },
+  {
+    "input": "Trẻ không biết tìm kiếm sự giúp đỡ khi nhóm gặp bế tắc",
+    "output": "Không biết nhờ cô, ba mẹ hỗ trợ khi nhóm không tìm ra cách – nên luyện nói: 'Cô ơi, nhóm con đang bị kẹt phần này, cô giúp được không?'."
+  },
+  {
+    "input": "Trẻ không biết quản lý xung đột nhóm một cách hòa bình",
+    "output": "Cãi vã căng thẳng – nên luyện đặt luật: không to tiếng, không xúc phạm, tôn trọng nhau trong mọi tình huống."
+  },
+  {
+    "input": "Trẻ không biết lập bảng phân công rõ ràng cho nhóm",
+    "output": "Không ai biết mình làm gì – nên luyện bảng phân công có cột: tên – việc – thời hạn – người kiểm tra."
+  },
+  {
+    "input": "Trẻ không biết giám sát tiến độ thực hiện của nhóm",
+    "output": "Việc trễ nhưng không ai biết – nên luyện lịch theo dõi công việc và cập nhật vào cuối mỗi buổi làm."
+  },
+  {
+    "input": "Trẻ không biết cập nhật tiến trình nhóm đang thực hiện",
+    "output": "Không ai nắm được nhóm đến đâu – nên luyện họp nhóm nhanh 5 phút để báo cáo tiến độ trước và sau làm việc."
+  },
+  {
+    "input": "Trẻ không biết điều phối lại nhân lực khi nhóm có thay đổi",
+    "output": "Có bạn vắng mà nhóm bị rối – nên luyện chia lại phần hợp lý, có người phụ trách thay thế khi cần."
+  },
+  {
+    "input": "Trẻ không biết giữ cam kết cá nhân với nhóm",
+    "output": "Hứa làm rồi không làm – nên luyện viết cam kết nhỏ và có người kiểm tra cuối buổi."
+  },
+  {
+    "input": "Trẻ không biết tránh làm gián đoạn hoạt động nhóm",
+    "output": "Nói chuyện riêng, làm việc cá nhân khi nhóm đang hoạt động là làm gián đoạn – nên luyện giữ tập trung, giao việc rõ ràng từng giai đoạn."
+  },
+  {
+    "input": "Trẻ không biết ứng phó khi nhóm có thành viên thiếu hợp tác",
+    "output": "Bạn không làm phần mình, cả nhóm khó xử – nên luyện phản hồi nhẹ nhàng: 'Bạn giúp nhóm phần này nhé, vì nhóm đang cần lắm!'."
+  },
+  {
+    "input": "Trẻ không biết hỗ trợ nhóm đạt được sự đồng thuận",
+    "output": "Mỗi người mỗi ý mà không chốt được – nên luyện kỹ năng lắng nghe, gộp ý, chọn giải pháp chung có lợi cho cả nhóm."
+  },
+  {
+    "input": "Trẻ không biết khích lệ tinh thần làm việc nhóm qua lời nói tích cực",
+    "output": "Thiếu động viên khiến không khí nhóm kém – nên luyện dùng lời khích lệ như: 'Mình thấy bạn làm rất tập trung, giỏi lắm!'."
+  },
+  {
+    "input": "Trẻ không biết sử dụng biểu cảm khuôn mặt để tăng kết nối nhóm",
+    "output": "Mặt lạnh lùng, không nhìn bạn khiến nhóm xa cách – nên luyện mỉm cười, gật đầu, ánh mắt thân thiện khi tương tác."
+  },
+  {
+    "input": "Trẻ không biết giữ sự lắng nghe chủ động trong nhóm",
+    "output": "Nghe mà không phản hồi – nên luyện kỹ năng lặp lại ý bạn, đặt câu hỏi mở hoặc gật đầu thể hiện lắng nghe."
+  },
+  {
+    "input": "Trẻ không biết kết thúc buổi làm việc nhóm bằng đánh giá tích cực",
+    "output": "Làm xong là bỏ qua không phản hồi – nên luyện kết thúc bằng lời khen: 'Hôm nay nhóm mình hợp tác tốt hơn hôm trước'."
+  },
+  {
+    "input": "Trẻ không biết ghi nhận sự đóng góp của từng bạn trong nhóm",
+    "output": "Chỉ nói về kết quả chung mà không nhắc cá nhân – nên luyện phản hồi cụ thể: 'Bạn A giúp nhóm tiết kiệm thời gian vì bạn làm rất nhanh'."
+  },
+  {
+    "input": "Trẻ không biết rút ra bài học nhóm sau mỗi dự án nhỏ",
+    "output": "Hoạt động xong mà không học được gì – nên luyện hỏi nhóm: 'Chúng mình làm tốt điều gì?', 'Lần sau cần thay đổi gì?'."
+  },
+  {
+    "input": "Trẻ không biết phát huy điểm mạnh từng bạn trong nhóm",
+    "output": "Không biết bạn nào giỏi gì để giao việc – nên luyện thảo luận trước: ai mạnh vẽ, ai mạnh trình bày, ai ghi chép tốt..."
+  },
+  {
+    "input": "Trẻ không biết điều chỉnh kế hoạch nhóm khi điều kiện thay đổi",
+    "output": "Thời tiết, thiết bị thay đổi mà nhóm lúng túng – nên luyện lập kế hoạch B, chủ động đề xuất hướng khác thay thế."
+  },
+  {
+    "input": "Trẻ không biết sử dụng thời gian hiệu quả trong làm việc nhóm",
+    "output": "Làm 1 việc quá lâu khiến trễ tiến độ – nên luyện chia khung giờ rõ ràng và hẹn giờ báo nhắc từng phần."
+  },
+  {
+    "input": "Trẻ không biết quản lý thiết bị dùng chung khi làm việc nhóm",
+    "output": "Thiết bị mất hoặc tranh giành sử dụng – nên luyện thống nhất thời lượng sử dụng và người phụ trách giữ thiết bị."
+  },
+  {
+    "input": "Trẻ không biết lưu trữ tài liệu hoạt động nhóm một cách khoa học",
+    "output": "Tài liệu thất lạc, không ai nắm được – nên luyện lập thư mục nhóm, đặt tên file rõ ràng và chia sẻ qua drive/lớp học chung."
+  },
+  {
+    "input": "Trẻ không biết trình bày báo cáo nhóm một cách rõ ràng, hấp dẫn",
+    "output": "Báo cáo mờ nhạt, dài dòng – nên luyện cấu trúc: mở – nội dung chính – kết luận – có hình ảnh minh họa – trình bày ngắn gọn, sinh động."
+  },
+  {
+    "input": "Trẻ không biết chuẩn bị nội dung khi báo cáo nhóm",
+    "output": "Nội dung rời rạc là thiếu chuẩn bị – nên luyện viết dàn ý theo thứ tự logic và chia phần rõ ràng cho từng thành viên."
+  },
+  {
+    "input": "Trẻ không biết phân vai người trình bày trong nhóm",
+    "output": "Không biết ai nói gì dễ dẫn đến chồng chéo – nên luyện phân vai dựa trên điểm mạnh của mỗi bạn."
+  },
+  {
+    "input": "Trẻ không biết luyện tập trước khi thuyết trình nhóm",
+    "output": "Lên nói mà run, nói sai – nên luyện diễn tập nhóm nhiều lần, có phản hồi từ bạn."
+  },
+  {
+    "input": "Trẻ không biết sử dụng slide hỗ trợ thuyết trình",
+    "output": "Slide quá nhiều chữ hoặc không đồng bộ – nên luyện dùng hình ảnh, từ khóa và mỗi slide chỉ 3–5 ý chính."
+  },
+  {
+    "input": "Trẻ không biết điều chỉnh tốc độ nói khi thuyết trình",
+    "output": "Nói nhanh quá khiến người nghe không theo kịp – nên luyện nói chậm, rõ, có nhấn nhá ý chính."
+  },
+  {
+    "input": "Trẻ không biết sử dụng ngôn ngữ cơ thể phù hợp khi thuyết trình",
+    "output": "Đứng im hoặc lắc lư làm mất tự tin – nên luyện cử chỉ tay nhẹ, hướng mặt về khán giả và tư thế thẳng."
+  },
+  {
+    "input": "Trẻ không biết kiểm soát lo lắng khi thuyết trình trước đám đông",
+    "output": "Lo lắng quá mức làm trẻ mất bình tĩnh – nên luyện hít thở sâu, chuẩn bị kỹ và nói thử nhiều lần trước nhóm nhỏ."
+  },
+  {
+    "input": "Trẻ không biết nhìn khán giả khi thuyết trình",
+    "output": "Chỉ nhìn giấy là thiếu kết nối – nên luyện nhìn vào mắt người nghe, di chuyển ánh nhìn giữa các nhóm người."
+  },
+  {
+    "input": "Trẻ không biết dẫn dắt nội dung báo cáo một cách logic",
+    "output": "Nói thiếu mạch lạc – nên luyện trình bày theo cấu trúc: mở bài – thân bài – kết luận."
+  },
+  {
+    "input": "Trẻ không biết trả lời câu hỏi sau thuyết trình một cách tự tin",
+    "output": "Bị hỏi thì im lặng hoặc trả lời lung tung – nên luyện nghe kỹ, trả lời ngắn gọn và đúng trọng tâm."
+  },
+  {
+    "input": "Trẻ không biết lắng nghe câu hỏi của người nghe khi thuyết trình",
+    "output": "Không nghe rõ câu hỏi dẫn đến trả lời sai – nên luyện nghe hết câu, nhắc lại nếu chưa rõ rồi mới trả lời."
+  },
+  {
+    "input": "Trẻ không biết cảm ơn người đã đặt câu hỏi",
+    "output": "Không phản hồi lịch sự – nên luyện mẫu: 'Cảm ơn bạn/cô đã đặt câu hỏi rất hay, nhóm mình xin trả lời như sau...'."
+  },
+  {
+    "input": "Trẻ không biết phối hợp nhóm khi thuyết trình trước đám đông",
+    "output": "Mỗi người trình bày không ăn khớp – nên luyện chuyển tiếp bằng câu dẫn rõ ràng và giữ liên kết nội dung giữa các bạn."
+  },
+  {
+    "input": "Trẻ không biết đánh giá phần trình bày của nhóm mình",
+    "output": "Không biết nhóm làm tốt/chưa tốt chỗ nào – nên luyện bảng tự đánh giá sau mỗi lần trình bày."
+  },
+  {
+    "input": "Trẻ không biết tiếp thu nhận xét để cải thiện thuyết trình",
+    "output": "Bị góp ý mà phản ứng tiêu cực – nên luyện thái độ tiếp nhận: 'Nhóm con ghi nhận và sẽ cải thiện phần đó ạ'."
+  },
+  {
+    "input": "Trẻ không biết đánh giá phần trình bày của nhóm khác một cách xây dựng",
+    "output": "Chê không lý do hoặc khen suông – nên luyện mẫu: 'Nhóm bạn làm tốt phần... Nhóm có thể cải thiện thêm phần...'."
+  },
+  {
+    "input": "Trẻ không biết phản hồi phần nhận xét từ nhóm khác",
+    "output": "Im lặng hoặc cãi lại là thiếu kỹ năng phản hồi – nên luyện nói: 'Cảm ơn nhóm bạn, nhóm mình sẽ xem lại phần đó'."
+  },
+  {
+    "input": "Trẻ không biết chuẩn bị trang phục phù hợp khi thuyết trình",
+    "output": "Mặc đồ lòe loẹt, không nghiêm túc – nên luyện chọn trang phục gọn gàng, sạch sẽ, lịch sự phù hợp hoàn cảnh."
+  },
+  {
+    "input": "Trẻ không biết sử dụng thiết bị hỗ trợ trình bày đúng cách",
+    "output": "Không biết mở slide, điều khiển chuột – nên luyện thao tác thiết bị trước giờ trình bày."
+  },
+  {
+    "input": "Trẻ không biết kiểm tra kỹ thuật trước khi thuyết trình",
+    "output": "Lên rồi mới biết không có mic, slide không chạy – nên luyện lập danh sách kiểm tra thiết bị trước buổi báo cáo."
+  },
+  {
+    "input": "Trẻ không biết khởi động tinh thần trước khi lên thuyết trình",
+    "output": "Run, nói lắp ngay từ đầu – nên luyện khởi động giọng, tâm lý tích cực trước khi bước lên trình bày."
+  },
+  {
+    "input": "Trẻ không biết giữ bình tĩnh nếu gặp trục trặc khi trình bày",
+    "output": "Mất slide là dừng luôn – nên luyện ứng biến: xin lỗi nhẹ nhàng, chuyển qua trình bày bằng lời hoặc nhờ bạn hỗ trợ."
+  },
+  {
+    "input": "Trẻ không biết làm nổi bật ý chính trong bài thuyết trình",
+    "output": "Nghe xong không nhớ điểm quan trọng – nên luyện nhấn mạnh bằng giọng nói, slide in đậm hoặc ví dụ minh họa."
+  },
+  {
+    "input": "Trẻ không biết sử dụng ví dụ minh họa sinh động khi thuyết trình",
+    "output": "Chỉ nói lý thuyết – nên luyện tìm ví dụ thực tế, hình ảnh minh họa giúp dễ hiểu và hấp dẫn hơn."
+  },
+  {
+    "input": "Trẻ không biết kết thúc bài trình bày một cách ấn tượng",
+    "output": "Kết thúc quá nhanh hoặc không đọng lại – nên luyện câu chốt mang thông điệp, lời cảm ơn và lời mời phản hồi."
+  },
+  {
+    "input": "Trẻ không biết luyện giọng nói rõ ràng, dễ nghe",
+    "output": "Giọng nói nhỏ, không rõ chữ – nên luyện nói to, nhấn đúng âm và tập đọc to hằng ngày."
+  },
+  {
+    "input": "Trẻ không biết sử dụng từ ngữ phù hợp với đối tượng nghe",
+    "output": "Dùng từ chuyên môn với người không chuyên – nên luyện điều chỉnh từ ngữ theo độ tuổi, nhóm khán giả."
+  },
+  {
+    "input": "Trẻ không biết điều chỉnh nội dung khi trình bày cho các nhóm tuổi khác nhau",
+    "output": "Trẻ nói cho trẻ nhỏ như nói với người lớn – nên luyện thay đổi cách trình bày, ví dụ theo độ tuổi khán giả."
+  },
+  {
+    "input": "Trẻ không biết tạo sự tương tác với người nghe khi thuyết trình",
+    "output": "Nói một chiều khiến người nghe mệt – nên luyện hỏi khán giả, yêu cầu giơ tay, hoặc đưa ra tình huống phản hồi."
+  },
+  {
+    "input": "Trẻ không biết kiểm soát thời gian trình bày hiệu quả",
+    "output": "Nói quá dài hoặc thiếu ý do hết giờ – nên luyện chia thời gian cho từng phần và tập canh giờ khi luyện tập."
+  },
+  {
+    "input": "Trẻ không biết đánh giá tiến bộ bản thân qua mỗi lần thuyết trình",
+    "output": "Không biết mình đã khá hơn hay chưa – nên luyện viết nhật ký trình bày và so sánh từng lần để thấy tiến bộ."
+  },
+  {
+    "input": "Trẻ không biết giúp bạn cùng nhóm tự tin hơn khi trình bày",
+    "output": "Bạn run, không ai hỗ trợ – nên luyện vai trò cổ vũ, nhắc nội dung, hoặc thay bạn trình bày khi cần."
+  },
+  {
+    "input": "Trẻ không biết cùng nhóm phản biện lại câu hỏi từ khán giả",
+    "output": "Trả lời rời rạc – nên luyện phối hợp trả lời: người 1 nêu ý chính, người 2 bổ sung, người 3 kết lại."
+  },
+  {
+    "input": "Trẻ không biết chia sẻ trải nghiệm thuyết trình với bạn khác",
+    "output": "Chỉ giữ cho riêng mình – nên luyện kể lại quá trình luyện tập, điều học được để lan tỏa và khích lệ bạn."
+  },
+  {
+    "input": "Trẻ không biết đúc kết bài học sau mỗi lần trình bày nhóm",
+    "output": "Chỉ làm xong rồi thôi – nên luyện ghi lại điều tốt, điều cần sửa và cam kết thay đổi lần tới."
+  },
+  {
+    "input": "Trẻ không biết hỗ trợ bạn khi bạn bị khựng lại khi trình bày",
+    "output": "Bạn quên bài mà không ai hỗ trợ – nên luyện ra tín hiệu hoặc thay phiên hỗ trợ phần nội dung bị gián đoạn."
+  },
+  {
+    "input": "Trẻ không biết linh hoạt thay đổi người trình bày nếu gặp sự cố",
+    "output": "Bạn bị sốt hoặc vắng mà nhóm không xoay kịp – nên luyện có ít nhất 1 người dự phòng và tập nội dung chéo cho nhau."
+  },
+  {
+    "input": "Trẻ không biết phân tích điểm mạnh và điểm yếu khi thuyết trình",
+    "output": "Không tự nhìn lại bản thân – nên luyện checklist đánh giá và hỏi ý kiến bạn sau khi trình bày."
+  },
+  {
+    "input": "Trẻ không biết làm việc nhóm hiệu quả khi chuẩn bị bài thuyết trình",
+    "output": "Chia việc không đều, không đúng người – nên luyện phân vai theo năng lực và kiểm tra tiến độ định kỳ."
+  },
+  {
+    "input": "Trẻ không biết đưa ra lời khuyên để bạn cải thiện kỹ năng trình bày",
+    "output": "Khen đại hoặc chê thiếu tinh tế – nên luyện góp ý cụ thể: 'Bạn nói rõ rồi, nếu thêm ví dụ thì sẽ sinh động hơn'."
+  },
+  {
+    "input": "Trẻ không biết cảm ơn khán giả sau khi kết thúc bài thuyết trình",
+    "output": "Kết xong là im lặng – nên luyện nói: 'Cảm ơn mọi người đã lắng nghe, nhóm mình sẵn sàng nhận câu hỏi ạ!'."
+  },
+  {
+    "input": "Trẻ không biết làm việc nhóm để thiết kế poster thuyết trình",
+    "output": "Tự ai làm nấy là thiếu phối hợp – nên luyện vẽ phác thảo chung, chia người viết chữ – vẽ – chọn hình."
+  },
+  {
+    "input": "Trẻ không biết phối hợp nhóm để quay video bài trình bày",
+    "output": "Video không có kết cấu rõ – nên luyện viết kịch bản, phân vai quay – dựng – thuyết trình rõ ràng trước khi làm."
+  },
+  {
+    "input": "Trẻ không biết chỉnh sửa video trình bày nhóm một cách hợp lý",
+    "output": "Chỉnh quá nhiều hiệu ứng hoặc bỏ sót nội dung – nên luyện dùng công cụ đơn giản, cắt ghép vừa phải và giữ rõ ý chính."
+  },
+  {
+    "input": "Trẻ không biết đăng tải bài thuyết trình nhóm lên nền tảng học tập một cách an toàn",
+    "output": "Đăng lên kèm thông tin cá nhân – nên luyện dùng tài khoản chung, không hiển thị tên thật và kiểm duyệt nội dung trước khi chia sẻ."
+  },
+  {
+    "input": "Trẻ không biết bảo vệ quyền riêng tư khi chia sẻ nội dung thuyết trình nhóm",
+    "output": "Chia sẻ ảnh bạn bè mà không xin phép – nên luyện hỏi ý kiến trước, làm mờ thông tin nhạy cảm."
+  },
+  {
+    "input": "Trẻ không biết thu thập phản hồi từ người xem sau khi chia sẻ bài trình bày",
+    "output": "Không ai góp ý – nên luyện tạo bảng khảo sát đơn giản hoặc hỏi trực tiếp: 'Bạn thấy nhóm mình trình bày thế nào?'."
+  },
+  {
+    "input": "Trẻ không biết sử dụng phản hồi để cải thiện bài trình bày sau",
+    "output": "Góp ý xong để đó – nên luyện đọc lại phản hồi, ghi ra 2–3 điều cần cải thiện và sửa trong lần trình bày kế tiếp."
+  },
+  {
+    "input": "Trẻ không biết tự đánh giá sự trưởng thành sau quá trình làm việc nhóm và thuyết trình",
+    "output": "Chỉ tập trung vào kết quả – nên luyện viết cảm nhận: con đã thay đổi thế nào, con học được gì từ nhóm và thuyết trình."
+  }
+]

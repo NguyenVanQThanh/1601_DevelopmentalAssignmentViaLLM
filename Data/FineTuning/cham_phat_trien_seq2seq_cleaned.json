@@ -1,0 +1,986 @@
+[
+  {
+    "input": "chậm nói khám ở đâu",
+    "output": "Trẻ chậm nói nên được khám tại các cơ sở chuyên về phát triển trẻ em, như khoa Tâm lý  -  Phục hồi chức năng tại Bệnh viện Nhi Trung ương, Bệnh viện Nhi đồng, hoặc các trung tâm can thiệp sớm uy tín. Việc khám nên do bác sĩ nhi, bác sĩ tâm lý lâm sàng hoặc chuyên gia ngôn ngữ trị liệu thực hiện."
+  },
+  {
+    "input": "trẻ chậm nói khám ở đâu",
+    "output": "Trẻ chậm nói nên được đưa đến khám tại các cơ sở chuyên khoa như Bệnh viện Nhi Trung ương, Bệnh viện Nhi đồng 1, 2 hoặc các trung tâm phục hồi chức năng trẻ em. Nên ưu tiên nơi có bác sĩ chuyên khoa phát triển  -  tâm lý nhi và chuyên gia ngôn ngữ trị liệu."
+  },
+  {
+    "input": "trẻ bị chậm nói khám ở đâu",
+    "output": "Trẻ bị chậm nói nên được đánh giá tại các bệnh viện có chuyên khoa phục hồi chức năng, khoa Tâm lý  -  Giáo dục đặc biệt hoặc trung tâm can thiệp sớm. Các bác sĩ và chuyên gia sẽ đánh giá toàn diện khả năng ngôn ngữ, nhận thức và phát triển tổng thể."
+  },
+  {
+    "input": "trẻ chậm nói nên khám ở đâu",
+    "output": "Phụ huynh nên đưa trẻ đến các bệnh viện nhi, trung tâm phục hồi chức năng hoặc trung tâm can thiệp sớm để được đánh giá toàn diện về ngôn ngữ, vận động và nhận thức. Chuyên gia ngôn ngữ trị liệu và bác sĩ phát triển sẽ đưa ra hướng can thiệp phù hợp."
+  },
+  {
+    "input": "trẻ chậm nói thì khám ở đâu",
+    "output": "Trẻ có dấu hiệu chậm nói nên được khám tại các cơ sở y tế có khoa phát triển trẻ em hoặc phục hồi chức năng. Nên chọn nơi có chuyên gia về ngôn ngữ trị liệu hoặc bác sĩ phát triển nhi để được đánh giá và tư vấn đúng hướng."
+  },
+  {
+    "input": "khám cho trẻ chậm nói ở đâu",
+    "output": "Nên khám tại các bệnh viện lớn có khoa phục hồi chức năng, khoa tâm lý nhi hoặc trung tâm can thiệp sớm. Một số địa chỉ uy tín: Bệnh viện Nhi Trung ương, Bệnh viện Nhi đồng 1, Trung tâm NHC hoặc Viện Nghiên cứu Giáo dục Phát triển Tiềm năng con người (IPD)."
+  },
+  {
+    "input": "trẻ chậm phát triển khám ở đâu",
+    "output": "Trẻ chậm phát triển nên được khám tại các cơ sở chuyên sâu về phát triển nhi khoa như Bệnh viện Nhi Trung ương, Bệnh viện Nhi đồng 1, 2 hoặc Trung tâm can thiệp sớm. Nên được đánh giá toàn diện bởi bác sĩ phát triển nhi, nhà tâm lý và chuyên gia ngôn ngữ trị liệu."
+  },
+  {
+    "input": "bé bị chậm nói khám ở đâu",
+    "output": "Phụ huynh nên đưa bé đi khám tại các bệnh viện chuyên về nhi khoa có đơn vị phục hồi chức năng, hoặc các trung tâm can thiệp sớm. Khám sớm giúp xác định nguyên nhân và can thiệp hiệu quả trong giai đoạn vàng."
+  },
+  {
+    "input": "bé chậm nói nên khám ở đâu",
+    "output": "Nên đưa bé đến khám tại bệnh viện có chuyên khoa phát triển trẻ em hoặc các trung tâm ngôn ngữ trị liệu uy tín. Việc đánh giá nên bao gồm kiểm tra ngôn ngữ, nhận thức, vận động và tương tác xã hội để có kế hoạch can thiệp phù hợp."
+  },
+  {
+    "input": "bé chậm nói nên đi khám ở đâu",
+    "output": "Phụ huynh nên đưa bé đến khám tại các trung tâm phục hồi chức năng hoặc bệnh viện có khoa phát triển nhi. Ưu tiên các nơi có chuyên gia ngôn ngữ trị liệu, tâm lý nhi và bác sĩ phục hồi chức năng để được đánh giá toàn diện."
+  },
+  {
+    "input": "trẻ chậm nói nên đi khám ở đâu",
+    "output": "Trẻ nên được khám tại các cơ sở y tế có chuyên khoa về phát triển trẻ em, như Bệnh viện Nhi Trung ương, Nhi đồng 1, 2 hoặc trung tâm phục hồi chức năng uy tín. Cần đánh giá đa lĩnh vực: ngôn ngữ, vận động, nhận thức và tương tác xã hội."
+  },
+  {
+    "input": "bé chậm nói khám khoa nào",
+    "output": "Bé nên khám tại khoa Phục hồi chức năng  -  Tâm lý hoặc Khoa Phát triển trẻ em trong các bệnh viện nhi. Các bác sĩ chuyên ngành phát triển và ngôn ngữ trị liệu sẽ đánh giá toàn diện để xác định nguyên nhân chậm nói."
+  },
+  {
+    "input": "trẻ chậm nói khi nào cần đi khám",
+    "output": "Trẻ cần đi khám nếu sau 18 tháng chưa nói được từ đơn rõ ràng, hoặc sau 24 tháng chưa nói được câu 2 - 3 từ. Các dấu hiệu cảnh báo như không phản ứng khi gọi tên, không bắt chước, không chỉ tay... cũng là lý do cần đánh giá sớm."
+  },
+  {
+    "input": "khám chậm nói viện nhi trung ương",
+    "output": "Tại Bệnh viện Nhi Trung ương, bạn có thể đưa trẻ đến khám tại Khoa Tâm lý  -  Phục hồi chức năng. Đây là nơi chuyên đánh giá và can thiệp cho trẻ chậm phát triển, chậm nói, rối loạn phổ tự kỷ và các vấn đề phát triển khác."
+  },
+  {
+    "input": "trẻ chậm phát triển ngôn ngữ khám ở đâu",
+    "output": "Trẻ chậm phát triển ngôn ngữ nên được khám tại các bệnh viện lớn như Nhi Trung ương, Nhi đồng 1, hoặc trung tâm can thiệp sớm có chuyên gia ngôn ngữ trị liệu. Nên khám sớm trước 3 tuổi để can thiệp hiệu quả nhất."
+  },
+  {
+    "input": "khám chậm phát triển trí tuệ ở đâu",
+    "output": "Trẻ nghi ngờ chậm phát triển trí tuệ nên được khám tại các bệnh viện có khoa Tâm lý  -  Phục hồi chức năng, Trung tâm nghiên cứu và can thiệp phát triển. Các bác sĩ sẽ đánh giá trí tuệ, ngôn ngữ, hành vi và vận động để đưa ra chẩn đoán và kế hoạch can thiệp."
+  },
+  {
+    "input": "trẻ chậm nói bao nhiêu tháng thì cần đi khám",
+    "output": "Nếu sau 18 tháng trẻ chưa nói được từ đơn hoặc 24 tháng chưa ghép được câu 2 - 3 từ, cần đưa trẻ đi khám. Việc khám sớm sẽ giúp phát hiện các rối loạn phát triển như chậm nói đơn thuần, tự kỷ, rối loạn ngôn ngữ tiếp nhận hoặc biểu đạt."
+  },
+  {
+    "input": "trẻ 2 tuổi không nói có cần đi khám không",
+    "output": "Có. Nếu trẻ 2 tuổi chưa nói được từ có nghĩa hoặc chỉ nói vài từ đơn, ít giao tiếp bằng lời, thì đây là dấu hiệu cảnh báo cần đi khám. Can thiệp sớm trong giai đoạn này có thể giúp cải thiện đáng kể khả năng ngôn ngữ."
+  },
+  {
+    "input": "trẻ 24 tháng nói ít có sao không",
+    "output": "Trẻ 24 tháng nếu chỉ nói vài từ, không ghép được câu đơn, hoặc không giao tiếp bằng lời thì có thể là dấu hiệu chậm phát triển ngôn ngữ. Cần đưa trẻ đi đánh giá tại các cơ sở chuyên khoa để có hướng can thiệp sớm."
+  },
+  {
+    "input": "bé không chịu nói nhưng hiểu hết",
+    "output": "Trường hợp bé hiểu lời nhưng không nói có thể do rối loạn ngôn ngữ biểu đạt hoặc chậm phát triển ngôn ngữ. Cần đưa trẻ đi đánh giá chuyên sâu để xác định nguyên nhân và can thiệp sớm."
+  },
+  {
+    "input": "trẻ nói ít có sao không",
+    "output": "Trẻ nói ít có thể là dấu hiệu của chậm phát triển ngôn ngữ hoặc các rối loạn khác như tự kỷ, rối loạn giao tiếp. Cần đánh giá thêm về hiểu lời, tương tác xã hội và biểu hiện hành vi để có hướng can thiệp phù hợp."
+  },
+  {
+    "input": "bé 2 tuổi chưa biết nói có sao không",
+    "output": "Bé 2 tuổi chưa nói được từ có nghĩa hoặc chỉ nói vài từ đơn là dấu hiệu chậm nói. Phụ huynh nên cho bé đi khám để đánh giá ngôn ngữ, nhận thức và các khía cạnh phát triển khác để can thiệp sớm."
+  },
+  {
+    "input": "bé 2 tuổi chưa nói được",
+    "output": "Bé 2 tuổi chưa nói được là dấu hiệu bất thường trong phát triển ngôn ngữ. Cần đánh giá sớm bởi chuyên gia để xác định nguyên nhân như chậm nói đơn thuần, tự kỷ, khiếm thính hoặc rối loạn ngôn ngữ."
+  },
+  {
+    "input": "bé 2 tuổi chậm nói",
+    "output": "Bé 2 tuổi chậm nói cần được đánh giá bởi bác sĩ phát triển nhi hoặc chuyên gia ngôn ngữ trị liệu để xác định nguyên nhân và xây dựng chương trình can thiệp cá nhân hóa phù hợp."
+  },
+  {
+    "input": "bé 20 tháng chưa nói",
+    "output": "Ở 20 tháng, trẻ nên nói được khoảng 10 từ có nghĩa. Nếu chưa nói, cần đánh giá khả năng hiểu lời, tương tác xã hội, phản ứng với âm thanh… để loại trừ các rối loạn như chậm nói, rối loạn phổ tự kỷ hoặc khiếm thính."
+  },
+  {
+    "input": "trẻ 20 tháng chưa biết nói có sao không",
+    "output": "Nếu trẻ 20 tháng chưa biết nói, đó có thể là dấu hiệu chậm phát triển ngôn ngữ. Phụ huynh nên đưa trẻ đi khám sớm để được đánh giá và can thiệp kịp thời trong giai đoạn vàng phát triển."
+  },
+  {
+    "input": "trẻ 22 tháng chưa nói được từ nào",
+    "output": "Trẻ 22 tháng chưa nói được từ nào là biểu hiện cần lưu ý. Nên đưa trẻ đi đánh giá ngôn ngữ, thính giác, hành vi xã hội… càng sớm càng tốt để xác định nguyên nhân và bắt đầu can thiệp."
+  },
+  {
+    "input": "trẻ 2 tuổi chưa nói được từ nào",
+    "output": "Nếu trẻ 2 tuổi chưa nói được từ nào, cần đi khám ngay để đánh giá phát triển toàn diện. Đây có thể là dấu hiệu của rối loạn ngôn ngữ, tự kỷ hoặc các vấn đề thần kinh  -  phát triển khác."
+  },
+  {
+    "input": "trẻ 25 tháng chưa nói được",
+    "output": "Trẻ 25 tháng chưa nói được là chậm so với mốc phát triển ngôn ngữ. Cần đánh giá tại cơ sở chuyên khoa để loại trừ các nguyên nhân như khiếm thính, rối loạn phổ tự kỷ hoặc chậm nói đơn thuần."
+  },
+  {
+    "input": "trẻ 26 tháng chưa biết nói",
+    "output": "Trẻ 26 tháng chưa nói được từ có nghĩa cần được đánh giá bởi chuyên gia phát triển nhi hoặc ngôn ngữ trị liệu. Việc phát hiện sớm và can thiệp kịp thời giúp cải thiện đáng kể kết quả lâu dài."
+  },
+  {
+    "input": "trẻ gần 3 tuổi chưa biết nói",
+    "output": "Trẻ gần 3 tuổi chưa biết nói là dấu hiệu rõ ràng của chậm phát triển ngôn ngữ. Cần đi khám ngay để đánh giá các kỹ năng ngôn ngữ, nhận thức và xã hội, nhằm phát hiện rối loạn tiềm ẩn như tự kỷ hoặc RLNN."
+  },
+  {
+    "input": "bé 3 tuổi chưa biết nói có sao không",
+    "output": "Có. Bé 3 tuổi chưa biết nói là bất thường trong phát triển ngôn ngữ. Việc đánh giá và can thiệp sớm có thể giúp bé cải thiện đáng kể nếu được hỗ trợ đúng cách."
+  },
+  {
+    "input": "trẻ 3 tuổi chưa nói được",
+    "output": "Trẻ 3 tuổi chưa nói được là biểu hiện rõ ràng của chậm ngôn ngữ. Cần được đánh giá ngôn ngữ, nhận thức, hành vi và kỹ năng giao tiếp tại cơ sở y tế chuyên khoa để can thiệp càng sớm càng tốt."
+  },
+  {
+    "input": "trẻ 2 tuổi không nói nhưng hiểu lời",
+    "output": "Trẻ 2 tuổi hiểu lời nhưng không nói có thể gặp vấn đề về ngôn ngữ biểu đạt hoặc chọn lọc giao tiếp. Cần đánh giá kỹ để phân biệt giữa chậm nói đơn thuần và rối loạn như tự kỷ."
+  },
+  {
+    "input": "bé 2 tuổi không nói nhưng hiểu",
+    "output": "Nếu bé hiểu lời nhưng không nói, cần đánh giá khả năng giao tiếp, hành vi xã hội và ngôn ngữ biểu đạt. Có thể là chậm nói hoặc liên quan đến rối loạn phổ tự kỷ hoặc lo âu giao tiếp."
+  },
+  {
+    "input": "trẻ chậm nói có nguy hiểm không",
+    "output": "Chậm nói không nguy hiểm nếu là do phát triển cá nhân chậm hơn bình thường. Tuy nhiên, nếu đi kèm các dấu hiệu bất thường khác như không tương tác xã hội, không hiểu lời, thì có thể là biểu hiện của rối loạn phát triển cần can thiệp sớm."
+  },
+  {
+    "input": "chậm nói có sao không",
+    "output": "Chậm nói có thể ảnh hưởng đến học tập, giao tiếp và hành vi xã hội nếu không được can thiệp kịp thời. Cần xác định nguyên nhân để có hướng hỗ trợ phù hợp cho từng trường hợp."
+  },
+  {
+    "input": "trẻ 2 tuổi chậm nói có sao không",
+    "output": "Trẻ 2 tuổi chậm nói có thể là bình thường trong một số trường hợp, nhưng cũng có thể là dấu hiệu của rối loạn phát triển. Cần đánh giá kỹ về khả năng hiểu lời, giao tiếp không lời và hành vi để quyết định có cần can thiệp hay không."
+  },
+  {
+    "input": "bé chậm nói có sao không",
+    "output": "Bé chậm nói nếu không được can thiệp đúng lúc có thể dẫn đến khó khăn trong học tập và giao tiếp xã hội. Nên đánh giá sớm để loại trừ các rối loạn phát triển và can thiệp hiệu quả hơn."
+  },
+  {
+    "input": "bé 18 tháng chưa biết nói",
+    "output": "Trẻ 18 tháng nên nói được ít nhất 5 - 10 từ đơn có nghĩa. Nếu chưa nói được, cần đánh giá khả năng nghe, hiểu, giao tiếp và loại trừ nguyên nhân như rối loạn ngôn ngữ hay phổ tự kỷ."
+  },
+  {
+    "input": "trẻ 19 tháng chưa biết nói",
+    "output": "Ở 19 tháng, trẻ nên bắt đầu nói từ đơn và biết ghép từ đơn giản. Nếu chưa nói, cần được khám phát triển để xác định nguyên nhân và có kế hoạch can thiệp phù hợp."
+  },
+  {
+    "input": "trẻ 21 tháng chưa biết nói",
+    "output": "Trẻ 21 tháng chưa biết nói là dấu hiệu cần quan tâm. Cần đánh giá khả năng giao tiếp, hiểu lời, phản xạ với môi trường… để phát hiện chậm phát triển hoặc rối loạn liên quan."
+  },
+  {
+    "input": "trẻ 27 tháng chưa nói",
+    "output": "Trẻ 27 tháng chưa nói là chậm hơn so với mốc phát triển. Cần đánh giá kỹ các kỹ năng giao tiếp, ngôn ngữ và nhận thức. Can thiệp ngôn ngữ sớm sẽ giúp cải thiện đáng kể."
+  },
+  {
+    "input": "trẻ 28 tháng chưa biết nói",
+    "output": "Nếu trẻ 28 tháng chưa biết nói, cần đưa trẻ đi khám phát triển sớm. Việc chậm nói có thể là do nguyên nhân đơn thuần hoặc dấu hiệu của các rối loạn phát triển khác."
+  },
+  {
+    "input": "trẻ 29 tháng chưa biết nói",
+    "output": "Trẻ 29 tháng chưa biết nói cần được đánh giá toàn diện về ngôn ngữ, nhận thức và hành vi xã hội. Việc khám sớm giúp xác định nguyên nhân và xây dựng kế hoạch can thiệp kịp thời."
+  },
+  {
+    "input": "bé 30 tháng chưa biết nói",
+    "output": "Trẻ 30 tháng chưa nói được là chậm rõ rệt so với mốc phát triển. Phụ huynh nên cho trẻ đi khám để được đánh giá và bắt đầu can thiệp càng sớm càng tốt."
+  },
+  {
+    "input": "trẻ 2 tuổi nói ít",
+    "output": "Trẻ 2 tuổi nên nói được 50 từ và ghép được câu đơn giản. Nếu chỉ nói vài từ hoặc nói không rõ, cần đánh giá để phát hiện sớm các rối loạn ngôn ngữ hoặc phát triển thần kinh."
+  },
+  {
+    "input": "bé hơn 2 tuổi chưa biết nói",
+    "output": "Trẻ hơn 2 tuổi chưa biết nói là bất thường trong phát triển ngôn ngữ. Việc đánh giá sớm giúp loại trừ nguyên nhân như khiếm thính, rối loạn phổ tự kỷ hoặc rối loạn ngôn ngữ biểu đạt."
+  },
+  {
+    "input": "trẻ 2 tuổi rưỡi chưa biết nói",
+    "output": "Trẻ 30 tháng chưa biết nói là chậm ngôn ngữ nghiêm trọng. Nên đưa trẻ đi khám chuyên khoa để đánh giá toàn diện và bắt đầu can thiệp ngôn ngữ, hành vi nếu cần thiết."
+  },
+  {
+    "input": "trẻ 2 tuổi rưỡi không nói",
+    "output": "Nếu trẻ 2 tuổi rưỡi không nói từ có nghĩa nào, đây là dấu hiệu nghiêm trọng cần đánh giá ngay. Cần kiểm tra khả năng nghe, hiểu, tương tác và loại trừ các rối loạn phát triển."
+  },
+  {
+    "input": "bé 2 tuổi nói chưa rõ",
+    "output": "Bé 2 tuổi phát âm chưa rõ là bình thường nếu vốn từ đang phát triển. Tuy nhiên, nếu phát âm lệch hẳn, không ai hiểu được hoặc kèm dấu hiệu chậm nói, nên đi khám ngôn ngữ trị liệu để đánh giá sớm."
+  },
+  {
+    "input": "bé 2 tuổi ít nói",
+    "output": "Trẻ 2 tuổi nếu nói ít hơn 50 từ hoặc không ghép câu là dấu hiệu chậm phát triển ngôn ngữ. Cần được đánh giá để xác định nguyên nhân và can thiệp sớm giúp cải thiện giao tiếp và phát triển toàn diện."
+  },
+  {
+    "input": "bé 2 tuổi chậm nói có nguy hiểm không",
+    "output": "Bé 2 tuổi chậm nói không nguy hiểm nếu được phát hiện và can thiệp sớm. Tuy nhiên, nếu để kéo dài có thể ảnh hưởng đến học tập, hành vi và kỹ năng xã hội. Cần đánh giá nguyên nhân để có kế hoạch phù hợp."
+  },
+  {
+    "input": "bé không nói nhưng nghe hiểu",
+    "output": "Trường hợp bé nghe hiểu nhưng không nói có thể là rối loạn ngôn ngữ biểu đạt, rối loạn phát triển hoặc rối loạn phổ tự kỷ. Cần đánh giá khả năng tương tác, hiểu lời và phát âm để có can thiệp đúng hướng."
+  },
+  {
+    "input": "bé 3 tuổi nói chưa rõ",
+    "output": "Trẻ 3 tuổi nên nói rõ để người ngoài gia đình hiểu ít nhất 75%. Nếu nói không rõ, cần đánh giá phát âm, cấu trúc miệng, khả năng nghe và phát triển ngôn ngữ. Can thiệp sớm giúp cải thiện phát âm hiệu quả."
+  },
+  {
+    "input": "trẻ nói chậm có cần học nói không",
+    "output": "Có. Trẻ chậm nói cần được can thiệp ngôn ngữ trị liệu để học cách giao tiếp, phát âm và tăng vốn từ. Việc học nói nên được cá nhân hóa theo mức độ phát triển của trẻ."
+  },
+  {
+    "input": "bé nói muộn có nên cho đi học mẫu giáo không",
+    "output": "Nên. Cho trẻ nói muộn đi học mẫu giáo giúp tăng cơ hội giao tiếp, học theo bạn và phát triển ngôn ngữ. Tuy nhiên, cần chọn trường có giáo viên hiểu về phát triển ngôn ngữ và môi trường hỗ trợ."
+  },
+  {
+    "input": "bé 2 tuổi chưa biết nói từ nào",
+    "output": "Trẻ 2 tuổi chưa biết nói từ nào là dấu hiệu chậm nói nghiêm trọng. Nên đưa bé đi khám chuyên khoa phát triển và ngôn ngữ trị liệu để xác định nguyên nhân và can thiệp càng sớm càng tốt."
+  },
+  {
+    "input": "chậm nói có phải tự kỷ không",
+    "output": "Không phải tất cả trẻ chậm nói đều là tự kỷ. Tuy nhiên, chậm nói kèm theo các dấu hiệu như không giao tiếp mắt, không chỉ tay, không phản ứng khi gọi tên… có thể là dấu hiệu của rối loạn phổ tự kỷ. Cần sàng lọc và đánh giá kỹ lưỡng."
+  },
+  {
+    "input": "bé 19 tháng chưa biết nói có sao không",
+    "output": "Trẻ 19 tháng chưa biết nói có thể là chậm phát triển ngôn ngữ. Cần đánh giá khả năng hiểu lời, tương tác xã hội và loại trừ nguyên nhân như khiếm thính hoặc rối loạn phát triển để can thiệp kịp thời."
+  },
+  {
+    "input": "bé 17 tháng chưa biết nói có sao không",
+    "output": "Trẻ 17 tháng chưa nói được có thể là bình thường trong một số trường hợp, nhưng nếu đi kèm giảm phản ứng xã hội hoặc không hiểu lời thì cần đánh giá phát triển sớm."
+  },
+  {
+    "input": "bé 18 tháng chưa biết nói từ nào",
+    "output": "Nếu bé 18 tháng chưa nói được từ nào, cần đánh giá khả năng giao tiếp, hiểu lời và hành vi xã hội. Việc chẩn đoán sớm giúp can thiệp hiệu quả hơn nếu trẻ có rối loạn phát triển."
+  },
+  {
+    "input": "bé 2 tuổi nói không rõ",
+    "output": "Bé 2 tuổi phát âm chưa rõ có thể là bình thường do phát triển ngôn ngữ đang diễn ra. Tuy nhiên, nếu người ngoài không hiểu được lời trẻ nói, nên đi đánh giá phát âm và ngôn ngữ để can thiệp nếu cần."
+  },
+  {
+    "input": "trẻ 2 tuổi chậm nói có phải tự kỷ không",
+    "output": "Không phải mọi trẻ 2 tuổi chậm nói đều bị tự kỷ. Nếu trẻ vẫn hiểu lời, chỉ tay, giao tiếp mắt và chơi tương tác thì có thể chỉ là chậm nói đơn thuần. Nếu thiếu các kỹ năng xã hội, cần sàng lọc tự kỷ."
+  },
+  {
+    "input": "bé 20 tháng nói chưa rõ",
+    "output": "Trẻ 20 tháng phát âm chưa rõ có thể là bình thường nếu vẫn tăng dần số lượng từ và hiểu lời. Tuy nhiên, nếu kèm chậm nói, khó giao tiếp hoặc hành vi bất thường, cần đi đánh giá ngôn ngữ và phát triển."
+  },
+  {
+    "input": "bé hơn 2 tuổi nói chưa rõ",
+    "output": "Trẻ hơn 2 tuổi mà người ngoài khó hiểu lời nói là dấu hiệu chậm phát âm. Nên đi đánh giá âm thanh, cấu trúc miệng, khả năng nghe và phát triển ngôn ngữ để can thiệp đúng cách."
+  },
+  {
+    "input": "bé không chịu nói",
+    "output": "Trẻ không chịu nói có thể do rối loạn giao tiếp, lo âu xã hội hoặc chậm phát triển ngôn ngữ. Cần quan sát xem trẻ có hiểu lời, chỉ tay, giao tiếp không lời hay không để xác định nguyên nhân."
+  },
+  {
+    "input": "trẻ lười nói",
+    "output": "Khái niệm 'lười nói' thường không chính xác. Trẻ có thể gặp khó khăn trong ngôn ngữ biểu đạt, phát âm hoặc kỹ năng giao tiếp. Cần đánh giá chuyên sâu để xác định có phải là rối loạn ngôn ngữ hay không."
+  },
+  {
+    "input": "trẻ chậm nói có đi học được không",
+    "output": "Có. Trẻ chậm nói vẫn có thể đi học mẫu giáo hoặc học hòa nhập nếu được hỗ trợ phù hợp. Cần thông báo cho giáo viên và kết hợp với can thiệp ngôn ngữ để hỗ trợ trẻ hiệu quả hơn."
+  },
+  {
+    "input": "chậm nói có cần can thiệp sớm không",
+    "output": "Có. Can thiệp sớm là yếu tố then chốt giúp trẻ chậm nói cải thiện khả năng giao tiếp, học tập và hòa nhập xã hội. Hiệu quả cao nhất nếu bắt đầu trước 3 tuổi."
+  },
+  {
+    "input": "chậm nói có chữa được không",
+    "output": "Chậm nói có thể cải thiện rõ rệt nếu được phát hiện sớm và can thiệp đúng cách. Tùy nguyên nhân mà trẻ có thể phục hồi hoàn toàn hoặc đạt mức giao tiếp chức năng phù hợp với lứa tuổi."
+  },
+  {
+    "input": "bé nói tiếng nước ngoài mà không nói tiếng Việt",
+    "output": "Trẻ sống trong môi trường song ngữ có thể nói ngôn ngữ thứ hai tốt hơn tiếng mẹ đẻ. Tuy nhiên, nếu trẻ không nói tiếng mẹ đẻ ở nhà và có dấu hiệu chậm ngôn ngữ chung, cần được đánh giá ngôn ngữ và phát triển toàn diện."
+  },
+  {
+    "input": "bé nghe hiểu nhưng không nói có sao không",
+    "output": "Trẻ hiểu lời nhưng không nói có thể là rối loạn ngôn ngữ biểu đạt. Cần đánh giá bởi chuyên gia ngôn ngữ trị liệu để xác định có cần can thiệp ngôn ngữ hay trị liệu hỗ trợ khác."
+  },
+  {
+    "input": "bé 2 tuổi nói ít có cần can thiệp không",
+    "output": "Có. Trẻ 2 tuổi nói ít là dấu hiệu chậm phát triển ngôn ngữ. Can thiệp sớm bằng ngôn ngữ trị liệu sẽ giúp cải thiện khả năng giao tiếp và ngôn ngữ rõ rệt."
+  },
+  {
+    "input": "trẻ nói ít phải làm sao",
+    "output": "Cần đánh giá xem trẻ có hiểu lời, tương tác bằng mắt, chỉ tay hoặc có phản ứng với âm thanh không. Sau đó đưa trẻ đến khám chuyên khoa phát triển hoặc ngôn ngữ trị liệu để có hướng can thiệp sớm."
+  },
+  {
+    "input": "bé nói không ai hiểu",
+    "output": "Nếu người ngoài không hiểu lời nói của bé, cần đánh giá khả năng phát âm, cấu trúc miệng, nghe và ngôn ngữ biểu đạt. Trị liệu ngôn ngữ có thể giúp cải thiện khả năng phát âm và diễn đạt."
+  },
+  {
+    "input": "bé 3 tuổi chưa nói rõ",
+    "output": "Trẻ 3 tuổi chưa nói rõ có thể là chậm phát âm hoặc rối loạn âm lời. Cần đánh giá phát âm và can thiệp ngôn ngữ nếu người lạ không hiểu được phần lớn lời trẻ nói."
+  },
+  {
+    "input": "bé chậm nói có nên đi học mẫu giáo không",
+    "output": "Có. Trẻ chậm nói nên được đi học mẫu giáo có môi trường hỗ trợ, nhiều cơ hội giao tiếp. Tuy nhiên, cần thông báo cho giáo viên và theo dõi sát sự tiến bộ của trẻ."
+  },
+  {
+    "input": "bé nói ngọng có sao không",
+    "output": "Nói ngọng có thể bình thường ở trẻ nhỏ dưới 3 tuổi. Tuy nhiên, nếu sau 4 tuổi vẫn ngọng hoặc phát âm sai nhiều âm, nên được đánh giá bởi chuyên gia ngôn ngữ trị liệu để can thiệp."
+  },
+  {
+    "input": "trẻ nói ngọng có sao không",
+    "output": "Nếu trẻ trên 4 tuổi vẫn nói ngọng, phát âm sai nhiều âm hoặc người ngoài khó hiểu, cần được đánh giá khả năng phát âm, nghe và cấu trúc miệng. Trị liệu ngôn ngữ có thể cải thiện rõ rệt."
+  },
+  {
+    "input": "bé 3 tuổi nói không rõ",
+    "output": "Trẻ 3 tuổi nói không rõ có thể do phát âm chậm hoặc rối loạn âm lời. Nên đánh giá ngôn ngữ để xác định nguyên nhân và lên kế hoạch trị liệu nếu cần thiết."
+  },
+  {
+    "input": "bé 2 tuổi không ghép được câu",
+    "output": "Trẻ 2 tuổi nên bắt đầu ghép câu 2 - 3 từ. Nếu không ghép được câu, có thể là chậm ngôn ngữ biểu đạt. Cần đánh giá phát triển và ngôn ngữ để bắt đầu can thiệp kịp thời."
+  },
+  {
+    "input": "trẻ 3 tuổi không nói rõ câu",
+    "output": "Trẻ 3 tuổi nói không rõ câu cần được đánh giá khả năng phát âm, diễn đạt và sắp xếp ngôn ngữ. Trị liệu ngôn ngữ có thể giúp trẻ học cấu trúc câu và phát âm đúng hơn."
+  },
+  {
+    "input": "bé 4 tuổi nói chưa rõ",
+    "output": "Trẻ 4 tuổi chưa nói rõ là chậm phát âm so với lứa tuổi. Nếu người lạ khó hiểu lời nói của trẻ, cần đưa đi đánh giá và bắt đầu trị liệu phát âm nếu cần."
+  },
+  {
+    "input": "bé 2 tuổi không trả lời khi gọi tên",
+    "output": "Trẻ 2 tuổi không phản ứng khi gọi tên có thể là dấu hiệu của vấn đề về thính giác hoặc rối loạn phát triển như tự kỷ. Cần đánh giá phản ứng âm thanh, giao tiếp và ngôn ngữ để có hướng can thiệp sớm."
+  },
+  {
+    "input": "trẻ không nhìn vào mắt khi nói chuyện",
+    "output": "Thiếu giao tiếp mắt là một trong những dấu hiệu sớm của rối loạn phổ tự kỷ. Nếu trẻ không nhìn vào mắt khi nói chuyện, cần đánh giá toàn diện về phát triển xã hội và ngôn ngữ."
+  },
+  {
+    "input": "trẻ 2 tuổi chưa biết gọi ba mẹ",
+    "output": "Trẻ 2 tuổi chưa biết gọi ba mẹ là dấu hiệu chậm phát triển ngôn ngữ nghiêm trọng. Cần đi đánh giá phát triển toàn diện và bắt đầu can thiệp càng sớm càng tốt."
+  },
+  {
+    "input": "bé chưa biết chỉ tay",
+    "output": "Chỉ tay là kỹ năng chỉ dẫn và giao tiếp quan trọng xuất hiện từ 9 - 14 tháng. Nếu trẻ 18 tháng chưa biết chỉ tay, cần đánh giá khả năng giao tiếp xã hội và phát triển."
+  },
+  {
+    "input": "trẻ không bắt chước hành động",
+    "output": "Thiếu bắt chước là dấu hiệu cảnh báo rối loạn phát triển. Trẻ nên có khả năng bắt chước cử chỉ, hành động đơn giản từ 12 - 18 tháng. Cần đánh giá nếu trẻ không có kỹ năng này."
+  },
+  {
+    "input": "trẻ không giao tiếp với người lạ",
+    "output": "Trẻ có thể ngại người lạ trong một số giai đoạn phát triển. Tuy nhiên, nếu không giao tiếp mắt, không phản hồi lời nói hoặc không có nhu cầu chia sẻ, cần đánh giá rối loạn phát triển xã hội."
+  },
+  {
+    "input": "bé không trả lời câu hỏi",
+    "output": "Trẻ không trả lời câu hỏi có thể do chưa hiểu lời, chậm ngôn ngữ hoặc khó khăn về tương tác. Nên đánh giá khả năng hiểu và phản ứng với lời nói để xác định nguyên nhân."
+  },
+  {
+    "input": "trẻ 2 tuổi không hiểu lời",
+    "output": "Trẻ 2 tuổi không hiểu lời nói là dấu hiệu nghiêm trọng. Cần đánh giá thính giác, ngôn ngữ tiếp nhận và phát triển nhận thức để có kế hoạch can thiệp phù hợp."
+  },
+  {
+    "input": "bé nói chuyện một mình",
+    "output": "Trẻ nói chuyện một mình có thể là hành vi tưởng tượng bình thường. Tuy nhiên, nếu kèm hành vi lặp lại, không tương tác với người khác, nên đánh giá nguy cơ rối loạn phát triển."
+  },
+  {
+    "input": "trẻ lặp lại lời người khác",
+    "output": "Lặp lại lời người khác (echolalia) có thể là giai đoạn bình thường ở trẻ nhỏ nhưng cũng là đặc trưng của rối loạn phổ tự kỷ nếu kéo dài và không dùng để giao tiếp thực sự. Nên đánh giá chuyên sâu nếu kéo dài sau 3 tuổi."
+  },
+  {
+    "input": "trẻ không biết chơi tưởng tượng",
+    "output": "Không chơi tưởng tượng là một trong các dấu hiệu sớm của rối loạn phổ tự kỷ. Trẻ từ 18 - 24 tháng nên bắt đầu chơi đóng vai đơn giản. Nếu không có hành vi này, nên được đánh giá phát triển toàn diện."
+  },
+  {
+    "input": "bé 3 tuổi bị chậm nói",
+    "output": "Trẻ 3 tuổi bị chậm nói có thể gặp khó khăn trong phát triển ngôn ngữ. Ở tuổi này, trẻ nên nói câu dài, đặt câu hỏi và trò chuyện đơn giản. Nếu không có khả năng đó, nên đánh giá sớm để xác định nguyên nhân và can thiệp kịp thời."
+  },
+  {
+    "input": "bé 2 tuổi bị chậm nói",
+    "output": "Trẻ 2 tuổi chậm nói là dấu hiệu cần quan tâm. Nếu trẻ chưa nói được khoảng 50 từ hoặc chưa ghép được câu 2 từ, cần đánh giá ngôn ngữ và phát triển toàn diện để có hướng can thiệp sớm."
+  },
+  {
+    "input": "bé không chịu nói mà chỉ vào vật",
+    "output": "Trẻ chỉ vào vật mà không nói có thể đang dùng giao tiếp không lời thay cho lời nói. Đây là một dấu hiệu có thể liên quan đến chậm nói hoặc rối loạn giao tiếp, cần được đánh giá để có kế hoạch hỗ trợ."
+  },
+  {
+    "input": "trẻ không nói được từ nào",
+    "output": "Nếu trẻ trên 18 tháng chưa nói được từ nào, đây là dấu hiệu nghiêm trọng cần được đánh giá sớm. Có thể liên quan đến rối loạn ngôn ngữ, khiếm thính hoặc rối loạn phát triển."
+  },
+  {
+    "input": "dấu hiệu trẻ chậm nói là gì",
+    "output": "Dấu hiệu trẻ chậm nói gồm: ít bập bẹ, không nói từ đơn ở 18 tháng, không ghép câu ở 2 tuổi, không phản ứng khi gọi tên, không bắt chước âm thanh. Cần đánh giá sớm nếu có các biểu hiện này."
+  },
+  {
+    "input": "triệu chứng trẻ chậm nói",
+    "output": "Triệu chứng trẻ chậm nói bao gồm: không phát ra âm rõ, không có vốn từ phong phú, không kết hợp cử chỉ và lời nói. Có thể đi kèm khó khăn trong giao tiếp xã hội."
+  },
+  {
+    "input": "bé 3 tuổi nói không rõ",
+    "output": "Trẻ 3 tuổi nên nói rõ để người ngoài hiểu ít nhất 75%. Nếu không đạt mức này, cần đánh giá âm lời, phát âm, nghe và ngôn ngữ để can thiệp phù hợp."
+  },
+  {
+    "input": "trẻ không chịu nói",
+    "output": "Trẻ không chịu nói có thể do nhiều nguyên nhân như lo âu xã hội, rối loạn ngôn ngữ biểu đạt hoặc rối loạn phổ tự kỷ. Cần đánh giá để xác định nguyên nhân chính xác."
+  },
+  {
+    "input": "bé không nói nhưng hiểu",
+    "output": "Trẻ hiểu lời nhưng không nói có thể là rối loạn ngôn ngữ biểu đạt. Việc can thiệp bằng ngôn ngữ trị liệu là cần thiết để phát triển kỹ năng giao tiếp."
+  },
+  {
+    "input": "trẻ 2 tuổi không nói từ nào",
+    "output": "Trẻ 2 tuổi chưa nói từ nào là dấu hiệu chậm phát triển nghiêm trọng. Nên đánh giá ngôn ngữ, giao tiếp xã hội và loại trừ nguyên nhân như khiếm thính, tự kỷ."
+  },
+  {
+    "input": "bé 2 tuổi không ghép câu",
+    "output": "Nếu bé 2 tuổi không biết ghép câu 2 - 3 từ, đây là dấu hiệu chậm ngôn ngữ. Cần can thiệp ngôn ngữ sớm để hỗ trợ phát triển giao tiếp và diễn đạt."
+  },
+  {
+    "input": "trẻ 2 tuổi nói được ít",
+    "output": "Trẻ 2 tuổi nói ít hơn 50 từ, không giao tiếp bằng lời thường xuyên là dấu hiệu chậm nói. Can thiệp sớm sẽ giúp trẻ cải thiện khả năng ngôn ngữ hiệu quả."
+  },
+  {
+    "input": "bé 3 tuổi chưa nói rõ",
+    "output": "Trẻ 3 tuổi chưa nói rõ có thể do phát âm chậm, rối loạn âm lời hoặc khó khăn vận động miệng. Cần đánh giá sớm để bắt đầu trị liệu phù hợp."
+  },
+  {
+    "input": "trẻ nói ngọng",
+    "output": "Nói ngọng ở trẻ nhỏ có thể bình thường, nhưng nếu sau 4 tuổi vẫn phát âm sai nhiều âm, cần được chuyên gia ngôn ngữ trị liệu đánh giá và can thiệp."
+  },
+  {
+    "input": "bé 3 tuổi nói không ai hiểu",
+    "output": "Nếu trẻ 3 tuổi nói mà người ngoài không hiểu, đây có thể là rối loạn phát âm. Trẻ cần được đánh giá khả năng ngôn ngữ, nghe và cấu trúc miệng."
+  },
+  {
+    "input": "trẻ 2 tuổi chưa biết nói",
+    "output": "Trẻ 2 tuổi chưa nói được từ nào là dấu hiệu cảnh báo chậm ngôn ngữ nghiêm trọng. Nên đi khám chuyên khoa phát triển và can thiệp ngôn ngữ càng sớm càng tốt."
+  },
+  {
+    "input": "trẻ nói chuyện không rõ ràng",
+    "output": "Trẻ nói không rõ có thể do chậm phát âm, cấu trúc âm lời không chính xác hoặc khiếm khuyết về nghe. Nên đánh giá và bắt đầu can thiệp ngôn ngữ sớm."
+  },
+  {
+    "input": "chậm phát triển ngôn ngữ ở trẻ 3 tuổi",
+    "output": "Trẻ 3 tuổi chậm phát triển ngôn ngữ thường gặp khó khăn trong nói câu, kể chuyện và giao tiếp. Can thiệp sớm bằng trị liệu ngôn ngữ giúp cải thiện kỹ năng lời nói và xã hội."
+  },
+  {
+    "input": "bé chậm phát triển ngôn ngữ có nguy hiểm không",
+    "output": "Chậm phát triển ngôn ngữ nếu không can thiệp sớm có thể ảnh hưởng đến học tập, hành vi và khả năng giao tiếp xã hội. Tuy nhiên, nếu được hỗ trợ đúng, trẻ có thể cải thiện đáng kể."
+  },
+  {
+    "input": "chậm nói có cần can thiệp không",
+    "output": "Có. Can thiệp ngôn ngữ là yếu tố quan trọng giúp trẻ cải thiện khả năng nói và hiểu lời. Việc bắt đầu sớm, đúng phương pháp sẽ mang lại kết quả tốt hơn."
+  },
+  {
+    "input": "bé 2 tuổi chưa biết nói từ nào có sao không",
+    "output": "Có. Đây là dấu hiệu chậm ngôn ngữ rõ rệt. Cần đánh giá sự phát triển tổng thể, thính giác, giao tiếp xã hội để xác định nguyên nhân và lên kế hoạch can thiệp."
+  },
+  {
+    "input": "trẻ chậm nói nên làm gì",
+    "output": "Nên đưa trẻ đi khám chuyên khoa để đánh giá toàn diện. Đồng thời, cha mẹ cần tăng cường tương tác ngôn ngữ mỗi ngày qua trò chơi, đọc sách và nói chuyện cùng trẻ."
+  },
+  {
+    "input": "bé nói ngọng phải làm sao",
+    "output": "Nếu bé nói ngọng kéo dài sau 4 tuổi, nên đi đánh giá khả năng phát âm, nghe và vận động miệng. Trị liệu ngôn ngữ có thể cải thiện tình trạng này hiệu quả."
+  },
+  {
+    "input": "trẻ nói ít có cần trị liệu không",
+    "output": "Có. Trẻ nói ít có thể đang gặp khó khăn trong ngôn ngữ biểu đạt hoặc hiểu lời. Trị liệu ngôn ngữ giúp kích thích khả năng giao tiếp và phát triển lời nói đúng lứa tuổi."
+  },
+  {
+    "input": "bé nói không ai hiểu phải làm sao",
+    "output": "Cần đưa trẻ đi đánh giá phát âm, nghe và ngôn ngữ. Trẻ có thể cần trị liệu ngôn ngữ để cải thiện diễn đạt và khả năng giao tiếp với người khác."
+  },
+  {
+    "input": "bé 2 tuổi không nói được có sao không",
+    "output": "Có. Đây là dấu hiệu chậm ngôn ngữ cần được can thiệp càng sớm càng tốt. Càng chờ đợi lâu, nguy cơ ảnh hưởng đến học tập và xã hội càng cao."
+  },
+  {
+    "input": "trẻ không nói được có nguy hiểm không",
+    "output": "Không nói được là biểu hiện cần quan tâm. Nếu do rối loạn phát triển như tự kỷ, rối loạn ngôn ngữ thì cần can thiệp đa ngành càng sớm càng tốt để cải thiện chất lượng sống của trẻ."
+  },
+  {
+    "input": "bé 2 tuổi chậm nói có sao không",
+    "output": "Trẻ 2 tuổi chậm nói là dấu hiệu cần theo dõi. Nếu trẻ chưa nói được khoảng 50 từ hoặc không ghép được câu đơn giản, nên được đánh giá phát triển toàn diện để xác định nguyên nhân và can thiệp kịp thời."
+  },
+  {
+    "input": "bé 3 tuổi chậm nói có sao không",
+    "output": "Trẻ 3 tuổi chậm nói nếu không thể dùng câu rõ ràng, không diễn đạt nhu cầu, hoặc khó tương tác, cần được khám sớm để đánh giá phát triển ngôn ngữ, hành vi và loại trừ rối loạn phát triển."
+  },
+  {
+    "input": "chậm nói ở trẻ 3 tuổi",
+    "output": "Trẻ 3 tuổi thường nên nói được câu hoàn chỉnh, đặt câu hỏi và trò chuyện đơn giản. Nếu trẻ không đạt được mốc này, đó là dấu hiệu chậm nói và cần can thiệp sớm."
+  },
+  {
+    "input": "chậm nói ở trẻ 2 tuổi",
+    "output": "Trẻ 2 tuổi chưa nói được khoảng 50 từ hoặc chưa ghép câu 2 - 3 từ là dấu hiệu chậm phát triển ngôn ngữ. Việc đánh giá sớm giúp xác định nguyên nhân và cải thiện kết quả can thiệp."
+  },
+  {
+    "input": "dạy trẻ chậm phát triển ngôn ngữ",
+    "output": "Trẻ chậm phát triển ngôn ngữ cần được dạy thông qua giao tiếp trực tiếp, hình ảnh, sách tranh và hoạt động lặp lại. Cha mẹ nên nói chậm, rõ ràng và lặp lại từ khóa để trẻ ghi nhớ."
+  },
+  {
+    "input": "điều trị con chậm nói",
+    "output": "Trị liệu ngôn ngữ là phương pháp chính giúp trẻ chậm nói cải thiện khả năng giao tiếp. Bên cạnh đó, cần loại trừ nguyên nhân y học như khiếm thính hoặc rối loạn phát triển để can thiệp đúng hướng."
+  },
+  {
+    "input": "chậm nói có sao không",
+    "output": "Chậm nói có thể ảnh hưởng đến khả năng học tập, hành vi và giao tiếp nếu không được can thiệp đúng lúc. Can thiệp sớm giúp trẻ cải thiện ngôn ngữ và kỹ năng xã hội tốt hơn."
+  },
+  {
+    "input": "dấu hiệu của trẻ chậm nói",
+    "output": "Trẻ chậm nói thường nói ít, không ghép từ, không bắt chước âm thanh và không phản ứng lời gọi. Các dấu hiệu này cần được đánh giá để phát hiện chậm ngôn ngữ hay rối loạn phát triển."
+  },
+  {
+    "input": "trẻ không nói",
+    "output": "Trẻ không nói hoặc chỉ dùng cử chỉ có thể gặp vấn đề về phát triển ngôn ngữ. Cần sàng lọc chậm phát triển, tự kỷ hoặc khiếm thính để can thiệp hiệu quả."
+  },
+  {
+    "input": "con chậm nói phải làm sao",
+    "output": "Phụ huynh nên tăng cường giao tiếp với trẻ bằng cách chơi cùng, đọc sách và trò chuyện thường xuyên. Nếu sau 2 tuổi trẻ vẫn chậm nói, cần đưa đi khám chuyên khoa để đánh giá."
+  },
+  {
+    "input": "bé bị chậm nói phải làm sao",
+    "output": "Trẻ bị chậm nói cần được đánh giá sớm để xác định nguyên nhân và có kế hoạch trị liệu cá nhân hóa. Phối hợp giữa cha mẹ và chuyên gia ngôn ngữ trị liệu sẽ mang lại kết quả tốt hơn."
+  },
+  {
+    "input": "trẻ chậm nói có cần trị liệu ngôn ngữ không",
+    "output": "Có. Trị liệu ngôn ngữ là phương pháp hiệu quả giúp trẻ cải thiện khả năng nói, hiểu và tương tác. Phác đồ trị liệu cần phù hợp với từng mức độ chậm phát triển."
+  },
+  {
+    "input": "dạy trẻ nói như thế nào khi bị chậm nói",
+    "output": "Nên dạy trẻ chậm nói qua trò chơi tương tác, lặp lại câu ngắn, sử dụng hình ảnh và đọc sách cùng trẻ. Kiên trì và đều đặn là yếu tố quan trọng để cải thiện ngôn ngữ."
+  },
+  {
+    "input": "test chậm nói ở trẻ",
+    "output": "Cha mẹ có thể sử dụng các bộ sàng lọc như M-CHAT, ASQ-3 để phát hiện chậm ngôn ngữ. Tuy nhiên, đánh giá chính xác cần được thực hiện bởi chuyên gia."
+  },
+  {
+    "input": "trẻ chậm nói có phải tự kỷ không",
+    "output": "Không phải tất cả trẻ chậm nói đều bị tự kỷ. Nếu chậm nói kèm thiếu giao tiếp mắt, không chỉ tay, không chơi tương tác thì nên sàng lọc rối loạn phổ tự kỷ."
+  },
+  {
+    "input": "bé chậm nói có cần học mẫu giáo không",
+    "output": "Có. Học mẫu giáo giúp trẻ chậm nói tăng cơ hội giao tiếp, học hỏi qua bạn bè và phát triển kỹ năng xã hội. Tuy nhiên, cần chọn môi trường phù hợp và có hỗ trợ."
+  },
+  {
+    "input": "trẻ chậm nói nên ăn gì",
+    "output": "Chế độ ăn giàu omega-3, vitamin B, kẽm và sắt hỗ trợ phát triển não bộ. Nên bổ sung cá hồi, trứng, hạt óc chó, rau xanh và ngũ cốc nguyên cám. Tuy nhiên, dinh dưỡng chỉ là hỗ trợ, không thay thế can thiệp ngôn ngữ."
+  },
+  {
+    "input": "trẻ chậm nói có thông minh không",
+    "output": "Có thể. Nhiều trẻ chậm nói vẫn có trí tuệ bình thường hoặc cao, nhưng gặp khó khăn trong ngôn ngữ biểu đạt. Đánh giá trí tuệ toàn diện là cần thiết để xác định chính xác."
+  },
+  {
+    "input": "trẻ chậm nói có cần học song ngữ không",
+    "output": "Với trẻ chậm nói, nên ưu tiên dạy tiếng mẹ đẻ trước để phát triển ngôn ngữ nền tảng. Học song ngữ có thể làm trẻ khó khăn hơn nếu chưa nói tốt một ngôn ngữ nào."
+  },
+  {
+    "input": "trẻ chậm nói nên chơi gì",
+    "output": "Nên chọn trò chơi có tính tương tác cao như xếp hình, chơi vai, đọc sách tranh, hát và nhảy theo nhạc. Tránh thiết bị điện tử thụ động vì không kích thích giao tiếp ngôn ngữ."
+  },
+  {
+    "input": "trẻ 2 tuổi chỉ nói được vài từ",
+    "output": "Trẻ 2 tuổi chỉ nói được vài từ là dấu hiệu chậm phát triển ngôn ngữ. Cần đánh giá khả năng hiểu lời, phản ứng giao tiếp và loại trừ nguyên nhân như khiếm thính, rối loạn phổ tự kỷ."
+  },
+  {
+    "input": "bé không gọi ba mẹ",
+    "output": "Trẻ từ 12 - 18 tháng nên biết gọi ba mẹ. Nếu sau 18 - 24 tháng mà trẻ chưa gọi, cần đánh giá ngôn ngữ biểu đạt, khả năng tương tác và nhận thức để sàng lọc các rối loạn phát triển."
+  },
+  {
+    "input": "bé không phản ứng khi gọi tên",
+    "output": "Không phản ứng khi gọi tên là một trong những dấu hiệu cảnh báo rối loạn phát triển như tự kỷ hoặc khiếm thính. Nên đánh giá phản ứng với âm thanh và giao tiếp xã hội càng sớm càng tốt."
+  },
+  {
+    "input": "bé không bắt chước hành vi người lớn",
+    "output": "Khả năng bắt chước là kỹ năng quan trọng trong học nói và phát triển xã hội. Trẻ không bắt chước có thể gặp khó khăn trong tương tác hoặc rối loạn phát triển, cần được đánh giá."
+  },
+  {
+    "input": "trẻ không thích giao tiếp",
+    "output": "Nếu trẻ ít giao tiếp, không nhìn vào mắt, không có nhu cầu chia sẻ thông tin hoặc cảm xúc, đây có thể là dấu hiệu rối loạn phổ tự kỷ. Cần được sàng lọc kỹ lưỡng."
+  },
+  {
+    "input": "trẻ không biết chơi giả vờ",
+    "output": "Chơi giả vờ là mốc quan trọng xuất hiện từ 18 - 24 tháng. Nếu trẻ không biết chơi như giả làm bác sĩ, cho búp bê ăn… thì nên đánh giá nguy cơ rối loạn phát triển xã hội."
+  },
+  {
+    "input": "trẻ 2 tuổi không biết dùng từ chỉ đồ vật",
+    "output": "Trẻ 2 tuổi nên biết gọi tên các đồ vật quen thuộc. Nếu chưa có kỹ năng này, có thể là chậm phát triển ngôn ngữ hoặc rối loạn biểu đạt, cần được kiểm tra bởi chuyên gia ngôn ngữ."
+  },
+  {
+    "input": "bé không hiểu câu đơn giản",
+    "output": "Nếu trẻ không hiểu các chỉ dẫn đơn giản như 'đưa mẹ cái bút', đó là dấu hiệu chậm ngôn ngữ tiếp nhận. Nên đánh giá khả năng hiểu lời và tương tác xã hội càng sớm càng tốt."
+  },
+  {
+    "input": "trẻ xem ipad nhiều có chậm nói không",
+    "output": "Xem màn hình nhiều, đặc biệt là một chiều như iPad, có liên quan đến chậm phát triển ngôn ngữ. Khuyến cáo trẻ dưới 2 tuổi không nên sử dụng thiết bị điện tử để tránh ảnh hưởng giao tiếp."
+  },
+  {
+    "input": "trẻ 3 tuổi không chơi với bạn",
+    "output": "Trẻ 3 tuổi nên bắt đầu chơi cùng bạn, chia sẻ đồ chơi, tương tác đơn giản. Nếu trẻ tránh tiếp xúc xã hội, nên đánh giá phát triển kỹ năng xã hội và sàng lọc rối loạn phổ tự kỷ."
+  },
+  {
+    "input": "trẻ 2 tuổi chỉ phát âm a, e",
+    "output": "Nếu trẻ 2 tuổi chỉ phát âm nguyên âm mà không có từ có nghĩa, đây là dấu hiệu chậm nói nghiêm trọng. Cần đánh giá khả năng phát âm, ngôn ngữ biểu đạt và loại trừ nguyên nhân thần kinh  -  phát triển."
+  },
+  {
+    "input": "bé 2 tuổi không biết chơi đồ chơi",
+    "output": "Trẻ không biết chơi đồ chơi đúng cách (ví dụ: không đẩy xe, không xếp hình) có thể gặp khó khăn trong phát triển trí tuệ hoặc tương tác. Cần được đánh giá toàn diện."
+  },
+  {
+    "input": "trẻ không tương tác với người lạ",
+    "output": "Trẻ tránh giao tiếp với người lạ nếu kéo dài, kèm thiếu giao tiếp mắt, không chơi tương tác thì nên được sàng lọc rối loạn phổ tự kỷ hoặc lo âu xã hội."
+  },
+  {
+    "input": "trẻ không giao tiếp bằng lời nói",
+    "output": "Nếu trẻ chỉ dùng cử chỉ mà không nói, dù đã 2 tuổi, cần được đánh giá rối loạn ngôn ngữ biểu đạt hoặc rối loạn phổ tự kỷ. Can thiệp sớm giúp tăng khả năng giao tiếp bằng lời."
+  },
+  {
+    "input": "bé nói nhưng không phù hợp ngữ cảnh",
+    "output": "Trẻ nói sai ngữ cảnh (ví dụ: nói từ không liên quan, lặp lại quảng cáo) có thể là echolalia  -  thường gặp trong rối loạn phổ tự kỷ. Cần đánh giá chuyên sâu nếu tình trạng này kéo dài."
+  },
+  {
+    "input": "bé không hiểu khi dặn dò",
+    "output": "Nếu bé không hiểu các hướng dẫn quen thuộc, có thể là chậm phát triển ngôn ngữ tiếp nhận hoặc chậm trí tuệ. Cần kiểm tra khả năng hiểu lời và nhận thức."
+  },
+  {
+    "input": "bé không phản hồi âm thanh",
+    "output": "Không phản hồi âm thanh là dấu hiệu nghi ngờ khiếm thính. Nên làm test thính lực (OAE / ABR) càng sớm càng tốt để can thiệp nếu có vấn đề về nghe."
+  },
+  {
+    "input": "trẻ không hiểu từ đơn giản",
+    "output": "Trẻ không hiểu từ đơn như 'bóng', 'ăn', 'bú' sau 18 tháng là dấu hiệu chậm ngôn ngữ tiếp nhận. Cần sàng lọc chậm phát triển ngôn ngữ và đánh giá trí tuệ, nhận thức kèm theo."
+  },
+  {
+    "input": "bé 2 tuổi không hiểu khi nói chuyện",
+    "output": "Trẻ 2 tuổi nên hiểu lời nói đơn giản. Nếu không phản ứng hay không làm theo lời hướng dẫn, cần được kiểm tra khả năng nghe, nhận thức và tương tác xã hội."
+  },
+  {
+    "input": "trẻ không chơi với người khác",
+    "output": "Thiếu chơi tương tác với người khác, đặc biệt sau 2 tuổi, là dấu hiệu cảnh báo rối loạn phát triển xã hội. Cần được đánh giá kỹ lưỡng để phân biệt giữa nhút nhát và rối loạn phổ tự kỷ."
+  },
+  {
+    "input": "trẻ chậm nói nên tập luyện ở nhà như thế nào",
+    "output": "Cha mẹ nên tương tác với trẻ hàng ngày qua trò chơi, đọc sách, hát và mô phỏng âm thanh. Nói rõ ràng, chậm rãi, lặp lại từ vựng đơn giản và khen ngợi trẻ khi cố gắng nói là cách tốt để kích thích ngôn ngữ."
+  },
+  {
+    "input": "cha mẹ cần làm gì khi con bị chậm nói",
+    "output": "Cha mẹ cần bình tĩnh, tìm hiểu kiến thức, đưa trẻ đi đánh giá sớm và phối hợp chặt chẽ với chuyên gia. Đồng thời, nên tạo môi trường giao tiếp tích cực, hạn chế sử dụng thiết bị điện tử và tăng cường chơi tương tác với trẻ."
+  },
+  {
+    "input": "các hoạt động hỗ trợ trẻ chậm nói tại nhà",
+    "output": "Một số hoạt động hiệu quả gồm: chơi trò đóng vai, xếp hình, gọi tên đồ vật, chỉ tranh ảnh, bắt chước âm thanh, tập ghép câu đơn giản và kể chuyện ngắn bằng hình ảnh."
+  },
+  {
+    "input": "trẻ chậm nói có nên dùng điện thoại để học nói không",
+    "output": "Không nên lạm dụng điện thoại vì gây thụ động và hạn chế tương tác thực tế. Học nói hiệu quả nhất là qua giao tiếp thật với người lớn, thông qua hoạt động sống hằng ngày và trò chơi trực tiếp."
+  },
+  {
+    "input": "vai trò của gia đình trong can thiệp trẻ chậm nói",
+    "output": "Gia đình đóng vai trò quyết định. Sự kiên trì, nhất quán và tạo môi trường ngôn ngữ phong phú tại nhà sẽ giúp trẻ chậm nói tiến bộ nhanh hơn khi phối hợp với trị liệu chuyên môn."
+  },
+  {
+    "input": "khi nào nên bắt đầu trị liệu ngôn ngữ cho trẻ",
+    "output": "Ngay khi có dấu hiệu chậm nói hoặc chậm phát triển ngôn ngữ (trước 3 tuổi), nên bắt đầu trị liệu ngôn ngữ. Càng can thiệp sớm, hiệu quả càng cao nhờ khả năng học ngôn ngữ mạnh mẽ trong giai đoạn này."
+  },
+  {
+    "input": "trị liệu ngôn ngữ gồm những gì",
+    "output": "Trị liệu ngôn ngữ bao gồm: luyện phát âm, xây dựng vốn từ, kỹ năng ghép câu, cải thiện hiểu lời, kỹ năng trò chuyện, mô phỏng âm thanh và hỗ trợ giao tiếp bằng hình ảnh nếu cần."
+  },
+  {
+    "input": "trẻ chậm nói có cần đánh giá tâm lý không",
+    "output": "Có. Đánh giá tâm lý giúp phát hiện các rối loạn liên quan như lo âu, rối loạn phổ tự kỷ, tăng động hay chậm phát triển trí tuệ  -  từ đó lên kế hoạch can thiệp phù hợp."
+  },
+  {
+    "input": "trẻ chậm nói có cần đánh giá thính lực không",
+    "output": "Có. Khi trẻ chậm nói, cần loại trừ nguyên nhân do khiếm thính bằng cách đánh giá thính lực qua đo âm thanh (OAE / ABR) hoặc khám chuyên khoa Tai Mũi Họng nhi."
+  },
+  {
+    "input": "bao lâu nên đánh giá lại sau can thiệp chậm nói",
+    "output": "Thông thường nên đánh giá lại mỗi 3 - 6 tháng để theo dõi tiến độ, điều chỉnh mục tiêu trị liệu và xác định hiệu quả can thiệp."
+  },
+  {
+    "input": "trẻ chậm nói có cần điều trị bằng thuốc không",
+    "output": "Phần lớn trường hợp không cần thuốc. Tuy nhiên, nếu trẻ có rối loạn kèm theo như tăng động, rối loạn lo âu hay rối loạn phổ tự kỷ, bác sĩ có thể kê thuốc hỗ trợ theo tình huống cụ thể."
+  },
+  {
+    "input": "bao lâu thì trẻ chậm nói cải thiện sau trị liệu",
+    "output": "Tùy mức độ chậm nói và mức độ tham gia can thiệp, trẻ có thể tiến bộ sau vài tháng. Tuy nhiên, thường cần ít nhất 6 - 12 tháng can thiệp đều đặn để thấy cải thiện rõ ràng."
+  },
+  {
+    "input": "trẻ chậm nói có nên học nhóm trị liệu không",
+    "output": "Học nhóm trị liệu giúp trẻ phát triển kỹ năng giao tiếp xã hội, bắt chước bạn bè và tăng cơ hội sử dụng ngôn ngữ. Nên kết hợp cả can thiệp cá nhân và nhóm nếu có điều kiện."
+  },
+  {
+    "input": "trẻ chậm nói có cần học cá nhân không",
+    "output": "Can thiệp cá nhân là hình thức hiệu quả nhất cho trẻ chậm nói vì được xây dựng theo năng lực riêng của từng trẻ. Sau đó có thể bổ sung thêm học nhóm để phát triển kỹ năng xã hội."
+  },
+  {
+    "input": "trẻ nói ngọng có cần đi trị liệu không",
+    "output": "Nếu trẻ trên 4 tuổi vẫn nói ngọng, phát âm sai hoặc người ngoài không hiểu được, nên đi đánh giá ngôn ngữ để trị liệu phát âm kịp thời, tránh ảnh hưởng giao tiếp và học tập."
+  },
+  {
+    "input": "trẻ chậm nói có cần học tại trung tâm không",
+    "output": "Học tại trung tâm trị liệu ngôn ngữ giúp trẻ được can thiệp chuyên sâu bởi chuyên gia. Tuy nhiên, cha mẹ vẫn đóng vai trò chính, nên cần kết hợp giữa học trung tâm và tập luyện tại nhà."
+  },
+  {
+    "input": "có nên cho trẻ chậm nói học chung với trẻ bình thường không",
+    "output": "Nếu trẻ có khả năng hòa nhập tốt và không có hành vi gây rối, học hòa nhập giúp trẻ học hỏi ngôn ngữ và kỹ năng xã hội. Tuy nhiên, cần có hỗ trợ từ giáo viên và kế hoạch cá nhân phù hợp."
+  },
+  {
+    "input": "trẻ chậm nói có cần giấy xác nhận để học hòa nhập không",
+    "output": "Tùy quy định từng địa phương hoặc trường học. Thường phụ huynh nên mang theo chẩn đoán từ chuyên gia để giáo viên có cơ sở hỗ trợ trẻ phù hợp trong môi trường hòa nhập."
+  },
+  {
+    "input": "nguyên nhân trẻ chậm nói",
+    "output": "Nguyên nhân có thể gồm: di truyền, chậm phát triển trí tuệ, khiếm thính, thiếu môi trường giao tiếp, tự kỷ, rối loạn ngôn ngữ hoặc do tiếp xúc quá nhiều với thiết bị điện tử."
+  },
+  {
+    "input": "phân biệt chậm nói và rối loạn phổ tự kỷ",
+    "output": "Chậm nói đơn thuần: trẻ hiểu lời, có giao tiếp mắt, chỉ tay, chơi tương tác. Rối loạn phổ tự kỷ: kém giao tiếp xã hội, không chỉ tay, không đáp ứng tên gọi, có hành vi lặp lại. Đánh giá chuyên sâu là cần thiết để phân biệt chính xác."
+  },
+  {
+    "input": "trẻ chậm nói có thể tự hết không",
+    "output": "Một số trẻ chậm nói có thể cải thiện theo thời gian, nhưng phần lớn cần can thiệp để đạt mốc phát triển bình thường. Việc chờ đợi quá lâu có thể bỏ lỡ giai đoạn vàng can thiệp hiệu quả."
+  },
+  {
+    "input": "có nên đợi trẻ 3 tuổi mới trị liệu ngôn ngữ không",
+    "output": "Không. Nếu sau 18 - 24 tháng trẻ chưa nói từ đơn hoặc chưa ghép câu, nên bắt đầu can thiệp ngay. Đợi đến 3 tuổi có thể làm chậm cơ hội phát triển ngôn ngữ tối ưu."
+  },
+  {
+    "input": "làm sao để phân biệt trẻ ít nói do nhút nhát hay chậm nói",
+    "output": "Trẻ nhút nhát thường vẫn nói được ở nhà hoặc với người quen. Trẻ chậm nói có thể không nói trong mọi bối cảnh, ít vốn từ, không ghép câu và hiểu lời kém. Đánh giá ngôn ngữ giúp phân biệt rõ ràng."
+  },
+  {
+    "input": "bé không chịu nói có nên ép nói không",
+    "output": "Không nên ép trẻ nói vì có thể làm tăng lo âu. Thay vào đó, nên tạo môi trường vui vẻ, dùng trò chơi và lặp lại từ khóa để khuyến khích trẻ nói tự nhiên."
+  },
+  {
+    "input": "trẻ chậm nói có cần học ngôn ngữ dấu hiệu không",
+    "output": "Có thể. Một số trẻ chậm nói được hỗ trợ ban đầu bằng ngôn ngữ dấu hiệu hoặc hình ảnh (ví dụ: PECS), giúp giảm căng thẳng và thúc đẩy giao tiếp, từ đó hỗ trợ ngôn ngữ lời nói phát triển."
+  },
+  {
+    "input": "trẻ chậm nói có thể nói lưu loát khi lớn không",
+    "output": "Nhiều trẻ chậm nói có thể đạt được ngôn ngữ lưu loát nếu được can thiệp sớm và đúng cách. Tuy nhiên, một số trẻ vẫn có thể gặp khó khăn trong phát âm hoặc tổ chức ngôn ngữ về sau."
+  },
+  {
+    "input": "trẻ chậm nói có bị trầm cảm không",
+    "output": "Trẻ chậm nói có thể bị cô lập, khó diễn đạt cảm xúc và dễ dẫn đến lo âu hoặc rối loạn cảm xúc. Việc hỗ trợ ngôn ngữ và tăng cường tương tác xã hội giúp phòng tránh các vấn đề tâm lý này."
+  },
+  {
+    "input": "trẻ chậm nói có dễ bị bắt nạt không",
+    "output": "Có. Trẻ chậm nói thường khó diễn đạt nhu cầu và cảm xúc, dễ bị hiểu nhầm hoặc bị bạn bè trêu chọc. Cần dạy trẻ kỹ năng bảo vệ bản thân và tăng cường giám sát trong môi trường học đường."
+  },
+  {
+    "input": "trẻ chậm nói có ảnh hưởng đến khả năng học chữ không",
+    "output": "Có. Ngôn ngữ là nền tảng cho kỹ năng đọc  -  viết. Trẻ chậm nói có nguy cơ khó khăn trong học chữ, đánh vần, đọc hiểu và diễn đạt bằng văn bản nếu không được can thiệp sớm."
+  },
+  {
+    "input": "cha mẹ có thể tự trị liệu ngôn ngữ cho con tại nhà không",
+    "output": "Có. Sau khi được chuyên gia hướng dẫn, cha mẹ có thể thực hiện các hoạt động trị liệu tại nhà như trò chơi ngôn ngữ, kể chuyện, tập phát âm... Việc này cần đều đặn và kiên nhẫn."
+  },
+  {
+    "input": "trẻ chậm nói có cần can thiệp đa ngành không",
+    "output": "Có. Ngoài ngôn ngữ trị liệu, trẻ có thể cần nhà tâm lý, giáo viên đặc biệt hoặc chuyên gia vận động nếu có rối loạn đi kèm như tăng động, rối loạn phổ tự kỷ, khó khăn phối hợp vận động."
+  },
+  {
+    "input": "trẻ chậm nói có thể học ngoại ngữ không",
+    "output": "Trẻ chậm nói nên tập trung phát triển ngôn ngữ mẹ đẻ trước. Sau khi giao tiếp cơ bản tốt, có thể học ngoại ngữ với tốc độ phù hợp và phương pháp hỗ trợ phù hợp với khả năng ngôn ngữ của trẻ."
+  },
+  {
+    "input": "trẻ chậm nói có nên dùng flashcard không",
+    "output": "Có. Flashcard hình ảnh là công cụ hữu ích giúp trẻ học từ vựng, nhận biết đồ vật và tăng khả năng phản xạ ngôn ngữ. Nên sử dụng kèm với tương tác lời nói và trò chơi để phát huy hiệu quả."
+  },
+  {
+    "input": "thiết bị hỗ trợ trẻ chậm nói là gì",
+    "output": "Một số thiết bị gồm: bảng giao tiếp hình ảnh (PECS), ứng dụng AAC (Augmentative and Alternative Communication), đồng hồ hình ảnh... giúp trẻ thể hiện nhu cầu khi chưa nói được."
+  },
+  {
+    "input": "tập cho trẻ chậm nói giao tiếp bằng mắt như thế nào",
+    "output": "Có thể dùng chiến lược như giữ đồ vật ngang tầm mắt, chơi trò 'chờ nhìn mới đưa', hoặc dùng tranh ảnh cảm xúc để tăng cường giao tiếp mắt khi tương tác."
+  },
+  {
+    "input": "có nên cho trẻ chậm nói học trường chuyên biệt không",
+    "output": "Chỉ nên khi trẻ không thể học hòa nhập hiệu quả, có rối loạn nặng cần môi trường hỗ trợ chuyên sâu. Ưu tiên can thiệp sớm để trẻ có thể trở lại hòa nhập nếu khả năng cho phép."
+  },
+  {
+    "input": "thời gian trị liệu ngôn ngữ bao lâu là đủ",
+    "output": "Không có mốc cố định. Thường mất ít nhất 6 tháng đến vài năm tùy mức độ chậm, sự phối hợp gia đình và cường độ can thiệp. Theo dõi định kỳ giúp điều chỉnh kế hoạch phù hợp."
+  },
+  {
+    "input": "trẻ chậm nói có nên tập diễn đạt bằng cử chỉ không",
+    "output": "Có. Dạy trẻ cử chỉ (như gật đầu, chỉ tay, bắt tay) giúp tăng khả năng giao tiếp ban đầu và hỗ trợ cho ngôn ngữ lời nói phát triển dần về sau."
+  },
+  {
+    "input": "trẻ chậm nói có nên hát không",
+    "output": "Nên. Hát giúp kích thích ngôn ngữ, rèn phát âm, nhịp điệu và tăng cường tương tác. Chọn bài hát ngắn, có cử chỉ minh họa để trẻ dễ bắt chước và ghi nhớ."
+  },
+  {
+    "input": "trẻ chậm nói có thông minh không",
+    "output": "Có thể. Chậm nói không đồng nghĩa với kém thông minh. Nhiều trẻ có trí tuệ bình thường hoặc cao, nhưng gặp khó khăn ở khía cạnh ngôn ngữ biểu đạt hoặc xử lý thông tin ngôn ngữ."
+  },
+  {
+    "input": "trẻ chậm nói có phải là do cha mẹ nói ít",
+    "output": "Đôi khi đúng. Trẻ thiếu tương tác ngôn ngữ ở nhà, ít được nói chuyện, kể chuyện hoặc phản hồi có thể ảnh hưởng đến phát triển lời nói. Tuy nhiên, cần loại trừ các nguyên nhân khác như rối loạn phát triển."
+  },
+  {
+    "input": "làm sao để tăng vốn từ cho trẻ chậm nói",
+    "output": "Nên nói chậm, rõ từ, lặp lại nhiều lần từ khóa trong ngữ cảnh cụ thể. Dùng hình ảnh, vật thật và kết hợp hành động để giúp trẻ nhớ và sử dụng từ vựng mới hiệu quả hơn."
+  },
+  {
+    "input": "trẻ chậm nói có nên dùng video hoạt hình học nói không",
+    "output": "Không khuyến khích dùng video thụ động. Nếu có, nên chọn video giáo dục có tương tác, lời thoại rõ ràng và xem cùng trẻ để giải thích  -  chứ không thay thế giao tiếp thực tế."
+  },
+  {
+    "input": "trẻ chậm nói có được xem tivi không",
+    "output": "Chỉ nên cho trẻ chậm nói xem tivi có chọn lọc, thời gian giới hạn (dưới 30 phút / ngày), có người lớn cùng xem và giải thích. Không nên để trẻ xem một mình hoặc quá nhiều."
+  },
+  {
+    "input": "trẻ chậm nói có nên dùng ngôn ngữ ký hiệu",
+    "output": "Ngôn ngữ ký hiệu đơn giản có thể hỗ trợ trẻ chậm nói biểu đạt nhu cầu ban đầu. Tuy nhiên, không nên thay thế hoàn toàn ngôn ngữ lời nói nếu trẻ có tiềm năng phát triển lời nói."
+  },
+  {
+    "input": "làm sao để biết trẻ có đang tiến bộ trong trị liệu ngôn ngữ",
+    "output": "Theo dõi số từ trẻ sử dụng, khả năng hiểu lời, độ dài câu, mức độ giao tiếp chủ động và phản ứng với người khác. Nên ghi nhật ký tiến trình và tham khảo đánh giá định kỳ từ chuyên gia."
+  },
+  {
+    "input": "trẻ chậm nói nên bắt đầu học từ loại nào",
+    "output": "Nên bắt đầu từ danh từ chỉ đồ vật quen thuộc (như mẹ, quả, xe...), sau đó mở rộng sang động từ đơn giản và tính từ. Dạy từ theo ngữ cảnh thực tế giúp trẻ dễ hiểu và nhớ lâu hơn."
+  },
+  {
+    "input": "trẻ chậm nói có cần học ngôn ngữ qua tranh không",
+    "output": "Có. Tranh là công cụ trực quan giúp trẻ nhận diện đồ vật, hành động và học từ mới hiệu quả. Nên chọn tranh rõ nét, đơn giản và mô tả kèm lời nói rõ ràng khi sử dụng."
+  },
+  {
+    "input": "trẻ chậm nói nên học mấy buổi một tuần",
+    "output": "Tùy mức độ và điều kiện gia đình, nhưng nên từ 2 - 5 buổi / tuần để duy trì nhịp trị liệu. Kết hợp với luyện tập mỗi ngày tại nhà sẽ tăng hiệu quả đáng kể."
+  },
+  {
+    "input": "trẻ 2 tuổi không bập bẹ",
+    "output": "Nếu trẻ 2 tuổi không có tiếng bập bẹ hoặc không phát ra âm thanh có mục đích, đây có thể là dấu hiệu của rối loạn phát triển ngôn ngữ hoặc khiếm thính. Nên đưa trẻ đi đánh giá toàn diện sớm."
+  },
+  {
+    "input": "trẻ 18 tháng chưa nói từ đơn",
+    "output": "Trẻ 18 tháng nên nói được ít nhất vài từ đơn như 'ba', 'mẹ', 'ăn', 'bú'. Nếu chưa có từ nào, cần đánh giá thính lực, khả năng hiểu lời và tương tác xã hội."
+  },
+  {
+    "input": "bé không hiểu khi gọi tên",
+    "output": "Không phản ứng khi gọi tên có thể là dấu hiệu khiếm thính hoặc rối loạn phổ tự kỷ. Cần kiểm tra thính lực và đánh giá phát triển giao tiếp của trẻ."
+  },
+  {
+    "input": "trẻ không biết chơi đồ chơi đúng cách",
+    "output": "Không biết sử dụng đồ chơi theo cách thông thường (như cho búp bê ăn, lăn xe ô tô) có thể là biểu hiện của chậm phát triển trí tuệ hoặc rối loạn phổ tự kỷ."
+  },
+  {
+    "input": "trẻ 2 tuổi không chỉ tay",
+    "output": "Chỉ tay là kỹ năng giao tiếp xã hội quan trọng, thường xuất hiện trước 15 tháng. Nếu 2 tuổi chưa biết chỉ tay, nên đánh giá nguy cơ rối loạn phát triển, đặc biệt là tự kỷ."
+  },
+  {
+    "input": "bé không bắt chước âm thanh",
+    "output": "Khả năng bắt chước âm thanh là nền tảng cho sự phát triển ngôn ngữ. Nếu bé không bắt chước, cần kiểm tra khả năng nghe và giao tiếp xã hội của trẻ."
+  },
+  {
+    "input": "trẻ không phản ứng với âm thanh",
+    "output": "Trẻ không phản ứng với âm thanh có thể do khiếm thính hoặc rối loạn thần kinh. Cần đánh giá thính lực bằng các test như OAE hoặc ABR càng sớm càng tốt."
+  },
+  {
+    "input": "trẻ không biết chơi giả vờ",
+    "output": "Trò chơi giả vờ như cho thú bông ăn, đóng vai bác sĩ... là kỹ năng xã hội quan trọng. Nếu trẻ trên 2 tuổi không biết chơi giả vờ, nên được sàng lọc phát triển, đặc biệt là nguy cơ tự kỷ."
+  },
+  {
+    "input": "trẻ 2 tuổi chỉ hét mà không nói",
+    "output": "Nếu trẻ 2 tuổi thường xuyên hét, không dùng từ ngữ để giao tiếp, cần đánh giá ngôn ngữ biểu đạt, hành vi và khả năng tương tác để xác định hướng can thiệp."
+  },
+  {
+    "input": "trẻ không quay đầu khi gọi tên",
+    "output": "Không quay đầu khi gọi tên sau 12 tháng là dấu hiệu bất thường. Có thể liên quan đến khiếm thính, rối loạn phổ tự kỷ hoặc vấn đề chú ý. Cần được đánh giá bởi chuyên gia phát triển."
+  },
+  {
+    "input": "trẻ không có giao tiếp mắt",
+    "output": "Giao tiếp bằng mắt là một dấu hiệu quan trọng của sự phát triển xã hội. Nếu trẻ ít hoặc không có giao tiếp mắt, nên đánh giá nguy cơ rối loạn phổ tự kỷ hoặc chậm phát triển giao tiếp."
+  },
+  {
+    "input": "trẻ 2 tuổi không biết gọi ba mẹ",
+    "output": "Nếu trẻ 2 tuổi chưa biết gọi 'ba', 'mẹ' hoặc những người quen thuộc, đây là dấu hiệu chậm ngôn ngữ biểu đạt. Cần đánh giá để loại trừ rối loạn phát triển hoặc khiếm thính."
+  },
+  {
+    "input": "trẻ không biết làm theo hướng dẫn đơn giản",
+    "output": "Trẻ trên 18 tháng nên hiểu và làm theo hướng dẫn đơn giản như 'đưa mẹ cái ly'. Nếu không, có thể là dấu hiệu của chậm phát triển ngôn ngữ tiếp nhận hoặc rối loạn phát triển."
+  },
+  {
+    "input": "trẻ 2 tuổi không có hành vi chia sẻ",
+    "output": "Hành vi chia sẻ đồ chơi hay niềm vui là kỹ năng xã hội quan trọng. Thiếu hành vi này có thể là dấu hiệu của khó khăn trong giao tiếp hoặc rối loạn phổ tự kỷ."
+  },
+  {
+    "input": "trẻ ít tương tác với người khác",
+    "output": "Trẻ nên có xu hướng giao tiếp, chơi với người lớn và bạn bè. Nếu trẻ rút lui hoặc chơi một mình quá mức, cần đánh giá kỹ năng xã hội và khả năng ngôn ngữ."
+  },
+  {
+    "input": "bé không biết vẫy tay chào",
+    "output": "Vẫy tay chào là cử chỉ giao tiếp phổ biến xuất hiện từ 9–12 tháng. Nếu trẻ không biết vẫy tay sau 1 tuổi, cần theo dõi và đánh giá kỹ năng giao tiếp xã hội."
+  },
+  {
+    "input": "trẻ 18 tháng không có ngôn ngữ nào",
+    "output": "Trẻ 18 tháng chưa nói được từ nào là dấu hiệu đáng lo ngại. Nên kiểm tra khả năng nghe, ngôn ngữ biểu đạt, hiểu lời và các kỹ năng giao tiếp khác."
+  },
+  {
+    "input": "bé chỉ dùng cử chỉ thay vì lời nói",
+    "output": "Sử dụng cử chỉ là bước đầu phát triển giao tiếp, nhưng nếu sau 2 tuổi trẻ vẫn không dùng lời nói, cần đánh giá chậm ngôn ngữ hoặc rối loạn phát triển giao tiếp."
+  },
+  {
+    "input": "trẻ không biết chỉ đồ vật",
+    "output": "Chỉ đồ vật là một dạng giao tiếp chỉ dẫn quan trọng. Nếu trẻ 18–24 tháng không biết chỉ đồ vật, nên được sàng lọc nguy cơ chậm phát triển hoặc rối loạn phổ tự kỷ."
+  },
+  {
+    "input": "trẻ không biết biểu lộ cảm xúc qua mặt",
+    "output": "Biểu lộ cảm xúc như cười, nhăn mặt khi không vui là phản ứng xã hội quan trọng. Thiếu biểu cảm có thể liên quan đến rối loạn phổ tự kỷ hoặc chậm phát triển cảm xúc – xã hội."
+  },
+  {
+    "input": "trẻ không phản ứng với tiếng động lớn",
+    "output": "Nếu trẻ không giật mình hoặc quay lại khi có tiếng động lớn, có thể liên quan đến giảm thính lực hoặc vấn đề cảm giác. Cần đánh giá thính giác và phản xạ sớm."
+  },
+  {
+    "input": "trẻ lặp đi lặp lại hành vi không có mục đích",
+    "output": "Hành vi lặp lại như xoay vòng, vỗ tay liên tục không có mục đích có thể là đặc trưng của rối loạn phổ tự kỷ. Cần được đánh giá bởi chuyên gia tâm lý hoặc bác sĩ phát triển."
+  },
+  {
+    "input": "trẻ không thích được ôm ấp",
+    "output": "Một số trẻ có khó khăn trong cảm giác cơ thể và từ chối tiếp xúc vật lý như ôm. Đây có thể là biểu hiện rối loạn cảm giác hoặc liên quan đến rối loạn phổ tự kỷ."
+  },
+  {
+    "input": "trẻ không phản ứng khi cha mẹ rời đi",
+    "output": "Thiếu phản ứng khi người thân rời đi là dấu hiệu trẻ không gắn bó xã hội. Cần được đánh giá về khả năng kết nối cảm xúc và giao tiếp xã hội."
+  },
+  {
+    "input": "trẻ không cười lại khi được chọc cười",
+    "output": "Trẻ không phản ứng với tương tác vui vẻ là dấu hiệu thiếu giao tiếp xã hội. Đây có thể là biểu hiện sớm của rối loạn phổ tự kỷ và cần đánh giá chuyên sâu."
+  },
+  {
+    "input": "trẻ 2 tuổi không biết bắt chước hành động",
+    "output": "Bắt chước là nền tảng để học ngôn ngữ và hành vi xã hội. Thiếu kỹ năng bắt chước là dấu hiệu của chậm phát triển hoặc rối loạn phổ tự kỷ."
+  },
+  {
+    "input": "trẻ bị ám ảnh với một đồ vật",
+    "output": "Nếu trẻ chỉ chơi với một đồ vật trong thời gian dài và khó chuyển hướng, có thể là dấu hiệu hành vi rập khuôn trong rối loạn phổ tự kỷ."
+  },
+  {
+    "input": "trẻ không biết dùng thìa để ăn sau 2 tuổi",
+    "output": "Sử dụng thìa là kỹ năng vận động tinh và sinh hoạt độc lập. Nếu trẻ sau 2 tuổi vẫn không biết dùng thìa, cần được đánh giá phát triển vận động và kỹ năng sinh hoạt."
+  },
+  {
+    "input": "trẻ 2 tuổi chưa biết tháo dép",
+    "output": "Trẻ từ 18–24 tháng thường bắt đầu biết tháo dép, mũ đơn giản. Nếu chưa biết, có thể là dấu hiệu chậm phát triển vận động hoặc kỹ năng sinh hoạt cá nhân."
+  },
+  {
+    "input": "trẻ không quan tâm đến người xung quanh",
+    "output": "Thiếu quan tâm đến người khác có thể là biểu hiện chậm phát triển xã hội hoặc rối loạn phổ tự kỷ. Nên đánh giá kỹ về khả năng tương tác và chú ý chung."
+  },
+  {
+    "input": "trẻ không trả lời khi được hỏi tên",
+    "output": "Nếu trẻ hiểu câu hỏi nhưng không trả lời tên mình, có thể do chậm ngôn ngữ biểu đạt hoặc giảm kết nối xã hội. Nên đánh giá để có hướng can thiệp sớm."
+  },
+  {
+    "input": "trẻ không hiểu từ đơn giản như 'lấy', 'đưa'",
+    "output": "Hiểu từ đơn giản là kỹ năng tiếp nhận ngôn ngữ. Nếu trẻ không hiểu, cần đánh giá khả năng ngôn ngữ tiếp nhận và phát triển nhận thức chung."
+  },
+  {
+    "input": "trẻ không có phản ứng khi gọi tên liên tục",
+    "output": "Không đáp ứng khi gọi tên là dấu hiệu phổ biến trong rối loạn phổ tự kỷ hoặc khiếm thính. Nên sàng lọc thính giác và đánh giá phát triển toàn diện."
+  },
+  {
+    "input": "trẻ không biết gọi khi cần giúp đỡ",
+    "output": "Gọi người lớn khi cần giúp đỡ là kỹ năng giao tiếp chức năng. Nếu trẻ không có hành vi này, có thể là biểu hiện của chậm phát triển hoặc rối loạn giao tiếp xã hội."
+  },
+  {
+    "input": "trẻ có hành vi tự làm đau",
+    "output": "Tự gây đau (đập đầu, cắn tay...) có thể là phản ứng cảm giác hoặc biểu hiện của rối loạn phát triển. Cần được đánh giá và can thiệp kịp thời để đảm bảo an toàn."
+  }
+]

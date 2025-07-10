@@ -1,9 +1,9 @@
 {
   "age": {
-    "range": "51 tháng và 56 tháng 30 ngày",
+    "range": "57 tháng và 66 tháng",
     "range_in_days": {
-      "min_days": 1735,
-      "max_days": 2010
+      "min_days": 1530,
+      "max_days": 1980
     },
     "title": "BỘ CÂU HỎI 60 THÁNG TUỔI"
   },

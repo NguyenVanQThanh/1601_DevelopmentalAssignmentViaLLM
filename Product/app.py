@@ -1,3 +1,5 @@
+# === Imports ===
+# Standard library imports for system operations, file handling, and data manipulation
 import os
 import traceback
 import re
@@ -5,678 +7,1325 @@ import json
 import time
 import psutil
 from typing import List, Optional, Any, Dict
-from contextlib import contextmanager
+from contextlib import asynccontextmanager, contextmanager
 import uuid
 from datetime import datetime, timedelta, timezone
+from underthesea import text_normalize
 
-from fastapi import FastAPI, Request, Query, HTTPException, Depends
+# FastAPI imports for building the API
+from fastapi import FastAPI, Query, HTTPException, Depends, Request, status
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
-from pydantic import BaseModel
+from pydantic import BaseModel, Field, field_validator
 from jose import JWTError, jwt
 from fastapi.security import OAuth2PasswordBearer
 
+# Redis and LangChain imports for caching, chat history, and AI components
 import redis
 from langchain_community.chat_message_histories import RedisChatMessageHistory
 from langchain_core.chat_history import InMemoryChatMessageHistory
-
 from langchain_community.vectorstores import FAISS
-from langchain.chains.combine_documents import create_stuff_documents_chain
+from langchain.chains import ConversationalRetrievalChain
+from langchain.memory import ConversationBufferWindowMemory
 from langchain_core.prompts import PromptTemplate
-from langchain_core.messages import HumanMessage, AIMessage, SystemMessage
+from langchain_core.messages import HumanMessage, AIMessage
 from langchain_core.documents import Document
 from langchain_community.llms import Ollama
+import ollama
 
-from custom_embeddings import BGEM3Embeddings 
+# Custom embeddings for vector database
+from custom_embeddings import BGEM3Embeddings
 
+# Data processing and MongoDB imports
 import pandas as pd
+import pymongo
+from bson import ObjectId
+import joblib
 
+from sklearn.base import BaseEstimator, TransformerMixin
+import numpy as np
+
+
+# Load environment variables from .env file
 from dotenv import load_dotenv
 load_dotenv()
 
-# ==== CONFIGURATION (Loaded from .env with defaults) ========================
-# LLM_MODEL_NAME: str - Name of the LLM model in Ollama.
-LLM_MODEL_NAME = os.getenv("LLM_MODEL_NAME", "vistral-assistant")
-# BGE_M3_MODEL_PATH: str - Filesystem path to the BGE-M3 embedding model.
-BGE_M3_MODEL_PATH = os.getenv("BGE_M3_MODEL_PATH", "./models/bge-m3")
-# VECTOR_DB_PATH: str - Filesystem path to the FAISS vector database.
-VECTOR_DB_PATH = os.getenv("VECTOR_DB_PATH", "./vectorstores/db_faiss_test")
-# CTX_WINDOW: int - Context window size of the Ollama model.
-CTX_WINDOW = int(os.getenv("CTX_WINDOW", "8192"))
-# MAX_NEW_TOKENS: int - Maximum new tokens the LLM will generate.
-MAX_NEW_TOKENS = int(os.getenv("MAX_NEW_TOKENS", "8192"))
-# PROMPT_LENGTH_BUFFER: int - Safety buffer for prompt length calculations.
-PROMPT_LENGTH_BUFFER = int(os.getenv("PROMPT_LENGTH_BUFFER", "50"))
-# stop_tokens_str: str - Comma-separated string of stop tokens from .env.
-stop_tokens_str = os.getenv("STOP_TOKENS_STR", "<|im_end|>,</s>")
-# STOP_TOKENS: List[str] - List of stop tokens for LLM generation.
-STOP_TOKENS = [token.strip() for token in stop_tokens_str.split(',')] if stop_tokens_str else ["<|im_end|>", "</s>"]
-# MAX_HISTORY_TURNS: int - Maximum number of conversation turns to include in the history for LLM prompt.
-MAX_HISTORY_TURNS = int(os.getenv("MAX_HISTORY_TURNS", "3"))
+# === Configuration ===
+# Environment variables for model, paths, and system settings
+LLM_MODEL_NAME = os.getenv("LLM_MODEL_NAME", "vistral-assistant")  # Default LLM model name
+BGE_M3_MODEL_PATH = os.getenv("BGE_M3_MODEL_PATH", "./models/bge-m3")  # Path to BGE-M3 model
+VECTOR_DB_PATH = os.getenv("VECTOR_DB_PATH", "./vectorstores/db_faiss_final")  # Path to FAISS vector database
+CTX_WINDOW = int(os.getenv("CTX_WINDOW", "8192"))  # Context window size for LLM
+MAX_NEW_TOKENS = int(os.getenv("MAX_NEW_TOKENS", "1024"))  # Max new tokens for LLM output
+stop_tokens_str = os.getenv("STOP_TOKENS_STR", "<|im_end|>,</s>,[/INST],###")  # Stop tokens for LLM
+STOP_TOKENS = [token.strip() for token in stop_tokens_str.split(',')] if stop_tokens_str else ["<|im_end|>", "</s>"]  # Parsed stop tokens
+MAX_HISTORY_TURNS = int(os.getenv("MAX_HISTORY_TURNS", "3"))  # Max chat history turns to retain
 
-# REDIS_HOST: str - Hostname or IP address of the Redis server.
-REDIS_HOST = os.getenv("REDIS_HOST", "localhost")
-# REDIS_PORT: int - Port number of the Redis server.
-REDIS_PORT = int(os.getenv("REDIS_PORT", "6379"))
-# REDIS_DB_ASQ: int - Redis database number for ASQ data.
-REDIS_DB_ASQ = int(os.getenv("REDIS_DB_ASQ", "0"))
-# REDIS_DB_HISTORY: int - Redis database number for Chat History.
-REDIS_DB_HISTORY = int(os.getenv("REDIS_DB_HISTORY", "1"))
-# SESSION_TTL_SECONDS: int - Time-to-live in seconds for session data in Redis.
-SESSION_TTL_SECONDS = int(os.getenv("SESSION_TTL_SECONDS", "7200"))
+# Redis configuration
+REDIS_HOST = os.getenv("REDIS_HOST", "localhost")  # Redis host
+REDIS_PORT = int(os.getenv("REDIS_PORT", "6379"))  # Redis port
+REDIS_DB_ASQ = int(os.getenv("REDIS_DB_ASQ", "2"))  # Redis DB for ASQ data
+REDIS_DB_HISTORY = int(os.getenv("REDIS_DB_HISTORY", "3"))  # Redis DB for chat history
+SESSION_TTL_SECONDS = int(os.getenv("SESSION_TTL_SECONDS", "7200"))  # Session TTL in seconds
 
-# ASQ_DATA_DIR: str - Directory containing ASQ-3 JSON data files.
-ASQ_DATA_DIR = os.getenv("ASQ_DATA_DIR", "./ASQ3API/data")
-# DEFAULT_ASQ_FILENAME: str - Default ASQ-3 JSON filename.
-DEFAULT_ASQ_FILENAME = os.getenv("DEFAULT_ASQ_FILENAME", "18month.json")
-# ASQ_JSON_FILE: Optional[str] - Full path to the default ASQ-3 JSON file.
-ASQ_JSON_FILE = os.path.join(ASQ_DATA_DIR, DEFAULT_ASQ_FILENAME) if DEFAULT_ASQ_FILENAME else None
-# EXCEL_OUTPUT_DIR: str - Directory to store generated Excel files with ASQ results.
-EXCEL_OUTPUT_DIR = os.getenv("EXCEL_OUTPUT_DIR", "./asq_excel_results")
-# FIXED_EXCEL_RESULTS_FILE: str - Fixed filename for ASQ test results.
-FIXED_EXCEL_RESULTS_FILE = os.path.join(EXCEL_OUTPUT_DIR, "results_test.xlsx")
-# FIXED_EXCEL_INFO_FILE: str - Fixed filename for general test information.
-FIXED_EXCEL_INFO_FILE = os.path.join(EXCEL_OUTPUT_DIR, "information_test.xlsx")
+# ASQ data configuration
+ASQ_DATA_DIR = os.getenv("ASQ_DATA_DIR", "./ASQ3API/data")  # Directory for ASQ data
+DEFAULT_ASQ_FILENAME = os.getenv("DEFAULT_ASQ_FILENAME", "18month.json")  # Default ASQ JSON file
+ASQ_JSON_FILE = os.path.join(ASQ_DATA_DIR, DEFAULT_ASQ_FILENAME) if DEFAULT_ASQ_FILENAME else None  # Full path to ASQ JSON file
 
+# MongoDB configuration
+MONGO_URI: str = os.getenv("MONGO_URI", "mongodb://localhost:27017/")  # MongoDB connection URI
+MONGO_DB_NAME: str = os.getenv("MONGO_DB_NAME", "asq_app_db")  # MongoDB database name
 
-# SECRET_KEY: str - Secret key for signing JWTs. Should be strong and kept secret.
-SECRET_KEY = os.getenv("SECRET_KEY", "please-set-a-strong-secret-key-in-your-env-file")
+# JWT authentication configuration
+SECRET_KEY = os.getenv("SECRET_KEY", "please-set-a-strong-secret-key-in-your-env-file")  # Secret key for JWT
 if SECRET_KEY == "please-set-a-strong-secret-key-in-your-env-file":
     print("WARNING: Default SECRET_KEY is being used. Please set a strong, unique SECRET_KEY in your .env file for security!")
-# ALGORITHM: str - Algorithm used for JWT signing.
-ALGORITHM = "HS256"
-# ACCESS_TOKEN_EXPIRE_MINUTES: int - Expiry time for access tokens in minutes.
-ACCESS_TOKEN_EXPIRE_MINUTES = int(os.getenv("ACCESS_TOKEN_EXPIRE_MINUTES", str(60 * 24 * 7)))
+ALGORITHM = "HS256"  # JWT algorithm
+ACCESS_TOKEN_EXPIRE_MINUTES = int(os.getenv("ACCESS_TOKEN_EXPIRE_MINUTES", str(60 * 24 * 7)))  # Token expiration time
 
-# default_asq_questionnaire_rules: dict - Loaded default ASQ-3 questionnaire rules.
-default_asq_questionnaire_rules = {}
-if ASQ_JSON_FILE and os.path.exists(ASQ_JSON_FILE):
-    try:
-        with open(ASQ_JSON_FILE, "r", encoding="utf-8") as f: default_asq_questionnaire_rules = json.load(f)
-    except Exception as e: print(f"Warning: Could not load default ASQ file {ASQ_JSON_FILE}: {e}")
-elif ASQ_JSON_FILE: print(f"Warning: Default ASQ file {ASQ_JSON_FILE} not found.")
-
-# ==== FASTAPI APP & MIDDLEWARE ===============================================
-# app: FastAPI - The FastAPI application instance.
-app = FastAPI(title="ASQ & Chatbot API", version="1.0.3")
-app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_credentials=True, allow_methods=["*"], allow_headers=["*"])
-
-# ==== REDIS CLIENT INITIALIZATION =============================================
-# redis_client: Optional[redis.Redis] - Global Redis client instance.
+# === Global Variables (Managed by Lifespan) ===
+# Global variables to store Redis client, LLM, vector DB, and other components
 redis_client: Optional[redis.Redis] = None
-try:
-    redis_client = redis.Redis(host=REDIS_HOST, port=REDIS_PORT, db=0, decode_responses=True)
-    redis_client.ping()
-    print(f"Connected to Redis server at {REDIS_HOST}:{REDIS_PORT}")
-except redis.exceptions.ConnectionError as e:
-    print(f"CRITICAL ERROR: Could not connect to Redis: {e}. Functionality will be limited."); redis_client = None
-
-# ==== JWT & SECURITY =========================================================
-# oauth2_scheme: OAuth2PasswordBearer - OAuth2 scheme for token-based authentication.
-oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
-
-# Function Name: create_access_token
-# Functionality: Creates a new JWT access token.
-# Input: data (dict) - Data to be encoded in the token (e.g., {"sub": session_id}).
-# Input: expires_delta (Optional[timedelta]) - Optional custom expiry time for the token.
-# Output: str - The encoded JWT access token.
-def create_access_token(data: dict, expires_delta: Optional[timedelta] = None) -> str:
-    to_encode = data.copy()
-    expire = datetime.now(timezone.utc) + (expires_delta if expires_delta else timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES))
-    to_encode.update({"exp": expire}); return jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
-
-# Function Name: get_current_session
-# Functionality: Verifies the JWT token from the request and returns its payload, primarily extracting the session_id.
-# Input: token (str) - The JWT token obtained from the 'Authorization: Bearer <token>' header (managed by Depends(oauth2_scheme)).
-# Output: dict - A dictionary containing the session_id (e.g., {"session_id": "some-uuid", "token_payload": {...original_payload...}}).
-# Raises: HTTPException (401) - If the token is invalid, expired, or missing.
-async def get_current_session(token: str = Depends(oauth2_scheme)) -> dict:
-    cred_exc = HTTPException(status_code=401, detail="Could not validate credentials", headers={"WWW-Authenticate": "Bearer"})
-    try:
-        payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM]); session_id: Optional[str] = payload.get("sub")
-        if session_id is None: raise cred_exc
-        return {"session_id": session_id, "token_payload": payload}
-    except JWTError: raise cred_exc
-    except Exception: raise cred_exc
-
-# ==== UTILITY FUNCTIONS =======================================================
-# Function Name: timer
-# Functionality: A context manager to measure and print the execution time of a code block.
-# Input: description (str) - A description of the timed operation.
-# Output: None (prints elapsed time).
-@contextmanager
-def timer(description: str): start = time.time(); yield; print(f"{description}: {(time.time() - start):.3f}s")
-# Function Name: get_memory_usage
-# Functionality: Gets the current RSS memory usage of the process.
-# Input: None.
-# Output: float - Memory usage in MB.
-def get_memory_usage() -> float: return psutil.Process(os.getpid()).memory_info().rss / 1024 / 1024
-
-# Function Name: append_to_excel
-# Functionality: Appends a list of dictionaries (new rows) to an existing Excel file, or creates a new file.
-# Input: data_list (List[Dict]) - A list of dictionaries, where each dictionary is a new row.
-# Input: file_path (str) - The full path to the Excel file.
-# Input: sheet_name (str) - The name of the sheet in the Excel file.
-# Output: None.
-def append_to_excel(data_list: List[Dict], file_path: str, sheet_name: str = "Sheet1"):
-    if not data_list: print(f"No data to append to Excel file: {file_path}"); return
-    try:
-        df_new = pd.DataFrame(data_list)
-        if os.path.exists(file_path):
-            try:
-                df_existing = pd.read_excel(file_path, sheet_name=sheet_name, engine='openpyxl')
-                df_combined = pd.concat([df_existing, df_new], ignore_index=True)
-            except FileNotFoundError: df_combined = df_new
-            except Exception as e_read: print(f"Error reading existing Excel file {file_path}: {e_read}. Creating new."); df_combined = df_new
-        else: df_combined = df_new
-        os.makedirs(os.path.dirname(file_path), exist_ok=True)
-        df_combined.to_excel(file_path, index=False, sheet_name=sheet_name, engine='openpyxl')
-        print(f"Data successfully appended/saved to Excel: {file_path}")
-    except Exception as e: print(f"Error appending/saving data to Excel file {file_path}: {e}"); traceback.print_exc()
-
-# ==== CHATBOT COMPONENTS LOADING ==============================================
-def load_llm() -> Ollama:
-    try:
-        llm_i = Ollama(model=LLM_MODEL_NAME,temperature=0.5,stop=STOP_TOKENS); llm_i.invoke("Hello")
-        print(f"Model '{LLM_MODEL_NAME}' ready. Mem: {get_memory_usage():.2f}MB"); return llm_i
-    except Exception as e: raise HTTPException(status_code=500, detail=f"LLM init error: {e}")
-def load_vector_db() -> FAISS:
-    for f in ("index.faiss", "index.pkl"):
-        if not os.path.exists(f"{VECTOR_DB_PATH}/{f}"): raise HTTPException(status_code=500, detail=f"VectorDB file {f} missing.")
-    try:
-        emb = BGEM3Embeddings(BGE_M3_MODEL_PATH); db = FAISS.load_local(VECTOR_DB_PATH, emb, allow_dangerous_deserialization=True)
-        if db.index.ntotal == 0: raise HTTPException(status_code=500, detail="Vector store empty.")
-        print(f"Vector DB loaded. Items: {db.index.ntotal}. Mem: {get_memory_usage():.2f}MB"); return db
-    except Exception as e: raise HTTPException(status_code=500, detail=f"VectorDB load error: {e}")
-
-# ==== CHAT HISTORY MANAGEMENT ===============================================
-def get_session_history(session_id: str) -> Any:
-    if redis_client: return RedisChatMessageHistory(session_id=session_id, url=f"redis://{REDIS_HOST}:{REDIS_PORT}/{REDIS_DB_HISTORY}", ttl=SESSION_TTL_SECONDS)
-    else:
-        if not hasattr(app.state, 'in_mem_hist'): app.state.in_mem_hist = {}
-        if session_id not in app.state.in_mem_hist: app.state.in_mem_hist[session_id] = InMemoryChatMessageHistory()
-        return app.state.in_mem_hist[session_id]
-def format_chat_history(msgs: List[AIMessage | HumanMessage], max_turns: int = MAX_HISTORY_TURNS) -> str:
-    r = msgs[-max_turns*2:] if msgs else []; lns = []
-    for i in range(0,len(r),2):
-        if i+1 < len(r): h,a=r[i],r[i+1]; hc=h.content if hasattr(h,'content') else str(h); ac=a.content if hasattr(a,'content') else str(a); lns.extend([f"Người dùng: {hc}",f"Trợ lý AI: {ac}"])
-    return "\n".join(lns) if lns else "Chưa có lịch sử hội thoại trước đó."
-
-# ==== GLOBAL CHATBOT COMPONENTS & PROMPT TEMPLATES ============================
 llm_global: Optional[Ollama] = None
+vector_db_global: Optional[FAISS] = None
 retriever_global: Any = None
-qa_chain_global: Any = None
 QA_PROMPT_GLOBAL: Optional[PromptTemplate] = None
 ASQ_SOLUTION_PROMPT_GLOBAL: Optional[PromptTemplate] = None
-current_date_global: str = datetime.now().strftime("%Y-%m-%d")
+default_asq_questionnaire_rules: dict = {}
+current_date_global: str = datetime.now().strftime("%Y-%m-%d")  # Current date for prompts
+mongo_client_global: Optional[pymongo.MongoClient] = None
+db: Optional[pymongo.database.Database] = None
+scaler_global: Optional[Any] = None  # Scaler for OLA model
+pca_global: Optional[Any] = None  # PCA for OLA model
+pool_classifiers_global: Optional[List[Any]] = None  # Pool classifiers for OLA model
+ola_model_global: Optional[Any] = None  # OLA model
+OLA_INITIAL_REMARK_PROMPT_GLOBAL: Optional[PromptTemplate] = None  # Prompt for OLA initial remark
+OLLAMA_CLARIFICATION_MODEL = os.getenv("OLLAMA_CLARIFICATION_MODEL", "vietnamese-llm")  # Model for clarification questions
 
-print("Initializing chatbot components…")
-try:
-    llm_global = load_llm()
-    vector_db_global = load_vector_db()
-    retriever_global = vector_db_global.as_retriever(search_type="similarity", search_kwargs={"k": 4, "score_threshold": 0.5})
-    
-    qa_template_str = """<|im_start|>system
-Bạn là trợ lý AI chuyên về sức khỏe và tâm thần nhi khoa. Mục tiêu của bạn là cung cấp thông tin chính xác, dễ hiểu và hữu ích cho phụ huynh. **Hãy luôn trả lời bằng tiếng Việt.**
-**Đặc biệt khi có câu hỏi liên quan đến thông tin liên lạc và đặt lịch phòng khám hãy sử dụng những thông tin sau:
-Thông tin liên hệ /đặt lịch phòng khám Tâm Lý Nhi Đồng: 
-Số điện thoại/Zalo: 0981502721 
-Địa chỉ: 625 Hậu Giang, quận 6, Tp. Hồ Chí Minh **
-**QUAN TRỌNG: Tất cả các câu trả lời, lời khuyên, và thông tin về mốc phát triển phải dựa vào độ tuổi so với ngày hiện tại ({current_date}) được điều chỉnh và phù hợp CHÍNH XÁC với ĐỘ TUỔI của trẻ được đề cập trong câu hỏi hoặc lịch sử trò chuyện. Nếu không có thông tin độ tuổi rõ ràng, bạn có thể hỏi lại một cách lịch sự để làm rõ.**
-{asq_guidance_placeholder}
+# === Pydantic Models ===
+# Models for request/response validation and data structures
+class Answer(BaseModel):
+    id: int  # Question ID
+    answer: str  # Answer text
 
-Hãy tuân thủ các hướng dẫn sau:
-0.  **HIỂU ĐÚNG NGỮ NGHĨA:** Hãy phân tích kỹ lưỡng toàn bộ câu hỏi của người dùng để hiểu đúng ngữ nghĩa của từng từ và ý định tổng thể, đặc biệt với các từ có thể có nhiều nghĩa trong ngữ cảnh phát triển của trẻ (ví dụ: "bập bẹ" có thể là tập nói hoặc tập đi). Cố gắng xác định kỹ năng chính mà người dùng đang quan tâm. Nếu không chắc chắn, bạn có thể ưu tiên diễn giải theo cách phổ biến nhất hoặc lịch sự hỏi lại người dùng để làm rõ.
-1.  **Ưu tiên Context:** Lấy thông tin từ phần **Context** được cung cấp làm nguồn chính để trả lời câu hỏi. Thông tin trong Context có thể bằng tiếng Việt hoặc tiếng Anh; bạn cần hiểu và diễn đạt lại câu trả lời bằng tiếng Việt, đảm bảo phù hợp với độ tuổi.
-2.  **Bổ sung từ kiến thức của bạn:** Nếu Context không có thông tin, không đầy đủ, hoặc bạn cảm thấy kiến thức đã được huấn luyện (fine-tuned) của mình có thể làm rõ hơn hoặc bổ sung giá trị cho câu trả lời, hãy sử dụng nó. Thông tin bổ sung phải liên quan trực tiếp đến câu hỏi, lĩnh vực chuyên môn của bạn, và **phù hợp với độ tuổi của trẻ.**
-3.  **Chính xác và không bịa đặt:** Dù thông tin lấy từ Context hay từ kiến thức của bạn, nó phải chính xác, dựa trên cơ sở khoa học, và **hoàn toàn phù hợp với độ tuổi của trẻ đang được hỏi đến.** Tuyệt đối không bịa đặt thông tin hoặc đưa ra lời khuyên không phù hợp lứa tuổi.
-4.  **Tập trung vào câu hỏi:** Luôn trả lời trực tiếp vào câu hỏi ({question}).
-5.  **Khi không có thông tin:** Nếu cả Context và kiến thức đã huấn luyện của bạn đều không có thông tin để trả lời câu hỏi, hãy thông báo một cách lịch sự, ví dụ: "Tôi rất tiếc, hiện tại tôi không có đủ thông tin về chủ đề này từ cả tài liệu được cung cấp lẫn kiến thức của mình."
-6.  **Diễn đạt:** Tự nhiên, không trích dẫn nguyên văn từ Context trừ khi đó là một định nghĩa quan trọng hoặc trích dẫn ngắn cần thiết.
-7.  **Định dạng:** Rõ ràng, dùng gạch đầu dòng (-) hoặc số (1., 2.) nếu phù hợp, câu đầy đủ, đúng ngữ pháp.
-8.  **Giọng điệu:** Ngôn ngữ đơn giản, thân thiện, cảm thông và hỗ trợ.
-9.  **Lịch sử hội thoại:** Sử dụng lịch sử ({chat_history}) để hiểu ngữ cảnh các câu hỏi trước đó, nhưng câu trả lời của bạn phải tập trung vào CÂU HỎI HIỆN TẠI, hạn chế sử dụng câu trả lời trước đó trong câu trả lời hiện tại.
+class ASQSectionResultDetail(BaseModel):
+    display_name: str  # Display name of the section
+    total_score: float  # Total score for the section
+    status: str  # Status (e.g., normal, delayed)
+    cutoff: float  # Cutoff score for the section
+    monitor: float  # Monitor cutoff score
+    answers_processed: List[Answer]  # Processed answers for the section
 
+class ASQStoredResult(BaseModel):
+    session_id: str  # Session ID
+    age_at_test_months: Optional[int] = None  # Age of child in months
+    questionnaire_title: Optional[str] = None  # Title of the ASQ questionnaire
+    overall_summary: str  # Summary of ASQ results
+    sections: Dict[str, ASQSectionResultDetail]  # Section-wise results
+
+class ChildInfoSubmitted(BaseModel):
+    fullName: Optional[str] = None  # Child's full name
+    birthDate: Optional[str] = None  # Child's birth date
+    childAgeInDays: Optional[int] = None  # Child's age in days
+    location: Optional[str] = None  # Location
+    gender: Optional[str] = None  # Gender
+    pre_birth: Optional[str] = None  # Pre-birth information
+    pre_result: Optional[str] = None  # Pre-test result
+    result: Optional[str] = None  # Test result
+    resultDate: Optional[str] = None  # Date of result
+    hospital: Optional[str] = None  # Hospital name
+    doctor: Optional[str] = None  # Doctor's name
+    pre_test: Optional[str] = None  # Pre-test information
+
+class ParentInfoSubmitted(BaseModel):
+    parentFullName: Optional[str] = None  # Parent's full name
+    phone: Optional[str] = None  # Parent's phone number
+    email: Optional[str] = None  # Parent's email
+    address: Optional[str] = None  # Parent's address
+    relationship: Optional[str] = None  # Relationship to child
+    place: Optional[str] = None  # Place information
+
+class ASQSubmissionPayload(BaseModel):
+    age_at_test_months: Optional[int] = None  # Age at test in months
+    questionnaire_title: Optional[str] = None  # Questionnaire title
+    communication: Optional[List[Answer]] = None  # Communication section answers
+    gross_motor: Optional[List[Answer]] = None  # Gross motor section answers
+    fine_motor: Optional[List[Answer]] = None  # Fine motor section answers
+    problem_solving: Optional[List[Answer]] = None  # Problem-solving section answers
+    personal_social: Optional[List[Answer]] = None  # Personal-social section answers
+    child_information: Optional[ChildInfoSubmitted] = None  # Child information
+    parent_information: Optional[ParentInfoSubmitted] = None  # Parent information
+
+class InitialEngagementResponse(BaseModel):
+    initial_remark: Optional[str] = None  # Initial chatbot remark
+    asq_solutions: Optional[str] = None  # ASQ solutions and advice
+    error: Optional[str] = None  # Error message, if any
+
+class ChatMessageClient(BaseModel):
+    sender: str  # Sender type (user or bot)
+    text: str  # Message text
+
+class ChatHistoryResponse(BaseModel):
+    history: List[ChatMessageClient]  # List of chat messages
+    error: Optional[str] = None  # Error message, if any
+
+class ClearHistoryResponse(BaseModel):
+    message: str  # Confirmation message
+    cleared_asq_too: bool  # Whether ASQ data was cleared
+
+class ChatQuestionRequest(BaseModel):
+    msg: str  # User's question
+
+class TokenResponse(BaseModel):
+    access_token: str  # JWT access token
+    token_type: str  # Token type (bearer)
+    session_id: str  # Session ID
+
+class UserFeedbackRequest(BaseModel):
+    fullName: Optional[str] = Field(None)  # User's full name
+    phone: Optional[str] = Field(None)  # User's phone number
+    opinion: str = Field(..., min_length=1)  # User's feedback opinion
+    rate: int = Field(..., ge=1, le=5)  # Rating (1-5)
+
+    @field_validator('phone')
+    @classmethod
+    def validate_vietnamese_phone(cls, v: Optional[str]) -> Optional[str]:
+        # Validate Vietnamese phone number format
+        if v is not None:
+            if not re.match(r"^(0[35789])([0-9]{8})$", v):
+                raise ValueError('Invalid Vietnamese phone number format.')
+        return v
+
+class UserFeedbackResponse(BaseModel):
+    feedback_id: str  # Feedback ID
+    fullName: Optional[str] = None  # User's full name
+    phone: Optional[str] = None  # User's phone number
+    opinion: str  # Feedback opinion
+    rate: int  # Rating
+    submittedAt: datetime  # Submission timestamp
+    sessionId: Optional[str] = None  # Session ID
+    linked_to_parent_id: Optional[str] = None  # Linked parent ID
+
+class OLAPredictionInput(BaseModel):
+    # Input fields for OLA prediction model
+    ChamNoi: float
+    CoLap: float
+    ChoiChucNang: float
+    ChoiGiaVo: float
+    HanhViLapLai: float
+    KyNangGiaoTiepSom: float
+    ChoiLuanPhien: float
+    BatChuoc: float
+    PhanUngTenGoi: float
+    ChiTro: float
+    TiepXucMat: float
+
+class ASDTestPayload(BaseModel):
+    userInfo: ChildInfoSubmitted  # User information
+    answers: OLAPredictionInput  # OLA prediction inputs
+    questionDetails: List[Dict[str, Any]]  # Question details
+
+class OLAPredictionResult(BaseModel):
+    prediction: int  # Prediction result (0 or 1)
+    probability: float  # Prediction probability
+
+class OLAStoredResult(BaseModel):
+    session_id: str  # Session ID
+    prediction_timestamp: datetime  # Prediction timestamp
+    input_data: OLAPredictionInput  # Input data for prediction
+    prediction_result: OLAPredictionResult  # Prediction result
+
+class OLAPredictionResponse(BaseModel):
+    prediction: int  # Prediction result
+    probability_class_1: float  # Probability of class 1
+    initial_remark: str  # Initial remark for prediction
+
+class ColumnDropper(BaseEstimator, TransformerMixin):
+    def __init__(self, columns, feature_names=None):
+        self.columns = columns
+        self.feature_names = feature_names
+
+    def fit(self, X, y=None):
+        return self
+
+    def transform(self, X):
+        if isinstance(X, pd.DataFrame):
+            return X.drop(columns=self.columns, errors='ignore')
+        elif isinstance(X, np.ndarray):
+            if self.feature_names is None or X.shape[1] != len(self.feature_names):
+                raise ValueError("ColumnDropper: mismatch or missing feature names.")
+            df = pd.DataFrame(X, columns=self.feature_names)
+            return df.drop(columns=self.columns, errors='ignore').values
+        else:
+            raise ValueError("Unsupported input type for ColumnDropper.")
+# === Lifespan Manager ===
+@asynccontextmanager
+async def lifespan_manager(app_param: FastAPI):
+    # Global variables for Redis, LLM, vector DB, and other components
+    global redis_client, llm_global, vector_db_global, retriever_global
+    global QA_PROMPT_GLOBAL, ASQ_SOLUTION_PROMPT_GLOBAL, default_asq_questionnaire_rules
+    global mongo_client_global, db, scaler_global, pca_global, pool_classifiers_global, ola_model_global
+    global OLA_INITIAL_REMARK_PROMPT_GLOBAL, current_date_global
+    print("INFO: Application startup sequence initiated...")
+
+    # Create necessary directories
+    try:
+        print("INFO: Ensuring required directories exist...")
+        os.makedirs("./models", exist_ok=True)
+        if BGE_M3_MODEL_PATH and os.path.dirname(BGE_M3_MODEL_PATH) and os.path.dirname(BGE_M3_MODEL_PATH) != '.':
+            os.makedirs(os.path.dirname(BGE_M3_MODEL_PATH), exist_ok=True)
+        if VECTOR_DB_PATH and os.path.dirname(VECTOR_DB_PATH) and os.path.dirname(VECTOR_DB_PATH) != '.':
+            os.makedirs(os.path.dirname(VECTOR_DB_PATH), exist_ok=True)
+        if ASQ_DATA_DIR:
+            os.makedirs(ASQ_DATA_DIR, exist_ok=True)
+    except Exception as e_dir:
+        print(f"ERROR: Could not create directories: {e_dir}")
+
+    # Initialize MongoDB connection
+    try:
+        print(f"INFO: Attempting MongoDB connection: {MONGO_URI}")
+        mongo_client_global = pymongo.MongoClient(MONGO_URI, serverSelectionTimeoutMS=5000)
+        mongo_client_global.admin.command('ping')
+        db = mongo_client_global[MONGO_DB_NAME]
+        print(f"SUCCESS: Connected to MongoDB. Database: '{db.name}'")
+        if db is not None:
+            print("INFO: Ensuring MongoDB indexes...")
+            # Create indexes for efficient querying
+            db.user_feedbacks.create_index([("phone", pymongo.ASCENDING)], name="idx_feedback_phone", background=True)
+            db.user_feedbacks.create_index([("submittedAt", pymongo.DESCENDING)], name="idx_feedback_submitted_at", background=True)
+            db.asq_submissions.create_index([("sessionId", pymongo.ASCENDING)], name="idx_asqsub_session", background=True)
+            db.asq_submissions.create_index([("submissionTimestamp", pymongo.DESCENDING)], name="idx_asqsub_timestamp", background=True)
+            db.asq_submissions.create_index([("parentInformation.phone", pymongo.ASCENDING)], name="idx_asqsub_parent_phone", background=True)
+            db.asd_predictions.create_index([("sessionId", pymongo.ASCENDING)], name="idx_asdpred_session", background=True)
+            db.asd_predictions.create_index([("predictionTimestamp", pymongo.DESCENDING)], name="idx_asdpred_timestamp", background=True)
+            print("INFO: MongoDB indexes checked/created.")
+    except Exception as e_mongo:
+        print(f"CRITICAL: MongoDB setup failed: {e_mongo}")
+        db = None
+        mongo_client_global = None
+
+    # Initialize Redis connection
+    try:
+        print(f"INFO: Attempting Redis connection: {REDIS_HOST}:{REDIS_PORT}")
+        redis_client = redis.Redis(host=REDIS_HOST, port=REDIS_PORT, db=REDIS_DB_ASQ, decode_responses=True, socket_connect_timeout=5)
+        redis_client.ping()
+        print(f"SUCCESS: Connected to Redis for ASQ Data (DB {REDIS_DB_ASQ}).")
+    except Exception as e_redis:
+        print(f"CRITICAL: Redis connection failed: {e_redis}.")
+        redis_client = None
+
+    # Load default ASQ questionnaire rules
+    if ASQ_JSON_FILE and os.path.exists(ASQ_JSON_FILE):
+        try:
+            with open(ASQ_JSON_FILE, "r", encoding="utf-8") as f:
+                default_asq_questionnaire_rules.update(json.load(f))
+            print("INFO: Default ASQ rules loaded.")
+        except Exception as e_asq_rules:
+            print(f"WARNING: Could not load default ASQ file: {e_asq_rules}")
+    elif ASQ_JSON_FILE:
+        print(f"WARNING: Default ASQ file {ASQ_JSON_FILE} not found.")
+
+    # Initialize AI components (LLM, VectorDB, Prompts)
+    print("INFO: Initializing AI components (LLM, VectorDB, Prompts)...")
+    try:
+        llm_global = _internal_load_llm()  # Load LLM model
+        vector_db_global = _internal_load_vector_db()  # Load vector database
+
+        if vector_db_global:
+            # Initialize retriever for vector database
+            retriever_global = vector_db_global.as_retriever(
+                search_type="similarity",
+                search_kwargs={"k": 5}
+            )
+        else:
+            retriever_global = None
+            print("WARNING: VectorDB global instance not initialized, retriever will be None.")
+
+        # Define QA prompt template for general chatbot responses
+        qa_template_str = """<|im_start|>system
+**Ngày hiện tại:** {current_date}
+Bạn là trợ lý AI về sức khỏe – tâm thần nhi khoa của Phòng Khám Tâm Lý Nhi Đồng. Luôn trả lời bằng **tiếng Việt**.
+CHỈ SỬ DỤNG thông tin dưới đây khi có câu hỏi về việc đặt lịch, tư vấn hoặc liên hệ với phòng khám:
+Phòng Khám Tâm Lý Nhi Đồng 
+• Zalo/ĐT: 0981502721
+• Địa chỉ: 625 Hậu Giang, Q6, TP.HCM
+TUYỆT ĐỐI KHÔNG cung cấp các địa chỉ khác ngoài thông tin trên.
+**NỘI DUNG CÂU HỎI:** Nếu câu hỏi không rõ ràng (không dấu, sai chính tả hoặc có từ viết tắt), hãy yêu cầu làm rõ hoặc cung cấp thêm thông tin. Tập trung phân tích nội dung câu hỏi hiện tại. 
+**ĐỘ TUỔI:** Mọi khuyến nghị phải phù hợp chính xác với tuổi trẻ; nếu tuổi chưa rõ hãy hỏi lại.
+Luôn trả lời bằng **tiếng Việt**
 **Context**:
 {context}
+**Kết quả bài test ASQ-3 hoặc ASD:**
+{session_context}
+Hướng dẫn trả lời
+1. ĐẶC BIỆT ưu tiên **Context** và kiến thức, không bịa.
+2. Trả lời ngắn gọn, gạch đầu dòng khi cần.
+3. Thiếu dữ liệu thì xin lỗi và báo không đủ thông tin.
+4. Câu văn mạch lạc, giọng điệu thân thiện, cảm thông, an ủi khi câu trả lời có tin xấu.
+5. Trích dẫn ngắn, không chép nguyên văn dài.
+6. Tham chiếu lịch sử để cần giữ mạch nhưng cần tập trung vào câu hỏi hiện tại.
+7. Luôn đề cập độ tuổi trong câu hỏi.
 
-**Lịch sử hội thoại**:
+**Lịch sử**:
 {chat_history}
 <|im_end|>
 <|im_start|>user
 {question}<|im_end|>
 <|im_start|>assistant
 """
-    QA_PROMPT_GLOBAL = PromptTemplate(
-        template=qa_template_str,
-        input_variables=["chat_history", "context", "question", "asq_guidance_placeholder", "current_date"]
-    )
-    qa_chain_global = create_stuff_documents_chain(llm_global, QA_PROMPT_GLOBAL)
+        QA_PROMPT_GLOBAL = PromptTemplate(
+            template=qa_template_str,
+            input_variables=["chat_history", "context", "question", "current_date","session_context"]
+        )
 
-    asq_solution_template_str = """<|im_start|>system
-Bạn là một chuyên gia phát triển nhi khoa. Dựa trên kết quả ASQ-3 của một trẻ và các thông tin chuyên ngành được cung cấp, hãy thực hiện nhiệm vụ sau.
-Luôn trả lời bằng tiếng Việt, ngôn ngữ thân thiện, dễ hiểu. Nhấn mạnh tầm quan trọng của việc tham khảo ý kiến chuyên gia nếu có lo ngại.
+        # Define ASQ solution prompt template
+        asq_solution_template_str = """<|im_start|>system
+Bạn là trợ lý AI về sức khỏe – tâm thần nhi khoa của Phòng Khám Tâm Lý Nhi Đồng. Nhiệm vụ của bạn là đưa ra lời khuyên và gợi ý dựa trên thông tin sau.
+Luôn trả lời bằng tiếng Việt, ngôn ngữ thân thiện, dễ hiểu.
 
+--- THÔNG TIN ĐẦU VÀO ---
 **Thông tin trẻ và kết quả ASQ-3:**
 - Tuổi: {age_details}
 - Tóm tắt kết quả ASQ-3: {asq_summary}
 - Chi tiết các lĩnh vực có thể cần chú ý dựa trên điểm số:
 {asq_areas_of_concern}
 
-**Nhiệm vụ cụ thể của bạn:**
-{task_description}
-
-**Định dạng các câu trả lời dạng danh sách cần xuống dòng rõ ràng.**
-**Thông tin chuyên ngành tham khảo (nếu có để hỗ trợ nhiệm vụ):**
+**Thông tin chuyên ngành tham khảo (từ tài liệu):**
+<rag_context_start>
 {rag_context}
+<rag_context_end>
+--- KẾT THÚC THÔNG TIN ĐẦU VÀO ---
+
+--- YÊU CẦU CỤ THỂ CHO BẠN (TRỢ LÝ AI) ---
+**Nhiệm vụ của bạn là:** {task_description}
+
+**QUAN TRỌNG KHI CÓ KẾT QUẢ "CHẬM RÕ RỆT":**
+- Nếu có bất kỳ lĩnh vực nào là "CHẬM RÕ RỆT", hãy đặt ưu tiên cao nhất cho việc khuyên phụ huynh đưa trẻ đi đánh giá chuyên sâu ngay lập tức. Đây phải là thông điệp chính và được nhấn mạnh nhất.
+- Các gợi ý hoạt động tại nhà cho lĩnh vực "CHẬM RÕ RỆT" chỉ nên mang tính hỗ trợ rất cơ bản, tạm thời trong lúc chờ chuyên gia, và phải luôn đi kèm cảnh báo không thay thế được ý kiến chuyên môn. Hạn chế các hoạt động phức tạp cho những lĩnh vực này.
+
+**Yêu cầu định dạng cho phần gợi ý hoạt động và lời khuyên (NẾU được yêu cầu trong task_description):**
+- Mỗi gợi ý chính (ví dụ: "Hoạt động tại nhà", "Lời khuyên chung") nên bắt đầu bằng một tiêu đề được **in đậm**.
+- Các mục con trong mỗi gợi ý nên được liệt kê bằng gạch đầu dòng (-).
+--- KẾT THÚC YÊU CẦU ---
 <|im_end|>
 <|im_start|>user
-Dựa vào các thông tin trên, vui lòng {task_description_short}.
+Dựa vào các thông tin và yêu cầu trên, vui lòng {task_description_short}.
 <|im_end|>
 <|im_start|>assistant
 """
-    ASQ_SOLUTION_PROMPT_GLOBAL = PromptTemplate(
-        template=asq_solution_template_str,
-        input_variables=["age_details", "asq_summary", "asq_areas_of_concern", "task_description", "rag_context", "task_description_short"]
-    )
-    print("Chatbot components initialized successfully.")
-except Exception as e:
-    print(f"CRITICAL ERROR - Chatbot Init: {e}"); traceback.print_exc()
-    llm_global = retriever_global = qa_chain_global = QA_PROMPT_GLOBAL = ASQ_SOLUTION_PROMPT_GLOBAL = None
-    
-class Answer(BaseModel): id: int; answer: str
-class ASQQuestionAnswerPair(BaseModel): question_id: int; question_text: str; user_answer: str
-class ASQSectionResultDetail(BaseModel): display_name: str; total_score: float; status: str; cutoff: float; monitor: float; answers_processed: List[Answer]
-class ASQStoredResult(BaseModel): session_id: str; age_at_test_months: Optional[int] = None; questionnaire_title: Optional[str] = None; overall_summary: str; sections: Dict[str, ASQSectionResultDetail]
-class ChildInfoSubmitted(BaseModel): fullName: Optional[str]=None; birthDate: Optional[str]=None; childAgeInDays: Optional[int]=None; location: Optional[str]=None; gender: Optional[str]=None; pre_birth: Optional[str]=None; pre_result: Optional[str]=None; result: Optional[str]=None; resultDate: Optional[str]=None; hospital: Optional[str]=None; doctor: Optional[str]=None; pre_test: Optional[str]=None
-class ParentInfoSubmitted(BaseModel): parentFullName: Optional[str]=None; phone: Optional[str]=None; email: Optional[str]=None; address: Optional[str]=None; relationship: Optional[str]=None; place: Optional[str]=None
-class ASQSubmissionPayload(BaseModel):
-    age_at_test_months: Optional[int] = None; questionnaire_title: Optional[str] = None
-    communication: Optional[List[Answer]] = None; gross_motor: Optional[List[Answer]] = None
-    fine_motor: Optional[List[Answer]] = None; problem_solving: Optional[List[Answer]] = None
-    personal_social: Optional[List[Answer]] = None
-    child_information: Optional[ChildInfoSubmitted] = None
-    parent_information: Optional[ParentInfoSubmitted] = None
+        ASQ_SOLUTION_PROMPT_GLOBAL = PromptTemplate(
+            template=asq_solution_template_str,
+            input_variables=["age_details", "asq_summary", "asq_areas_of_concern", "task_description", "rag_context", "task_description_short"]
+        )
 
-def get_asq_questionnaire_rules(title: Optional[str]=None, age_months: Optional[int]=None) -> dict:
-    if title and os.path.isdir(ASQ_DATA_DIR) :
+        # Define OLA initial remark prompt template
+        ola_remark_template_str = """<|im_start|>system
+Bạn là trợ lý AI chuyên về tâm lý nhi khoa của Phòng Khám Tâm Lý Nhi Đồng. Nhiệm vụ của bạn là soạn một lời nhận xét ban đầu dựa trên kết quả sàng lọc nguy cơ tự kỷ.
+Luôn trả lời bằng tiếng Việt, giọng điệu cực kỳ **thân thiện, cảm thông và trấn an**.
+
+--- THÔNG TIN KẾT QUẢ SÀNG LỌC ASD ---
+- Kết quả tóm tắt: {ola_summary}
+- Điểm số chi tiết của trẻ: {ola_input_details}
+
+--- THÔNG TIN THAM KHẢO (NẾU CÓ) ---
+<rag_context_start>
+{rag_context}
+<rag_context_end>
+
+--- YÊU CẦU ---
+1.  **QUAN TRỌNG NHẤT:** Bắt đầu bằng việc trấn an phụ huynh. Luôn nhấn mạnh rằng đây **CHỈ LÀ SÀNG LỌC**, **KHÔNG PHẢI LÀ CHẨN ĐOÁN**.
+2.  **Nếu kết quả là "Có nguy cơ":**
+    - Nhẹ nhàng thông báo kết quả.
+    - **Mạnh mẽ và rõ ràng** khuyên phụ huynh nên đưa trẻ đến gặp chuyên gia tâm lý nhi hoặc bác sĩ chuyên khoa để được đánh giá chuyên sâu. Đây là bước quan trọng nhất.
+    - Tuyệt đối không đưa ra bất kỳ kết luận hay chẩn đoán nào.
+3.  **Nếu kết quả là "Không có nguy cơ":**
+    - Chúc mừng phụ huynh.
+    - Khuyến khích họ tiếp tục theo dõi sự phát triển của con và có thể thực hiện lại các bài sàng lọc định kỳ khi con lớn hơn.
+4.  Kết thúc bằng việc mời phụ huynh đặt câu hỏi thêm để bạn có thể tư vấn chi tiết hơn về các hoạt động hỗ trợ hoặc bất kỳ thắc mắc nào khác.
+5.  Câu trả lời phải ngắn gọn, súc tích, dễ hiểu.
+<|im_end|>
+<|im_start|>user
+Dựa vào kết quả sàng lọc ASD trên, hãy soạn một lời nhận xét ban đầu thật ngắn gọn và cảm thông để gửi cho phụ huynh.
+<|im_end|>
+<|im_start|>assistant
+"""
+        OLA_INITIAL_REMARK_PROMPT_GLOBAL = PromptTemplate(
+            template=ola_remark_template_str,
+            input_variables=["ola_summary", "ola_probability_percent", "ola_input_details", "rag_context"])
+
+        # Check if all AI components are initialized
+        if all([llm_global, retriever_global, QA_PROMPT_GLOBAL, ASQ_SOLUTION_PROMPT_GLOBAL]):
+            print("INFO: All AI components (LLM, Retriever, Prompts) initialized successfully via lifespan.")
+        else:
+            missing = [name for name, var in [("LLM", llm_global), ("Retriever", retriever_global), ("QA_PROMPT", QA_PROMPT_GLOBAL), ("ASQ_PROMPT", ASQ_SOLUTION_PROMPT_GLOBAL)] if var is None]
+            print(f"WARNING: Some AI components failed to initialize: {', '.join(missing)}")
+
+        # Load OLA model components
+        try:
+            models_path = "./models/ola_usage"
+            scaler_global = joblib.load(os.path.join(models_path, 'scaler.joblib'))
+            pca_global = joblib.load(os.path.join(models_path, 'pca.joblib'))
+            pool_classifiers_global = joblib.load(os.path.join(models_path, 'pool_classifiers.joblib'))
+            ola_model_global = joblib.load(os.path.join(models_path, 'ola_model.joblib'))
+            print("SUCCESS: OLA model components loaded successfully from ./models.")
+        except FileNotFoundError as e:
+            print(f"CRITICAL ERROR: One or more OLA model files not found in {models_path}: {e}")
+            scaler_global = pca_global = pool_classifiers_global = ola_model_global = None
+        except Exception as e_ola_load:
+            print(f"CRITICAL ERROR: Failed to load OLA model components from {models_path}: {e_ola_load}")
+            scaler_global = pca_global = pool_classifiers_global = ola_model_global = None
+
+        # Final check for AI components
+        if all([llm_global, retriever_global, QA_PROMPT_GLOBAL, ASQ_SOLUTION_PROMPT_GLOBAL, scaler_global, ola_model_global]):
+            print("INFO: All AI components (LLM, Retriever, Prompts, OLA) initialized successfully via lifespan.")
+        else:
+            missing = [name for name, var in [("LLM", llm_global), ("Retriever", retriever_global), ("QA_PROMPT", QA_PROMPT_GLOBAL),
+                                             ("ASQ_PROMPT", ASQ_SOLUTION_PROMPT_GLOBAL), ("Scaler", scaler_global), ("OLA", ola_model_global)]
+                       if var is None]
+            print(f"WARNING: Some AI components failed to initialize: {', '.join(missing)}")
+
+    except HTTPException as e_http_ai:
+        print(f"CRITICAL ERROR during AI component initialization (HTTPException caught in lifespan): {e_http_ai.detail}")
+        llm_global = vector_db_global = retriever_global = QA_PROMPT_GLOBAL = ASQ_SOLUTION_PROMPT_GLOBAL = None
+        scaler_global = pca_global = pool_classifiers_global = ola_model_global = None
+    except Exception as e_ai:
+        print(f"CRITICAL ERROR - AI Components Init (lifespan general exception): {e_ai}")
+        traceback.print_exc()
+        llm_global = vector_db_global = retriever_global = QA_PROMPT_GLOBAL = ASQ_SOLUTION_PROMPT_GLOBAL = None
+        scaler_global = pca_global = pool_classifiers_global = ola_model_global = None
+    try:
+        ollama.list()  # Test Ollama connection
+        print(f"INFO: Ollama is ready with clarification model {OLLAMA_CLARIFICATION_MODEL}")
+        # Attempt to load clarification model
+        ollama.show(OLLAMA_CLARIFICATION_MODEL)
+    except Exception as e:
+        print(f"WARNING: Failed to connect to Ollama or load clarification model {OLLAMA_CLARIFICATION_MODEL}: {e}")
+    
+    print("INFO: Application startup sequence complete.")
+    yield
+
+    # Shutdown logic
+    print("INFO: Application shutdown sequence initiated (lifespan)...")
+    print("INFO: Application has completed shutdown.")
+
+# Initialize FastAPI app with lifespan manager
+app_lifespan = FastAPI(title="ASQ & Chatbot API", version="1.3.0", lifespan=lifespan_manager)
+# Add CORS middleware for cross-origin requests
+app_lifespan.add_middleware(
+    CORSMiddleware,
+    allow_origins=["https://tamlynhidongsupport.vercel.app", "http://localhost:5173"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"]
+)
+# OAuth2 scheme for token-based authentication
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
+
+# === Helper Functions ===
+def _internal_load_llm() -> Optional[Ollama]:
+    # Load and initialize the LLM model
+    try:
+        llm_i = Ollama(model=LLM_MODEL_NAME, temperature=0.3, stop=STOP_TOKENS)
+        llm_i.invoke("Hello", max_tokens=5)
+        print(f"SUCCESS: Model '{LLM_MODEL_NAME}' ready.")
+        return llm_i
+    except Exception as e:
+        print(f"ERROR: LLM init failed: {e}")
+        return None
+
+def _internal_load_vector_db() -> Optional[FAISS]:
+    # Load FAISS vector database
+    for f_name in ("index.faiss", "index.pkl"):
+        path_to_check = os.path.join(VECTOR_DB_PATH, f_name)
+        if not os.path.exists(path_to_check):
+            print(f"ERROR: VectorDB file {path_to_check} missing.")
+            return None
+    try:
+        emb = BGEM3Embeddings(BGE_M3_MODEL_PATH)
+        db_faiss_local = FAISS.load_local(VECTOR_DB_PATH, emb, allow_dangerous_deserialization=True)
+        if db_faiss_local.index.ntotal == 0:
+            print("ERROR: Vector store is empty.")
+            return None
+        print(f"SUCCESS: Vector DB loaded with {db_faiss_local.index.ntotal} items.")
+        return db_faiss_local
+    except Exception as e:
+        print(f"ERROR: VectorDB load failed: {e}")
+        return None
+
+def get_status_code(status_text: str) -> float:
+    # Convert status text to a numerical score
+    if "CHẬM RÕ RỆT" in status_text.upper():
+        return 0.0
+    elif "CÓ NGUY CƠ CHẬM" in status_text.upper():
+        return 0.5
+    elif "PHÁT TRIỂN BÌNH THƯỜNG" in status_text.upper():
+        return 1.0
+    return -1.0
+
+def get_asq_questionnaire_rules(title: Optional[str] = None, age_months: Optional[int] = None) -> dict:
+    # Retrieve ASQ questionnaire rules based on title or age
+    if title and os.path.isdir(ASQ_DATA_DIR):
         month_str = "".join(filter(str.isdigit, title.split("m")[0])) if title and "m" in title else ""
         if month_str:
             f_path = os.path.join(ASQ_DATA_DIR, f"{month_str}month.json")
             if os.path.exists(f_path):
                 try:
-                    with open(f_path, "r", encoding="utf-8") as f: return json.load(f)
-                except Exception as e: print(f"Error loading ASQ rules {f_path}: {e}")
+                    with open(f_path, "r", encoding="utf-8") as f:
+                        return json.load(f)
+                except Exception as e:
+                    print(f"Error loading specific ASQ rules {f_path}: {e}")
     if age_months and os.path.isdir(ASQ_DATA_DIR):
         age_days = age_months * 30.44
-        for fname in os.listdir(ASQ_DATA_DIR):
+        for fname in sorted(os.listdir(ASQ_DATA_DIR)):
             if fname.endswith(".json"):
                 f_path = os.path.join(ASQ_DATA_DIR, fname)
                 try:
-                    with open(f_path, "r", encoding="utf-8") as f: r_data = json.load(f)
-                    age_info = r_data.get("age", {}).get("range_in_days", {})
-                    min_d, max_d = age_info.get("min_days"), age_info.get("max_days")
-                    if min_d is not None and max_d is not None and min_d <= age_days <= max_d: return r_data
-                except: pass
+                    with open(f_path, "r", encoding="utf-8") as f:
+                        r_data = json.load(f)
+                        age_info = r_data.get("age", {}).get("range_in_days", {})
+                        min_d, max_d = age_info.get("min_days"), age_info.get("max_days")
+                        if min_d is not None and max_d is not None and min_d <= age_days <= max_d:
+                            return r_data
+                except Exception as e_rule_file:
+                    print(f"Warning: Could not parse or check ASQ rule file {f_path}: {e_rule_file}")
+    if not default_asq_questionnaire_rules:
+        print("WARNING: Requested ASQ rules but no specific or default rules are loaded.")
     return default_asq_questionnaire_rules
-def apply_scoring_logic(section: str,answers: List[Answer],q_data: dict)-> List[Answer]:
-    s_data=q_data.get("question",{}).get(section,{});note=s_data.get("scoring_note")
-    if not note:return answers
-    ans_dict={a.id:a for a in answers if isinstance(a,Answer)}
-    cond=note.get("condition",{});act=note.get("action",{})
-    if not cond or not act or "question_id" not in cond or "question_id" not in act:return answers
-    cond_ans=ans_dict.get(cond["question_id"])
-    if cond_ans and cond_ans.answer in cond.get("values",[])and act["question_id"]in ans_dict:ans_dict[act["question_id"]].answer=act.get("set_value")
+
+def create_access_token(data: dict, expires_delta: Optional[timedelta] = None) -> str:
+    # Create JWT access token
+    to_encode = data.copy()
+    expire = datetime.now(timezone.utc) + (expires_delta if expires_delta else timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES))
+    to_encode.update({"exp": expire})
+    return jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
+
+async def get_current_session(token: str = Depends(oauth2_scheme)) -> dict:
+    # Validate and extract session information from JWT token
+    cred_exc = HTTPException(status_code=401, detail="Could not validate credentials", headers={"WWW-Authenticate": "Bearer"})
+    try:
+        payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+        session_id: Optional[str] = payload.get("sub")
+        if session_id is None:
+            raise cred_exc
+        return {"session_id": session_id, "token_payload": payload}
+    except JWTError:
+        raise cred_exc
+    except Exception:
+        raise cred_exc
+
+@contextmanager
+def timer(description: str):
+    # Context manager to measure execution time
+    start = time.time()
+    yield
+    print(f"{description}: {(time.time() - start):.3f}s")
+
+def get_memory_usage() -> float:
+    # Get current memory usage in MB
+    return psutil.Process(os.getpid()).memory_info().rss / 1024 / 1024
+
+def get_session_history(session_id: str) -> Any:
+    # Retrieve chat history for a session (Redis or in-memory)
+    if redis_client:
+        return RedisChatMessageHistory(
+            session_id=session_id,
+            url=f"redis://{REDIS_HOST}:{REDIS_PORT}/{REDIS_DB_HISTORY}",
+            ttl=SESSION_TTL_SECONDS
+        )
+    else:
+        if not hasattr(app_lifespan.state, 'in_mem_hist'):
+            app_lifespan.state.in_mem_hist = {}
+        if session_id not in app_lifespan.state.in_mem_hist:
+            app_lifespan.state.in_mem_hist[session_id] = InMemoryChatMessageHistory()
+        return app_lifespan.state.in_mem_hist[session_id]
+
+def apply_scoring_logic(section: str, answers: List[Answer], q_data: dict) -> List[Answer]:
+    # Apply scoring logic for ASQ answers based on questionnaire rules
+    s_data = q_data.get("question", {}).get(section, {})
+    note = s_data.get("scoring_note")
+    if not note:
+        return answers
+    ans_dict = {a.id: a for a in answers if isinstance(a, Answer)}
+    cond = note.get("condition", {})
+    act = note.get("action", {})
+    if not cond or not act or "question_id" not in cond or "question_id" not in act:
+        return answers
+    cond_ans = ans_dict.get(cond["question_id"])
+    if cond_ans and cond_ans.answer in cond.get("values", []) and act["question_id"] in ans_dict:
+        ans_dict[act["question_id"]].answer = act.get("set_value")
     return list(ans_dict.values())
-def calculate_score(answers:List[Answer])->float:m={"Có":10,"Thỉnh Thoảng":5,"Chưa":0};return sum(m.get(a.answer,0)for a in answers if isinstance(a,Answer))
-def determine_status(score:float,cutoff:float,monitor:float)->str:
-    if cutoff==0 and monitor==0:return"Không áp dụng điểm chuẩn"
-    if score<cutoff:return"CHẬM RÕ RỆT (Cần đánh giá chuyên sâu)"
-    if score<=monitor:return"CÓ NGUY CƠ CHẬM (Cần theo dõi sát)"
-    return"PHÁT TRIỂN BÌNH THƯỜNG"
-def replace_image_placeholders(data:dict)->dict:
-    t2p={"2m Questionnaire":"image2_","4m Questionnaire":"image4_", "6m Questionnaire":"image6_","8m Questionnaire":"image8_","9m Questionnaire":"image9_","10m Questionnaire":"image10_","12m Questionnaire":"image12_","14m Questionnaire":"image14_","16m Questionnaire":"image16_","18m Questionnaire":"image18_","20m Questionnaire":"image20_","22m Questionnaire":"image22_","24m Questionnaire":"image24_","27m Questionnaire":"image27_","30m Questionnaire":"image30_","33m Questionnaire":"image33_","36m Questionnaire":"image36_","42m Questionnaire":"image42_","48m Questionnaire":"image48_","54m Questionnaire":"image54_","60m Questionnaire":"image60_"}
-    t=data.get("age",{}).get("title");p=t2p.get(t)
-    if not p:return data
-    for sv in data.get("question",{}).values():
-        if isinstance(sv,dict)and"questions"in sv:
-            c=1
-            for qi in sv.get("questions",[]):
-                if isinstance(qi,dict)and qi.get("image_filepath")=="image_placeholder.png":qi["image_filepath"]=f"{p}{c}.png";c+=1
+
+def calculate_score(answers: List[Answer]) -> float:
+    # Calculate score based on answers
+    m = {"Có": 10, "Thỉnh Thoảng": 5, "Chưa": 0}
+    return sum(m.get(a.answer, 0) for a in answers if isinstance(a, Answer))
+
+def determine_status(score: float, cutoff: float, monitor: float) -> str:
+    # Determine status based on score, cutoff, and monitor values
+    if cutoff == 0 and monitor == 0:
+        return "Không áp dụng điểm chuẩn"
+    if score < cutoff:
+        return "CHẬM RÕ RỆT (Cần đánh giá chuyên sâu)"
+    if score <= monitor:
+        return "CÓ NGUY CƠ CHẬM (Cần theo dõi sát)"
+    return "PHÁT TRIỂN BÌNH THƯỜNG"
+
+def replace_image_placeholders(data: dict) -> dict:
+    # Replace placeholder image filepaths in ASQ data
+    t2p = {
+        "2m Questionnaire": "image2_", "4m Questionnaire": "image4_", "6m Questionnaire": "image6_",
+        "8m Questionnaire": "image8_", "9m Questionnaire": "image9_", "10m Questionnaire": "image10_",
+        "12m Questionnaire": "image12_", "14m Questionnaire": "image14_", "16m Questionnaire": "image16_",
+        "18m Questionnaire": "image18_", "20m Questionnaire": "image20_", "22m Questionnaire": "image22_",
+        "24m Questionnaire": "image24_", "27m Questionnaire": "image27_", "30m Questionnaire": "image30_",
+        "33m Questionnaire": "image33_", "36m Questionnaire": "image36_", "42m Questionnaire": "image42_",
+        "48m Questionnaire": "image48_", "54m Questionnaire": "image54_", "60m Questionnaire": "image60_"
+    }
+    t = data.get("age", {}).get("title")
+    p = t2p.get(t)
+    if not p:
+        return data
+    for sv_key, sv_value in data.get("question", {}).items():
+        if isinstance(sv_value, dict) and "questions" in sv_value:
+            c = 1
+            for qi in sv_value.get("questions", []):
+                if isinstance(qi, dict) and qi.get("image_filepath") == "image_placeholder.png":
+                    qi["image_filepath"] = f"{p}{c}.png"
+                    c += 1
     return data
 
 async def generate_llm_response_with_rag_for_asq(session_id: str, asq_data: ASQStoredResult, task_description: str, task_description_short: str) -> str:
-    if not all([llm_global, retriever_global, ASQ_SOLUTION_PROMPT_GLOBAL]): raise HTTPException(status_code=503, detail="AI components for ASQ advice not ready.")
+    # Generate LLM response for ASQ with RAG (Retrieval-Augmented Generation)
+    if not all([llm_global, retriever_global, ASQ_SOLUTION_PROMPT_GLOBAL]):
+        raise HTTPException(status_code=503, detail="AI components for ASQ advice not ready.")
+    
+    # Prepare age details and areas of concern
     age_details = f"{asq_data.age_at_test_months} tháng tuổi" if asq_data.age_at_test_months is not None else "không rõ độ tuổi"
-    areas_concern_list = [f"- Lĩnh vực {s.display_name}: {s.status} (điểm {s.total_score:.0f})" for s in asq_data.sections.values() if "CHẬM" in s.status.upper()]
+    areas_concern_list = [
+        f"- Lĩnh vực {s.display_name}: {s.status} (điểm {s.total_score:.0f})"
+        for s_key, s in asq_data.sections.items() if "CHẬM" in s.status.upper()
+    ]
     asq_areas_str = "\n".join(areas_concern_list) if areas_concern_list else "Không có lĩnh vực nào được đánh giá là chậm hoặc có nguy cơ chậm rõ rệt từ kết quả điểm số."
-    rag_query_parts = [f"gợi ý can thiệp và hoạt động cho trẻ {age_details} dựa trên kết quả ASQ sau: {asq_data.overall_summary}"]
-    if areas_concern_list: rag_query_parts.append(f"Đặc biệt tập trung vào các lĩnh vực: {', '.join(s.split(':')[0].replace('Lĩnh vực ','') for s in areas_concern_list).strip(', ')}.")
+
+    # Construct RAG query
+    rag_query_parts = [
+        f"gợi ý can thiệp và hoạt động cho trẻ {age_details} dựa trên kết quả ASQ sau: {asq_data.overall_summary}"
+    ]
+    if areas_concern_list:
+        rag_query_parts.append(
+            f"Đặc biệt tập trung vào các lĩnh vực: {', '.join(s.split(':')[0].replace('Lĩnh vực ','') for s in areas_concern_list).strip(', ')}."
+        )
     rag_query = " ".join(rag_query_parts)
-    with timer(f"RAG for ASQ Task (session {session_id})"): rag_docs: List[Document] = retriever_global.invoke(rag_query)
+
+    # Retrieve relevant documents using RAG
+    with timer(f"RAG for ASQ Task (session {session_id})"):
+        rag_docs: List[Document] = retriever_global.invoke(rag_query)
     rag_context_str = "\n\n---\n\n".join([doc.page_content for doc in rag_docs]) if rag_docs else "Không tìm thấy thông tin chuyên ngành bổ sung từ tài liệu."
-    max_rag_ctx_tokens = CTX_WINDOW // 4; current_rag_tokens = llm_global.get_num_tokens(rag_context_str)
+
+    # Truncate RAG context if too long
+    max_rag_ctx_tokens = CTX_WINDOW // 3
+    if not llm_global:
+        raise HTTPException(status_code=503, detail="LLM component not ready.")
+    current_rag_tokens = llm_global.get_num_tokens(rag_context_str)
     if current_rag_tokens > max_rag_ctx_tokens:
         ratio = max_rag_ctx_tokens / current_rag_tokens if current_rag_tokens > 0 else 0
-        estimated_len = int(len(rag_context_str) * ratio); rag_context_str = rag_context_str[:estimated_len]
+        estimated_len = int(len(rag_context_str) * ratio)
+        rag_context_str = rag_context_str[:estimated_len]
         print(f"Truncated RAG context for ASQ to approx. {llm_global.get_num_tokens(rag_context_str)} tokens.")
-    final_prompt_for_llm = ASQ_SOLUTION_PROMPT_GLOBAL.format(age_details=age_details, asq_summary=asq_data.overall_summary, asq_areas_of_concern=asq_areas_str, task_description=task_description, rag_context=rag_context_str, task_description_short=task_description_short)
-    with timer(f"LLM for ASQ Task '{task_description_short}'"): raw_response = llm_global.invoke(final_prompt_for_llm)
+
+    # Generate LLM response
+    final_prompt_for_llm = ASQ_SOLUTION_PROMPT_GLOBAL.format(
+        age_details=age_details,
+        asq_summary=asq_data.overall_summary,
+        asq_areas_of_concern=asq_areas_str,
+        task_description=task_description,
+        rag_context=rag_context_str,
+        task_description_short=task_description_short
+    )
+    with timer(f"LLM for ASQ Task '{task_description_short}'"):
+        raw_response = llm_global.invoke(final_prompt_for_llm)
+    
+    # Clean up response
     cleaned_response = raw_response.strip()
-    for token in STOP_TOKENS + ["<|im_start|>", "<|im_end|>"]: cleaned_response = cleaned_response.replace(token, "")
+    all_stop_tokens_for_asq_clean = STOP_TOKENS + ["<|im_start|>", "<|im_end|>"]
+    for token_to_remove in all_stop_tokens_for_asq_clean:
+        cleaned_response = cleaned_response.replace(token_to_remove, "")
     return re.sub(r"^\s*assistant:\s*", "", cleaned_response, flags=re.I).strip()
 
-class TokenResponse(BaseModel): access_token: str; token_type: str; session_id: str
-@app.post("/token", response_model=TokenResponse, summary="Get Session Token")
-async def get_session_token_route():
-    session_id=str(uuid.uuid4());token=create_access_token(data={"sub":session_id});print(f"Token for session {session_id} generated.")
-    return {"access_token":token,"token_type":"bearer","session_id":session_id}
+async def generate_llm_response_for_ola(session_id: str, asd_predict_data: OLAStoredResult) -> str:
+    # Generate LLM response for OLA prediction with RAG
+    if not all([llm_global, retriever_global, OLA_INITIAL_REMARK_PROMPT_GLOBAL]):
+        return "Xin lỗi, hiện tôi chưa thể đưa ra nhận xét. Bạn có câu hỏi nào khác không ạ?"
 
-@app.get("/asq/form", response_class=JSONResponse, summary="Get ASQ-3 Form by Age")
-async def get_asq_form_route(age_in_days: int = Query(...,ge=0, description="Child's age in days.")):
-    if not os.path.isdir(ASQ_DATA_DIR):raise HTTPException(status_code=500,detail=f"ASQ dir missing: {ASQ_DATA_DIR}")
-    matched_data=None
-    for fname in os.listdir(ASQ_DATA_DIR):
-        if fname.endswith(".json"):
-            fpath=os.path.join(ASQ_DATA_DIR,fname)
-            try:
-                with open(fpath,"r",encoding="utf-8")as f:d=json.load(f)
-                r=d.get("age",{}).get("range_in_days",{})
-                min_d,max_d=r.get("min_days"),r.get("max_days")
-                if min_d is not None and max_d is not None and min_d<=age_in_days<=max_d:matched_data=d;break
-            except:pass
-    if not matched_data:raise HTTPException(status_code=404,detail="No ASQ form for age.")
-    return JSONResponse(content=replace_image_placeholders(matched_data))
-
-# Function Name: submit_asq_form_route
-# Functionality: Receives submitted ASQ-3 answers, child, and parent information.
-#                It processes the answers to calculate scores and determine developmental status for each section.
-#                The processed results are stored in Redis, associated with the session ID.
-#                Additionally, it prepares and appends the submitted information and processed results
-#                to two separate Excel files: one for general information and one for detailed test results.
-# Input: data (ASQSubmissionPayload) - Pydantic model containing the ASQ answers and related information.
-# Input: current_session (dict) - Dependency injected by Depends(get_current_session),
-#                                  contains the validated session_id from the JWT token.
-# Output: JSONResponse - Contains the fully processed ASQ-3 results (ASQStoredResult model) for the current session.
-# Raises: HTTPException (503) - If the Redis service is unavailable.
-# Raises: HTTPException (500) - If ASQ scoring rules are missing for the specified questionnaire/age,
-#                                or if any other unexpected server error occurs during processing or Excel saving.
-# Raises: HTTPException (400) - If no valid ASQ answers are provided in the submission.
-@app.post("/asq/result", response_class=JSONResponse, summary="Submit ASQ-3 Answers, Get Results, and Log to Excel")
-async def submit_asq_form_route(data:ASQSubmissionPayload,current_session:dict=Depends(get_current_session)):
-    # session_id: str - The unique identifier for the current user's session, extracted from the JWT.
-    session_id=current_session["session_id"]
-    if not redis_client:raise HTTPException(status_code=503,detail="Redis unavailable.")
-    
-    # rules: dict - The ASQ-3 questionnaire rules (questions, cutoffs, etc.) for the specified age/title.
-    rules=get_asq_questionnaire_rules(data.questionnaire_title,data.age_at_test_months)
-    if not rules or "question" not in rules: # Check if rules were successfully loaded and are valid
-        raise HTTPException(status_code=500,detail=f"ASQ rules missing for {data.questionnaire_title or data.age_at_test_months}.")
-    
-    # current_timestamp_iso: str - ISO formatted timestamp for when the test results are processed.
-    current_timestamp_iso = datetime.now(timezone.utc).isoformat()
-
-    # --- Prepare data for "information_test.xlsx" ---
-    # information_data_for_excel: Dict - Dictionary to hold a single row of general information for the 'information_test.xlsx' file.
-    information_data_for_excel = {
-        "session_id": session_id,
-        "test_timestamp": current_timestamp_iso,
-        "age_at_test_months": data.age_at_test_months,
-        "questionnaire_title": data.questionnaire_title or rules.get("age",{}).get("title","Unknown"),
-    }
-    if data.child_information:
-        information_data_for_excel["child_fullName"] = data.child_information.fullName
-        information_data_for_excel["child_birthDate"] = data.child_information.birthDate
-        information_data_for_excel["child_ageInDays"] = data.child_information.childAgeInDays
-        information_data_for_excel["child_gender"] = data.child_information.gender
-        information_data_for_excel["child_location"] = data.child_information.location
-        information_data_for_excel["child_pre_birth"] = data.child_information.pre_birth
-        information_data_for_excel["child_pre_result_diagnosis"] = data.child_information.pre_result
-        if data.child_information.pre_result and data.child_information.pre_result.lower() == "có":
-            information_data_for_excel["child_diagnosis_result"] = data.child_information.result
-            information_data_for_excel["child_diagnosis_date"] = data.child_information.resultDate
-            information_data_for_excel["child_diagnosis_hospital"] = data.child_information.hospital
-            information_data_for_excel["child_diagnosis_doctor"] = data.child_information.doctor
-            information_data_for_excel["child_pre_screened_asq_mchatr"] = data.child_information.pre_test
-    
-    if data.parent_information:
-        information_data_for_excel["parent_fullName"] = data.parent_information.parentFullName
-        information_data_for_excel["parent_phone"] = data.parent_information.phone
-        information_data_for_excel["parent_email"] = data.parent_information.email
-        information_data_for_excel["parent_address"] = data.parent_information.address
-        information_data_for_excel["parent_relationship"] = data.parent_information.relationship
-        information_data_for_excel["screening_place"] = data.parent_information.place
-    # --- CLEAR CHAT HISTORY FOR THIS SESSION AFTER NEW ASQ SUBMISSION ---
     try:
-        # history_obj_to_clear: RedisChatMessageHistory | InMemoryChatMessageHistory - History object for the session.
-        history_obj_to_clear = get_session_history(session_id)
-        if isinstance(history_obj_to_clear, RedisChatMessageHistory):
-            history_obj_to_clear.clear() 
-            print(f"Chat history for session {session_id} (key: {history_obj_to_clear.key}) cleared after new ASQ submission.")
-        elif isinstance(history_obj_to_clear, InMemoryChatMessageHistory): # Fallback
-            if hasattr(app.state, 'in_mem_hist') and session_id in app.state.in_mem_hist:
-                app.state.in_mem_hist[session_id].clear()
-                print(f"InMemory chat history for session {session_id} cleared after new ASQ submission.")
-    except Exception as e_clear_hist:
-        print(f"Warning: Could not clear chat history for session {session_id} after ASQ submission: {e_clear_hist}")
-        # Continue even if clearing history fails, as ASQ data is already saved.
-    try:
-        # summary_parts: List[str] - List to accumulate summary strings for each ASQ section.
-        summary_parts=[]
-        # result_data_to_store: ASQStoredResult - Pydantic model instance to store structured processed results in Redis.
-        result_data_to_store=ASQStoredResult(
-            session_id=session_id,
-            age_at_test_months=data.age_at_test_months,
-            questionnaire_title=data.questionnaire_title or rules.get("age",{}).get("title","Unknown"),
-            overall_summary="", 
-            sections={}
+        # Prepare OLA summary and input details
+        ola_summary = "Có nguy cơ" if asd_predict_data.prediction_result.prediction == 1 else "Không có nguy cơ"
+        prob_percent = asd_predict_data.prediction_result.probability * 100
+        friendly_names = {
+            "ChamNoi": "Chậm nói", "CungNhac": "Cứng nhắc", "CoLap": "Cô lập",
+            "HanhViLapLai": "Hành vi lặp lại", "KyNangGiaoTiepSom": "Giao tiếp sớm",
+            "ChoiLuanPhien": "Chơi luân phiên", "PhanUngTenGoi": "Phản ứng tên gọi",
+            "DiNhonChan": "Đi nhón chân", "ChiTro": "Chỉ trỏ", "TiepXucMat": "Tiếp xúc mắt"
+        }
+        input_details_list = [f"{friendly_names.get(k, k)}: {v}" for k, v in asd_predict_data.input_data.model_dump().items()]
+        input_details_str = ", ".join(input_details_list)
+
+        # Construct RAG query
+        rag_query = f"lời khuyên ban đầu cho phụ huynh có con với kết quả sàng lọc tự kỷ là {ola_summary}"
+        
+        # Retrieve relevant documents
+        with timer(f"RAG for OLA Remark (session {session_id})"):
+            rag_docs: List[Document] = retriever_global.invoke(rag_query)
+        
+        rag_context_str = "\n\n---\n\n".join([doc.page_content for doc in rag_docs]) if rag_docs else "Không có thông tin tham khảo bổ sung."
+
+        # Generate LLM response
+        final_prompt = OLA_INITIAL_REMARK_PROMPT_GLOBAL.format(
+            ola_summary=ola_summary,
+            ola_probability_percent=prob_percent,
+            ola_input_details=input_details_str,
+            rag_context=rag_context_str
         )
         
-        # --- Prepare data for "results_test.xlsx" ---
-        # results_details_for_excel_list: List[Dict] - A list where each dictionary represents a row (one question's details)
-        #                                            for the 'results_test.xlsx' file.
-        results_details_for_excel_list = []
-        
-        # section_keys_list: List[str] - Standard ASQ-3 section keys.
-        section_keys_list = ["communication","gross_motor","fine_motor","problem_solving","personal_social"]
-        for sec_key in section_keys_list:
-            # answers_raw: Optional[List[Answer]] - Raw answers for the current section from the submission payload.
-            answers_raw=getattr(data,sec_key,None)
-            if answers_raw:
-                # ans_objs: List[Answer] - List of Answer Pydantic model instances for the current section.
-                ans_objs=[a if isinstance(a,Answer)else Answer(**a.model_dump())for a in answers_raw]
-                # proc_ans: List[Answer] - Answers after applying specific scoring logic (e.g., conditional scoring).
-                proc_ans=apply_scoring_logic(sec_key,ans_objs,rules);
-                # score: float - Total calculated score for the current section.
-                score=calculate_score(proc_ans)
-                # sec_rules: dict - Scoring rules (cutoff, monitor) for the current section.
-                sec_rules=rules.get("question",{}).get(sec_key,{});
-                # cut: float - Cutoff score for "clear delay" status.
-                cut=sec_rules.get("cutoff",0.0);
-                # mon: float - Monitor threshold score for "at risk" status.
-                mon=sec_rules.get("monitor_cutoff",sec_rules.get("cutoff",0.0)+15.0)
-                # status: str - Determined developmental status for the section.
-                status=determine_status(score,cut,mon);
-                # title_map: Dict[str, str] - Mapping from section keys to display names.
-                title_map={"communication":"Giao tiếp","gross_motor":"Vận động thô","fine_motor":"Vận động tinh","problem_solving":"Giải quyết vấn đề","personal_social":"Cá nhân xã hội"}
-                # disp_name: str - Display name for the current section.
-                disp_name=title_map.get(sec_key,sec_key.replace('_',' ').title());
-                summary_parts.append(f"{disp_name}: {status} ({score:.0f}đ).")
-                
-                # section_result_detail_obj: ASQSectionResultDetail - Pydantic model instance for detailed section results.
-                section_result_detail_obj = ASQSectionResultDetail(
-                    display_name=disp_name,total_score=score,status=status,cutoff=cut,monitor=mon,
-                    answers_processed=[Answer(id=a.id,answer=a.answer)for a in proc_ans]
-                )
-                result_data_to_store.sections[sec_key]=section_result_detail_obj
+        with timer(f"LLM for OLA Remark"):
+            raw_response = llm_global.invoke(final_prompt)
+            
+        # Clean up response
+        cleaned_response = raw_response.strip()
+        all_stop_tokens = STOP_TOKENS + ["<|im_start|>", "<|im_end|>"]
+        for token in all_stop_tokens:
+            cleaned_response = cleaned_response.replace(token, "")
+        return re.sub(r"^\s*assistant:\s*", "", cleaned_response, flags=re.I).strip()
 
-                # q_rules: List[Dict] - List of question definitions for the current section from the ASQ rules.
-                q_rules = rules.get("question", {}).get(sec_key, {}).get("questions", [])
-                # q_text_map: Dict[int, str] - Mapping from question ID to question text for easy lookup.
-                q_text_map = {q_rule.get("id"): q_rule.get("text") for q_rule in q_rules}
-
-                for ans_proc_item in proc_ans:
-                    # excel_row_result: Dict - Dictionary representing a single row for the detailed results Excel file.
-                    excel_row_result = {
-                        "session_id": session_id, 
-                        "test_timestamp": current_timestamp_iso,
-                        "parent_phone": data.parent_information.phone if data.parent_information else None,
-                        "age_at_test_months": data.age_at_test_months,
-                        "questionnaire_title": result_data_to_store.questionnaire_title,
-                        "section_key": sec_key,
-                        "section_display_name": disp_name,
-                        "question_id": ans_proc_item.id,
-                        "question_text": q_text_map.get(ans_proc_item.id, f"Question ID {ans_proc_item.id}"),
-                        "answer": ans_proc_item.answer,
-                        "section_total_score": score,
-                        "section_status": status,
-                        "section_cutoff": cut,
-                        "section_monitor": mon
-                    }
-                    results_details_for_excel_list.append(excel_row_result)
-
-        if not summary_parts:raise HTTPException(status_code=400,detail="No valid ASQ answers.")
-        result_data_to_store.overall_summary=" ".join(summary_parts)
-        
-        redis_client.set(f"asq_data:{session_id}",result_data_to_store.model_dump_json(exclude_none=True),ex=SESSION_TTL_SECONDS)
-        print(f"ASQ results saved for session {session_id} to Redis.")
-
-        if not os.path.exists(EXCEL_OUTPUT_DIR): os.makedirs(EXCEL_OUTPUT_DIR, exist_ok=True)
-        
-        append_to_excel([information_data_for_excel], FIXED_EXCEL_INFO_FILE, sheet_name="Information")
-        append_to_excel(results_details_for_excel_list, FIXED_EXCEL_RESULTS_FILE, sheet_name="Test_Details_Per_Question")
-        
-        return JSONResponse(content=result_data_to_store.model_dump(exclude_none=True))
-    except Exception as e:print(f"ASQ Submit Error: {e}");traceback.print_exc();raise HTTPException(status_code=500,detail=str(e))
+    except Exception as e:
+        print(f"Error generating OLA remark for session {session_id}: {e}")
+        traceback.print_exc()
+        return "Cảm ơn bạn đã hoàn thành bài sàng lọc. Nếu có bất kỳ câu hỏi nào, xin vui lòng cho tôi biết."
     
-class InitialEngagementResponse(BaseModel): initial_remark: Optional[str] = None; asq_solutions: Optional[str] = None; error: Optional[str] = None
-@app.post("/chatbot/asq_initial_engagement", response_model=InitialEngagementResponse, summary="Get Initial Chatbot Remark & Solutions Post-ASQ (with RAG)")
-async def chatbot_asq_initial_engagement_route(current_session: dict = Depends(get_current_session)):
+# def has_vietnamese_diacritics(text: str) -> bool:
+#     """Kiểm tra xem văn bản có chứa dấu tiếng Việt hay không."""
+#     vietnamese_diacritics = re.compile(r'[àáạảãâầấậẩẫăằắặẳẵèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡùúụủũưừứựửữỳýỵỷỹ]', re.UNICODE)
+#     return bool(vietnamese_diacritics.search(text))
+
+# def normalize_question(text: str) -> str:
+#     """Chuẩn hóa văn bản không dấu bằng underthesea."""
+#     try:
+#         print(f"Normalizing text: {text}")
+#         print(text_normalize(text))
+#         return text_normalize(text)
+#     except Exception as e:
+#         print(f"Error normalizing text: {e}")
+#         return text
+
+# def clarify_question(session_id: str, original_question: str) -> tuple[str, bool]:
+#     """
+#     Làm rõ câu hỏi không dấu hoặc không rõ ràng bằng mô hình Ollama.
+#     Returns: (clarified_question, needs_clarification)
+#     """
+#     if has_vietnamese_diacritics(original_question):
+#         return original_question, False
+
+#     normalized_question = normalize_question(original_question)
+    
+#     try:
+#         # Gọi Ollama để kiểm tra tính rõ ràng
+#         prompt = f"""
+# +        Bạn là trợ lý AI. Nhiệm vụ:  ➤ Kiểm tra độ rõ nghĩa của **CÂU HỎI** dưới đây ở khía cạnh lĩnh vực tâm lý nhi khoa.
+# +        CÂU HỎI: {normalized_question}
+# +        ➤ Nếu chưa rõ, TRẢ VỀ đúng chuỗi:  "KHÔNG RÕ – vui lòng làm rõ **CÂU HỎI**"
+# +        ➤ Nếu rõ, TRẢ VỀ phiên bản đã chuẩn hoá (có dấu nếu cần).
+#          """
+#         response = ollama.chat(
+#             model=OLLAMA_CLARIFICATION_MODEL,
+#             messages=[{"role": "user", "content": prompt}],
+#             options={"temperature": 0.3}
+#         )
+#         clarified_response = response["message"]["content"].strip()
+        
+#         print(f"Clarified question (session {session_id}): {clarified_response}")
+#         if "không rõ" in clarified_response.lower() or "xác nhận" in clarified_response.lower():
+#             return clarified_response, True
+#         return normalized_question, False
+#     except Exception as e:
+#         print(f"Error in Ollama clarification (session {session_id}): {e}")
+#         return normalized_question, False
+# === API Endpoints ===
+@app_lifespan.post("/token", response_model=TokenResponse, summary="Get Session Token")
+async def get_session_token_route():
+    # Generate a new session token
+    session_id = str(uuid.uuid4())
+    token = create_access_token(data={"sub": session_id})
+    return {"access_token": token, "token_type": "bearer", "session_id": session_id}
+
+@app_lifespan.get("/asq/form", response_class=JSONResponse, summary="Get ASQ-3 Form by Age")
+async def get_asq_form_route(age_in_days: int = Query(..., ge=0)):
+    # Retrieve ASQ form based on child's age in days
+    if not os.path.isdir(ASQ_DATA_DIR):
+        raise HTTPException(status_code=500, detail=f"ASQ dir missing: {ASQ_DATA_DIR}")
+    matched_data = None
+    for fname in os.listdir(ASQ_DATA_DIR):
+        if fname.endswith(".json"):
+            fpath = os.path.join(ASQ_DATA_DIR, fname)
+            try:
+                with open(fpath, "r", encoding="utf-8") as f:
+                    d = json.load(f)
+                    r = d.get("age", {}).get("range_in_days", {})
+                    min_d, max_d = r.get("min_days"), r.get("max_days")
+                    if min_d is not None and max_d is not None and min_d <= age_in_days <= max_d:
+                        matched_data = d
+                        break
+            except:
+                pass
+    if not matched_data:
+        raise HTTPException(status_code=404, detail="No ASQ form for age.")
+    return JSONResponse(content=replace_image_placeholders(matched_data))
+
+@app_lifespan.post("/asq/result", response_class=JSONResponse, summary="Submit ASQ-3 Answers and Log to DB")
+async def submit_asq_form_route(data: ASQSubmissionPayload, current_session: dict = Depends(get_current_session)):
+    # Process and store ASQ-3 submission
     session_id = current_session["session_id"]
-    if not redis_client: return InitialEngagementResponse(error="Dịch vụ Redis không khả dụng.")
-    if not all([llm_global, retriever_global, ASQ_SOLUTION_PROMPT_GLOBAL]): return InitialEngagementResponse(error="Trợ lý AI chưa sẵn sàng.")
-    asq_json_str = redis_client.get(f"asq_data:{session_id}")
-    if not asq_json_str: return InitialEngagementResponse(error="Không tìm thấy kết quả ASQ-3 cho phiên này.")
+    if db is None:
+        raise HTTPException(status_code=503, detail="MongoDB service is not available.")
+    
+    # Get questionnaire rules
+    current_rules = get_asq_questionnaire_rules(data.questionnaire_title, data.age_at_test_months)
+    if not current_rules or "question" not in current_rules:
+        raise HTTPException(status_code=500, detail=f"ASQ rules missing for '{data.questionnaire_title or data.age_at_test_months}'.")
+
+    current_utc_timestamp = datetime.now(timezone.utc)
+    submission_document = {
+        "sessionId": session_id,
+        "submissionTimestamp": current_utc_timestamp,
+        "questionnaireTitle": data.questionnaire_title or current_rules.get("age", {}).get("title", "Unknown Questionnaire"),
+        "ageAtTestMonths": data.age_at_test_months,
+        "childInformation": {},
+        "parentInformation": {},
+        "domainResults": {},
+        "overallSummaryText": ""
+    }
+
+    # Handle child and parent information
+    if data.child_information:
+        submission_document["childInformation"] = data.child_information.model_dump()
+        if data.child_information.birthDate:
+            try:
+                submission_document["childInformation"]["birthDate"] = datetime.fromisoformat(data.child_information.birthDate.replace("Z", "+00:00"))
+            except:
+                submission_document["childInformation"]["birthDate"] = None
+        if data.child_information.resultDate:
+            try:
+                submission_document["childInformation"]["resultDate"] = datetime.fromisoformat(data.child_information.resultDate.replace("Z", "+00:00"))
+            except:
+                submission_document["childInformation"]["resultDate"] = None
+    if data.parent_information:
+        submission_document["parentInformation"] = data.parent_information.model_dump()
+
     try:
-        asq_data = ASQStoredResult(**json.loads(asq_json_str))
-        task1_desc = "soạn lời chào thân thiện, nhận xét tổng quan ngắn gọn về ASQ-3, và mời phụ huynh đặt câu hỏi hoặc yêu cầu giải pháp chi tiết."
+        # Clear chat history
+        history_obj_to_clear = get_session_history(session_id)
+        history_obj_to_clear.clear()
+        print(f"Chat history for session {session_id} (DB {REDIS_DB_HISTORY}) cleared.")
+    except Exception as e:
+        print(f"Warning: Could not clear chat history: {e}")
+
+    try:
+        summary_parts = []
+        result_for_redis = ASQStoredResult(
+            session_id=session_id,
+            age_at_test_months=data.age_at_test_months,
+            questionnaire_title=submission_document["questionnaireTitle"],
+            overall_summary="",
+            sections={}
+        )
+        section_keys_mapping = {
+            "communication": "Giao tiếp",
+            "gross_motor": "Vận động thô",
+            "fine_motor": "Vận động tinh",
+            "problem_solving": "Giải quyết vấn đề",
+            "personal_social": "Cá nhân xã hội"
+        }
+
+        # Process each section
+        for sec_key in section_keys_mapping.keys():
+            answers_raw = getattr(data, sec_key, None)
+            if answers_raw:
+                ans_objs = [a if isinstance(a, Answer) else Answer(**a.model_dump()) for a in answers_raw]
+                proc_ans = apply_scoring_logic(sec_key, ans_objs, current_rules)
+                score = calculate_score(proc_ans)
+                sec_rules = current_rules.get("question", {}).get(sec_key, {})
+                cutoff = sec_rules.get("cutoff", 0.0)
+                monitor = sec_rules.get("monitor_cutoff", sec_rules.get("cutoff", 0.0) + 15.0)
+                status_text = determine_status(score, cutoff, monitor)
+                summary_parts.append(f"{section_keys_mapping.get(sec_key, sec_key)}: {status_text} ({score:.0f}đ).")
+                submission_document["domainResults"][sec_key] = {
+                    "score": score,
+                    "status": status_text,
+                    "cutoff": cutoff,
+                    "monitor_cutoff": monitor
+                }
+                result_for_redis.sections[sec_key] = ASQSectionResultDetail(
+                    display_name=section_keys_mapping.get(sec_key, sec_key),
+                    total_score=score,
+                    status=status_text,
+                    cutoff=cutoff,
+                    monitor=monitor,
+                    answers_processed=[Answer(id=a.id, answer=a.answer) for a in proc_ans]
+                )
+
+        if not summary_parts:
+            raise HTTPException(status_code=400, detail="No valid ASQ answers provided.")
+        
+        overall_summary = " ".join(summary_parts)
+        result_for_redis.overall_summary = overall_summary
+        submission_document["overallSummaryText"] = overall_summary
+
+        # Save to MongoDB
+        try:
+            db.asq_submissions.insert_one(submission_document)
+            print(f"ASQ submission for session {session_id} saved to MongoDB.")
+        except pymongo.errors.PyMongoError as e_mongo:
+            print(f"CRITICAL: Failed to save ASQ submission to MongoDB. Error: {e_mongo}")
+            traceback.print_exc()
+
+        # Cache in Redis
+        if redis_client:
+            ola_key = f"asq_data:{session_id}"
+            
+            if redis_client.exists(ola_key):
+                redis_client.delete(ola_key)
+                print(f"LOG: Deleted existing ASQ data in Redis for session {session_id}.")
+                
+            redis_client.set(
+                f"asq_data:{session_id}",
+                result_for_redis.model_dump_json(exclude_none=True),
+                ex=SESSION_TTL_SECONDS
+            )
+            print(f"ASQ results for session {session_id} cached in Redis.")
+        
+        return JSONResponse(content=result_for_redis.model_dump(exclude_none=True))
+    
+    except Exception as e:
+        print(f"ASQ Submit Processing Error: {e}")
+        traceback.print_exc()
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app_lifespan.post("/chatbot/asq_initial_engagement", response_model=InitialEngagementResponse, summary="Get Initial Chatbot Remark & Solutions Post-ASQ (with RAG)")
+async def chatbot_asq_initial_engagement_route(current_session: dict = Depends(get_current_session)):
+    # Generate initial remark and solutions for ASQ results
+    session_id = current_session["session_id"]
+    if not redis_client:
+        return InitialEngagementResponse(error="Dịch vụ Redis (ASQ) không khả dụng.")
+    if not all([llm_global, retriever_global, ASQ_SOLUTION_PROMPT_GLOBAL]):
+        return InitialEngagementResponse(error="Trợ lý AI (RAG components) chưa sẵn sàng.")
+    
+    asq_json_str = redis_client.get(f"asq_data:{session_id}")
+    if not asq_json_str:
+        return InitialEngagementResponse(error="Không tìm thấy kết quả ASQ-3 cho phiên này trong Redis.")
+    
+    try:
+        asq_data_obj = ASQStoredResult(**json.loads(asq_json_str))
+        is_clearly_delayed = any("CHẬM RÕ RỆT" in s.status.upper() for s in asq_data_obj.sections.values())
+        task1_desc_base = "soạn lời chào thân thiện, nhận xét tổng quan ngắn gọn về kết quả ASQ-3 của trẻ."
+        if is_clearly_delayed:
+            task1_desc = f"{task1_desc_base} **Đặc biệt, vì có lĩnh vực 'CHẬM RÕ RỆT', hãy ngay lập tức và mạnh mẽ khuyên phụ huynh nên đưa trẻ đi gặp chuyên gia để được đánh giá chuyên sâu càng sớm càng tốt. Nhấn mạnh đây là bước quan trọng nhất.**"
+        else:
+            task1_desc = task1_desc_base
         task1_short = "lời chào và nhận xét tổng quan ban đầu"
-        remark = await generate_llm_response_with_rag_for_asq(session_id,asq_data,task1_desc,task1_short)
-        task2_desc = "đưa ra gợi ý hoạt động và lời khuyên cụ thể, dễ thực hiện tại nhà cho từng lĩnh vực phát triển dựa trên ASQ-3, tập trung vào lĩnh vực 'CHẬM' hoặc 'CÓ NGUY CƠ CHẬM'. Nếu bình thường, đưa ra lời khuyên chung."
-        task2_short = "các giải pháp và hoạt động gợi ý chi tiết"
-        solutions = await generate_llm_response_with_rag_for_asq(session_id,asq_data,task2_desc,task2_short)
-        if remark: get_session_history(session_id).add_ai_message(remark)
+        remark = await generate_llm_response_with_rag_for_asq(session_id, asq_data_obj, task1_desc, task1_short)
+        
+        task2_desc_base = "đưa ra gợi ý hoạt động và lời khuyên cụ thể, dễ thực hiện tại nhà cho từng lĩnh vực phát triển dựa trên kết quả ASQ-3."
+        if is_clearly_delayed:
+            task2_desc = f"{task2_desc_base} **ƯU TIÊN HÀNG ĐẦU: Lặp lại và nhấn mạnh khuyến nghị cần đưa trẻ đi đánh giá chuyên sâu ngay. Sau đó, nếu có đưa ra gợi ý hoạt động tại nhà cho lĩnh vực chậm, phải nêu rõ đây chỉ là hỗ trợ tạm thời, rất cơ bản và không thay thế được việc can thiệp của chuyên gia. Hạn chế các hoạt động phức tạp cho những lĩnh vực này.** Tập trung vào các lĩnh vực được đánh giá là 'CHẬM' hoặc 'CÓ NGUY CƠ CHẬM'. Nếu các lĩnh vực khác bình thường, có thể đưa ra lời khuyên chung để duy trì."
+        else:
+            task2_desc = f"{task2_desc_base} Tập trung vào các lĩnh vực được đánh giá là 'CHẬM' hoặc 'CÓ NGUY CƠ CHẬM'. Nếu bình thường, đưa ra lời khuyên chung để duy trì và phát triển."
+        task2_short = "các giải pháp và hoạt động gợi ý chi tiết cải thiện cho từng lĩnh vực phát triển"
+        solutions = await generate_llm_response_with_rag_for_asq(session_id, asq_data_obj, task2_desc, task2_short)
+        
+        if remark:
+            history = get_session_history(session_id)
+            history.add_ai_message(remark)
+            print(f"Initial ASQ remark added to chat history (DB {REDIS_DB_HISTORY}) for session {session_id}")
+        
         print(f"Generated initial engagement for session {session_id}")
         return InitialEngagementResponse(initial_remark=remark, asq_solutions=solutions)
-    except Exception as e: print(f"Error in initial engagement {session_id}: {e}"); traceback.print_exc(); return InitialEngagementResponse(error=f"Lỗi tạo nhận xét ASQ: {e}")
+    
+    except Exception as e:
+        print(f"Error in initial engagement for session {session_id}: {e}")
+        traceback.print_exc()
+        return InitialEngagementResponse(error=f"Lỗi tạo nhận xét ASQ: {str(e)}")
 
-class ChatMessageClient(BaseModel): sender: str; text: str
-class ChatHistoryResponse(BaseModel): history: List[ChatMessageClient]; error: Optional[str] = None
-@app.get("/chat/history", response_model=ChatHistoryResponse, summary="Get Chat History for Session")
+@app_lifespan.get("/chat/history", response_model=ChatHistoryResponse, summary="Get Chat History for Session")
 async def get_chat_history_route(current_session: dict = Depends(get_current_session)):
+    # Retrieve chat history for the session
     session_id = current_session["session_id"]
-    if not redis_client: return ChatHistoryResponse(history=[], error="Dịch vụ lịch sử tạm thời không khả dụng.")
-    try:
-        hist_obj = get_session_history(session_id); raw_msgs = list(hist_obj.messages)
-        recent_msgs = raw_msgs[-(MAX_HISTORY_TURNS*2):] if raw_msgs else []
-        client_hist: List[ChatMessageClient] = []
-        for msg_obj in recent_msgs:
-            s,t = "unknown",""
-            if isinstance(msg_obj,HumanMessage): s="user"; t=msg_obj.content
-            elif isinstance(msg_obj,AIMessage): s="bot"; t=msg_obj.content
-            elif hasattr(msg_obj,'type') and hasattr(msg_obj,'content') and msg_obj.type not in ["system"]: s=msg_obj.type; t=msg_obj.content
-            if s!="unknown" and t: client_hist.append(ChatMessageClient(sender=s,text=t))
-        print(f"Retrieved {len(client_hist)} history messages for session {session_id}.")
-        return ChatHistoryResponse(history=client_hist)
-    except Exception as e: print(f"Error retrieving history {session_id}: {e}"); traceback.print_exc(); return ChatHistoryResponse(history=[],error=f"Lỗi lấy lịch sử: {e}")
-
-class ClearHistoryResponse(BaseModel): message: str; cleared_asq_too: bool
-@app.post("/chat/history/clear", response_model=ClearHistoryResponse, summary="Clear Chat History & ASQ Data for Session")
-async def clear_chat_history_route(current_session:dict=Depends(get_current_session), clear_asq:bool=Query(True)):
-    session_id = current_session["session_id"]
-    if not redis_client: raise HTTPException(status_code=503, detail="Redis unavailable.")
     try:
         hist_obj = get_session_history(session_id)
-        if isinstance(hist_obj,RedisChatMessageHistory): hist_obj.clear(); print(f"Redis history for session {session_id} cleared.")
-        elif isinstance(hist_obj,InMemoryChatMessageHistory) and hasattr(app.state,'in_mem_hist') and session_id in app.state.in_mem_hist: app.state.in_mem_hist[session_id].clear(); print(f"InMemory history for session {session_id} cleared.")
+        raw_msgs = list(hist_obj.messages)
+        recent_msgs = raw_msgs[-(MAX_HISTORY_TURNS * 2 + 10):] if raw_msgs else []
+        client_hist: List[ChatMessageClient] = []
+        for msg_obj in recent_msgs:
+            sender_type, text_content = "unknown", ""
+            if isinstance(msg_obj, HumanMessage):
+                sender_type = "user"
+                text_content = msg_obj.content
+            elif isinstance(msg_obj, AIMessage):
+                sender_type = "bot"
+                text_content = msg_obj.content
+            elif hasattr(msg_obj, 'type') and hasattr(msg_obj, 'content'):
+                lc_type = str(getattr(msg_obj, 'type', '')).lower()
+                sender_type = "user" if lc_type == "human" else ("bot" if lc_type == "ai" else lc_type)
+                text_content = str(getattr(msg_obj, 'content', ''))
+            if sender_type not in ["unknown", "system"] and text_content:
+                client_hist.append(ChatMessageClient(sender=sender_type, text=text_content))
+        
+        db_used_for_history = f"Redis DB {REDIS_DB_HISTORY}" if redis_client else "In-Memory"
+        print(f"Retrieved {len(client_hist)} history messages for session {session_id} from {db_used_for_history}.")
+        return ChatHistoryResponse(history=client_hist)
+    
+    except Exception as e:
+        print(f"Error retrieving history for session {session_id}: {e}")
+        traceback.print_exc()
+        return ChatHistoryResponse(history=[], error=f"Lỗi lấy lịch sử chat: {str(e)}")
+
+@app_lifespan.post("/predict/ola", response_model=OLAPredictionResponse, summary="Predict using OLA Model, Save Result, and Get Initial Remark")
+async def predict_ola_route(input_data: OLAPredictionInput, current_session: dict = Depends(get_current_session)):
+    # Perform OLA prediction and generate initial remark
+    if not all([scaler_global, pca_global, ola_model_global]):
+        raise HTTPException(status_code=503, detail="OLA model components not ready.")
+    if db is None:
+        raise HTTPException(status_code=503, detail="MongoDB service is not available.")
+    
+    session_id = current_session["session_id"]
+    print(f"\n--- OLA Prediction (session:{session_id}) ---")
+    
+    try:
+        history_to_clear = get_session_history(session_id)
+        history_to_clear.clear()
+        print(f"LOG: Cleared existing chat history (DB {REDIS_DB_HISTORY}) for new OLA test.")
+    except Exception as e_clear:
+        print(f"WARNING: Could not clear chat history for session {session_id}. Error: {e_clear}")
+        
+    try:
+        # Prepare input data for prediction
+        input_dict = input_data.model_dump()
+        print(f"Input data for OLA prediction: {input_dict}")
+        input_df = pd.DataFrame([input_dict], columns=['ChamNoi', 'CoLap', 'ChoiChucNang', 'ChoiGiaVo', 'HanhViLapLai', 'KyNangGiaoTiepSom', 'ChoiLuanPhien', 'BatChuoc', 'PhanUngTenGoi', 'ChiTro', 'TiepXucMat'])
+        input_scaled = scaler_global.transform(input_df)
+        input_pca = pca_global.transform(input_scaled)
+        prediction = ola_model_global.predict(input_pca)[0]
+        prediction_proba = ola_model_global.predict_proba(input_pca)[0][1]
+        prediction_result = {"prediction": int(prediction), "probability": float(prediction_proba)}
+
+        current_utc_timestamp = datetime.now(timezone.utc)
+        
+        # Store prediction result
+        ola_result_to_store = OLAStoredResult(
+            session_id=session_id,
+            prediction_timestamp=current_utc_timestamp,
+            input_data=input_data,
+            prediction_result=OLAPredictionResult(**prediction_result)
+        )
+        
+        # Cache in Redis
+        if redis_client:
+            try:
+                ola_key = f"asd_predict_data:{session_id}"
+                if redis_client.exists(ola_key):
+                    redis_client.delete(ola_key)
+                    print(f"LOG: Deleted existing OLA data in Redis for session {session_id}.")
+                    
+                redis_client.set(
+                    f"asd_predict_data:{session_id}",
+                    ola_result_to_store.model_dump_json(),
+                    ex=SESSION_TTL_SECONDS
+                )
+                print(f"ASD prediction result for session {session_id} cached in Redis.")
+            except Exception as e_redis_ola:
+                print(f"WARNING: Could not save OLA prediction to Redis. Error: {e_redis_ola}")
+
+        # Save to MongoDB
+        prediction_document = {
+            "sessionId": session_id,
+            "predictionTimestamp": current_utc_timestamp,
+            "inputData": input_dict,
+            "predictionResult": prediction_result
+        }
+        try:
+            db.asd_predictions.insert_one(prediction_document)
+            print(f"OLA prediction result for session {session_id} saved to MongoDB.")
+        except pymongo.errors.PyMongoError as e_mongo:
+            print(f"WARNING: Could not save OLA prediction to MongoDB. Error: {e_mongo}")
+            
+        # Generate initial remark
+        initial_remark = await generate_llm_response_for_ola(session_id, ola_result_to_store)
+
+        # Add remark to chat history
+        if initial_remark:
+            try:
+                history = get_session_history(session_id)
+                history.add_ai_message(initial_remark)
+                print(f"Initial OLA remark added to chat history (DB {REDIS_DB_HISTORY}) for session {session_id}")
+            except Exception as e_hist:
+                print(f"Warning: Could not add OLA remark to chat history. Error: {e_hist}")
+        
+        return OLAPredictionResponse(
+            prediction=prediction_result["prediction"],
+            probability_class_1=prediction_result["probability"],
+            initial_remark=initial_remark
+        )
+
+    except Exception as e:
+        print(f"OLA Prediction Error (session {session_id}): {e}")
+        traceback.print_exc()
+        raise HTTPException(status_code=500, detail=f"Lỗi xử lý dự đoán OLA: {str(e)}")
+
+@app_lifespan.post("/chat/history/clear", response_model=ClearHistoryResponse, summary="Clear Chat History & ASQ Data for Session")
+async def clear_chat_history_route(current_session: dict = Depends(get_current_session), clear_asq: bool = Query(True)):
+    # Clear chat history and optionally ASQ data
+    session_id = current_session["session_id"]
+    try:
+        hist_obj = get_session_history(session_id)
+        hist_obj.clear()
+        db_hist_info = f"Redis DB {REDIS_DB_HISTORY}" if redis_client else "In-Memory"
+        print(f"Chat history for session {session_id} ({db_hist_info}) cleared.")
         asq_cleared = False
         if clear_asq:
-            key_asq = f"asq_data:{session_id}"; del_count = redis_client.delete(key_asq)
-            asq_cleared = del_count > 0; print(f"ASQ data for session {session_id} deleted: {asq_cleared}")
+            if redis_client:
+                key_asq = f"asq_data:{session_id}"
+                del_count = redis_client.delete(key_asq)
+                asq_cleared = del_count > 0
+                print(f"ASQ data for session {session_id} (DB {REDIS_DB_ASQ}) deleted: {asq_cleared}")
+            else:
+                print(f"ASQ data not cleared for session {session_id} as Redis (DB {REDIS_DB_ASQ}) is unavailable.")
         return ClearHistoryResponse(message="History and related data cleared.", cleared_asq_too=asq_cleared)
-    except Exception as e: print(f"Error clearing history {session_id}: {e}"); traceback.print_exc(); raise HTTPException(status_code=500,detail=f"Error clearing: {e}")
+    
+    except Exception as e:
+        print(f"Error clearing history/ASQ data for session {session_id}: {e}")
+        traceback.print_exc()
+        raise HTTPException(status_code=500, detail=f"Error clearing data: {str(e)}")
 
-class ChatQuestionRequest(BaseModel): msg: str
-@app.post("/ask", response_class=JSONResponse, summary="Ask the Chatbot a Question")
+@app_lifespan.post("/ask", response_class=JSONResponse, summary="Ask the Chatbot a Question")
 async def ask_bot_route(request_data: ChatQuestionRequest, current_session: dict = Depends(get_current_session)):
-    session_id = current_session["session_id"]; msg = request_data.msg
-    if not all([qa_chain_global,llm_global,retriever_global, QA_PROMPT_GLOBAL]): raise HTTPException(status_code=503,detail="Chatbot not ready.")
-    if not msg.strip(): raise HTTPException(status_code=400,detail="Question empty.")
-    print(f"\n--- Ask (session:{session_id}): {msg} ---")
-    chat_history_obj = get_session_history(session_id); asq_guidance = ""
-    if redis_client:
-        asq_json=redis_client.get(f"asq_data:{session_id}")
-        if asq_json:
-            asq_data=ASQStoredResult(**json.loads(asq_json)); summary=asq_data.overall_summary
-            age=asq_data.age_at_test_months; age_str=f"{age} tháng tuổi"if age is not None else"của trẻ"
-            asq_guidance=(f"\n\nThông tin từ ASQ-3 của {age_str}: {summary}\nCân nhắc thông tin này.")
+    # Handle user question and generate chatbot response
+    session_id = current_session["session_id"]
+    original_msg = request_data.msg.strip()
+    
+    if not all([llm_global, retriever_global, QA_PROMPT_GLOBAL]):
+        raise HTTPException(status_code=503, detail="Chatbot core components not ready.")
+    if not original_msg:
+        raise HTTPException(status_code=400, detail="Question cannot be empty.")
+        
+    print(f"\n--- Ask (session:{session_id}): {original_msg} ---")
+    
     try:
-        with timer("RAG Doc"): docs:List[Document]=retriever_global.invoke(msg)
-        with timer("RAG Ctx/Hist"):
-            hist_msgs=list(chat_history_obj.messages); chat_hist_str=format_chat_history(hist_msgs,MAX_HISTORY_TURNS)
-            partial_prompt = QA_PROMPT_GLOBAL.partial(current_date=current_date_global)
-            base_template_str = partial_prompt.template
-            # Initialize with a value to avoid UnboundLocalError if loop doesn't run
-            # This part is tricky if input_variables can be empty or not fully present in template
-            temp_template_for_token_calc = base_template_str 
-            for var in QA_PROMPT_GLOBAL.input_variables:
-                if var != "current_date": # current_date is already filled by partial
-                    temp_template_for_token_calc = temp_template_for_token_calc.replace(f"{{{var}}}", "")
-            base_t = llm_global.get_num_tokens(temp_template_for_token_calc)
+        # Check if the question needs clarification
+        # clarified_msg, needs_clarification = clarify_question(session_id, original_msg)
+        # if needs_clarification:
+        #     history = get_session_history(session_id)
+        #     history.add_user_message(original_msg)
+        #     history.add_ai_message(clarified_msg)
+        #     return JSONResponse(content={"reply": clarified_msg})
+        
+        # Initialize chat history
+        chat_history_store = get_session_history(session_id)
+        memory = ConversationBufferWindowMemory(
+            chat_memory=chat_history_store,
+            memory_key="chat_history",
+            k=MAX_HISTORY_TURNS,
+            return_messages=True,
+        )
 
-            msg_t,hist_t,asq_t=(llm_global.get_num_tokens(s)for s in[msg,chat_hist_str,asq_guidance])
-            avail_t=CTX_WINDOW-MAX_NEW_TOKENS-PROMPT_LENGTH_BUFFER-base_t-msg_t-hist_t-asq_t
-            max_ctx_t=max(100,avail_t);ctx_t_count,ctx_docs=0,[]
-            for d_item in docs:
-                c,c_t=d_item.page_content,llm_global.get_num_tokens(d_item.page_content)
-                if ctx_t_count+c_t<=max_ctx_t:ctx_docs.append(d_item);ctx_t_count+=c_t
-                else:
-                    rem=max_ctx_t-ctx_t_count
-                    if rem>PROMPT_LENGTH_BUFFER/2:l=int(len(c)*(rem/c_t))if c_t>0 else 0;trunc=c[:l];ctx_docs.append(Document(page_content=trunc,metadata=d_item.metadata));ctx_t_count+=llm_global.get_num_tokens(trunc)
-                    break
-        with timer("LLM Chain"):resp_data=qa_chain_global.invoke({"chat_history":chat_hist_str,"context":ctx_docs,"question":msg,"asq_guidance_placeholder":asq_guidance, "current_date": current_date_global})
-        resp_text=str(resp_data);cleaned_text=resp_text.strip()
-        patterns=[r"<\|im_start\|>system.*?<\|im_end\|>",r"<\|im_start\|>user.*?<|im_end\|>",r"<\|im_end\|>",r"^\s*<\|im_start\|>assistant\s*",r"^\s*assistant:\s*",r"^\s*trả lời:\s*",r"\[/INST\]",]
-        for p in patterns:cleaned_text=re.sub(p,"",cleaned_text,flags=re.I|re.S|re.M).strip()
-        cleaned_text=re.sub(r"^\s*[-#*=_]{2,}\s*$","",cleaned_text,flags=re.M)
-        cleaned_text=re.sub(r"(\s*#\s*){3,}|(#){3,}|(\s*-\s*){3,}"," ",cleaned_text)
-        cleaned_text=re.sub(r"\s{2,}"," ",cleaned_text).strip()
-        lines=cleaned_text.split('\n');res_lines=[];first=True
-        for l_item in lines:
-            s_l=l_item.strip()
-            if not s_l or set(s_l)<= {"#","-","*","_","="}:continue
-            if s_l.startswith(("* ","• ","+ ")):s_l="- "+s_l[2:].strip()
-            if s_l.startswith("- ")and len(s_l)>2 and'a'<=s_l[2].lower()<='z':s_l="- "+s_l[2].upper()+s_l[3:]
-            elif first and len(s_l)>0 and not s_l.startswith("-")and'a'<=s_l[0].lower()<='z':s_l=s_l[0].upper()+s_l[1:]
-            res_lines.append(s_l)
-            if s_l:first=False
-            elif not res_lines or res_lines[-1]:first=True
-        cleaned_text="\n".join(res_lines)
-        if not cleaned_text:
-             cleaned_text="Xin lỗi, tôi không thể đưa ra phản hồi vào lúc này."
-        chat_history_obj.add_user_message(msg)
-        chat_history_obj.add_ai_message(cleaned_text)
-        return JSONResponse(content={"reply":cleaned_text})
-    except HTTPException as http_exc:raise http_exc
-    except Exception as e:print(f"Ask Error (session {session_id}): {e}");traceback.print_exc();raise HTTPException(status_code=500,detail=str(e))
+        # Build session context from ASQ and OLA data
+        session_context_str = "Không có thông tin từ bài test nào được ghi nhận cho phiên này."
+        context_parts = []
+        
+        if redis_client:
+            # Retrieve ASQ context
+            asq_json_str = redis_client.get(f"asq_data:{session_id}")
+            if asq_json_str:
+                try:
+                    asq_data_obj = ASQStoredResult(**json.loads(asq_json_str))
+                    summary = asq_data_obj.overall_summary
+                    age = asq_data_obj.age_at_test_months
+                    age_str = f"{age} tháng tuổi" if age is not None else "của trẻ"
+                    asq_context = f"Kết quả ASQ-3 của trẻ {age_str}: {summary}."
+                    context_parts.append(asq_context)
+                    print(f"INFO: Found ASQ context for session {session_id}")
+                except Exception as e:
+                    print(f"WARNING: Could not parse ASQ context. Error: {e}")
 
+            # Retrieve OLA context
+            ola_json_str = redis_client.get(f"asd_predict_data:{session_id}")
+            if ola_json_str:
+                try:
+                    ola_data = OLAStoredResult(**json.loads(ola_json_str))
+                    pred_summary = "Có nguy cơ" if ola_data.prediction_result.prediction == 1 else "Không có nguy cơ"
+                    prob_percent = ola_data.prediction_result.probability * 100
+                    friendly_names = {
+                        "ChamNoi": "Chậm nói", "CoLap": "Cô lập", "ChoiChucNang": "Chơi chức năng",
+                        "ChoiGiaVo": "Chơi giả vờ", "HanhViLapLai": "Hành vi lặp lại", "KyNangGiaoTiepSom": "Giao tiếp sớm",
+                        "ChoiLuanPhien": "Chơi luân phiên","BatChuoc": "Bắt Chước", "PhanUngTenGoi": "Phản ứng tên gọi",
+                        "ChiTro": "Chỉ trỏ", "TiepXucMat": "Tiếp xúc mắt"
+                    }
+                    input_details_list = [f"{friendly_names.get(k, k)}: {v}" for k, v in ola_data.input_data.model_dump().items()]
+                    input_details_str = ", ".join(input_details_list)
+                    ola_context = (
+                        f"Kết quả sàng lọc nguy cơ tự kỷ: {pred_summary} với xác suất {prob_percent:.1f}%. "
+                        f"Điểm số chi tiết: {input_details_str}."
+                    )
+                    context_parts.append(ola_context)
+                    print(f"INFO: Found OLA/ASD context for session {session_id}")
+                except Exception as e:
+                    print(f"WARNING: Could not parse OLA/ASD context. Error: {e}")
+        
+        if context_parts:
+            session_context_str = "\n".join(context_parts)
+            
+        # Initialize QA chain with RAG
+        final_qa_prompt = QA_PROMPT_GLOBAL.partial(
+            current_date=current_date_global,
+            session_context=session_context_str
+        )
+        
+        qa_chain = ConversationalRetrievalChain.from_llm(
+            llm=llm_global,
+            retriever=retriever_global,
+            memory=memory,
+            combine_docs_chain_kwargs={"prompt": final_qa_prompt},
+            return_source_documents=False,
+        )
+
+        # Generate response
+        with timer("ConversationalRetrievalChain Invoke"):
+            response_data = qa_chain.invoke({"question": original_msg})
+        
+        resp_text = response_data.get("answer", "")
+        cleaned_text = resp_text.strip()
+
+        return JSONResponse(content={"reply": cleaned_text})
+
+    except HTTPException as http_exc:
+        raise http_exc
+    except Exception as e:
+        print(f"Ask Error (session {session_id}): {e}")
+        traceback.print_exc()
+        raise HTTPException(status_code=500, detail=f"Lỗi xử lý yêu cầu chat: {str(e)}")
+
+# === Main Entry Point ===
 if __name__ == "__main__":
     import uvicorn
-    print("Ensuring dirs..."); os.makedirs("./models",exist_ok=True)
-    if VECTOR_DB_PATH and os.path.dirname(VECTOR_DB_PATH) and not os.path.exists(os.path.dirname(VECTOR_DB_PATH)): os.makedirs(os.path.dirname(VECTOR_DB_PATH),exist_ok=True)
-    if ASQ_DATA_DIR and not os.path.exists(ASQ_DATA_DIR): os.makedirs(ASQ_DATA_DIR,exist_ok=True)
-    if EXCEL_OUTPUT_DIR and not os.path.exists(EXCEL_OUTPUT_DIR): os.makedirs(EXCEL_OUTPUT_DIR, exist_ok=True)
-    if not llm_global: print("CRITICAL: LLM not initialized.")
-    print(f"POST to http://localhost:8000/token for session token")
-    print(f"FastAPI server starting on http://0.0.0.0:8000")
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    # Print available API endpoints
+    print(f"\n--- API Endpoints Available ---")
+    print(f"  POST /token             - Get a session token.")
+    print(f"  GET  /asq/form?age_in_days={{age}} - Get ASQ form.")
+    print(f"  POST /asq/result           - Submit ASQ answers (Requires Auth Token).")
+    print(f"  POST /chatbot/asq_initial_engagement - Get initial ASQ advice (Requires Auth Token).")
+    print(f"  POST /ask                  - Ask chatbot a question (Requires Auth Token).")
+    print(f"  GET  /chat/history        - Get chat history (Requires Auth Token).")
+    print(f"  POST /chat/history/clear   - Clear chat history (Requires Auth Token).")
+    print(f"  POST /predict/ola         - Predict using OLA model (Requires Auth Token).")
+    print(f"  POST /feedback/submit     - Submit user feedback (No Auth Required).")
+    print(f"\nINFO: FastAPI server attempting to start on http://0.0.0.0:8000")
+    # Run FastAPI server
+    uvicorn.run(app_lifespan, host="0.0.0.0", port=8000)

@@ -2,9 +2,18 @@
 
 1. This is a demo project that showcases how to build a **Retrieval-Augmented Generation (RAG)** application using **Langchain**. 
 
-![Demo Screenshot](https://github.com/user-attachments/assets/b9577a6a-2044-45bb-bcde-818bf1e41587)
+## Techniques
 
-![image](https://github.com/user-attachments/assets/5837fb5c-7f80-41ad-819a-c5993f7513d1)
+This project utilizes the following key techniques:
+
+- **Retrieval-Augmented Generation (RAG):** Combines retrieval of relevant documents with generative language models to provide context-aware answers.
+- **Langchain Framework:** Facilitates the integration of LLMs with external data sources and retrieval pipelines.
+- **Machine Learning Classification:** Implements various models (Decision Tree, XGBoost, CatBoost, OLA) for ASD prediction.
+- **Online Local Accuracy (OLA):** Enhances model prediction by dynamically selecting the most accurate local model for each instance.
+
+## Tool and Hardware
+Python 3.10.17
+RTX 5060Ti 16GB
 
 2. This is a demo project that showcases how to use a **Model Classification for Predict ASD** application using **OLA Model**. 
 
