@@ -1,0 +1,52 @@
+/* Áp dụng riêng trong Predict2 */
+.predict2-container .form-wrapper {
+  display: contents; /* Cho phép định nghĩa layout riêng bên trong form-field */
+}
+
+.predict2-container .form-field {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 45px;
+}
+
+.predict2-container .form-field label {
+  font-size: 20px;
+  font-weight: 500;
+  padding-right: 8px;
+  margin: 0;
+  white-space: normal;
+}
+
+.predict2-container .form-field select {
+  width: 100%;
+  height: 48px;
+  font-size: 16px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  box-sizing: border-box;
+  border: 1px solid #3266F5;
+
+}
+.question-wrapper {
+  padding: 40px;
+  background-color: white; /* tùy chọn nếu muốn có nền */
+  border-radius: 8px;       /* tùy chọn để nhìn mềm mại hơn */
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.05); /* nhẹ nhàng */
+  
+}
+.qbold {
+  border: 1px solid #3266F5;
+  border-radius: 3px;
+  padding: 10px;
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
+.question-text {
+  padding-left: 12px;
+  padding-top: 6px;
+  line-height: 1.5;
+  color: #333;
+}

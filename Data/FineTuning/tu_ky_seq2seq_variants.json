@@ -1,0 +1,1553 @@
+[
+  {
+    "input": "tự kỷ và trầm cảm khác gì nhau",
+    "output": "Tự kỷ là rối loạn phát triển thần kinh xuất hiện từ nhỏ, ảnh hưởng đến giao tiếp xã hội và hành vi. Trầm cảm là rối loạn khí sắc, thường khởi phát ở bất kỳ độ tuổi nào và gây cảm giác buồn bã, mất hứng thú. Một số triệu chứng có thể giống nhau như thu mình hoặc ít tương tác, nhưng nguyên nhân và điều trị hoàn toàn khác nhau."
+  },
+  {
+    "input": "tự kỷ và phổ tự kỷ khác nhau như thế nào",
+    "output": "Tự kỷ là một phần trong rối loạn phổ tự kỷ (ASD). 'Phổ' ám chỉ sự đa dạng về mức độ và biểu hiện, từ nhẹ đến nặng. Vì vậy, hai khái niệm này thực chất không khác biệt, mà tự kỷ nằm trong phổ tự kỷ."
+  },
+  {
+    "input": "tự kỷ khác với trầm cảm",
+    "output": "Tự kỷ ảnh hưởng đến phát triển thần kinh từ sớm, trong khi trầm cảm là rối loạn khí sắc có thể xuất hiện ở bất kỳ độ tuổi nào. Người tự kỷ thường có hành vi lặp lại và khó khăn trong tương tác xã hội, còn người trầm cảm có biểu hiện buồn bã, mất năng lượng, cảm giác vô vọng."
+  },
+  {
+    "input": "phân biệt tự kỷ và rối loạn phổ tự kỷ",
+    "output": "Tự kỷ là một dạng cụ thể trong rối loạn phổ tự kỷ (ASD). ASD bao gồm nhiều mức độ và biểu hiện khác nhau, từ nhẹ đến nặng. Do đó, phân biệt hai khái niệm này là không chính xác về mặt y khoa."
+  },
+  {
+    "input": "phân biệt tự kỷ và tăng động",
+    "output": "Tự kỷ và tăng động giảm chú ý (ADHD) là hai rối loạn phát triển thần kinh khác nhau. Tự kỷ liên quan đến giao tiếp xã hội và hành vi lặp lại, trong khi ADHD biểu hiện chủ yếu qua khó kiểm soát hành vi, mất tập trung và tăng hoạt động. Có thể xảy ra đồng thời."
+  },
+  {
+    "input": "phân biệt tự kỷ và chậm phát triển",
+    "output": "Chậm phát triển trí tuệ ảnh hưởng đến toàn diện khả năng học tập và thích nghi, còn tự kỷ chủ yếu liên quan đến giao tiếp xã hội và hành vi. Trẻ tự kỷ có thể có trí tuệ bình thường hoặc cao, nhưng gặp khó khăn trong tương tác xã hội."
+  },
+  {
+    "input": "phân biệt tự kỷ và trầm cảm",
+    "output": "Trầm cảm là rối loạn khí sắc với cảm xúc buồn bã kéo dài, còn tự kỷ là rối loạn phát triển thần kinh bẩm sinh. Một số biểu hiện có thể giống nhau như thu mình hoặc ít giao tiếp, nhưng bản chất và điều trị hoàn toàn khác nhau."
+  },
+  {
+    "input": "phân biệt tự kỷ và chậm nói",
+    "output": "Chậm nói có thể do nhiều nguyên nhân, bao gồm cả tự kỷ. Tuy nhiên, trẻ tự kỷ thường đi kèm với các dấu hiệu khác như không giao tiếp mắt, không chỉ tay, không phản ứng khi gọi tên. Chẩn đoán chính xác cần chuyên gia tâm lý đánh giá."
+  },
+  {
+    "input": "phân biệt hướng nội và tự kỷ",
+    "output": "Hướng nội là một đặc điểm tính cách, không phải rối loạn. Người hướng nội vẫn có khả năng giao tiếp, đồng cảm và linh hoạt xã hội. Ngược lại, tự kỷ là rối loạn phát triển thần kinh ảnh hưởng đến giao tiếp và hành vi."
+  },
+  {
+    "input": "cách dạy trẻ tự kỷ phân biệt đồ vật",
+    "output": "Cha mẹ nên dạy trẻ bằng cách sử dụng hình ảnh thực tế, đồ vật thật và hoạt động hàng ngày. Kết hợp chỉ tay, gọi tên, tăng cường hình ảnh và lặp lại nhiều lần. Phản hồi tích cực và trị liệu ngôn ngữ cũng giúp trẻ học tốt hơn."
+  },
+  {
+    "input": "trẻ tự kỷ không nhận diện cảm xúc người khác",
+    "output": "Trẻ tự kỷ có thể gặp khó khăn trong việc nhận diện và hiểu cảm xúc của người khác do hạn chế về khả năng đồng cảm và lý thuyết tâm trí (theory of mind). Các chương trình can thiệp như trị liệu nhận thức - hành vi hoặc can thiệp xã hội có thể hỗ trợ trẻ cải thiện khả năng này."
+  },
+  {
+    "input": "tự kỷ asperger khác gì với tự kỷ thông thường",
+    "output": "Tự kỷ Asperger (nay thuộc ASD theo DSM-5) là dạng tự kỷ chức năng cao, không kèm chậm phát triển ngôn ngữ hay trí tuệ. Trẻ thường có khả năng học tốt nhưng khó khăn trong tương tác xã hội và linh hoạt hành vi. So với các dạng tự kỷ nặng hơn, trẻ Asperger thường cần ít hỗ trợ hơn."
+  },
+  {
+    "input": "trẻ dưới 3 tuổi ít nói, ít giao tiếp có phải dấu hiệu tự kỷ không",
+    "output": "Trẻ dưới 3 tuổi ít nói và ít giao tiếp có thể là dấu hiệu sớm của tự kỷ, đặc biệt nếu kèm theo không giao tiếp mắt, không chỉ tay, không phản ứng khi gọi tên. Phụ huynh nên đưa trẻ đi khám sàng lọc nếu có nghi ngờ để can thiệp sớm."
+  },
+  {
+    "input": "trẻ chậm nói nhưng hiểu có bị tự kỷ không",
+    "output": "Chậm nói nhưng vẫn hiểu lời người khác không đồng nghĩa với tự kỷ. Tuy nhiên, nếu trẻ kèm theo các dấu hiệu như không chỉ tay, không giao tiếp bằng mắt, không phản ứng khi gọi tên, thì nên sàng lọc tự kỷ sớm để can thiệp kịp thời."
+  },
+  {
+    "input": "tự kỷ có phải do cha mẹ không quan tâm",
+    "output": "Không có bằng chứng khoa học cho thấy tự kỷ do cha mẹ không quan tâm. Tự kỷ là rối loạn phát triển thần kinh có yếu tố di truyền và sinh học rõ ràng. Quan tâm đúng cách sẽ giúp trẻ cải thiện, nhưng thiếu quan tâm không gây ra tự kỷ."
+  },
+  {
+    "input": "test online tự kỷ có đáng tin không",
+    "output": "Các bài test online có thể giúp sàng lọc sơ bộ nguy cơ tự kỷ nhưng không đủ chính xác để chẩn đoán. Việc đánh giá chính thức nên được thực hiện bởi chuyên gia qua công cụ chuẩn hóa như M-CHAT, ADOS-2 hoặc DSM-5."
+  },
+  {
+    "input": "tự kỷ nhẹ có giống tăng động không",
+    "output": "Tự kỷ nhẹ và tăng động giảm chú ý (ADHD) có thể có biểu hiện giống nhau như mất tập trung, khó kiểm soát hành vi. Tuy nhiên, cơ chế và tiêu chí chẩn đoán khác nhau. Trẻ có thể mắc đồng thời cả hai. Đánh giá chuyên môn là cần thiết."
+  },
+  {
+    "input": "trẻ tự kỷ ít cười có phải trầm cảm không",
+    "output": "Ít cười có thể là biểu hiện của cả tự kỷ và trầm cảm. Trong tự kỷ, trẻ thường không biết thể hiện cảm xúc đúng lúc; còn trầm cảm là rối loạn khí sắc. Đánh giá tâm lý chuyên sâu giúp phân biệt chính xác hai tình trạng."
+  },
+  {
+    "input": "test M-CHAT là gì",
+    "output": "M-CHAT (Modified Checklist for Autism in Toddlers) là công cụ sàng lọc tự kỷ phổ biến, dùng cho trẻ từ 16–30 tháng tuổi. Nó giúp phát hiện sớm nguy cơ ASD thông qua bảng câu hỏi đơn giản mà cha mẹ có thể trả lời."
+  },
+  {
+    "input": "trẻ tự kỷ không biết chỉ đồ vật, phải làm sao",
+    "output": "Trẻ tự kỷ có thể chậm phát triển kỹ năng chỉ tay, là một trong những dấu hiệu sớm của ASD. Cha mẹ nên dạy bằng cách lặp đi lặp lại hành vi chỉ tay, kết hợp lời nói, hình ảnh trực quan và tăng cường tích cực. Trị liệu hành vi sớm sẽ giúp cải thiện."
+  },
+  {
+    "input": "tự kỷ có phải di truyền không",
+    "output": "Tự kỷ có yếu tố di truyền rõ ràng. Các nghiên cứu cho thấy tỉ lệ di truyền trong tự kỷ có thể lên đến 70–90%. Tuy nhiên, môi trường trước sinh và sau sinh cũng có thể ảnh hưởng đến mức độ biểu hiện."
+  },
+  {
+    "input": "tự kỷ có chữa được không",
+    "output": "Tự kỷ không thể 'chữa khỏi' hoàn toàn vì là rối loạn phát triển thần kinh bẩm sinh. Tuy nhiên, can thiệp sớm và phù hợp có thể giúp trẻ cải thiện đáng kể kỹ năng giao tiếp, hành vi và hòa nhập xã hội."
+  },
+  {
+    "input": "trẻ tự kỷ có đi học bình thường được không",
+    "output": "Nhiều trẻ tự kỷ, đặc biệt ở mức độ nhẹ hoặc trung bình, có thể theo học trường học bình thường nếu được hỗ trợ đúng cách như can thiệp giáo dục cá nhân (IEP), giáo viên hỗ trợ và môi trường bao dung."
+  },
+  {
+    "input": "tự kỷ có thông minh không",
+    "output": "Một số người tự kỷ có trí tuệ bình thường hoặc vượt trội, đặc biệt trong các lĩnh vực như toán học, âm nhạc hoặc ghi nhớ. Tuy nhiên, cũng có người tự kỷ kèm theo chậm phát triển trí tuệ. Mức độ thông minh rất khác nhau tùy từng cá nhân."
+  },
+  {
+    "input": "tự kỷ mức độ nhẹ là sao",
+    "output": "Tự kỷ nhẹ thường là trẻ có khả năng ngôn ngữ và trí tuệ bình thường nhưng gặp khó khăn trong giao tiếp xã hội, hiểu cảm xúc, linh hoạt hành vi. Trẻ cần can thiệp để cải thiện kỹ năng xã hội và thích nghi."
+  },
+  {
+    "input": "tự kỷ nặng có nói được không",
+    "output": "Trẻ tự kỷ mức độ nặng thường chậm hoặc không phát triển ngôn ngữ nói. Tuy nhiên, nhiều trẻ vẫn có thể giao tiếp qua hình ảnh, ký hiệu hoặc thiết bị hỗ trợ. Trị liệu ngôn ngữ và can thiệp sớm rất quan trọng."
+  },
+  {
+    "input": "trẻ tự kỷ có cảm xúc không",
+    "output": "Trẻ tự kỷ vẫn có cảm xúc như bất kỳ ai, nhưng thể hiện khác biệt. Các em có thể không biết cách bộc lộ, không phản ứng đúng cách hoặc không hiểu cảm xúc người khác. Điều này do rối loạn lý thuyết tâm trí, không phải vì không có cảm xúc."
+  },
+  {
+    "input": "tự kỷ có nguy hiểm không",
+    "output": "Tự kỷ không phải là bệnh nguy hiểm. Tuy nhiên, nếu không can thiệp kịp thời, trẻ có thể gặp khó khăn lâu dài trong học tập, làm việc và quan hệ xã hội. Một số trường hợp có hành vi gây hấn hoặc tự gây tổn thương, cần được theo dõi và hỗ trợ."
+  },
+  {
+    "input": "tự kỷ có lây không",
+    "output": "Tự kỷ không phải là bệnh truyền nhiễm và hoàn toàn không lây. Đây là rối loạn phát triển thần kinh bẩm sinh, có yếu tố di truyền và môi trường, không liên quan đến vi khuẩn hay virus."
+  },
+  {
+    "input": "trẻ tự kỷ có biết thương cha mẹ không",
+    "output": "Trẻ tự kỷ vẫn có khả năng yêu thương và gắn bó với cha mẹ, nhưng cách thể hiện có thể khác thường. Các em có thể không ôm ấp, không nói lời yêu thương nhưng lại thể hiện tình cảm bằng hành vi lặp lại, thích gần gũi hoặc quan tâm theo cách riêng."
+  },
+  {
+    "input": "có nên dạy trẻ tự kỷ theo phương pháp ABA",
+    "output": "ABA (Applied Behavior Analysis) là phương pháp can thiệp hành vi có nhiều bằng chứng khoa học hiệu quả trong hỗ trợ trẻ tự kỷ. ABA giúp cải thiện kỹ năng giao tiếp, hành vi thích nghi và giảm hành vi không phù hợp nếu được áp dụng đúng cách và cá nhân hóa."
+  },
+  {
+    "input": "tự kỷ và rối loạn ngôn ngữ khác nhau thế nào",
+    "output": "Rối loạn ngôn ngữ ảnh hưởng chủ yếu đến khả năng hiểu và sử dụng ngôn ngữ. Trong khi đó, tự kỷ ảnh hưởng cả giao tiếp xã hội, hành vi lặp lại và tương tác xã hội. Trẻ tự kỷ có thể kèm theo rối loạn ngôn ngữ nhưng không phải luôn luôn."
+  },
+  {
+    "input": "trẻ tự kỷ có cần dùng thuốc không",
+    "output": "Không có thuốc chữa khỏi tự kỷ. Tuy nhiên, thuốc có thể được sử dụng để kiểm soát các triệu chứng đi kèm như tăng động, lo âu, trầm cảm hoặc hành vi gây hấn. Việc dùng thuốc phải do bác sĩ chuyên khoa thần kinh hoặc tâm thần nhi quyết định."
+  },
+  {
+    "input": "tự kỷ có học được kỹ năng sống không",
+    "output": "Trẻ tự kỷ hoàn toàn có thể học kỹ năng sống nếu được dạy đúng cách và kiên trì. Các chương trình như TEACCH, ABA hoặc huấn luyện cá nhân giúp trẻ phát triển khả năng tự chăm sóc, giao tiếp và thích nghi với môi trường."
+  },
+  {
+    "input": "tự kỷ có thể làm việc như người bình thường không",
+    "output": "Nhiều người tự kỷ, đặc biệt ở mức độ nhẹ hoặc trung bình, có thể làm việc bình thường nếu được đào tạo và hỗ trợ phù hợp. Một số người thậm chí có năng lực vượt trội trong các lĩnh vực kỹ thuật, công nghệ, nghệ thuật."
+  },
+  {
+    "input": "tự kỷ có kết hôn được không",
+    "output": "Người tự kỷ có thể kết hôn và xây dựng mối quan hệ nếu được hỗ trợ phát triển kỹ năng xã hội. Tuy nhiên, việc này phụ thuộc vào mức độ tự lập, khả năng giao tiếp và sự chấp nhận từ người bạn đời."
+  },
+  {
+    "input": "trẻ tự kỷ có bị động kinh không",
+    "output": "Khoảng 20–30% trẻ tự kỷ có thể mắc kèm động kinh. Nguy cơ này cao hơn ở trẻ tự kỷ có chậm phát triển trí tuệ. Việc phát hiện và điều trị sớm giúp kiểm soát tốt triệu chứng."
+  },
+  {
+    "input": "trẻ tự kỷ có thể khỏi khi lớn lên không",
+    "output": "Tự kỷ không tự khỏi khi lớn lên, nhưng triệu chứng có thể giảm dần nếu được can thiệp đúng cách từ sớm. Nhiều người trưởng thành với ASD vẫn cần hỗ trợ nhưng có thể sống độc lập và hòa nhập xã hội tốt hơn."
+  },
+  {
+    "input": "tự kỷ có phải là bệnh tâm thần không",
+    "output": "Tự kỷ không phải là bệnh tâm thần mà là rối loạn phát triển thần kinh. Tuy nhiên, người tự kỷ có thể mắc kèm các rối loạn tâm thần như lo âu, trầm cảm hoặc rối loạn ám ảnh cưỡng chế. Cần phân biệt rõ để điều trị đúng."
+  },
+  {
+    "input": "tự kỷ có bị khiếm khuyết trí tuệ không",
+    "output": "Không phải tất cả người tự kỷ đều có khiếm khuyết trí tuệ. Khoảng 30–40% người tự kỷ có trí tuệ bình thường hoặc cao. Một số người lại kèm chậm phát triển trí tuệ. Đánh giá IQ và khả năng thích nghi giúp xác định mức độ."
+  },
+  {
+    "input": "trẻ tự kỷ có cần học trường chuyên biệt không",
+    "output": "Không phải trẻ tự kỷ nào cũng cần học trường chuyên biệt. Nếu trẻ có thể theo kịp chương trình và nhận được hỗ trợ phù hợp, các em vẫn có thể học ở trường bình thường. Tuy nhiên, trẻ có mức độ nặng nên học tại trường chuyên biệt để được can thiệp tốt hơn."
+  },
+  {
+    "input": "tự kỷ có phải do tiêm vaccine không",
+    "output": "Không. Nhiều nghiên cứu khoa học lớn trên thế giới đã bác bỏ hoàn toàn mối liên hệ giữa vaccine và tự kỷ. Vaccine không gây ra tự kỷ. Thông tin sai lệch trước đây đã bị rút lại và tác giả nghiên cứu đó bị tước chứng chỉ hành nghề."
+  },
+  {
+    "input": "trẻ tự kỷ có chơi với bạn được không",
+    "output": "Trẻ tự kỷ thường gặp khó khăn trong tương tác xã hội nên việc chơi với bạn bè có thể hạn chế. Tuy nhiên, nếu được can thiệp và hướng dẫn kỹ năng xã hội đúng cách, nhiều trẻ có thể dần học được cách chơi và kết bạn."
+  },
+  {
+    "input": "tự kỷ có phải bị rối loạn tâm thần không",
+    "output": "Không. Tự kỷ là rối loạn phát triển thần kinh, khác với rối loạn tâm thần như tâm thần phân liệt hay hoang tưởng. Tuy nhiên, một số người tự kỷ có thể mắc thêm rối loạn tâm thần và cần điều trị đồng thời."
+  },
+  {
+    "input": "trẻ tự kỷ có hiểu lời người khác nói không",
+    "output": "Nhiều trẻ tự kỷ có thể hiểu lời nói ở mức độ nào đó, tùy theo mức độ nặng nhẹ. Một số trẻ có khả năng hiểu rất tốt nhưng không thể diễn đạt bằng lời. Đánh giá ngôn ngữ tiếp nhận và diễn đạt là cần thiết để biết rõ hơn."
+  },
+  {
+    "input": "trẻ tự kỷ có thể học nói không",
+    "output": "Có. Với can thiệp sớm như trị liệu ngôn ngữ, trị liệu hành vi và hỗ trợ giao tiếp thay thế (AAC), nhiều trẻ tự kỷ có thể học nói hoặc ít nhất giao tiếp hiệu quả bằng phương tiện khác như tranh ảnh, cử chỉ, thiết bị điện tử."
+  },
+  {
+    "input": "trẻ tự kỷ có thể học viết không",
+    "output": "Trẻ tự kỷ có thể học viết nếu được hướng dẫn kiên trì và đúng phương pháp. Một số trẻ có khả năng viết tốt hơn nói, nhất là với trẻ có hội chứng Asperger hoặc tự kỷ chức năng cao. Cần cá nhân hóa chương trình học để phù hợp năng lực."
+  },
+  {
+    "input": "tự kỷ có phải do dùng thiết bị điện tử nhiều không",
+    "output": "Hiện chưa có bằng chứng khoa học cho thấy thiết bị điện tử gây ra tự kỷ. Tuy nhiên, sử dụng thiết bị quá mức có thể làm trầm trọng thêm biểu hiện giao tiếp kém hoặc chậm phát triển ngôn ngữ ở trẻ có nguy cơ. Cần cân bằng sử dụng công nghệ."
+  },
+  {
+    "input": "trẻ tự kỷ có nói dối được không",
+    "output": "Trẻ tự kỷ thường gặp khó khăn với khái niệm nói dối do liên quan đến lý thuyết tâm trí (hiểu người khác nghĩ gì). Tuy nhiên, trẻ mức độ nhẹ hoặc có can thiệp tốt có thể học được hành vi nói dối mang tính xã hội như bao người."
+  },
+  {
+    "input": "tự kỷ có bị phân biệt đối xử không",
+    "output": "Rất nhiều người tự kỷ phải đối mặt với sự kỳ thị và thiếu hiểu biết từ xã hội. Việc nâng cao nhận thức cộng đồng và xây dựng môi trường hòa nhập là rất quan trọng để người tự kỷ được tôn trọng và có cơ hội phát triển."
+  },
+  {
+    "input": "trẻ tự kỷ có dễ bị lạm dụng không",
+    "output": "Trẻ tự kỷ có nguy cơ cao bị lạm dụng do khó giao tiếp, khó báo cáo và dễ bị tổn thương. Phụ huynh, nhà trường và cộng đồng cần được huấn luyện để nhận biết, phòng tránh và bảo vệ trẻ khỏi các nguy cơ xâm hại."
+  },
+  {
+    "input": "tự kỷ có thể học đại học không",
+    "output": "Nhiều người tự kỷ, đặc biệt là người có chức năng cao, vẫn học đại học và thậm chí có thành tích tốt. Họ có thể cần sự hỗ trợ về môi trường học tập, kỹ năng xã hội và linh hoạt học thuật để thích nghi tốt."
+  },
+  {
+    "input": "tự kỷ có biểu hiện ở người lớn không",
+    "output": "Có. Nhiều người lớn mới được chẩn đoán tự kỷ khi các dấu hiệu không rõ ràng từ nhỏ. Biểu hiện ở người lớn có thể là khó khăn trong giao tiếp, linh hoạt hành vi, lo âu xã hội, hoặc ám ảnh với một số chủ đề."
+  },
+  {
+    "input": "người lớn tự kỷ có kết bạn được không",
+    "output": "Người lớn tự kỷ có thể kết bạn nếu có kỹ năng xã hội phù hợp hoặc được hỗ trợ học cách xây dựng mối quan hệ. Một số người có thể chỉ thích kết nối sâu với ít người thay vì có nhiều bạn bè."
+  },
+  {
+    "input": "tự kỷ có liên quan đến giới tính không",
+    "output": "Tỷ lệ tự kỷ cao hơn ở nam giới (khoảng 4 nam:1 nữ). Tuy nhiên, biểu hiện ở nữ thường kín đáo hơn, dễ bị bỏ sót. Ngoài ra, người tự kỷ cũng có xu hướng đa dạng hơn về bản dạng giới và xu hướng tính dục so với dân số chung."
+  },
+  {
+    "input": "tự kỷ có liên quan đến sinh non không",
+    "output": "Trẻ sinh non, đặc biệt dưới 32 tuần tuổi thai, có nguy cơ cao hơn mắc rối loạn phát triển thần kinh, bao gồm cả tự kỷ. Tuy nhiên, sinh non không phải là nguyên nhân trực tiếp gây tự kỷ mà chỉ là yếu tố nguy cơ."
+  },
+  {
+    "input": "tự kỷ có liên quan đến ngộ độc thai kỳ không",
+    "output": "Một số nghiên cứu cho thấy ngộ độc thai kỳ (tiền sản giật), nhiễm trùng thai kỳ hoặc các biến chứng trong quá trình mang thai có thể làm tăng nguy cơ rối loạn phát triển thần kinh, bao gồm cả tự kỷ. Nhưng mối liên hệ này vẫn đang được nghiên cứu thêm."
+  },
+  {
+    "input": "trẻ tự kỷ có nên đi học mẫu giáo không",
+    "output": "Có. Trẻ tự kỷ nên đi học mẫu giáo để được hòa nhập xã hội, học kỹ năng giao tiếp và thích nghi. Trường học cần có giáo viên hiểu biết về tự kỷ và chương trình hỗ trợ phù hợp để trẻ phát triển tốt hơn."
+  },
+  {
+    "input": "cha mẹ có con tự kỷ nên làm gì",
+    "output": "Cha mẹ nên tìm hiểu đúng thông tin về tự kỷ, đưa trẻ đi đánh giá chuyên môn, bắt đầu can thiệp sớm (ABA, trị liệu ngôn ngữ...) và tham gia vào các nhóm hỗ trợ để đồng hành cùng con. Quan trọng là không đổ lỗi và giữ tâm lý vững vàng."
+  },
+  {
+    "input": "tự kỷ có thể phát hiện qua xét nghiệm không",
+    "output": "Hiện không có xét nghiệm máu hay hình ảnh học nào chẩn đoán được tự kỷ. Chẩn đoán dựa trên đánh giá hành vi, phát triển và sử dụng các công cụ như DSM-5, ADOS-2, M-CHAT. Một số xét nghiệm di truyền có thể được dùng để tìm nguyên nhân liên quan."
+  },
+  {
+    "input": "trẻ tự kỷ có cần đi khám định kỳ không",
+    "output": "Có. Trẻ tự kỷ cần được theo dõi định kỳ để đánh giá tiến triển, điều chỉnh kế hoạch can thiệp và phát hiện các vấn đề kèm theo như động kinh, lo âu, rối loạn tiêu hóa hoặc khó ngủ. Việc này nên được thực hiện bởi bác sĩ chuyên khoa phát triển thần kinh hoặc tâm lý nhi."
+  },
+  {
+    "input": "trẻ tự kỷ có ngủ ngon không",
+    "output": "Nhiều trẻ tự kỷ gặp vấn đề về giấc ngủ như khó vào giấc, thức dậy giữa đêm, ngủ không sâu. Nguyên nhân có thể do rối loạn cảm giác, hormone melatonin hoặc lo âu. Điều chỉnh môi trường ngủ, liệu pháp hành vi và bổ sung melatonin (nếu bác sĩ chỉ định) có thể giúp cải thiện."
+  },
+  {
+    "input": "tự kỷ có ảnh hưởng đến tiêu hóa không",
+    "output": "Một số trẻ tự kỷ gặp vấn đề về tiêu hóa như táo bón, tiêu chảy, đau bụng không rõ nguyên nhân. Dù chưa xác định được nguyên nhân chính xác, mối liên hệ giữa trục ruột-não (gut-brain axis) đang được nghiên cứu. Chế độ ăn hợp lý và điều trị y khoa là cần thiết."
+  },
+  {
+    "input": "trẻ tự kỷ có kén ăn không",
+    "output": "Có. Trẻ tự kỷ thường kén ăn do rối loạn cảm giác với mùi vị, kết cấu hoặc màu sắc. Một số trẻ chỉ ăn vài món quen thuộc. Trị liệu hoạt động (OT) kết hợp tư vấn dinh dưỡng có thể giúp cải thiện hành vi ăn uống."
+  },
+  {
+    "input": "trẻ tự kỷ có cần vật lý trị liệu không",
+    "output": "Trẻ tự kỷ có thể cần vật lý trị liệu nếu có khó khăn về vận động thô (đi, chạy, giữ thăng bằng) hoặc tư thế. Vật lý trị liệu giúp cải thiện khả năng vận động, phối hợp cơ thể và tăng khả năng tham gia hoạt động hằng ngày."
+  },
+  {
+    "input": "trẻ tự kỷ có đi lại bình thường không",
+    "output": "Phần lớn trẻ tự kỷ có khả năng đi lại bình thường. Tuy nhiên, một số trẻ có thể chậm phát triển vận động, dáng đi bất thường hoặc phối hợp kém. Đánh giá phát triển và vật lý trị liệu có thể giúp cải thiện nếu cần thiết."
+  },
+  {
+    "input": "trẻ tự kỷ có giỏi toán không",
+    "output": "Một số trẻ tự kỷ có khả năng vượt trội trong các lĩnh vực như toán học, ghi nhớ, hoặc nhận diện mẫu. Đây là dạng thiên hướng đặc biệt còn gọi là 'khả năng thiên tài cục bộ' (savant skills). Tuy nhiên, không phải trẻ nào cũng có đặc điểm này."
+  },
+  {
+    "input": "tự kỷ có điều trị bằng đông y được không",
+    "output": "Hiện chưa có bằng chứng khoa học xác đáng cho thấy đông y điều trị hiệu quả tự kỷ. Một số bài thuốc có thể hỗ trợ giấc ngủ, giảm lo âu nếu dùng đúng cách, nhưng không thay thế được can thiệp hành vi và ngôn ngữ chuẩn hóa."
+  },
+  {
+    "input": "tự kỷ có chữa bằng tế bào gốc được không",
+    "output": "Cho đến nay, chưa có đủ bằng chứng khoa học vững chắc cho thấy điều trị tự kỷ bằng tế bào gốc là hiệu quả và an toàn. Các hiệp hội y khoa lớn không khuyến nghị sử dụng tế bào gốc cho mục đích này ngoài thử nghiệm lâm sàng nghiêm ngặt."
+  },
+  {
+    "input": "tự kỷ có chữa bằng oxy cao áp không",
+    "output": "Liệu pháp oxy cao áp (HBOT) không được khuyến nghị điều trị tự kỷ do thiếu bằng chứng hiệu quả rõ ràng. Một số nghiên cứu nhỏ cho thấy cải thiện nhẹ, nhưng chưa đủ thuyết phục. Cần tham khảo ý kiến chuyên gia trước khi áp dụng."
+  },
+  {
+    "input": "có nên cho trẻ tự kỷ uống omega 3 không",
+    "output": "Một số nghiên cứu cho thấy omega-3 có thể hỗ trợ phát triển não và hành vi ở trẻ tự kỷ, nhưng hiệu quả chưa nhất quán. Bổ sung chỉ nên thực hiện nếu có chỉ định của bác sĩ, và không thay thế các phương pháp can thiệp hành vi – giáo dục."
+  },
+  {
+    "input": "tự kỷ có nên ăn kiêng gluten và casein không",
+    "output": "Chế độ ăn không gluten (bột mì) và casein (sữa) đôi khi được áp dụng cho trẻ tự kỷ, nhất là nếu có vấn đề tiêu hóa. Tuy nhiên, hiệu quả chưa được chứng minh chắc chắn. Việc ăn kiêng cần theo dõi bởi chuyên gia dinh dưỡng để tránh thiếu chất."
+  },
+  {
+    "input": "trẻ tự kỷ có bị dị ứng không",
+    "output": "Tỷ lệ trẻ tự kỷ mắc dị ứng (thực phẩm, hô hấp, da...) cao hơn một chút so với trẻ bình thường. Một số giả thuyết cho rằng hệ miễn dịch và phản ứng viêm có thể liên quan đến tự kỷ, nhưng chưa rõ ràng. Việc kiểm soát dị ứng vẫn rất quan trọng."
+  },
+  {
+    "input": "tự kỷ có phải là do rối loạn di truyền không",
+    "output": "Có. Nhiều nghiên cứu đã xác định một số gen liên quan đến nguy cơ mắc tự kỷ, đặc biệt là trong các ca có tiền sử gia đình. Tuy nhiên, tự kỷ là rối loạn phức tạp do tương tác giữa di truyền và môi trường, không phải do 1 gen duy nhất."
+  },
+  {
+    "input": "người tự kỷ có thể tự lập không",
+    "output": "Khả năng tự lập phụ thuộc vào mức độ tự kỷ và sự can thiệp sớm. Nhiều người tự kỷ chức năng cao có thể sống độc lập, làm việc, quản lý tài chính, và có gia đình. Tuy nhiên, một số trường hợp cần hỗ trợ suốt đời."
+  },
+  {
+    "input": "tự kỷ có liên quan đến cảm giác không",
+    "output": "Có. Trẻ tự kỷ thường có rối loạn xử lý cảm giác – quá nhạy hoặc kém nhạy với âm thanh, ánh sáng, mùi, tiếp xúc. Điều này ảnh hưởng đến hành vi và tương tác. Trị liệu cảm giác (SI) có thể giúp cải thiện phản ứng cảm giác phù hợp hơn."
+  },
+  {
+    "input": "người tự kỷ có khả năng đặc biệt không",
+    "output": "Một số người tự kỷ có khả năng vượt trội ở một số lĩnh vực như âm nhạc, toán học, nghệ thuật, trí nhớ – gọi là thiên tài cục bộ (savant). Tuy nhiên, đây là số ít và không phải đặc điểm phổ biến của tất cả người tự kỷ."
+  },
+  {
+    "input": "tự kỷ có di truyền từ mẹ hay bố nhiều hơn",
+    "output": "Cả cha và mẹ đều có thể truyền gen nguy cơ tự kỷ cho con. Một số nghiên cứu cho thấy di truyền từ mẹ có thể biểu hiện nhẹ hơn hoặc ẩn, trong khi gen từ cha dễ biểu hiện rõ hơn – nhưng còn đang được tiếp tục nghiên cứu."
+  },
+  {
+    "input": "tự kỷ có thể dự phòng được không",
+    "output": "Không thể dự phòng hoàn toàn tự kỷ vì có yếu tố di truyền và sinh học. Tuy nhiên, việc chăm sóc sức khỏe thai kỳ tốt, giảm phơi nhiễm với hóa chất, kiểm soát stress và can thiệp sớm nếu có nguy cơ có thể giúp cải thiện tiên lượng."
+  },
+  {
+    "input": "trẻ tự kỷ có nên học năng khiếu không",
+    "output": "Có. Nếu trẻ có hứng thú hoặc năng lực đặc biệt, nên tạo điều kiện cho các em học năng khiếu để phát triển thế mạnh, tăng tự tin và hòa nhập xã hội. Dạy năng khiếu cần linh hoạt, kiên trì và phù hợp với khả năng tiếp nhận của trẻ."
+  },
+  {
+    "input": "tự kỷ có liên quan đến thiếu vitamin D không",
+    "output": "Một số nghiên cứu gợi ý rằng thiếu vitamin D trong thai kỳ hoặc thời thơ ấu có thể liên quan đến nguy cơ tự kỷ. Tuy nhiên, chưa đủ bằng chứng để khẳng định chắc chắn. Bổ sung vitamin D nên theo hướng dẫn của bác sĩ."
+  },
+  {
+    "input": "tự kỷ có thể nhận diện từ sơ sinh không",
+    "output": "Tự kỷ thường chưa thể chẩn đoán chắc chắn từ sơ sinh, nhưng có thể có dấu hiệu cảnh báo như không giao tiếp mắt, không phản ứng với âm thanh, ít cử động xã hội. Sàng lọc sớm từ 12–18 tháng giúp phát hiện sớm nguy cơ ASD."
+  },
+  {
+    "input": "tự kỷ có cần trị liệu âm nhạc không",
+    "output": "Trị liệu âm nhạc có thể hỗ trợ trẻ tự kỷ phát triển ngôn ngữ, giao tiếp và điều tiết cảm xúc. Đây không phải là phương pháp điều trị chính nhưng có thể kết hợp cùng ABA, trị liệu ngôn ngữ hoặc giáo dục đặc biệt để tăng hiệu quả can thiệp."
+  },
+  {
+    "input": "tự kỷ có cần trị liệu nghệ thuật không",
+    "output": "Trị liệu nghệ thuật có thể giúp trẻ tự kỷ thể hiện cảm xúc, giảm lo âu và cải thiện kỹ năng xã hội. Dù không thay thế can thiệp hành vi chính thống, phương pháp này có thể hỗ trợ tốt về mặt tâm lý nếu thực hiện bởi chuyên gia có kinh nghiệm."
+  },
+  {
+    "input": "tự kỷ có nên học song ngữ không",
+    "output": "Nhiều nghiên cứu cho thấy học song ngữ không gây hại cho trẻ tự kỷ. Nếu trẻ đã có nền tảng tốt ở ngôn ngữ mẹ đẻ, học song ngữ có thể giúp linh hoạt nhận thức. Tuy nhiên, cần cá nhân hóa dựa trên năng lực và theo dõi sát tiến trình học tập."
+  },
+  {
+    "input": "trẻ tự kỷ có bị lo âu không",
+    "output": "Có. Trẻ tự kỷ dễ bị lo âu do nhạy cảm cảm giác, thay đổi thói quen hoặc khó hiểu tình huống xã hội. Lo âu có thể biểu hiện qua hành vi kích động, thu mình hoặc từ chối giao tiếp. Trị liệu nhận thức hành vi và môi trường ổn định giúp cải thiện."
+  },
+  {
+    "input": "người tự kỷ có thích nghi được với xã hội không",
+    "output": "Với hỗ trợ phù hợp, nhiều người tự kỷ có thể học được kỹ năng xã hội và thích nghi tốt với môi trường sống. Quá trình này cần thời gian, sự kiên trì và giáo dục phù hợp từ gia đình, nhà trường và xã hội."
+  },
+  {
+    "input": "tự kỷ có nguy cơ tái phát ở con thứ không",
+    "output": "Nếu gia đình có một trẻ tự kỷ, nguy cơ con thứ cũng mắc cao hơn dân số chung (từ 10–20%). Tuy nhiên, không phải trường hợp nào cũng xảy ra. Theo dõi sát và can thiệp sớm nếu thấy dấu hiệu giúp cải thiện kết quả."
+  },
+  {
+    "input": "tự kỷ có cần xét nghiệm di truyền không",
+    "output": "Trong một số trường hợp, bác sĩ có thể chỉ định xét nghiệm di truyền (ví dụ: microarray, Fragile X...) để tìm nguyên nhân sinh học. Xét nghiệm không phải lúc nào cũng ra kết quả cụ thể, nhưng có thể hữu ích nếu có dị tật kèm theo hoặc tiền sử gia đình."
+  },
+  {
+    "input": "tự kỷ ám thị có phải tự thôi miên không",
+    "output": "Tự kỷ ám thị là hiện tượng lặp đi lặp lại một câu nói hoặc suy nghĩ để tác động lên tâm lý, như câu khích lệ bản thân. Đây là khái niệm trong tâm lý học, không liên quan đến rối loạn phổ tự kỷ (ASD)."
+  },
+  {
+    "input": "bé tự kỷ 5 tuổi",
+    "output": "Ở tuổi 5, trẻ tự kỷ có thể có các biểu hiện như chậm nói, không chơi giả vờ, không kết nối xã hội, hành vi lặp lại hoặc phản ứng bất thường với âm thanh. Việc đánh giá chuyên môn sớm sẽ giúp can thiệp hiệu quả hơn."
+  },
+  {
+    "input": "tự kỷ thoái lui có chữa được không",
+    "output": "Tự kỷ thoái lui là dạng tự kỷ trong đó trẻ mất kỹ năng ngôn ngữ hoặc giao tiếp sau khi đã có. Tuy không chữa khỏi hoàn toàn, nhưng nếu can thiệp sớm bằng liệu pháp hành vi, ngôn ngữ, trẻ vẫn có thể cải thiện rõ rệt."
+  },
+  {
+    "input": "tự kỷ tăng động có chữa được không",
+    "output": "Tự kỷ kèm tăng động (ADHD) cần can thiệp đa mô thức gồm trị liệu hành vi, trị liệu ngôn ngữ và có thể dùng thuốc hỗ trợ nếu cần. Trị liệu cá nhân hóa giúp cải thiện chất lượng sống cho trẻ."
+  },
+  {
+    "input": "tự kỷ bẩm sinh có chữa được không",
+    "output": "Tự kỷ có yếu tố di truyền và bẩm sinh là chủ yếu, không thể chữa khỏi hoàn toàn. Tuy nhiên, phát hiện sớm và can thiệp đúng giúp trẻ phát triển tốt hơn về giao tiếp và kỹ năng xã hội."
+  },
+  {
+    "input": "tự kỷ nhẹ có chữa được không",
+    "output": "Tự kỷ nhẹ có tiên lượng tốt hơn nếu được can thiệp sớm bằng liệu pháp hành vi, ngôn ngữ và hỗ trợ giáo dục. Trẻ có thể học hòa nhập và sống tự lập ở mức độ nhất định."
+  },
+  {
+    "input": "tự kỷ có chữa được không",
+    "output": "Tự kỷ không thể chữa khỏi hoàn toàn, nhưng có thể cải thiện đáng kể nếu phát hiện và can thiệp sớm bằng các liệu pháp như ABA, trị liệu ngôn ngữ, giáo dục đặc biệt và hỗ trợ gia đình."
+  },
+  {
+    "input": "tự kỷ dấu hiệu",
+    "output": "Dấu hiệu tự kỷ có thể bao gồm: không nhìn vào mắt, không phản ứng khi gọi tên, không biết chỉ tay, ít nói, có hành vi lặp lại và khó thích nghi với thay đổi. Dấu hiệu rõ nhất thường xuất hiện từ 18–24 tháng."
+  },
+  {
+    "input": "trẻ sơ sinh có dấu hiệu tự kỷ không",
+    "output": "Một số dấu hiệu rất sớm có thể xuất hiện từ dưới 12 tháng như không giao tiếp mắt, không cười xã hội, không phản ứng với âm thanh, không chỉ tay. Tuy nhiên cần chẩn đoán phân biệt và theo dõi thêm."
+  },
+  {
+    "input": "bé tự kỷ",
+    "output": "Tự kỷ (ASD) là rối loạn phát triển thần kinh ảnh hưởng đến giao tiếp, tương tác xã hội và hành vi. Biểu hiện khác nhau ở từng trẻ, cần đánh giá chuyên môn để xác định mức độ và hướng can thiệp."
+  },
+  {
+    "input": "nhận biết sớm trẻ tự kỷ qua hành vi",
+    "output": "Một số hành vi sớm như không giao tiếp mắt, không phản ứng khi gọi tên, không chơi giả vờ, có hành vi lặp lại có thể là dấu hiệu của tự kỷ. Phát hiện sớm giúp can thiệp hiệu quả hơn."
+  },
+  {
+    "input": "phát hiện sớm trẻ tự kỷ qua giao tiếp",
+    "output": "Trẻ tự kỷ thường chậm hoặc thiếu ngôn ngữ, không dùng điệu bộ như chỉ tay, gật đầu, không đáp lại khi gọi tên. Đây là dấu hiệu quan trọng để sàng lọc tự kỷ từ sớm."
+  },
+  {
+    "input": "tự kỷ và trầm cảm khác gì nhau",
+    "output": "Tự kỷ là rối loạn phát triển thần kinh bẩm sinh, còn trầm cảm là rối loạn khí sắc. Một số biểu hiện như thu mình, ít giao tiếp có thể giống nhau, nhưng nguyên nhân và điều trị hoàn toàn khác biệt."
+  },
+  {
+    "input": "tự kỷ và phổ tự kỷ khác nhau như thế nào",
+    "output": "Tự kỷ là một dạng nằm trong rối loạn phổ tự kỷ (ASD). 'Phổ' biểu thị sự đa dạng mức độ từ nhẹ đến nặng. Do đó, hai khái niệm này không đối lập mà mang tính bao hàm."
+  },
+  {
+    "input": "phân biệt tự kỷ và tăng động",
+    "output": "Tự kỷ và tăng động giảm chú ý (ADHD) đều là rối loạn phát triển thần kinh. Tự kỷ thiên về khó khăn giao tiếp xã hội và hành vi lặp lại, còn ADHD liên quan đến mất tập trung, bốc đồng và hiếu động."
+  },
+  {
+    "input": "trẻ 2 tuổi không nói có bị tự kỷ không",
+    "output": "Không nói ở tuổi lên 2 là dấu hiệu cần lưu ý, nhưng không đủ để chẩn đoán tự kỷ. Cần đánh giá thêm các kỹ năng xã hội, giao tiếp phi ngôn ngữ và hành vi khác."
+  },
+  {
+    "input": "trẻ tự kỷ có thông minh không",
+    "output": "Một số trẻ tự kỷ có trí tuệ bình thường hoặc vượt trội trong lĩnh vực cụ thể như toán học, âm nhạc, ghi nhớ. Tuy nhiên, vẫn có nhiều trẻ kèm chậm phát triển trí tuệ. Trí thông minh ở trẻ tự kỷ rất đa dạng."
+  },
+  {
+    "input": "tự kỷ có nên học hòa nhập không",
+    "output": "Nếu trẻ có khả năng giao tiếp cơ bản và kiểm soát hành vi ở mức chấp nhận được, việc học hòa nhập là có lợi. Trường học cần có chương trình cá nhân hóa và hỗ trợ từ giáo viên chuyên biệt."
+  },
+  {
+    "input": "tự kỷ có nguy hiểm không",
+    "output": "Tự kỷ không nguy hiểm nhưng ảnh hưởng lâu dài đến cuộc sống nếu không được can thiệp. Một số trẻ có hành vi tự làm đau hoặc mất an toàn. Giám sát và trị liệu đúng giúp kiểm soát tốt các nguy cơ này."
+  },
+  {
+    "input": "tự kỷ có cần uống thuốc không",
+    "output": "Tự kỷ không có thuốc điều trị đặc hiệu. Tuy nhiên, nếu trẻ có kèm tăng động, lo âu, rối loạn giấc ngủ… bác sĩ có thể chỉ định thuốc hỗ trợ. Dùng thuốc phải kết hợp với trị liệu hành vi."
+  },
+  {
+    "input": "tự kỷ và rối loạn ngôn ngữ khác gì nhau",
+    "output": "Rối loạn ngôn ngữ chủ yếu ảnh hưởng khả năng hiểu và diễn đạt ngôn ngữ, trong khi tự kỷ còn liên quan đến hành vi và giao tiếp xã hội. Một số trẻ tự kỷ có rối loạn ngôn ngữ đi kèm."
+  },
+  {
+    "input": "tự kỷ có thể chữa bằng tế bào gốc không",
+    "output": "Hiện chưa có bằng chứng khoa học xác đáng cho thấy điều trị tự kỷ bằng tế bào gốc là hiệu quả và an toàn. Các tổ chức y khoa không khuyến nghị phương pháp này ngoài phạm vi nghiên cứu lâm sàng nghiêm ngặt."
+  },
+  {
+    "input": "tự kỷ có cần trị liệu âm nhạc không",
+    "output": "Trị liệu âm nhạc có thể giúp trẻ tự kỷ cải thiện kỹ năng giao tiếp, điều tiết cảm xúc và chú ý. Đây là phương pháp hỗ trợ, không thay thế cho can thiệp hành vi chính thống như ABA."
+  },
+  {
+    "input": "tự kỷ có nên ăn kiêng gluten casein không",
+    "output": "Một số cha mẹ áp dụng chế độ ăn không gluten, casein cho trẻ tự kỷ, đặc biệt nếu có rối loạn tiêu hóa. Tuy nhiên, hiệu quả chưa được chứng minh rõ ràng. Nên tham khảo ý kiến chuyên gia dinh dưỡng."
+  },
+  {
+    "input": "tự kỷ có di truyền không",
+    "output": "Tự kỷ có yếu tố di truyền rõ ràng. Nhiều nghiên cứu cho thấy nguy cơ cao hơn nếu trong gia đình có người mắc ASD. Tuy nhiên, yếu tố môi trường trước và sau sinh cũng đóng vai trò quan trọng."
+  },
+  {
+    "input": "tự kỷ có nên học song ngữ không",
+    "output": "Không có bằng chứng cho thấy học song ngữ gây hại cho trẻ tự kỷ. Nếu trẻ có nền tảng ngôn ngữ tốt, học song ngữ có thể giúp linh hoạt nhận thức. Tuy nhiên cần cá nhân hóa dựa vào khả năng của trẻ."
+  },
+  {
+    "input": "test tự kỷ online có đáng tin không",
+    "output": "Test online như M-CHAT chỉ mang tính sàng lọc sơ bộ, không thay thế được đánh giá lâm sàng. Kết quả chỉ mang tính tham khảo, cần khám chuyên gia để xác định chính xác."
+  },
+  {
+    "input": "trẻ tự kỷ có biết thương cha mẹ không",
+    "output": "Có. Trẻ tự kỷ vẫn có cảm xúc và sự gắn bó, nhưng cách thể hiện có thể khác với trẻ điển hình. Các em thường biểu lộ tình cảm qua hành vi, cử chỉ thay vì lời nói rõ ràng."
+  },
+  {
+    "input": "tự kỷ có chơi với bạn được không",
+    "output": "Trẻ tự kỷ có thể gặp khó khăn trong chơi với bạn, nhưng nếu được can thiệp kỹ năng xã hội, trẻ có thể học cách tương tác, chia sẻ và tham gia nhóm. Can thiệp sớm giúp cải thiện kỹ năng này."
+  },
+  {
+    "input": "tự kỷ có hiểu cảm xúc người khác không",
+    "output": "Trẻ tự kỷ thường khó nhận biết và hiểu cảm xúc người khác do hạn chế về lý thuyết tâm trí. Tuy nhiên, kỹ năng này có thể được cải thiện qua trị liệu xã hội – cảm xúc chuyên biệt."
+  },
+  {
+    "input": "tự kỷ có thích nghi được với thay đổi không",
+    "output": "Trẻ tự kỷ thường khó thay đổi thói quen hoặc môi trường, dễ lo âu hoặc bùng nổ nếu có thay đổi đột ngột. Cần tập luyện dần kỹ năng thích nghi bằng cách chuẩn bị trước và sử dụng hình ảnh, câu chuyện xã hội."
+  },
+  {
+    "input": "tự kỷ có cần học kỹ năng sống không",
+    "output": "Có. Trẻ tự kỷ cần được dạy kỹ năng tự phục vụ, giao tiếp, an toàn cá nhân… bằng phương pháp trực quan, lặp lại và hỗ trợ tích cực để tăng khả năng độc lập."
+  },
+  {
+    "input": "tự kỷ có thể có khả năng đặc biệt không",
+    "output": "Một số trẻ tự kỷ có khả năng đặc biệt (savant) trong lĩnh vực như âm nhạc, toán học, trí nhớ. Tuy nhiên, đây là số ít. Phát hiện và phát huy thế mạnh của từng trẻ là rất quan trọng."
+  },
+  {
+    "input": "tự kỷ có phải là bệnh tâm thần không",
+    "output": "Không. Tự kỷ là rối loạn phát triển thần kinh, không phải bệnh tâm thần. Tuy nhiên, người tự kỷ có thể mắc đồng thời rối loạn tâm thần như lo âu, trầm cảm nếu không được hỗ trợ tốt."
+  },
+  {
+    "input": "tự kỷ có chữa bằng tâm linh được không",
+    "output": "Không có bằng chứng khoa học cho thấy tâm linh chữa được tự kỷ. Việc can thiệp cần dựa trên liệu pháp hành vi, ngôn ngữ và giáo dục đặc biệt. Không nên để lạc hướng hoặc bỏ lỡ thời điểm can thiệp sớm."
+  },
+  {
+    "input": "tự kỷ có dễ bị tổn thương không",
+    "output": "Có. Trẻ tự kỷ dễ bị tổn thương do thiếu kỹ năng bảo vệ bản thân, khó nhận biết nguy hiểm hoặc bị lợi dụng. Gia đình, trường học cần tăng cường kỹ năng phòng vệ và bảo vệ trẻ."
+  },
+  {
+    "input": "tự kỷ có thể trở thành người bình thường không",
+    "output": "Tự kỷ là tình trạng suốt đời. Tuy không trở thành 'bình thường' như người không mắc ASD, nhưng trẻ có thể phát triển gần như bình thường nếu can thiệp đúng cách và phù hợp với mức độ nhẹ."
+  },
+  {
+    "input": "tự kỷ có thể kết hôn không",
+    "output": "Người tự kỷ, đặc biệt ở mức độ nhẹ hoặc chức năng cao, vẫn có thể kết hôn và xây dựng mối quan hệ nếu có sự hỗ trợ và thấu hiểu từ bạn đời. Việc giáo dục giới tính và kỹ năng xã hội là rất quan trọng."
+  },
+  {
+    "input": "trẻ tự kỷ có thể tự lập không",
+    "output": "Tùy mức độ tự kỷ. Trẻ tự kỷ nhẹ hoặc có can thiệp sớm, hỗ trợ tốt có thể học kỹ năng sống và đạt mức độ tự lập nhất định. Trẻ nặng hơn có thể cần hỗ trợ lâu dài trong cuộc sống hàng ngày."
+  },
+  {
+    "input": "trẻ tự kỷ có cần can thiệp sớm không",
+    "output": "Có. Can thiệp sớm là yếu tố quan trọng nhất giúp cải thiện kỹ năng giao tiếp, hành vi và nhận thức ở trẻ tự kỷ. Thời điểm vàng thường trước 3 tuổi với các liệu pháp như ABA, TEACCH, trị liệu ngôn ngữ."
+  },
+  {
+    "input": "tự kỷ có cần học kỹ năng xã hội không",
+    "output": "Có. Trẻ tự kỷ thường thiếu hụt kỹ năng xã hội nên cần được dạy qua các hoạt động mô phỏng, trị liệu nhóm, và huấn luyện giao tiếp thực tế. Đây là yếu tố quan trọng giúp trẻ hòa nhập xã hội."
+  },
+  {
+    "input": "tự kỷ có bị coi là bệnh không",
+    "output": "Tự kỷ không phải là bệnh mà là một rối loạn phát triển thần kinh. Không thể 'chữa khỏi', nhưng có thể cải thiện nhờ can thiệp hành vi, ngôn ngữ, giáo dục và hỗ trợ xã hội."
+  },
+  {
+    "input": "tự kỷ có dễ bị cô lập không",
+    "output": "Có. Trẻ tự kỷ thường khó hiểu cảm xúc người khác, không biết cách duy trì mối quan hệ nên dễ bị cô lập. Cần hỗ trợ kỹ năng xã hội và tạo môi trường hòa nhập tích cực."
+  },
+  {
+    "input": "trẻ tự kỷ có bị bạn bè xa lánh không",
+    "output": "Có thể. Do khác biệt trong giao tiếp, hành vi và biểu hiện cảm xúc, trẻ tự kỷ dễ bị hiểu lầm hoặc xa lánh. Cần giáo dục hòa nhập cho cả bạn bè xung quanh và tăng cường hỗ trợ xã hội cho trẻ."
+  },
+  {
+    "input": "tự kỷ có học được đại học không",
+    "output": "Một số người tự kỷ chức năng cao hoặc Asperger có thể học đại học nếu được hỗ trợ kỹ năng xã hội, quản lý thời gian và môi trường học linh hoạt. Không phải ai cũng phù hợp với mô hình học thuật truyền thống."
+  },
+  {
+    "input": "tự kỷ có khả năng giao tiếp không",
+    "output": "Tùy mức độ. Trẻ nhẹ có thể sử dụng lời nói, trẻ nặng có thể cần hỗ trợ bằng tranh, ký hiệu hoặc thiết bị AAC. Giao tiếp là kỹ năng cần được dạy và luyện tập sớm cho trẻ tự kỷ."
+  },
+  {
+    "input": "tự kỷ có cần trị liệu ngôn ngữ không",
+    "output": "Có. Trẻ tự kỷ thường gặp khó khăn trong ngôn ngữ diễn đạt và ngôn ngữ tiếp nhận. Trị liệu ngôn ngữ giúp cải thiện khả năng giao tiếp, hiểu lời nói và tăng khả năng hòa nhập xã hội."
+  },
+  {
+    "input": "tự kỷ có phải do bố mẹ gây ra không",
+    "output": "Không. Nghiên cứu khoa học khẳng định tự kỷ không phải do cách nuôi dạy của cha mẹ mà chủ yếu do yếu tố di truyền và sinh học. Quan tâm đúng cách giúp cải thiện tình trạng, nhưng không gây ra tự kỷ."
+  },
+  {
+    "input": "tự kỷ có nên dùng thuốc an thần không",
+    "output": "Không dùng thuốc an thần bừa bãi cho trẻ tự kỷ. Nếu trẻ có rối loạn giấc ngủ, lo âu, hành vi gây hấn... bác sĩ có thể chỉ định thuốc chuyên biệt. Việc dùng thuốc cần đánh giá kỹ và theo dõi chặt chẽ."
+  },
+  {
+    "input": "tự kỷ có phải do rối loạn cảm giác không",
+    "output": "Rối loạn cảm giác là biểu hiện phổ biến trong tự kỷ chứ không phải nguyên nhân gây ra. Trẻ có thể quá nhạy hoặc kém nhạy với âm thanh, ánh sáng, mùi vị... Trị liệu cảm giác giúp cải thiện điều này."
+  },
+  {
+    "input": "tự kỷ có do tiêm vaccine không",
+    "output": "Không. Nhiều nghiên cứu lớn trên thế giới đã chứng minh vaccine không gây ra tự kỷ. Nghiên cứu cũ từng gây hiểu lầm đã bị rút lại và bị phản đối mạnh mẽ bởi cộng đồng y khoa."
+  },
+  {
+    "input": "tự kỷ có cần học kỹ năng tự phục vụ không",
+    "output": "Có. Dạy kỹ năng như mặc đồ, vệ sinh cá nhân, ăn uống giúp trẻ tự kỷ nâng cao khả năng độc lập. Cần chia nhỏ bước, dùng hình ảnh minh họa và lặp lại nhiều lần trong môi trường thực tế."
+  },
+  {
+    "input": "tự kỷ có được đi học bình thường không",
+    "output": "Nếu trẻ ở mức độ nhẹ hoặc trung bình và có hỗ trợ phù hợp, trẻ có thể học tại trường bình thường. Trẻ nặng hơn có thể cần học trường chuyên biệt hoặc lớp hòa nhập có hỗ trợ cá nhân."
+  },
+  {
+    "input": "trẻ tự kỷ có khả năng học viết không",
+    "output": "Có. Trẻ tự kỷ có thể học viết nếu được hướng dẫn phù hợp, tập luyện kiên trì và hỗ trợ về vận động tinh. Một số trẻ cần dùng phương tiện thay thế như bảng chữ cái rời, máy tính bảng hỗ trợ."
+  },
+  {
+    "input": "tự kỷ có nên dùng phương pháp ABA không",
+    "output": "ABA (Applied Behavior Analysis) là một trong những phương pháp can thiệp hiệu quả nhất cho trẻ tự kỷ, được chứng minh bởi nhiều nghiên cứu. Tuy nhiên cần được cá nhân hóa và giám sát bởi chuyên gia được đào tạo."
+  },
+  {
+    "input": "tự kỷ có phải là khi không biết nói không",
+    "output": "Không hẳn. Không nói có thể là biểu hiện của tự kỷ nhưng không đủ để chẩn đoán. Nhiều trẻ tự kỷ vẫn nói được nhưng thiếu kỹ năng giao tiếp xã hội, dùng từ không phù hợp ngữ cảnh, hoặc nói lặp lại."
+  },
+  {
+    "input": "tự kỷ có phải là rối loạn tâm thần không",
+    "output": "Tự kỷ là rối loạn phát triển thần kinh, không phải bệnh tâm thần. Tuy nhiên, người tự kỷ có thể mắc kèm các rối loạn tâm thần như trầm cảm, lo âu hoặc rối loạn ám ảnh cưỡng chế."
+  },
+  {
+    "input": "tự kỷ có bị rối loạn học tập không",
+    "output": "Một số trẻ tự kỷ kèm theo rối loạn học tập như khó đọc, khó viết, khó tính toán. Cần đánh giá cụ thể để điều chỉnh phương pháp dạy học phù hợp."
+  },
+  {
+    "input": "tự kỷ có cần theo dõi định kỳ không",
+    "output": "Có. Trẻ tự kỷ cần được theo dõi định kỳ về phát triển tâm lý, hành vi, ngôn ngữ và sức khỏe tổng quát. Điều này giúp điều chỉnh kế hoạch can thiệp và phát hiện các rối loạn kèm theo."
+  },
+  {
+    "input": "tự kỷ có học được kỹ năng cảm xúc không",
+    "output": "Có. Trẻ tự kỷ có thể học phân biệt cảm xúc, nhận biết cảm xúc người khác và điều tiết cảm xúc bản thân thông qua trị liệu xã hội–cảm xúc, trò chơi mô phỏng và câu chuyện xã hội."
+  },
+  {
+    "input": "tự kỷ có nên học trung tâm chuyên biệt không",
+    "output": "Trẻ tự kỷ mức độ trung bình đến nặng nên học tại trung tâm can thiệp chuyên biệt để được hỗ trợ cá nhân hóa. Trẻ nhẹ có thể học hòa nhập nếu có sự hỗ trợ từ giáo viên và chương trình cá nhân hóa."
+  },
+  {
+    "input": "tự kỷ có nên trị liệu nghệ thuật không",
+    "output": "Trị liệu nghệ thuật (vẽ, nặn đất, kịch…) có thể giúp trẻ tự kỷ diễn đạt cảm xúc, giảm lo âu và tăng khả năng tương tác. Đây là phương pháp bổ trợ tốt khi kết hợp với trị liệu chính."
+  },
+  {
+    "input": "tự kỷ có cần tập thể dục không",
+    "output": "Có. Thể dục giúp trẻ tự kỷ cải thiện thể chất, điều tiết cảm xúc, tăng khả năng tập trung và hòa nhập xã hội. Nên chọn hoạt động phù hợp với sở thích và khả năng của trẻ."
+  },
+  {
+    "input": "tự kỷ có cần giáo dục giới tính không",
+    "output": "Có. Trẻ tự kỷ vẫn phát triển về sinh lý nên cần được giáo dục giới tính phù hợp với mức độ hiểu biết. Nội dung nên đơn giản, trực quan, dạy cả kỹ năng tự bảo vệ bản thân."
+  },
+  {
+    "input": "tự kỷ có cần hỗ trợ pháp lý không",
+    "output": "Người tự kỷ có thể cần hỗ trợ pháp lý liên quan đến quyền giáo dục, y tế, lao động hoặc bảo vệ quyền lợi trong cộng đồng. Gia đình cần tìm hiểu chính sách hỗ trợ của nhà nước và tổ chức xã hội."
+  },
+  {
+    "input": "tự kỷ có thể phát hiện trước sinh không",
+    "output": "Hiện chưa có xét nghiệm chẩn đoán tự kỷ trước sinh. Một số xét nghiệm di truyền có thể phát hiện nguy cơ cao, nhưng không xác định chắc chắn trẻ sẽ mắc ASD. Việc phát hiện chủ yếu dựa vào quan sát hành vi sau sinh."
+  },
+  {
+    "input": "trẻ tự kỷ có nên học toán không",
+    "output": "Có. Nhiều trẻ tự kỷ học tốt toán nhờ khả năng ghi nhớ và nhận diện mẫu. Cần cá nhân hóa phương pháp dạy, sử dụng hình ảnh, trực quan sinh động để tăng hứng thú học tập."
+  },
+  {
+    "input": "tự kỷ có bị rối loạn tiêu hóa không",
+    "output": "Khoảng 20–40% trẻ tự kỷ có các vấn đề tiêu hóa như táo bón, tiêu chảy, đau bụng. Nguyên nhân có thể do chế độ ăn, rối loạn vi sinh đường ruột hoặc lo âu. Cần theo dõi và điều trị nếu có triệu chứng."
+  },
+  {
+    "input": "trẻ tự kỷ có thể kết bạn không",
+    "output": "Có. Trẻ tự kỷ có thể học cách kết bạn nếu được hướng dẫn kỹ năng xã hội, hỗ trợ từ môi trường giáo dục và gia đình. Việc luyện tập qua các tình huống mô phỏng và can thiệp nhóm giúp trẻ cải thiện kỹ năng này."
+  },
+  {
+    "input": "tự kỷ có phải bệnh bẩm sinh không",
+    "output": "Tự kỷ là rối loạn phát triển thần kinh, thường có yếu tố bẩm sinh và di truyền. Tuy nhiên, các yếu tố môi trường trong thai kỳ hoặc sau sinh cũng có thể ảnh hưởng đến mức độ biểu hiện."
+  },
+  {
+    "input": "trẻ tự kỷ có dễ tức giận không",
+    "output": "Một số trẻ tự kỷ có khó khăn trong điều tiết cảm xúc nên dễ cáu gắt, la hét hoặc phản ứng mạnh. Trị liệu hành vi và hỗ trợ cảm xúc giúp trẻ học cách kiểm soát cảm xúc tốt hơn."
+  },
+  {
+    "input": "trẻ tự kỷ có biết buồn không",
+    "output": "Có. Trẻ tự kỷ vẫn có cảm xúc như buồn, vui, tức giận... nhưng cách thể hiện có thể khác với trẻ bình thường. Trẻ có thể buồn mà không diễn đạt rõ hoặc thể hiện qua hành vi bất thường."
+  },
+  {
+    "input": "tự kỷ có nên chơi thể thao không",
+    "output": "Có. Thể thao giúp trẻ tự kỷ phát triển thể chất, cải thiện sự chú ý, tăng tương tác xã hội và điều tiết cảm xúc. Nên chọn môn thể thao phù hợp với khả năng và sở thích của trẻ."
+  },
+  {
+    "input": "tự kỷ có học được kỹ năng làm việc nhóm không",
+    "output": "Có thể. Trẻ tự kỷ cần được hướng dẫn cụ thể và luyện tập nhiều để học cách chia sẻ, chờ lượt, hợp tác. Việc tham gia các hoạt động nhóm nhỏ và can thiệp xã hội giúp cải thiện kỹ năng này."
+  },
+  {
+    "input": "trẻ tự kỷ có nói dối không",
+    "output": "Một số trẻ tự kỷ gặp khó khăn trong việc hiểu khái niệm nói dối do ảnh hưởng đến lý thuyết tâm trí (theory of mind). Tuy nhiên, trẻ vẫn có thể học phân biệt đúng – sai và hành vi xã hội nếu được hướng dẫn phù hợp."
+  },
+  {
+    "input": "tự kỷ có cần dạy kỹ năng phòng vệ không",
+    "output": "Có. Trẻ tự kỷ dễ bị xâm hại hoặc lừa gạt nếu không được dạy kỹ năng phòng vệ. Cần hướng dẫn cách từ chối, bảo vệ cơ thể, nhận biết tình huống nguy hiểm bằng ngôn ngữ đơn giản và minh họa trực quan."
+  },
+  {
+    "input": "tự kỷ có học được kỹ năng giao tiếp phi ngôn ngữ không",
+    "output": "Có. Trẻ tự kỷ có thể học cách dùng ánh mắt, nét mặt, cử chỉ để giao tiếp nếu được luyện tập sớm. Trị liệu xã hội – cảm xúc và trò chơi mô phỏng giúp trẻ phát triển kỹ năng này."
+  },
+  {
+    "input": "trẻ tự kỷ có thích nghi với trường học không",
+    "output": "Nếu được hỗ trợ phù hợp, trẻ tự kỷ có thể thích nghi với môi trường học. Cần có giáo viên hiểu về ASD, chương trình cá nhân hóa và môi trường học bao dung, linh hoạt."
+  },
+  {
+    "input": "tự kỷ có khả năng tư duy logic không",
+    "output": "Một số trẻ tự kỷ có tư duy logic tốt, đặc biệt trong các lĩnh vực như toán học, máy tính, trò chơi chiến lược. Tuy nhiên, khả năng này không đồng đều ở tất cả trẻ và cần được phát hiện – phát huy đúng cách."
+  },
+  {
+    "input": "trẻ tự kỷ có giỏi vẽ không",
+    "output": "Một số trẻ tự kỷ có khả năng vượt trội về hội họa, đặc biệt là ghi nhớ chi tiết và phối cảnh. Tuy nhiên, không phải tất cả trẻ tự kỷ đều giỏi vẽ. Cần quan sát để phát hiện năng khiếu riêng của trẻ."
+  },
+  {
+    "input": "tự kỷ có thể bị trầm cảm không",
+    "output": "Có. Người tự kỷ có nguy cơ trầm cảm cao hơn, đặc biệt ở tuổi dậy thì hoặc người trưởng thành. Các dấu hiệu có thể khó phát hiện do trẻ ít diễn đạt. Cần quan sát kỹ thay đổi hành vi và cảm xúc."
+  },
+  {
+    "input": "tự kỷ có cần trị liệu hành vi không",
+    "output": "Có. Trị liệu hành vi (như ABA) giúp trẻ học kỹ năng mới, giảm hành vi không phù hợp và tăng khả năng thích nghi xã hội. Đây là phương pháp can thiệp nền tảng cho phần lớn trẻ tự kỷ."
+  },
+  {
+    "input": "ABA là gì",
+    "output": "ABA (Applied Behavior Analysis) là liệu pháp phân tích hành vi ứng dụng, dùng để dạy kỹ năng và giảm hành vi không phù hợp ở trẻ tự kỷ thông qua tăng cường tích cực và phân tích hành vi rõ ràng."
+  },
+  {
+    "input": "TEACCH là gì",
+    "output": "TEACCH là phương pháp can thiệp cho trẻ tự kỷ dựa vào cấu trúc hóa môi trường học, hình ảnh hóa thông tin và hỗ trợ khả năng tự lập. Phù hợp với trẻ cần hỗ trợ trực quan trong học tập và sinh hoạt."
+  },
+  {
+    "input": "PECS là gì",
+    "output": "PECS (Picture Exchange Communication System) là hệ thống giao tiếp bằng hình ảnh dành cho trẻ gặp khó khăn ngôn ngữ. Trẻ dùng thẻ hình để yêu cầu hoặc giao tiếp với người khác."
+  },
+  {
+    "input": "trẻ tự kỷ có cần dạy giao tiếp không lời không",
+    "output": "Có. Trẻ tự kỷ thường gặp khó khăn trong giao tiếp không lời như ánh mắt, cử chỉ. Dạy giao tiếp không lời giúp trẻ hiểu tín hiệu xã hội và cải thiện tương tác xã hội."
+  },
+  {
+    "input": "tự kỷ có chơi giả vờ không",
+    "output": "Một trong các dấu hiệu của tự kỷ là thiếu kỹ năng chơi giả vờ (pretend play). Tuy nhiên, kỹ năng này có thể được dạy qua mô hình hóa, chơi cùng người lớn hoặc trị liệu chuyên biệt."
+  },
+  {
+    "input": "tự kỷ có thể học được qua hình ảnh không",
+    "output": "Có. Trẻ tự kỷ học tốt qua hình ảnh vì khả năng xử lý ngôn ngữ kém. Các công cụ như flashcard, PECS, lịch trình hình ảnh giúp trẻ tiếp thu thông tin dễ dàng hơn."
+  },
+  {
+    "input": "tự kỷ có bị ám ảnh cưỡng chế không",
+    "output": "Một số trẻ tự kỷ có hành vi lặp lại hoặc nghi thức giống rối loạn ám ảnh cưỡng chế (OCD), nhưng nguyên nhân và cơ chế khác nhau. Cần đánh giá chuyên sâu để phân biệt."
+  },
+  {
+    "input": "tự kỷ có cần can thiệp vận động không",
+    "output": "Có. Nhiều trẻ tự kỷ gặp khó khăn vận động tinh và thô. Vật lý trị liệu hoặc trị liệu hoạt động (OT) giúp cải thiện kỹ năng cầm nắm, thăng bằng, phối hợp tay–mắt."
+  },
+  {
+    "input": "tự kỷ có học võ được không",
+    "output": "Một số môn võ nhẹ như Aikido, Taekwondo cơ bản có thể giúp trẻ tự kỷ rèn luyện thể chất, tập trung và kỹ năng tự vệ. Cần chọn lớp có huấn luyện viên hiểu về trẻ đặc biệt."
+  },
+  {
+    "input": "tự kỷ có bị rối loạn ăn uống không",
+    "output": "Có. Nhiều trẻ tự kỷ kén ăn, ăn chọn lọc theo màu sắc, kết cấu hoặc mùi vị do rối loạn cảm giác. Cần trị liệu ăn uống, can thiệp hành vi và tư vấn dinh dưỡng nếu kéo dài."
+  },
+  {
+    "input": "tự kỷ có bị co giật không",
+    "output": "Khoảng 20–30% người tự kỷ có thể bị co giật hoặc động kinh, đặc biệt ở tuổi dậy thì. Cần theo dõi nếu trẻ có biểu hiện mất ý thức, co cứng hoặc giật cơ bất thường."
+  },
+  {
+    "input": "tự kỷ có dễ bị tai nạn không",
+    "output": "Có. Trẻ tự kỷ có thể không nhận biết nguy hiểm, phản ứng chậm hoặc hành vi bất thường nên dễ gặp tai nạn. Cần tạo môi trường an toàn và dạy kỹ năng phòng tránh tai nạn cho trẻ."
+  },
+  {
+    "input": "tự kỷ có nên tiếp xúc với thiên nhiên không",
+    "output": "Có. Thiên nhiên giúp trẻ giảm căng thẳng, kích thích giác quan tích cực và tăng kỹ năng xã hội qua trải nghiệm ngoài trời. Các hoạt động nên được hướng dẫn và giám sát phù hợp."
+  },
+  {
+    "input": "trẻ tự kỷ có thể phát triển kỹ năng lãnh đạo không",
+    "output": "Một số người tự kỷ chức năng cao có khả năng tổ chức, sáng tạo hoặc tư duy khác biệt. Nếu được hỗ trợ đúng cách, họ vẫn có thể phát triển kỹ năng lãnh đạo trong môi trường phù hợp."
+  },
+  {
+    "input": "tự kỷ có cần tập trung vào thế mạnh không",
+    "output": "Có. Việc phát hiện và phát huy thế mạnh giúp trẻ tự tin, có định hướng phát triển nghề nghiệp và tạo động lực học tập. Cần tạo môi trường để trẻ thể hiện khả năng riêng biệt."
+  },
+  {
+    "input": "tự kỷ có nên tham gia hoạt động nhóm không",
+    "output": "Có. Tham gia hoạt động nhóm giúp trẻ học kỹ năng xã hội, làm việc nhóm và hòa nhập. Nên chọn nhóm phù hợp trình độ và có người hỗ trợ hiểu về trẻ đặc biệt."
+  },
+  {
+    "input": "tự kỷ có cần trị liệu cá nhân không",
+    "output": "Có. Trị liệu cá nhân giúp cá nhân hóa chương trình, tập trung vào điểm yếu và phát triển điểm mạnh của trẻ. Hình thức này hiệu quả trong dạy ngôn ngữ, hành vi và kỹ năng sống."
+  },
+  {
+    "input": "tự kỷ có học được ngoại ngữ không",
+    "output": "Nếu trẻ có nền tảng ngôn ngữ mẹ đẻ tốt, trẻ tự kỷ vẫn có thể học ngoại ngữ. Tuy nhiên, cần dạy từ từ, trực quan, lặp lại và tránh gây quá tải. Mỗi trẻ cần đánh giá riêng trước khi học."
+  },
+  {
+    "input": "tự kỷ có bị bắt nạt học đường không",
+    "output": "Có. Trẻ tự kỷ thường dễ bị bắt nạt do khác biệt trong hành vi, giao tiếp. Cần xây dựng môi trường học đường tích cực, giáo dục bạn bè xung quanh và có chính sách bảo vệ trẻ đặc biệt."
+  },
+  {
+    "input": "trẻ tự kỷ có học nghề được không",
+    "output": "Có. Trẻ tự kỷ có thể học nghề nếu được lựa chọn công việc phù hợp khả năng và sở thích. Các nghề có tính lặp lại, ít giao tiếp phức tạp thường phù hợp hơn. Cần hỗ trợ hướng nghiệp và đào tạo thực tế."
+  },
+  {
+    "input": "tự kỷ có học được kỹ năng thích nghi không",
+    "output": "Có. Kỹ năng thích nghi giúp trẻ tự kỷ hòa nhập xã hội, quản lý cảm xúc và xử lý tình huống. Cần dạy từng bước cụ thể, qua trò chơi, mô hình hóa và lặp lại trong môi trường thực tế."
+  },
+  {
+    "input": "tự kỷ có học được kỹ năng cảm xúc xã hội không",
+    "output": "Có. Trẻ tự kỷ có thể học kỹ năng nhận diện cảm xúc, điều tiết hành vi, thấu hiểu người khác nếu được can thiệp đúng cách qua trị liệu xã hội – cảm xúc, trò chơi tương tác và câu chuyện xã hội."
+  },
+  {
+    "input": "tự kỷ có cần trị liệu hành vi nhận thức (CBT) không",
+    "output": "Trẻ tự kỷ mức độ nhẹ và người lớn tự kỷ có thể hưởng lợi từ trị liệu hành vi nhận thức (CBT) để xử lý lo âu, trầm cảm, suy nghĩ tiêu cực. Tuy nhiên cần cá nhân hóa kỹ thuật và có chuyên gia hiểu về ASD."
+  },
+  {
+    "input": "người lớn tự kỷ có cần can thiệp không",
+    "output": "Có. Người lớn tự kỷ vẫn cần hỗ trợ về kỹ năng xã hội, nghề nghiệp, cảm xúc và sức khỏe tâm thần. Các can thiệp nên tập trung vào độc lập, tự chủ và hòa nhập xã hội."
+  },
+  {
+    "input": "người lớn tự kỷ có cần trị liệu không",
+    "output": "Có. Trị liệu cho người lớn tự kỷ giúp cải thiện kỹ năng giao tiếp, quản lý cảm xúc, lo âu và tăng khả năng sống độc lập. Các hình thức gồm trị liệu tâm lý cá nhân, nhóm hỗ trợ, và hướng nghiệp."
+  },
+  {
+    "input": "tự kỷ có cần trị liệu nhóm không",
+    "output": "Có. Trị liệu nhóm giúp trẻ tự kỷ luyện tập kỹ năng xã hội, học chờ lượt, chia sẻ và phản hồi phù hợp. Đây là môi trường an toàn để thực hành giao tiếp thực tế dưới sự hướng dẫn của chuyên gia."
+  },
+  {
+    "input": "tự kỷ có cần giáo viên chuyên biệt không",
+    "output": "Có. Giáo viên được đào tạo chuyên biệt hiểu cách hỗ trợ trẻ tự kỷ, áp dụng phương pháp giảng dạy phù hợp và xử lý hành vi khó khăn. Điều này giúp trẻ học tập hiệu quả hơn."
+  },
+  {
+    "input": "trẻ tự kỷ có nên dùng điện thoại không",
+    "output": "Nên giới hạn. Trẻ tự kỷ có thể sử dụng điện thoại cho mục đích học tập hoặc giao tiếp hỗ trợ (AAC), nhưng cần kiểm soát thời lượng và nội dung để tránh phụ thuộc và giảm tương tác xã hội thật."
+  },
+  {
+    "input": "tự kỷ có cần trị liệu cảm giác không",
+    "output": "Có. Trẻ tự kỷ có thể quá nhạy hoặc kém nhạy với kích thích cảm giác như âm thanh, ánh sáng, xúc giác. Trị liệu cảm giác giúp trẻ điều hòa phản ứng và tăng khả năng thích nghi với môi trường."
+  },
+  {
+    "input": "trẻ tự kỷ có bị rối loạn giấc ngủ không",
+    "output": "Có. Trẻ tự kỷ thường gặp khó khăn trong việc đi ngủ, thức giấc giữa đêm, hoặc ngủ không sâu. Can thiệp gồm thiết lập lịch ngủ đều đặn, giảm kích thích trước ngủ và có thể hỗ trợ bằng thuốc khi cần."
+  },
+  {
+    "input": "trẻ tự kỷ có bị rối loạn ăn uống không",
+    "output": "Có. Trẻ có thể ăn kén chọn, tránh thực phẩm có kết cấu, màu sắc nhất định. Nguyên nhân có thể do rối loạn cảm giác. Cần trị liệu ăn uống và xây dựng môi trường ăn tích cực."
+  },
+  {
+    "input": "tự kỷ có học được kỹ năng giao tiếp không lời không",
+    "output": "Có. Giao tiếp không lời như ánh mắt, nét mặt, cử chỉ có thể được dạy thông qua mô hình hóa, phản hồi xã hội và trò chơi tương tác. Cần luyện tập thường xuyên trong môi trường phù hợp."
+  },
+  {
+    "input": "tự kỷ có nên chơi trò chơi điện tử không",
+    "output": "Chỉ nên chơi có kiểm soát. Một số trò chơi giáo dục giúp tăng tập trung, tư duy logic. Tuy nhiên, nếu chơi quá mức có thể gây phụ thuộc và giảm tương tác thật. Cần giới hạn thời gian và theo dõi nội dung."
+  },
+  {
+    "input": "tự kỷ có dễ bị sang chấn tâm lý không",
+    "output": "Có. Trẻ tự kỷ nhạy cảm với thay đổi, khó hiểu tình huống xã hội nên dễ bị sang chấn khi bị phạt, bắt nạt hoặc thay đổi đột ngột. Cần xây dựng môi trường an toàn và hỗ trợ tinh thần phù hợp."
+  },
+  {
+    "input": "tự kỷ có nên học âm nhạc không",
+    "output": "Có. Âm nhạc giúp trẻ tự kỷ cải thiện chú ý, biểu cảm và giao tiếp. Nhiều trẻ tự kỷ yêu thích và thể hiện tốt qua âm nhạc. Nên chọn hoạt động đơn giản, nhịp điệu rõ ràng."
+  },
+  {
+    "input": "tự kỷ có nên học mỹ thuật không",
+    "output": "Có. Mỹ thuật là kênh biểu đạt cảm xúc hiệu quả, giúp trẻ phát triển vận động tinh và sáng tạo. Các hoạt động như vẽ, nặn đất, tô màu phù hợp với trẻ ở nhiều mức độ khác nhau."
+  },
+  {
+    "input": "tự kỷ có khả năng sáng tạo không",
+    "output": "Có. Một số người tự kỷ có cách nhìn thế giới khác biệt, khả năng tập trung cao và tư duy chi tiết, giúp phát triển sáng tạo trong nghệ thuật, công nghệ hoặc khoa học. Cần tạo điều kiện phát huy thế mạnh."
+  },
+  {
+    "input": "trẻ tự kỷ có hiểu truyện cổ tích không",
+    "output": "Trẻ tự kỷ có thể gặp khó khăn với các khái niệm trừu tượng, ẩn dụ. Tuy nhiên, nếu truyện được kể qua hình ảnh rõ ràng, nội dung đơn giản thì vẫn có thể hiểu dần và học qua truyện."
+  },
+  {
+    "input": "tự kỷ có học được kỹ năng làm việc không",
+    "output": "Có. Người tự kỷ có thể làm việc hiệu quả nếu công việc phù hợp khả năng, có hướng dẫn cụ thể và môi trường hỗ trợ. Kỹ năng làm việc nên được dạy từ sớm qua hoạt động thực tế."
+  },
+  {
+    "input": "tự kỷ có khả năng làm việc độc lập không",
+    "output": "Tùy mức độ. Người tự kỷ chức năng cao có thể làm việc độc lập tốt. Người cần hỗ trợ nhiều có thể làm được công việc đơn giản nếu được đào tạo và giám sát phù hợp."
+  },
+  {
+    "input": "tự kỷ có thể tự kiếm sống được không",
+    "output": "Một số người tự kỷ có thể tự kiếm sống nếu có nghề nghiệp phù hợp, kỹ năng tự lập và môi trường hỗ trợ. Cần định hướng nghề sớm và tạo cơ hội thực hành thực tế."
+  },
+  {
+    "input": "tự kỷ có nên sống một mình không",
+    "output": "Tùy từng cá nhân. Người tự kỷ chức năng cao có thể sống một mình nếu biết tự chăm sóc và có hệ thống hỗ trợ. Người cần hỗ trợ nhiều nên sống cùng gia đình hoặc cộng đồng hỗ trợ."
+  },
+  {
+    "input": "tự kỷ có được tuyển dụng không",
+    "output": "Ngày càng nhiều công ty có chương trình tuyển dụng thân thiện với người tự kỷ, đặc biệt trong lĩnh vực CNTT, thiết kế, kiểm thử. Người tự kỷ có thể là nhân sự giá trị nếu công việc phù hợp."
+  },
+  {
+    "input": "tự kỷ có nên yêu không",
+    "output": "Người tự kỷ vẫn có cảm xúc yêu thương. Việc xây dựng mối quan hệ cần hỗ trợ về giao tiếp, hiểu cảm xúc và kỹ năng xã hội. Giáo dục giới tính và hỗ trợ cảm xúc là rất quan trọng."
+  },
+  {
+    "input": "người tự kỷ có thể lập gia đình không",
+    "output": "Một số người tự kỷ có thể lập gia đình nếu có khả năng tự lập, giao tiếp cơ bản và có bạn đời hiểu, hỗ trợ. Cần giáo dục giới tính và kỹ năng quan hệ từ sớm, đặc biệt ở người tự kỷ chức năng cao."
+  },  {
+    "input": "người tự kỷ trưởng thành có đi làm được không",
+    "output": "Có. Người tự kỷ trưởng thành, đặc biệt là ở mức độ nhẹ hoặc có chức năng cao, hoàn toàn có thể đi làm nếu được hỗ trợ phù hợp. Việc lựa chọn công việc nên dựa vào khả năng cá nhân, môi trường thân thiện và có người hướng dẫn."
+  },
+  {
+    "input": "người tự kỷ có kết hôn không",
+    "output": "Có. Người tự kỷ vẫn có thể xây dựng mối quan hệ và kết hôn nếu có kỹ năng xã hội, được giáo dục giới tính đầy đủ và có sự thấu hiểu từ bạn đời. Mức độ hỗ trợ cần thiết phụ thuộc vào khả năng của từng người."
+  },
+  {
+    "input": "người tự kỷ có được hỗ trợ xã hội không",
+    "output": "Có. Nhiều quốc gia có chính sách hỗ trợ người tự kỷ như bảo hiểm y tế, hỗ trợ học tập, hướng nghiệp, nhà ở hoặc bảo trợ xã hội. Gia đình nên tìm hiểu chính sách tại địa phương để đảm bảo quyền lợi."
+  },
+  {
+    "input": "người tự kỷ có được kết hôn theo pháp luật không",
+    "output": "Theo pháp luật Việt Nam và nhiều nước, người tự kỷ vẫn có quyền kết hôn nếu có đủ năng lực hành vi dân sự. Tuy nhiên, người bị hạn chế năng lực hành vi cần có người giám hộ và có thể cần đánh giá cụ thể từ cơ quan pháp lý."
+  },
+  {
+    "input": "người tự kỷ có được miễn nghĩa vụ quân sự không",
+    "output": "Tùy theo mức độ. Người có rối loạn phát triển thần kinh nặng, ảnh hưởng chức năng sống và giao tiếp có thể được miễn hoặc hoãn nghĩa vụ quân sự. Cần có xác nhận y khoa chuyên ngành để làm căn cứ pháp lý."
+  },
+  {
+    "input": "người tự kỷ có cần giấy xác nhận khuyết tật không",
+    "output": "Có. Giấy xác nhận khuyết tật giúp người tự kỷ tiếp cận các chính sách hỗ trợ như học hòa nhập, bảo hiểm y tế, trợ cấp xã hội. Cần được đánh giá bởi hội đồng y tế và cơ quan chức năng địa phương."
+  },
+  {
+    "input": "người tự kỷ có quyền gì theo pháp luật",
+    "output": "Người tự kỷ có quyền được giáo dục, chăm sóc y tế, lao động phù hợp và tham gia xã hội. Luật pháp nhiều quốc gia, trong đó có Việt Nam, công nhận quyền của người khuyết tật và có chính sách bảo vệ quyền lợi."
+  },
+  {
+    "input": "có cộng đồng hỗ trợ người tự kỷ không",
+    "output": "Có. Nhiều tổ chức như Autism Speaks, Autism Society, Hội cha mẹ trẻ tự kỷ Việt Nam… cung cấp thông tin, tư vấn và hỗ trợ cộng đồng cho người tự kỷ và gia đình. Tham gia cộng đồng giúp giảm cô lập và tăng cơ hội phát triển."
+  },
+  {
+    "input": "người tự kỷ có quyền đi học đại học không",
+    "output": "Có. Nếu người tự kỷ đáp ứng yêu cầu học thuật và có khả năng giao tiếp cơ bản, họ hoàn toàn có thể học đại học. Cần có hỗ trợ cá nhân hóa, môi trường học linh hoạt và sự hiểu biết từ nhà trường."
+  },
+  {
+    "input": "người tự kỷ có được tuyển vào công ty không",
+    "output": "Có. Một số công ty đã có chương trình tuyển dụng dành riêng cho người tự kỷ, nhất là trong lĩnh vực CNTT, kiểm thử phần mềm, thiết kế… Với môi trường phù hợp, người tự kỷ có thể là nhân sự giá trị."
+  },
+  {
+    "input": "tự kỷ có cần đánh giá tâm lý không",
+    "output": "Có. Đánh giá tâm lý giúp xác định chính xác tình trạng, mức độ tự kỷ và các rối loạn đi kèm như lo âu, trầm cảm, ADHD. Đây là bước cần thiết để xây dựng kế hoạch can thiệp hiệu quả và phù hợp."
+  },
+  {
+    "input": "tự kỷ có bị coi là thiểu năng trí tuệ không",
+    "output": "Không phải tất cả. Một số trẻ tự kỷ kèm chậm phát triển trí tuệ, nhưng nhiều trẻ có trí tuệ bình thường hoặc cao. Cần đánh giá IQ và khả năng thích nghi để xác định chính xác. Tự kỷ và thiểu năng là hai chẩn đoán khác nhau."
+  },
+  {
+    "input": "tự kỷ có bị kỳ thị không",
+    "output": "Rất tiếc là có. Do thiếu hiểu biết, nhiều người có cái nhìn sai lệch về tự kỷ. Việc tuyên truyền, giáo dục cộng đồng và tạo môi trường bao dung là rất cần thiết để giảm kỳ thị và thúc đẩy hòa nhập."
+  },
+  {
+    "input": "tự kỷ có nên học ở lớp hòa nhập không",
+    "output": "Nếu trẻ có khả năng học tập và kiểm soát hành vi ở mức cơ bản, lớp hòa nhập sẽ giúp trẻ phát triển kỹ năng xã hội và học tập. Tuy nhiên cần có hỗ trợ phù hợp như giáo viên chuyên biệt, chương trình cá nhân hóa."
+  },
+  {
+    "input": "tự kỷ có phải là tự thu mình không",
+    "output": "Tự thu mình là một biểu hiện phổ biến ở người tự kỷ do khó khăn trong tương tác xã hội. Tuy nhiên, không phải ai tự thu mình cũng là tự kỷ. Cần đánh giá thêm các tiêu chí về giao tiếp, hành vi và phát triển để xác định."
+  },
+  {
+    "input": "tự kỷ có bị rối loạn lo âu không",
+    "output": "Có. Tỉ lệ người tự kỷ mắc kèm rối loạn lo âu cao hơn dân số chung. Các biểu hiện có thể là lo âu xã hội, sợ thay đổi, hoảng loạn… Cần trị liệu hành vi nhận thức (CBT) và can thiệp chuyên sâu nếu nặng."
+  },
+  {
+    "input": "tự kỷ có bị trầm cảm không",
+    "output": "Có. Trẻ vị thành niên và người lớn tự kỷ có nguy cơ trầm cảm cao. Biểu hiện có thể khác biệt, đôi khi là tăng hành vi tự làm đau, mất hứng thú, thay đổi ăn ngủ. Cần theo dõi sát và can thiệp tâm lý."
+  },
+  {
+    "input": "tự kỷ có nên đi làm thêm không",
+    "output": "Nếu khả năng và môi trường cho phép, việc đi làm thêm có thể giúp người tự kỷ học kỹ năng làm việc, giao tiếp và tự lập. Tuy nhiên cần chọn công việc phù hợp và có người hỗ trợ ban đầu nếu cần."
+  },
+  {
+    "input": "tự kỷ có làm công việc văn phòng được không",
+    "output": "Có. Một số người tự kỷ phù hợp với công việc văn phòng nếu công việc có cấu trúc rõ ràng, không yêu cầu tương tác xã hội phức tạp và có môi trường yên tĩnh. Cần cá nhân hóa nhiệm vụ và hỗ trợ ban đầu."
+  },
+  {
+    "input": "người tự kỷ có làm việc nhóm được không",
+    "output": "Người tự kỷ có thể làm việc nhóm nếu được huấn luyện kỹ năng xã hội, hướng dẫn rõ ràng vai trò và có môi trường nhóm tích cực. Ban đầu có thể cần hỗ trợ thêm từ đồng đội hoặc người hướng dẫn."
+  },
+  {
+    "input": "tự kỷ có học được kỹ năng cảm xúc không",
+    "output": "Có. Trẻ tự kỷ có thể học phân biệt cảm xúc, nhận biết cảm xúc người khác và điều tiết cảm xúc bản thân thông qua trị liệu xã hội – cảm xúc, trò chơi mô phỏng và câu chuyện xã hội."
+  },
+  {
+    "input": "trẻ tự kỷ có nên học thể dục thể thao không",
+    "output": "Có. Hoạt động thể dục thể thao giúp trẻ tự kỷ phát triển vận động, giảm hành vi tiêu cực và tăng cơ hội tương tác xã hội. Nên lựa chọn môn phù hợp khả năng và có người hướng dẫn hiểu về ASD."
+  },
+  {
+    "input": "tự kỷ có được học trường công không",
+    "output": "Có. Trẻ tự kỷ có quyền học tại trường công lập theo luật giáo dục hòa nhập. Tuy nhiên, cần có kế hoạch giáo dục cá nhân (IEP) và hỗ trợ chuyên môn từ giáo viên hoặc chuyên viên can thiệp."
+  },
+  {
+    "input": "tự kỷ có quyền biểu đạt ý kiến không",
+    "output": "Có. Người tự kỷ có quyền được lắng nghe và bày tỏ ý kiến theo khả năng của mình. Các công cụ giao tiếp thay thế (AAC) có thể hỗ trợ nếu trẻ không nói được. Đây là quyền được pháp luật bảo vệ."
+  },
+  {
+    "input": "người tự kỷ có quyền truy cập công nghệ thông tin không",
+    "output": "Có. Người tự kỷ có quyền sử dụng công nghệ thông tin như bất kỳ ai khác, đặc biệt khi công nghệ giúp họ học tập, giao tiếp hoặc làm việc hiệu quả hơn. Cần hỗ trợ sử dụng đúng cách và an toàn."
+  },
+  {
+    "input": "trẻ tự kỷ có thể học kỹ năng sống qua công nghệ không",
+    "output": "Có. Nhiều phần mềm, ứng dụng giúp dạy kỹ năng sống cho trẻ tự kỷ thông qua hình ảnh, trò chơi và mô phỏng tình huống. Tuy nhiên, cần có người hướng dẫn để đảm bảo trẻ hiểu đúng nội dung."
+  },
+  {
+    "input": "người tự kỷ có cần giáo dục giới tính không",
+    "output": "Có. Dù khác biệt trong nhận thức, người tự kỷ vẫn trải qua phát triển sinh lý. Giáo dục giới tính giúp họ bảo vệ bản thân, hiểu mối quan hệ lành mạnh và phòng tránh bị xâm hại. Cần phương pháp đơn giản, trực quan."
+  },
+  {
+    "input": "trẻ tự kỷ có được học mẫu giáo không",
+    "output": "Có. Trẻ tự kỷ nên được đi học mẫu giáo để phát triển kỹ năng xã hội và giao tiếp. Nên chọn trường có hỗ trợ hòa nhập hoặc giáo viên hiểu về đặc điểm của trẻ tự kỷ."
+  },
+  {
+    "input": "trẻ tự kỷ có được thi tốt nghiệp không",
+    "output": "Có. Nếu đáp ứng yêu cầu học tập, trẻ tự kỷ có thể tham gia kỳ thi tốt nghiệp. Một số trường hợp có thể được điều chỉnh nội dung hoặc hình thức thi theo hướng dẫn của Bộ Giáo dục – Đào tạo."
+  },
+  {
+    "input": "người tự kỷ có nên học nghề không",
+    "output": "Có. Học nghề phù hợp giúp người tự kỷ phát huy thế mạnh, tăng khả năng độc lập và cơ hội có việc làm. Nên chọn nghề ít yêu cầu giao tiếp phức tạp và có quy trình rõ ràng."
+  },
+  {
+    "input": "tự kỷ có nên học theo chương trình riêng không",
+    "output": "Có. Chương trình học cá nhân hóa (IEP) giúp điều chỉnh nội dung, phương pháp và mục tiêu học tập phù hợp với khả năng của từng trẻ tự kỷ. Đây là nguyên tắc trong giáo dục đặc biệt."
+  },
+  {
+    "input": "trẻ tự kỷ có học vẽ được không",
+    "output": "Có. Nhiều trẻ tự kỷ thể hiện tốt qua mỹ thuật vì đây là hình thức giao tiếp không lời. Vẽ giúp trẻ giải tỏa cảm xúc, phát triển vận động tinh và khả năng quan sát."
+  },
+  {
+    "input": "trẻ tự kỷ có học hát được không",
+    "output": "Có. Âm nhạc giúp cải thiện ngôn ngữ, chú ý và cảm xúc ở trẻ tự kỷ. Việc học hát nên linh hoạt, đơn giản và phù hợp với khả năng phát âm của từng trẻ."
+  },
+  {
+    "input": "tự kỷ có học được lập trình không",
+    "output": "Một số người tự kỷ có khả năng lập trình tốt, nhất là với dạng Asperger hoặc tự kỷ chức năng cao. Họ thường giỏi tư duy logic, tập trung và chú ý chi tiết. Nên được hỗ trợ về kỹ năng mềm và làm việc nhóm."
+  },
+  {
+    "input": "trẻ tự kỷ có cần học toán không",
+    "output": "Có. Trẻ tự kỷ vẫn cần học toán như phần cơ bản của chương trình. Nhiều trẻ giỏi toán nhờ ghi nhớ tốt, nhưng cũng có trẻ gặp khó khăn. Cần cá nhân hóa phương pháp dạy theo khả năng."
+  },
+  {
+    "input": "trẻ tự kỷ có nên học kỹ năng giao tiếp từ nhỏ không",
+    "output": "Có. Càng sớm học kỹ năng giao tiếp, trẻ tự kỷ càng có cơ hội cải thiện khả năng ngôn ngữ và xã hội. Can thiệp lý tưởng bắt đầu trước 3 tuổi với trị liệu ngôn ngữ và xã hội."
+  },
+  {
+    "input": "tự kỷ có được đi du học không",
+    "output": "Có. Nếu người tự kỷ có năng lực học thuật và được hỗ trợ về kỹ năng sống, họ có thể đi du học. Một số trường đại học quốc tế có chính sách hỗ trợ sinh viên khuyết tật, trong đó có ASD."
+  },
+  {
+    "input": "người tự kỷ có học được công nghệ thông tin không",
+    "output": "Có. Công nghệ thông tin là lĩnh vực phù hợp với nhiều người tự kỷ do tính hệ thống, logic và ít giao tiếp phức tạp. Nhiều công ty CNTT đã tuyển dụng người tự kỷ nhờ khả năng tập trung cao và tỉ mỉ."
+  },
+  {
+    "input": "tự kỷ có cần dùng hình ảnh khi học không",
+    "output": "Có. Trẻ tự kỷ thường học tốt hơn qua hình ảnh vì khả năng xử lý ngôn ngữ kém. Việc sử dụng tranh, biểu tượng, sơ đồ giúp trẻ dễ hiểu và ghi nhớ lâu hơn."
+  },
+  {
+    "input": "tự kỷ có học được tiếng Anh không",
+    "output": "Có. Trẻ tự kỷ có thể học tiếng Anh nếu nền tảng tiếng mẹ đẻ tốt và phương pháp phù hợp. Cần trực quan, lặp lại, đơn giản hóa và chú ý đến khó khăn trong giao tiếp hoặc ngữ cảnh xã hội."
+  },
+  {
+    "input": "tự kỷ có chữa khỏi không",
+    "output": "Tự kỷ là rối loạn phát triển thần kinh suốt đời, hiện chưa có phương pháp điều trị dứt điểm. Tuy nhiên, nếu được phát hiện sớm và can thiệp đúng cách, nhiều trẻ có thể cải thiện rõ rệt về giao tiếp, hành vi và kỹ năng xã hội. Trẻ tự kỷ nhẹ có thể học hòa nhập và sống độc lập ở mức độ nhất định."
+  },
+  {
+    "input": "tự kỷ bác học là gì",
+    "output": "Tự kỷ bác học (autistic savant) là tình trạng hiếm gặp khi người tự kỷ sở hữu khả năng đặc biệt vượt trội trong một lĩnh vực như âm nhạc, toán học, nghệ thuật… nhưng vẫn có khó khăn nghiêm trọng trong giao tiếp và tương tác xã hội."
+  },
+  {
+    "input": "tự kỷ chức năng cao là gì",
+    "output": "Tự kỷ chức năng cao (high-functioning autism) là nhóm người tự kỷ có trí tuệ bình thường hoặc cao, khả năng ngôn ngữ tốt, nhưng vẫn gặp khó khăn trong tương tác xã hội, linh hoạt hành vi và cảm xúc."
+  },
+  {
+    "input": "tự kỷ dạng asperger là gì",
+    "output": "Asperger là một dạng của rối loạn phổ tự kỷ, trước đây được xem là chẩn đoán riêng, nay được gộp trong ASD theo DSM-5. Người có Asperger thường thông minh, ngôn ngữ tốt nhưng hạn chế kỹ năng xã hội và linh hoạt hành vi."
+  },
+  {
+    "input": "trẻ tự kỷ có học nội trú được không",
+    "output": "Có. Một số trường nội trú chuyên biệt hoặc trung tâm có chương trình can thiệp phù hợp cho trẻ tự kỷ. Việc học nội trú nên được cân nhắc kỹ dựa trên mức độ tự lập và nhu cầu hỗ trợ của trẻ."
+  },
+  {
+    "input": "người tự kỷ có học cao học được không",
+    "output": "Có. Nếu có khả năng học tập và được hỗ trợ kỹ năng xã hội phù hợp, người tự kỷ chức năng cao có thể theo học cao học. Một số trường có chính sách hỗ trợ cho người khuyết tật trong môi trường học thuật."
+  },
+  {
+    "input": "người tự kỷ có học từ xa được không",
+    "output": "Có. Hình thức học từ xa giúp giảm áp lực giao tiếp xã hội, phù hợp với người tự kỷ thích môi trường yên tĩnh, học theo tốc độ riêng. Tuy nhiên, vẫn cần hỗ trợ kỹ năng công nghệ và tổ chức thời gian."
+  },
+  {
+    "input": "người tự kỷ có nên làm freelancer không",
+    "output": "Freelancer là lựa chọn phù hợp với nhiều người tự kỷ vì tính độc lập, linh hoạt và ít giao tiếp trực tiếp. Tuy nhiên, cần hỗ trợ kỹ năng tổ chức công việc, quản lý thời gian và giao tiếp cơ bản."
+  },
+  {
+    "input": "tự kỷ có thể làm nghệ sĩ không",
+    "output": "Có. Nhiều người tự kỷ có tài năng nghệ thuật như âm nhạc, vẽ tranh, nhiếp ảnh. Nếu được hỗ trợ phát triển thế mạnh, họ có thể trở thành nghệ sĩ chuyên nghiệp."
+  },
+  {
+    "input": "tự kỷ có nên học nghề thủ công không",
+    "output": "Nghề thủ công phù hợp với người tự kỷ có kỹ năng vận động tốt và khả năng tập trung. Đây là lựa chọn giúp rèn luyện tính kiên trì, khả năng sáng tạo và tạo ra sản phẩm cụ thể, có giá trị."
+  },
+  {
+    "input": "tự kỷ có học được kỹ năng tự lập không",
+    "output": "Có. Với can thiệp đúng cách, trẻ tự kỷ có thể học kỹ năng tự lập như vệ sinh cá nhân, ăn uống, sắp xếp đồ đạc. Việc dạy cần rõ ràng, lặp lại và phù hợp với khả năng của từng trẻ."
+  },
+  {
+    "input": "trẻ tự kỷ có cần học kỹ năng tự phục vụ không",
+    "output": "Có. Kỹ năng tự phục vụ như ăn uống, mặc đồ, vệ sinh cá nhân là nền tảng để trẻ tăng tính độc lập. Việc giảng dạy cần cụ thể, có hình ảnh minh họa và tập luyện thường xuyên."
+  },
+  {
+    "input": "tự kỷ có thể đi siêu thị một mình không",
+    "output": "Tùy mức độ. Người tự kỷ chức năng cao có thể tự đi siêu thị nếu đã được dạy kỹ năng xã hội, kỹ năng mua sắm và xử lý tình huống. Người có mức độ nặng hơn cần được giám sát và hỗ trợ."
+  },
+  {
+    "input": "trẻ tự kỷ có thể làm việc nhà không",
+    "output": "Có. Trẻ tự kỷ có thể tham gia làm việc nhà nếu được hướng dẫn cụ thể và phù hợp khả năng. Các công việc đơn giản như lau bàn, cất đồ chơi, gấp quần áo là điểm khởi đầu tốt."
+  },
+  {
+    "input": "người tự kỷ có thể sống tự lập không",
+    "output": "Một số người tự kỷ có thể sống tự lập nếu được dạy kỹ năng sống từ sớm. Người có chức năng cao thường cần ít hỗ trợ hơn. Tuy nhiên, người có mức độ nặng hơn có thể cần hỗ trợ lâu dài."
+  },
+  {
+    "input": "tự kỷ có đi du lịch được không",
+    "output": "Có. Người tự kỷ có thể đi du lịch nếu có sự chuẩn bị kỹ lưỡng: lên lịch trình rõ ràng, mang theo đồ quen thuộc và hỗ trợ về cảm giác. Các hoạt động nên được giới hạn để tránh quá tải."
+  },
+  {
+    "input": "trẻ tự kỷ có tham gia hoạt động ngoại khóa được không",
+    "output": "Có. Hoạt động ngoại khóa giúp trẻ học kỹ năng xã hội, tăng sự tự tin và thích nghi với môi trường mới. Cần chọn hoạt động phù hợp với khả năng và có người hỗ trợ đi kèm khi cần."
+  },
+  {
+    "input": "tự kỷ có đi bơi được không",
+    "output": "Có. Bơi là hoạt động thể chất tốt giúp điều tiết cảm giác, tăng chú ý và giảm lo âu ở trẻ tự kỷ. Cần giám sát an toàn và chọn môi trường ít tiếng ồn, ít người nếu trẻ nhạy cảm."
+  },
+  {
+    "input": "trẻ tự kỷ có cần học kỹ năng an toàn cá nhân không",
+    "output": "Có. Trẻ tự kỷ thường không nhận thức được nguy hiểm nên cần học kỹ năng như không đi theo người lạ, tránh vật sắc nhọn, kỹ năng thoát hiểm… thông qua mô phỏng và lặp lại nhiều lần."
+  },
+  {
+    "input": "tự kỷ có dùng mạng xã hội được không",
+    "output": "Có thể, nếu được hướng dẫn cách sử dụng an toàn. Người tự kỷ cần được dạy về quyền riêng tư, phòng tránh lừa đảo và cách ứng xử phù hợp trên mạng. Cần có người giám sát ban đầu."
+  },
+  {
+    "input": "trẻ tự kỷ có nên nuôi thú cưng không",
+    "output": "Có. Thú cưng giúp trẻ tự kỷ phát triển kỹ năng cảm xúc, trách nhiệm và tạo mối gắn kết. Nên chọn thú cưng hiền lành, dễ chăm sóc và phù hợp với khả năng tương tác của trẻ."
+  },
+  {
+    "input": "người tự kỷ có được học lái xe không",
+    "output": "Tùy vào khả năng. Người tự kỷ chức năng cao có thể học lái xe nếu có nhận thức tốt, kiểm soát cảm xúc và phản xạ phù hợp. Cần có đánh giá y tế, đào tạo phù hợp và giám sát chặt chẽ."
+  },
+  {
+    "input": "tự kỷ có nên học kỹ năng xã hội trong nhóm không",
+    "output": "Có. Trị liệu nhóm giúp trẻ tự kỷ học chờ lượt, chia sẻ, hợp tác và phản ứng xã hội phù hợp. Đây là môi trường an toàn để luyện tập kỹ năng xã hội dưới sự hướng dẫn của chuyên gia."
+  },
+  {
+    "input": "trẻ tự kỷ có cần học kỹ năng kiểm soát cảm xúc không",
+    "output": "Có. Trẻ tự kỷ thường khó kiểm soát cảm xúc nên dễ cáu gắt hoặc quá khích. Dạy kỹ năng này giúp trẻ hiểu và điều tiết cảm xúc phù hợp qua hình ảnh, câu chuyện xã hội và mô phỏng tình huống."
+  },
+  {
+    "input": "tự kỷ có cần trị liệu âm nhạc không",
+    "output": "Trị liệu âm nhạc giúp trẻ tự kỷ cải thiện kỹ năng giao tiếp, cảm xúc và tập trung. Đây là một liệu pháp bổ trợ hiệu quả, đặc biệt với trẻ yêu thích âm thanh và nhịp điệu."
+  },
+  {
+    "input": "người tự kỷ có đi bầu cử được không",
+    "output": "Có. Người tự kỷ đủ 18 tuổi và không bị hạn chế năng lực hành vi dân sự có quyền bầu cử như mọi công dân. Việc tiếp cận thông tin và hướng dẫn bỏ phiếu có thể cần hỗ trợ tùy từng người."
+  },
+  {
+    "input": "trẻ tự kỷ có được đi học đúng độ tuổi không",
+    "output": "Có. Trẻ tự kỷ vẫn có quyền đi học theo độ tuổi quy định. Tuy nhiên, cần đánh giá khả năng học tập để xác định môi trường phù hợp như học hòa nhập, học bán hòa nhập hoặc học chuyên biệt."
+  },
+  {
+    "input": "trẻ tự kỷ có được tham gia biểu diễn văn nghệ không",
+    "output": "Có. Tham gia biểu diễn giúp trẻ tự kỷ tăng tự tin, thể hiện cảm xúc và rèn luyện kỹ năng xã hội. Cần chọn vai trò phù hợp, chuẩn bị kỹ và tạo môi trường tích cực để trẻ cảm thấy an toàn."
+  },
+  {
+    "input": "tự kỷ có được đi máy bay không",
+    "output": "Có. Trẻ tự kỷ có thể đi máy bay nếu được chuẩn bị trước: làm quen với môi trường, mang theo đồ quen thuộc và có người đi cùng hỗ trợ. Một số hãng có chính sách hỗ trợ hành khách đặc biệt."
+  },
+  {
+    "input": "trẻ tự kỷ có thể đi nhà hàng không",
+    "output": "Có. Trẻ tự kỷ có thể đi nhà hàng nếu được chuẩn bị trước về không gian, âm thanh, thời gian chờ và thức ăn. Cần chọn nơi ít ồn ào và mang theo đồ vật giúp trẻ ổn định cảm giác."
+  },
+  {
+    "input": "tự kỷ có thể kết bạn không",
+    "output": "Có. Người tự kỷ có thể kết bạn nếu được hướng dẫn kỹ năng xã hội, giao tiếp phù hợp và có môi trường tích cực. Kết bạn giúp giảm cô lập và tăng chất lượng cuộc sống."
+  },
+  {
+    "input": "trẻ tự kỷ có cần học cách chia sẻ không",
+    "output": "Có. Trẻ tự kỷ thường khó chia sẻ do hạn chế trong hiểu cảm xúc người khác. Việc dạy kỹ năng chia sẻ cần cụ thể, lặp lại và có mô hình hóa bằng hình ảnh, trò chơi hoặc tình huống thực tế."
+  },
+  {
+    "input": "tự kỷ có cần dạy về cảm xúc không",
+    "output": "Có. Dạy trẻ tự kỷ nhận biết và gọi tên cảm xúc giúp cải thiện giao tiếp và hành vi xã hội. Các công cụ như bảng cảm xúc, gương soi nét mặt và trò chơi nhập vai rất hiệu quả."
+  },
+  {
+    "input": "trẻ tự kỷ có được dạy kỹ năng xếp hàng không",
+    "output": "Có. Kỹ năng xếp hàng giúp trẻ học kiên nhẫn, chờ lượt và tương tác đúng mực. Cần dạy theo từng bước cụ thể, minh họa trực quan và luyện tập trong môi trường thực tế như lớp học, siêu thị."
+  },
+  {
+    "input": "trẻ tự kỷ có học được kỹ năng làm theo hướng dẫn không",
+    "output": "Có. Với hướng dẫn rõ ràng, cụ thể và kiên nhẫn, trẻ tự kỷ có thể học làm theo chỉ dẫn đơn giản rồi đến phức tạp hơn. Sử dụng hình ảnh, trình tự từng bước giúp trẻ hiểu nhanh hơn."
+  },
+  {
+    "input": "người tự kỷ có thể làm trong môi trường công sở không",
+    "output": "Có. Người tự kỷ chức năng cao có thể làm việc hiệu quả trong công sở nếu môi trường linh hoạt, ít áp lực giao tiếp và có người hướng dẫn hỗ trợ ban đầu. Họ thường làm tốt công việc mang tính hệ thống, chi tiết."
+  },
+  {
+    "input": "tự kỷ có học được kỹ năng quản lý thời gian không",
+    "output": "Có. Trẻ tự kỷ có thể học kỹ năng quản lý thời gian thông qua lịch trình trực quan, đồng hồ hình ảnh và thói quen rõ ràng. Cần luyện tập đều đặn và có sự hỗ trợ ban đầu từ người lớn."
+  },
+  {
+    "input": "tự kỷ có cần học cách xin lỗi không",
+    "output": "Có. Trẻ tự kỷ cần được dạy cách xin lỗi đúng lúc, đúng cách qua tình huống thực tế hoặc đóng vai. Kỹ năng này giúp trẻ hiểu hậu quả hành vi và duy trì mối quan hệ xã hội."
+  },
+  {
+    "input": "trẻ tự kỷ có học được kỹ năng ra quyết định không",
+    "output": "Có. Dạy trẻ tự kỷ ra quyết định nên bắt đầu bằng lựa chọn đơn giản, cụ thể. Việc luyện tập qua hoạt động thường ngày như chọn đồ ăn, chọn đồ chơi giúp trẻ tăng tự tin và khả năng độc lập."
+  },
+  {
+    "input": "tự kỷ có cần dạy kỹ năng mua sắm không",
+    "output": "Có. Dạy trẻ tự kỷ cách mua sắm giúp phát triển kỹ năng xã hội, tính toán và lập kế hoạch. Cần mô phỏng tình huống thực tế, dùng hình ảnh, danh sách rõ ràng và luyện tập nhiều lần."
+  },
+  {
+    "input": "trẻ tự kỷ có học được kỹ năng ăn uống đúng cách không",
+    "output": "Có. Trẻ tự kỷ cần học cách ăn uống lịch sự, ngồi đúng chỗ, dùng dụng cụ ăn phù hợp. Việc dạy nên cụ thể, dùng hình ảnh minh họa và củng cố tích cực mỗi khi trẻ làm đúng."
+  },
+  {
+    "input": "tự kỷ có học được kỹ năng sử dụng phương tiện công cộng không",
+    "output": "Tùy mức độ. Người tự kỷ chức năng cao có thể học kỹ năng này nếu được dạy từng bước cụ thể: chọn tuyến, mua vé, lên/xuống đúng điểm. Cần luyện tập với người hỗ trợ để đảm bảo an toàn."
+  },
+  {
+    "input": "trẻ tự kỷ có học được kỹ năng sinh hoạt độc lập không",
+    "output": "Có. Với kế hoạch can thiệp rõ ràng, trẻ tự kỷ có thể học dần kỹ năng như tự vệ sinh, thay quần áo, chuẩn bị bữa ăn đơn giản. Cần cá nhân hóa theo khả năng và duy trì luyện tập."
+  },
+  {
+    "input": "người tự kỷ có nên sống tập thể không",
+    "output": "Tùy từng cá nhân. Người tự kỷ chức năng cao có thể sống tập thể nếu môi trường bao dung, có hướng dẫn rõ ràng và hỗ trợ xã hội. Người có khó khăn nhiều hơn nên được hỗ trợ tại cộng đồng nhỏ hoặc gia đình."
+  },
+  {
+    "input": "tự kỷ có cần hỗ trợ khi đi làm không",
+    "output": "Có. Người tự kỷ thường cần hỗ trợ ban đầu khi đi làm: hướng dẫn công việc, quản lý thời gian, hỗ trợ giao tiếp. Một số người có thể độc lập dần theo thời gian, tùy khả năng cá nhân."
+  },
+  {
+    "input": "tự kỷ có cần học kỹ năng ứng xử nơi công cộng không",
+    "output": "Có. Kỹ năng này giúp trẻ tự kỷ hòa nhập xã hội, tránh hiểu lầm hoặc gây phiền toái. Việc dạy nên cụ thể, qua mô hình hóa, chơi vai và luyện tập tại môi trường thực tế như công viên, siêu thị."
+  },
+  {
+    "input": "trẻ tự kỷ có nên học kỹ năng tự bảo vệ không",
+    "output": "Có. Trẻ tự kỷ dễ bị tổn thương do khó phân biệt tình huống nguy hiểm. Việc dạy cần bao gồm nhận diện vùng cơ thể riêng tư, nói không với người lạ, cầu cứu người đáng tin cậy… bằng hình ảnh, video minh họa."
+  },
+  {
+    "input": "tự kỷ có học được kỹ năng đặt câu hỏi không",
+    "output": "Có. Trẻ tự kỷ có thể học cách đặt câu hỏi để giao tiếp, thể hiện nhu cầu. Nên dạy qua kịch bản đơn giản, lặp đi lặp lại, sử dụng hỗ trợ hình ảnh và củng cố tích cực."
+  },
+  {
+    "input": "trẻ tự kỷ có nên được dạy kỹ năng giải quyết xung đột không",
+    "output": "Có. Kỹ năng giải quyết xung đột giúp trẻ ứng xử phù hợp khi bất đồng. Nên dạy bằng cách mô phỏng tình huống, dùng tranh truyện, câu chuyện xã hội và luyện tập trong môi trường có kiểm soát."
+  },
+  {
+    "input": "tự kỷ có cần được dạy về tiền bạc không",
+    "output": "Có. Người tự kỷ cần hiểu giá trị tiền, cách chi tiêu, tiết kiệm và tránh bị lừa đảo. Việc dạy nên thực tế, từng bước, có ví dụ minh họa rõ ràng và luyện tập thường xuyên."
+  },
+  {
+    "input": "tự kỷ có nên học kỹ năng làm việc nhóm không",
+    "output": "Có. Làm việc nhóm giúp trẻ tự kỷ học chia sẻ, phối hợp và tăng khả năng hòa nhập. Nên bắt đầu từ nhóm nhỏ, hoạt động cụ thể và có người hướng dẫn sát sao."
+  },
+  {
+    "input": "tự kỷ có thể học nghề thủ công không",
+    "output": "Có. Nhiều người tự kỷ phù hợp với nghề thủ công vì tính lặp lại, yêu cầu tập trung và không đòi hỏi giao tiếp phức tạp. Nên chọn nghề theo sở thích và khả năng cá nhân."
+  },
+  {
+    "input": "tự kỷ có học được kỹ năng tổ chức không",
+    "output": "Có. Kỹ năng tổ chức giúp trẻ tự kỷ sắp xếp thời gian, vật dụng, không gian sống. Việc dạy nên trực quan, sử dụng bảng thời gian, màu sắc phân loại và luyện tập đều đặn."
+  },
+  {
+    "input": "trẻ tự kỷ có nên học các quy tắc giao thông không",
+    "output": "Có. Học quy tắc giao thông giúp bảo vệ an toàn và tăng khả năng sống độc lập. Nên dạy qua tranh ảnh, video, mô hình và luyện tập thực tế với người giám sát."
+  },
+  {
+    "input": "tự kỷ có nên học kỹ năng giữ gìn vệ sinh nơi công cộng không",
+    "output": "Có. Việc giữ gìn vệ sinh nơi công cộng giúp người tự kỷ thích nghi tốt hơn với xã hội. Nên dạy bằng hình ảnh, mô phỏng tình huống và tăng cường tích cực mỗi khi trẻ thực hiện đúng."
+  },
+  {
+    "input": "trẻ tự kỷ có học được kỹ năng chào hỏi không",
+    "output": "Có. Chào hỏi là kỹ năng giao tiếp cơ bản cần được dạy sớm cho trẻ tự kỷ. Nên dùng mô hình hóa, kịch bản đơn giản và luyện tập lặp lại trong bối cảnh quen thuộc."
+  },
+  {
+    "input": "người tự kỷ có học được kỹ năng sử dụng điện thoại không",
+    "output": "Có. Người tự kỷ có thể học cách gọi, nhắn tin, lưu số khẩn cấp… nếu được hướng dẫn rõ ràng, từng bước và giám sát ban đầu. Một số ứng dụng hỗ trợ giao tiếp cũng rất hữu ích."
+  },
+  {
+    "input": "tự kỷ có cần học kỹ năng xử lý sự cố không",
+    "output": "Có. Kỹ năng này giúp người tự kỷ an toàn và tự lập hơn. Nên dạy các tình huống cụ thể như mất đồ, bị lạc, hư điện thoại… bằng mô phỏng, câu chuyện xã hội và hướng dẫn hành động."
+  },
+  {
+    "input": "trẻ tự kỷ có học được kỹ năng phân biệt cảm xúc người khác không",
+    "output": "Có. Trẻ có thể học phân biệt nét mặt, giọng nói và hành vi thể hiện cảm xúc qua hình ảnh, video hoặc phần mềm chuyên biệt. Việc luyện tập cần kiên nhẫn và nhiều lần."
+  },
+  {
+    "input": "người tự kỷ có học được kỹ năng lập kế hoạch không",
+    "output": "Có. Người tự kỷ có thể học cách lập kế hoạch nếu được hướng dẫn rõ ràng, chia nhỏ từng bước và sử dụng hỗ trợ trực quan như bảng kế hoạch, lịch tranh, hoặc ứng dụng điện tử."
+  },
+  {
+    "input": "tự kỷ có thể học kỹ năng sử dụng tiền không",
+    "output": "Có. Dạy sử dụng tiền giúp người tự kỷ tăng khả năng sống độc lập. Nên bắt đầu từ phân biệt mệnh giá, trả tiền, nhận tiền thối, sau đó là lập ngân sách cá nhân qua luyện tập thực tế."
+  },
+  {
+    "input": "trẻ tự kỷ có nên học kỹ năng phản hồi cảm xúc không",
+    "output": "Có. Phản hồi cảm xúc phù hợp giúp trẻ duy trì quan hệ xã hội. Trẻ có thể học cách nói lời an ủi, chia sẻ hoặc mừng vui đúng lúc nếu được dạy qua trò chơi vai và mô phỏng."
+  },
+  {
+    "input": "tự kỷ có thể học được kỹ năng tự đánh giá không",
+    "output": "Có. Với công cụ hỗ trợ phù hợp như thang đánh giá bằng hình ảnh, bảng điểm hành vi, người tự kỷ có thể học cách nhận biết khi nào mình làm đúng hoặc cần cải thiện điều gì."
+  },
+  {
+    "input": "tự kỷ có học được cách đọc biểu cảm khuôn mặt không",
+    "output": "Có. Người tự kỷ có thể học đọc biểu cảm khuôn mặt qua hình ảnh minh họa, ứng dụng tương tác và luyện tập thực tế với người hướng dẫn. Cần nhiều thời gian và kiên nhẫn."
+  },
+  {
+    "input": "người tự kỷ có học được cách quản lý cảm xúc không",
+    "output": "Có. Việc học quản lý cảm xúc nên bắt đầu từ nhận diện cảm xúc bản thân, sau đó là kỹ năng thư giãn, điều chỉnh phản ứng. Trị liệu tâm lý cá nhân và CBT có thể hỗ trợ hiệu quả."
+  },
+  {
+    "input": "tự kỷ có học được kỹ năng hợp tác không",
+    "output": "Có. Hợp tác là một kỹ năng xã hội cần luyện tập qua các trò chơi có luật, hoạt động nhóm nhỏ và mô hình hóa. Cần khen thưởng rõ ràng để tăng động lực cho trẻ tự kỷ."
+  },
+  {
+    "input": "trẻ tự kỷ có học được kỹ năng xin giúp đỡ không",
+    "output": "Có. Kỹ năng xin giúp đỡ rất quan trọng để trẻ tự kỷ tránh lúng túng hoặc nguy hiểm khi gặp vấn đề. Nên dạy thông qua mẫu câu đơn giản, hình ảnh gợi ý và luyện tập lặp lại."
+  },
+  {
+    "input": "người tự kỷ có học được kỹ năng giải quyết vấn đề không",
+    "output": "Có. Trẻ tự kỷ có thể học cách giải quyết vấn đề nếu được dạy qua kịch bản, phân tích tình huống, lựa chọn phương án và hậu quả. Kỹ năng này giúp tăng tính độc lập và tự tin."
+  },
+  {
+    "input": "tự kỷ có nên luyện tập kỹ năng trả lời điện thoại không",
+    "output": "Có. Trả lời điện thoại giúp trẻ tự kỷ giao tiếp và xử lý tình huống thực tế. Cần dạy qua mô hình hóa, tập đọc kịch bản thoại và thực hành với người thân trong môi trường quen thuộc."
+  },
+  {
+    "input": "trẻ tự kỷ có thể học cách chăm sóc bản thân không",
+    "output": "Có. Tùy mức độ, trẻ tự kỷ có thể học cách tự tắm, thay quần áo, đánh răng… nếu được hướng dẫn từng bước rõ ràng, dùng hình ảnh minh họa và luyện tập thường xuyên trong môi trường quen thuộc."
+  },
+  {
+    "input": "tự kỷ có thể học được cách dùng lịch không",
+    "output": "Có. Người tự kỷ có thể dùng lịch giấy, bảng hình ảnh hoặc ứng dụng điện tử để theo dõi hoạt động. Việc này giúp tăng khả năng tổ chức và giảm lo âu do không biết trước lịch trình."
+  },
+  {
+    "input": "trẻ tự kỷ có học được cách cảm ơn không",
+    "output": "Có. Cảm ơn là kỹ năng giao tiếp cần dạy từ sớm. Trẻ nên học qua mẫu câu cụ thể, chơi vai và khen thưởng mỗi khi thực hiện đúng. Dần dần trẻ sẽ biết dùng cảm ơn trong ngữ cảnh phù hợp."
+  },
+  {
+    "input": "tự kỷ có học được cách kết thúc cuộc trò chuyện không",
+    "output": "Có. Việc kết thúc đúng lúc giúp trẻ giao tiếp lịch sự và giảm xung đột. Nên dạy bằng mẫu hội thoại, tín hiệu hình ảnh hoặc câu kết như 'tạm biệt', 'cảm ơn bạn đã nói chuyện với mình'."
+  },
+  {
+    "input": "trẻ tự kỷ có học được cách giữ khoảng cách cá nhân không",
+    "output": "Có. Trẻ có thể học giữ khoảng cách phù hợp qua hướng dẫn trực tiếp, dùng vòng tròn không gian, dán băng keo đánh dấu và giải thích bằng hình ảnh sinh động."
+  },
+  {
+    "input": "tự kỷ có học được cách cảm nhận mùi không",
+    "output": "Có. Trẻ tự kỷ có thể quá nhạy hoặc kém nhạy với mùi. Trị liệu cảm giác và tiếp xúc có kiểm soát giúp trẻ điều chỉnh phản ứng, nhận biết và phân biệt các mùi phổ biến trong sinh hoạt."
+  },
+  {
+    "input": "tự kỷ có học được cách cảm nhận vị giác không",
+    "output": "Có. Trẻ tự kỷ có thể gặp khó khăn trong phân biệt vị hoặc nhạy cảm quá mức với thức ăn. Trị liệu ăn uống giúp trẻ khám phá mùi vị mới và giảm phản ứng tiêu cực khi ăn uống."
+  },
+  {
+    "input": "trẻ tự kỷ có học được kỹ năng viết không",
+    "output": "Có. Trẻ tự kỷ có thể học viết nếu được hỗ trợ vận động tinh, hướng dẫn từng bước và dùng phương tiện hỗ trợ nếu cần. Việc luyện viết nên kiên nhẫn, trực quan và tích hợp vào hoạt động thường ngày."
+  },
+  {
+    "input": "tự kỷ có thể học nói không",
+    "output": "Tùy mức độ. Một số trẻ tự kỷ có thể phát triển ngôn ngữ lời nói nếu được can thiệp ngôn ngữ sớm, đúng phương pháp. Trẻ nặng hơn có thể cần giao tiếp thay thế như PECS, AAC."
+  },
+  {
+    "input": "tự kỷ có học được cách chờ đợi không",
+    "output": "Có. Trẻ tự kỷ cần học chờ đợi để giảm hành vi bốc đồng. Có thể dạy kỹ năng này qua đồng hồ hình ảnh, bài tập lặp lại, phần thưởng rõ ràng và luyện tập trong bối cảnh thực tế."
+  },
+  {
+    "input": "trẻ tự kỷ có thể học được cách kể chuyện không",
+    "output": "Có. Kể chuyện giúp trẻ tự kỷ phát triển ngôn ngữ, tư duy mạch lạc và giao tiếp. Nên dạy bằng hình ảnh, sơ đồ câu chuyện, mẫu truyện ngắn và luyện tập từng phần trước khi kể trọn vẹn."
+  },
+  {
+    "input": "tự kỷ có học được cách sử dụng máy tính không",
+    "output": "Có. Người tự kỷ thường giỏi công nghệ nếu được hướng dẫn đúng cách. Việc học sử dụng máy tính giúp tăng cơ hội học tập, làm việc và giao tiếp qua phần mềm hỗ trợ."
+  },
+  {
+    "input": "người tự kỷ có thể học được kỹ năng thuyết trình không",
+    "output": "Có. Với hướng dẫn từng bước và luyện tập lặp đi lặp lại, người tự kỷ chức năng cao có thể học kỹ năng thuyết trình. Cần bắt đầu bằng chủ đề quen thuộc, dùng công cụ hỗ trợ như slide hoặc thẻ gợi ý."
+  },
+  {
+    "input": "tự kỷ có học được kỹ năng nhận biết nguy hiểm không",
+    "output": "Có. Trẻ tự kỷ cần học cách phân biệt tình huống nguy hiểm như điện, nước, người lạ… bằng cách mô phỏng tình huống, sử dụng tranh truyện, video hướng dẫn và lặp lại nhiều lần."
+  },
+  {
+    "input": "trẻ tự kỷ có học được cách chăm sóc thú cưng không",
+    "output": "Có. Nếu được hướng dẫn rõ ràng và đơn giản, trẻ tự kỷ có thể chăm sóc thú cưng ở mức cơ bản như cho ăn, chải lông. Việc này giúp trẻ tăng trách nhiệm, cảm xúc tích cực và kỹ năng sinh hoạt."
+  },
+  {
+    "input": "tự kỷ có học được cách đọc sách không",
+    "output": "Có. Trẻ tự kỷ có thể học đọc sách nếu được chọn nội dung phù hợp, trình bày trực quan và luyện tập dần từ từ ngữ đơn giản đến câu chuyện ngắn. Cần khuyến khích và không ép buộc."
+  },
+  {
+    "input": "người tự kỷ có thể học được cách đặt mục tiêu không",
+    "output": "Có. Việc đặt mục tiêu giúp người tự kỷ định hướng hành vi. Cần dạy cách đặt mục tiêu cụ thể, chia nhỏ thành bước thực hiện và sử dụng công cụ hình ảnh hoặc biểu mẫu để theo dõi tiến độ."
+  },
+  {
+    "input": "tự kỷ có thể học được kỹ năng đối thoại không",
+    "output": "Có. Đối thoại giúp trẻ duy trì tương tác xã hội. Cần dạy qua mẫu hội thoại đơn giản, trò chơi nhập vai, hình ảnh gợi ý và thực hành từng bước trong bối cảnh quen thuộc."
+  },
+  {
+    "input": "trẻ tự kỷ có học được kỹ năng trình bày ý kiến không",
+    "output": "Có. Trẻ có thể học trình bày ý kiến nếu được dạy cách dùng câu mở đầu, sử dụng tranh minh họa hoặc hỗ trợ giao tiếp thay thế nếu cần. Cần khuyến khích và luyện tập thường xuyên."
+  },
+  {
+    "input": "người tự kỷ có thể học kỹ năng yêu cầu sự giúp đỡ không",
+    "output": "Có. Đây là kỹ năng thiết yếu để đảm bảo an toàn và tăng tương tác. Dạy bằng hình ảnh minh họa, câu mẫu đơn giản và luyện tập trong bối cảnh thực tế như ở trường, ở nhà, siêu thị..."
+  },
+  {
+    "input": "tự kỷ có học được cách đọc bản đồ không",
+    "output": "Có. Người tự kỷ có thể học cách đọc bản đồ qua luyện tập cụ thể, dùng bản đồ đơn giản, có màu sắc, biểu tượng rõ ràng và mô phỏng tình huống thực tế như tìm đường đến nhà, công viên, trường học."
+  },
+  {
+    "input": "tự kỷ có học được kỹ năng dọn dẹp không",
+    "output": "Có. Trẻ tự kỷ có thể học cách dọn dẹp qua việc chia nhỏ nhiệm vụ, dùng bảng hình ảnh và luyện tập hàng ngày. Khen thưởng và củng cố tích cực giúp duy trì hành vi này lâu dài."
+  },
+  {
+    "input": "trẻ tự kỷ có học được cách tự kiểm tra sức khỏe không",
+    "output": "Có. Trẻ có thể học nhận biết các dấu hiệu bất thường của cơ thể như sốt, đau, mệt. Dạy bằng hình ảnh, mô hình và mô phỏng giúp trẻ biết khi nào cần báo cho người lớn hoặc đi khám."
+  },
+  {
+    "input": "tự kỷ có thể học được cách tự chăm sóc khi ốm không",
+    "output": "Tùy mức độ. Người tự kỷ chức năng cao có thể học cách uống thuốc đúng, nghỉ ngơi, báo người thân khi có dấu hiệu bệnh. Trẻ cần được dạy cụ thể và có hỗ trợ ban đầu."
+  },
+  {
+    "input": "trẻ tự kỷ có học được kỹ năng đi vệ sinh đúng cách không",
+    "output": "Có. Dạy đi vệ sinh cần sử dụng bảng hình ảnh, lịch trình cụ thể và củng cố tích cực. Một số trẻ cần thời gian dài và hỗ trợ liên tục để hình thành thói quen."
+  },
+  {
+    "input": "tự kỷ có học được cách tự điều chỉnh hành vi không",
+    "output": "Có. Trẻ có thể học tự điều chỉnh nếu biết nhận diện cảm xúc, có công cụ hỗ trợ như bảng cảm xúc, kỹ thuật thư giãn, khen thưởng rõ ràng. Cần luyện tập đều đặn trong môi trường quen thuộc."
+  },
+  {
+    "input": "người tự kỷ có học được cách tạo mối quan hệ không",
+    "output": "Có. Người tự kỷ có thể học cách xây dựng mối quan hệ qua hướng dẫn về chào hỏi, duy trì hội thoại, thấu hiểu cảm xúc người khác và luyện tập qua các tình huống xã hội cụ thể."
+  },
+  {
+    "input": "tự kỷ có học được kỹ năng kiểm soát hành vi bốc đồng không",
+    "output": "Có. Dạy kỹ năng kiểm soát hành vi bốc đồng giúp trẻ tự kỷ an toàn hơn. Cần dạy qua kỹ thuật chờ, đếm số, chuyển hướng hoạt động và sử dụng tăng cường tích cực để củng cố hành vi đúng."
+  },
+  {
+    "input": "trẻ tự kỷ có thể học được cách viết nhật ký không",
+    "output": "Có. Viết nhật ký giúp trẻ tự kỷ thể hiện cảm xúc và rèn luyện ngôn ngữ. Có thể bắt đầu từ viết một câu, dùng tranh minh họa và mẫu câu gợi ý. Việc viết có thể thay bằng vẽ nếu cần."
+  },
+  {
+    "input": "người tự kỷ có thể học được kỹ năng giao tiếp qua email không",
+    "output": "Có. Giao tiếp qua email giúp người tự kỷ học cách trình bày ý tưởng rõ ràng. Nên dạy cách viết ngắn gọn, lịch sự, có mẫu câu sẵn và luyện tập với người thân, giáo viên trước khi dùng thật."
+  },
+  {
+    "input": "tự kỷ có học được kỹ năng làm việc theo nhóm không",
+    "output": "Có. Kỹ năng làm việc nhóm có thể được dạy qua trò chơi tương tác, chia vai trò rõ ràng và tăng cường tích cực khi trẻ thực hiện đúng. Cần có người hướng dẫn và môi trường hỗ trợ."
+  },
+  {
+    "input": "người tự kỷ có học được cách viết CV xin việc không",
+    "output": "Có. Người tự kỷ có thể học viết CV nếu có mẫu sẵn, hướng dẫn từng bước và luyện tập nhiều lần. Hỗ trợ từ giáo viên hướng nghiệp hoặc trung tâm nghề là rất hữu ích."
+  },
+  {
+    "input": "tự kỷ có học được cách giao tiếp qua hình ảnh không",
+    "output": "Có. Trẻ tự kỷ có thể học giao tiếp bằng hình ảnh thông qua hệ thống PECS hoặc các bảng tranh, thẻ hình minh họa nhu cầu, cảm xúc. Đây là phương pháp rất hiệu quả với trẻ chưa nói được."
+  },
+  {
+    "input": "tự kỷ có học được kỹ năng dùng lịch trực quan không",
+    "output": "Có. Lịch trực quan bằng tranh giúp trẻ tự kỷ hiểu trước lịch trình, giảm lo âu và tăng khả năng chuẩn bị. Nên dùng lịch có màu sắc, hình ảnh đơn giản, gắn vào tường hoặc sổ cá nhân."
+  },
+  {
+    "input": "tự kỷ có thể học sử dụng ứng dụng hỗ trợ giao tiếp không",
+    "output": "Có. Ứng dụng như Proloquo2Go, Avaz, LetMeTalk… giúp trẻ tự kỷ giao tiếp bằng biểu tượng, hình ảnh, giọng nói tổng hợp. Cần tập luyện thường xuyên và cá nhân hóa nội dung theo nhu cầu."
+  },
+  {
+    "input": "tự kỷ có thể học được kỹ năng diễn đạt bằng cử chỉ không",
+    "output": "Có. Cử chỉ như gật đầu, chỉ tay, vẫy tay là hình thức giao tiếp cơ bản với trẻ tự kỷ. Có thể dạy qua mô hình hóa, trò chơi, bắt chước và củng cố hành vi bằng khen thưởng tích cực."
+  },
+  {
+    "input": "trẻ tự kỷ có học được cách dùng thiết bị hỗ trợ nghe nói không",
+    "output": "Có. Thiết bị hỗ trợ như máy nói đơn giản, nút bấm ghi âm giúp trẻ tự kỷ thể hiện ý muốn nếu chưa nói được. Việc sử dụng cần được dạy cụ thể và gắn với các tình huống thực tế."
+  },
+  {
+    "input": "tự kỷ có thể học được cách hiểu biểu cảm qua tranh không",
+    "output": "Có. Tranh biểu cảm khuôn mặt giúp trẻ tự kỷ học nhận diện cảm xúc người khác. Dùng bộ tranh minh họa đơn giản, luyện tập ghép tình huống sẽ giúp trẻ hiểu và phản hồi phù hợp hơn."
+  },
+  {
+    "input": "trẻ tự kỷ có nên học sử dụng bảng giao tiếp không",
+    "output": "Có. Bảng giao tiếp bằng hình ảnh hoặc từ ngữ đơn giản giúp trẻ thể hiện nhu cầu, cảm xúc. Là công cụ thay thế lời nói rất hiệu quả nếu trẻ bị chậm ngôn ngữ hoặc chưa nói được."
+  },
+  {
+    "input": "tự kỷ có học được kỹ năng phân biệt giọng nói không",
+    "output": "Có. Một số trẻ tự kỷ gặp khó khăn khi nhận biết cảm xúc qua giọng nói. Có thể luyện qua trò chơi phân biệt cao – thấp, to – nhỏ, vui – buồn bằng phần mềm hoặc mô phỏng thực tế."
+  },
+  {
+    "input": "trẻ tự kỷ có học được cách kể chuyện bằng tranh không",
+    "output": "Có. Kể chuyện bằng tranh giúp trẻ phát triển ngôn ngữ, tư duy và khả năng trình bày mạch lạc. Có thể sử dụng bộ tranh 4–6 bước đơn giản để trẻ xếp theo thứ tự và kể lại bằng lời hoặc hành động."
+  },
+  {
+    "input": "tự kỷ có thể học được cách sử dụng video mô phỏng không",
+    "output": "Có. Video mô phỏng hành vi xã hội, kỹ năng sống là công cụ rất hữu ích với trẻ tự kỷ. Xem lặp lại và thảo luận sau video giúp trẻ hiểu cách cư xử đúng trong tình huống đời thực."
+  },
+  {
+    "input": "tự kỷ có học được kỹ năng kết thúc tương tác xã hội không",
+    "output": "Có. Trẻ có thể học nói lời chào, cảm ơn, xin phép rút lui khi kết thúc giao tiếp. Dạy qua kịch bản, mẫu câu ngắn, hình ảnh minh họa và luyện tập với người thân, bạn học."
+  },
+  {
+    "input": "trẻ tự kỷ có học được cách bắt đầu hội thoại không",
+    "output": "Có. Trẻ tự kỷ thường không biết cách mở đầu trò chuyện. Nên dạy mẫu câu như 'Chào bạn', 'Bạn đang làm gì thế?', dùng thẻ gợi ý hoặc video mô hình hóa để luyện tập dần."
+  },
+  {
+    "input": "người tự kỷ có học được cách nói chuyện điện thoại không",
+    "output": "Có. Trò chuyện qua điện thoại cần luyện tập mẫu hội thoại đơn giản, ngữ điệu lịch sự và hướng dẫn cách lắng nghe. Có thể ghi âm các cuộc gọi mẫu để trẻ học theo."
+  },
+  {
+    "input": "tự kỷ có thể học cách quản lý hành vi nơi công cộng không",
+    "output": "Có. Trẻ có thể học hành vi phù hợp ở nơi công cộng nếu được dạy quy tắc cụ thể (giữ trật tự, không chạm người lạ), dùng tranh truyện xã hội và luyện tập tại nơi công cộng thực tế."
+  },
+  {
+    "input": "trẻ tự kỷ có thể học được cách gọi người lạ khi cần giúp đỡ không",
+    "output": "Có. Trẻ nên được dạy cách nhận diện người có thể tin tưởng (cảnh sát, nhân viên an ninh…), cách gọi to, xin trợ giúp, nói rõ tên – thông tin cá nhân. Cần mô phỏng nhiều lần."
+  },
+  {
+    "input": "người tự kỷ có thể học kỹ năng tự kiểm tra cảm xúc không",
+    "output": "Có. Trẻ có thể học tự nhận biết mình đang vui, buồn, tức giận… bằng cách dùng bảng cảm xúc, gương soi, tranh gợi ý hoặc ghi chép ngắn theo mẫu đơn giản."
+  },
+  {
+    "input": "tự kỷ có thể học cách sử dụng bản đồ cảm xúc không",
+    "output": "Có. Bản đồ cảm xúc giúp trẻ nhận diện và phân loại trạng thái cảm xúc theo mức độ. Dùng màu sắc và biểu tượng đơn giản sẽ giúp trẻ hiểu và chọn cách điều chỉnh phù hợp."
+  },
+  {
+    "input": "tự kỷ có thể học cách sử dụng bảng tăng cường không",
+    "output": "Có. Bảng tăng cường (reinforcement chart) giúp trẻ thấy được phần thưởng khi hoàn thành nhiệm vụ. Nên dùng ngôi sao, hình mặt cười, sticker… để trẻ hứng thú và có động lực."
+  },
+  {
+    "input": "trẻ tự kỷ có thể học cách sử dụng lịch học cá nhân không",
+    "output": "Có. Lịch học cá nhân bằng hình ảnh giúp trẻ biết trước hoạt động nào diễn ra, tăng tính chủ động và giảm lo âu. Nên gắn lịch tại nhà, lớp học, kèm hình ảnh minh họa rõ ràng."
+  },
+  {
+    "input": "tự kỷ có học được cách chia sẻ cảm xúc không",
+    "output": "Có. Trẻ tự kỷ có thể học cách nói 'con đang buồn', 'con thích cái này'… qua mẫu câu, thẻ hình, bảng cảm xúc. Cần luyện tập liên tục và khen ngợi khi trẻ chủ động chia sẻ."
+  },
+  {
+    "input": "người tự kỷ có thể học sử dụng công cụ giảm stress không",
+    "output": "Có. Các công cụ như bóng bóp, vòng tay cảm giác, hình ảnh thư giãn có thể giúp người tự kỷ giảm lo âu, bình tĩnh hơn. Cần hướng dẫn khi nào dùng và cách dùng hiệu quả."
+  },
+  {
+    "input": "tự kỷ có học được cách sử dụng nhật ký hình ảnh không",
+    "output": "Có. Nhật ký hình ảnh giúp trẻ tự kỷ ghi nhớ sự kiện trong ngày, cảm xúc và phản ứng. Dùng tranh dán, ký hiệu đơn giản để trẻ ghi lại theo mẫu định kỳ."
+  },
+  {
+    "input": "trẻ tự kỷ có thể học được kỹ năng tóm tắt thông tin không",
+    "output": "Có. Tóm tắt giúp phát triển tư duy logic. Nên bắt đầu bằng câu đơn giản 'bạn nói gì?', 'câu chuyện nói về ai?', rồi hướng dẫn cách rút gọn nội dung bằng hình ảnh hoặc sơ đồ."
+  },
+  {
+    "input": "tự kỷ có học được cách giữ trật tự không",
+    "output": "Có. Trẻ tự kỷ có thể học cách giữ trật tự nếu được dạy bằng tranh truyện xã hội, luật lệ lớp học, tín hiệu hình ảnh và luyện tập ở các môi trường như lớp, thư viện, rạp phim."
+  },
+  {
+    "input": "trẻ tự kỷ có học được cách điều tiết âm lượng giọng nói không",
+    "output": "Có. Trẻ có thể luyện cách nói nhỏ khi ở nơi yên tĩnh, nói to khi gọi người xa… qua trò chơi đo âm lượng, gương phản chiếu và lời nhắc bằng ký hiệu hình ảnh."
+  },
+  {
+    "input": "tự kỷ có thể học kỹ năng nói lời từ chối không",
+    "output": "Có. Dạy trẻ tự kỷ cách nói 'không', 'con không thích', 'con không muốn' giúp trẻ tự bảo vệ bản thân. Cần dạy qua đóng vai, mô hình hóa và lặp lại nhiều lần."
+  },
+  {
+    "input": "trẻ tự kỷ có thể học kỹ năng thấu hiểu người khác không",
+    "output": "Có. Kỹ năng này gọi là lý thuyết tâm trí (Theory of Mind). Trẻ có thể luyện qua truyện tranh, video tình huống, hỏi – đáp cảm xúc nhân vật để dần hiểu suy nghĩ người khác."
+  },
+  {
+    "input": "tự kỷ có thể học được cách báo trước nhu cầu không",
+    "output": "Có. Báo trước nhu cầu như 'con muốn nghỉ', 'con cần đi vệ sinh' giúp trẻ tránh hành vi tiêu cực. Nên dùng mẫu câu, bảng hình và củng cố tích cực mỗi lần trẻ chủ động báo."
+  },
+  {
+    "input": "tự kỷ có thể học kỹ năng kiểm soát thị giác không",
+    "output": "Có. Một số trẻ nhìn chăm chú, xoay đồ vật… Cần luyện tập dừng đúng lúc, chuyển hướng nhìn vào mặt người, tranh ảnh hoặc làm theo chỉ dẫn để cải thiện kiểm soát thị giác."
+  },
+  {
+    "input": "trẻ tự kỷ có học được cách giữ bình tĩnh không",
+    "output": "Có. Trẻ có thể học kỹ thuật giữ bình tĩnh như thở sâu, đếm số, dùng thẻ cảm xúc. Dạy qua video minh họa, gợi nhắc bằng ký hiệu hoặc bảng hướng dẫn đơn giản."
+  },
+  {
+    "input": "tự kỷ có thể học được kỹ năng tự chăm sóc bản thân khi lớn không",
+    "output": "Có. Người tự kỷ có thể học chăm sóc bản thân như vệ sinh, ăn mặc, sức khỏe… nếu được dạy từ nhỏ, lặp lại nhiều lần và tăng dần mức độ độc lập theo khả năng."
+  }
+]

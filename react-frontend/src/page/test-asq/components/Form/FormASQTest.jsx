@@ -1,257 +1,78 @@
-import Button from "../Button/Button";
-import "./FormASQTest.css";
+// FormASQTest.jsx
 import React, { useState, useEffect } from "react";
-import TitleBox from "../../../../components/Title_box/TitleBox";
+import TitleBox from "../../../../components/Title_box/TitleBox"; // Điều chỉnh đường dẫn nếu cần
+import Button from "../Button/Button"; // Đảm bảo import Button
+import "./FormASQTest.css"; // Đảm bảo file CSS này tồn tại
 
-function FormASQTest({ onBack, onSubmit, defaultValues = {} }) {
-  const defaultAnswers = defaultValues.answers || {};
+// Import images (giữ nguyên logic của bạn)
+const imageModules = import.meta.glob(
+  "../../../../assets/images/*.{png,jpg,jpeg,svg}",
+  { eager: true }
+);
+const images = {};
+for (const path in imageModules) {
+  const fileName = path.split("/").pop();
+  images[fileName] = imageModules[path].default;
+}
+
+// Thêm childAgeInDaysProp nếu bạn vẫn cần nó ở đây
+function FormASQTest({ onBack, onSubmit, defaultValues = {}, questionnaireData, childAgeInDaysProp }) { 
+  const defaultAnswers = defaultValues.answers || defaultValues || {}; // defaultValues có thể là asqUserAnswers trực tiếp
 
   const [answers, setAnswers] = useState(defaultAnswers);
-  const [viewMode, setViewMode] = useState(defaultValues.viewMode || "all");
+  const [viewMode, setViewMode] = useState("all"); // Mặc định hoặc lấy từ defaultValues nếu có
   const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
-  const [completedSection, setCompletedSection] = useState(
-    defaultValues.completedSection || []
-  );
-  const [age, setAge] = useState(defaultValues.age || null);
-  useEffect(() => {
-    setAnswers(defaultValues.answers || {});
-    setCompletedSection(defaultValues.completedSection || []);
-    setAge(defaultValues.age || null);
-    setViewMode(defaultValues.viewMode || "all");
-  }, [defaultValues]);
+  // const [completedSection, setCompletedSection] = useState(defaultValues?.completedSection || []); // Có thể không cần thiết nếu xử lý đơn giản hơn
+  
+  const [ageInfo, setAgeInfo] = useState(null); // Thông tin tuổi từ questionnaireData
+  const [testSections, setTestSections] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  // const [result, setResult] = useState(null); // State này có vẻ không được dùng để kiểm soát UI trong form này
 
-  const testSections = [
-    {
-      id: "A",
-      title: "A. GIAO TIẾP",
-      description: "Hãy chắc chắn thử những hoạt động này cho trẻ",
-      questions: [
-        {
-          name: "a_q1",
-          label: "Trẻ có biết gọi ba mẹ không?",
-          options: ["CÓ", "THỈNH THOẢNG", "CHƯA"],
-        },
-        {
-          name: "a_q2",
-          label: "Trẻ có phản ứng với âm thanh không?",
-          options: ["CÓ", "THỈNH THOẢNG", "CHƯA"],
-        },
-        {
-          name: "a_q3",
-          label: "Trẻ có phản ứng với âm thanh không?",
-          options: ["CÓ", "THỈNH THOẢNG", "CHƯA"],
-        },
-        {
-          name: "a_q4",
-          label: "Trẻ có phản ứng với âm thanh không?",
-          options: ["CÓ", "THỈNH THOẢNG", "CHƯA"],
-        },
-        {
-          name: "a_q5",
-          label: "Trẻ có phản ứng với âm thanh không?",
-          options: ["CÓ", "THỈNH THOẢNG", "CHƯA"],
-        },
-        {
-          name: "a_q6",
-          label: "Trẻ có phản ứng với âm thanh không?",
-          options: ["CÓ", "THỈNH THOẢNG", "CHƯA"],
-        },
-      ],
-    },
-    {
-      id: "B",
-      title: "B. VẬN ĐỘNG THÔ",
-      description: "Hãy thử cho trẻ thực hiện các hoạt động sau",
-      questions: [
-        {
-          name: "b_q1",
-          label: "Trẻ có biết gọi ba mẹ không?",
-          options: ["CÓ", "THỈNH THOẢNG", "CHƯA"],
-        },
-        {
-          name: "b_q2",
-          label: "Trẻ có phản ứng với âm thanh không?",
-          options: ["CÓ", "THỈNH THOẢNG", "CHƯA"],
-        },
-        {
-          name: "b_q3",
-          label: "Trẻ có phản ứng với âm thanh không?",
-          options: ["CÓ", "THỈNH THOẢNG", "CHƯA"],
-        },
-        {
-          name: "b_q4",
-          label: "Trẻ có phản ứng với âm thanh không?",
-          options: ["CÓ", "THỈNH THOẢNG", "CHƯA"],
-        },
-        {
-          name: "b_q5",
-          label: "Trẻ có phản ứng với âm thanh không?",
-          options: ["CÓ", "THỈNH THOẢNG", "CHƯA"],
-        },
-        {
-          name: "b_q6",
-          label: "Trẻ có phản ứng với âm thanh không?",
-          options: ["CÓ", "THỈNH THOẢNG", "CHƯA"],
-        },
-      ],
-    },
-    {
-      id: "C",
-      title: "C. VẬN ĐỘNG TINH",
-      description: "Hãy chắc chắn thử những hoạt động này cho trẻ",
-      questions: [
-        {
-          name: "c_q1",
-          label: "Trẻ có biết gọi ba mẹ không?",
-          options: ["CÓ", "THỈNH THOẢNG", "CHƯA"],
-        },
-        {
-          name: "c_q2",
-          label: "Trẻ có phản ứng với âm thanh không?",
-          options: ["CÓ", "THỈNH THOẢNG", "CHƯA"],
-        },
-        {
-          name: "c_q3",
-          label: "Trẻ có phản ứng với âm thanh không?",
-          options: ["CÓ", "THỈNH THOẢNG", "CHƯA"],
-        },
-        {
-          name: "c_q4",
-          label: "Trẻ có phản ứng với âm thanh không?",
-          options: ["CÓ", "THỈNH THOẢNG", "CHƯA"],
-        },
-        {
-          name: "c_q5",
-          label: "Trẻ có phản ứng với âm thanh không?",
-          options: ["CÓ", "THỈNH THOẢNG", "CHƯA"],
-        },
-        {
-          name: "c_q6",
-          label: "Trẻ có phản ứng với âm thanh không?",
-          options: ["CÓ", "THỈNH THOẢNG", "CHƯA"],
-        },
-      ],
-    },
-    {
-      id: "D",
-      title: "D. GIẢI QUYẾT VẤN ĐỀ",
-      description: "Hãy chắc chắn thử những hoạt động này cho trẻ",
-      questions: [
-        {
-          name: "d_q1",
-          label: "Trẻ có biết gọi ba mẹ không?",
-          options: ["CÓ", "THỈNH THOẢNG", "CHƯA"],
-        },
-        {
-          name: "d_q2",
-          label: "Trẻ có phản ứng với âm thanh không?",
-          options: ["CÓ", "THỈNH THOẢNG", "CHƯA"],
-        },
-        {
-          name: "d_q3",
-          label: "Trẻ có phản ứng với âm thanh không?",
-          options: ["CÓ", "THỈNH THOẢNG", "CHƯA"],
-        },
-        {
-          name: "d_q4",
-          label: "Trẻ có phản ứng với âm thanh không?",
-          options: ["CÓ", "THỈNH THOẢNG", "CHƯA"],
-        },
-        {
-          name: "d_q5",
-          label: "Trẻ có phản ứng với âm thanh không?",
-          options: ["CÓ", "THỈNH THOẢNG", "CHƯA"],
-        },
-        {
-          name: "d_q6",
-          label: "Trẻ có phản ứng với âm thanh không?",
-          options: ["CÓ", "THỈNH THOẢNG", "CHƯA"],
-        },
-      ],
-    },
-    {
-      id: "E",
-      title: "E. CÁ NHÂN XÃ HỘI",
-      description: "Hãy chắc chắn thử những hoạt động này cho trẻ",
-      questions: [
-        {
-          name: "e_q1",
-          label: "Trẻ có biết gọi ba mẹ không?",
-          options: ["CÓ", "THỈNH THOẢNG", "CHƯA"],
-        },
-        {
-          name: "e_q2",
-          label: "Trẻ có phản ứng với âm thanh không?",
-          options: ["CÓ", "THỈNH THOẢNG", "CHƯA"],
-        },
-        {
-          name: "e_q3",
-          label: "Trẻ có phản ứng với âm thanh không?",
-          options: ["CÓ", "THỈNH THOẢNG", "CHƯA"],
-        },
-        {
-          name: "e_q4",
-          label: "Trẻ có phản ứng với âm thanh không?",
-          options: ["CÓ", "THỈNH THOẢNG", "CHƯA"],
-        },
-        {
-          name: "e_q5",
-          label: "Trẻ có phản ứng với âm thanh không?",
-          options: ["CÓ", "THỈNH THOẢNG", "CHƯA"],
-        },
-        {
-          name: "e_q6",
-          label: "Trẻ có phản ứng với âm thanh không?",
-          options: ["CÓ", "THỈNH THOẢNG", "CHƯA"],
-        },
-      ],
-    },
-    {
-      id: "F",
-      title: "F. CÂU HỎI CHUNG",
-      description: "Hãy chắc chắn thử những hoạt động này cho trẻ",
-      questions: [
-        {
-          name: "f_q1",
-          label: "Trẻ có biết gọi ba mẹ không?",
-          options: ["CÓ", "THỈNH THOẢNG", "CHƯA"],
-        },
-        {
-          name: "f_q2",
-          label: "Trẻ có phản ứng với âm thanh không?",
-          options: ["CÓ", "THỈNH THOẢNG", "CHƯA"],
-        },
-        {
-          name: "f_q3",
-          label: "Trẻ có phản ứng với âm thanh không?",
-          options: ["CÓ", "THỈNH THOẢNG", "CHƯA"],
-        },
-        {
-          name: "f_q4",
-          label: "Trẻ có phản ứng với âm thanh không?",
-          options: ["CÓ", "THỈNH THOẢNG", "CHƯA"],
-        },
-        {
-          name: "f_q5",
-          label: "Trẻ có phản ứng với âm thanh không?",
-          options: ["CÓ", "THỈNH THOẢNG", "CHƯA"],
-        },
-        {
-          name: "f_q6",
-          label: "Trẻ có phản ứng với âm thanh không?",
-          options: ["CÓ", "THỈNH THOẢNG", "CHƯA"],
-        },
-      ],
-    },
-  ];
+  useEffect(() => {
+    setLoading(true); // Bắt đầu loading
+    setError(null);
+    if (questionnaireData && questionnaireData.question && questionnaireData.age) {
+      setAgeInfo(questionnaireData.age);
+
+      const titleMapping = {
+        communication: "A. GIAO TIẾP",
+        gross_motor: "B. VẬN ĐỘNG THÔ",
+        fine_motor: "C. VẬN ĐỘNG TINH",
+        problem_solving: "D. GIẢI QUYẾT VẤN ĐỀ",
+        personal_social: "E. CÁ NHÂN XÃ HỘI",
+      };
+
+      const apiKeys = Object.keys(questionnaireData.question);
+      const sections = apiKeys.map((key) => ({
+        apiKey: key,
+        title: titleMapping[key] || key.replace(/_/g, ' ').toUpperCase(), // Xử lý title mặc định tốt hơn
+        content: questionnaireData.question[key],
+      }));
+
+      setTestSections(sections);
+      setLoading(false);
+    } else {
+      setError("Không có dữ liệu bộ câu hỏi ASQ hợp lệ để hiển thị.");
+      setLoading(false);
+    }
+  }, [questionnaireData]); // Phụ thuộc vào questionnaireData
 
   const handleChange = (name, value) => {
     setAnswers((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleNextStep = () => {
-    const current = testSections[currentSectionIndex];
-    const isValid = current.questions.every((q) => answers[q.name]);
+    if (viewMode !== "step" || currentSectionIndex >= testSections.length) return;
+
+    const currentSection = testSections[currentSectionIndex];
+    const sectionKey = currentSection.apiKey;
+    const isValid = currentSection.content.questions.every((q) => {
+      const answer = answers[`${sectionKey}_q${q.id}`];
+      return answer && ["Có", "Thỉnh Thoảng", "Chưa"].includes(answer);
+    });
+
     if (!isValid) {
       alert("Vui lòng trả lời tất cả câu hỏi trong phần này.");
       return;
@@ -260,181 +81,151 @@ function FormASQTest({ onBack, onSubmit, defaultValues = {} }) {
     if (currentSectionIndex < testSections.length - 1) {
       setCurrentSectionIndex((prev) => prev + 1);
     } else {
-      onSubmit({
-        answers,
-        viewMode,
-        completedSection: testSections[currentSectionIndex]?.id,
-      });
+      handleCompleteSubmit(); // Gọi submit khi ở section cuối cùng
     }
   };
 
-  const renderQuestion = (q, idx) => (
-    <div className="question-box" key={q.name}>
-      <div className="question-label">
-        <strong>Câu {idx + 1}:</strong> {q.label}
+  const renderQuestion = (q, idx, sectionApiKey) => {
+    const questionName = `${sectionApiKey}_q${q.id}`;
+    return (
+      <div className="question-box" key={questionName}>
+        <div className="question-content">
+          <div className="question-text">
+            <div className="question-label"><strong>Câu {idx + 1}:</strong> {q.text}
+              {q.note && (<p className="question-note"><em>({q.note})</em></p>)}
+            </div>
+            <div className="radio-group">
+              {q.options.map((optRaw) => {
+                const opt = optRaw.trim();
+                return (
+                  <label key={opt} className="radio-option">
+                    <input type="radio" name={questionName} value={opt}
+                      checked={answers[questionName] === opt}
+                      onChange={() => handleChange(questionName, opt)}
+                    /> {opt}
+                  </label>
+                );
+              })}
+            </div>
+          </div>
+          {q.image_filepath && images[q.image_filepath] && (
+            <div className="question-image"><img src={images[q.image_filepath]} alt={`Ảnh minh họa cho câu ${q.id}`} /></div>
+          )}
+        </div>
       </div>
-      <div className="radio-group">
-        {q.options.map((optRaw) => {
-          const opt = optRaw.trim(); // xử lý an toàn
-          return (
-            <label key={opt} className="radio-option">
-              <input
-                type="radio"
-                name={q.name}
-                value={opt}
-                checked={answers[q.name] === opt}
-                onChange={() => handleChange(q.name, opt)}
-              />
-              {opt}
-            </label>
-          );
-        })}
-      </div>
-    </div>
-  );
+    );
+  };
 
   const handleCompleteSubmit = () => {
-    const allQuestions = testSections.flatMap((section) => section.questions);
-    const isValid = allQuestions.every((q) => answers[q.name]);
+    // Kiểm tra tất cả câu hỏi trong tất cả sections nếu viewMode là 'all'
+    // hoặc tất cả câu hỏi trong section hiện tại nếu viewMode là 'step' và đã ở section cuối
+    const allQuestionsInSection = testSections.flatMap((section) =>
+        section.content.questions.map((q) => ({
+            name: `${section.apiKey}_q${q.id}`,
+        }))
+    );
 
-    if (!isValid) {
-      alert("Vui lòng trả lời tất cả các câu hỏi trước khi hoàn tất.");
+    const allAnswered = allQuestionsInSection.every((q) => {
+        const answer = answers[q.name];
+        return answer && ["Có", "Thỉnh Thoảng", "Chưa"].includes(answer);
+    });
+
+    if (!allAnswered) {
+      alert("Vui lòng trả lời tất cả các câu hỏi trong bài test trước khi hoàn tất.");
       return;
     }
 
-    // ✅ Tính điểm theo từng lĩnh vực
-    const getScore = (value) => {
-      if (value === "CÓ") return 10;
-      if (value === "THỈNH THOẢNG") return 5;
-      return 0;
-    };
-
-    const lstScores = testSections.slice(0, 5).map((section) => {
-      const total = section.questions.reduce((sum, q) => {
-        const val = answers[q.name];
-        return sum + getScore(val);
-      }, 0);
-      return {
-        field: section.title.replace(/^.*?\.\s*/, ""), // ví dụ: "A. GIAO TIẾP" => "GIAO TIẾP"
-        score: total,
-      };
+    // Tạo đối tượng DTO để gửi lên App.jsx
+    // DTO này sẽ có dạng { communication: [{id:1, answer:"Có"}, ...], gross_motor: [...], ... }
+    const submissionDTO = {};
+    testSections.forEach(section => {
+        submissionDTO[section.apiKey] = section.content.questions.map(q => ({
+            id: q.id,
+            answer: answers[`${section.apiKey}_q${q.id}`] || "Chưa" // Mặc định là "Chưa" nếu không có câu trả lời (dù đã validate ở trên)
+        }));
     });
 
-    // ✅ Tính tuổi tạm thời (giả định), ví dụ dùng age = 20 (sau này BE tính)
-    const age = 20;
-
-    // ✅ Gửi về DTO
-    onSubmit({
-      answers,
-      viewMode,
-      completedSection:
-        viewMode === "step" ? testSections[currentSectionIndex]?.id : "ALL",
-      age,
-      lstScores,
-      comment: "Dữ liệu nhận xét sẽ render từ BE",
-    });
+    console.log("Submitting ASQ answers DTO:", submissionDTO);
+    onSubmit(submissionDTO); // Gửi DTO này lên App.jsx
   };
 
   const handleBack = () => {
     if (viewMode === "step" && currentSectionIndex > 0) {
-      setCurrentSectionIndex((prev) => prev - 1); // Quay về phần trước đó
+      setCurrentSectionIndex((prev) => prev - 1);
     } else {
-      onBack({
-        answers,
-        viewMode,
-        age,
-        completedSection,
-        comment: "Dữ liệu nhận xét sẽ render từ BE", // tùy bạn giữ hoặc bỏ
-      });
+      // Tạo snapshot của các câu trả lời hiện tại để truyền về App.jsx
+      const snapshotAnswers = { ...answers };
+      onBack(snapshotAnswers); // Truyền chỉ các câu trả lời về
     }
   };
 
+
+  if (loading) return <div>Đang tải bộ câu hỏi ASQ...</div>;
+  if (error) return <div>Lỗi: {error}</div>;
+  if (!testSections || testSections.length === 0) return <div>Không có câu hỏi nào để hiển thị.</div>;
+
   return (
-    <form className="form-questions" onSubmit={(e) => e.preventDefault()}>
-      <TitleBox
-        title="LÀM BÀI SÀNG LỌC ĐÁNH GIÁ PHÁT TRIỂN THEO ĐỘ TUỔI ASQ-3"
-        subtitle="(Bộ câu hỏi 20 tháng tuổi)"
-        onBack={handleBack} 
-      />
-      <div className="instruction-box">
-        <p>
-          <strong>Hướng dẫn làm bài:</strong>
-        </p>
-        <ul>
-          <li>
-            <span className="text-blue">CÓ</span>: Trẻ thực hiện thường xuyên
-          </li>
-          <li>
-            <span className="text-blue">THỈNH THOẢNG</span>: Trẻ đôi khi làm
-            được
-          </li>
-          <li>
-            <span className="text-blue">CHƯA</span>: Trẻ chưa thực hiện được
-          </li>
-        </ul>
-        <p>Hãy để trẻ thử từng hoạt động trước khi đánh dấu.</p>
-      </div>
+    <div> {/* Bọc bởi một div cha */}
+      <form className="form-questions" onSubmit={(e) => e.preventDefault()}>
+        <TitleBox
+          title={`BƯỚC 2: LÀM BÀI SÀNG LỌC ASQ-3`}
+          subtitle={`( ${ageInfo?.title || "Bộ câu hỏi theo độ tuổi"} )`}
+          // Nút back chỉ có tác dụng khi không phải là section đầu tiên ở chế độ step, hoặc luôn có ở chế độ all
+          showBackButton={viewMode === "all" || currentSectionIndex > 0}
+          onBack={handleBack}
+        />
+        <div className="instruction-box">
+          <p><strong>Hướng dẫn làm bài:</strong></p>
+          <ul>
+            <li><span className="text-blue">CÓ</span>: Trẻ thực hiện được hoạt động này một cách độc lập và thường xuyên.</li>
+            <li><span className="text-blue">THỈNH THOẢNG</span>: Trẻ đang tập làm hoặc thỉnh thoảng mới làm được hoạt động này.</li>
+            <li><span className="text-blue">CHƯA</span>: Trẻ chưa thực hiện được hoạt động này.</li>
+          </ul>
+          <p>Hãy cho trẻ thử từng hoạt động trước khi bạn đánh dấu vào ô trả lời.</p>
+        </div>
 
-      {/* ✅ Chế độ làm bài */}
-      <div className="view-mode-wrapper">
-        <label>Chế độ làm bài:</label>
-        <select
-          value={viewMode}
-          onChange={(e) => {
-            setViewMode(e.target.value);
-            setCurrentSectionIndex(0); // Reset về đầu
-          }}
-        >
-          <option value="all">Toàn bộ bài</option>
-          <option value="step">Từng phần</option>
-        </select>
-      </div>
+        <div className="view-mode-wrapper">
+          <label htmlFor="viewModeSelect">Chế độ làm bài:</label>
+          <select
+            id="viewModeSelect"
+            value={viewMode}
+            onChange={(e) => { setViewMode(e.target.value); setCurrentSectionIndex(0); }}
+          >
+            <option value="all">Toàn bộ bài</option>
+            <option value="step">Từng phần</option>
+          </select>
+        </div>
 
-      {/* ✅ Hiển thị nội dung câu hỏi */}
-      {viewMode === "all" && (
-        <>
-          {testSections.map((section, idx) => {
-            return (
-              <div className="question-section" key={section.id}>
-                <h3>{section.title}</h3>
-                <p>{section.description}</p>
-                {section.questions.map((q, qIdx) => renderQuestion(q, qIdx))}
-              </div>
-            );
-          })}
-        </>
-      )}
+        {viewMode === "all" && testSections.map((section) => (
+          <div className="question-section" key={section.apiKey}>
+            <h3>{section.title}</h3>
+            {section.content.questions.map((q, qIdx) => renderQuestion(q, qIdx, section.apiKey))}
+          </div>
+        ))}
 
-      {viewMode === "step" && (
-        <div className="question-section">
-          <h3>{testSections[currentSectionIndex].title}</h3>
-          <p>{testSections[currentSectionIndex].description}</p>
-          {testSections[currentSectionIndex].questions.map((q, qIdx) =>
-            renderQuestion(q, qIdx)
+        {viewMode === "step" && testSections.length > 0 && currentSectionIndex < testSections.length && (
+          <div className="question-section">
+            <h3>{testSections[currentSectionIndex].title}</h3>
+            {testSections[currentSectionIndex].content.questions.map((q, qIdx) =>
+              renderQuestion(q, qIdx, testSections[currentSectionIndex].apiKey)
+            )}
+          </div>
+        )}
+
+        <div className="container-button">
+          <Button type="button" onClick={handleBack} variant="outlined">
+            {viewMode === "step" && currentSectionIndex > 0 ? "PHẦN TRƯỚC" : "QUAY LẠI"}
+          </Button>
+          {viewMode === "all" ? (
+            <Button type="button" onClick={handleCompleteSubmit}>HOÀN TẤT BÀI TEST</Button>
+          ) : (
+            <Button type="button" onClick={handleNextStep}>
+              {currentSectionIndex < testSections.length - 1 ? "PHẦN TIẾP THEO" : "HOÀN TẤT BÀI TEST"}
+            </Button>
           )}
         </div>
-      )}
-
-      {/* ✅ Nút điều hướng */}
-      <div className="container-button">
-        <Button type="button" onClick={handleBack}>
-          {viewMode === "step" && currentSectionIndex > 0
-            ? "QUAY VỀ PHẦN TRƯỚC"
-            : "QUAY LẠI"}
-        </Button>
-        {viewMode === "all" ? (
-          <Button type="button" onClick={handleCompleteSubmit}>
-            HOÀN TẤT
-          </Button>
-        ) : (
-          <Button type="button" onClick={handleNextStep}>
-            {currentSectionIndex < testSections.length - 1
-              ? "TIẾP TỤC"
-              : "HOÀN TẤT"}
-          </Button>
-        )}
-      </div>
-    </form>
+      </form>
+    </div>
   );
 }
 
